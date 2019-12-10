@@ -4,10 +4,10 @@
   "description": "This will be the product/dev repo of the CA.gov Alpha.",
   "main": "index.js",
   "scripts": {
-    "build": "npm run uglify:css && npm run uncss && npm run gzip",
+    "build": "npm run uglify:css",
     "gzip": "gzip build/**/*.css --output=dist",
-    "uncss": " uncss http://localhost:1337/index.html > build/uncssed.css",
-    "uglify:css": "uglifycss css/bootstrap.min.css css/style.css > build/index.css"
+    "uncss": "uncss http://localhost:1337/index.html > build/uncssed.css",
+    "uglify:css": "uglifycss css/bootstrap.min.css css/style.css > dist/uncssed.css"
   },
   "repository": {
     "type": "git",
