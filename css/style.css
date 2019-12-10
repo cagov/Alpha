@@ -90,6 +90,9 @@ h3 {
 p, li {
   font-size: 18px;
 }
+p {
+  padding-bottom: 10px;
+}
 a, a:visited, a:hover {
   color: #0071bc;
 }
@@ -101,7 +104,6 @@ a:hover {
 }
 
 sup {
-  font-size: normal !important;
   font-family: 'Public Sans Thin', sans-serif;
 }
 
@@ -169,10 +171,9 @@ mark {
 /* Jumbotron */
 
 .jumbotron {
-
-/*background-image: -webkit-linear-gradient(right, #212121 0%, #242424  30%, #303030 100%);
-background-image: -o-linear-gradient(right, #212121 0%, #242424  30%, #303030 100%);
-background-image: linear-gradient(to right, #212121 0%, #242424 30%, #303030 100%);*/
+  /*background-image: -webkit-linear-gradient(right, #212121 0%, #242424  30%, #303030 100%);
+  background-image: -o-linear-gradient(right, #212121 0%, #242424  30%, #303030 100%);
+  background-image: linear-gradient(to right, #212121 0%, #242424 30%, #303030 100%);*/
   background: #000;
   border-bottom: 0px solid #f1f1f1;
   margin-bottom: 30px;
@@ -185,16 +186,16 @@ background-image: linear-gradient(to right, #212121 0%, #242424 30%, #303030 100
 .jumbotron img {
   width: 100%;
   height: auto;
-  max-width: 125px;
+  max-width: 100px;
   padding: 10px 0;
 }
 
 /* Official */
 
 .official {
-  background: #000;
+  background: #ffffff;
   padding: 10px 0;
-	color: #FFF;
+	color: #000000;
 }
 .official a, .official a:visited, .official a:hover {
   color: #FFF;
@@ -223,7 +224,7 @@ background-image: linear-gradient(to right, #212121 0%, #242424 30%, #303030 100
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #212121;
+  background-color: #000000;
 }
 
 .alphabar p {
@@ -246,5 +247,5 @@ background-image: linear-gradient(to right, #212121 0%, #242424 30%, #303030 100
   padding-top: 50px;
 }
 .footer a, .footer a:visited, .footer a:hover, .footer {
-  color: #212121;
+  color: #000000;
 }
