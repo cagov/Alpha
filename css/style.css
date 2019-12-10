@@ -101,7 +101,6 @@ a:hover {
 }
 
 sup {
-  font-size: normal !important;
   font-family: 'Public Sans Thin', sans-serif;
 }
 
@@ -192,9 +191,9 @@ background-image: linear-gradient(to right, #212121 0%, #242424 30%, #303030 100
 /* Official */
 
 .official {
-  background: #000;
+  background: #ffffff;
   padding: 10px 0;
-	color: #FFF;
+	color: #000000;
 }
 .official a, .official a:visited, .official a:hover {
   color: #FFF;
@@ -223,7 +222,7 @@ background-image: linear-gradient(to right, #212121 0%, #242424 30%, #303030 100
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #212121;
+  background-color: #000000;
 }
 
 .alphabar p {
@@ -246,5 +245,5 @@ background-image: linear-gradient(to right, #212121 0%, #242424 30%, #303030 100
   padding-top: 50px;
 }
 .footer a, .footer a:visited, .footer a:hover, .footer {
-  color: #212121;
+  color: #000000;
 }
