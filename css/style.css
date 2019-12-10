@@ -90,6 +90,9 @@ h3 {
 p, li {
   font-size: 18px;
 }
+p {
+  padding-bottom: 10px;
+}
 a, a:visited, a:hover {
   color: #0071bc;
 }
@@ -168,10 +171,9 @@ mark {
 /* Jumbotron */
 
 .jumbotron {
-
-/*background-image: -webkit-linear-gradient(right, #212121 0%, #242424  30%, #303030 100%);
-background-image: -o-linear-gradient(right, #212121 0%, #242424  30%, #303030 100%);
-background-image: linear-gradient(to right, #212121 0%, #242424 30%, #303030 100%);*/
+  /*background-image: -webkit-linear-gradient(right, #212121 0%, #242424  30%, #303030 100%);
+  background-image: -o-linear-gradient(right, #212121 0%, #242424  30%, #303030 100%);
+  background-image: linear-gradient(to right, #212121 0%, #242424 30%, #303030 100%);*/
   background: #000;
   border-bottom: 0px solid #f1f1f1;
   margin-bottom: 30px;
@@ -184,7 +186,7 @@ background-image: linear-gradient(to right, #212121 0%, #242424 30%, #303030 100
 .jumbotron img {
   width: 100%;
   height: auto;
-  max-width: 125px;
+  max-width: 100px;
   padding: 10px 0;
 }
 
