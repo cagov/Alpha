@@ -67,7 +67,7 @@
 /* General */
 
 body {
-	color: #212121;
+	color: #000000;
   font-family: 'Public Sans', sans-serif;
 }
 img {
@@ -75,7 +75,7 @@ img {
 	height: auto;
 }
 h1, h2, h3, h4, h5, h6 {
-  color: #212121;
+  color: #000000;
   font-family: 'Public Sans ExtraBold', sans-serif;
 }
 h1 {
@@ -109,7 +109,7 @@ sup {
 
 mark {
   background-color: #ffe49a;
-  color: #212121;
+  color: #000;
 }
 
 /* Mods */
