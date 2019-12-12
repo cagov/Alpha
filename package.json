@@ -2,12 +2,11 @@
   "name": "alpha.ca.gov",
   "version": "1.0.0",
   "description": "This will be the product/dev repo of the CA.gov Alpha.",
-  "main": "index.js",
+  "main": "public/index.html",
   "scripts": {
-    "build": "npm run uglify:css && npm run uncss && npm run gzip && cp build/uncssed.css dist/uncssed.css",
-    "gzip": "gzip build/**/*.css --output=dist",
-    "uncss": "uncss http://localhost:1337/index.html > build/uncssed.css",
-    "uglify:css": "uglifycss css/bootstrap.min.css css/style.css > dist/uncssed.css"
+    "build": "npm run uglify:css && npm run uncss && cp public/css/cssmin.css public/dist/uncssed.css && rm public/css/cssmin.css",
+    "uncss": "uncss public/index.html > public/css/cssmin.css",
+    "uglify:css": "uglifycss public/css/bootstrap.min.css public/css/style.css > public/dist/uncssed.css"
   },
   "repository": {
     "type": "git",
@@ -21,7 +20,6 @@
   },
   "homepage": "https://github.com/cagov/Alpha#readme",
   "devDependencies": {
-    "gzip-cli": "^1.0.1",
     "uglifycss": "0.0.29",
     "uncss": "^0.17.2"
   }

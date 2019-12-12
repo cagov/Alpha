@@ -20,3 +20,17 @@ Team Alpha.CA.gov
 
 
 _Interested in how we got started?_ [Learn more.](https://medium.com/cadotgov/re-imagining-ca-gov-how-can-california-government-better-serve-its-people-c3212f843f1d)
+
+
+## Building
+
+### Prerequisites
+
+- install <a href="https://nodejs.org">node.js</a>
+- run ```npm install```
+
+### Build command
+
+```npm run build```
+
+Concatenates, minifies and removes unused CSS.
