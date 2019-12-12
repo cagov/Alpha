@@ -4,7 +4,7 @@
   "description": "This will be the product/dev repo of the CA.gov Alpha.",
   "main": "public/index.html",
   "scripts": {
-    "build": "npm run uglify:css && npm run uncss && cp build/uncssed.css public/dist/uncssed.css",
+    "build": "npm run uglify:css && npm run uncss && cp build/uncssed.css public/dist/uncssed.css && rm build/uncssed.css",
     "uncss": "uncss public/index.html > build/uncssed.css",
     "uglify:css": "uglifycss public/css/bootstrap.min.css public/css/style.css > public/dist/uncssed.css"
   },
