@@ -1,7 +1,7 @@
 /* Public Sans */
 @font-face {
   font-family: 'Public Sans';
-  src:url("/css/fonts/PublicSansRegular.woff2") format("woff2"), url(/css/fonts/PublicSansRegular.woff) format("woff"), url(/css/fonts/PublicSansRegular.ttf) format("truetype");
+  src:url("/css/fonts/PublicSans-Regular.woff2") format("woff2"), url(/css/fonts/PublicSans-Regular.woff) format("woff"), url(/css/fonts/PublicSansRegular.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 
 @font-face {
   font-family: 'Public Sans Thin';
-  src:url("/css/fonts/PublicSansThin.woff2") format("woff2"), url(/css/fonts/PublicSansThin.woff) format("woff"), url(/css/fonts/PublicSansThin.ttf) format("truetype");
+  src:url("/css/fonts/PublicSans-Thin.woff2") format("woff2"), url(/css/fonts/PublicSans-Thin.woff) format("woff"), url(/css/fonts/PublicSansThin.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
 }
