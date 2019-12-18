@@ -268,7 +268,7 @@ mark {
   background-image: url('../img/ca-flag.png');
   background-repeat: no-repeat;
   background-position: 5px 50%;
-  background-size:contain;
+  background-size: contain;
   margin: 0 0;
   padding: 0 0 0 50px;
 }
