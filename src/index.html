@@ -7,18 +7,7 @@
   <meta name="description" content="The Alpha website for the State of California.">
   <meta name="author" content="Alpha.CA.gov - State of California">
 
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/apple-touch-icon.png"
-    sizes="180x180">
-  <link rel="icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/favicon-32x32.png" sizes="32x32"
-    type="image/png">
-  <link rel="icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/favicon-16x16.png" sizes="16x16"
-    type="image/png">
-  <link rel="manifest" href="https://cwds.dev/docs/4.3/assets/img/favicons/manifest.json">
-  <link rel="mask-icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/safari-pinned-tab.svg" color="#1d1a16">
-  <link rel="icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/favicon.ico">
-  <meta name="msapplication-config" content="https://cwds.dev/docs/4.3/assets/img/favicons/browserconfig.xml">
-  <meta name="theme-color" content="#000000">
+  <%= require('html-loader!./partials/favicons.html') %>
 
   <!-- Social media post -->
   <meta property="og:image" content="img/thumbnail.png">
@@ -36,28 +25,8 @@
 </head>
 
 <body>
-  <div class="official">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <p>Official California State Government</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <nav class="navbar navbar-expand-lg navbar-dark bd-navbar navbar-inverse">
-    <div class="container-xl flex-wrap flex-md-nowrap py-0 px-3">
-      <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Ca.gov">
-        <img src="https://alpha.ca.gov/img/ca-light.png" class="logo-img" alt="California State" />
-        <span class="navbar-brand navbar-right pr-5" href="index.html">CA.gov <sup>(ALPHA)</sup></span>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-  </nav>
+  <%= require('html-loader!./partials/official.html') %>
+  <%= require('html-loader!./partials/navbar.html') %>
 
   <div class="container-fluid jumbotron">
     <div class="container">
@@ -90,26 +59,7 @@
     </div>
   </div>
 
-  <div class="footer alpha-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="list-group list list-group-horizontal-lg flex-fill list-group-flush">
-            <a href="#">
-              <li class="list-group-item alpha-footer">About</li>
-            </a>
-            <a href="#">
-              <li class="list-group-item alpha-footer">Feedback</li>
-            </a>
-          </ul>
-        </div>
-        <p class="col-md-12 pt-1 text-right">
-          &copy; 2020 State of California
-        </p>
-      </div>
-    </div>
-  </div>
-
+  <%= require('html-loader!./partials/footer.html') %>
   <%= require('html-loader!./partials/alphabar.html') %>
   <%= require('html-loader!./partials/ga.html') %>
 
