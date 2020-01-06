@@ -4,10 +4,12 @@
   "description": "This will be the product/dev repo of the CA.gov Alpha.",
   "main": "public/index.html",
   "scripts": {
-    "build": "npm run uglify:css && npm run uncss && cp public/css/cssmin.css public/dist/uncssed.css && rm public/css/cssmin.css",
+    "build": "webpack",
+    "build:old": "npm run uglify:css && npm run uncss && cp public/css/cssmin.css public/dist/uncssed.css && rm public/css/cssmin.css",
     "uncss": "uncss public/index.html > public/css/cssmin.css",
     "uglify:css": "uglifycss public/css/bootstrap.min.css public/css/style.css > public/dist/uncssed.css",
-    "serve": "node local-server.js"
+    "serve": "node local-server.js",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -21,8 +23,18 @@
   },
   "homepage": "https://github.com/cagov/Alpha#readme",
   "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.1",
     "express": "^4.17.1",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.1.2",
     "uglifycss": "0.0.29",
-    "uncss": "^0.17.2"
+    "uncss": "^0.17.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   }
 }

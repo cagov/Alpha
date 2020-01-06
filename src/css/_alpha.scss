@@ -1,0 +1,577 @@
+.navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > li > a:visited, a.navbar-brand, a.navbar-brand:visited {
+	text-decoration: none !important;
+}
+
+
+/* Public Sans */
+
+@font-face {
+  font-family: "Public Sans Extra Bold";
+  font-style: normal;
+  src: 
+    url("fonts/publicsans-extrabold-webfont.woff2") format("woff2"), 
+    url("fonts/publicsans-extrabold-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Public Sans Light";
+  font-style: normal;
+  src: 
+    url("fonts/publicsans-light-webfont.woff2") format("woff2"), 
+    url("fonts/publicsans-light-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  src: 
+    url("fonts/publicsans-regular-webfont.woff2") format("woff2"), 
+    url("fonts/publicsans-regular-webfont.woff") format("woff");
+}
+
+
+/* General */
+
+body {
+  color: #000;
+  font-family: "Public Sans", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000;
+  font-family: "Public Sans ExtraBold", sans-serif;
+}
+
+h1 {
+  padding-bottom: 10px;
+}
+
+h2 {
+  padding-bottom: 10px;
+}
+
+h3 {
+  padding-bottom: 10px;
+}
+
+p, li, .list-group-item {
+  font-size: auto !important;
+}
+
+a.list-group-item {
+  padding: 20px;
+}
+
+a, a:visited, a:hover {
+  color: #0071bc;
+}
+
+a, a:visited {
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a.btn {
+  font-size: 20px;
+  font-family: "Public Sans ExtraBold", sans-serif;
+  padding: 15px;
+}
+
+a.btn {
+  background: #ccc;
+  color: #000;
+  border: 1px solid #f1f1f1;
+  text-decoration: none;
+}
+
+a.btn-dark {
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+  text-decoration: none;
+}
+
+a.list-group-item, a.list-group-item:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+sup {
+  font-size: normal !important;
+  font-family: "Public Sans Thin", sans-serif;
+}
+
+hr {
+  border-top: 5px solid #000;
+  margin: 15px 0;
+}
+
+/* Card */
+
+.card-header {
+  padding: .25rem;
+  margin-bottom: 0;
+  background-color: #f1f1f1;
+  border-bottom: 2px solid #fff;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid #f1f1f1;
+  border-radius: .25rem;
+}
+
+.card-body {
+  font-size: 18px;
+  padding: .75rem 1.25rem;
+}
+
+.card .btn-link {
+  font-family: "Public Sans", sans-serif;
+  font-size: 18px;
+  color: #000;
+  background-color: transparent;
+}
+
+.card p {
+  font-size: 18px;
+}
+
+/* Accordian */
+
+.accordion {
+  margin-bottom: 20px;
+}
+
+.accordion h2 {
+  margin: 0;
+  padding: 10px;
+}
+
+/* Alerts */
+
+.alert-secondary {
+  background: #f1f1f1;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.alert-secondary h2 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Mods */
+
+.official p, .footer p, .alphabar p {
+  font-size: 105%;
+}
+
+/* Navbar */
+
+.performance {
+  background: #f1f1f1;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 15px;
+}
+
+.performance h4 {
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+.performance ul {
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+.performance li {
+  list-style: none;
+  padding: 2px 0;
+}
+
+.performance li, .performance p {
+  font-size: 100%;
+}
+
+.performance p {
+  border-top: 1px solid #fff;
+  margin: 0;
+  padding: 10px 0 0 0;
+}
+
+.performance .fas {
+  padding-right: 5px;
+}
+
+.performance i.fa-lock {
+  color: green;
+}
+
+.performance i.fa-check {
+  color: blue;
+}
+
+.performance i.fa-stopwatch {
+  color: #000;
+}
+
+.performance a {
+  color: #555;
+  text-decoration: none;
+}
+
+/* Navbar */
+
+.navbar {
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.navbar-brand {
+  font-family: "Public Sans ExtraBold", sans-serif;
+}
+
+.navbar-inverse, .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  background-color: #1d2021;
+  border-color: #1d2021;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: #fff;
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+  background: #fff;
+}
+
+.navbar-header a, .navbar-header a:visited, .navbar-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar img {
+  width: auto;
+  height: auto;
+  max-width: 30px;
+  max-height: 50px;
+}
+
+/* Jumbotron */
+
+.jumbotron {
+  background: #1d1a16;
+  border-bottom: 1px solid #1d1a16;
+  margin-bottom: 30px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.jumbotron, .jumbotron h1, .jumbotron .lead {
+  color: #fff;
+}
+
+.jumbotron h1 {
+  font-size: 40px;
+}
+
+.jumbotron img {
+  width: 100%;
+  height: auto;
+  max-width: 75px;
+  padding: 10px 0;
+}
+
+.jumbotron-reverse, .jumbotron-reverse h1 {
+  color: #000;
+}
+
+.jumbotron-reverse {
+  background: #fff;
+}
+
+/* Official */
+
+.official {
+  background: #f1f1f1;
+  padding: 10px 0;
+}
+
+.official a, .official a:visited, .official a:hover {
+  color: #000;
+}
+
+.official p {
+  background-image: url("https://alpha.ca.gov/img/ca-flag.png");
+  background-repeat: no-repeat;
+  background-position: 5px 50%;
+  background-size: 3%;
+  margin: 0 0;
+  padding: 0 0 0 50px;
+}
+
+.nav-cali-bg {
+  padding-left: 35px;
+  background-image: url(https://alpha.ca.gov/img/ca-light.png);
+  background-repeat: no-repeat;
+  background-position: 5px 50%;
+  background-size: 10%;
+}
+
+.official img {
+  margin-right: 10px;
+  max-width: 60px;
+}
+
+.official-footer {
+  background-color: #fff;
+  padding: 15px 0 55px 0;
+}
+
+/* alphabar */
+
+.alphabar {
+  border-top: 1px solid #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #1d2021;
+}
+
+.alphabar p {
+  color: #fff;
+  margin: 0;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.alphabar a {
+  color: #fff;
+}
+
+/* Forms */
+
+.btn-dark, .btn-dark:hover {
+  color: #fff;
+  background: #000;
+}
+
+/* Footer */
+
+.footer {
+  border-top: 1px solid #f1f1f1;
+  background-color: #fff;
+  margin-top: 50px;
+  padding-bottom: 70px;
+  padding-top: 50px;
+}
+
+.footer a, .footer a:visited, .footer a:hover, .footer {
+  color: #000;
+}
+
+/* Cards */
+
+.wrimagecard {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  position: relative;
+  background: #fff;
+  border: 1px solid #f1f1f1;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.wrimagecard .fa {
+  position: relative;
+  font-size: 70px;
+}
+
+.wrimagecard-topimage_header {
+  background: #f1f1f1;
+  padding: 20px;
+}
+
+.wrimagecard-topimage a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.wrimagecard-topimage_title {
+  padding: 20px 24px;
+  height: 80px;
+  padding-bottom: 0.75rem;
+  position: relative;
+}
+
+.wrimagecard-topimage a {
+  border-bottom: none;
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+/* bootstrap style utility classes */
+
+.d-none {
+  display: none;
+}
+
+.py-20 {
+  padding: 20px 0;
+}
+
+/* accordion component specific classes */
+
+cwds-accordion .card-container {
+  height: 0px;
+  display: block;
+  transition: height .3s;
+}
+
+cwds-accordion .card-header {
+  cursor: pointer;
+}
+
+cwds-accordion .collapsed {
+  display: block;
+  overflow: hidden;
+}
+
+
+/* fix bootstrap nav */
+li.active ul.nav.bd-sidenav {
+  display: block;
+}
+
+
+
+/* Temporary CSS Classes Pre-SCSS*/
+
+.btn-bd-primary:hover, .btn-bd-primary:active {
+    color: #fff;
+    background-color: #1d1a16;
+    border-color: #1d1a16;
+}
+
+a.btn {
+    background: #005279;
+    color: #fff;
+}
+
+.search-btn {
+
+    border: 5px #015179 solid;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background: #015179;
+}
+
+.search-btn:hover {
+
+    border: 5px #343a40 solid;
+	background: #343a40;
+	box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5)
+  
+}
+
+.jumbotron {
+  background: #212527;
+}
+
+.text-primary {
+  color: #212527 !important;
+}
+
+
+.alpha-footer {
+	
+	background: #e9ecef;
+	background-color: #e9ecef;
+	border-bottom-width: 1px;
+    border-color: #dcdfe0;
+}
+
+
+/* Step by Step*/
+
+.list-number {
+    position: relative;
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 50%;
+    border-color: #cccccc;
+    text-align: center;
+}
+
+
+
+/* Step by Step List expandable classes */
+
+cwds-step-list li .details {
+  height: 0px;
+  overflow: hidden;
+  transition: height .3s;
+}
+cwds-step-list li {
+  	cursor: pointer;
+	border-left: solid #e8e8e8 !important;
+    border-left-width: 4px !important;
+	margin-left: 10px !important;
+}
+
+cwds-step-list li.list-open {
+    border-left: solid #015179 !important;
+    border-left-width: 4px !important;
+}
+
+cwds-step-list li.list-open .list-number {
+    border-style: solid;
+    border-radius: 50%;
+    border-color: #015179;
+    text-align: center;
+	font-weight: 500 !important;
+}
+
+cwds-step-list li .step-interior {
+	padding-left: 40px;
+	display: block;
+	font-size: initial;
+}
+
+cwds-step-list li .unstyled {
+	
+	border-left-width: 0!important;
+    border: none!important;
+	list-style-type: none;
+}
+
+
+/* fix bootstrap nav */
+li.active ul.nav.bd-sidenav {
+  display: block;
+}

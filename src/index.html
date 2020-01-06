@@ -122,7 +122,7 @@
 
   <!--
   this is duplicated dynamically at the bottom but has no defer which may be fine
-  <script src="js/main.bb39e002b8a9cdc845b1.js" defer></script>
+  <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>" defer></script>
   -->
   
 
@@ -135,5 +135,5 @@
   gtag('config', 'UA-154336791-1');
   </script>
 
-<script type="text/javascript" src="js/main.bb39e002b8a9cdc845b1.js"></script></body>
+</body>
 </html>
