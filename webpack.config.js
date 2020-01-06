@@ -5,7 +5,14 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: 'production',
-  entry: './src/js/index.js',
+  entry: {
+    javascript: [
+      './src/js/index.js'
+    ],
+    style: [
+      './src/css/_index.scss'
+    ]
+  },
   optimization: {
     splitChunks: {
       cacheGroups: {
@@ -20,14 +27,24 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].[hash].css',
-      chunkFilename: '[id].[hash].css',
+      filename: '[name].css',
+      chunkFilename: 'css/[id].css',
     }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Output Management',
       filename: 'index.html',
-      template: 'src/index.html'
+      template: 'src/index.html',
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        useShortDoctype: true
+      },
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'about.html',
+      template: 'src/about.html'
     })
   ],
   module: {
@@ -35,12 +52,7 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: '/public/css/',
-            },
-          },
+          MiniCssExtractPlugin.loader,
           'css-loader',
           'sass-loader'
         ],
