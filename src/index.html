@@ -110,22 +110,8 @@
     </div>
   </div>
 
-  <div class="alphabar">
-    <div class="container">
-      <p>This is an alpha project and a work in progress (<a href="https://medium.com/cadotgov">Details</a>)</p>
-    </div>
-  </div>
-
-  
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script src="https://www.googletagmanager.com/gtag/js?id=UA-154336791-1" defer></script>
-  <script type="text/javascript">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-154336791-1');
-  </script>
+  <%= require('html-loader!./partials/alphabar.html') %>
+  <%= require('html-loader!./partials/ga.html') %>
 
 </body>
 </html>
