@@ -5,6 +5,7 @@
   "main": "public/index.html",
   "scripts": {
     "build": "webpack",
+    "undo_build": "git checkout public",
     "build:old": "npm run uglify:css && npm run uncss && cp public/css/cssmin.css public/dist/uncssed.css && rm public/css/cssmin.css",
     "uncss": "uncss public/index.html > public/css/cssmin.css",
     "uglify:css": "uglifycss public/css/bootstrap.min.css public/css/style.css > public/dist/uncssed.css",
@@ -32,6 +33,7 @@
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
+    "script-ext-html-webpack-plugin": "^2.1.4",
     "style-loader": "^1.1.2",
     "uglifycss": "0.0.29",
     "uncss": "^0.17.2",
