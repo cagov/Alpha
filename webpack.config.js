@@ -93,7 +93,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.png(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.png$/,
         use: [
           {
             loader: 'file-loader',
