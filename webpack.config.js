@@ -11,7 +11,7 @@ const minificationOptions = {
 }
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: {
     javascript: [
       './src/js/index.js'

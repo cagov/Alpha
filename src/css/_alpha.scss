@@ -13,6 +13,7 @@
 @font-face {
   font-family: "Public Sans Extra Bold";
   font-style: normal;
+  font-display: swap;
   src: 
     url("fonts/publicsans-extrabold-webfont.woff2") format("woff2"), 
     url("fonts/publicsans-extrabold-webfont.woff") format("woff");
@@ -21,6 +22,7 @@
 @font-face {
   font-family: "Public Sans Light";
   font-style: normal;
+  font-display: swap;
   src: 
     url("fonts/publicsans-light-webfont.woff2") format("woff2"), 
     url("fonts/publicsans-light-webfont.woff") format("woff");
@@ -29,6 +31,7 @@
 @font-face {
   font-family: "Public Sans";
   font-style: normal;
+  font-display: swap;
   src: 
     url("fonts/publicsans-regular-webfont.woff2") format("woff2"), 
     url("fonts/publicsans-regular-webfont.woff") format("woff");
