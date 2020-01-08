@@ -1,109 +1,81 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="The Alpha website for the State of California.">
   <meta name="author" content="Alpha.CA.gov - State of California">
-  <link rel="canonical" href="https://alpha.ca.gov" />
-  <title>Alpha.CA.gov - State of California</title>
 
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/apple-touch-icon.png"
-    sizes="180x180">
-  <link rel="icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/favicon-32x32.png" sizes="32x32"
-    type="image/png">
-  <link rel="icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/favicon-16x16.png" sizes="16x16"
-    type="image/png">
-  <link rel="manifest" href="https://cwds.dev/docs/4.3/assets/img/favicons/manifest.json">
-  <link rel="mask-icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/safari-pinned-tab.svg" color="#1d1a16">
-  <link rel="icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/favicon.ico">
-  <meta name="msapplication-config" content="https://cwds.dev/docs/4.3/assets/img/favicons/browserconfig.xml">
-  <meta name="theme-color" content="#000000">
+  <%= require('html-loader!../partials/favicons.html') %>
 
   <!-- Social media post -->
   <meta property="og:image" content="img/thumbnail.png">
   <meta property="og:image:height" content="630">
   <meta property="og:image:width" content="630">
   <meta property="og:title" content="Alpha.CA.gov - State of California">
-  <meta property="og:description" content="The Alpha website for the State of California.">
+  <meta property="og:description" content="We’re making it easier to find and use government services and information in the State of California.
+  ">
   <meta property="og:url" content="https://alpha.ca.gov">
+
+  <link rel="canonical" href="https://alpha.ca.gov" />
+  <title>Welcome to Alpha.CA.gov</title>
+
   <link href="https://california.azureedge.net/cdt/statetemplate/6.0.0/css/cagov.font-only.min.css" rel="stylesheet" />
+
 </head>
 
 <body>
-  <div class="official">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <p>Official California State Government</p>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bd-navbar navbar-inverse">
-    <div class="container-xl flex-wrap flex-md-nowrap py-0 px-3">
-      <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Ca.gov">
-        <img src="https://alpha.ca.gov/img/ca-light.png" class="logo-img" alt="California State" />
-        <span class="navbar-brand navbar-right pr-5" href="index.html">CA.gov <sup>(ALPHA)</sup></span>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-  </nav>
+  <%= require('html-loader!../partials/experiment-banner.html') %>
+  <%= require('html-loader!../partials/official.html') %>
+  <%= require('html-loader!../partials/navbar.html') %>
 
   <div class="container-fluid jumbotron">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1>Serving California</h1>
+          <h1>Welcome to Alpha.CA.gov</h1>
+          <p class="lead">We’re making it easier to find and use government services and information.</p>
         </div>
       </div>
     </div>
   </div>
 
   <div class="container">
-    Hi
-  </div>
-
-  <div class="footer alpha-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="list-group list list-group-horizontal-lg flex-fill list-group-flush">
-            <a href="#">
-              <li class="list-group-item alpha-footer">About</li>
-            </a>
-            <a href="#">
-              <li class="list-group-item alpha-footer">Feedback</li>
-            </a>
-          </ul>
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Featured pages</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="list-group">
+          <a href="/services/minimum-wage-in-california" class="list-group-item list-group-item-action lead">Find your
+            minimum wage </a>
+          <a href="/services/state-of-california-employee-holidays"
+            class="list-group-item list-group-item-action lead">Request a birth certificate</a>
+          <a href="/services/state-of-california-employee-holidays"
+            class="list-group-item list-group-item-action lead">Hire a licensed contractor for home improvements</a>
         </div>
-        <p class="col-md-12 pt-1 text-right">
-          &copy; 2020 State of California
-        </p>
+      </div>
+      <div class="col-md-6">
+        <div class="list-group">
+          <a href="/services/california-birth-certificate" class="list-group-item list-group-item-action lead">Find food
+            banks near you</a>
+          <a href="/services/california-birth-certificate" class="list-group-item list-group-item-action lead">State of
+            California employee holidays</a>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="alphabar">
-    <div class="container">
-      <p>This is an alpha project and a work in progress (<a href="https://medium.com/cadotgov">Details</a>)</p>
-    </div>
-  </div>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script src="https://www.googletagmanager.com/gtag/js?id=UA-154336791-1" defer></script>
-  <script type="text/javascript">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-154336791-1');
-  </script>
+  <%= require('html-loader!../partials/feedback.html') %>
+  <%= require('html-loader!../partials/footer.html') %>
+  <%= require('html-loader!../partials/alphabar.html') %>
+  <%= require('html-loader!../partials/ga.html') %>
 
 </body>
+
 </html>

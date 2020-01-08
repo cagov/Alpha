@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Alpha website for the State of California.">
+  <meta name="author" content="Alpha.CA.gov - State of California">
+
+  <%= require('html-loader!../../partials/favicons.html') %>
+
+  <!-- Social media post -->
+  <meta property="og:image" content="img/thumbnail.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="630">
+  <meta property="og:title" content="Alpha.CA.gov - State of California">
+  <meta property="og:description" content="We’re making it easier to find and use government services and information in the State of California.
+  ">
+  <meta property="og:url" content="https://alpha.ca.gov">
+
+  <link rel="canonical" href="https://alpha.ca.gov" />
+  <title>Welcome to Alpha.CA.gov</title>
+
+  <link href="https://california.azureedge.net/cdt/statetemplate/6.0.0/css/cagov.font-only.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <%= require('html-loader!../../partials/experiment-banner.html') %>
+  <%= require('html-loader!../../partials/official.html') %>
+  <%= require('html-loader!../../partials/navbar.html') %>
+
+  <!-- body goes here -->
+
+  <%= require('html-loader!../../partials/feedback.html') %>
+
+  <%= require('html-loader!../../partials/footer.html') %>
+  <%= require('html-loader!../../partials/alphabar.html') %>
+  <%= require('html-loader!../../partials/ga.html') %>
+
+</body>
+
+</html>

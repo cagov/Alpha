@@ -2,6 +2,13 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const minificationOptions = {
+  collapseWhitespace: true,
+  removeComments: true,
+  removeRedundantAttributes: true,
+  removeScriptTypeAttributes: true,
+  useShortDoctype: true
+}
 
 module.exports = {
   mode: 'production',
@@ -34,28 +41,22 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'src/index.html',
-      minify: {
-        collapseWhitespace: true,
-        removeComments: true,
-        removeRedundantAttributes: true,
-        removeScriptTypeAttributes: true,
-        useShortDoctype: true
-      },
+      minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'feedback/index.html',
       template: 'src/feedback/index.html',
-      minify: {
-        collapseWhitespace: true,
-        removeComments: true,
-        removeRedundantAttributes: true,
-        removeScriptTypeAttributes: true,
-        useShortDoctype: true
-      },
+      minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'about/index.html',
-      template: 'src/about/index.html'
+      template: 'src/about/index.html',
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'services/california-birth-certificate/index.html',
+      template: 'src/services/california-birth-certificate/index.html',
+      minify: minificationOptions
     })
   ],
   module: {
