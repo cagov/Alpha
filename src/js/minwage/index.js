@@ -12,6 +12,7 @@ document.querySelector('.display-wage-by-city').innerHTML = html;
 let uniqueZipArray = [];
 let zipMap = new Map();
 
+console.log(uniqueZipJson)
 uniqueZipJson.forEach( (item) => {
   for(var key in item) {
     uniqueZipArray.push(key)

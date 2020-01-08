@@ -25,6 +25,7 @@
   <link href="https://california.azureedge.net/cdt/statetemplate/6.0.0/css/cagov.font-only.min.css" rel="stylesheet" />
 
 </head>
+
 <body>
 
   <%= require('html-loader!../../partials/experiment-banner.html') %>
@@ -33,23 +34,23 @@
 
   <div class="jumbotron text-left">
     <div class="container">
-      <h1>Minimum wage in California</h1>
+      <h1>Find your minimum wage</h1>
     </div>
   </div>
 
   <div class="container">
     <div class="row">
-    
+
       <div class="col-md-8">
 
-        <h2>Find the minimum wage in your city</h2>
+        <h2>Minimum wage in your city</h2>
         <p>Your minimum wage depends on the city where you work.</p>
         <form>
           <div class="form-group wage-city-search">
             <label for="location-query">Please enter your city or zip code:</label><br>
             <input class="city-search form-control" data-multiple id="location-query"
               data-list="City of Berkeley, City of Cupertino, City of El Cerrito, Emeryville, Los Altos, Milpitas, Mountain View, Oakland, Palo Alto, San Diego, San Francisco, San Jose, San Mateo, Santa Clara, Sunnyvale, Alameda, Belmont, Daly City, Fremont, Los Angeles (City), Los Angeles County, Malibu, Menlo Park, Novato, Pasadena, Petaluma, Redwood City, Richmond, San Leandro, Santa Monica, Santa Rosa, Sonoma, South San Francisco" />
-              <div class="invalid-feedback">Please enter a city or zip code in California.</div>
+            <div class="invalid-feedback">Please enter a city or zip code in California.</div>
           </div>
           <button type="submit" class="btn btn-primary js-wage-lookup mt-3">Find your minimum wage</button>
         </form>
@@ -72,14 +73,14 @@
             </tr>
           </tbody>
         </table>
-        <p style="padding-bottom:0;">*More about the <a
-            href="https://www.dir.ca.gov/dlse/faq_minimumwage.htm">minimum wage</a>.</p>
+        <p style="padding-bottom:0;">*More about the <a href="https://www.dir.ca.gov/dlse/faq_minimumwage.htm">minimum
+            wage</a>.</p>
         <p></p>
-        <h3>Minimum wage by city</h3>
+        <h3>Minimum wage by city and county</h3>
         <p>These California cities and counties have their own minimum wage laws.</p>
         <div class="display-wage-by-city"></div>
       </div>
-    
+
     </div>
   </div>
 
