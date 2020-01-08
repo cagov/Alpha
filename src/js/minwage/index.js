@@ -5,7 +5,7 @@ import * as uniqueZipJson from './unique-zips.json';
 
 // display HTML of add city wages
 let wageJson = wageJsonData.MinimumWage[0]['2020-01-01T08:00:00'];
-let html = buildDisplay(wageJson);
+let html = buildDisplay(wageJsonData.MinimumWage);
 document.querySelector('.display-wage-by-city').innerHTML = html;
 
 // handle search autocomplete
@@ -24,7 +24,7 @@ citiesJson.forEach( (item) => {
   cityNames.set(item.replace(', CA', '').toLowerCase(), item)
 })
 
-document.querySelector('.city-search').dataset.list = [...citiesJson, ...uniqueZipArray];
+document.querySelector('.city-search').dataset.list = [...citiesJson.default, ...uniqueZipArray];
 new Awesomplete('input[data-multiple]', {
   filter: function(text, input) {
     return Awesomplete.FILTER_CONTAINS(text, input.match(/[^,]*$/)[0]);
@@ -131,7 +131,7 @@ function doubleTemplate(location, wageData) {
 
 function buildDisplay(wageJson) {
   return `
-    ${wageJson.MinimumWage.map(function(date) {
+    ${wageJson.map(function(date) {
       let label = '';
       let cityWages = '';
       for(var key in date) {
