@@ -108,6 +108,30 @@ a.btn-dark {
   text-decoration: none;
 }
 
+.btn-primary {
+    color: #fff;
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.btn-light {
+    color: #000;
+    background-color: #ccc;
+    border-color: #ccc;
+}
+
+.btn-primary:hover {
+    background-color: #005279;
+    border-color: #005279;
+}
+
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #005279;
+    border-color: #005279;
+}
+
+
 a.list-group-item, a.list-group-item:visited {
   color: #000;
   text-decoration: none;
