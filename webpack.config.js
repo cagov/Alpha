@@ -43,8 +43,8 @@ module.exports = {
       },
     }),
     new HtmlWebpackPlugin({
-      filename: 'feedback.html',
-      template: 'src/feedback.html',
+      filename: 'feedback/index.html',
+      template: 'src/feedback/index.html',
       minify: {
         collapseWhitespace: true,
         removeComments: true,
@@ -54,8 +54,8 @@ module.exports = {
       },
     }),
     new HtmlWebpackPlugin({
-      filename: 'about.html',
-      template: 'src/about.html'
+      filename: 'about/index.html',
+      template: 'src/about/index.html'
     })
   ],
   module: {

@@ -27,12 +27,12 @@
 
 <body>
     
-	<div class="alert alert-light fade show mb-0" role="alert">
+	<div class="alert fade show mb-0" role="alert">
 		  <div class="container">
     		<div class="row">
       			<div class="col-md-12">
-					<p><strong>Alpha.CA.gov</strong> is a work in progress. Thank you for helping us test our experimental project. <br> If you need the current site, please <span class="ca-gov-icon-link" aria-hidden="true"></span><a href="https://www.ca.gov" rel="noopener noreferrer" target="_blank">visit CA.gov</a>. </p>
-					<button type="button" class="btn btn-outline-secondary" data-dismiss="alert" aria-label="Close" onClick="this.parentElement.parentElement.parentElement.parentElement.classList.add('d-none')">
+					<p><strong>Alpha.CA.gov</strong> is a work in progress. Thank you for helping us test our experimental project. <br> If you need the current site, please <a href="https://www.ca.gov" rel="noopener noreferrer" target="_blank">visit CA.gov</a>. </p>
+					<button type="button" class="btn btn-dark" data-dismiss="alert" aria-label="Close" onClick="this.parentElement.parentElement.parentElement.parentElement.classList.add('d-none')">
 					  <span aria-hidden="true">OK</span></button>
 				</div>	
 			</div>	
@@ -74,8 +74,17 @@
         </div>
       </div>
     </div>
+	  
+	<div class="row pt-5">
+		<div class="col-md-10">
+			<hr>
+			<p>Did you find what you were looking for? Please share your feedback to help us improve this page. </p><br>
+			<a class="btn btn-dark" href="/feedback/">Share Feedback</a>
+			
+		</div>
+  	</div>
   </div>
-
+	  
   <%= require('html-loader!./partials/footer.html') %>
   <%= require('html-loader!./partials/alphabar.html') %>
   <%= require('html-loader!./partials/ga.html') %>
