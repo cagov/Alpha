@@ -1,0 +1,58 @@
+{
+  "MinimumWage": [
+    { 
+      "2020-01-01T08:00:00": [
+        { "name": "Alameda", "wage": [ { "everybody": "13.50"  }] },
+        { "name": "Belmont", "wage": [ { "everybody": "15"  }] },
+        { "name": "Berkeley", "wage": [ { "everybody": "15.59" } ] },
+        { "name": "Cupertino", "wage": [ { "everybody": "15.35" } ] },
+        { "name": "Daly City", "wage": [ { "everybody": "13.75" } ] },
+        { "name": "El Cerrito", "wage": [ { "everybody": "15.37" } ] },
+        { "name": "Emeryville", "wage": [ { "everybody": "16.30" } ] },
+        { "name": "Fremont", "wage": [ { "25 or fewer": "12" }, { "26 or more": "13.50" } ] },
+        { "name": "Los Altos", "wage": [ { "everybody": "15.40" } ] },
+        { "name": "City of Los Angeles", "wage": [ { "25 or fewer": "13.25" }, { "26 or more": "14.25" } ] },
+        { "name": "Los Angeles County", "wage" : [ { "25 or fewer": "13.25" }, { "26 or more": "14.25" } ] },
+        { "name": "Malibu", "wage": [ { "25 or fewer": "13.25" }, { "26 or more": "14.25" } ] },
+        { "name": "Menlo Park", "wage": [ { "everybody": "15.00" } ] },
+        { "name": "Milpitas", "wage": [ { "everybody": "15.00" } ] },
+        { "name": "Mountain View", "wage": [ { "everybody": "16.05" } ] },
+        { "name": "Oakland", "wage": [ { "everybody": "14.14" } ] },
+        { "name": "Palo Alto", "wage": [ { "everybody": "15.40" } ] },
+        { "name": "Pasadena", "wage": [ { "25 or fewer": "13.25" }, { "26 or more": "14.25" } ] },
+        { "name": "Petaluma", "wage": [ { "25 or fewer": "14" }, { "26 or more": "15" } ] },
+        { "name": "Redwood City", "wage": [ { "everybody": "15.38" } ] },
+        { "name": "Richmond", "wage": [ { "everybody": "15.00" } ] },
+        { "name": "San Diego", "wage": [ { "everybody": "13.00" } ] },
+        { "name": "San Francisco", "wage": [ { "everybody": "15.59" } ] },
+        { "name": "San Jose", "wage": [ { "everybody": "15.25" } ] },
+        { "name": "San Leandro", "wage": [ { "everybody": "14.00" } ] },
+        { "name": "San Mateo", "wage": [ { "everybody": "15.38" } ] },
+        { "name": "Santa Clara", "wage": [ { "everybody": "15.40" } ] },
+        { "name": "Santa Monica", "wage": [ { "25 or fewer": "13.25"}, {"26 or more": "14.25" } ] },
+        { "name": "Sonoma", "wage": [ { "25 or fewer": "12.50" }, { "26 or more": "13.50" } ] },
+        { "name": "South San Francisco", "wage": [ { "everybody": "15.00" } ] },
+        { "name": "Sunnyvale", "wage": [ { "everybody": "16.05" } ] } 
+      ]
+    },    
+    {
+      "2020-07-01T07:00:00": 
+      [
+        { "name": "Alameda", "wage": [ { "everybody": "15"  }] },
+        { "name": "Berkeley", "wage": [ { "everybody": "The rate will increase from $15.59/hour based on the Consumer Price Index." } ] },
+        { "name": "Emeryville", "wage": [ { "everybody": "$16.42/hour (estimated). The rate will increase based on the Consumer Price Index." } ] },
+        { "name": "Fremont", "wage": [ { "25 or fewer": "13.50" }, { "26 or more": "15" } ] },
+        { "name": "City of Los Angeles", "wage": [ { "25 or fewer": "14.25" }, { "26 or more": "15" } ] },
+        { "name": "Los Angeles County", "wage" : [ { "25 or fewer": "14.25" }, { "26 or more": "15" } ] },
+        { "name": "Malibu", "wage": [ { "25 or fewer": "14.25" }, { "26 or more": "15" } ] },
+        { "name": "Milpitas", "wage": [ { "everybody": "The rate will increase from $15/hour based on the Consumer Price Index." } ] },
+        { "name": "Novato", "wage": [ { "100 or more employees": "15" }, {"26–99 employees": "14"}, {"1–25 employees": "13"} ] },
+        { "name": "Pasadena", "wage": [ { "25 or fewer": "14.25" }, { "26 or more": "15" } ] },
+        { "name": "San Francisco", "wage": [ { "everybody": "The rate will increase from $15.59/hour based on the Consumer Price Index." } ] },
+        { "name": "San Leandro", "wage": [ { "everybody": "15.00" } ] },
+        { "name": "Santa Monica", "wage": [ { "25 or fewer": "14.25"}, {"26 or more": "15" } ] },
+        { "name": "Santa Rosa", "wage": [ { "25 or fewer": "14" }, { "26 or more": "15" } ] } 
+      ]
+    }
+  ]
+}

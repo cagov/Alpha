@@ -18,6 +18,9 @@ module.exports = {
     ],
     style: [
       './src/css/_index.scss'
+    ],
+    minwage: [
+      './src/js/minwage/index.js'
     ]
   },
   optimization: {
@@ -41,21 +44,25 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'src/index.html',
+      excludeChunks: ['minwage'],
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'feedback/index.html',
       template: 'src/feedback/index.html',
+      excludeChunks: ['minwage'],
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'about/index.html',
       template: 'src/about/index.html',
+      excludeChunks: ['minwage'],
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'services/california-birth-certificate/index.html',
       template: 'src/services/california-birth-certificate/index.html',
+      excludeChunks: ['minwage'],
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
@@ -66,6 +73,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'services/state-of-california-employee-holidays/index.html',
       template: 'src/services/state-of-california-employee-holidays/index.html',
+      excludeChunks: ['minwage'],
       minify: minificationOptions
     })
   ],
