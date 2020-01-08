@@ -33,4 +33,4 @@ _Interested in how we got started?_ [Learn more.](https://medium.com/cadotgov/re
 
 ```npm run build```
 
-Concatenates, minifies and removes unused CSS.
+Concatenates, minifies and removes unused CSS, builds template partials.
