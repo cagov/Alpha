@@ -242,42 +242,45 @@ hr {
 }
 
 
+/* Navbar */
+
 .navbar {
   border-radius: 0;
   margin-bottom: 0;
 }
-
+.navbar img {
+  margin-top: 8px;
+  max-height: 35px;
+}
 .navbar-brand {
-  font-family: "Public Sans ExtraBold", sans-serif;
+  font-family: 'Public Sans ExtraBold', sans-serif;
+  padding-left: 35px;
+  background-image: url('https://alpha.ca.gov/img/ca-light.png');
+  background-repeat: no-repeat;
+  background-position: 5px 50%;
+  background-size: 15%;
 }
-
 .navbar-inverse, .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-  background-color: #1d2021;
-  border-color: #1d2021;
+  background-color: #232019;
+  border-color: #232019;
 }
-
 .navbar-inverse .navbar-toggle {
-  border-color: #fff;
+  border-color: #ffffff;
 }
-
-.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
-  color: #fff;
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a {
+  color: #ffffff;
 }
-
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
-  background: #fff;
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+  background: #ffffff;
 }
-
 .navbar-header a, .navbar-header a:visited, .navbar-header a:hover {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
 }
-
 .navbar img {
-  width: auto;
+  width: 100%;
   height: auto;
-  max-width: 30px;
-  max-height: 50px;
+  max-width: 50px;
 }
 
 /* Jumbotron */
