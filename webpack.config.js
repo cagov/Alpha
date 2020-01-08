@@ -57,6 +57,16 @@ module.exports = {
       filename: 'services/california-birth-certificate/index.html',
       template: 'src/services/california-birth-certificate/index.html',
       minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'services/minimum-wage-in-california/index.html',
+      template: 'src/services/minimum-wage-in-california/index.html',
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'services/state-of-california-employee-holidays/index.html',
+      template: 'src/services/state-of-california-employee-holidays/index.html',
+      minify: minificationOptions
     })
   ],
   module: {
