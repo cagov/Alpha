@@ -2,6 +2,12 @@
 	text-decoration: none !important;
 }
 
+.alert-left {
+	
+	border-left: 4px solid #b71134;
+	
+}
+
 
 /* Public Sans */
 
@@ -507,10 +513,11 @@ a.btn {
 
 .alpha-footer {
 	
-	background: #e9ecef;
-	background-color: #e9ecef;
+	background: #f8f9fa;
+	background-color: #f8f9fa;
 	border-bottom-width: 1px;
     border-color: #dcdfe0;
+	border-top: 2px solid #b4b4b5;
 }
 
 
