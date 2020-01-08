@@ -5,6 +5,7 @@
   "main": "public/index.html",
   "scripts": {
     "build": "webpack",
+    "undo_build": "git checkout public",
     "build:old": "npm run uglify:css && npm run uncss && cp public/css/cssmin.css public/dist/uncssed.css && rm public/css/cssmin.css",
     "uncss": "uncss public/index.html > public/css/cssmin.css",
     "uglify:css": "uglifycss public/css/bootstrap.min.css public/css/style.css > public/dist/uncssed.css",
