@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,6 +27,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
     
 	<div class="alert fade show mb-0" role="alert">
 		  <div class="container">
@@ -39,6 +41,10 @@
 		  </div>	
       </div>
   
+=======
+
+  <%= require('html-loader!./partials/experiment-banner.html') %>
+>>>>>>> 71faaa3ec574e55acff635c7ce494b96e8abea75
   <%= require('html-loader!./partials/official.html') %>
   <%= require('html-loader!./partials/navbar.html') %>
 
@@ -47,7 +53,7 @@
       <div class="row">
         <div class="col-md-12">
           <h1>Welcome to Alpha.CA.gov</h1>
-			<p class="lead">We’re making it easier to find and use government services and information.</p>
+          <p class="lead">We’re making it easier to find and use government services and information.</p>
         </div>
       </div>
     </div>
@@ -62,18 +68,20 @@
     <div class="row">
       <div class="col-md-6">
         <div class="list-group">
-          <a href="/services/minimum-wage-in-california" class="list-group-item list-group-item-action lead">Find your minimum wage </a>
-          <a href="/services/state-of-california-employee-holidays" class="list-group-item list-group-item-action lead">Request a birth certificate</a>
-		  <a href="/services/state-of-california-employee-holidays" class="list-group-item list-group-item-action lead">Hire a licensed contractor for home improvements</a>
+          <a href="services/minimum-wage-in-california" class="list-group-item list-group-item-action lead">Find your
+            minimum wage </a>
+          <a href="services/california-birth-certificate"
+            class="list-group-item list-group-item-action lead">Request a birth certificate</a>
         </div>
       </div>
       <div class="col-md-6">
         <div class="list-group">
-          <a href="/services/california-birth-certificate" class="list-group-item list-group-item-action lead">Find food banks near you</a>
-		  <a href="/services/california-birth-certificate" class="list-group-item list-group-item-action lead">State of California employee holidays</a>
+          <a href="services/state-of-california-employee-holidays" class="list-group-item list-group-item-action lead">State of
+            California employee holidays</a>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 	<div class="container">  
 		<div class="row pt-5">
 			<div class="col-md-10 row">
@@ -84,11 +92,15 @@
 			</div>
 		</div>
 	</div>	
+=======
+>>>>>>> 71faaa3ec574e55acff635c7ce494b96e8abea75
   </div>
-	  
+
+  <%= require('html-loader!./partials/feedback.html') %>
   <%= require('html-loader!./partials/footer.html') %>
   <%= require('html-loader!./partials/alphabar.html') %>
   <%= require('html-loader!./partials/ga.html') %>
 
 </body>
+
 </html>
