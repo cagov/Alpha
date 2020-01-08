@@ -15,6 +15,6 @@ pool:
 steps:
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(build.sourcesDirectory)'
+    rootFolderOrFile: '$(build.sourcesDirectory)/public'
     includeRootFolder: false
 - task: PublishBuildArtifacts@1
