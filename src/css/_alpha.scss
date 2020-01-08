@@ -11,12 +11,12 @@
 
 /* Public Sans */
 @font-face {
-  font-family: "Public Sans Extra Bold";
+  font-family: "Public Sans Bold";
   font-style: normal;
   font-display: swap;
   src: 
-    url("fonts/publicsans-extrabold-webfont.woff2") format("woff2"), 
-    url("fonts/publicsans-extrabold-webfont.woff") format("woff");
+    url("fonts/publicsans-bold-webfont.woff2") format("woff2"), 
+    url("fonts/publicsans-bold-webfont.woff") format("woff");
 }
 
 @font-face {
@@ -52,7 +52,8 @@ img {
 
 h1, h2, h3, h4, h5, h6 {
   color: #000;
-  font-family: "Public Sans ExtraBold", sans-serif;
+  font-family: "Public Sans Bold", sans-serif;
+  font-weight: bold;
 }
 
 h1 {
@@ -289,8 +290,8 @@ hr {
 /* Jumbotron */
 
 .jumbotron {
-  background: #1d1a16;
-  border-bottom: 1px solid #1d1a16;
+  background: #232019;
+  border-bottom: 1px solid #232019;
   margin-bottom: 30px;
   padding-bottom: 50px;
   padding-top: 50px;
@@ -506,9 +507,6 @@ a.btn {
   
 }
 
-.jumbotron {
-  background: #212527;
-}
 
 .text-primary {
   color: #212527 !important;
