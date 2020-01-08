@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const PurgecssPlugin = require('purgecss-webpack-plugin');
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const minificationOptions = {
   collapseWhitespace: true,
   removeComments: true,
@@ -75,6 +77,9 @@ module.exports = {
       template: 'src/services/state-of-california-employee-holidays/index.html',
       excludeChunks: ['minwage'],
       minify: minificationOptions
+    }),
+    new ScriptExtHtmlWebpackPlugin({
+      defaultAttribute: 'defer'
     })
   ],
   module: {
