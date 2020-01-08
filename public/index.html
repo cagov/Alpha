@@ -1,133 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="The Alpha website for the State of California.">
-    <meta name="author" content="Alpha.CA.gov - State of California">
-	<meta name="google-site-verification" content="aBJHYsPN6AfEPViMwkLKVpjzhOE9wF_DMzaX39EwZRM" />
+<!doctype html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="author" content="Alpha.CA.gov - State of California"><link rel="preconnect" href="https://www.google-analytics.com"><link rel="apple-touch-icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180"><link rel="icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png"><link rel="icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png"><link rel="manifest" href="https://cwds.dev/docs/4.3/assets/img/favicons/manifest.json"><link rel="mask-icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/safari-pinned-tab.svg" color="#1d1a16"><link rel="icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/favicon.ico"><meta name="msapplication-config" content="https://cwds.dev/docs/4.3/assets/img/favicons/browserconfig.xml"><meta name="theme-color" content="#000000"><meta property="og:image" content="img/thumbnail.png"><meta property="og:image:height" content="630"><meta property="og:image:width" content="630"><meta property="og:title" content="Alpha.CA.gov - State of California"><meta property="og:description" content="We’re making it easier to find and use government services and information in the State of California."><meta property="og:url" content="https://alpha.ca.gov"><title>Welcome to Alpha.CA.gov</title><meta name="description" content="The Alpha website for the State of California."><link rel="canonical" href="https://alpha.ca.gov"><link href="css/3.css" rel="stylesheet"></head><body><div class="alert mb-0 d-none" role="alert"><div class="container"><div class="row"><div class="col-md-12 ml-4 alert-left"><p><strong>Alpha.CA.gov</strong> is a work in progress. Thank you for helping us test our experimental project.<br>If you need the current site, please <a href="https://www.ca.gov" rel="noopener noreferrer" target="_blank">visit CA.gov</a>.</p><button type="button" class="btn btn-dark btn-sm" data-dismiss="alert" aria-label="Close" onclick="dismissAlert()"><span aria-hidden="true">OK</span></button></div></div></div></div><script>function getAlertElement() {
+		return document.getElementsByClassName("alert")[0];
+	}
 
-    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+	function dismissAlert() {
+		getAlertElement().classList.add('d-none');
 
-    <!-- Social media post -->
-    <meta property="og:image" content="img/thumbnail.png">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:width" content="630">
-    <meta property="og:title" content="Alpha.CA.gov - State of California">
-    <meta property="og:description" content="The Alpha website for the State of California.">
-    <meta property="og:url" content="https://alpha.ca.gov">
+		localStorage.setItem("AlertDismissed",new Date().getTime());
+	}
 
-    <link rel="canonical" href="https://alpha.ca.gov" />
+	function alertLoad() {
+		if ((new Date().getTime() - localStorage.getItem('AlertDismissed') || 0) > 36000000) 
+				getAlertElement().classList.remove('d-none');
+	}
 
-    <title>Alpha.CA.gov - State of California</title>
-
-    <link href="dist/uncssed.css" rel="stylesheet"></script>
-
-  </head>
-
-  <body>
-
-    <div class="official">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <p>Official California State Government Website</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <nav class="navbar navbar-inverse">
-      <div class="container">
-        <div class="navbar-header">
-
-          <a class="navbar-brand navbar-left" href="/">CA.gov <sup>(ALPHA)</sup></a>
-        </div>
-
-      </div>
-    </nav>
-
-  <div class="jumbotron text-center">
-    <div class="container">
-      <p><img src="img/ca-light.png" alt="State of California" title="State of California"> </p>
-      <h1>Hello California</h1>
-   
-    </div>
-  </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-2">
-          &nbsp;
-        </div>
-        <div class="col-md-8">
-
-          <h2>Fellow Californians,</h2>
-
-          <p>We're a small but mighty team of public servants and outside experts in user research and design. Together, we're reimagining <a href="https://ca.gov">CA.gov</a> with and for the people of California.</p>
-
-          <p>Our first step: Make <a href="https://ca.gov">CA.gov</a> easier for Californians to use. We've been working to help you access the services and information you need since December 2019.</p>
-
-          <p>And we invite you to join us.</p>
-
-          <h3>Follow our progress</h3>
-
-           <p>We're sharing our insights on our  <a href="https://medium.com/cadotgov">blog</a> and <a href="https://twitter.com/CAdotGov">Twitter</a> . Our work in progress will live on <a href="https://github.com/cagov/">GitHub</a> and this website, <a href="https://alpha.ca.gov">Alpha.CA.gov</a>.</p>
-
-          <h3>Share your feedback</h3>
-
-          <p>Please take our <a href="https://www.surveymonkey.com/r/AlphaCAgov">five-minute survey</a> to help improve CA.gov. Thanks in advance for sharing your thoughts.</p>
-
-    			<p>We're excited to work with you.</p>
-
-    			<p><em>Team Alpha.CA.gov</em></p>
-                      
-        </div>
-        <div class="col-md-2">
-        </div>
-      </div>
-    </div>
-
-    <div class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <p>
-              State of California Website
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="alphabar">
-      <div class="container">
-        <p>This is an alpha project and a work in progress (<a href="https://medium.com/cadotgov">Details</a>)</p>
-      </div>
-    </div>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script src="https://www.googletagmanager.com/gtag/js?id=UA-154336791-1"></script>
-
-    <!-- Google Analytics -->
-    <script src="js/analytics.js" type="text/javascript"></script>
-
-  </body>
-</html>
+	alertLoad();</script><div class="official"><div class="container"><div class="row"><div class="col-md-12"><p>Official California State Government</p></div></div></div></div><nav class="navbar navbar-inverse"><div class="container"><div class="navbar-header"><a class="navbar-brand navbar-left" href="../">CA.gov <sup>(ALPHA)</sup></a></div></div></nav><div class="container-fluid jumbotron"><div class="container"><div class="row"><div class="col-md-12"><h1>Welcome to Alpha.CA.gov</h1><p class="lead">We’re making it easier to find and use government services and information.</p></div></div></div></div><div class="container"><div class="row"><div class="col-md-12"><h2>Featured</h2></div></div><div class="row"><div class="col-md-6"><div class="list-group"><a href="services/minimum-wage-in-california" class="list-group-item list-group-item-action lead">Find your minimum wage </a><a href="services/california-birth-certificate" class="list-group-item list-group-item-action lead">Request a birth certificate</a> <a href="services/california-birth-certificate" class="list-group-item list-group-item-action lead">Hire a licensed contractor for home improvements</a></div></div><div class="col-md-6"><div class="list-group one-column-fix"><a href="services/state-of-california-employee-holidays" class="list-group-item list-group-item-action lead">State of California employee holidays</a> <a href="services/state-of-california-employee-holidays" class="list-group-item list-group-item-action lead">State of Find food banks near you</a></div></div></div></div><div class="container"><div class="row pt-5 pl-3"><div class="col-md-10 row"><div class="pt-3 mt-5 alert alert-secondary"><p>Did you find what you were looking for? Please share your feedback to help us improve this page.</p><a href="/feedback/"><button type="button" class="btn btn-dark btn-sm">Share Feedback</button></a></div></div></div></div><div class="footer alpha-footer"><div class="container"><div class="row"><div class="col-md-12 ml-0 pl-0"><ul class="list-group list list-group-horizontal-lg flex-fill list-group-flush"><li class="list-group-item alpha-footer border-0">State of California</li><a href="/about/"><li class="list-group-item alpha-footer">About</li></a><a href="/feedback/"><li class="list-group-item alpha-footer">Feedback</li></a></ul></div></div></div></div><div class="alphabar"><div class="container"><p>This is an alpha project and a work in progress (<a href="https://medium.com/cadotgov">Details</a>)</p></div></div><script src="https://www.googletagmanager.com/gtag/js?id=UA-154336791-1" defer="defer"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-154336791-1');</script><script src="js/javascript.a45dceb20218aef9b607.js" defer="defer"></script><script src="js/styles.1679a7c421ccce80e953.js" defer="defer"></script><script src="js/style.a5316a51bb5a8f0a11da.js" defer="defer"></script></body></html>
