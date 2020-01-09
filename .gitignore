@@ -1,4 +1,6 @@
 node_modules
-build
-public
+public/*
+!public/robots.txt
+!public/sitemap.xml
+!public/web.config
 .DS_Store
