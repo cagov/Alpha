@@ -52,6 +52,12 @@ module.exports = {
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
+      filename: 'es/index.html',
+      template: 'src/es/index.html',
+      excludeChunks: ['minwage'],
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
       filename: 'feedback/index.html',
       template: 'src/feedback/index.html',
       excludeChunks: ['minwage'],
@@ -70,13 +76,48 @@ module.exports = {
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
+      filename: 'es/services/california-birth-certificate/index.html',
+      template: 'src/es/services/california-birth-certificate/index.html',
+      excludeChunks: ['minwage'],
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
       filename: 'services/minimum-wage-in-california/index.html',
       template: 'src/services/minimum-wage-in-california/index.html',
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
+      filename: 'es/services/minimum-wage-in-california/index.html',
+      template: 'src/es/services/minimum-wage-in-california/index.html',
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
       filename: 'services/state-of-california-employee-holidays/index.html',
       template: 'src/services/state-of-california-employee-holidays/index.html',
+      excludeChunks: ['minwage'],
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'services/find-food-banks-near-you/index.html',
+      template: 'src/services/find-food-banks-near-you/index.html',
+      excludeChunks: ['minwage'],
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'es/services/find-food-banks-near-you/index.html',
+      template: 'src/es/services/find-food-banks-near-you/index.html',
+      excludeChunks: ['minwage'],
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'services/hire-a-licensed-contractor/index.html',
+      template: 'src/services/hire-a-licensed-contractor/index.html',
+      excludeChunks: ['minwage'],
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'es/services/hire-a-licensed-contractor/index.html',
+      template: 'src/es/services/hire-a-licensed-contractor/index.html',
       excludeChunks: ['minwage'],
       minify: minificationOptions
     }),
