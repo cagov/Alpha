@@ -8305,6 +8305,10 @@ li.lead {
   .one-column-fix {
     margin-top: -2px; } }
 
+/* have to put this in there for the image to load */
+.nerf {
+  background-image: url(../img/marker.png); }
+
 .alert.alert-info {
   padding-top: 20px; }
 
