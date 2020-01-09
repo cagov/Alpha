@@ -9,9 +9,12 @@ class CWDSAccordion extends HTMLElement {
     let cardBodyHeight = this.parentNode.querySelector('.card-body').clientHeight;
     if(this.expandTarget.clientHeight > 0) {
       this.expandTarget.style.height = '0px';
+	  this.parentNode.querySelector('.card-header').classList.remove('accordion-alpha-open');
     } else {
-     this.expandTarget.style.height = cardBodyHeight+'px';
+      this.expandTarget.style.height = cardBodyHeight+'px';
+	  this.parentNode.querySelector('.card-header').classList.add('accordion-alpha-open');
     }
   }
 }
 window.customElements.define('cwds-accordion', CWDSAccordion);
+

@@ -143,9 +143,9 @@ function buildDisplay(wageJson) {
       return `
         <cwds-accordion>
           <div class="card mb-3" >
-            <div class="card-header " id="heading${label}">
+            <div class="card-header accordion-alpha" id="heading${label}">
               <button class="btn" type="button" aria-expanded="false">
-                Minimum wage increases on ${new Date(label).toLocaleDateString('en-US', options)}
+                <h3 class="pl-3 h4 mb-n1">  Minimum wage increases on ${new Date(label).toLocaleDateString('en-US', options)} </h3>
               </button>
             </div>
             <div class="card-container collapsed" aria-labelledby="heading${label}">
