@@ -1,4 +1,3 @@
-// lazy load this file, don't load it on the homepage
 import * as wageJsonData from './wage-data.json';
 import * as citiesJson from './just-cities.json';
 import * as uniqueZipJson from './unique-zips.json';
@@ -12,8 +11,7 @@ document.querySelector('.display-wage-by-city').innerHTML = html;
 let uniqueZipArray = [];
 let zipMap = new Map();
 
-console.log(uniqueZipJson)
-uniqueZipJson.forEach( (item) => {
+uniqueZipJson.default.forEach( (item) => {
   for(var key in item) {
     uniqueZipArray.push(key)
     zipMap.set(key, item[key])
@@ -25,8 +23,10 @@ citiesJson.forEach( (item) => {
   cityNames.set(item.replace(', CA', '').toLowerCase(), item)
 })
 
-document.querySelector('.city-search').dataset.list = [...citiesJson.default, ...uniqueZipArray];
+let awesompleteList = [...citiesJson.default, ...uniqueZipArray];
+console.log(awesompleteList)
 new Awesomplete('input[data-multiple]', {
+  list: awesompleteList,
   filter: function(text, input) {
     return Awesomplete.FILTER_CONTAINS(text, input.match(/[^,]*$/)[0]);
   },

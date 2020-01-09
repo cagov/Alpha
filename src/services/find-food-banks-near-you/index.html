@@ -22,8 +22,7 @@
   <link rel="canonical" href="https://alpha.ca.gov/services/minimum-wage-in-california/" />
   <title>Welcome to Alpha.CA.gov</title>
 
-  <link href="https://california.azureedge.net/cdt/statetemplate/6.0.0/css/cagov.font-only.min.css" rel="stylesheet" />
-
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet' />    
 </head>
 
 <body>
@@ -66,17 +65,16 @@
         <h3>Text us to find food close to you</h3>
 
         <div class="alert alert-secondary display-6">
-          <p>Text us anytime at <span class="lead">(415) 630-4521</span> with your city name or zip code.</p>
+          <p>Text us anytime at <a href="tel:1-415-630-4521" class="lead">(415) 630-4521</a> with your city name or zip code.</p>
           <p> We’ll respond with the food bank closest to you.</p>
         </div>
 
         <h3>Call 211 with your questions</h3>
 
         <div class="alert alert-secondary display-6">
-          <p class="lead">Phone number: 211
+          <p class="lead">Phone number:  <a href="tel:211">211</a>
             <br>Hours: 24 hours a day, every day of the year</p>
-          <p><a href="http://211.org">211.org</a> is a source of local social services throughout the United States. A
-            trained expert can help you find many resources, including:</p>
+          <p><a href="http://211.org">211.org</a> is a source of local social services throughout the United States. A trained expert can help you find many resources, including:</p>
           <ul>
             <li>food programs</li>
             <li>shelter and housing</li>
@@ -89,8 +87,9 @@
     </div>
   </div>
 
-  <%= require('html-loader!../../partials/feedback.html') %>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
 
+  <%= require('html-loader!../../partials/feedback.html') %>
   <%= require('html-loader!../../partials/footer.html') %>
   <%= require('html-loader!../../partials/alphabar.html') %>
   <%= require('html-loader!../../partials/ga.html') %>
