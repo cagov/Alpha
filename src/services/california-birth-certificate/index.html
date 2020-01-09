@@ -45,11 +45,10 @@
   <div class="container">
     <p>There are three main ways to order a California birth certificate.</p>
     <div class="row">
-      <div class="col-md-4">
-
+      <div class="col-md-4 mb-5">
 		<h2 class="border p-3 bg-light">Visit a county office</h2>
 				<ul class="list-group list-group-flush">
-				  <li class="list-group-item lead ">You have to apply with the county where the person was born.</li>
+				  <li class="list-group-item">You have to apply with the county where the person was born.</li>
 				  <li class="list-group-item">Cost: $28</li>
 				  <li class="list-group-item">Processing time: Varies, but could be as soon as the same day</li>
 				  <li class="list-group-item">You'll sign a sworn statement in front of a county worker.</li>
@@ -61,64 +60,40 @@
                     type="submit" class="btn btn-primary js-wage-lookup">Visit a county office</button></a>
 		  </div>
       </div>
-      <div class="col-md-4">
-        <table class="table">
-          <thead class="bg-light">
-            <tr>
-              <th class="lead border" scope="col">
-                <h2>Mail a request</h2>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>To get an <a
-                  href="https://www.cdph.ca.gov/Programs/CHSI/Pages/Authorized-Copy-vs--Informational-Copy.aspx">authorized
-                  copy</a>, you have to hire a notary.</td>
-            </tr>
-            <tr>
-              <td>Cost: $25 (plus the price of notarization)</td>
-            </tr>
-            <tr>
-              <td>Processing time: 3 to 4 weeks or more (expected to take longer in 2020)</td>
-            </tr>
-            <tr>
-              <td><a href="https://www.cdph.ca.gov/Programs/CHSI/Pages/Birth-Mail.aspx"><button type="submit"
-                    class="btn btn-primary js-wage-lookup">Mail a request</button></a></td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="col-md-4 mb-5">
+		<h2 class="border p-3 bg-light">Mail a request</h2>
+        <ul class="list-group list-group-flush">
+				  <li class="list-group-item">To get an <a href="https://www.cdph.ca.gov/Programs/CHSI/Pages/Authorized-Copy-vs--Informational-Copy.aspx">authorized copy</a>, you have to hire a notary.</li>
+				  <li class="list-group-item">Cost: $25 (plus the price of notarization)</li>
+				  <li class="list-group-item">Processing time: 3 to 4 weeks or more (expected to take longer in 2020)</li>
+				  <li class="list-group-item">You'll sign a sworn statement in front of a county worker.</li>
+				  <li class="list-group-item">You may need to bring a driver’s license, passport, or other photo ID from the government that hasn't
+                expired.</li>
+				</ul>
+		  <div class="col mt-3">
+			  <a a href="https://www.cdph.ca.gov/Programs/CHSI/Pages/Birth-Mail.aspx"><button type="submit"
+                    class="btn btn-primary js-wage-lookup">Mail a request</button></a>
+		  </div>
       </div>
-      <div class="col-md-4">
-        <table class="table">
-          <thead class="bg-light">
-            <tr>
-              <th class="lead border" scope="col">
-                <h2>Apply online</h2>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>You can apply online through private companies.</td>
-            </tr>
-            <tr>
-              <td>Cost: $31–$110</td>
-            </tr>
-            <tr>
-              <td>Processing time: 2 to 3 weeks</td>
-            </tr>
-            <tr>
-              <td><a href="https://www.cdph.ca.gov/Programs/CHSI/Pages/Obtaining-Certified-Copies-Online.aspx"><button
-                    type="submit" class="btn btn-primary js-wage-lookup">Apply online</button></a></td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="col-md-4 mb-5">
+        <h2 class="border p-3 bg-light">Apply online</h2>
+		  <ul class="list-group list-group-flush">
+				  <li class="list-group-item">You can apply online through private companies.</li>
+				  <li class="list-group-item">Cost: $31–$110</li>
+				  <li class="list-group-item">Processing time: 2 to 3 weeks</li>
+				</ul>
+		  <div class="col mt-3">
+			 
+			  <a href="https://www.cdph.ca.gov/Programs/CHSI/Pages/Obtaining-Certified-Copies-Online.aspx"><button
+                    type="submit" class="btn btn-primary js-wage-lookup">Apply online</button></a>
+			   </div>
+		  
+		
       </div>
     </div>
   </div>
 
-  <div class="container">
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-12">
         <hr>
@@ -130,7 +105,6 @@
   </div>
 
   <%= require('html-loader!../../partials/feedback.html') %>
-
   <%= require('html-loader!../../partials/footer.html') %>
   <%= require('html-loader!../../partials/alphabar.html') %>
   <%= require('html-loader!../../partials/ga.html') %>
