@@ -33,4 +33,14 @@ _Interested in how we got started?_ [Learn more.](https://medium.com/cadotgov/re
 
 ```npm run build```
 
+Concatenates, minifies and removes unused CSS.
+
+### Files only in /public
+
+Some static files are only present in the public folder and are set to be ignored by the webpack clean plugin which deletes stuff in there with every build:
+
+- web.config (webserver configuration)
+- robots.txt
+- sitemap.xml
+
 Concatenates, minifies and removes unused CSS, builds template partials.

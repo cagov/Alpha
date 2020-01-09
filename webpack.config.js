@@ -42,7 +42,9 @@ module.exports = {
       filename: '[name].css',
       chunkFilename: 'css/[id].css',
     }),
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: ['**/*', '!sitemap.xml', '!web.config', '!robots.txt']
+    }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'src/index.html',
@@ -117,11 +119,22 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.xml$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]'
+            }
+          }
+        ]
       }
     ],
   },
   output: {
     filename: "js/[name].[chunkhash].js",
     path: path.resolve(__dirname, 'public/'),
-  },
+  }
 };
