@@ -52,6 +52,12 @@ module.exports = {
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
+      filename: 'es/index.html',
+      template: 'src/es/index.html',
+      excludeChunks: ['minwage'],
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
       filename: 'feedback/index.html',
       template: 'src/feedback/index.html',
       excludeChunks: ['minwage'],
@@ -66,6 +72,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'services/california-birth-certificate/index.html',
       template: 'src/services/california-birth-certificate/index.html',
+      excludeChunks: ['minwage'],
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'es/services/california-birth-certificate/index.html',
+      template: 'src/es/services/california-birth-certificate/index.html',
       excludeChunks: ['minwage'],
       minify: minificationOptions
     }),
