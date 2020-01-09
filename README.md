@@ -43,3 +43,4 @@ Some static files are only present in the public folder and are set to be ignore
 - robots.txt
 - sitemap.xml
 
+Concatenates, minifies and removes unused CSS, builds template partials.
