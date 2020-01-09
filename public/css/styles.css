@@ -7857,7 +7857,8 @@ a.btn {
   border-style: solid;
   border-radius: 50%;
   border-color: #cccccc;
-  text-align: center; }
+  text-align: center;
+  line-height: normal; }
 
 /* Step by Step List expandable classes */
 cwds-step-list li .details {
