@@ -13,6 +13,13 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- task: NodeAndNpmTool@1
+  inputs:
+    versionSpec: '10.x'
+
+- script: npm install
+- script: webpack
+
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(build.sourcesDirectory)/public'
