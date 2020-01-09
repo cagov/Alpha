@@ -4,12 +4,14 @@
   "description": "This will be the product/dev repo of the CA.gov Alpha.",
   "main": "public/index.html",
   "scripts": {
-    "build": "webpack",
-    "undo_build": "git checkout public",
+    "build": "npm run build:modern && npm run build:ancient",
+    "build:modern": "webpack",
+    "build:ancient": "webpack --config webpack.config.es5.js",
+    "setup": "npm install",
+    "serve": "node local-server.js",
     "build:old": "npm run uglify:css && npm run uncss && cp public/css/cssmin.css public/dist/uncssed.css && rm public/css/cssmin.css",
     "uncss": "uncss public/index.html > public/css/cssmin.css",
     "uglify:css": "uglifycss public/css/bootstrap.min.css public/css/style.css > public/dist/uncssed.css",
-    "serve": "node local-server.js",
     "watch": "webpack --watch"
   },
   "repository": {
@@ -24,6 +26,11 @@
   },
   "homepage": "https://github.com/cagov/Alpha#readme",
   "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-custom-element-classes": "^0.1.0",
+    "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.4.1",
     "express": "^4.17.1",
