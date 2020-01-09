@@ -2,12 +2,7 @@
 <html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="The Alpha website for the State of California.">
-  <meta name="author" content="Alpha.CA.gov - State of California">
-
+  <%= require('html-loader!../../partials/meta-common.html') %>
   <%= require('html-loader!../../partials/favicons.html') %>
 
   <!-- Social media post -->
@@ -21,9 +16,8 @@
 
   <link rel="canonical" href="https://alpha.ca.gov" />
   <title>Welcome to Alpha.CA.gov</title>
-
-  <link href="https://california.azureedge.net/cdt/statetemplate/6.0.0/css/cagov.font-only.min.css" rel="stylesheet" />
-
+  <meta name="description" content="The Alpha website for the State of California.">
+  <link rel="canonical" href="https://alpha.ca.gov/services/california-birth-certificate" />
 </head>
 
 <body>

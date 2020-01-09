@@ -42,7 +42,9 @@ module.exports = {
       filename: '[name].css',
       chunkFilename: 'css/[id].css',
     }),
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: ['**/*', '!sitemap.xml', '!web.config']
+    }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'src/index.html',
@@ -77,6 +79,10 @@ module.exports = {
       template: 'src/services/state-of-california-employee-holidays/index.html',
       excludeChunks: ['minwage'],
       minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'sitemap.xml',
+      excludeChunks: ['minwage','javascript','style'],
     }),
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: 'defer'
@@ -117,11 +123,22 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.xml$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]'
+            }
+          }
+        ]
       }
     ],
   },
   output: {
     filename: "js/[name].[chunkhash].js",
     path: path.resolve(__dirname, 'public/'),
-  },
+  }
 };
