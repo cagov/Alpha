@@ -127,7 +127,8 @@ module.exports = {
       minify: minificationOptions
     }),
     new ScriptExtHtmlWebpackPlugin({
-      defaultAttribute: 'defer'
+      defaultAttribute: 'defer',
+      module: 'js'
     })
   ],
   module: {
