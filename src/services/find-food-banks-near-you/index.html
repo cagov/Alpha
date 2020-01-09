@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Alpha website for the State of California.">
+  <meta name="author" content="Alpha.CA.gov - State of California">
+
+  <%= require('html-loader!../../partials/favicons.html') %>
+
+  <!-- Social media post -->
+  <meta property="og:image" content="img/thumbnail.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="630">
+  <meta property="og:title" content="Alpha.CA.gov - State of California">
+  <meta property="og:description" content="We’re making it easier to find and use government services and information in the State of California.
+  ">
+  <meta property="og:url" content="https://alpha.ca.gov/services/minimum-wage-in-california/">
+
+  <link rel="canonical" href="https://alpha.ca.gov/services/minimum-wage-in-california/" />
+  <title>Welcome to Alpha.CA.gov</title>
+
+  <link href="https://california.azureedge.net/cdt/statetemplate/6.0.0/css/cagov.font-only.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <%= require('html-loader!../../partials/experiment-banner.html') %>
+  <%= require('html-loader!../../partials/official.html') %>
+  <%= require('html-loader!../../partials/navbar.html') %>
+
+  <div class="container-fluid jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Find food banks near you</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <p>We'll help you find the food banks and pantries closest to you.</p>
+
+        <div class="form-group">
+          <form class="form-inline mb-20 js-food-lookup">
+            <label for="cityInput" class="mr-10">Please enter your city or zip code:</label>
+            <input type="input" class="form-control city-search" id="cityInput" data-multiple>
+            <button type="submit" class="btn btn-primary ml-10">Search</button>
+            <div class="invalid-feedback">Please enter a city or zip code in California.</div>
+          </form>
+        </div>
+
+        <h2 class="js-location-display">Showing food banks near Sacramento</h2>
+        <div class="js-nearest-results"></div>
+
+        <div id="mapid" class="mv-20"></div>
+
+        <h2>Other resources</h2>
+        <h3>Text us to find food close to you</h3>
+
+        <div class="alert alert-secondary display-6">
+          <p>Text us anytime at <span class="lead">(415) 630-4521</span> with your city name or zip code.</p>
+          <p> We’ll respond with the food bank closest to you.</p>
+        </div>
+
+        <h3>Call 211 with your questions</h3>
+
+        <div class="alert alert-secondary display-6">
+          <p class="lead">Phone number: 211
+            <br>Hours: 24 hours a day, every day of the year</p>
+          <p><a href="http://211.org">211.org</a> is a source of local social services throughout the United States. A
+            trained expert can help you find many resources, including:</p>
+          <ul>
+            <li>food programs</li>
+            <li>shelter and housing</li>
+            <li>emergency information</li>
+            <li>help with your job search</li>
+            <li>healthcare and shots</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= require('html-loader!../../partials/feedback.html') %>
+
+  <%= require('html-loader!../../partials/footer.html') %>
+  <%= require('html-loader!../../partials/alphabar.html') %>
+  <%= require('html-loader!../../partials/ga.html') %>
+
+</body>
+
+</html>
