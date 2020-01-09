@@ -9,7 +9,8 @@ const minificationOptions = {
   removeComments: true,
   removeRedundantAttributes: true,
   removeScriptTypeAttributes: true,
-  useShortDoctype: true
+  useShortDoctype: true,
+  minifyJS: false
 }
 
 module.exports = {
