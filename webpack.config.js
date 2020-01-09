@@ -13,7 +13,7 @@ const minificationOptions = {
 }
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: {
     javascript: [
       './src/js/index.js'
@@ -23,6 +23,9 @@ module.exports = {
     ],
     minwage: [
       './src/js/minwage/index.js'
+    ],
+    food: [
+      './src/js/foodbanks/index.js'
     ]
   },
   optimization: {
@@ -48,53 +51,55 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'src/index.html',
-      excludeChunks: ['minwage'],
+      excludeChunks: ['minwage', 'food'],
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'es/index.html',
       template: 'src/es/index.html',
-      excludeChunks: ['minwage'],
+      excludeChunks: ['minwage', 'food'],
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'feedback/index.html',
       template: 'src/feedback/index.html',
-      excludeChunks: ['minwage'],
+      excludeChunks: ['minwage', 'food'],
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'about/index.html',
       template: 'src/about/index.html',
-      excludeChunks: ['minwage'],
+      excludeChunks: ['minwage', 'food'],
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'services/california-birth-certificate/index.html',
       template: 'src/services/california-birth-certificate/index.html',
-      excludeChunks: ['minwage'],
+      excludeChunks: ['minwage', 'food'],
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'es/services/california-birth-certificate/index.html',
       template: 'src/es/services/california-birth-certificate/index.html',
-      excludeChunks: ['minwage'],
+      excludeChunks: ['minwage', 'food'],
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'services/minimum-wage-in-california/index.html',
       template: 'src/services/minimum-wage-in-california/index.html',
+      excludeChunks: ['food'],
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'es/services/minimum-wage-in-california/index.html',
       template: 'src/es/services/minimum-wage-in-california/index.html',
+      excludeChunks: ['food'],
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'services/state-of-california-employee-holidays/index.html',
       template: 'src/services/state-of-california-employee-holidays/index.html',
-      excludeChunks: ['minwage'],
+      excludeChunks: ['minwage', 'food'],
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
@@ -112,13 +117,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'services/hire-a-licensed-contractor/index.html',
       template: 'src/services/hire-a-licensed-contractor/index.html',
-      excludeChunks: ['minwage'],
+      excludeChunks: ['minwage', 'food'],
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'es/services/hire-a-licensed-contractor/index.html',
       template: 'src/es/services/hire-a-licensed-contractor/index.html',
-      excludeChunks: ['minwage'],
+      excludeChunks: ['minwage', 'food'],
       minify: minificationOptions
     }),
     new ScriptExtHtmlWebpackPlugin({
