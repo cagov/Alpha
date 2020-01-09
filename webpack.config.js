@@ -43,7 +43,7 @@ module.exports = {
       chunkFilename: 'css/[id].css',
     }),
     new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: ['**/*', '!sitemap.xml', '!web.config']
+      cleanOnceBeforeBuildPatterns: ['**/*', '!sitemap.xml', '!web.config', '!robots.txt']
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
@@ -79,10 +79,6 @@ module.exports = {
       template: 'src/services/state-of-california-employee-holidays/index.html',
       excludeChunks: ['minwage'],
       minify: minificationOptions
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'sitemap.xml',
-      excludeChunks: ['minwage','javascript','style'],
     }),
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: 'defer'
