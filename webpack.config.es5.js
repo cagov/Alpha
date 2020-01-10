@@ -1,11 +1,17 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: {
     es5: [
       './src/js/es5.js',
     ],
+    es5Minwage: [
+      './src/js/minwage/index.js'
+    ],
+    es5Food: [
+      './src/js/foodbanks/index.js'
+    ]
   },
   module: {
     rules: [{
@@ -16,11 +22,9 @@ module.exports = {
           presets: [
             ['@babel/preset-env', {
               modules: false,
-              useBuiltIns: 'usage',
               targets: {
                 browsers: [
-                  '> 1%',
-                  'last 2 versions'
+                  '> 1%'
                 ],
               },
             }],
