@@ -15,14 +15,14 @@
     "element-required-attributes": "off",
     "element-required-content": "off",
     "no-deprecated-attr": "off",
-    "no-dup-id": "warn",
-    "empty-heading": "error",
+    "no-dup-id": "off",
+    "empty-heading": "off",
     "attr-case": "warn",
-    "no-implicit-close": "warn",
-    "doctype-html": "warn",
-    "prefer-tbody": "warn",
-    "empty-title": "warn",
-    "element-permitted-occurrences": "warn",
-    "no-raw-characters": "warn"
+    "no-implicit-close": "off",
+    "doctype-html": "off",
+    "prefer-tbody": "off",
+    "empty-title": "off",
+    "element-permitted-occurrences": "off",
+    "no-raw-characters": "off"
   }
 }
