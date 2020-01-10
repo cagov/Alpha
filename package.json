@@ -12,7 +12,8 @@
     "build:old": "npm run uglify:css && npm run uncss && cp public/css/cssmin.css public/dist/uncssed.css && rm public/css/cssmin.css",
     "uncss": "uncss public/index.html > public/css/cssmin.css",
     "uglify:css": "uglifycss public/css/bootstrap.min.css public/css/style.css > public/dist/uncssed.css",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "test": "echo no tests yet"
   },
   "repository": {
     "type": "git",
@@ -28,11 +29,13 @@
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
+    "@webcomponents/webcomponentsjs": "^2.4.1",
     "babel-loader": "^8.0.6",
     "babel-plugin-transform-custom-element-classes": "^0.1.0",
     "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.4.1",
+    "document-register-element": "^1.14.3",
     "express": "^4.17.1",
     "file-loader": "^5.0.2",
     "html-loader": "^0.5.5",
@@ -46,6 +49,8 @@
     "uglifycss": "0.0.29",
     "uncss": "^0.17.2",
     "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
-  }
+    "webpack-cli": "^3.3.10",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "dependencies": {}
 }

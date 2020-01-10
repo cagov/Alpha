@@ -1233,8 +1233,12 @@ li.lead {
 
 }
 
-/* have to put this in there for the image to load */
+/* minimum wage override */
+.wage-city-search label {
+  justify-content: left;
+}
 
+/* have to put this in there for the image to load */
 .nerf {
   background-image: url('../img/marker.png');
 }

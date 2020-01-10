@@ -9,7 +9,8 @@ const minificationOptions = {
   removeComments: true,
   removeRedundantAttributes: true,
   removeScriptTypeAttributes: true,
-  useShortDoctype: true
+  useShortDoctype: true,
+  minifyJS: false
 }
 
 module.exports = {
@@ -73,32 +74,38 @@ module.exports = {
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: 'services/california-birth-certificate/index.html',
-      template: 'src/services/california-birth-certificate/index.html',
+      filename: 'services/request-birth-certificate/index.html',
+      template: 'src/services/request-birth-certificate/index.html',
       excludeChunks: ['minwage', 'food'],
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: 'es/services/california-birth-certificate/index.html',
-      template: 'src/es/services/california-birth-certificate/index.html',
+      filename: 'es/services/request-birth-certificate/index.html',
+      template: 'src/es/services/request-birth-certificate/index.html',
       excludeChunks: ['minwage', 'food'],
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: 'services/minimum-wage-in-california/index.html',
-      template: 'src/services/minimum-wage-in-california/index.html',
+      filename: 'services/find-minimum-wage-your-city/index.html',
+      template: 'src/services/find-minimum-wage-your-city/index.html',
       excludeChunks: ['food'],
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: 'es/services/minimum-wage-in-california/index.html',
-      template: 'src/es/services/minimum-wage-in-california/index.html',
+      filename: 'es/services/find-minimum-wage-your-city/index.html',
+      template: 'src/es/services/find-minimum-wage-your-city/index.html',
       excludeChunks: ['food'],
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: 'services/state-of-california-employee-holidays/index.html',
-      template: 'src/services/state-of-california-employee-holidays/index.html',
+      filename: 'services/state-california-employee-holidays/index.html',
+      template: 'src/services/state-california-employee-holidays/index.html',
+      excludeChunks: ['minwage', 'food'],
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'es/services/state-california-employee-holidays/index.html',
+      template: 'src/es/services/state-california-employee-holidays/index.html',
       excludeChunks: ['minwage', 'food'],
       minify: minificationOptions
     }),
@@ -115,19 +122,20 @@ module.exports = {
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: 'services/hire-a-licensed-contractor/index.html',
-      template: 'src/services/hire-a-licensed-contractor/index.html',
+      filename: 'services/hire-licensed-contractor-home-improvements/index.html',
+      template: 'src/services/hire-licensed-contractor-home-improvements/index.html',
       excludeChunks: ['minwage', 'food'],
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: 'es/services/hire-a-licensed-contractor/index.html',
-      template: 'src/es/services/hire-a-licensed-contractor/index.html',
+      filename: 'es/services/hire-licensed-contractor-home-improvements/index.html',
+      template: 'src/es/services/hire-licensed-contractor-home-improvements/index.html',
       excludeChunks: ['minwage', 'food'],
       minify: minificationOptions
     }),
     new ScriptExtHtmlWebpackPlugin({
-      defaultAttribute: 'defer'
+      defaultAttribute: 'defer',
+      module: 'js'
     })
   ],
   module: {

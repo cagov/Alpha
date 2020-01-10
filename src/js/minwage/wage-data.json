@@ -46,7 +46,7 @@
         { "name": "Los Angeles County", "wage" : [ { "25 or fewer": "14.25" }, { "26 or more": "15" } ] },
         { "name": "Malibu", "wage": [ { "25 or fewer": "14.25" }, { "26 or more": "15" } ] },
         { "name": "Milpitas", "wage": [ { "everybody": "The rate will increase from $15/hour based on the Consumer Price Index." } ] },
-        { "name": "Novato", "wage": [ { "100 or more employees": "15" }, {"26–99 employees": "14"}, {"1–25 employees": "13"} ] },
+        { "name": "Novato", "wage": [ { "100 or more": "15" }, {"26–99": "14"}, {"1–25": "13"} ] },
         { "name": "Pasadena", "wage": [ { "25 or fewer": "14.25" }, { "26 or more": "15" } ] },
         { "name": "San Francisco", "wage": [ { "everybody": "The rate will increase from $15.59/hour based on the Consumer Price Index." } ] },
         { "name": "San Leandro", "wage": [ { "everybody": "15.00" } ] },
