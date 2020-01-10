@@ -1,0 +1,18 @@
+name: Audit Web Performance
+on: [pull_request]
+jobs:
+  perf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Generate Lighthouse Report
+        uses: justinribeiro/lighthouse-action@master
+        with:
+          secret: ${{ secrets.GITHUB_TOKEN }}
+          url: https://staging.alpha.technology.ca.gov
+          wptConnectionSpeed: threegslow
+      - name: Saving Lighthouse Audit Artifacts
+        uses: actions/upload-artifact@master
+        with:
+          name: lighthouse-artifacts
+          path: './results'
