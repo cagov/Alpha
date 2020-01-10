@@ -37,8 +37,6 @@ function getGeo() {
 getGeo();
 
 function reorient(position) {
-  alert('called reorient')
-
   map.flyTo({
     center: position,
     essential: false // this animation is not considered essential with respect to prefers-reduced-motion
@@ -251,3 +249,20 @@ document.querySelector('.js-food-lookup').addEventListener('submit',function(eve
     }
   })
 })
+
+window.showAll = function() {
+  event.preventDefault();
+  document.querySelectorAll('.card-set li.d-none').forEach( function(item) {
+    item.classList.remove('d-none');
+  })
+  document.querySelector('.js-expand-link').style.display = 'none';
+}
+
+window.mapsSelector = function(lat,lon) {
+  event.preventDefault();
+  if ((navigator.platform.indexOf("iPhone") != -1) || (navigator.platform.indexOf("iPad") != -1) || (navigator.platform.indexOf("iPod") != -1)) {
+      window.open(`maps://maps.apple.com/maps?daddr=${lat},${lon}`);
+  } else {
+    window.open(`https://maps.google.com/maps?daddr=${lat},${lon}`);
+  }
+}
