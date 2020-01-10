@@ -3,9 +3,7 @@
 }
 
 .alert-left {
-	
 	border-left: 4px solid #b71134;
-	
 }
 
 
@@ -134,8 +132,8 @@ a.btn-dark {
 
 .btn-light {
     color: #000;
-    background-color: #ccc;
-    border-color: #ccc;
+    background-color: #fff;
+    border-color: #fff;
 }
 
 .btn-primary:hover {
@@ -324,8 +322,8 @@ hr {
   background-size: 15%;
 }
 .navbar-inverse, .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-  background-color: #232019;
-  border-color: #232019;
+  background-color: #000;
+  border-color: #000;
 }
 .navbar-inverse .navbar-toggle {
   border-color: #ffffff;
@@ -349,8 +347,8 @@ hr {
 /* Jumbotron */
 
 .jumbotron {
-  background: #232019;
-  border-bottom: 1px solid #232019;
+  background: #000;
+  border-bottom: 1px solid #000;
   margin-bottom: 30px;
   padding-bottom: 50px;
   padding-top: 50px;
@@ -424,7 +422,7 @@ hr {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #1d2021;
+  background-color: #000;
 }
 
 .alphabar p {
@@ -574,11 +572,11 @@ a.btn {
 
 .alpha-footer {
 	
-	background: #f8f9fa;
-	background-color: #f8f9fa;
+	background: #fff;
+	background-color: #fff;
 	border-bottom-width: 1px;
-    border-color: #dcdfe0;
-	border-top: 2px solid #b4b4b5;
+	border-top: 2px solid #ccc;
+	padding-bottom: 50px;
 }
 
 
