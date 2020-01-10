@@ -19,11 +19,13 @@ uniqueZipJson.default.forEach( (item) => {
 })
 
 let cityNames = new Map();
-citiesJson.forEach( (item) => {
+let cleanCities = [];
+citiesJson.default.forEach( (item) => {
   cityNames.set(item.replace(', CA', '').toLowerCase(), item)
+  cleanCities.push(item.replace(', CA', ''))
 })
 
-let awesompleteList = [...citiesJson.default, ...uniqueZipArray];
+let awesompleteList = [...cleanCities, ...uniqueZipArray];
 console.log(awesompleteList)
 new Awesomplete('input[data-multiple]', {
   list: awesompleteList,
