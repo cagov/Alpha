@@ -159,7 +159,7 @@ function displaySortedResults(coords, data) {
               ${food.address2}<br>
             <a href="${food.website}" target="_blank">Visit ${food.title}'s website</a><br>
             <p>${food.phone}</p>
-            <a href="geo:${item.geometry.coordinates[1]},${item.geometry.coordinates[0]}" onclick="mapsSelector(${item.geometry.coordinates[1]},${item.geometry.coordinates[0]})" target="_blank"class="btn btn-primary">Get directions</a>
+            <a href="geo:${item.geometry.coordinates[1]},${item.geometry.coordinates[0]}" onclick="mapsSelector(${item.geometry.coordinates[1]},${item.geometry.coordinates[0]})" target="_blank"class="btn btn-sm">Get directions</a>
 
             <!--<p>Hours: 
             Monday to Friday
