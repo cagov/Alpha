@@ -51,18 +51,25 @@
   <%= require('html-loader!../partials/footer.html') %>
   <%= require('html-loader!../partials/alphabar.html') %>
   <%= require('html-loader!../partials/ga.html') %>
-
+  
   <style>
-    .smcx-widget {
-      height: 1250px !important;
+    .smcx-iframe-container {
+      height: 1200px !important;
     }
 
-    .smcx-embed {
+    .smcx-widget {
+      height: 1250px !important;
       border: 0px !important;
     }
 
-    .smcx-iframe-container {
-      height: 1200px !important;
+    @media (max-width: 575.98px) { 
+      .smcx-iframe-container {
+        height: 1300px !important;
+      }
+
+      .smcx-widget {
+        height: 1350px !important;
+      }
     }
   </style>
 </body>
