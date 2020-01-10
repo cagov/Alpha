@@ -37,6 +37,8 @@ function getGeo() {
 getGeo();
 
 function reorient(position) {
+  alert('called reorient')
+
   map.flyTo({
     center: position,
     essential: false // this animation is not considered essential with respect to prefers-reduced-motion
