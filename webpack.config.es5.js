@@ -6,6 +6,12 @@ module.exports = {
     es5: [
       './src/js/es5.js',
     ],
+    es5Minwage: [
+      './src/js/minwage/index.js'
+    ],
+    es5Food: [
+      './src/js/foodbanks/index.js'
+    ]
   },
   module: {
     rules: [{
@@ -16,11 +22,9 @@ module.exports = {
           presets: [
             ['@babel/preset-env', {
               modules: false,
-              useBuiltIns: 'usage',
               targets: {
                 browsers: [
-                  '> 1%',
-                  'last 2 versions'
+                  '> 1%'
                 ],
               },
             }],
@@ -30,7 +34,7 @@ module.exports = {
     }],
   },
   output: {
-    filename: "js/[name].[chunkhash].js",
+    filename: "js/[name].js",
     path: path.resolve(__dirname, 'public/'),
   }
 };

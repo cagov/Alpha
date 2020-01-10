@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -15,7 +15,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:width" content="630">
   <meta property="og:title" content="Alpha.CA.gov - State of California">
-  <meta property="og:description" content="We’re making it easier to find and use government services and information in the State of California.
+  <meta property="og:description" content="We're making it easier to find and use government services and information in the State of California.
   ">
   <meta property="og:url" content="https://alpha.ca.gov/services/minimum-wage-in-california/">
 
@@ -34,62 +34,55 @@
 
   <div class="jumbotron text-left">
     <div class="container">
-      <h1>Find your minimum wage</h1>
+      <h1>Encuentra tu salario mínimo</h1>
     </div>
   </div>
 
   <div class="container">
     <div class="row">
 
-      <div class="col-md-10">
+      <div class="col-md-8">
 
-        <h2>Minimum wage in your city</h2>
-        <p>Your minimum wage depends on the city where you work.</p>
-        <form class="form-inline">
+        <h2>Salario mínimo en tu ciudad</h2>
+        <p>Tu salario mínimo depende de la ciudad donde trabajes.</p>
+        <form>
           <div class="form-group wage-city-search">
-            <label for="location-query">Please enter your city or zip code:</label><br>
-            <input class="city-search form-control mr-3 mb-3" data-multiple id="location-query" />
-            <div class="invalid-feedback">Please enter a city or zip code in California.</div>
-			  <button type="submit" class="btn btn-primary js-wage-lookup mb-3">Find your minimum wage</button>
+            <label for="location-query">Por favor, introduzca su ciudad o código postal:</label><br>
+            <input class="city-search form-control" data-multiple id="location-query" />
+            <div class="invalid-feedback">Por favor, introduzca una ciudad o código postal en California.</div>
           </div>
-          
+          <button type="submit" class="btn btn-primary js-wage-lookup mt-3">Find your minimum wage</button>
         </form>
         <p></p>
         <div id="answer"></div>
         <p></p>
-        <h2>California minimum wage in 2020</h2>
-        <p>Some cities have the same minimum wage as the State.</p>
+        <h2>Salario mínimo de California en 2020</h2>
+        <p>Algunas ciudades tienen el mismo salario mínimo que el Estado.</p>
         <table class="table">
           <thead>
             <tr>
-              <th scope="col">Employers with 25 or fewer employees</th>
-              <th scope="col">Employers with 26 or more employees</th>
+              <th scope="col">Empleadores con 25 o menos empleados</th>
+              <th scope="col">Empleadores con 26 o más empleados</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>$12/hour*</td>
-              <td>$13/hour*</td>
+              <td>$12/hora*</td>
+              <td>$13/hora*</td>
             </tr>
           </tbody>
         </table>
-        
-        <h3>Minimum wage by city and county</h3>
-        <p>These California cities and counties have their own minimum wage laws.</p>
+        <p style="padding-bottom:0;">*Más sobre el <a href="https://www.dir.ca.gov/dlse/faq_minimumwage.htm">salario mínimo</a>.</p>
+        <p></p>
+        <h3>Salario mínimo por ciudad y condado</h3><p>Estas ciudades y condados de California tienen sus propias leyes de salario mínimo.</p>
         <div class="display-wage-by-city"></div>
       </div>
-		<div class="col-md-12 mt-5">
-				<hr>
-				<p style="padding-bottom:0;">* More about the <a href="https://www.dir.ca.gov/dlse/faq_minimumwage.htm">minimum wage</a>.</p>
-				<p></p>
-			  </div>
-    </div>
 
+    </div>
   </div>
-	  
-	  
 
   <%= require('html-loader!../../partials/feedback.html') %>
+
   <%= require('html-loader!../../partials/footer.html') %>
   <%= require('html-loader!../../partials/alphabar.html') %>
   <%= require('html-loader!../../partials/ga.html') %>
