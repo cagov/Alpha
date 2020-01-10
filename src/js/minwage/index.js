@@ -26,7 +26,7 @@ citiesJson.default.forEach( (item) => {
 })
 
 let awesompleteList = [...cleanCities, ...uniqueZipArray];
-console.log(awesompleteList)
+
 new Awesomplete('input[data-multiple]', {
   list: awesompleteList,
   filter: function(text, input) {
