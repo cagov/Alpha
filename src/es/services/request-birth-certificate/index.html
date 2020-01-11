@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <%= require('html-loader!../../partials/meta-common.html') %>
@@ -9,14 +9,13 @@
   <meta property="og:image" content="img/thumbnail.png">
   <meta property="og:image:height" content="630">
   <meta property="og:image:width" content="630">
-  <meta property="og:title" content="Alpha.CA.gov - State of California">
-  <meta property="og:description" content="We're making it easier to find and use government services and information in the State of California.
-  ">
+  <meta property="og:title" content="Solicitar un acta de nacimiento - Alpha.CA.gov">
+  <meta property="og:description" content="Request a California birth certificate in person, by mail, or online.">
   <meta property="og:url" content="https://alpha.ca.gov/services/california-birth-certificate/">
 
   <link rel="canonical" href="https://alpha.ca.gov/services/california-birth-certificate/" />
-  <title>Welcome to Alpha.CA.gov</title>
-  <meta name="description" content="The Alpha website for the State of California.">
+  <title>Solicitar un acta de nacimiento - Welcome to Alpha.CA.gov</title>
+  <meta name="description" content="Request a California birth certificate in person, by mail, or online.">
 </head>
 
 <body>
@@ -29,108 +28,65 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1>Certificado de nacimiento de California</h1>
+          <h1>Solicitar un acta de nacimiento</h1>
         </div>
       </div>
     </div>
   </div>
+
   <div class="container">
-    <h2>Solicitar un certificado</h2>
-    <p>Hay tres formas principales de pedir un certificado de nacimiento
-      de California.</p>
+    <p>Hay tres maneras de solicitar un acta de nacimiento del estado de California.</p>
     <div class="row">
-      <div class="col-md-4">
-        <table class="table">
-          <thead class="bg-light">
-            <tr>
-              <th class="lead border" scope="col"><strong>Visita una oficina del condado</strong></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Tiene que presentar su solicitud con el condado donde nació la persona.</td>
-            </tr>
-            <tr>
-              <td>costo: $28</td>
-            </tr>
-            <tr>
-              <td>Tiempo de procesamiento: Varía, pero podría ser tan pronto como el mismo día</td>
-            </tr>
-            <tr>
-              <td>Firmará una declaración jurada frente a un trabajador del condado.</td>
-            </tr>
-            <tr>
-              <td>Es posible que deba traer una licencia de conducir, pasaporte u otra identificación con foto del
-                gobierno que no haya expirado.</td>
-            </tr>
-            <tr>
-              <td><a href="https://www.cdph.ca.gov/Programs/CHSI/Pages/County-Registrars-and-Recorders.aspx"> <button
-                    type="submit" class="btn btn-primary js-wage-lookup">Visita una oficina del condado</button></a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="col-md-4 mb-5">
+		<h2 class="border p-3 bg-light">Visite una oficina de su condado</h2>
+				<ul class="list-group list-group-flush">
+				  <li class="list-group-item">Usted debe solicitar el acta de nacimiento en el condado donde la persona nació.</li>
+				  <li class="list-group-item">Costo: $28</li>
+				  <li class="list-group-item">Tiempo de procesamiento: Varía, pero podría ser tan pronto como el mismo día</li>
+				  <li class="list-group-item">Tendrá que firmar un documento legal frente a un empleado del condado.</li>
+				  <li class="list-group-item">Es posible que deba traer algún tipo de identificación válida (no vencido). Puede traer su licencia de conducir, pasaporte, u otro tipo de identificación otorgada por el gobierno.</li>
+				</ul>
+		  <div class="col mt-3">
+			  <a href="https://www.cdph.ca.gov/Programs/CHSI/Pages/County-Registrars-and-Recorders.aspx"><button
+                    type="submit" class="btn btn-primary js-wage-lookup">Visite una oficina de su condado</button></a>
+		  </div>
       </div>
-      <div class="col-md-4">
-        <table class="table">
-          <thead class="bg-light">
-            <tr>
-              <th class="lead border" scope="col"><strong>Envíe una solicitud por correo</strong></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Para obtener una <a
-                  href="https://www.cdph.ca.gov/Programs/CHSI/Pages/Authorized-Copy-vs--Informational-Copy.aspx">copia
-                  autorizada</a>,
-                debe contratar a un notario.</td>
-            </tr>
-            <tr>
-              <td>Costo: $25 (más el precio de la notarización)</td>
-            </tr>
-            <tr>
-              <td>Tiempo de procesamiento: 3 a 4 semanas o más (se espera que tome más tiempo en 2020)</td>
-            </tr>
-            <tr>
-              <td><a href="https://www.cdph.ca.gov/Programs/CHSI/Pages/Birth-Mail.aspx"><button type="submit"
-                    class="btn btn-primary js-wage-lookup">Envíe una solicitud por correo</button></a></td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="col-md-4 mb-5">
+		<h2 class="border p-3 bg-light">Solicitar por correo</h2>
+        <ul class="list-group list-group-flush">
+				  <li class="list-group-item">Para obtener una <a href="https://www.cdph.ca.gov/Programs/CHSI/Pages/Authorized-Copy-vs--Informational-Copy.aspx">copia autorizada</a>, debe utilizar los servicios de un notario.</li>
+				  <li class="list-group-item">Costo: $25 (más el precio de la notarización)</li>
+				  <li class="list-group-item">Tiempo de procesamiento: 3 a 4 semanas o más (se anticipa que en el año 2020 este proceso tomará más tiempo)</li>
+				</ul>
+		  <div class="col mt-3">
+			  <a a href="https://www.cdph.ca.gov/Programs/CHSI/Pages/Birth-Mail.aspx"><button type="submit"
+                    class="btn btn-primary js-wage-lookup">Envíe una solicitud por correo</button></a>
+		  </div>
       </div>
-      <div class="col-md-4">
-        <table class="table">
-          <thead class="bg-light">
-            <tr>
-              <th class="lead border" scope="col"><strong>Solicitar en línea</strong></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Puede solicitar en línea a través de empresas privadas.</td>
-            </tr>
-            <tr>
-              <td>costo: $31–$110</td>
-            </tr>
-            <tr>
-              <td>Tiempo de procesamiento: 2 a 3 semanas</td>
-            </tr>
-            <tr>
-              <td><a href="https://www.cdph.ca.gov/Programs/CHSI/Pages/Obtaining-Certified-Copies-Online.aspx"><button
-                    type="submit" class="btn btn-primary js-wage-lookup">Solicitar en línea</button></a></td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="col-md-4 mb-5">
+        <h2 class="border p-3 bg-light">Solicitar por internet</h2>
+		  <ul class="list-group list-group-flush">
+				  <li class="list-group-item">Usted también puede aplicar por el internet. Para esto, hay compañías privadas (no afiliadas al gobierno) que prestan estos servicios.</li>
+				  <li class="list-group-item">Costo: $31 a $110</li>
+				  <li class="list-group-item">Tiempo de procesamiento: 2 a 3 semanas, dependiendo de la compañía</li>
+				</ul>
+		  <div class="col mt-3">
+			 
+			  <a href="https://www.cdph.ca.gov/Programs/CHSI/Pages/Obtaining-Certified-Copies-Online.aspx"><button
+                    type="submit" class="btn btn-primary js-wage-lookup">Solicitar por internet</button></a>
+			   </div>
+		  
+		
       </div>
     </div>
   </div>
-  <div class="container">
+
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-12">
         <hr>
-        <p>Más información sobre cómo solicitar un <a
-            href="https://www.cdph.ca.gov/Programs/CHSI/Pages/Vital-Records-Obtaining-Certified-Copies-of-Birth-Records.aspx">certificado
-            de nacimiento</a>.</p>
+        <p>Más sobre solicitando<a
+            href="https://www.cdph.ca.gov/Programs/CHSI/Pages/Vital-Records-Obtaining-Certified-Copies-of-Birth-Records.aspx">un acta de nacimiento</a>.</p>
       </div>
     </div>
   </div>
