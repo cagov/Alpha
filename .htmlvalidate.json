@@ -17,7 +17,7 @@
     "no-deprecated-attr": "off",
     "no-dup-id": "off",
     "empty-heading": "off",
-    "attr-case": "warn",
+    "attr-case": "error",
     "no-implicit-close": "off",
     "doctype-html": "off",
     "prefer-tbody": "off",
