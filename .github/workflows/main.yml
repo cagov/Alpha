@@ -8,7 +8,7 @@ jobs:
       - name: Generate Lighthouse Report
         uses: justinribeiro/lighthouse-action@master
         with:
-          timeout: 1000
+          timeout: 500
           secret: ${{ secrets.GITHUB_TOKEN }}
           url: https://staging.alpha.technology.ca.gov
           wptConnectionSpeed: threegslow
