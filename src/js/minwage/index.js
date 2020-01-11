@@ -2,6 +2,16 @@ import * as wageJsonData from './wage-data.json';
 import * as citiesJson from './just-cities.json';
 import * as uniqueZipJson from './unique-zips.json';
 
+let strings = {
+  "es": {
+    "The minimum wage in": "Mostrar bancos de alimentos cerca de",
+    "Minimum wage increases on": "Aumento de salario mínimo a partir del 1ro de Enero",
+    "Place": "Ubicación",
+    "Rate": "Tasa",
+    "25 or fewer": "25 or fewer",
+    "26 or more": "26 or more"
+  }
+}
 // display HTML of add city wages
 let wageJson = wageJsonData.MinimumWage[0]['2020-01-01T08:00:00'];
 let html = buildDisplay(wageJsonData.MinimumWage);
