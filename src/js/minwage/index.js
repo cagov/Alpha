@@ -211,3 +211,8 @@ function buildDisplay(wageJson) {
     }).join(' ')}
   `
 }
+
+//Add ARIA Label to Awesomeplete list
+
+document.getElementById('awesomplete_list_1').setAttribute('aria-hidden', true);
+document.getElementById('awesomplete_list_1').setAttribute('aria-label', 'autosuggest');
