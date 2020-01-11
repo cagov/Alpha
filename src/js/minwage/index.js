@@ -2,6 +2,30 @@ import * as wageJsonData from './wage-data.json';
 import * as citiesJson from './just-cities.json';
 import * as uniqueZipJson from './unique-zips.json';
 
+let trStrings = {
+  "es": {
+    "The minimum wage in": "Mostrar bancos de alimentos cerca de",
+    "Minimum wage increases on": "Aumento de salario mínimo a partir del 1ro de Enero",
+    "Place": "Ubicación",
+    "Rate": "Tasa",
+    "25 or fewer": "25 or fewer",
+    "26 or more": "26 or more"
+  },
+  "en": {
+    "The minimum wage in": "The minimum wage in",
+    "Minimum wage increases on": "Minimum wage increases on",
+    "Place": "Place",
+    "Rate": "Rate",
+    "25 or fewer": "25 or fewer",
+    "26 or more": "26 or more"
+  }
+}
+
+let translations = trStrings.en;
+if(window.location.pathname.indexOf('/es/')==0) {
+  translations = trStrings.es;
+}
+
 // display HTML of add city wages
 let wageJson = wageJsonData.MinimumWage[0]['2020-01-01T08:00:00'];
 let html = buildDisplay(wageJsonData.MinimumWage);
@@ -201,3 +225,8 @@ function buildDisplay(wageJson) {
     }).join(' ')}
   `
 }
+
+//Add ARIA Label to Awesomeplete list
+
+document.getElementById('awesomplete_list_1').setAttribute('aria-hidden', true);
+document.getElementById('awesomplete_list_1').setAttribute('aria-label', 'autosuggest');
