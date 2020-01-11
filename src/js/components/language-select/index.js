@@ -6,8 +6,13 @@ class CWDSLanguageSelect extends HTMLElement {
         Select language
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="/">English</a>
-        <a class="dropdown-item" href="/es/">Spanish</a>
+        ${(function() {
+          if(window.location.pathname.indexOf('/es/') != 0) {
+            return `<a class="dropdown-item" href="/es/">Spanish</a>`
+          } else {
+            return `<a class="dropdown-item" href="/">English</a>`
+          }
+        })()}
       </div>
     </div>`;
 
@@ -23,7 +28,11 @@ class CWDSLanguageSelect extends HTMLElement {
     this.querySelectorAll('.dropdown-item').forEach( (item) => {
       item.addEventListener('click', function(event) {
         event.preventDefault();
-        window.location = window.location.pathname.replace('/',this.href);
+        if(window.location.pathname.indexOf('/es/') != 0) {
+          window.location = window.location.pathname.replace('/',this.href);
+        } else {
+          window.location = window.location.pathname.replace('/es/',this.href);
+        }
       })
     })
   }

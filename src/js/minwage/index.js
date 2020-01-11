@@ -10,8 +10,18 @@ let strings = {
     "Rate": "Tasa",
     "25 or fewer": "25 or fewer",
     "26 or more": "26 or more"
+  },
+  "en": {
+    "The minimum wage in": "The minimum wage in",
+    "Minimum wage increases on": "Minimum wage increases on",
+    "Place": "Place",
+    "Rate": "Rate",
+    "25 or fewer": "25 or fewer",
+    "26 or more": "26 or more"
   }
 }
+
+
 // display HTML of add city wages
 let wageJson = wageJsonData.MinimumWage[0]['2020-01-01T08:00:00'];
 let html = buildDisplay(wageJsonData.MinimumWage);
