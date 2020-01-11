@@ -1,28 +1,41 @@
 {
   "extends": [
+    "htmlvalidate:document",
     "htmlvalidate:recommended"
   ],
  
   "rules": {
     "void": "off",
-    "attr-quotes": "off",
-    "element-permitted-content": "off",
-    "no-trailing-whitespace": "off",
+
+    "attr-case": "error",
+    "no-raw-characters": "error",
+
+    "close-order": "warn",
+    "attribute-boolean-style": "warn",
+    "element-required-content": "warn",
+    "no-implicit-close": "warn",
+    "doctype-html": "warn",
+    "prefer-tbody": "warn",
+    "empty-title": "warn",
+    "element-permitted-occurrences": "warn",
+    "class-pattern": "warn",
+    "no-missing-references": "warn",
+    "heading-level": "warn",
+    "long-title": "warn",
+
+    "no-unknown-elements": "off",
     "no-inline-style": "off",
-    "close-order": "off",
-    "attribute-boolean-style": "off",
-    "attribute-allowed-values": "off",
+    "require-sri": "off",
+    "missing-doctype": "off",
+
+    "id-pattern": "off",
+    "attr-quotes": "off",
+    "no-trailing-whitespace": "off",
     "element-required-attributes": "off",
-    "element-required-content": "off",
     "no-deprecated-attr": "off",
     "no-dup-id": "off",
     "empty-heading": "off",
-    "attr-case": "error",
-    "no-implicit-close": "off",
-    "doctype-html": "off",
-    "prefer-tbody": "off",
-    "empty-title": "off",
-    "element-permitted-occurrences": "off",
-    "no-raw-characters": "off"
+    "element-permitted-content": "off",
+    "attribute-allowed-values": "off"
   }
 }
