@@ -5,15 +5,15 @@
   ],
  
   "rules": {
-    "attr-case": "error",
-    "attribute-boolean-style": "error",
-    "class-pattern": "error",
+    "attr-case": ["error",{"style": "lowercase","ignoreForeign": true}],
+    "attribute-boolean-style": ["error",{"style": "omit"}],
+    "class-pattern": ["error",{"pattern": "kebabcase"}],
     "close-attr": "error",
     "close-order": "error",
     "deprecated": "error",
     "deprecated-rule": "error",
     "doctype-html": "error",
-    "element-case": "error",
+    "element-case": ["error",{"style": "lowercase"}],
     "element-name": "error",
     "element-permitted-occurrences": "error",
     "element-permitted-order": "error",
@@ -21,7 +21,7 @@
     "empty-title": "error",
     "heading-level": "error",
     "input-missing-label": "error",
-    "long-title": "error",
+    "long-title": ["error",{"maxlength": 70}],
     "no-conditional-comment": "error",
     "no-dup-attr": "error",
     "no-dup-class": "error",
@@ -40,19 +40,19 @@
 
     "no-dup-id": "off",
     "attribute-allowed-values": "off",
-    "id-pattern": "off",
-    "attr-quotes": "off",
+    "id-pattern": ["off",{"pattern": "kebabcase"}],
+    "attr-quotes": ["off",{"style": "auto","unquoted": false}],
     "no-trailing-whitespace": "off",
     "no-deprecated-attr": "off",
     "empty-heading": "off",
     "element-permitted-content": "off",
     "element-required-attributes": "off",
-    "void": "off",
+    "void": ["off",{"style": "selfclose"}],
 
+    "require-sri": ["off",{"target": "crossorigin"}],
     "missing-doctype": "off",
     "no-inline-style": "off",
     "no-style-tag": "off",
-    "no-unknown-elements": "off",
-    "require-sri": "off"
+    "no-unknown-elements": "off"
   }
 }
