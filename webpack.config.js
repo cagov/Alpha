@@ -47,7 +47,7 @@ module.exports = {
       chunkFilename: 'css/[id].css',
     }),
     new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: ['**/*', '!sitemap.xml', '!web.config', '!robots.txt']
+      cleanOnceBeforeBuildPatterns: ['**/*', '!sitemap.xml', '!web.config', '!robots.txt', '!json', '!json/**/*']
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',

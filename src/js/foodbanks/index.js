@@ -1,5 +1,5 @@
-import * as citiesJson from '../minwage/just-cities.json';
-import * as uniqueZipJson from '../minwage/unique-zips.json';
+import * as citiesJson from '../../json/just-cities.json';
+import * as uniqueZipJson from '../../json/unique-zips-slim.json';
 import * as foods from './foods.json';
 import * as haversine from './haversine.js';
 // awesomplete is in the main bundle already
@@ -190,21 +190,11 @@ function mapsSelector(lat,lon) {
 }
 
 // handle search autocomplete
-var uniqueZipArray = [];
-var zipMap = new Map();
-
-uniqueZipJson.forEach( function(item) {
-  for(var key in item) {
-    uniqueZipArray.push(key)
-    zipMap.set(key, item[key])
-  }
-})
-
 var cityNames = new Map();
 citiesJson.default.forEach( function(item) {
   cityNames.set(item.replace(', CA', '').toLowerCase(), item)
 })
-let awesompleteList = [...citiesJson.default, ...uniqueZipArray];
+let awesompleteList = [...citiesJson.default, ...uniqueZipJson.default];
 
 new Awesomplete('input[data-multiple]', {
   list: awesompleteList,
