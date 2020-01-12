@@ -6,6 +6,7 @@
  
   "rules": {
     "attr-case": ["error",{"style": "lowercase","ignoreForeign": true}],
+    "attribute-allowed-values": "error",
     "attribute-boolean-style": ["error",{"style": "omit"}],
     "class-pattern": ["error",{"pattern": "kebabcase"}],
     "close-attr": "error",
@@ -39,7 +40,6 @@
     "wcag/h67": "error",
 
     "no-dup-id": "off",
-    "attribute-allowed-values": "off",
     "id-pattern": ["off",{"pattern": "kebabcase"}],
     "attr-quotes": ["off",{"style": "auto","unquoted": false}],
     "no-trailing-whitespace": "off",
