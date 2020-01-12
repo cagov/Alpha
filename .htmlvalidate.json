@@ -19,6 +19,7 @@
     "element-name": "error",
     "element-permitted-occurrences": "error",
     "element-permitted-order": "error",
+    "element-required-attributes": "error",
     "element-required-content": "error",
     "empty-title": "error",
     "heading-level": "error",
@@ -46,7 +47,7 @@
     "no-trailing-whitespace": "off",
     "empty-heading": "off",
     "element-permitted-content": "off",
-    "element-required-attributes": "off",
+
     "void": ["off",{"style": "selfclose"}],
 
     "require-sri": ["off",{"target": "crossorigin"}],
