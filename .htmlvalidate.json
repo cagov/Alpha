@@ -23,7 +23,7 @@
     "heading-level": "warn",
     "long-title": "warn",
 
-    "no-unknown-elements": "off",
+    "no-unknown-elements": "error",
     "no-inline-style": "off",
     "require-sri": "off",
     "missing-doctype": "off",
