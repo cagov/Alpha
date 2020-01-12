@@ -6,6 +6,7 @@
  
   "rules": {
     "attr-case": ["error",{"style": "lowercase","ignoreForeign": true}],
+    "attr-quotes": ["error",{"style": "auto","unquoted": false}],
     "attribute-allowed-values": "error",
     "attribute-boolean-style": ["error",{"style": "omit"}],
     "class-pattern": ["error",{"pattern": "kebabcase"}],
@@ -41,7 +42,6 @@
 
     "no-dup-id": "off",
     "id-pattern": ["off",{"pattern": "kebabcase"}],
-    "attr-quotes": ["off",{"style": "auto","unquoted": false}],
     "no-trailing-whitespace": "off",
     "no-deprecated-attr": "off",
     "empty-heading": "off",
