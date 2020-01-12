@@ -1,6 +1,30 @@
 import * as wageJsonData from './wage-data.json';
-import * as citiesJson from './just-cities.json';
-import * as uniqueZipJson from './unique-zips.json';
+import * as citiesJson from '../../json/just-cities.json';
+import * as uniqueZipJson from '../../json/unique-zips-slim.json';
+
+let trStrings = {
+  "es": {
+    "The minimum wage in": "Mostrar bancos de alimentos cerca de",
+    "Minimum wage increases on": "Aumento de salario mínimo a partir del 1ro de Enero",
+    "Place": "Ubicación",
+    "Rate": "Tasa",
+    "25 or fewer": "25 or fewer",
+    "26 or more": "26 or more"
+  },
+  "en": {
+    "The minimum wage in": "The minimum wage in",
+    "Minimum wage increases on": "Minimum wage increases on",
+    "Place": "Place",
+    "Rate": "Rate",
+    "25 or fewer": "25 or fewer",
+    "26 or more": "26 or more"
+  }
+}
+
+let translations = trStrings.en;
+if(window.location.pathname.indexOf('/es/')==0) {
+  translations = trStrings.es;
+}
 
 // display HTML of add city wages
 let wageJson = wageJsonData.MinimumWage[0]['2020-01-01T08:00:00'];
@@ -11,13 +35,6 @@ document.querySelector('.display-wage-by-city').innerHTML = html;
 let uniqueZipArray = [];
 let zipMap = new Map();
 
-uniqueZipJson.default.forEach( (item) => {
-  for(var key in item) {
-    uniqueZipArray.push(key)
-    zipMap.set(key, item[key])
-  }
-})
-
 let cityNames = new Map();
 let cleanCities = [];
 citiesJson.default.forEach( (item) => {
@@ -25,7 +42,9 @@ citiesJson.default.forEach( (item) => {
   cleanCities.push(item.replace(', CA', ''))
 })
 
-let awesompleteList = [...cleanCities, ...uniqueZipArray];
+
+// let awesompleteList = [...cleanCities, ...uniqueZipArray];
+let awesompleteList = [...cleanCities, ...uniqueZipJson.default];
 
 new Awesomplete('input[data-multiple]', {
   list: awesompleteList,
@@ -51,7 +70,7 @@ document.querySelector('.js-wage-lookup').addEventListener('click',(event) => {
   let location = document.getElementById('location-query').value;
   findWageMatch(location, wageJson, zipMap, cityNames);
 })
-  
+
 function findWageMatch(city, wageJson, zipMap, cityNames) {
   // if there are any letters this is not a zip code
   let wageData = [ { "25 or fewer": "12" }, { "26 or more": "13" } ]
@@ -71,8 +90,11 @@ function findWageMatch(city, wageJson, zipMap, cityNames) {
     }
   } else {
     // no letters, try to find a match in zipMap
-    let foundZip = zipMap.get(city);
-    if(foundZip) {
+    fetch(`/json/zips/${city}.json`)
+    .then((response) => {
+      return response.json();
+    })
+    .then((foundZip) => {
       let html = '';
       foundZip.forEach( (aCity) => {
         wageData = [ { "25 or fewer": "12" }, { "26 or more": "13" } ];
@@ -90,9 +112,11 @@ function findWageMatch(city, wageJson, zipMap, cityNames) {
         }
       })
       document.getElementById('answer').innerHTML = html;
-    } else {
+    })
+    .catch((error) => {
+      console.error('Error:', error);
       document.querySelector('.wage-city-search .invalid-feedback').style.display = 'block';
-    }
+    });
   }
 }
 

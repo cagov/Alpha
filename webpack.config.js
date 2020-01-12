@@ -47,7 +47,7 @@ module.exports = {
       chunkFilename: 'css/[id].css',
     }),
     new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: ['**/*', '!sitemap.xml', '!web.config', '!robots.txt']
+      cleanOnceBeforeBuildPatterns: ['**/*', '!sitemap.xml', '!web.config', '!robots.txt', '!json', '!json/**/*']
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
@@ -64,6 +64,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'feedback/index.html',
       template: 'src/feedback/index.html',
+      excludeChunks: ['minwage', 'food'],
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'es/feedback/index.html',
+      template: 'src/es/feedback/index.html',
       excludeChunks: ['minwage', 'food'],
       minify: minificationOptions
     }),
