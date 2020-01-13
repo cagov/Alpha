@@ -8,8 +8,13 @@ let trStrings = {
     "Minimum wage increases on": "Aumento de salario mínimo a partir del 1ro de Enero",
     "Place": "Ubicación",
     "Rate": "Tasa",
-    "25 or fewer": "25 or fewer",
-    "26 or more": "26 or more"
+    "25 or fewer": "25 o menos",
+    "26 or more": "26 o más",
+    "is": "es",
+    "hour": "hora",
+    "employees": "empleados",
+    "Employers with": "Empleadores con",
+    "for employers with": "para empleadores con"
   },
   "en": {
     "The minimum wage in": "The minimum wage in",
@@ -17,7 +22,12 @@ let trStrings = {
     "Place": "Place",
     "Rate": "Rate",
     "25 or fewer": "25 or fewer",
-    "26 or more": "26 or more"
+    "26 or more": "26 or more",
+    "is": "is",
+    "hour": "hour",
+    "employees": "employees",
+    "Employers with": "Employers with",
+    "for employers with": "for employers with"
   }
 }
 
@@ -122,7 +132,7 @@ function findWageMatch(city, wageJson, zipMap, cityNames) {
 
 function doubleTemplate(location, wageData) {
   return `
-    <h4>The minimum wage in ${location}, CA is:</h4>
+    <h4>${translations["The minimum wage in"]} ${location}, CA ${translations["is"]}:</h4>
     <table class="table">
       <thead>
         <tr>
@@ -135,7 +145,7 @@ function doubleTemplate(location, wageData) {
                   for(var key in wageitem) {
                     label = key;
                   }
-                  return `<th scope="col">Employers with ${label} employees</th>`
+                  return `<th scope="col">${translations["Employers with"]} ${translations[label]} ${translations["employees"]}</th>`
                 }).join(' ')}`;
             }
             return output
@@ -149,7 +159,7 @@ function doubleTemplate(location, wageData) {
             for(var key in wageitem) {
               wageVal = wageitem[key];
             }
-            return `<td>$${wageVal}/hour</td>`;
+            return `<td>$${wageVal}/${translations["hour"]}</td>`;
           }).join(' ')}
         </tr>
       </tbody>
@@ -171,15 +181,15 @@ function buildDisplay(wageJson) {
           <div class="card mb-3" >
             <div class="card-header accordion-alpha" id="heading${label}">
               <button class="btn" type="button" aria-expanded="false">
-                <h3 class="pl-3 h4 mb-n1">  Minimum wage increases on ${new Date(label).toLocaleDateString('en-US', options)} </h3>
+                <h3 class="pl-3 h4 mb-n1">${translations["Minimum wage increases on"]} ${new Date(label).toLocaleDateString('en-US', options)} </h3>
               </button>
             </div>
             <div class="card-container collapsed" aria-labelledby="heading${label}">
               <div class="card-body">
                 <table class="table">
                 <thead>
-                    <th scope="col">Place</th>
-                    <th scope="col">Rate</th>
+                    <th scope="col">${translations["Place"]}</th>
+                    <th scope="col">${translations["Rate"]}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -193,7 +203,7 @@ function buildDisplay(wageJson) {
                         if(city.wage[0].everybody && city.wage[0].everybody.match(/[a-zA-Z]+/g)) {
                           output = `<p>${city.wage[0].everybody}</p>`;
                         } else {
-                          output = `<p>$${city.wage[0].everybody}/hour</p>`;
+                          output = `<p>$${city.wage[0].everybody}/${translations["hour"]}</p>`;
                         }
                         if(wageData.length > 1) {
                           output = `
@@ -207,7 +217,7 @@ function buildDisplay(wageJson) {
                               if((value).match(/[a-zA-Z]+/g)) {
                                 return `<p>${value}</p>`
                               } else {
-                                return `<p>$${value}/hour for employers with ${label} employees</p>`
+                                return `<p>$${value}/${translations["hour"]} ${translations["for employers with"]} ${translations[label]} ${translations["employees"]}</p>`
                               }
                             }).join(' ')}`;
                         }

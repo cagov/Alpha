@@ -4,6 +4,32 @@ import * as foods from './foods.json';
 import * as haversine from './haversine.js';
 // awesomplete is in the main bundle already
 
+let trStrings = {
+  "es": {
+    "Show more": "Mostrar más",
+    "Get directions": "Obtener las direcciones",
+    "Showing food banks near": "Mostrando bancos de alimentos cerca",
+    "you": " de usted",
+    "miles away": "millas de distancia",
+    "Visit": "Visitar",
+    "website": "sitio web"
+  },
+  "en": {
+    "Show more": "Show more",
+    "Get directions": "Get directions",
+    "Showing food banks near": "Showing food banks near",
+    "you": "you",
+    "miles away": "miles away",
+    "Visit": "Visit",
+    "website": "website"
+  }
+}
+
+let translations = trStrings.en;
+if(window.location.pathname.indexOf('/es/')==0) {
+  translations = trStrings.es;
+}
+
 mapboxgl.accessToken = 'pk.eyJ1IjoiYWxwaGEtY2EtZ292IiwiYSI6ImNrNTZ5em1qMDA4ZWkzbG1yMDg4OXJyaDIifQ.GleKGsZsaOcmxfsYUR9bTg';
 var map = new mapboxgl.Map({
   container: 'mapid',
@@ -20,7 +46,7 @@ function getGeo() {
   var geoSuccess = function (position) {
     // Do magic with location
     startPos = position;
-    document.querySelector('.js-location-display').innerHTML = "Showing food banks near you";
+    document.querySelector('.js-location-display').innerHTML = `${translations["Showing food banks near"]} ${translations["you"]}`;
     reorient([position.coords.longitude, position.coords.latitude])
   };
   var geoError = function (error) {
@@ -98,9 +124,9 @@ function setupMapInteractions() {
         .setHTML(`${food.title}<br>
           ${food.address}<br>
             ${food.address2}<br>
-          <a href="${food.website}" target="_blank">Visit ${food.title}'s website</a><br>
+          <a href="${food.website}" target="_blank">${translations["Visit"]} ${food.title}'s ${translations["website"]}</a><br>
           ${food.phone}<br>
-          <a href="geo:${item.geometry.coordinates[1]},${item.geometry.coordinates[0]}" onclick="mapsSelector(${item.geometry.coordinates[1]},${item.geometry.coordinates[0]})" target="_blank"class="btn btn-primary">Get directions</a>`)
+          <a href="geo:${item.geometry.coordinates[1]},${item.geometry.coordinates[0]}" onclick="mapsSelector(${item.geometry.coordinates[1]},${item.geometry.coordinates[0]})" target="_blank"class="btn btn-primary">${translations["Get directions"]}</a>`)
         .addTo(map);
     });
 
@@ -146,24 +172,20 @@ function displaySortedResults(coords, data) {
           showMore = `<li class="card mb-20 js-expand-link">
             <div class="card-body">
               <p>
-                <a href="#" onclick="showAll()">Show more &raquo; &raquo;</a>
+                <a href="#" onclick="showAll()">${translations["Show more"]} &raquo;</a>
               </p>
             </div>
           </li>`;
         }
         return `<li class="card mb-20 ${displayClass}">
           <div class="card-body">
-            <p>${food.distance.toFixed(2)} miles away</p>
+            <p>${food.distance.toFixed(2)} ${translations["miles away"]}</p>
             <p>${food.title}</p>
             <p>${food.address}<br>
               ${food.address2}<br>
-            <a href="${food.website}" target="_blank">Visit ${food.title}'s website</a><br>
+            <a href="${food.website}" target="_blank">${translations["Visit"]} ${food.title}'s ${translations["website"]}</a><br>
             <p>${food.phone}</p>
-            <a href="geo:${item.geometry.coordinates[1]},${item.geometry.coordinates[0]}" onclick="mapsSelector(${item.geometry.coordinates[1]},${item.geometry.coordinates[0]})" target="_blank"class="btn btn-sm">Get directions</a>
-
-            <!--<p>Hours: 
-            Monday to Friday
-            8 a.m.–5 p.m.</p>-->
+            <a href="geo:${item.geometry.coordinates[1]},${item.geometry.coordinates[0]}" onclick="mapsSelector(${item.geometry.coordinates[1]},${item.geometry.coordinates[0]})" target="_blank"class="btn btn-sm">${translations["Get directions"]}</a>
           </div>
         </li>${showMore}`;
       }).join(' ')}
@@ -231,7 +253,7 @@ document.querySelector('.js-food-lookup').addEventListener('submit',function(eve
   fetch(url)
   .then( function(resp) { return resp.json() })
   .then(function (data) {
-    document.querySelector('.js-location-display').innerHTML = "Showing food banks near "+val;
+    document.querySelector('.js-location-display').innerHTML = `${translations["Showing food banks near"]} ${val}`;
     if(data.features.length > 0) {
       reorient(data.features[0].center);
     } else {
