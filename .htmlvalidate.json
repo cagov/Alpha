@@ -29,9 +29,9 @@
     "no-deprecated-attr": "error",
     "no-dup-attr": "error",
     "no-dup-class": "error",
-    "no-raw-characters": ["error",{"relaxed": false}],
     "no-implicit-close": "error",
     "no-missing-references": "error",
+    "no-raw-characters": ["error",{"relaxed": false}],
     "no-style-tag": "error",
     "prefer-button": "error",
     "prefer-tbody": "error",
@@ -43,17 +43,16 @@
     "wcag/h37": "error",
     "wcag/h67": "error",
 
-    "no-dup-id": "off",
-    "id-pattern": ["off",{"pattern": "kebabcase"}],
-    "no-trailing-whitespace": "off",
-    "empty-heading": "off",
+    "no-dup-id": "warn",
+    "id-pattern": ["warn",{"pattern": "kebabcase"}],
+    "empty-heading": "warn",
+    "no-inline-style": "warn",
+
     "element-permitted-content": "off",
-
     "void": ["off",{"style": "selfclose"}],
-
     "require-sri": ["off",{"target": "crossorigin"}],
     "missing-doctype": "off",
-    "no-inline-style": "off",
-    "no-unknown-elements": "off"
+    "no-unknown-elements": "off",
+    "no-trailing-whitespace": "off"
   }
 }
