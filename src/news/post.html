@@ -25,14 +25,8 @@
 
 <body class="news">
   <%= require('html-loader!../partials/official.html') %>
-
-  <nav class="navbar navbar-inverse">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand nav-cali-bg navbar-left" href="index.html">CA.gov <sup>(ALPHA)</sup></a>
-      </div>
-    </div>
-  </nav>
+  <%= require('html-loader!../../partials/experiment-banner.html') %>
+  <%= require('html-loader!../../partials/navbar.html') %>
 
 
   <link href="https://cwds.dev/docs/4.3/assets/css/docs.css" rel="stylesheet" />
