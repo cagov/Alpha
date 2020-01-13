@@ -281,7 +281,10 @@ window.mapsSelector = function(lat,lon) {
   }
 }
 
-//Add ARIA Label to Awesomeplete list
+//Change ARIA Label to Awesomeplete list
 
 document.getElementById('awesomplete_list_1').setAttribute('aria-hidden', true);
 document.getElementById('awesomplete_list_1').setAttribute('aria-label', 'autosuggest');
+document.getElementById('cityInput').setAttribute('role', 'textbox');
+document.getElementById('cityInput').removeAttribute('aria-controls');
+document.getElementById('cityInput').removeAttribute('aria-expanded');
