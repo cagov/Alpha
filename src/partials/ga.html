@@ -5,4 +5,8 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'UA-154336791-1');
+
+function ga_send_event(category,action,label) {
+  ga('gtag_UA_154336791_1.send','event',category,action,label);
+}
 </script>
