@@ -30,6 +30,7 @@
     "no-deprecated-attr": "error",
     "no-dup-attr": "error",
     "no-dup-class": "error",
+    "no-dup-id": "error",
     "no-implicit-close": "error",
     "no-missing-references": "error",
     "no-raw-characters": ["error",{"relaxed": false}],
@@ -44,7 +45,6 @@
     "wcag/h37": "error",
     "wcag/h67": "error",
 
-    "no-dup-id": "warn",
     "empty-heading": "warn",
     "no-inline-style": "warn",
 
