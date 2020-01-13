@@ -583,6 +583,11 @@ li.active ul.nav.bd-sidenav {
 	padding-bottom: 50px;
 }
 
+li.list-group-item.alpha-footer {
+	
+	    border-top: 0;
+}
+
 
 /* Step by Step*/
 
@@ -1199,7 +1204,20 @@ li.lead {
     color: #000;
 }
 	  
+/* minimum wage override */
+.wage-city-search label {
+  justify-content: left;
+}
 
+/* Food Banks Map Fix */
+.mapboxgl-ctrl.mapboxgl-ctrl-attrib {
+    background-color: #fff;
+}
+
+/* have to put this in there for the image to load */
+.nerf {
+  background-image: url('../img/marker.png');
+}
 
 
 
@@ -1230,12 +1248,4 @@ li.lead {
 
 }
 
-/* minimum wage override */
-.wage-city-search label {
-  justify-content: left;
-}
 
-/* have to put this in there for the image to load */
-.nerf {
-  background-image: url('../img/marker.png');
-}
