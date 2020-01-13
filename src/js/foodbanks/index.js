@@ -285,6 +285,6 @@ window.mapsSelector = function(lat,lon) {
 
 document.getElementById('awesomplete_list_1').setAttribute('aria-hidden', true);
 document.getElementById('awesomplete_list_1').setAttribute('aria-label', 'autosuggest');
-document.getElementById('cityInput').setAttribute('role', 'textbox');
-document.getElementById('cityInput').removeAttribute('aria-controls');
-document.getElementById('cityInput').removeAttribute('aria-expanded');
+document.getElementById('city-input').setAttribute('role', 'textbox');
+document.getElementById('city-input').removeAttribute('aria-controls');
+document.getElementById('city-input').removeAttribute('aria-expanded');
