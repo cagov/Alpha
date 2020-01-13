@@ -187,7 +187,7 @@ function displaySortedResults(coords, data) {
               ${food.address2}<br>
             <a href="${food.website}" target="_blank">${translations["Visit"]} ${food.title}'s ${translations["website"]}</a><br>
             <p>${food.phone}</p>
-            <a href="geo:${item.geometry.coordinates[1]},${item.geometry.coordinates[0]}" onclick="mapsSelector(${item.geometry.coordinates[1]},${item.geometry.coordinates[0]})" target="_blank"class="btn btn-sm">${translations["Get directions"]}</a>
+            <a href="geo:${item.geometry.coordinates[1]},${item.geometry.coordinates[0]}" onclick="mapsSelector(${item.geometry.coordinates[1]},${item.geometry.coordinates[0]})" aria-label="${translations["directions to"]} ${food.title}ß" target="_blank"class="btn btn-sm">${translations["Get directions"]}</a>
           </div>
         </li>${showMore}`;
       }).join(' ')}
