@@ -4,7 +4,7 @@
   "description": "This will be the product/dev repo of the CA.gov Alpha.",
   "main": "public/index.html",
   "scripts": {
-    "build": "npm run build:modern && npm run build:ancient && npm run validate",
+    "build": "npm run validate && npm run build:modern && npm run build:ancient",
     "build:modern": "webpack",
     "build:ancient": "webpack --config webpack.config.es5.js",
     "setup": "npm install",
