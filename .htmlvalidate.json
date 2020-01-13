@@ -32,6 +32,7 @@
     "no-raw-characters": ["error",{"relaxed": false}],
     "no-implicit-close": "error",
     "no-missing-references": "error",
+    "no-style-tag": "error",
     "prefer-button": "error",
     "prefer-tbody": "error",
     "svg-focusable": "error",
@@ -53,7 +54,6 @@
     "require-sri": ["off",{"target": "crossorigin"}],
     "missing-doctype": "off",
     "no-inline-style": "off",
-    "no-style-tag": "off",
     "no-unknown-elements": "off"
   }
 }
