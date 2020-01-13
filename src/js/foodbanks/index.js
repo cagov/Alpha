@@ -278,3 +278,8 @@ window.mapsSelector = function(lat,lon) {
     window.open(`https://maps.google.com/maps?daddr=${lat},${lon}`);
   }
 }
+
+//Add ARIA Label to Awesomeplete list
+
+document.getElementById('awesomplete_list_1').setAttribute('aria-hidden', true);
+document.getElementById('awesomplete_list_1').setAttribute('aria-label', 'autosuggest');
