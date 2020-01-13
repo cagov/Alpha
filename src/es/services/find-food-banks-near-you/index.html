@@ -21,7 +21,7 @@
   <link rel="canonical" href="https://alpha.ca.gov/es/services/find-food-banks-near-you/" />
   <title>Encuentre bancos de alimentos cerca de usted - Alpha.CA.gov</title>
 
-<link href='https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet' />    
+<link href="https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css" rel="stylesheet" />    
 </head>
 
 <body>
@@ -48,8 +48,8 @@
 
         <div class="form-group">
           <form class="form-inline mb-20 js-food-lookup">
-            <label for="cityInput" class="mr-10">Por favor introduzca su ciudad o código postal:</label>
-            <input type="input" class="form-control city-search" id="cityInput" data-multiple>
+            <label for="city-input" class="mr-10">Por favor introduzca su ciudad o código postal:</label>
+            <input type="text" class="form-control city-search" id="city-input" data-multiple>
             <button type="submit" class="btn btn-primary ml-10">Search</button>
             <div class="invalid-feedback">Por favor introduzca su ciudad o código postal.</div>
           </form>
@@ -86,7 +86,7 @@
     </div>
   </div>
 
-  <script src='https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js"></script>
 
   <%= require('html-loader!../../partials/feedback.html') %>
   <%= require('html-loader!../../partials/footer.html') %>

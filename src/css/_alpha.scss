@@ -1239,3 +1239,23 @@ li.lead {
 .nerf {
   background-image: url('../img/marker.png');
 }
+
+/* feedback page override */
+.smcx-iframe-container {
+  height: 1200px !important;
+}
+
+.smcx-widget {
+  height: 1250px !important;
+  border: 0px !important;
+}
+
+@media (max-width: 575.98px) { 
+  .smcx-iframe-container {
+    height: 1300px !important;
+  }
+
+  .smcx-widget {
+    height: 1350px !important;
+  }
+}
