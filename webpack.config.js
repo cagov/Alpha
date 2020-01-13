@@ -80,6 +80,12 @@ module.exports = {
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
+      filename: 'news/post.html',
+      template: 'src/news/post.html',
+      excludeChunks: ['minwage', 'food'],
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
       filename: 'about/index.html',
       template: 'src/about/index.html',
       excludeChunks: ['minwage', 'food'],

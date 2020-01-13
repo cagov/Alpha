@@ -25,35 +25,16 @@
 
 <body class="news">
   <%= require('html-loader!../partials/official.html') %>
-  <%= require('html-loader!../../partials/experiment-banner.html') %>
-  <%= require('html-loader!../../partials/navbar.html') %>
+  <%= require('html-loader!../partials/experiment-banner.html') %>
+  <%= require('html-loader!../partials/navbar.html') %>
 
 
-  <link href="https://cwds.dev/docs/4.3/assets/css/docs.css" rel="stylesheet" />
-  <link href="https://california.azureedge.net/cdt/statetemplate/6.0.0/css/cagov.font-only.min.css" rel="stylesheet" />
-  <div class="official">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <p>Official California State Government</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <nav class="navbar navbar-inverse">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand nav-cali-bg navbar-left" href="index.html">CA.gov <sup>(ALPHA)</sup></a>
-      </div>
-    </div>
-  </nav>
 
   <div class="container">
     <div class="row">
       <div class="col-md-2">
       </div>
-      <div class="col-md-8">
+      <div class="col-md-8 pt-5">
         <h1>Our design principles</h1>
 
         <p class="lead">
@@ -105,36 +86,22 @@
       <div class="alert alert-secondary" role="alert">
         <p>Follow the Alpha.CA.gov project on <a href="https://twitter.com/cadotgov">Twitter</a> and <a href="https://github.com/cagov/">GitHub</a>.</p>
       </div>
-
+		  
+	    		<div class="col-md-12 mt-5">
+				<hr>
+				<p><a href="/news/">Go back to News home</a></p>
+				<p></p>
+			  </div>
       </div>
-      <div class="col-md-2">
-      </div>
+		
     </div>
+ <%= require('html-loader!../partials/feedback.html') %>
   </div>
 
-  <div class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <p>
-            2020 State of California
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="alphabar">
-    <div class="container">
-      <p>This is an alpha project and a work in progress (<a href="https://medium.com/cadotgov">Details</a>)</p>
-    </div>
-  </div>
   <script src="https://cwds.dev/docs/cali/js/accordion/index.js" defer async></script>
 
 
 
-
-  <%= require('html-loader!../partials/feedback.html') %>
   <%= require('html-loader!../partials/footer.html') %>
   <script nomodule src="/js/es5Food.js?cache=false" ></script>
   <%= require('html-loader!../partials/alphabar.html') %>
