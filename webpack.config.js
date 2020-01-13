@@ -80,6 +80,12 @@ module.exports = {
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
+      filename: 'es/about/index.html',
+      template: 'src/es/about/index.html',
+      excludeChunks: ['minwage', 'food'],
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
       filename: 'services/request-birth-certificate/index.html',
       template: 'src/services/request-birth-certificate/index.html',
       excludeChunks: ['minwage', 'food'],
