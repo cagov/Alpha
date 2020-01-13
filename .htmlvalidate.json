@@ -23,6 +23,7 @@
     "element-required-content": "error",
     "empty-title": "error",
     "heading-level": "error",
+    "id-pattern": ["error",{"pattern": "kebabcase"}],
     "input-missing-label": "error",
     "long-title": ["error",{"maxlength": 70}],
     "no-conditional-comment": "error",
@@ -44,7 +45,6 @@
     "wcag/h67": "error",
 
     "no-dup-id": "warn",
-    "id-pattern": ["warn",{"pattern": "kebabcase"}],
     "empty-heading": "warn",
     "no-inline-style": "warn",
 
