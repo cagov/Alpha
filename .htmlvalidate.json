@@ -46,7 +46,7 @@
     "wcag/h67": "error",
 
     "empty-heading": "warn",
-    "no-inline-style": "warn",
+    "no-inline-style": "error",
 
     "element-permitted-content": "off",
     "void": ["off",{"style": "selfclose"}],
