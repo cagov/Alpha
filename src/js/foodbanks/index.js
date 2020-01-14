@@ -32,16 +32,6 @@ if(window.location.pathname.indexOf('/es/')==0) {
   translations = trStrings.es;
 }
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiYWxwaGEtY2EtZ292IiwiYSI6ImNrNTZ5em1qMDA4ZWkzbG1yMDg4OXJyaDIifQ.GleKGsZsaOcmxfsYUR9bTg';
-var map = new mapboxgl.Map({
-  container: 'mapid',
-  style: 'mapbox://styles/mapbox/streets-v11',
-  center: [-121.500665, 38.583843],
-  zoom: 12,
-  pitch: 58.5,
-  bearing: -120.8
-});
-
 function getGeo() {
   var startPos;
 
@@ -64,21 +54,64 @@ function getGeo() {
 };
 getGeo();
 
-function reorient(position) {
-  map.flyTo({
-    center: position,
-    essential: false // this animation is not considered essential with respect to prefers-reduced-motion
+function loadScript( url, callback ) {
+  var script = document.createElement( "script" )
+  script.type = "text/javascript";
+  if(script.readyState) {  // only required for IE <9
+    script.onreadystatechange = function() {
+      if ( script.readyState === "loaded" || script.readyState === "complete" ) {
+        script.onreadystatechange = null;
+        callback();
+      }
+    };
+  } else {  //Others
+    script.onload = function() {
+      callback();
+    };
+  }
+
+  script.src = url;
+  document.getElementsByTagName( "head" )[0].appendChild( script );
+}
+
+function loadMap() {
+  var st = document.createElement("link");
+  st.href = "https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css";
+  st.rel = "stylesheet";
+  document.head.appendChild(st);
+
+  loadScript("https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js", function() {
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYWxwaGEtY2EtZ292IiwiYSI6ImNrNTZ5em1qMDA4ZWkzbG1yMDg4OXJyaDIifQ.GleKGsZsaOcmxfsYUR9bTg';
+
+    window.map = new mapboxgl.Map({
+      container: 'mapid',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [-121.500665, 38.583843],
+      zoom: 12,
+      pitch: 58.5,
+      bearing: -120.8
+    });
+    window.map.on('load', function() {
+      mapInteractions();
+    });  
   });
+}
+if(window.innerWidth > 600) {
+  loadMap();
+}
+
+function reorient(position) {
+  if(window.map) {
+    window.map.flyTo({
+      center: position,
+      essential: false // this animation is not considered essential with respect to prefers-reduced-motion
+    });  
+  }
   displaySortedResults({ type: 'Feature', geometry: { coordinates: position } }, window.foodLocations)
 }
 
 window.foodLocations = foods.default;
-// displaySortedResults({ type: 'Feature', geometry: { coordinates: [-121.489987, 38.574024] } }, window.foodLocations)
 
-map.on('load', function() {
-  mapInteractions();
-});
-  
 function mapInteractions() {
   if(!window.foodLocations) {
     setTimeout(mapInteractions, 300);
@@ -88,11 +121,11 @@ function mapInteractions() {
 }
 
 function setupMapInteractions() {
-  map.loadImage("/img/marker.png", function (error, image) {
+  window.map.loadImage("/img/marker.png", function (error, image) {
     if (error) throw error;
-    map.addImage("custom-marker", image);
+    window.map.addImage("custom-marker", image);
 
-    map.addLayer(
+    window.map.addLayer(
       {
         'id': 'foods',
         'type': 'symbol',
@@ -109,7 +142,7 @@ function setupMapInteractions() {
     );
     // When a click event occurs on a feature in the foods layer, open a popup at the
     // location of the feature, with description HTML from its properties.
-    map.on('click', 'foods', function (e) {
+    window.map.on('click', 'foods', function (e) {
       var coordinates = e.features[0].geometry.coordinates.slice();
       var item = e.features[0];
       var food = item.properties;
@@ -129,17 +162,17 @@ function setupMapInteractions() {
           <a href="${food.website}" target="_blank">${translations["Visit"]} ${food.title}'s ${translations["website"]}</a><br>
           ${food.phone}<br>
           <a href="geo:${item.geometry.coordinates[1]},${item.geometry.coordinates[0]}" onclick="mapsSelector(${item.geometry.coordinates[1]},${item.geometry.coordinates[0]})" aria-label="${translations["directions to"]} ${food.title}ß" target="_blank"class="btn btn-primary">${translations["Get directions"]}</a>`)
-        .addTo(map);
+        .addTo(window.map);
     });
 
     // Change the cursor to a pointer when the mouse is over the foods layer.
-    map.on('mouseenter', 'foods', function () {
-      map.getCanvas().style.cursor = 'pointer';
+    window.map.on('mouseenter', 'foods', function () {
+      window.map.getCanvas().style.cursor = 'pointer';
     });
 
     // Change it back to a pointer when it leaves.
-    map.on('mouseleave', 'foods', function () {
-      map.getCanvas().style.cursor = '';
+    window.map.on('mouseleave', 'foods', function () {
+      window.map.getCanvas().style.cursor = '';
     });
   })
 }
@@ -240,7 +273,7 @@ new Awesomplete('input[data-multiple]', {
     fetch(url)
     .then(function(resp) { return resp.json() })
     .then(function (data) {
-      document.querySelector('.js-location-display').innerHTML = "Showing food banks near "+finalval;
+      document.querySelector('.js-location-display').innerHTML = "<h2>Showing food banks near "+finalval+"</h2>";
       reorient(data.features[0].center);
     })
   }
