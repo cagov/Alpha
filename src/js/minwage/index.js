@@ -184,7 +184,6 @@ function buildDisplay(wageJson) {
             <div class="card-header accordion-alpha" id="heading${label}">
               <button class="btn" type="button" aria-expanded="false">
                 <h3 class="pl-3 h4 mb-n1 pr-5 text-left">${translations["Minimum wage increases on"]} ${new Date(label).toLocaleDateString('en-US', options)} </h3>
-
               </button>
             </div>
             <div class="card-container collapsed" aria-labelledby="heading${label}">
