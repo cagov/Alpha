@@ -20,8 +20,7 @@
 
   <link rel="canonical" href="https://alpha.ca.gov/services/find-food-banks-near-you/" />
   <title>Find food banks near you - Alpha.CA.gov</title>
-
-<link href="https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css" rel="stylesheet" />    
+   
 </head>
 
 <body>
@@ -55,7 +54,7 @@
           </form>
         </div>
 <!-- [html-validate-disable-next empty-heading] -->
-        <h2 class="js-location-display"></h2>
+        <div class="js-location-display"></div>
         <div class="js-nearest-results"></div>
 
         <div id="mapid" class="mv-20"></div>
@@ -85,8 +84,6 @@
       </div>
     </div>
   </div>
-
-  <script src="https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js"></script>
 
   <%= require('html-loader!../../partials/feedback.html') %>
   <%= require('html-loader!../../partials/footer.html') %>

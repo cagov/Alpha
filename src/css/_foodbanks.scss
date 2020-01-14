@@ -19,9 +19,11 @@
 .mr-10 {
   margin-right: 10px;
 }
-#mapid { 
-  height: 280px; 
-  margin-bottom: 20px;
+@media (min-width: 600px) {
+  #mapid { 
+    height: 280px; 
+    margin-bottom: 20px;
+  }
 }
 .card-set {
   display: grid;
