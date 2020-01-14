@@ -21,6 +21,7 @@
     "element-permitted-order": "error",
     "element-required-attributes": "error",
     "element-required-content": "error",
+    "empty-heading": "error",
     "empty-title": "error",
     "heading-level": "error",
     "id-pattern": ["error",{"pattern": "kebabcase"}],
@@ -32,6 +33,7 @@
     "no-dup-class": "error",
     "no-dup-id": "error",
     "no-implicit-close": "error",
+    "no-inline-style": "error",
     "no-missing-references": "error",
     "no-raw-characters": ["error",{"relaxed": false}],
     "no-style-tag": "error",
@@ -44,9 +46,6 @@
     "wcag/h36": "error",
     "wcag/h37": "error",
     "wcag/h67": "error",
-
-    "empty-heading": "warn",
-    "no-inline-style": "error",
 
     "element-permitted-content": "off",
     "void": ["off",{"style": "selfclose"}],

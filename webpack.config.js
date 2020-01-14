@@ -10,7 +10,7 @@ const minificationOptions = {
   removeRedundantAttributes: true,
   removeScriptTypeAttributes: true,
   useShortDoctype: true,
-  minifyJS: false
+  minifyJS: true
 }
 
 module.exports = {

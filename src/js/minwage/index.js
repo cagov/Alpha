@@ -4,8 +4,9 @@ import * as uniqueZipJson from '../../json/unique-zips-slim.json';
 
 let trStrings = {
   "es": {
+    "key": "es",
     "The minimum wage in": "Mostrar bancos de alimentos cerca de",
-    "Minimum wage increases on": "Aumento de salario mínimo a partir del 1ro de Enero",
+    "Minimum wage increases on": "Aumento de salario mínimo a partir del",
     "Place": "Ubicación",
     "Rate": "Tasa",
     "25 or fewer": "25 o menos",
@@ -17,6 +18,7 @@ let trStrings = {
     "for employers with": "para empleadores con"
   },
   "en": {
+    "key": "en-US",
     "The minimum wage in": "The minimum wage in",
     "Minimum wage increases on": "Minimum wage increases on",
     "Place": "Place",
@@ -181,7 +183,11 @@ function buildDisplay(wageJson) {
           <div class="card mb-3" >
             <div class="card-header accordion-alpha" id="heading${label}">
               <button class="btn" type="button" aria-expanded="false">
-                <h3 class="pl-3 h4 mb-n1">${translations["Minimum wage increases on"]} ${new Date(label).toLocaleDateString('en-US', options)} </h3>
+<<<<<<< HEAD
+                <h3 class="pl-3 h4 mb-n1 pr-5 text-left">${translations["Minimum wage increases on"]} ${new Date(label).toLocaleDateString('en-US', options)} </h3>
+=======
+                <h3 class="pl-3 h4 mb-n1">${translations["Minimum wage increases on"]} ${new Date(label).toLocaleDateString(translations.key, options)} </h3>
+>>>>>>> master
               </button>
             </div>
             <div class="card-container collapsed" aria-labelledby="heading${label}">
