@@ -14,7 +14,7 @@
     "uglify:css": "uglifycss public/css/bootstrap.min.css public/css/style.css > public/dist/uncssed.css",
     "watch": "webpack --watch",
     "test": "echo no tests yet",
-    "validate": "html-validate src/*"
+    "validate": "html-validate 'src/**/*.html'"
   },
   "repository": {
     "type": "git",
