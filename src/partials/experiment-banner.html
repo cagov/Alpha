@@ -27,7 +27,7 @@
 	}
 
 	function alertLoad() {
-		if ((new Date().getTime() - localStorage.getItem('AlertDismissed') || 0) > 8640000000)
+		if ((new Date().getTime() - localStorage.getItem('AlertDismissed') || 0) > 3600000)
 			getAlertElement().classList.remove('d-none');
 	}
 
