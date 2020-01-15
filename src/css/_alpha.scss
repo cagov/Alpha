@@ -1245,7 +1245,20 @@ li.lead {
   .one-column-fix {
 	margin-top: -2px;
 }
+	
+.card-body {
+     padding: 5px;
+}
+	
+.list-group {
+     margin-left: -.6rem;
+}
+	
+cwds-step-list li .step-interior {
+    padding-left: 20px;
 
+}
+	
 }
 
 
