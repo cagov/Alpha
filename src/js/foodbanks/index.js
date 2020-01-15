@@ -2,6 +2,7 @@ import * as citiesJson from '../../json/just-cities.json';
 import * as uniqueZipJson from '../../json/unique-zips-slim.json';
 import * as foods from './foods.json';
 import * as haversine from './haversine.js';
+const mapboxToken = 'pk.eyJ1IjoiYWxwaGEtY2EtZ292IiwiYSI6ImNrNTZ5em1qMDA4ZWkzbG1yMDg4OXJyaDIifQ.GleKGsZsaOcmxfsYUR9bTg';
 // awesomplete is in the main bundle already
 
 let trStrings = {
@@ -81,7 +82,7 @@ function loadMap() {
   document.head.appendChild(st);
 
   loadScript("https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js", function() {
-    mapboxgl.accessToken = 'pk.eyJ1IjoiYWxwaGEtY2EtZ292IiwiYSI6ImNrNTZ5em1qMDA4ZWkzbG1yMDg4OXJyaDIifQ.GleKGsZsaOcmxfsYUR9bTg';
+    mapboxgl.accessToken = mapboxToken;
 
     window.map = new mapboxgl.Map({
       container: 'mapid',
@@ -269,7 +270,7 @@ new Awesomplete('input[data-multiple]', {
     var finalval = before + text;
     this.input.value = finalval;
     var cabb = '-124.409591,32.534156,-114.131211,42.009518';
-    var url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${finalval}.json?bbox=${cabb}&access_token=${mapboxgl.accessToken}`;
+    var url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${finalval}.json?bbox=${cabb}&access_token=${mapboxToken}`;
     fetch(url)
     .then(function(resp) { return resp.json() })
     .then(function (data) {
@@ -284,7 +285,7 @@ document.querySelector('.js-food-lookup').addEventListener('submit',function(eve
   document.querySelector('.invalid-feedback').style.display = 'none';
   var val = this.querySelector('input').value;
   var cabb = '-124.409591,32.534156,-114.131211,42.009518';
-  var url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${val}.json?bbox=${cabb}&access_token=${mapboxgl.accessToken}`;
+  var url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${val}.json?bbox=${cabb}&access_token=${mapboxToken}`;
   fetch(url)
   .then( function(resp) { return resp.json() })
   .then(function (data) {
