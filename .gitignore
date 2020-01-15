@@ -3,5 +3,6 @@ public/*
 !public/robots.txt
 !public/sitemap.xml
 !public/web.config
+!public/server.aspx
 !public/json
 .DS_Store
