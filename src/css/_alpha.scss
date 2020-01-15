@@ -613,7 +613,7 @@ cwds-step-list li .details {
   overflow: hidden;
   transition: height .3s;
 }
-cwds-step-list li {
+cwds-step-list li.list-group-item.lead.unstyled.list-group-item-action {
   	cursor: pointer;
 	border-left: solid #e8e8e8;
     border-left-width: 4px;
