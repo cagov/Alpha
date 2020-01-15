@@ -12,10 +12,10 @@ class CWDSAccordion extends HTMLElement {
       this.querySelector('.card-header').classList.remove('accordion-alpha-open');
       let expando = this.expandTarget;
       setTimeout(function() {
-        expando.style.display = "none";
+        // expando.style.display = "none";
       }, 300)
     } else {
-      this.expandTarget.style.display = "block";
+      // this.expandTarget.style.display = "block";
       this.expandTarget.style.height = cardBodyHeight+'px';
       this.querySelector('.card-header').classList.add('accordion-alpha-open');
     }
