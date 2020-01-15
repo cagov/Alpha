@@ -8,7 +8,7 @@ class CWDSLanguageSelect extends HTMLElement {
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         ${(function() {
           if(window.location.pathname.indexOf('/es/') != 0) {
-            return `<a class="dropdown-item" href="/es/">Spanish</a>`
+            return `<a class="dropdown-item" href="/es/">Español</a>`
           } else {
             return `<a class="dropdown-item" href="/">English</a>`
           }
