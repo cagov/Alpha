@@ -7,12 +7,17 @@ class CWDSAccordion extends HTMLElement {
 
   listen() {
     let cardBodyHeight = this.parentNode.querySelector('.card-body').clientHeight;
-    if(this.expandTarget.clientHeight > 0) {
+    if(this.style.display == 'none' || this.expandTarget.clientHeight > 0) {
       this.expandTarget.style.height = '0px';
-	    this.querySelector('.card-header').classList.remove('accordion-alpha-open');
+      this.querySelector('.card-header').classList.remove('accordion-alpha-open');
+      let expando = this.expandTarget;
+      setTimeout(function() {
+        // expando.style.display = "none";
+      }, 300)
     } else {
+      // this.expandTarget.style.display = "block";
       this.expandTarget.style.height = cardBodyHeight+'px';
-	    this.querySelector('.card-header').classList.add('accordion-alpha-open');
+      this.querySelector('.card-header').classList.add('accordion-alpha-open');
     }
   }
 }
