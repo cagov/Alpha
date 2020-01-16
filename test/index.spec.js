@@ -24,7 +24,7 @@ const height = 1080;
 
 beforeAll(async () => {
   browser = await puppeteer.launch({
-    headless: false,
+    headless: true,
     slowMo: 80,
     args: [`--window-size=${width},${height}`]
   });
@@ -42,7 +42,6 @@ describe("homepage", () => {
 
   }, 16000);
 });
-
 
 describe("minimum wage", () => {
   test("autocomplete works", async () => {
@@ -67,10 +66,6 @@ describe("minimum wage", () => {
 
   }, 16000);
 });
-
-
-
-
 
 afterAll(() => {
   browser.close();
