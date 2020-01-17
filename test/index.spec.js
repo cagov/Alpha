@@ -6,25 +6,22 @@
 const puppeteer = require('puppeteer');
 
 /*
-snippets:
+More info for writing tests:
 
-const stories = await page.$$eval('a.storylink', anchors => { return anchors.map(anchor => anchor.textContent).slice(0, 10) })
+Ways to use expect with jest: https://jestjs.io/docs/en/expect
 
-const title = await page.title();
-expect(title).toBe(
-  "Welcome to Alpha.CA.gov"
-);
+All the stuff you can do with puppeteer: https://github.com/puppeteer/puppeteer/blob/master/docs/api.md
 */
 
 let page;
 let browser;
 let hostname = 'https://staging.alpha.technology.ca.gov';
-const width = 1920;
-const height = 1080;
+const width = 1200;
+const height = 800;
 
 beforeAll(async () => {
   browser = await puppeteer.launch({
-    headless: true,
+    headless: false,
     slowMo: 80,
     args: [`--window-size=${width},${height}`]
   });
