@@ -15,8 +15,8 @@ All the stuff you can do with puppeteer: https://github.com/puppeteer/puppeteer/
 
 let page;
 let browser;
-let hostname = 'https://staging.alpha.technology.ca.gov';
-// let hostname = 'http://localhost:1337';
+// let hostname = 'https://staging.alpha.technology.ca.gov';
+let hostname = 'http://localhost:1337';
 const width = 1200;
 const height = 800;
 
