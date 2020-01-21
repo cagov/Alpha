@@ -5,6 +5,11 @@
  */
 const puppeteer = require('puppeteer');
 
+const express = require('express')
+const app = express()
+const port = 1337
+let server;
+
 /*
 More info for writing tests:
 
@@ -21,6 +26,9 @@ const width = 1200;
 const height = 800;
 
 beforeAll(async () => {
+  app.use('/', express.static('public', {}));
+  server = app.listen(port, () => console.log(`Example app listening on...\nhttp://localhost:${port}`))
+  
   browser = await puppeteer.launch({
     headless: true,
     slowMo: 80,
@@ -67,4 +75,5 @@ describe("minimum wage", () => {
 
 afterAll(() => {
   browser.close();
+  server.close();
 });
