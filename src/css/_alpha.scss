@@ -1221,6 +1221,10 @@ li.lead {
   background-image: url('../img/marker.png');
 }
 
+a.list-group-item.list-group-item-action.lead {
+    text-decoration: underline;
+	color: #0071bc;
+}
 
 
 /* Medium devices (tablets, 768px and up)*/
