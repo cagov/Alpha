@@ -13,7 +13,7 @@
     "uncss": "uncss public/index.html > public/css/cssmin.css",
     "uglify:css": "uglifycss public/css/bootstrap.min.css public/css/style.css > public/dist/uncssed.css",
     "watch": "webpack --watch",
-    "test": "echo no tests yet",
+    "test": "jest",
     "validate": "html-validate 'src/**/*.html'"
   },
   "repository": {
