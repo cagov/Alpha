@@ -216,7 +216,7 @@ function displaySortedResults(coords, data) {
         return `<li class="card mb-20 ${displayClass}">
           <div class="card-body">
             <p>${food.distance.toFixed(2)} ${translations["miles away"]}</p>
-            <p>${food.title}</p>
+            <p class="bold">${food.title}</p>
             <p>${food.address}<br>
               ${food.address2}<br>
             <a href="${food.website}" target="_self">${translations["Visit"]} ${food.title}'s ${translations["website"]}</a><br>
