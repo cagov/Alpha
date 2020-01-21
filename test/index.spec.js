@@ -5,6 +5,11 @@
  */
 const puppeteer = require('puppeteer');
 
+const express = require('express')
+const app = express()
+const port = 1337
+let server;
+
 /*
 More info for writing tests:
 
@@ -15,11 +20,15 @@ All the stuff you can do with puppeteer: https://github.com/puppeteer/puppeteer/
 
 let page;
 let browser;
-let hostname = 'https://staging.alpha.technology.ca.gov';
+// let hostname = 'https://staging.alpha.technology.ca.gov';
+let hostname = 'http://localhost:1337';
 const width = 1200;
 const height = 800;
 
 beforeAll(async () => {
+  app.use('/', express.static('public', {}));
+  server = app.listen(port, () => console.log(`Example app listening on...\nhttp://localhost:${port}`))
+  
   browser = await puppeteer.launch({
     headless: true,
     slowMo: 80,
@@ -66,4 +75,5 @@ describe("minimum wage", () => {
 
 afterAll(() => {
   browser.close();
+  server.close();
 });
