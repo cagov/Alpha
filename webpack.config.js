@@ -54,7 +54,7 @@ module.exports = {
       paths: glob.sync(`${PATHS.src}/**/*`,  { nodir: true }),
     }),
     new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: ['**/*', '!sitemap.xml', '!web.config', '!robots.txt', '!server.aspx', '!json', '!json/**/*']
+      cleanOnceBeforeBuildPatterns: ['**/*', '!sitemap.xml', '!web.config', '!robots.txt', '!server.aspx']
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
