@@ -8,6 +8,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const PurgecssPlugin = require('purgecss-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const minificationOptions = {
   collapseWhitespace: true,
   removeComments: true,
@@ -46,6 +47,9 @@ module.exports = {
     },
   },
   plugins: [
+    new CopyPlugin([
+      { from: 'src/serverfiles' },
+    ]),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: 'css/[id].css',
@@ -54,7 +58,7 @@ module.exports = {
       paths: glob.sync(`${PATHS.src}/**/*`,  { nodir: true }),
     }),
     new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: ['**/*', '!sitemap.xml', '!web.config', '!robots.txt', '!server.aspx']
+      cleanOnceBeforeBuildPatterns: ['**/*']
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
@@ -167,7 +171,7 @@ module.exports = {
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: 'defer',
       module: 'js'
-    })
+    }),
   ],
   module: {
     rules: [
