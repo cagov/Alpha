@@ -17,6 +17,7 @@ const minificationOptions = {
   useShortDoctype: true,
   minifyJS: true
 }
+const excludedChunks = ['minwage', 'food'];
 
 module.exports = {
   mode: 'production',
@@ -63,61 +64,61 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'src/index.html',
-      excludeChunks: ['minwage', 'food'],
+      excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'es/index.html',
       template: 'src/es/index.html',
-      excludeChunks: ['minwage', 'food'],
+      excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'feedback/index.html',
       template: 'src/feedback/index.html',
-      excludeChunks: ['minwage', 'food'],
+      excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'es/feedback/index.html',
       template: 'src/es/feedback/index.html',
-      excludeChunks: ['minwage', 'food'],
+      excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'news/index.html',
       template: 'src/news/index.html',
-      excludeChunks: ['minwage', 'food'],
+      excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'news/post.html',
       template: 'src/news/post.html',
-      excludeChunks: ['minwage', 'food'],
+      excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'about/index.html',
       template: 'src/about/index.html',
-      excludeChunks: ['minwage', 'food'],
+      excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'es/about/index.html',
       template: 'src/es/about/index.html',
-      excludeChunks: ['minwage', 'food'],
+      excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'services/request-birth-certificate/index.html',
       template: 'src/services/request-birth-certificate/index.html',
-      excludeChunks: ['minwage', 'food'],
+      excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'es/services/request-birth-certificate/index.html',
       template: 'src/es/services/request-birth-certificate/index.html',
-      excludeChunks: ['minwage', 'food'],
+      excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
@@ -135,13 +136,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'services/state-california-employee-holidays/index.html',
       template: 'src/services/state-california-employee-holidays/index.html',
-      excludeChunks: ['minwage', 'food'],
+      excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'es/services/state-california-employee-holidays/index.html',
       template: 'src/es/services/state-california-employee-holidays/index.html',
-      excludeChunks: ['minwage', 'food'],
+      excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
@@ -159,13 +160,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'services/hire-licensed-contractor-home-improvements/index.html',
       template: 'src/services/hire-licensed-contractor-home-improvements/index.html',
-      excludeChunks: ['minwage', 'food'],
+      excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'es/services/hire-licensed-contractor-home-improvements/index.html',
       template: 'src/es/services/hire-licensed-contractor-home-improvements/index.html',
-      excludeChunks: ['minwage', 'food'],
+      excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
     new ScriptExtHtmlWebpackPlugin({
