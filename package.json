@@ -4,6 +4,7 @@
   "description": "This will be the product/dev repo of the CA.gov Alpha.",
   "main": "public/index.html",
   "scripts": {
+    "go": "node src/nodescripts/tokenreplace.js",
     "build": "npm run validate && npm run build:modern && npm run build:ancient",
     "build:modern": "webpack",
     "build:ancient": "webpack --config webpack.config.es5.js",
@@ -44,7 +45,7 @@
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.9.0",
     "mini-css-extract-plugin": "^0.9.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "puppeteer": "^2.0.0",
     "purgecss-webpack-plugin": "^1.6.0",
     "sass-loader": "^8.0.0",
@@ -54,9 +55,9 @@
     "uncss": "^0.17.2",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
-    "whatwg-fetch": "^3.0.0"
-  },
-  "dependencies": {
-    "html-validate": "^2.8.2"
+    "whatwg-fetch": "^3.0.0",
+    "fs-extra": "^8.1.0",
+    "html-validate": "^2.8.2",
+    "replace-in-file": "^5.0.2"
   }
 }
