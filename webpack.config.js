@@ -62,26 +62,14 @@ module.exports = {
       cleanOnceBeforeBuildPatterns: ['**/*']
     }),
     new HtmlWebpackPlugin({
-      filename: 'index.html',
+      filename: 'en/index.html',
       template: 'src/index.html',
       excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: 'es/index.html',
-      template: 'src/es/index.html',
-      excludeChunks: excludedChunks,
-      minify: minificationOptions
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'feedback/index.html',
+      filename: 'en/feedback/index.html',
       template: 'src/feedback/index.html',
-      excludeChunks: excludedChunks,
-      minify: minificationOptions
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'es/feedback/index.html',
-      template: 'src/es/feedback/index.html',
       excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
@@ -98,74 +86,38 @@ module.exports = {
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: 'about/index.html',
+      filename: 'en/about/index.html',
       template: 'src/about/index.html',
       excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: 'es/about/index.html',
-      template: 'src/es/about/index.html',
-      excludeChunks: excludedChunks,
-      minify: minificationOptions
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'services/request-birth-certificate/index.html',
+      filename: 'en/services/request-birth-certificate/index.html',
       template: 'src/services/request-birth-certificate/index.html',
       excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: 'es/services/request-birth-certificate/index.html',
-      template: 'src/es/services/request-birth-certificate/index.html',
-      excludeChunks: excludedChunks,
-      minify: minificationOptions
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'services/find-minimum-wage-your-city/index.html',
+      filename: 'en/services/find-minimum-wage-your-city/index.html',
       template: 'src/services/find-minimum-wage-your-city/index.html',
       excludeChunks: ['food'],
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: 'es/services/find-minimum-wage-your-city/index.html',
-      template: 'src/es/services/find-minimum-wage-your-city/index.html',
-      excludeChunks: ['food'],
-      minify: minificationOptions
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'services/state-california-employee-holidays/index.html',
+      filename: 'en/services/state-california-employee-holidays/index.html',
       template: 'src/services/state-california-employee-holidays/index.html',
       excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: 'es/services/state-california-employee-holidays/index.html',
-      template: 'src/es/services/state-california-employee-holidays/index.html',
-      excludeChunks: excludedChunks,
-      minify: minificationOptions
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'services/find-food-banks-near-you/index.html',
+      filename: 'en/services/find-food-banks-near-you/index.html',
       template: 'src/services/find-food-banks-near-you/index.html',
       excludeChunks: ['minwage'],
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: 'es/services/find-food-banks-near-you/index.html',
-      template: 'src/es/services/find-food-banks-near-you/index.html',
-      excludeChunks: ['minwage'],
-      minify: minificationOptions
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'services/hire-licensed-contractor-home-improvements/index.html',
+      filename: 'en/services/hire-licensed-contractor-home-improvements/index.html',
       template: 'src/services/hire-licensed-contractor-home-improvements/index.html',
-      excludeChunks: excludedChunks,
-      minify: minificationOptions
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'es/services/hire-licensed-contractor-home-improvements/index.html',
-      template: 'src/es/services/hire-licensed-contractor-home-improvements/index.html',
       excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
