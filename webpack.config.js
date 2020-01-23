@@ -50,6 +50,7 @@ module.exports = {
   plugins: [
     new CopyPlugin([
       { from: 'src/serverfiles' },
+      { from: 'src/css/fonts', to: 'css/fonts' }, 
     ]),
     new MiniCssExtractPlugin({
       filename: '[name].css',
