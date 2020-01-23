@@ -4,26 +4,51 @@ const fs = require('fs')
 const replace = require('replace-in-file');
 //docs here https://www.npmjs.com/package/replace-in-file
 
-var source = 'public'
-var destination = 'monkey'
+var source = 'public/services'
+var destination = 'public/NEWen'
+
+// Remove dest
+fse.remove(destination,
+  function (err) {
+    if (err) {
+        console.log(destination + ': An error occured while removing the folder.')
+        return console.error(err)
+    }
+  console.log(destination + 'Remove completed!');
+
+  // copy source folder to destination
+  fse.copy(source, destination, {errorOnExist: true}, function (err) {
+      if (err){
+          console.log(destination + ': An error occured while copying the folder.')
+          return console.error(err)
+      }
+      console.log(destination + 'Copy completed!');
+
+      // Replace Text
+      const options = {
+        files: destination+'/**/*.html',
+        from: /Alp[A-Za-z-]+/g,
+        to: (match, ...args) => 'Match='+ match +'file='+args.pop()
+      };
+
+      replace(options, (error, results) => {
+        if (error)
+          return console.error('Error occurred:', error);
+        
+        console.log('Replacement results:', results);
+      });
+    })
+})
 
 
 
-
-const options = {
-  files: 'public/**/*.html',
-  from: /Alp[A-Za-z-]+/g,
-  to: (match) => 'Beta'+ match,
-};
-
-
-replace(options, (error, results) => {
-  if (error) {
-    return console.error('Error occurred:', error);
-  }
-  console.log('Replacement results:', results);
-});
-
+//    const items = [] // files, directories, symlinks, etc
+//klaw(source)
+//.on('readable', function () {
+//  let item
+//  while ((item = this.read())) {
+//    // do something with the file
+//    console.log(item);
 
 
 //fs.remove(destination); 
