@@ -36,6 +36,7 @@
     "babel-plugin-transform-custom-element-classes": "^0.1.0",
     "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.4.1",
     "document-register-element": "^1.14.3",
     "express": "^4.17.1",

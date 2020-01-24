@@ -2,6 +2,8 @@ import * as wageJsonData from './wage-data.json';
 import * as citiesJson from '../../json/just-cities.json';
 import * as uniqueZipJson from '../../json/unique-zips-slim.json';
 
+const apiurl = 'https://api.alpha.ca.gov/caziplookup/';
+
 let trStrings = {
   "es": {
     "key": "es",
@@ -102,25 +104,25 @@ function findWageMatch(city, wageJson, zipMap, cityNames) {
     }
   } else {
     // no letters, try to find a match in zipMap
-    fetch(`/json/zips/${city}.json`)
+    fetch(apiurl + `${city}`)
     .then((response) => {
       return response.json();
     })
     .then((foundZip) => {
       let html = '';
-      foundZip.forEach( (aCity) => {
+      foundZip.cities.forEach( (aCity) => {
         wageData = [ { "25 or fewer": "12" }, { "26 or more": "13" } ];
         let match = false;
         wageJson.forEach( (item) => {
-          if(item.name == aCity) {
+          if(item.name == aCity.name) {
             wageData = item.wage;
             match = true;
             // creating multiple rows of html results if zip code crosses multiple cities
-            html += doubleTemplate(aCity, wageData);
+            html += doubleTemplate(aCity.name, wageData);
           }
         })
         if(!match) {
-          html += doubleTemplate(aCity, wageData);
+          html += doubleTemplate(aCity.name, wageData);
         }
       })
       document.getElementById('answer').innerHTML = html;
