@@ -8,41 +8,33 @@ var source = 'public/en'
 var targetlang = 'es'
 var destination = 'public/'+targetlang
 
-var destinationfilter = destination+'/**/*.html'
+var files = destination+'/**/*.html'
 
 // copy source folder to destination
 fse.copy(source, destination, {overwrite: false, errorOnExist: true}, function (err) {
     if (err)
         return console.error(err)
 
+    const from = [
+      /lang="en"/g, 
+      /\/en\//g,
+      /Alp[A-Za-z-]+/g
+    ]
+
+    const to = [
+      'lang="'+targetlang+'"', 
+      /es/,
+      (match, ...args) => 'Match='+ match +'file='+args.pop()
+    ]
+
+
     // Replace HTML Language
-    replace(
-      { 
-        files: destinationfilter,
-        from: [
-          /lang="en"/g, 
-          /\/en\//g,
-          /Alp[A-Za-z-]+/g
-        ],
-        to: [
-          'lang="'+targetlang+'"', 
-          /es/,
-          (match, ...args) => 'Match='+ match +'file='+args.pop()
-        ]
-      }, 
-      (error, results) => {
+    replace({files,from,to}, (error, results) => {
         if (error)
           return console.error(error);
       
         console.log('Lang Replacement results:', results);
-
-
-
-
     })
-
-
-
   })
 
 
