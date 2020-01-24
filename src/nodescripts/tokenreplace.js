@@ -5,10 +5,9 @@ const replace = require('replace-in-file'); //https://www.npmjs.com/package/repl
 const sourcefolder = 'public/'
 
 const globalfilepath = 'src/lang-global.csv'
-var targetlangs = ['es','en']
+const targetlangs = ['es','en']
 
 //start by copying the existing language output to a source folder
-
 const source = sourcefolder + 'langsrc'
 fs.renameSync(sourcefolder+'en',source)
 
@@ -17,7 +16,6 @@ for(const targetlang of targetlangs) {
   const destination = sourcefolder+targetlang
   
   const files = destination+'/**/*.html'
-  
   
   const from = [
     /lang="en"/g, 
@@ -33,10 +31,10 @@ for(const targetlang of targetlangs) {
   fs.createReadStream(globalfilepath)
     .pipe(csv())
     .on('data', (data) => {
-      from.push(new RegExp(data.token.replace(/\[/,'\\\[').replace(/\]/,'\\\]'),'g'))
+      from.push(new RegExp(data.token.replace(/\[/,'\\\[').replace(/\]/,'\\\]'),'g')) //add token with literal square brackets
 
       if(data.path)
-        to.push(function (match, ...args) {
+        to.push( (match, ...args) => {
             let file=args.pop()
               .replace(/\/index.html$/,'') //Remove index.html
               .replace(new RegExp('^'+destination.replace(/\//,'\/')),'') //Remove "public/en"
@@ -44,7 +42,7 @@ for(const targetlang of targetlangs) {
             if(!file)
               file ='/'
 
-            //return file
+            //return text, or the original match if the file isn't right
             return data.path==file ? data[targetlang] : match
           
         })
