@@ -21,28 +21,28 @@ for(const targetlang of targetlangs) {
   
   const from = [
     /lang="en"/g, 
-    /\/en\//g,
-    ///Alp[A-Za-z-]+/g
+    /\/en\//g
   ]
   
   const to = [
     'lang="'+targetlang+'"', 
-    /es/,
-    //(match, ...args) => 'Match='+ match +'file='+args.pop()
+    /es/
   ]
-  
   
   const results = [];
   fs.createReadStream(globalfilepath)
     .pipe(csv())
     .on('data', (data) => {
-      var token = data.token.replace(/\[/,'\\\[').replace(/\]/,'\\\]')
-
-      from.push(new RegExp(token,'g'))
+      from.push(new RegExp(data.token.replace(/\[/,'\\\[').replace(/\]/,'\\\]'),'g'))
 
       if(data.path)
         to.push(function (match, ...args) {
-            const file=args.pop().replace(/index.html$/,'').replace(destination.replace(/\//,'\/'),'')
+            let file=args.pop()
+              .replace(/\/index.html$/,'') //Remove index.html
+              .replace(new RegExp('^'+destination.replace(/\//,'\/')),'') //Remove "public/en"
+
+            if(!file)
+              file ='/'
 
             //return file
             return data.path==file ? data[targetlang] : match
