@@ -4,8 +4,7 @@
   "description": "This will be the product/dev repo of the CA.gov Alpha.",
   "main": "public/index.html",
   "scripts": {
-    "go": "node src/nodescripts/tokenreplace.js",
-    "build": "npm run validate && npm run build:modern && npm run build:ancient",
+    "build": "npm run validate && npm run build:modern && npm run build:ancient && npm run langsplit",
     "build:modern": "webpack",
     "build:ancient": "webpack --config webpack.config.es5.js",
     "setup": "npm install",
@@ -15,7 +14,8 @@
     "uglify:css": "uglifycss public/css/bootstrap.min.css public/css/style.css > public/dist/uncssed.css",
     "watch": "webpack --watch",
     "test": "jest",
-    "validate": "html-validate 'src/**/*.html'"
+    "validate": "html-validate 'src/**/*.html'",
+    "langsplit": "node src/nodescripts/tokenreplace.js"
   },
   "repository": {
     "type": "git",
