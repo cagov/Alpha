@@ -1,2 +1,12 @@
-token,en2,es
-[global_official_1],State of California,Gobierno del Estado de California
+path,token,en,es
+,[global-lang-official],State of California,Gobierno del Estado de California
+/,[lang-title],Welcome to Alpha.CA.gov,Bienvenido a Alpha.CA.gov
+/,[lang-h1],Welcome to Alpha.CA.gov,Bienvenido a Alpha.CA.gov
+/find-minimum-wage-your-city,[lang-title],Find the minimum wage in your city - Alpha.CA.gov,Encuentre el salario m&#237;nimo en su ciudad - Alpha.CA.gov
+/find-minimum-wage-your-city,[lang-h1],Find the minimum wage in your city,Encuentre el salario m&#237;nimo en su ciudad
+,[global-lang-state-of-ca],State of California,Estado de California
+,[global-lang-about],About,Acerca de
+,[global-lang-news],News,News
+,[global-lang-feedback],Feedback,Comentarios
+,[global-lang-feedback-p],Did you find what you were looking for? Please share your feedback to help us improve this page.,&#191;No encontr&#243; lo que buscaba? Por favor comparta su comentarios para ayudarnos a mejorar esta p&#225;gina de internet
+,[global-lang-share-feedback],Share your feedback,Por favor comparta sus comentarios

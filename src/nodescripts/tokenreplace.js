@@ -1,15 +1,18 @@
-const fse = require('fs-extra')
 const fs = require('fs')
-const csv = require('csv-parser')
+const fse = require('fs-extra') //https://www.npmjs.com/package/fs-extra
+const csv = require('csv-parser') //https://www.npmjs.com/package/csv-parser
+const replace = require('replace-in-file'); //https://www.npmjs.com/package/replace-in-file
 
-const replace = require('replace-in-file');
-//docs here https://www.npmjs.com/package/replace-in-file
+const globalfilepath = 'src/lang-global.csv'
+var targetlangs = ['es','en']
 
-var targetlangs = ['es','en2']
+//start by copying the existing language output to a source folder
+
+const source = 'public/langsrc'
+fs.renameSync('public/en',source)
 
 for(const targetlang of targetlangs) {
-  const source = 'public/en'
-  //var targetlang = 'es'
+
   const destination = 'public/'+targetlang
   
   const files = destination+'/**/*.html'
@@ -29,27 +32,22 @@ for(const targetlang of targetlangs) {
   
   
   const results = [];
-  fs.createReadStream('src/lang-global.csv')
+  fs.createReadStream(globalfilepath)
     .pipe(csv())
     .on('data', (data) => {
       from.push(data.token)
       to.push(data[targetlang])
-      //results.push(data))
     })
     .on('end', () => {
   
   
   // copy source folder to destination
   fse.copy(source, destination, {overwrite: false, errorOnExist: true}, function (err) {
-      if (err)
-          return console.error(err)
-  
-  
+      if (err) return console.error(err)
   
       // Replace HTML Language
       replace({files,from,to}, (error, results) => {
-          if (error)
-            return console.error(error);
+          if (error) return console.error(error);
         
           console.log('Lang Replacement results:', results);
       })
@@ -59,44 +57,3 @@ for(const targetlang of targetlangs) {
   });
   
 }
-
-
-
-//    const items = [] // files, directories, symlinks, etc
-//klaw(source)
-//.on('readable', function () {
-//  let item
-//  while ((item = this.read())) {
-//    // do something with the file
-//    console.log(item);
-
-
-//fs.remove(destination); 
-
-// copy source folder to destination
-//fse.copy(source, destination, function (err) {
-//    if (err){
-//        console.log('An error occured while copying the folder.')
-//        return console.error(err)
-//    }
-//    console.log('Copy completed!');
-
-
-//    const items = [] // files, directories, symlinks, etc
-//klaw(source)
-//.on('readable', function () {
-//  let item
-//  while ((item = this.read())) {
-//    // do something with the file
-//    console.log(item);
-
-
-
-//  }
-//})
-//.on('error', (err, item) => {
-//  console.log(err.message)
-//  console.log(item.path) // the file the error occurred on
-//})
-//.on('end', () => console.dir(items)) // => [ ... array of files]
-//});
