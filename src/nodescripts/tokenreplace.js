@@ -1,3 +1,5 @@
+// You can convert language text here...https://www.charset.org/html-special-characters
+
 const fs = require('fs')
 const fse = require('fs-extra') //https://www.npmjs.com/package/fs-extra
 const csv = require('csv-parser') //https://www.npmjs.com/package/csv-parser
