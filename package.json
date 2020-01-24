@@ -58,6 +58,7 @@
     "whatwg-fetch": "^3.0.0",
     "fs-extra": "^8.1.0",
     "html-validate": "^2.8.2",
-    "replace-in-file": "^5.0.2"
+    "replace-in-file": "^5.0.2",
+    "csv-parser": "^2.3.2"
   }
 }

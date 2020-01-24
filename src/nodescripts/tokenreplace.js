@@ -1,42 +1,64 @@
 const fse = require('fs-extra')
 const fs = require('fs')
+const csv = require('csv-parser')
 
 const replace = require('replace-in-file');
 //docs here https://www.npmjs.com/package/replace-in-file
 
-var source = 'public/en'
-var targetlang = 'es'
-var destination = 'public/'+targetlang
+var targetlangs = ['es','en2']
 
-var files = destination+'/**/*.html'
-
-// copy source folder to destination
-fse.copy(source, destination, {overwrite: false, errorOnExist: true}, function (err) {
-    if (err)
-        return console.error(err)
-
-    const from = [
-      /lang="en"/g, 
-      /\/en\//g,
-      /Alp[A-Za-z-]+/g
-    ]
-
-    const to = [
-      'lang="'+targetlang+'"', 
-      /es/,
-      (match, ...args) => 'Match='+ match +'file='+args.pop()
-    ]
-
-
-    // Replace HTML Language
-    replace({files,from,to}, (error, results) => {
-        if (error)
-          return console.error(error);
-      
-        console.log('Lang Replacement results:', results);
+for(const targetlang of targetlangs) {
+  const source = 'public/en'
+  //var targetlang = 'es'
+  const destination = 'public/'+targetlang
+  
+  const files = destination+'/**/*.html'
+  
+  
+  const from = [
+    /lang="en"/g, 
+    /\/en\//g,
+    /Alp[A-Za-z-]+/g
+  ]
+  
+  const to = [
+    'lang="'+targetlang+'"', 
+    /es/,
+    (match, ...args) => 'Match='+ match +'file='+args.pop()
+  ]
+  
+  
+  const results = [];
+  fs.createReadStream('src/lang-global.csv')
+    .pipe(csv())
+    .on('data', (data) => {
+      from.push(data.token)
+      to.push(data[targetlang])
+      //results.push(data))
     })
-  })
-
+    .on('end', () => {
+  
+  
+  // copy source folder to destination
+  fse.copy(source, destination, {overwrite: false, errorOnExist: true}, function (err) {
+      if (err)
+          return console.error(err)
+  
+  
+  
+      // Replace HTML Language
+      replace({files,from,to}, (error, results) => {
+          if (error)
+            return console.error(error);
+        
+          console.log('Lang Replacement results:', results);
+      })
+  
+    })
+  
+  });
+  
+}
 
 
 
