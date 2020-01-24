@@ -4,41 +4,47 @@ const fs = require('fs')
 const replace = require('replace-in-file');
 //docs here https://www.npmjs.com/package/replace-in-file
 
-var source = 'public/services'
-var destination = 'public/NEWen'
+var source = 'public/en'
+var targetlang = 'es'
+var destination = 'public/'+targetlang
 
-// Remove dest
-fse.remove(destination,
-  function (err) {
-    if (err) {
-        console.log(destination + ': An error occured while removing the folder.')
+var destinationfilter = destination+'/**/*.html'
+
+// copy source folder to destination
+fse.copy(source, destination, {overwrite: false, errorOnExist: true}, function (err) {
+    if (err)
         return console.error(err)
-    }
-  console.log(destination + 'Remove completed!');
 
-  // copy source folder to destination
-  fse.copy(source, destination, {errorOnExist: true}, function (err) {
-      if (err){
-          console.log(destination + ': An error occured while copying the folder.')
-          return console.error(err)
-      }
-      console.log(destination + 'Copy completed!');
-
-      // Replace Text
-      const options = {
-        files: destination+'/**/*.html',
-        from: /Alp[A-Za-z-]+/g,
-        to: (match, ...args) => 'Match='+ match +'file='+args.pop()
-      };
-
-      replace(options, (error, results) => {
+    // Replace HTML Language
+    replace(
+      { 
+        files: destinationfilter,
+        from: [
+          /lang="en"/g, 
+          /\/en\//g,
+          /Alp[A-Za-z-]+/g
+        ],
+        to: [
+          'lang="'+targetlang+'"', 
+          /es/,
+          (match, ...args) => 'Match='+ match +'file='+args.pop()
+        ]
+      }, 
+      (error, results) => {
         if (error)
-          return console.error('Error occurred:', error);
-        
-        console.log('Replacement results:', results);
-      });
+          return console.error(error);
+      
+        console.log('Lang Replacement results:', results);
+
+
+
+
     })
-})
+
+
+
+  })
+
 
 
 
