@@ -20,7 +20,6 @@ const minificationOptions = {
 const excludedChunks = ['minwage', 'food'];
 
 module.exports = {
-  mode: 'production',
   entry: {
     javascript: [
       './src/js/index.js'
