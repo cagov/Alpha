@@ -33,28 +33,28 @@ for(const targetlang of targetlangs) {
   fs.createReadStream(globalfilepath)
     .pipe(csv())
     .on('data', data => {
-      from.push(new RegExp(data.token.replace(/\[/,'\\\[').replace(/\]/,'\\\]'),'g')) //add token with literal square brackets
 
-      if(data.path)
-        to.push( (match, ...args) => {
-            let file=args.pop()
-              .replace(/\/index.html$/,'') //Remove index.html
-              .replace(new RegExp('^'+destination.replace(/\//,'\/')),'') //Remove "public/en"
+      if(data.token&&data[targetlang]) {
+        from.push(new RegExp(data.token.replace(/\[/,'\\\[').replace(/\]/,'\\\]'),'g')) //add token with literal square brackets
 
-            if(!file)
-              file ='/'
+        if(data.path)
+          to.push( (match, ...args) => {
+              let file=args.pop()
+                .replace(/\/index.html$/,'') //Remove index.html
+                .replace(new RegExp('^'+destination.replace(/\//,'\/')),'') //Remove "public/en"
 
-            //return text, or the original match if the file isn't right
-            return data.path==file ? data[targetlang] : match
-          
-        })
-      else
-        to.push(data[targetlang])
+              if(!file)
+                file ='/'
 
-
-    })
+              //return text, or the original match if the file isn't right
+              return data.path==file ? data[targetlang] : match
+            
+          })
+        else
+          to.push(data[targetlang])
+    }})
     .on('end', _ => 
-  
+    
   // copy source folder to destination
   fse.copy(source, destination, {overwrite: false, errorOnExist: true}, err => {
       if (err) return console.error(err)

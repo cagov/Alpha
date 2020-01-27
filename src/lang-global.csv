@@ -1,33 +1,43 @@
 path,token,en,es
-,[global-lang-official],State of California,Gobierno del Estado de California
-/,[lang-title],Welcome to Alpha.CA.gov,Bienvenido a Alpha.CA.gov
-/,[lang-h1],Welcome to Alpha.CA.gov,Bienvenido a Alpha.CA.gov
-/services/find-minimum-wage-your-city,[lang-title],Find the minimum wage in your city - Alpha.CA.gov,Encuentre el salario m&#237;nimo en su ciudad - Alpha.CA.gov
-/services/find-minimum-wage-your-city,[lang-h1],Find the minimum wage in your city,Encuentre el salario m&#237;nimo en su ciudad
-,[global-lang-state-of-ca],State of California,Estado de California
 ,[global-lang-about],About,Acerca de
-,[global-lang-news],News,fix - News
-,[global-lang-feedback],Feedback,Comentarios
 ,[global-lang-feedback-p],Did you find what you were looking for? Please share your feedback to help us improve this page.,&#191;No encontr&#243; lo que buscaba? Por favor comparta su comentarios para ayudarnos a mejorar esta p&#225;gina de internet
+,[global-lang-feedback],Feedback,Comentarios
+,[global-lang-news],News,fix - News
+,[global-lang-official],State of California,Gobierno del Estado de California
 ,[global-lang-share-feedback],Share your feedback,Por favor comparta sus comentarios
-/,[lang-meta-description],The Alpha website for the State of California.,fix - The Alpha website for the State of California.
-/,[lang-meta-og-description],We're making it easier to find and use government services and information in the State of California.,fix - We're making it easier to find and use government services and information in the State of California.
+,[global-lang-state-of-ca],State of California,Estado de California
+,[global-lang-work-in-progress-header],Alpha.CA.gov is a work in progress.,fix - Alpha.CA.gov is a work in progress.
+,[global-lang-work-in-progress-p-1a],"While we test our website, the information here might not be completely accurate. We welcome","fix - While we test our website, the information here might not be completely accurate. We welcome"
+,[global-lang-work-in-progress-p-1b],your feedback,fix - your feedback
+,[global-lang-work-in-progress-p-1c],Thanks for helping us make government services easier to use.,fix - Thanks for helping us make government services easier to use.
+,[global-lang-work-in-progress-p-2a],"If you need the current site, please","fix - If you need the current site, please"
+,[global-lang-work-in-progress-p-2b],visit CA.gov,fix - visit CA.gov
+,,,
+,,,
+,,,
+,,,
 /,[lang-h1-p],We're making it easier to find and use government services and information.,fix - We're making it easier to find and use government services and information.
+/,[lang-h1],Welcome to Alpha.CA.gov,Bienvenido a Alpha.CA.gov
 /,[lang-link1],Find the minimum wage in your city,fix - Find the minimum wage in your city
 /,[lang-link2],Request a birth certificate,fix -Request a birth certificate
 /,[lang-link3],Hire a licensed contractor for home improvements,fix - Hire a licensed contractor for home improvements
 /,[lang-link4],Find food banks near you,fix - Find food banks near you
 /,[lang-link5],State of California employee holidays,fix - State of California employee holidays
-/about,[lang-meta-og-title],About Alpha.CA.gov - State of California,fix - About Alpha.CA.gov - State of California
-/about,[lang-meta-og-description],We're making it easier to find and use government services and information in the State of California.,fix - We're making it easier to find and use government services and information in the State of California.
-/about,[lang-title],About Alpha.CA.gov,fix - About Alpha.CA.gov
+/,[lang-meta-description],The Alpha website for the State of California.,fix - The Alpha website for the State of California.
+/,[lang-meta-og-description],We're making it easier to find and use government services and information in the State of California.,fix - We're making it easier to find and use government services and information in the State of California.
+/,[lang-title],Welcome to Alpha.CA.gov,Bienvenido a Alpha.CA.gov
 /about,[lang-h1],About us,fix - About us
+/about,[lang-h2],Follow our progress,fix - Follow our progress
+/about,[lang-meta-og-description],We're making it easier to find and use government services and information in the State of California.,fix - We're making it easier to find and use government services and information in the State of California.
+/about,[lang-meta-og-title],About Alpha.CA.gov - State of California,fix - About Alpha.CA.gov - State of California
 /about,[lang-p-1],"We're a small but mighty team of public servants and outside experts in user research and design. Together, we're reimagining <a href=""https://www.ca.gov/"">CA.gov</a> with and for the people of California.","fix - We're a small but mighty team of public servants and outside experts in user research and design. Together, we're reimagining <a href=""https://www.ca.gov/"">CA.gov</a> with and for the people of California."
 /about,[lang-p-2],Our first step: Make CA.gov easier for Californians to use. We've been working to help you access the services and information you need since December 2019.,fix - Our first step: Make CA.gov easier for Californians to use. We've been working to help you access the services and information you need since December 2019.
-/about,[lang-h2],Follow our progress,fix - Follow our progress
 /about,[lang-p-3],"We're sharing our insights on our <a href=""https://medium.com/cadotgov"">blog</a> and <a href=""https://twitter.com/CAdotGov"">Twitter</a>. Our work in progress will live on <a href=""https://github.com/cagov/"">GitHub</a> and this website, <a href=""https://alpha.ca.gov/"">Alpha.CA.gov</a>.","fix - We're sharing our insights on our <a href=""https://medium.com/cadotgov"">blog</a> and <a href=""https://twitter.com/CAdotGov"">Twitter</a>. Our work in progress will live on <a href=""https://github.com/cagov/"">GitHub</a> and this website, <a href=""https://alpha.ca.gov/"">Alpha.CA.gov</a>."
-/feedback,[lang-meta-og-title],Alpha.CA.gov - State of California,fix - Alpha.CA.gov - State of California
-/feedback,[lang-meta-og-description],Please share your feedback to help Alpha.CA.gov improve.,fix - Please share your feedback to help Alpha.CA.gov improve.
-/feedback,[lang-title],Feedback,fix - Feedback
+/about,[lang-title],About Alpha.CA.gov,fix - About Alpha.CA.gov
 /feedback,[lang-h1],Please share your feedback,fix - Please share your feedback
+/feedback,[lang-meta-og-description],Please share your feedback to help Alpha.CA.gov improve.,fix - Please share your feedback to help Alpha.CA.gov improve.
+/feedback,[lang-meta-og-title],Alpha.CA.gov - State of California,fix - Alpha.CA.gov - State of California
 /feedback,[lang-survey-link],tRaiETqnLgj758hTBazgd_2BHkAkgHavJBdUVWcya_2B9TmX6knDU4u_2FzgDZXNzk7OQy,tRaiETqnLgj758hTBazgd5pfn8XJKc0sU9CSd56Ev1KwNMGA_2B06kF9_2F7NCWSNhTR
+/feedback,[lang-title],Feedback,fix - Feedback
+/services/find-minimum-wage-your-city,[lang-h1],Find the minimum wage in your city,Encuentre el salario m&#237;nimo en su ciudad
+/services/find-minimum-wage-your-city,[lang-title],Find the minimum wage in your city - Alpha.CA.gov,Encuentre el salario m&#237;nimo en su ciudad - Alpha.CA.gov
