@@ -26,13 +26,13 @@ for(const targetlang of targetlangs) {
   
   const to = [
     'lang="'+targetlang+'"', 
-    /es/
+     targetlang=='en'?'/':'/'+targetlang+'/'
   ]
   
   const results = [];
   fs.createReadStream(globalfilepath)
     .pipe(csv())
-    .on('data', (data) => {
+    .on('data', data => {
       from.push(new RegExp(data.token.replace(/\[/,'\\\[').replace(/\]/,'\\\]'),'g')) //add token with literal square brackets
 
       if(data.path)
@@ -53,22 +53,25 @@ for(const targetlang of targetlangs) {
 
 
     })
-    .on('end', () => {
-  
+    .on('end', _ => 
   
   // copy source folder to destination
-  fse.copy(source, destination, {overwrite: false, errorOnExist: true}, function (err) {
+  fse.copy(source, destination, {overwrite: false, errorOnExist: true}, err => {
       if (err) return console.error(err)
   
       // Replace HTML Language
       replace({files,from,to}, (error, results) => {
-          if (error) return console.error(error);
-        
-          console.log('Lang Replacement results:', results);
+        if (error) return console.error(error);
+
+        //English default goes to root
+        if(targetlang=='en') 
+          fse.copy(destination, sourcefolder, {overwrite: true, errorOnExist: false}, err => {
+            if (err) return console.error(err)
+          })
+
+        //console.log('Lang Replacement results:', results);
+        console.log(targetlang + ': Language Replacement Complete:');
       })
-  
     })
-  
-  });
-  
+  );
 }
