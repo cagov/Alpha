@@ -30,8 +30,8 @@ for(const targetlang of targetlangs) {
   ]
   
   const results = [];
-  fs.createReadStream(globalfilepath)
-    .pipe(csv())
+  fs.createReadStream(globalfilepath, {encoding: 'utf16le'})
+    .pipe(csv({ separator: '\t' }))
     .on('data', data => {
 
       if(data.token&&data[targetlang]) {
