@@ -31,7 +31,7 @@ for(const targetlang of targetlangs) {
   
   const results = [];
   fs.createReadStream(globalfilepath, {encoding: 'utf16le'})
-    .pipe(csv({ separator: '\t' }))
+    .pipe(csv({ separator: '\t', strict: true, skipComments: true, newline: '\r\n' }))
     .on('data', data => {
 
       if(data.token&&data[targetlang]) {
