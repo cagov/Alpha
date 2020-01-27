@@ -3,20 +3,20 @@ class CWDSAccordion extends HTMLElement {
     this.expandTarget = this.querySelector('.card-container');
     this.expandButton = this.querySelector('.card-header');
     this.expandButton.addEventListener('click', this.listen.bind(this))
+    this.cardBodyHeight = this.querySelector('.card-body').clientHeight;
   }
 
   listen() {
-    let cardBodyHeight = this.parentNode.querySelector('.card-body').clientHeight;
-    if(this.style.display == 'none' || this.expandTarget.clientHeight > 0) {
+    if(this.expandTarget.clientHeight > 0) {
       this.expandTarget.style.height = '0px';
       this.querySelector('.card-header').classList.remove('accordion-alpha-open');
       let expando = this.expandTarget;
       setTimeout(function() {
-        // expando.style.display = "none";
+        expando.style.display = "none";
       }, 300)
     } else {
-      // this.expandTarget.style.display = "block";
-      this.expandTarget.style.height = cardBodyHeight+'px';
+      this.expandTarget.style.display = "block";
+      this.expandTarget.style.height = this.cardBodyHeight+'px';
       this.querySelector('.card-header').classList.add('accordion-alpha-open');
     }
   }
