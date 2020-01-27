@@ -8,7 +8,7 @@ This custom element provides expansion and contraction inside a list with show/h
 <cwds-step-list>
   <ul class="list-group list-group-flush">
     <li class="list-group-item lead unstyled list-group-item-action">
-      <button class="step-description">
+      <button type="button" class="step-description">
         <span class="list-number">1</span>
         <span class="bold">Decide what type of contractor you need</span>
       </button><span class="show">Show</span><span class="hide">Hide</span>
@@ -23,7 +23,7 @@ This custom element provides expansion and contraction inside a list with show/h
         </span></div>
     </li>
     <li class="list-group-item lead unstyled list-group-item-action">
-      <button class="step-description">
+      <button type="button" class="step-description">
         <span class="list-number">2</span>
         <span class="bold">Check if you need a building permit</span>
       </button><span class="show">Show</span><span class="hide">Hide</span>
