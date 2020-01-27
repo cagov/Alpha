@@ -14,8 +14,6 @@ path,token,en,es
 ,[global-lang-work-in-progress-p-2b],visit CA.gov,fix - visit CA.gov
 ,[global-lang-alphabar-p-1a],This website is a,fix - This website is a
 ,[global-lang-alphabar-p-1b],work in progress,fix - work in progress
-,,,
-,,,
 /,[lang-h1-p],We're making it easier to find and use government services and information.,fix - We're making it easier to find and use government services and information.
 /,[lang-h1],Welcome to Alpha.CA.gov,Bienvenido a Alpha.CA.gov
 /,[lang-link1],Find the minimum wage in your city,fix - Find the minimum wage in your city
@@ -41,3 +39,19 @@ path,token,en,es
 /feedback,[lang-title],Feedback,fix - Feedback
 /services/find-minimum-wage-your-city,[lang-h1],Find the minimum wage in your city,Encuentre el salario m&#237;nimo en su ciudad
 /services/find-minimum-wage-your-city,[lang-title],Find the minimum wage in your city - Alpha.CA.gov,Encuentre el salario m&#237;nimo en su ciudad - Alpha.CA.gov
+/services/find-minimum-wage-your-city,[lang-meta-description],Find the minimum wage in your California city and the State of California. Compare your city's minimum wage to other cities in California.,fix - Find the minimum wage in your California city and the State of California. Compare your city's minimum wage to other cities in California.
+/services/find-minimum-wage-your-city,[lang-meta-og-description],Find the minimum wage in your California city and the State of California. Compare your city's minimum wage to other cities in California.,fix - Find the minimum wage in your California city and the State of California. Compare your city's minimum wage to other cities in California.
+/services/find-minimum-wage-your-city,[lang-meta-og-title],Find the minimum wage in your city - Alpha.CA.gov,Encuentre el salario m&#237;nimo en su ciudad - Alpha.CA.gov
+/services/find-minimum-wage-your-city,[lang-form-label],Please enter your city or zip code:,fix - Please enter your city or zip code:
+/services/find-minimum-wage-your-city,[lang-form-label-feedback],Please enter a city or zip code in California.,fix - Please enter a city or zip code in California.
+/services/find-minimum-wage-your-city,[lang-form-button],Find minimum wage,fix - Find minimum wage
+/services/find-minimum-wage-your-city,[lang-h2],California minimum wage in 2020,fix - California minimum wage in 2020
+/services/find-minimum-wage-your-city,[lang-h2-p],Minimum wage depends on the city where you work. Some cities have the same minimum wage as the State.,fix - Minimum wage depends on the city where you work. Some cities have the same minimum wage as the State.
+/services/find-minimum-wage-your-city,[lang-table-header-a],Employers with 25 or fewer employees,fix - Employers with 25 or fewer employees
+/services/find-minimum-wage-your-city,[lang-table-header-b],Employers with 26 or more employees,fix - Employers with 26 or more employees
+/services/find-minimum-wage-your-city,[lang-table-a1],$12/hour*,fix - $12/hour*
+/services/find-minimum-wage-your-city,[lang-table-b1],$13/hour*,fix - $13/hour*
+/services/find-minimum-wage-your-city,[lang-h3],Compare minimum wage across cities,fix - Compare minimum wage across cities
+/services/find-minimum-wage-your-city,[lang-h3-p-1],These California cities and counties have their own minimum wage laws.,fix - These California cities and counties have their own minimum wage laws.
+/services/find-minimum-wage-your-city,[lang-h3-p-2a],More about the,fix - More about the
+/services/find-minimum-wage-your-city,[lang-h3-p-2b],minimum wage,fix - minimum wage
