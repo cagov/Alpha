@@ -5,15 +5,17 @@
   "main": "public/index.html",
   "scripts": {
     "build": "npm run validate && npm run build:modern && npm run build:ancient && npm run langsplit",
-    "build:modern": "webpack",
+    "build:modern": "webpack --mode production",
+    "build:dev": "webpack --mode development",
     "build:ancient": "webpack --config webpack.config.es5.js",
     "setup": "npm install",
     "serve": "node local-server.js",
+    "start": "npm run serve",
     "build:old": "npm run uglify:css && npm run uncss && cp public/css/cssmin.css public/dist/uncssed.css && rm public/css/cssmin.css",
     "uncss": "uncss public/index.html > public/css/cssmin.css",
     "uglify:css": "uglifycss public/css/bootstrap.min.css public/css/style.css > public/dist/uncssed.css",
     "watch": "webpack --watch",
-    "test": "jest",
+    "test": "jest test/*.spec.js",
     "validate": "html-validate 'src/**/*.html'",
     "langsplit": "node src/nodescripts/tokenreplace.js"
   },
@@ -60,5 +62,9 @@
     "html-validate": "^2.8.2",
     "replace-in-file": "^5.0.2",
     "csv-parser": "^2.3.2"
+  },
+  "dependencies": {
+    "@cagov/accordion": "^1.0.0",
+    "@cagov/step-list": "^1.0.1"
   }
 }

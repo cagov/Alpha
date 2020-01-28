@@ -83,14 +83,17 @@ ul > span.nested-and-or {
     line-height: 2rem;
 }	  
 	  
-cwds-step-list li .unstyled {
-	
+cwds-step-list li .unstyled {	
     border-left-width: 0!important;
     width: fit-content;
     list-style-type: none;
-	background: none;
+    background: none;
 }
-	  
+
+cwds-step-list button.step-description {
+    background: transparent;
+    border: none;
+}
 	   	  
 .list-group-item-action {
     color: #1e1f1f;
