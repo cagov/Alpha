@@ -4,11 +4,10 @@ class CWDSStepList extends HTMLElement {
     this.expandTargets.forEach( (item) => {
       item.addEventListener('click', this.listen)
       let detailsEl = item.querySelector('.details');
-      detailsEl.detailsHeight = detailsEl.scrollHeight;
-      setTimeout(function() {
-        // set to display:none to prevent keyboard navigation entry into collapsed region, use timeout to make sure height is read first
+      if(detailsEl) {
+        detailsEl.detailsHeight = detailsEl.scrollHeight;
         detailsEl.style.display = "none";
-      }, 3)
+      }
     })
   }
 
