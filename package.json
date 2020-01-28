@@ -59,7 +59,7 @@
     "whatwg-fetch": "^3.0.0"
   },
   "dependencies": {
-    "@cagov/accordion": "^1.0.0",
+    "@cagov/accordion": "^1.0.2",
     "@cagov/step-list": "^1.0.1",
     "html-validate": "^2.8.2"
   }
