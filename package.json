@@ -5,7 +5,8 @@
   "main": "public/index.html",
   "scripts": {
     "build": "npm run validate && npm run build:modern && npm run build:ancient",
-    "build:modern": "webpack",
+    "build:modern": "webpack --mode production",
+    "build:dev": "webpack --mode development",
     "build:ancient": "webpack --config webpack.config.es5.js",
     "setup": "npm install",
     "serve": "node local-server.js",

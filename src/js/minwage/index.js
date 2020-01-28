@@ -8,7 +8,7 @@ let trStrings = {
   "es": {
     "key": "es",
     "The minimum wage in": "Mostrar bancos de alimentos cerca de",
-    "Minimum wage increases on": "Aumento de salario mínimo a partir del",
+    "Minimum wage rates as of": "Aumento de salario mínimo a partir del",
     "Place": "Ubicación",
     "Rate": "Tasa",
     "25 or fewer": "25 o menos",
@@ -22,7 +22,7 @@ let trStrings = {
   "en": {
     "key": "en-US",
     "The minimum wage in": "The minimum wage in",
-    "Minimum wage increases on": "Minimum wage increases on",
+    "Minimum wage rates as of": "Minimum wage rates as of",
     "Place": "Place",
     "Rate": "Rate",
     "25 or fewer": "25 or fewer",
@@ -185,7 +185,7 @@ function buildDisplay(wageJson) {
           <div class="card mb-3" >
             <div class="card-header accordion-alpha" id="heading${label}">
               <button class="btn" type="button" aria-expanded="false">
-                <h3 class="pl-2 h4 mb-n1 pr-4 text-left">${translations["Minimum wage increases on"]} ${new Date(label).toLocaleDateString('en-US', options)} </h3>
+                <h3 class="pl-2 h4 mb-n1 pr-4 text-left">${translations["Minimum wage rates as of"]} ${new Date(label).toLocaleDateString('en-US', options)} </h3>
               </button>
             </div>
             <div class="card-container collapsed" aria-labelledby="heading${label}">
