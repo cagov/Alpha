@@ -15,7 +15,7 @@
     "uncss": "uncss public/index.html > public/css/cssmin.css",
     "uglify:css": "uglifycss public/css/bootstrap.min.css public/css/style.css > public/dist/uncssed.css",
     "watch": "webpack --watch",
-    "test": "jest",
+    "test": "jest test/*.spec.js",
     "validate": "html-validate 'src/**/*.html'"
   },
   "repository": {
@@ -59,6 +59,8 @@
     "whatwg-fetch": "^3.0.0"
   },
   "dependencies": {
+    "@cagov/accordion": "^1.0.0",
+    "@cagov/step-list": "^1.0.1",
     "html-validate": "^2.8.2"
   }
 }

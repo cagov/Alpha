@@ -1,0 +1,23 @@
+{
+  "name": "@cagov/step-list",
+  "version": "1.0.1",
+  "description": "This custom element provides expansion and contraction inside a list with show/hide links",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start --coverage",
+    "test:watch": "karma start --auto-watch=true --single-run=false",
+    "test:update-snapshots": "karma start --update-snapshots",
+    "test:prune-snapshots": "karma start --prune-snapshots"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@open-wc/karma-esm": "^2.12.8",
+    "@open-wc/testing": "^2.5.1",
+    "@open-wc/testing-karma": "^3.2.32",
+    "deepmerge": "^4.2.2",
+    "karma": "^4.4.1",
+    "lit-html": "^1.1.2"
+  }
+}
