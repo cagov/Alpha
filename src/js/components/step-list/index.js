@@ -3,14 +3,17 @@ class CWDSStepList extends HTMLElement {
     this.expandTargets = this.querySelectorAll('li');
     this.expandTargets.forEach( (item) => {
       item.addEventListener('click', this.listen)
+      let detailsEl = item.querySelector('.details');
+      detailsEl.detailsHeight = detailsEl.scrollHeight;
+      setTimeout(function() {
+        // set to display:none to prevent keyboard navigation entry into collapsed region, use timeout to make sure height is read first
+        detailsEl.style.display = "none";
+      }, 3)
     })
   }
 
   listen() {
     let detailsEl = this.querySelector('.details');
-    if(!detailsEl.detailsHeight) {
-      detailsEl.detailsHeight = detailsEl.scrollHeight;
-    }
     let detailsHeight = detailsEl.detailsHeight
 
     if(this.classList.contains('list-open')) {
