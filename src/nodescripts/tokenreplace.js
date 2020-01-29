@@ -7,7 +7,7 @@ const replace = require('replace-in-file'); //https://www.npmjs.com/package/repl
 const sourcefolder = 'public/'
 
 const globalfilepath = 'src/lang-global.csv'
-const targetlangs = ['es','en']
+const targetlangs = ['es','en','zh','uk']
 
 //start by copying the existing language output to a source folder
 const source = sourcefolder + 'langsrc'
