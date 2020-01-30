@@ -4,7 +4,7 @@
   "description": "This will be the product/dev repo of the CA.gov Alpha.",
   "main": "public/index.html",
   "scripts": {
-    "build": "npm run validate && npm run build:modern && npm run build:ancient",
+    "build": "npm run validate && npm run build:modern && npm run build:ancient && npm run langsplit",
     "build:modern": "webpack --mode production",
     "build:dev": "webpack --mode development",
     "build:ancient": "webpack --config webpack.config.es5.js",
@@ -16,7 +16,8 @@
     "uglify:css": "uglifycss public/css/bootstrap.min.css public/css/style.css > public/dist/uncssed.css",
     "watch": "webpack --watch",
     "test": "jest test/*.spec.js",
-    "validate": "html-validate 'src/**/*.html'"
+    "validate": "html-validate 'src/**/*.html'",
+    "langsplit": "node src/nodescripts/tokenreplace.js"
   },
   "repository": {
     "type": "git",
@@ -46,7 +47,7 @@
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.9.0",
     "mini-css-extract-plugin": "^0.9.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "puppeteer": "^2.0.0",
     "purgecss-webpack-plugin": "^1.6.0",
     "sass-loader": "^8.0.0",
@@ -56,11 +57,14 @@
     "uncss": "^0.17.2",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
-    "whatwg-fetch": "^3.0.0"
+    "whatwg-fetch": "^3.0.0",
+    "fs-extra": "^8.1.0",
+    "html-validate": "^2.8.2",
+    "replace-in-file": "^5.0.2",
+    "csv-parser": "^2.3.2"
   },
   "dependencies": {
     "@cagov/accordion": "^1.0.2",
-    "@cagov/step-list": "^1.0.1",
-    "html-validate": "^2.8.2"
+    "@cagov/step-list": "^1.0.1"
   }
 }
