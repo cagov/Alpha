@@ -5,5 +5,4 @@ import './libs/awesomplete.js'
 
 import '@cagov/accordion'
 import '@cagov/step-list'
-import './components/language-select/index.js'
 import './components/holidays/index.js'
