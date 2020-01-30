@@ -3,6 +3,14 @@
 		<div class="navbar-header float-left">
 			<a class="navbar-brand navbar-left" href="/en/">CA.gov <sup>(ALPHA)</sup></a>
 		</div>
-		<cwds-language-select></cwds-language-select>
+		<div class="dropdown">
+      <button class="btn btn-light btn-sm dropdown-toggle" type="button" id="dropdown-menu-button" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false" onclick="document.querySelector('.dropdown-menu').classList.toggle('show')">
+        [global-lang-select-language]
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdown-menu-button">
+				[code-language-select]
+      </div>
+    </div>
 	</div>
 </nav>

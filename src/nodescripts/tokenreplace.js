@@ -7,26 +7,47 @@ const replace = require('replace-in-file'); //https://www.npmjs.com/package/repl
 const sourcefolder = 'public/'
 
 const globalfilepath = 'src/lang-global.csv'
-const targetlangs = ['es','en','zh','uk']
+const targetlangs = [
+  {code:'en',name:'English'},
+  {code:'es',name:'Español'},
+  {code:'zh',name:'Chinese'}
+]
 
 //start by copying the existing language output to a source folder
 const source = sourcefolder + 'langsrc'
 fs.renameSync(sourcefolder+'en',source)
 
-for(const targetlang of targetlangs) {
+
+for(const targetlangobject of targetlangs) {
+  const targetlang = targetlangobject.code
+
+  let langselectorbutton = ''
+
+  //Create the language selector
+  for(const l of targetlangs)
+    if(l.code!=targetlang)
+      langselectorbutton+='<a class="dropdown-item" href="/'+l.code+'[FullPath]">'+l.name+'</a>'
 
   const destination = sourcefolder+targetlang
+
+  const fileFromArgs = args => args.pop()
+    .replace(/\/index.html$/,'') //Remove index.html
+    .replace(new RegExp('^'+destination.replace(/\//,'\/')),'') //Remove "public/en"
   
   const files = destination+'/**/*.html'
   
   const from = [
-    /lang="en"/g, 
-    /\/en\//g
+    /lang="en"/g,
+    /\/en\//g,
+    /\[code-language-select\]/g,
+    /\[FullPath\]/g
   ]
   
   const to = [
     'lang="'+targetlang+'"', 
-     targetlang=='en'?'/':'/'+targetlang+'/'
+     targetlang=='en'?'/':'/'+targetlang+'/',
+     langselectorbutton,
+     (match, ...args) => fileFromArgs(args)
   ]
   
   const results = [];
@@ -39,9 +60,7 @@ for(const targetlang of targetlangs) {
 
         if(data.path)
           to.push( (match, ...args) => {
-              let file=args.pop()
-                .replace(/\/index.html$/,'') //Remove index.html
-                .replace(new RegExp('^'+destination.replace(/\//,'\/')),'') //Remove "public/en"
+              let file=fileFromArgs(args)
 
               if(!file)
                 file ='/'
