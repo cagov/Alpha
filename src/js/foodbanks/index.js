@@ -1,9 +1,6 @@
 import * as citiesJson from '../../json/just-cities.json';
 import * as uniqueZipJson from '../../json/unique-zips-slim.json';
-import * as foods from './foods.json';
-import * as haversine from './haversine.js';
 const mapboxToken = 'pk.eyJ1IjoiYWxwaGEtY2EtZ292IiwiYSI6ImNrNTZ5em1qMDA4ZWkzbG1yMDg4OXJyaDIifQ.GleKGsZsaOcmxfsYUR9bTg';
-// awesomplete is in the main bundle already
 
 let trStrings = {
   "es": {
@@ -98,7 +95,12 @@ function loadMap() {
   });
 }
 if(window.innerWidth > 600) {
-  loadMap();
+  fetch('https://api.alpha.ca.gov/FoodBanks')
+  .then(function(resp) { return resp.json() })
+  .then(function (data) {
+    window.foodLocations = data;
+    loadMap();
+  })
 }
 
 function reorient(position) {
@@ -108,10 +110,8 @@ function reorient(position) {
       essential: false // this animation is not considered essential with respect to prefers-reduced-motion
     });  
   }
-  displaySortedResults({ type: 'Feature', geometry: { coordinates: position } }, window.foodLocations)
+  displaySortedResults(position)
 }
-
-window.foodLocations = foods.default;
 
 function mapInteractions() {
   if(!window.foodLocations) {
@@ -178,55 +178,48 @@ function setupMapInteractions() {
   })
 }
 
-function displaySortedResults(coords, data) {
-  if(!data) {
+function displaySortedResults(coords) {
+  if(!window.foodLocations) {
     setTimeout(function() {
-      displaySortedResults(coords, window.foodLocations);
+      displaySortedResults(coords);
     }, 300)
   } else {
-    // sort all the results based on proximity to coords
-    var sortedLocs = data.features.sort(function (a, b) {
-      return haversine(coords, a, { format: 'geojson', unit: 'mile' }) - haversine(coords, b, { format: 'geojson', unit: 'mile' })
-    })
-    var outputLocs = [];
-    for (var i = 0; i < 9; i++) {
-      var food = sortedLocs[i];
-      if (food) {
-        food.properties.distance = haversine(coords, food, { format: 'geojson', unit: 'mile' });
-        outputLocs.push(food);
-      }
-    }
-    var html = `<ul class="pl-0 card-set">
-      ${outputLocs.map( function(item, itemindx) {
-        var food = item.properties
-        var displayClass = '';
-        if(itemindx > 2) {
-          displayClass = 'd-none';
-        }
-        var showMore = '';
-        if(itemindx == 2) {
-          showMore = `<li class="card mb-20 js-expand-link">
+    fetch(`https://api.alpha.ca.gov/FoodBanks?lat=${coords[1]}&lon=${coords[0]}`)
+    .then(function(resp) { return resp.json() })
+    .then(function (data) {
+      let outputLocs = data;
+      let html = `<ul class="pl-0 card-set">
+        ${outputLocs.map( function(item, itemindx) {
+          var food = item.properties
+          var displayClass = '';
+          if(itemindx > 2) {
+            displayClass = 'd-none';
+          }
+          var showMore = '';
+          if(itemindx == 2) {
+            showMore = `<li class="card mb-20 js-expand-link">
+              <div class="card-body">
+                <p>
+                  <a href="#" onclick="showAll()">${translations["Show more"]} &raquo;</a>
+                </p>
+              </div>
+            </li>`;
+          }
+          return `<li class="card mb-20 ${displayClass}">
             <div class="card-body">
-              <p>
-                <a href="#" onclick="showAll()">${translations["Show more"]} &raquo;</a>
-              </p>
+              <p>${food.distance.toFixed(2)} ${translations["miles away"]}</p>
+              <p class="bold">${food.title}</p>
+              <p>${food.address}<br>
+                ${food.address2}<br>
+              <a href="${food.website}" target="_self">${translations["Visit"]} ${food.title}'s ${translations["website"]}</a><br>
+              <p>${food.phone}</p>
+              <a href="geo:${item.geometry.coordinates[1]},${item.geometry.coordinates[0]}" onclick="mapsSelector(${item.geometry.coordinates[1]},${item.geometry.coordinates[0]})" aria-label="${translations["directions to"]} ${food.title}ß" target="_self"class="btn btn-sm">${translations["Get directions"]}</a>
             </div>
-          </li>`;
-        }
-        return `<li class="card mb-20 ${displayClass}">
-          <div class="card-body">
-            <p>${food.distance.toFixed(2)} ${translations["miles away"]}</p>
-            <p class="bold">${food.title}</p>
-            <p>${food.address}<br>
-              ${food.address2}<br>
-            <a href="${food.website}" target="_self">${translations["Visit"]} ${food.title}'s ${translations["website"]}</a><br>
-            <p>${food.phone}</p>
-            <a href="geo:${item.geometry.coordinates[1]},${item.geometry.coordinates[0]}" onclick="mapsSelector(${item.geometry.coordinates[1]},${item.geometry.coordinates[0]})" aria-label="${translations["directions to"]} ${food.title}ß" target="_self"class="btn btn-sm">${translations["Get directions"]}</a>
-          </div>
-        </li>${showMore}`;
-      }).join(' ')}
-    </ul>`;
-    document.querySelector('.js-nearest-results').innerHTML = html;
+          </li>${showMore}`;
+        }).join(' ')}
+      </ul>`;
+      document.querySelector('.js-nearest-results').innerHTML = html;
+    })
   }
 }
 
