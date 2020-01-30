@@ -10,7 +10,7 @@ class CWDSLanguageSelect extends HTMLElement {
           if(window.location.pathname.indexOf('/es/') != 0) {
             return `<a class="dropdown-item" href="/es/">Español</a>`
           } else {
-            return `<a class="dropdown-item" href="/">English</a>`
+            return `<a class="dropdown-item" href="/en/">English</a>`
           }
         })()}
       </div>
@@ -29,7 +29,7 @@ class CWDSLanguageSelect extends HTMLElement {
       item.addEventListener('click', function(event) {
         event.preventDefault();
         if(window.location.pathname.indexOf('/es/') != 0) {
-          window.location = window.location.pathname.replace('/',this.href);
+          window.location = window.location.pathname.replace('/en/',this.href);
         } else {
           window.location = window.location.pathname.replace('/es/',this.href);
         }

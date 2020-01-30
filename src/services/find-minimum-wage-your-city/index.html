@@ -5,21 +5,21 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Find the minimum wage in your California city and the State of California. Compare your city's minimum wage to other cities in California..">
+  <meta name="description" content="[lang-meta-description]">
   <meta name="author" content="Alpha.CA.gov - State of California">
 
   <%= require('html-loader!../../partials/favicons.html') %>
 
   <!-- Social media post -->
-  <meta property="og:image" content="img/thumbnail.png">
+  <meta property="og:image" content="/img/thumbnail.png">
   <meta property="og:image:height" content="630">
   <meta property="og:image:width" content="630">
-  <meta property="og:title" content="Find the minimum wage in your city - Alpha.CA.gov">
-  <meta property="og:description" content="Find the minimum wage in your California city and the State of California. Compare your city's minimum wage to other cities in California.">
+  <meta property="og:title" content="[lang-meta-og-title]">
+  <meta property="og:description" content="[lang-meta-og-description]">
   <meta property="og:url" content="https://alpha.ca.gov/services/minimum-wage-in-california/">
 
   <link rel="canonical" href="https://alpha.ca.gov/services/minimum-wage-in-california/" />
-  <title>Find the minimum wage in your city - Alpha.CA.gov</title>
+  <title>[lang-title]</title>
 
   <link href="https://california.azureedge.net/cdt/statetemplate/6.0.0/css/cagov.font-only.min.css" rel="stylesheet" />
 
@@ -33,7 +33,7 @@
 
   <div class="jumbotron text-left">
     <div class="container">
-      <h1>Find the minimum wage in your city</h1>
+      <h1>[lang-h1]</h1>
     </div>
   </div>
 
@@ -45,40 +45,40 @@
 
         <form class="form-inline">
           <div class="form-group wage-city-search">
-            <label for="location-query">Please enter your city or zip code:</label><br>
+            <label for="location-query">[lang-form-label]</label><br>
             <input type="text" class="city-search form-control mr-3 mb-3" data-multiple id="location-query" aria-controls="submit-form" />
-            <div class="invalid-feedback">Please enter a city or zip code in California.</div>
-			  <button id="submit-form" type="submit" class="btn btn-primary js-wage-lookup mb-3">Find minimum wage</button>
+            <div class="invalid-feedback">[lang-form-label-feedback]</div>
+			  <button id="submit-form" type="submit" class="btn btn-primary js-wage-lookup mb-3">[lang-form-button]</button>
           </div>
           
         </form>
         <p></p>
         <div id="answer"></div>
         <p></p>
-        <h2>California minimum wage in 2020</h2>
-        <p>Minimum wage depends on the city where you work. Some cities have the same minimum wage as the State.</p>
+        <h2>[lang-h2]</h2>
+        <p>[lang-h2-p]</p>
         <table class="table">
           <thead>
             <tr>
-              <th scope="col">Employers with 25 or fewer employees</th>
-              <th scope="col">Employers with 26 or more employees</th>
+              <th scope="col">[lang-table-header-a]</th>
+              <th scope="col">[lang-table-header-b]</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>$12/hour*</td>
-              <td>$13/hour*</td>
+              <td>[lang-table-a1]</td>
+              <td>[lang-table-b1]</td>
             </tr>
           </tbody>
         </table>
         
-        <h3>Compare minimum wage across cities</h3>
-        <p>These California cities and counties have their own minimum wage laws.</p>
+        <h3>[lang-h3]</h3>
+        <p>[lang-h3-p-1]</p>
         <div class="display-wage-by-city"></div>
       </div>
 		<div class="col-md-12 mt-5">
 				<hr>
-				<p>* More about the <a href="https://www.dir.ca.gov/dlse/faq_minimumwage.htm">minimum wage</a>.</p>
+				<p>* [lang-h3-p-2a] <a href="https://www.dir.ca.gov/dlse/faq_minimumwage.htm">[lang-h3-p-2b]</a>.</p>
 				<p></p>
 			  </div>
     </div>
