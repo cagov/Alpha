@@ -26,7 +26,7 @@ for(const targetlangobject of targetlangs) {
   //Create the language selector
   for(const l of targetlangs)
     if(l.code!=targetlang)
-      langselectorbutton+='<a class="dropdown-item" href="/'+l.code+'/[FullPath]">'+l.name+'</a>'
+      langselectorbutton+='<a class="dropdown-item" href="/'+l.code+'[FullPath]">'+l.name+'</a>'
 
   const destination = sourcefolder+targetlang
 
