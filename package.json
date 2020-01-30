@@ -16,7 +16,7 @@
     "uglify:css": "uglifycss public/css/bootstrap.min.css public/css/style.css > public/dist/uncssed.css",
     "watch": "webpack --watch",
     "test": "jest test/*.spec.js",
-    "validate": "html-validate 'src/**/*.html'",
+    "validate": "html-validate 'src/**/*.html' --c src/nodescripts/.htmlvalidate.json",
     "langsplit": "node src/nodescripts/tokenreplace.js"
   },
   "repository": {
