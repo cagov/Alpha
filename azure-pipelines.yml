@@ -4,11 +4,7 @@
 # https://aka.ms/yaml
 
 trigger:
-  branches:
-    include:
-    - master
-    exclude:
-    - testprod
+- master
 
 # no PR triggers
 pr: none
