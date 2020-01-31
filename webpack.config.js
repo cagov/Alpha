@@ -110,6 +110,12 @@ module.exports = {
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
+      filename: 'en/apply-for-disability-benefits/index.html',
+      template: 'src/services/apply-for-disability-benefits/index.html',
+      excludeChunks: excludedChunks,
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
       filename: 'en/services/find-food-banks-near-you/index.html',
       template: 'src/services/find-food-banks-near-you/index.html',
       excludeChunks: ['minwage'],
