@@ -44,3 +44,6 @@ Some static files are only present in the public folder and are set to be ignore
 - sitemap.xml
 
 Concatenates, minifies and removes unused CSS, builds template partials.
+
+
+TEST PR
