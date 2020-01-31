@@ -49,6 +49,7 @@ module.exports = {
   plugins: [
     new CopyPlugin([
       { from: 'src/serverfiles' },
+      { from: 'src/img', to: 'img' },
     ]),
     new MiniCssExtractPlugin({
       filename: '[name].css',
