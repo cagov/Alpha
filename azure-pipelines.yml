@@ -4,12 +4,11 @@
 # https://aka.ms/yaml
 
 trigger:
+  batch: true
   branches:
-    include:
-    - master
-    exclude:
-    - testprod
-
+    include: master
+    exclude: testprod
+    
 # no PR triggers
 pr: none
 
