@@ -4,11 +4,10 @@
 # https://aka.ms/yaml
 
 trigger:
+  batch: boolean # batch changes if true (the default); start a new build for every push if false
   branches:
-    include:
-    - master
-    exclude:
-    - testprod
+    include: [ master ] # branch names which will trigger a build
+    exclude: [ testprod ] # branch names which will not
 
 # no PR triggers
 pr: none
