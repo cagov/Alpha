@@ -1,3 +1,4 @@
+
 body {
   color: #000;
   font-family: "Public Sans", sans-serif;
@@ -12,8 +13,9 @@ img {
 
 h1, h2, h3, h4, h5, h6 {
   color: #000;
-  font-family: "Public Sans Extra Bold", sans-serif;
+  font-family: "Public Sans Bold", sans-serif;
   font-weight: bold;
+  letter-spacing: -.01em;
 }
 
 h1 {
@@ -36,6 +38,11 @@ a.list-group-item {
   padding: 20px;
 }
 
+.list-group-item:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
 a, a:visited, a:hover {
   color: #0071bc;
 }
@@ -50,15 +57,66 @@ a:hover {
 
 .bold {
     font-family: "Public Sans Bold", sans-serif;
-    font-weight: bold;
 }
+
+strong {
+    font-family: "Public Sans Bold", sans-serif;
+}
+
+/* List group */
+
+.list-number {
+  background: #000000;
+  border-color: #000000 !important;
+  border-width: 1px !important;
+  color: #ffffff;
+  font-family: "Public Sans Bold", sans-serif;
+  font-size: 1.2rem;
+  margin-right: 10px;
+  line-height: normal;
+}
+
+.list-group-item {
+  	border-color: #cccccc;
+	//cursor: pointer;
+}
+.list-group-header {
+  	border-bottom: 0;
+	font-family: "Public Sans Bold", sans-serif;
+	padding-left: 33px;
+}
+
+
+a.list-group-item-action {
+	  color: #000000;
+	  text-decoration: none;
+	
+}
+
+.list-group-item-action:hover, .list-group-item-action:hover, .list-group-item-action:focus {
+    z-index: 1;
+    color: #000;
+    text-decoration: none;
+    background-color: #f8f9fa;
+}
+
+.list-checkmark li {
+	text-indent: -30px;
+	padding-left: 60px;
+			
+}
+
+/* Navbar */
 
 .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > li > a:visited, a.navbar-brand, a.navbar-brand:visited {
 	text-decoration: none !important;
 }
+.nav-item {
+  font-size: 1.1rem;
+}
 
 .alert-left {
-	border-left: 4px solid #b71134;
+	border-left: 4px solid #000000;
 }
 
 sup {
@@ -67,8 +125,22 @@ sup {
 }
 
 hr {
-  border-top: 5px solid #000;
+  border-top: 1px solid #000;
   margin: 15px 0;
+}
+
+/* Tables */
+
+.table {
+  color: #000000;
+}
+.table .thead-dark th {
+  background: #000000;
+  color: #ffffff;
+}
+.table .thead-light th {
+  background: #f1f1f1;
+  color: #000000;
 }
 
 /* Card */
@@ -77,7 +149,6 @@ hr {
   padding: .25rem;
   margin-bottom: 0;
   background-color: #f1f1f1;
-  border-bottom: 2px solid #fff;
 }
 
 .card {
@@ -108,14 +179,12 @@ hr {
   font-size: 18px;
 }
 
-
-
 /* Alerts */
 
-.alert-secondary {
+.alert-info, .alert-primary {
   background: #f1f1f1;
-  margin-bottom: 30px;
-  padding: 20px;
+  border-color: #cccccc;
+  margin-bottom: 20px;
   color: #000;
 }
 
@@ -126,11 +195,11 @@ hr {
 
 /* Mods */
 
-.official p, .footer p, .alphabar p {
-  font-size: 105%;
+.official, .footer, .alphabar {
+  font-size: 1rem;
 }
 
-/* Navbar */
+/* Performance */
 
 .performance {
   background: #f1f1f1;
@@ -197,12 +266,12 @@ hr {
   max-height: 35px;
 }
 .navbar-brand {
-  font-family: 'Public Sans ExtraBold', sans-serif;
+  font-family: 'Public Sans Bold', sans-serif;
   padding-left: 35px;
-  background-image: url('../img/ca-light.png');
   background-repeat: no-repeat;
   background-position: 5px 50%;
   background-size: 15%;
+  background-image: url('https://alpha.ca.gov/img/ca-light.png');
 }
 .navbar-inverse, .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
   background-color: #000;
@@ -422,7 +491,7 @@ li.active ul.nav.bd-sidenav {
 
 .search-btn:hover {
 
-    border: 5px #343a40 solid;
+  border: 5px #343a40 solid;
 	background: #343a40;
 	box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5)
   
@@ -437,8 +506,7 @@ li.active ul.nav.bd-sidenav {
 .alpha-footer {
 	background: #fff;
 	background-color: #fff;
-	border-bottom-width: 1px;
-	border-top: 2px solid #ccc;
+	border-top: 1px solid #000000;
 	padding-bottom: 50px;
 }
 
@@ -446,6 +514,23 @@ li.list-group-item.alpha-footer {
 		border-bottom: 0;
 	    border-top: 0;
 }
+
+/*----- Alerts -----*/
+
+.alert-warning {
+	color: #000;
+    background-color: #fffbf0;
+    border: 0;
+    border-left: 4px solid #ffc107;
+    border-radius: 0;
+    font-family: "Public Sans Bold", sans-serif;
+}
+
+.bd-callout-warning {
+    border-left-color: #ffc107;
+    border-radius: 0;
+}
+
 
 
 /* fix bootstrap nav */
@@ -495,10 +580,6 @@ li.active ul.nav.bd-sidenav {
   padding: 20px 0;
 }
 
-
-
-
-
   /* --------- from Min Wage Page -------*/
 
 .d-none {
@@ -509,17 +590,10 @@ li.active ul.nav.bd-sidenav {
   padding: 20px 0;
 }
 
-.lead {
-    font-weight: 400;
+.lead, li.lead {
+  font-weight: 400;
+  font-size: 1.4rem;
 }
-
-	  
- li.lead {
-
-    font-weight: 400;
-}
-	 Y
-	  	  
 	  
 /* minimum wage override */
 .wage-city-search label {
