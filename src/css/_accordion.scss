@@ -23,9 +23,17 @@ cwds-accordion .card-header .button {
   color: #000;
 }
 
-
 .accordion {
   margin-bottom: 20px;
+}
+
+.accordion-title {
+	padding: .5rem;
+	padding-left: 1rem;
+	font-family: "Public Sans Bold", sans-serif;	
+	text-align: left;
+	font-size: 1.5rem;
+	margin-bottom: 0;
 }
 
 .accordion h2 {
@@ -46,5 +54,7 @@ cwds-accordion .card-header .button {
     background-size: 1rem;
     background-repeat: no-repeat;
 }
+
+
 
 
