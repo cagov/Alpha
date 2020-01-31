@@ -2,6 +2,8 @@
 
 This custom element provides expansion and contraction inside a list with show/hide links
 
+<img src="https://raw.githubusercontent.com/cagov/Alpha/master/components/step-list/step-list.png" />
+
 ## Sample markup
 
 ```
