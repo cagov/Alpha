@@ -193,6 +193,12 @@ hr {
   padding-top: 0;
 }
 
+.alert-secondary {
+    color: #000000;
+    background-color: #f1f1f1;
+    border-color: #f1f1f1;
+}
+
 /* Mods */
 
 .official, .footer, .alphabar {
@@ -647,6 +653,8 @@ a.list-group-item.list-group-item-action.lead {
     text-decoration: underline;
 	color: #0071bc;
 }
+
+
 
 
 /* Medium devices (tablets, 768px and up)*/
