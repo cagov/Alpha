@@ -131,9 +131,6 @@ function is_touch_device() {
 }
 
 function setupMapInteractions() {  
-  if(is_touch_device()) {
-    window.map.scrollZoom.disable();
-  }
   window.map.loadImage("/img/marker.png", function (error, image) {
     if (error) throw error;
     window.map.addImage("custom-marker", image);
@@ -187,6 +184,9 @@ function setupMapInteractions() {
     window.map.on('mouseleave', 'foods', function () {
       window.map.getCanvas().style.cursor = '';
     });
+    if(is_touch_device()) {
+      window.map.scrollZoom.disable();
+    }  
   })
 }
 
