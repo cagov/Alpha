@@ -1,5 +1,6 @@
 import * as citiesJson from '../../json/just-cities.json';
 import * as uniqueZipJson from '../../json/unique-zips-slim.json';
+import GestureHandling from '@tilecloud/mbgl-gesture-handling';
 const mapboxToken = 'pk.eyJ1IjoiYWxwaGEtY2EtZ292IiwiYSI6ImNrNTZ5em1qMDA4ZWkzbG1yMDg4OXJyaDIifQ.GleKGsZsaOcmxfsYUR9bTg';
 
 let trStrings = {
@@ -89,6 +90,20 @@ function loadMap() {
       pitch: 58.5,
       bearing: -120.8
     });
+    let scrollText = 'Use alt + scroll to zoom the map.';
+    if(navigator.userAgent.indexOf('Mac OS') > -1) {
+      scrollText = 'Use option + scroll to zoom the map.';
+    }
+    const options = {
+      backgroundColor: 'rgba(0, 0, 0, 0.8)',
+      textColor: '#ffffff',
+      textMessage: scrollText,
+      textMessageMobile: 'Use two fingers to move the map.',
+      timeout: 2000,
+    }
+    
+    new GestureHandling(options).addTo(window.map);
+
     window.map.on('load', function() {
       mapInteractions();
     });  
@@ -119,15 +134,6 @@ function mapInteractions() {
   } else {
     setupMapInteractions();
   }
-}
-
-function is_touch_device() {  
-  try {  
-    document.createEvent("TouchEvent");  
-    return true;  
-  } catch (e) {  
-    return false;  
-  }  
 }
 
 function setupMapInteractions() {  
@@ -184,9 +190,6 @@ function setupMapInteractions() {
     window.map.on('mouseleave', 'foods', function () {
       window.map.getCanvas().style.cursor = '';
     });
-    if(is_touch_device()) {
-      window.map.scrollZoom.disable();
-    }  
   })
 }
 
