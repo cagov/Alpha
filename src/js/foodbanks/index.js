@@ -121,6 +121,10 @@ function mapInteractions() {
   }
 }
 
+window.addEventListener('touchstart', function() {
+  map.scrollZoom.disable();
+});
+
 function setupMapInteractions() {
   window.map.loadImage("/img/marker.png", function (error, image) {
     if (error) throw error;

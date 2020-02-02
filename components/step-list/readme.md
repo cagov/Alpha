@@ -1,6 +1,8 @@
-# Accordion component
+# Step by step list component
 
-This custom element provides expansion and contraction inside a list with show/hide links
+This custom element provides animated expansion and contraction inside a list with show/hide links. It is designed for use with the Alpha CA.gov <a href="https://cwds.dev">design system</a>
+
+<img src="https://raw.githubusercontent.com/cagov/Alpha/master/components/step-list/step-list.png" />
 
 <img src="https://raw.githubusercontent.com/cagov/Alpha/master/components/step-list/step-list.png" />
 
