@@ -1,6 +1,6 @@
 # Accordion component
 
-This custom element recreates the bootstrap accordion component functionality without the jquery dependency
+This custom element recreates the bootstrap accordion component functionality without the jquery dependency. It is designed for use with the Alpha CA.gov <a href="https://cwds.dev">design system</a> but can be used independently if you provide your own styling
 
 <img src="https://raw.githubusercontent.com/cagov/Alpha/master/components/accordion/accordion.png" />
 
