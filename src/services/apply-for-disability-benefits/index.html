@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta name="description" content="[lang-meta-description]">
+  <%= require('html-loader!../../partials/meta-common.html') %>
+  <%= require('html-loader!../../partials/favicons.html') %>
+
+  <title>[lang-title]</title>
+
+  <!-- Social media post -->
+  <meta property="og:image" content="/img/thumbnail.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="630">
+  <meta property="og:title" content="[lang-meta-og-title]">
+  <meta property="og:description" content="[lang-meta-og-description]">
+  <meta property="og:url" content="https://alpha.ca.gov/apply-for-disability-benefits/">
+
+  <link rel="canonical" href="https://alpha.ca.gov/apply-for-disability-benefits/" />
+</head>
+
+<body>
+  <%= require('html-loader!../../partials/official.html') %>
+  <%= require('html-loader!../../partials/experiment-banner.html') %>
+  <%= require('html-loader!../../partials/navbar.html') %>
+
+  <div class="container-fluid jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>[lang-h1]</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <h2>[lang-h2]</h2>
+        <p class="lead">[lang-h2-p]</p>
+            <ul>
+				<li>[lang-sick]</li>
+				<li><strong>[global-lang-or-lower]</strong> [lang-injured]</li>
+				<li><strong>[global-lang-or-lower]</strong> [lang-pregnant]</li>
+
+		    </ul>
+        
+        <cwds-step-list>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item unstyled list-group-item-action" >
+              <button type="button" class="step-description">
+                <span class="list-number">1</span>[lang-step-1]
+              </button><span class="show">[global-lang-show]</span><span class="hide">[global-lang-hide]</span>
+              <div class="details">
+                <span class="step-interior">
+                  <ul class="unstyled pl-0">
+                    <li class="list-group-item inner-list"><a href="https://www.edd.ca.gov/disability/Am_I_Eligible_for_DI_Benefits.htm">[lang-step-1-li-4]</a>[global-lang-period]</li>
+                    <li class="list-group-item inner-list">[lang-step-1-li-5a] <a href="https://www.edd.ca.gov/disability/Employer_Voluntary_Plans.htm">[lang-step-1-li-5b]</a>[lang-step-1-li-5c]</li>
+                    <li class="list-group-item inner-list">[lang-step-1-li-6] <a href="https://www.edd.ca.gov/disability/Self-Employed_Eligibility.htm">[lang-step-1-li-6-link]</a>[global-lang-period]</li>
+                  </ul>
+                </span>
+              </div>
+            </li>
+            <li class="list-group-item unstyled list-group-item-action">
+              <button type="button" class="step-description">
+                <span class="list-number">2</span>[lang-step-1]
+              </button><span class="show">[global-lang-show]</span><span class="hide">[global-lang-hide]</span>
+              <div class="details">
+				  <span class="step-interior">
+            <ul class="unstyled pl-0">
+              <li class="list-group-item unstyled no-border"><a class="btn btn-secondary btn-sm mt-3"  href="https://www.edd.ca.gov/disability/How_to_File_a_DI_Claim_in_SDI_Online.htm">[lang-step-2-li-1]</a> <span class="and-or mt-4">[global-lang-or-lower]</span></li>
+              <li class="list-group-item unstyled no-border"><a class="btn btn-secondary btn-sm"  href="https://www.edd.ca.gov/disability/How_to_File_a_DI_Claim_by_Mail.htm">[lang-step-2-li-2]</a></li>
+				    </ul>
+				  </span>
+				</div>
+            </li>
+            <li class="list-group-item lead unstyled list-group-item-action">
+              <button type="button" class="step-description">
+                <span class="list-number">3</span>[lang-step-3]
+              </button><span class="show">[global-lang-show]</span><span class="hide">[global-lang-hide]</span>
+              <div class="details">
+				  <span class="step-interior">
+                  <p>[lang-step-3-p-1]</p>
+                  <p>[lang-step-3-p-2a] <a href="https://www.edd.ca.gov/disability/PP_Forms_and_Publications.htm">[lang-step-3-p-2b]</a>[global-lang-period]</p>
+                </span><span class="show">[global-lang-show]</span><span class="hide">[global-lang-hide]</span></div>
+            </li>
+            <li class="list-group-item lead unstyled list-group-item-action">
+              <button type="button" class="step-description">
+                <span class="list-number">4</span>[lang-step-4]
+              </button><span class="show">[global-lang-show]</span><span class="hide">[global-lang-hide]</span>
+              <div class="details">
+				  <span class="step-interior">
+                  <p>[lang-step-4-p-1]</p>
+                  <p class="bold">[lang-step-4-p-2]</p>
+                  <ul class="unstyled pl-0">
+                    <li class="list-group-item inner-list">[lang-step-4-ul-1-li-1]</li>
+                    <li class="list-group-item inner-list">[lang-step-4-ul-1-li-2a] <a
+                        href="https://www.edd.ca.gov/About_EDD/The_EDD_Debit_Card.htm">[lang-step-4-ul-1-li-2b]</a> [lang-step-4-ul-1-li-2c]</li>
+                  </ul>
+                  <p class="mt-2 bold">[lang-step-4-p-3]</p>
+                  <ul class="unstyled pl-0">
+                    <li class="list-group-item inner-list">[lang-step-4-ul-2-li-1]</li>
+                    <li class="list-group-item inner-list">[lang-step-4-ul-2-li-2]</li>
+                    <li class="list-group-item inner-list">[lang-step-4-ul-2-li-3]</li>
+                  </ul>
+                </span><span class="show">[global-lang-show]</span><span class="hide">[global-lang-hide]</span></div>
+            </li>
+            <li class="list-group-item lead unstyled list-group-item-action">
+              <button type="button" class="step-description">
+                <span class="list-number">5</span>[lang-step-5]
+              </button><span class="show">[global-lang-show]</span><span class="hide">[global-lang-hide]</span>
+              <div class="details">
+				  <span class="step-interior">
+                  <p>[lang-step-5-p-1] <strong>[lang-step-5-p-2]</strong></p>
+                  <p class="mt-2 bold">[lang-step-5-p-3]</p>
+                  <ul>
+                    <li class="list-group-item inner-list">[lang-step-5-li-1]</li>
+                    <li class="list-group-item inner-list">[lang-step-5-li-2]</li>
+                    <li class="list-group-item inner-list">[lang-step-5-li-3]</li>
+                  </ul>
+                  <p class="mt-2 bold">[lang-step-5-p-4]</p>
+                  <ul>
+                    <li class="list-group-item inner-list">[lang-step-5-li-4]</li>
+                    <li class="list-group-item inner-list">[lang-step-5-li-5]</li>
+                    <li class="list-group-item inner-list">[lang-step-5-li-6]</li>
+                  </ul>
+                  <p class="mt-5">[lang-step-5-p-5] <a
+                      href="https://www.edd.ca.gov/disability/SDI_Online.htm">[lang-step-5-p-5-link]</a>[global-lang-period]</p>
+                </span></div>
+            </li>
+          </ul>
+        </cwds-step-list>
+      </div>
+    </div>
+  </div>
+
+  <%= require('html-loader!../../partials/feedback.html') %>
+  <%= require('html-loader!../../partials/footer.html') %>
+  <%= require('html-loader!../../partials/alphabar.html') %>
+  <%= require('html-loader!../../partials/ga.html') %>
+</body>
+</html>

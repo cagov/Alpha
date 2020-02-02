@@ -4,6 +4,8 @@ This custom element recreates the bootstrap accordion component functionality wi
 
 <img src="https://raw.githubusercontent.com/cagov/Alpha/master/components/accordion/accordion.png" />
 
+<img src="https://raw.githubusercontent.com/cagov/Alpha/master/components/accordion/accordion.png" />
+
 ## Sample markup
 
 ```
