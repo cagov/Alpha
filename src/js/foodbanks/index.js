@@ -121,11 +121,19 @@ function mapInteractions() {
   }
 }
 
-window.addEventListener('touchstart', function() {
-  map.scrollZoom.disable();
-});
+function is_touch_device() {  
+  try {  
+    document.createEvent("TouchEvent");  
+    return true;  
+  } catch (e) {  
+    return false;  
+  }  
+}
 
-function setupMapInteractions() {
+function setupMapInteractions() {  
+  if(is_touch_device()) {
+    window.map.scrollZoom.disable();
+  }
   window.map.loadImage("/img/marker.png", function (error, image) {
     if (error) throw error;
     window.map.addImage("custom-marker", image);
