@@ -20,9 +20,17 @@ const targetlangs = [
 
 let csvresults = []
 fs.createReadStream(globalfilepath, {encoding: 'utf16le'})
-  .pipe(csv({ separator: '\t', strict: true, skipComments: true, newline: '\r\n' }))
-  .on('data', data => csvresults.push(data))
+  .pipe(csv({ separator: '\t', strict: true, skipComments: true, newline: '\r\n', mapHeaders: ({ header }) => header.toLowerCase().trim() } ))
+  .on('data', data => {
+    if(data['']) throw console.error('*** Remove empty columns from CSV file - ' + globalfilepath);
+
+    data.path = data.path.replace(/\n/g, ' ').trim()
+    data.token=data.token || data.en
+    csvresults.push(data)
+  })
   .on('end', _ => {
+    const sortedcsvresults = csvresults.sort((a,b) => 100*(b.path.length-a.path.length)+b.token.length-a.token.length)
+
     for(const targetlangobject of targetlangs) {
       const targetlang = targetlangobject.code
 
@@ -63,34 +71,29 @@ fs.createReadStream(globalfilepath, {encoding: 'utf16le'})
       
         replace.sync({files,from:defaultfrom,to:defaultto})
 
-        for(const data of csvresults)
-            if(data.token&&data[targetlang]) {
-              const from = [new RegExp(data.token.replace(/\[/,'\\\[').replace(/\]/,'\\\]'),'g')] //add token with literal square brackets
+        for(const data of sortedcsvresults) {
+          //const sourcematch = data.token || data.en
+          const from = [new RegExp(data.token.replace(/\[/,'\\\[').replace(/\]/,'\\\]'),'g')] //add token with literal square brackets
 
-              const to = data.path ?
-                (match, ...args) => {
-                    let file=fileFromArgs(args)
+          const to = data.path
+          ? (match, ...args) =>
+                //return text, or the original match if the file isn't right
+                data.path==(fileFromArgs(args) || '/')
+                ? data[targetlang]
+                : match
+          : data[targetlang]
 
-                    if(!file)
-                      file ='/'
+          const results = replace.sync({files,from,to,countMatches: true})
 
-                    //return text, or the original match if the file isn't right
-                    return data.path==file ? data[targetlang] : match
-                }
-              :
-                data[targetlang]
+          let found = false
+            results.forEach(element => {
+              if (element.numMatches != 0 )
+                found = true
+            })
 
-              const results = replace.sync({files,from,to})
-
-              let found = false
-                results.forEach(element => {
-                  if (element.hasChanged)
-                    found = true
-                })
-
-              if(!found)
-                  return console.error('replacement not found - '+data.path+data.token);
-            }
+          if(!found)
+              return console.error(targetlang+': Error - Replacement not found - '+data.path+' - "'+data.token+'"')
+        }
 
         if(targetlang=='en') 
           //English default goes to root
