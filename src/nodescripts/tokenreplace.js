@@ -21,17 +21,17 @@ const targetlangs = [
 let csvresults = []
 fs.createReadStream(globalfilepath, {encoding: 'utf16le'})
   .pipe(csv({ separator: '\t', strict: true, skipComments: true, newline: '\r\n' }))
-  .on('data', data => {
-    csvresults.push(data)
-  })
+  .on('data', data => csvresults.push(data))
   .on('end', _ => {
     for(const targetlangobject of targetlangs) {
       const targetlang = targetlangobject.code
 
+      console.log(targetlang + ': Language Replacement Start')
+
       let langselectorbutton = ''
 
       //Create the language selector
-      for(const l of targetlangs)
+      for (const l of targetlangs)
         if(l.code!=targetlang)
           langselectorbutton+='<a class="dropdown-item" href="/'+l.code+'[FullPath]">'+l.name+'</a>'
 
@@ -67,7 +67,7 @@ fs.createReadStream(globalfilepath, {encoding: 'utf16le'})
             if(data.token&&data[targetlang]) {
               const from = [new RegExp(data.token.replace(/\[/,'\\\[').replace(/\]/,'\\\]'),'g')] //add token with literal square brackets
 
-              let to = data.path ?
+              const to = data.path ?
                 (match, ...args) => {
                     let file=fileFromArgs(args)
 
@@ -86,20 +86,20 @@ fs.createReadStream(globalfilepath, {encoding: 'utf16le'})
                 results.forEach(element => {
                   if (element.hasChanged)
                     found = true
-                });
+                })
 
               if(!found)
                   return console.error('replacement not found - '+data.path+data.token);
             }
 
-            if(targetlang=='en') 
-            //English default goes to root
-              fse.copy(destination, sourcefolder, {overwrite: true, errorOnExist: false}, err => {
-                if (err) return console.error(err)
-              })
+        if(targetlang=='en') 
+          //English default goes to root
+          fse.copy(destination, sourcefolder, {overwrite: true, errorOnExist: false}, err => {
+            if (err) return console.error(err)
+            console.log(targetlang + ': Default Root Complete')
+          })
 
-            console.log(targetlang + ': Language Replacement Complete:');
-          }
-          )
-        }
-  })
+        console.log(targetlang + ': Language Replacement Complete')
+      }) //fse.copy
+    } //for(const targetlangobject of targetlangs)
+  }) //createReadStream->end
