@@ -23,6 +23,8 @@ fs.createReadStream(globalfilepath, {encoding: 'utf16le'})
   .pipe(csv({ separator: '\t', strict: true, skipComments: true, newline: '\r\n' }))
   .on('data', data => csvresults.push(data))
   .on('end', _ => {
+    const sortedcsvresults = csvresults.sort((a,b) => a.token.length-b.token.length)
+
     for(const targetlangobject of targetlangs) {
       const targetlang = targetlangobject.code
 
@@ -63,7 +65,7 @@ fs.createReadStream(globalfilepath, {encoding: 'utf16le'})
       
         replace.sync({files,from:defaultfrom,to:defaultto})
 
-        for(const data of csvresults)
+        for(const data of sortedcsvresults)
             if(data.token&&data[targetlang]) {
               const from = [new RegExp(data.token.replace(/\[/,'\\\[').replace(/\]/,'\\\]'),'g')] //add token with literal square brackets
 
