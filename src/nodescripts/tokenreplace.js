@@ -20,8 +20,11 @@ const targetlangs = [
 
 let csvresults = []
 fs.createReadStream(globalfilepath, {encoding: 'utf16le'})
-  .pipe(csv({ separator: '\t', strict: true, skipComments: true, newline: '\r\n' }))
+  .pipe(csv({ separator: '\t', strict: true, skipComments: true, newline: '\r\n', mapHeaders: ({ header }) => header.toLowerCase().trim() } ))
   .on('data', data => {
+    if(data['']) throw console.error('*** Remove empty columns from CSV file - ' + globalfilepath);
+
+    data.path = data.path.replace(/\n/g, ' ').trim()
     data.token=data.token || data.en
     csvresults.push(data)
   })
