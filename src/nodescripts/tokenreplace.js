@@ -73,7 +73,12 @@ fs.createReadStream(globalfilepath, {encoding: 'utf16le'})
 
         for(const data of sortedcsvresults) {
           //const sourcematch = data.token || data.en
-          const from = [new RegExp(data.token.replace(/\[/,'\\\[').replace(/\]/,'\\\]'),'g')] //add token with literal square brackets
+          const from = [new RegExp(data.token
+            .replace(/\[/,'\\\[')
+            .replace(/\]/,'\\\]')
+            .replace(/\)/,'\\\)')
+            .replace(/\(/,'\\\(')
+            ,'g')] //add token with literal square brackets
 
           const to = data.path
           ? (match, ...args) =>
