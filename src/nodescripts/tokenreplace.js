@@ -75,18 +75,13 @@ fs.createReadStream(globalfilepath, {encoding: 'utf16le'})
           //const sourcematch = data.token || data.en
           const from = [new RegExp(data.token.replace(/\[/,'\\\[').replace(/\]/,'\\\]'),'g')] //add token with literal square brackets
 
-          const to = data.path ?
-            (match, ...args) => {
-                let file=fileFromArgs(args)
-
-                if(!file)
-                  file ='/'
-
+          const to = data.path
+          ? (match, ...args) =>
                 //return text, or the original match if the file isn't right
-                return data.path==file ? data[targetlang] : match
-            }
-          :
-            data[targetlang]
+                data.path==(fileFromArgs(args) || '/')
+                ? data[targetlang]
+                : match
+          : data[targetlang]
 
           const results = replace.sync({files,from,to,countMatches: true})
 
@@ -97,7 +92,7 @@ fs.createReadStream(globalfilepath, {encoding: 'utf16le'})
             })
 
           if(!found)
-              return console.error(targetlang+': Error - Replacement not found - '+data.path+' - "'+data.token+'"');
+              return console.error(targetlang+': Error - Replacement not found - '+data.path+' - "'+data.token+'"')
         }
 
         if(targetlang=='en') 
