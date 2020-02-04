@@ -73,15 +73,23 @@ fs.createReadStream(globalfilepath, {encoding: 'utf16le'})
 
         for(const data of sortedcsvresults) {
           //const sourcematch = data.token || data.en
-          const from = [new RegExp(data.token.replace(/\[/,'\\\[').replace(/\]/,'\\\]'),'g')] //add token with literal square brackets
+          const from = [new RegExp(data.token
+            .replace(/\[/,'\\\[')
+            .replace(/\]/,'\\\]')
+            .replace(/\)/,'\\\)')
+            .replace(/\(/,'\\\(')
+            ,'g')] //add token with literal square brackets
+
+          const replacement = data[targetlang]
+            .replace(/<\/\s*/g,'<\/') //fixes broken html from auto-translate "</ i>" => "</i>"
 
           const to = data.path
           ? (match, ...args) =>
                 //return text, or the original match if the file isn't right
                 data.path==(fileFromArgs(args) || '/')
-                ? data[targetlang]
+                ? replacement
                 : match
-          : data[targetlang]
+          : replacement
 
           const results = replace.sync({files,from,to,countMatches: true})
 
