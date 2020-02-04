@@ -34,28 +34,17 @@ fs.createReadStream(globalfilepath, {encoding: 'utf16le'})
 function langloop() {
   sortedcsvresults = csvresults.sort((a,b) => 100*(b.path.length-a.path.length)+b.token.length-a.token.length)
 
-  for(const targetlangobject of targetlangs) {
-    const targetlang = targetlangobject.code
-
-    console.log(targetlang + ': Language Replacement Start')
-
+  for(const targetlang of targetlangs.map(x=>x.code)) 
     // copy source folder to destination
     fse.copy(source, getdestination(targetlang), {overwrite: false, errorOnExist: true}, 
       err => err 
         ? console.error(err)
         : replaceonelanguage(targetlang))
-  }
+  
 } //langloop  
 
 
-function replaceonelanguage(targetlang) {    
-  let langselectorbutton = ''
-
-  //Create the language selector
-  for (const l of targetlangs)
-    if(l.code!=targetlang)
-      langselectorbutton+='<a class="dropdown-item" href="/'+l.code+'[FullPath]">'+l.name+'</a>'
-  
+function replaceonelanguage(targetlang) {
   //Global replace of defaults
   replace.sync({
     files:getfilespath(targetlang),
@@ -68,7 +57,7 @@ function replaceonelanguage(targetlang) {
     to:[
       'lang="'+targetlang+'"', 
       targetlang=='en'?'/':'/'+targetlang+'/',
-      langselectorbutton,
+      targetlangs.map(l=>l.code!=targetlang ? '<a class="dropdown-item" href="/'+l.code+'[FullPath]">'+l.name+'</a>' : '').join(''),
       (match, ...args) => fileFromArgs(args,targetlang)
     ]})
 
