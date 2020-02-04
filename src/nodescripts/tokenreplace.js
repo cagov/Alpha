@@ -1,5 +1,3 @@
-// You can convert language text here...https://www.charset.org/html-special-characters
-
 const fs = require('fs')
 const fse = require('fs-extra') //https://www.npmjs.com/package/fs-extra
 const csv = require('csv-parser') //https://www.npmjs.com/package/csv-parser
@@ -19,6 +17,7 @@ const targetlangs = [
 ]
 
 let csvresults = []
+let sortedcsvresults = []
 fs.createReadStream(globalfilepath, {encoding: 'utf16le'})
   .pipe(csv({ separator: '\t', strict: true, skipComments: true, newline: '\r\n', mapHeaders: ({ header }) => header.toLowerCase().trim() } ))
   .on('data', data => {
@@ -28,89 +27,101 @@ fs.createReadStream(globalfilepath, {encoding: 'utf16le'})
     data.token=data.token || data.en
     csvresults.push(data)
   })
-  .on('end', _ => {
-    const sortedcsvresults = csvresults.sort((a,b) => 100*(b.path.length-a.path.length)+b.token.length-a.token.length)
+  .on('end', langloop)
 
-    for(const targetlangobject of targetlangs) {
-      const targetlang = targetlangobject.code
 
-      console.log(targetlang + ': Language Replacement Start')
+function langloop() {
+  sortedcsvresults = csvresults.sort((a,b) => 100*(b.path.length-a.path.length)+b.token.length-a.token.length)
 
-      let langselectorbutton = ''
+  for(const targetlangobject of targetlangs) {
+    const targetlang = targetlangobject.code
 
-      //Create the language selector
-      for (const l of targetlangs)
-        if(l.code!=targetlang)
-          langselectorbutton+='<a class="dropdown-item" href="/'+l.code+'[FullPath]">'+l.name+'</a>'
+    console.log(targetlang + ': Language Replacement Start')
 
-      const destination = sourcefolder+targetlang
+    const destination = sourcefolder+targetlang
 
-      // copy source folder to destination
-      fse.copy(source, destination, {overwrite: false, errorOnExist: true}, err => {
-        if (err) return console.error(err)
+    // copy source folder to destination
+    fse.copy(source, destination, {overwrite: false, errorOnExist: true}, 
+      err => err 
+        ? console.error(err)
+        : replaceonelanguage(targetlang,destination))
+  }
+} //langloop  
 
-        const fileFromArgs = args => args.pop()
-          .replace(/\/index.html$/,'') //Remove index.html
-          .replace(new RegExp('^'+destination.replace(/\//,'\/')),'') //Remove "public/en"
-        
-        const files = destination+'/**/*.html'
-        
-        const defaultfrom = [
-          /lang="en"/g,
-          /\/en\//g,
-          /\[code-language-select\]/g,
-          /\[FullPath\]/g
-        ]
-        
-        const defaultto = [
-          'lang="'+targetlang+'"', 
-          targetlang=='en'?'/':'/'+targetlang+'/',
-          langselectorbutton,
-          (match, ...args) => fileFromArgs(args)
-        ]
-      
-        replace.sync({files,from:defaultfrom,to:defaultto})
 
-        for(const data of sortedcsvresults) {
-          //const sourcematch = data.token || data.en
-          const from = [new RegExp(data.token
-            .replace(/\[/,'\\\[')
-            .replace(/\]/,'\\\]')
-            .replace(/\)/,'\\\)')
-            .replace(/\(/,'\\\(')
-            ,'g')] //add token with literal square brackets
+function replaceonelanguage(targetlang,destination) {  
+  const files = destination+'/**/*.html'
+  
+  let langselectorbutton = ''
 
-          const replacement = data[targetlang]
-            .replace(/<\/\s*/g,'<\/') //fixes broken html from auto-translate "</ i>" => "</i>"
+  //Create the language selector
+  for (const l of targetlangs)
+    if(l.code!=targetlang)
+      langselectorbutton+='<a class="dropdown-item" href="/'+l.code+'[FullPath]">'+l.name+'</a>'
+  
+  replace.sync({
+    files,
+    from:[
+      /lang="en"/g,
+      /\/en\//g,
+      /\[code-language-select\]/g,
+      /\[FullPath\]/g
+    ],
+    to:[
+      'lang="'+targetlang+'"', 
+      targetlang=='en'?'/':'/'+targetlang+'/',
+      langselectorbutton,
+      (match, ...args) => fileFromArgs(args,destination)
+    ]})
 
-          const to = data.path
-          ? (match, ...args) =>
-                //return text, or the original match if the file isn't right
-                data.path==(fileFromArgs(args) || '/')
-                ? replacement
-                : match
-          : replacement
+  sortedcsvresults.forEach(data=>
+    replaceonetoken(data.path,data.token,data[targetlang],files,destination))
 
-          const results = replace.sync({files,from,to,countMatches: true})
+  if(targetlang=='en') 
+    //English default goes to root
+    fse.copy(destination, sourcefolder, {overwrite: true, errorOnExist: false}, err => {
+      if (err) return console.error(err)
+      console.log(targetlang + ': Default Root Complete')
+    })
 
-          let found = false
-            results.forEach(element => {
-              if (element.numMatches != 0 )
-                found = true
-            })
+  console.log(targetlang + ': Language Replacement Complete')
+} //replaceonelanguage
 
-          if(!found)
-              return console.error(targetlang+': Error - Replacement not found - '+data.path+' - "'+data.token+'"')
-        }
 
-        if(targetlang=='en') 
-          //English default goes to root
-          fse.copy(destination, sourcefolder, {overwrite: true, errorOnExist: false}, err => {
-            if (err) return console.error(err)
-            console.log(targetlang + ': Default Root Complete')
-          })
+function replaceonetoken(path,token,replacement,files,destination) {
+  const from = [new RegExp(token
+    .replace(/\[/,'\\\[')
+    .replace(/\]/,'\\\]')
+    .replace(/\)/,'\\\)')
+    .replace(/\(/,'\\\(')
+    ,'g')] //add token with literal square brackets
 
-        console.log(targetlang + ': Language Replacement Complete')
-      }) //fse.copy
-    } //for(const targetlangobject of targetlangs)
-  }) //createReadStream->end
+  replacement = replacement
+    .replace(/<\/\s*/g,'<\/') //fixes broken html from auto-translate "</ i>" => "</i>"
+
+  const to = path
+  ? (match, ...args) =>
+        //return text, or the original match if the file isn't right
+        path==(fileFromArgs(args,destination) || '/')
+        ? replacement
+        : match
+  : replacement
+
+  const results = replace.sync({files,from,to,countMatches: true})
+
+  let found = false
+    results.forEach(element => {
+      if (element.numMatches != 0 )
+        found = true
+    })
+
+  if(!found)
+      return console.error(targetlang+': Error - Replacement not found - '+path+' - "'+token+'"')
+}
+
+
+function fileFromArgs(args,destination) { 
+  return args.pop()
+    .replace(/\/index.html$/,'') //Remove index.html
+    .replace(new RegExp('^'+destination.replace(/\//,'\/')),'') //Remove "public/en"
+}
