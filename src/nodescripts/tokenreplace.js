@@ -80,8 +80,8 @@ fs.createReadStream(globalfilepath, {encoding: 'utf16le'})
             .replace(/\(/,'\\\(')
             ,'g')] //add token with literal square brackets
 
-          //const replacement = data[targetlang]
-          //  .replace(/<\/\s*(.*)>/g,'<\/$1>') //fixes broken html from auto-translate "</ i>" => "</i>"
+          const replacement = data[targetlang]
+            .replace(/<\/\s*/g,'<\/') //fixes broken html from auto-translate "</ i>" => "</i>"
 
           const to = data.path
           ? (match, ...args) =>
