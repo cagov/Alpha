@@ -30,6 +30,7 @@ fs.createReadStream(globalfilepath, {encoding: 'utf16le'})
   .on('end', langloop)
 
 
+
 function langloop() {
   sortedcsvresults = csvresults.sort((a,b) => 100*(b.path.length-a.path.length)+b.token.length-a.token.length)
 
@@ -38,20 +39,16 @@ function langloop() {
 
     console.log(targetlang + ': Language Replacement Start')
 
-    const destination = sourcefolder+targetlang
-
     // copy source folder to destination
-    fse.copy(source, destination, {overwrite: false, errorOnExist: true}, 
+    fse.copy(source, getdestination(targetlang), {overwrite: false, errorOnExist: true}, 
       err => err 
         ? console.error(err)
-        : replaceonelanguage(targetlang,destination))
+        : replaceonelanguage(targetlang))
   }
 } //langloop  
 
 
-function replaceonelanguage(targetlang,destination) {  
-  const files = destination+'/**/*.html'
-  
+function replaceonelanguage(targetlang) {    
   let langselectorbutton = ''
 
   //Create the language selector
@@ -59,8 +56,9 @@ function replaceonelanguage(targetlang,destination) {
     if(l.code!=targetlang)
       langselectorbutton+='<a class="dropdown-item" href="/'+l.code+'[FullPath]">'+l.name+'</a>'
   
+  //Global replace of defaults
   replace.sync({
-    files,
+    files:getfilespath(targetlang),
     from:[
       /lang="en"/g,
       /\/en\//g,
@@ -71,15 +69,15 @@ function replaceonelanguage(targetlang,destination) {
       'lang="'+targetlang+'"', 
       targetlang=='en'?'/':'/'+targetlang+'/',
       langselectorbutton,
-      (match, ...args) => fileFromArgs(args,destination)
+      (match, ...args) => fileFromArgs(args,targetlang)
     ]})
 
-  sortedcsvresults.forEach(data=>
-    replaceonetoken(data.path,data.token,data[targetlang],files,destination))
+  //run each token in order
+  sortedcsvresults.forEach(data=>replaceonetoken(data,targetlang))
 
   if(targetlang=='en') 
     //English default goes to root
-    fse.copy(destination, sourcefolder, {overwrite: true, errorOnExist: false}, err => {
+    fse.copy(getdestination(targetlang), sourcefolder, {overwrite: true, errorOnExist: false}, err => {
       if (err) return console.error(err)
       console.log(targetlang + ': Default Root Complete')
     })
@@ -88,40 +86,43 @@ function replaceonelanguage(targetlang,destination) {
 } //replaceonelanguage
 
 
-function replaceonetoken(path,token,replacement,files,destination) {
-  const from = [new RegExp(token
+function replaceonetoken(data,targetlang) {
+  const from = [new RegExp(data.token
     .replace(/\[/,'\\\[')
     .replace(/\]/,'\\\]')
     .replace(/\)/,'\\\)')
     .replace(/\(/,'\\\(')
     ,'g')] //add token with literal square brackets
 
-  replacement = replacement
+  replacement = data[targetlang]
     .replace(/<\/\s*/g,'<\/') //fixes broken html from auto-translate "</ i>" => "</i>"
 
-  const to = path
+  const to = data.path
   ? (match, ...args) =>
         //return text, or the original match if the file isn't right
-        path==(fileFromArgs(args,destination) || '/')
+        data.path==(fileFromArgs(args,targetlang) || '/')
         ? replacement
         : match
   : replacement
 
-  const results = replace.sync({files,from,to,countMatches: true})
-
-  let found = false
-    results.forEach(element => {
-      if (element.numMatches != 0 )
-        found = true
-    })
-
-  if(!found)
-      return console.error(targetlang+': Error - Replacement not found - '+path+' - "'+token+'"')
+  //replace this token, return an error if it isn't found
+  if (!replace.sync(
+      {files:getfilespath(targetlang),from,to,countMatches: true})
+        .find(value=>value.numMatches != 0))
+    return console.error(targetlang+': Error - Replacement not found - '+data.path+' - "'+data.token+'"')
 }
 
 
-function fileFromArgs(args,destination) { 
+function fileFromArgs(args,targetlang) { 
   return args.pop()
     .replace(/\/index.html$/,'') //Remove index.html
-    .replace(new RegExp('^'+destination.replace(/\//,'\/')),'') //Remove "public/en"
+    .replace(new RegExp('^'+getdestination(targetlang).replace(/\//,'\/')),'') //Remove "public/en"
+}
+
+function getdestination(targetlang) {
+  return sourcefolder+targetlang
+}
+
+function getfilespath(targetlang) {
+  return getdestination(targetlang)+'/**/*.html'
 }
