@@ -122,6 +122,12 @@ module.exports = {
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
+      filename: 'en/apply-for-cal-grant/step-1/index.html',
+      template: 'src/services/apply-for-cal-grant/step-1/index.html',
+      excludeChunks: excludedChunks,
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
       filename: 'en/services/find-food-banks-near-you/index.html',
       template: 'src/services/find-food-banks-near-you/index.html',
       excludeChunks: ['minwage'],
