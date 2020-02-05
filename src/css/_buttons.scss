@@ -22,7 +22,7 @@ a.btn-dark:hover {
 }
 
 a.btn {
-  background: #151e63;
+  background: #10255f;
   color: #fff;
   border: 1px solid #f1f1f1;
   text-decoration: none;
@@ -45,9 +45,9 @@ a.btn:visited, a:visited, a:hover {
 
 .btn-primary {
     color: #fff;
-    background-color: #151e63;
-	background: #151e63;
-    border-color: #151e63;
+    background-color: #10255f;
+	background: #10255f;
+    border-color: #10255f;
 }
 
 .btn-light {
@@ -74,5 +74,29 @@ button.step-description {
 	margin-left: -10px;
 	font-family: "Public Sans Bold", sans-serif;
     font-size: 1.4rem;
+}
+
+.btn-bd-primary:hover, .btn-bd-primary:active {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+	background: #000;
+}
+
+
+.search-btn {
+
+    border: 5px #015179 solid;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background: #015179;
+}
+
+.search-btn:hover {
+
+  border: 5px #343a40 solid;
+	background: #343a40;
+	box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5)
+  
 }
 
