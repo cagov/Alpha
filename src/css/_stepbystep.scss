@@ -13,14 +13,14 @@ cwds-step-list li.list-group-item.unstyled.list-group-item-action {
 }
 
 cwds-step-list li.list-group-item.unstyled.list-group-item-action.list-open {
-    border-left: solid #015179;
+    border-left: solid #004abc;
     border-left-width: 4px;
 }
 
 cwds-step-list li.list-open .list-number {
     border-style: solid;
     border-radius: 50%;
-    border-color: #015179;
+    border-color: #000;
     text-align: center;
 	font-weight: 500 !important;
 }
@@ -43,14 +43,14 @@ cwds-step-list li .unstyled {
 .show {
     float: right;
     font-size: 15px;
-    color: #0071bc;
+    color: #004abc;
     text-decoration: underline;
 }
 	  
 .hide {
     float: right;
     font-size: 15px;
-    color: #0071bc;
+    color: #004abc;
     text-decoration: underline;
 }
 	  
@@ -165,20 +165,6 @@ ul > li.list-group-item.and-or-lead.list-open {
 	margin-left: 30px!important;
 }
 
-
-
-.list-number {
-    position: relative;
-    display: inline-block;
-    width: 33px;
-    height: 33px;
-    border-width: 3px;
-    border-style: solid;
-    border-radius: 50%;
-    border-color: #cccccc;
-    text-align: center;
-   
-}
 
 	
 	  
