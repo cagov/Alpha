@@ -28,7 +28,7 @@ jobs:
         uses: justinribeiro/lighthouse-action@master
         with:
           secret: ${{ secrets.GITHUB_TOKEN }}
-          url: https://localhost:1337
+          url: http://localhost:1337
           wptConnectionSpeed: threegslow
       - name: Saving Lighthouse Audit Artifacts
         uses: actions/upload-artifact@master
