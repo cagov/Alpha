@@ -4,8 +4,6 @@ This custom element provides animated expansion and contraction inside a list wi
 
 <img src="https://raw.githubusercontent.com/cagov/Alpha/master/components/step-list/step-list.png" />
 
-<img src="https://raw.githubusercontent.com/cagov/Alpha/master/components/step-list/step-list.png" />
-
 ## Sample markup
 
 ```

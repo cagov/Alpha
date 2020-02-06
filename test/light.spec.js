@@ -1,5 +1,6 @@
 const lighthouse = require('lighthouse');
 const chromeLauncher = require('chrome-launcher');
+const fs = require('fs');
 
 describe("homepage", () => {
   test("page has some links on it", async () => {
@@ -25,10 +26,33 @@ describe("homepage", () => {
     let resultData = await launchChromeAndRunLighthouse('http://localhost:1338', opts).then(results => {
       return results;
     });
-    console.log('hello')
-    console.log(resultData)
 
-    expect(5).toBeGreaterThan(4)
+    let scores = [];
+    let obj = {};
+    obj.title = 'Performance';
+    obj.score = resultData.categories['performance'].score;
+    scores.push(obj)
+    obj = {};
+    obj.title = 'Accessibility';
+    obj.score = resultData.categories['accessibility'].score;
+    scores.push(obj)
+    obj = {};
+    obj.title = 'Best Practices';
+    obj.score = resultData.categories['best-practices'].score;
+    scores.push(obj)
+    obj = {};
+    obj.title = 'SEO';
+    obj.score = resultData.categories['seo'].score;
+    scores.push(obj)
+    obj = {};
+    obj.title = 'PWA';
+    obj.score = resultData.categories['pwa'].score;
+    scores.push(obj)
+
+    // fs.writeFileSync('./junkscore.json',JSON.stringify(scores),'utf8');
+
+    expect(resultData.categories['performance'].score).toBeGreaterThan(0.95)
+    expect(resultData.categories['accessibility'].score).toBeGreaterThan(0.95)
         
   }, 16000)
 })
