@@ -2,6 +2,8 @@ const lighthouse = require('lighthouse');
 const chromeLauncher = require('chrome-launcher');
 const fs = require('fs');
 
+jest.setTimeout(30000);
+
 describe("homepage", () => {
   test("page has some links on it", async () => {
 
