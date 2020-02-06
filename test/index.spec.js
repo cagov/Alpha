@@ -95,6 +95,18 @@ describe("food banks", () => {
 
 });
 
+describe("state holidays", () => {
+  test("state holidays", async () => {
+    await page.goto(hostname+'/services/state-california-employee-holidays/');
+    await page.click("cwds-accordion button");
+    
+    let answers = await page.$$eval('.card-body tr', answers => { return answers });
+    expect(answers.length).toBeGreaterThan(0);
+   
+  }, 16000);
+
+});
+
 afterAll(() => {
   browser.close()
   server.close()
