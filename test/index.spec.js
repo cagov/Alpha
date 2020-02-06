@@ -72,6 +72,29 @@ describe("minimum wage", () => {
   }, 16000)
 })
 
+describe("food banks", () => {
+  test("fb autocomplete works", async () => {
+    await page.goto(hostname+'/services/find-food-banks-near-you/');
+    await page.waitForSelector(".city-search");
+    await page.type(".city-search", '9582');
+
+    await page.waitForSelector("#awesomplete_list_1 li");
+    let listitems = await page.$$eval('#awesomplete_list_1 li', listitems => { return listitems });
+    expect(listitems.length).toBeGreaterThan(1);
+
+    await page.type(".city-search", '1');
+    await page.click('button[type="submit"]');
+
+    await page.waitForFunction(
+      'document.querySelectorAll(".js-nearest-results li").length'
+      );
+    let answers = await page.$$eval('.js-nearest-results li', answers => { return answers });
+    expect(answers.length).toBeGreaterThan(0);
+
+  }, 16000);
+
+});
+
 afterAll(() => {
   browser.close()
   server.close()
