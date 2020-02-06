@@ -37,12 +37,11 @@
   </div>
 
   <div class="container">
-
     <div class="row">
-      <div class="col">
+      <div class="col col-lg-8">
         <h2>[lang-h2]</h2>
 
-        <div class="alert alert-secondary " role="alert">
+        <div class="alert alert-primary " role="alert">
           <p class="display-4 alert">[lang-current-holiday-date]</p>
           <p class="h2 alert">[lang-current-holiday-name]</p>
 
@@ -59,12 +58,10 @@
 
           <cwds-accordion>
             <div class="card">
-              <div class="card-header accordion-alpha pr-3" id="heading-one">
-                <button class="btn mb-n3" type="button" aria-expanded="false">
-                  <h3 class="pl-3 h4">[lang-holiday-2020]</h3>
+                <button class="card-header accordion-alpha" type="button" aria-expanded="false">
+                  <div class="accordion-title">[lang-holiday-2020]</div>
                 </button>
-              </div>
-              <div class="card-container collapsed" aria-labelledby="heading-one">
+              <div class="card-container collapsed">
                 <div class="card-body">
                   <table class="table table-responsive-sm">
                     <thead>
@@ -134,7 +131,7 @@
                   </table>
                   <div class="container">
 
-                    <h4>[lang-h4]</h4>
+                    <h3>[lang-h4]</h3>
 
                     <div class="alert" role="alert">
 
@@ -154,13 +151,11 @@
 
         <div class="column mb-20">
           <cwds-accordion>
-            <div class="card">
-              <div class="card-header accordion-alpha pr-3" id="heading-two">
-                <button class="btn mb-n3" type="button" aria-expanded="false">
-                  <h3 class="pl-3 h4">[lang-holiday-2021]</h3>
+            <div class="card">   
+                <button class="card-header accordion-alpha" type="button" aria-expanded="false">
+                 <div class="accordion-title">[lang-holiday-2021]</div>
                 </button>
-              </div>
-              <div class="card-container collapsed" aria-labelledby="heading-two">
+              <div class="card-container collapsed">
                 <div class="card-body">
                   <table class="table table-responsive-sm">
                     <thead>
@@ -229,7 +224,7 @@
                     </tbody>
                   </table>
                   <div class="container">
-                    <h4>[lang-h4]</h4>
+                    <h3>[lang-h4]</h3>
 
                     <div class="alert " role="alert">
 
@@ -252,23 +247,21 @@
           <a id="credits">
             <cwds-accordion class="js-credits">
               <div class="card">
-                <div class="card-header accordion-alpha pr-3" id="heading-three">
-                  <button class="btn js-credit-button mb-n3" type="button" aria-expanded="false">
-                    <h3 class="pl-3 h4 text-left" >[lang-h3-2]</h3>
+                   <button class="card-header accordion-alpha" type="button" aria-expanded="false">
+                   <div class="accordion-title">[lang-h3-2]</div>
                   </button>
-                </div>
-                <div class="card-container collapsed" aria-labelledby="heading-three">
+                <div class="card-container collapsed">
                   <div class="card-body">
-                    <h4>[lang-h4-1]</h4>
+                    <h3>[lang-h4-1]</h3>
                     <ul>
                       <li>[lang-h4-1-li-1]</li>
                       <li>[lang-h4-1-li-2]</li>
                     </ul>
-                    <h4>[lang-h4-2]</h4>
+                    <h3>[lang-h4-2]</h3>
                     <ul>
                       <li>[lang-h4-2-li]</li>
                     </ul>
-                    <h4>[lang-h4-3]</h4>
+                    <h3>[lang-h4-3]</h3>
                     <ul>
                       <li>[lang-h4-3-li-1]</li>
                       <li>[lang-h4-3-li-2]</li>
@@ -285,9 +278,8 @@
   </div>
 
   <cwds-holidays></cwds-holidays>
-  
-  <%= require('html-loader!../../partials/feedback.html') %>
 
+  <%= require('html-loader!../../partials/feedback.html') %>
   <%= require('html-loader!../../partials/footer.html') %>
   <%= require('html-loader!../../partials/alphabar.html') %>
   <%= require('html-loader!../../partials/ga.html') %>
