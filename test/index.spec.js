@@ -107,6 +107,73 @@ describe("state holidays", () => {
 
 });
 
+
+describe("language test", () => {
+  test("spanish", async () => {
+    await page.goto(hostname)
+    await page.waitForSelector(".jumbotron")
+    await page.click('#dropdown-menu-button')
+
+    let answers = await page.$$eval('.dropdown a', answers => { return answers })
+    expect(answers.length).toBeGreaterThan(0);
+
+    await page.goto(hostname+'/es/')
+    await page.waitForSelector(".jumbotron")
+    
+    const links = await page.$$eval('a', anchors => anchors )
+    expect(links.length).toBeGreaterThan(4)
+
+  }, 16000)
+
+})
+
+describe("Cal Grant", () => {
+  test("Cal Grant", async () => {
+    await page.goto(hostname+'/apply-for-cal-grant/')
+    await page.click("cwds-step-list")
+    
+    let answers = await page.$$eval('.col-md-8 li', answers => { return answers })
+    expect(answers.length).toBeGreaterThan(0);
+   
+  }, 16000)
+
+})
+
+describe("Disability", () => {
+  test("Disability", async () => {
+    await page.goto(hostname+'/apply-for-disability-benefits/')
+    await page.click("cwds-step-list")
+    
+    let answers = await page.$$eval('.details li', answers => { return answers })
+    expect(answers.length).toBeGreaterThan(0);
+   
+  }, 16000)
+
+})
+
+describe("licensed contractor", () => {
+  test("licensed contractor", async () => {
+    await page.goto(hostname+'/services/hire-licensed-contractor-home-improvements/')
+    await page.click("cwds-step-list")
+    
+    let answers = await page.$$eval('.col-md-9 li', answers => { return answers })
+    expect(answers.length).toBeGreaterThan(0);
+   
+  }, 16000)
+
+})
+
+describe("birth cert", () => {
+  test("birth cert", async () => {
+    await page.goto(hostname+'/services/request-birth-certificate/')
+    
+    let answers = await page.$$eval('.container ul', answers => { return answers })
+    expect(answers.length).toBeGreaterThan(0);
+   
+  }, 16000)
+
+})
+
 afterAll(() => {
   browser.close()
   server.close()
