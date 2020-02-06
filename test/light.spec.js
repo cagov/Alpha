@@ -2,7 +2,7 @@ const lighthouse = require('lighthouse');
 const chromeLauncher = require('chrome-launcher');
 const fs = require('fs');
 
-process.env.CHROME_BIN = require('puppeteer').executablePath()
+process.env.CHROME_PATH = require('puppeteer').executablePath()
 
 jest.setTimeout(30000);
 
