@@ -298,8 +298,8 @@ hr {
   background-image: url('https://alpha.ca.gov/img/ca-light.png');
 }
 .navbar-inverse, .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-	background: rgb(21,30,99);
-	background: linear-gradient(66deg, rgba(21,30,99,1) 30%, rgba(40,33,96,1) 100%);
+	background: rgb(16,37,95);
+	background: linear-gradient(80deg, rgba(16,37,95,1) 30%, rgba(21,30,99,1) 100%);
 }
 .navbar-inverse .navbar-toggle {
   border-color: #ffffff;
@@ -336,8 +336,8 @@ hr {
 }
 
 .jumbotron.alpha  {
-	background: rgb(21,30,99);
-	background: linear-gradient(66deg, rgba(21,30,99,1) 30%, rgba(40,33,96,1) 100%);
+	background: rgb(16,37,95);
+	background: linear-gradient(80deg, rgba(16,37,95,1) 30%, rgba(21,30,99,1) 100%);
 	color: #fff;
 }
 
@@ -504,34 +504,6 @@ hr {
 /* fix bootstrap nav */
 li.active ul.nav.bd-sidenav {
   display: block;
-}
-
-
-
-/* Temporary CSS Classes Pre-SCSS*/
-
-.btn-bd-primary:hover, .btn-bd-primary:active {
-    color: #fff;
-    background-color: #000;
-    border-color: #000;
-	background: #000;
-}
-
-
-.search-btn {
-
-    border: 5px #015179 solid;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    background: #015179;
-}
-
-.search-btn:hover {
-
-  border: 5px #343a40 solid;
-	background: #343a40;
-	box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5)
-  
 }
 
 
