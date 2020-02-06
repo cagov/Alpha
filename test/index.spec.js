@@ -4,7 +4,6 @@
  * @desc Basic smoke tests for alpha site
  */
 const puppeteer = require('puppeteer')
-const lighthouse = require('lighthouse');
 
 const express = require('express')
 const app = express()
@@ -64,16 +63,6 @@ expect.extend({
   },
 });
 
-async function runLighthouse(url) {
-  const result = await lighthouse(url, {
-    port: CHROME_DEBUG_PORT,
-    disableStorageReset: true,
-    onlyCategories: ['seo'],
-  });
-  console.log('ran lighthouse')
-  return result.lhr;
-}
-
 beforeAll(async () => {
   app.use('/', express.static('public', {}))
   server = app.listen(port, () => console.log(`Example app listening on...\n${hostname}`))
@@ -92,7 +81,6 @@ beforeAll(async () => {
 describe("homepage", () => {  
   test("page has some links on it", async () => {
     await page.goto(hostname)
-    console.log('going to call run lighthouse')
     await page.waitForSelector(".jumbotron")
     
     const links = await page.$$eval('a', anchors => anchors )

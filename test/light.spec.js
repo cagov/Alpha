@@ -2,6 +2,8 @@ const lighthouse = require('lighthouse');
 const chromeLauncher = require('chrome-launcher');
 const fs = require('fs');
 
+process.env.CHROME_BIN = require('puppeteer').executablePath()
+
 jest.setTimeout(30000);
 
 describe("homepage", () => {
@@ -21,7 +23,7 @@ describe("homepage", () => {
     }
     
     const opts = {
-      chromeFlags: ['--headless']
+      chromeFlags: ['--headless', '--disable-gpu']
     };
     
     // Usage:
