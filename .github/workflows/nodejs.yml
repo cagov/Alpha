@@ -24,14 +24,3 @@ jobs:
           npm test
         env:
           CI: true
-      - name: Generate Lighthouse Report
-        uses: justinribeiro/lighthouse-action@master
-        with:
-          secret: ${{ secrets.GITHUB_TOKEN }}
-          url: http://localhost:1337
-          wptConnectionSpeed: threegslow
-      - name: Saving Lighthouse Audit Artifacts
-        uses: actions/upload-artifact@master
-        with:
-          name: lighthouse-artifacts
-          path: './results'
