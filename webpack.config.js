@@ -110,8 +110,8 @@ module.exports = {
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: 'en/apply-for-disability-benefits/index.html',
-      template: 'src/services/apply-for-disability-benefits/index.html',
+      filename: 'en/apply-for-disability-insurance-benefits/index.html',
+      template: 'src/services/apply-for-disability-insurance-benefits/index.html',
       excludeChunks: excludedChunks,
       minify: minificationOptions
     }),

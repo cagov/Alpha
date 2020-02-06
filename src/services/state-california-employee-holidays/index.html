@@ -42,8 +42,8 @@
         <h2>Next holiday</h2>
 
         <div class="alert alert-primary " role="alert">
-          <p class="display-4 alert">[lang-current-holiday-date]</p>
-          <p class="h2 alert">[lang-current-holiday-name]</p>
+          <p class="display-4 alert" id="current-holiday-date">&nbsp;</p>
+          <p class="h2 alert" id="current-holiday-name">&nbsp;</p>
 
         </div>
 
@@ -283,6 +283,23 @@
   <%= require('html-loader!../../partials/footer.html') %>
   <%= require('html-loader!../../partials/alphabar.html') %>
   <%= require('html-loader!../../partials/ga.html') %>
+
+
+<script>
+
+(function() {
+  fetch('https://api.alpha.ca.gov/StateHolidayCalendar/next')
+  .then(response => response.json())
+  .then(data => {
+      document.getElementById("current-holiday-date").innerText=data.day_of_week+', '+data.month_name+' '+data.day_of_month
+      document.getElementById("current-holiday-name").innerText=data.name
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  })
+})()
+
+</script>
 
 </body>
 

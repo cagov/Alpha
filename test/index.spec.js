@@ -141,7 +141,7 @@ describe("Cal Grant", () => {
 
 describe("Disability", () => {
   test("Disability", async () => {
-    await page.goto(hostname+'/apply-for-disability-benefits/')
+    await page.goto(hostname+'/apply-for-disability-insurance-benefits/')
     await page.click("cwds-step-list")
     
     let answers = await page.$$eval('.details li', answers => { return answers })
