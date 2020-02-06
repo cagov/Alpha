@@ -298,8 +298,8 @@ hr {
   background-image: url('https://alpha.ca.gov/img/ca-light.png');
 }
 .navbar-inverse, .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-	background: rgb(16,37,95);
-	background: linear-gradient(80deg, rgba(16,37,95,1) 30%, rgba(21,30,99,1) 100%);
+	background: rgb(15,30,107);
+	background: linear-gradient(80deg, rgba(15,30,107,1) 0%, rgba(23,15,107,1) 100%);
 }
 .navbar-inverse .navbar-toggle {
   border-color: #ffffff;
@@ -336,8 +336,8 @@ hr {
 }
 
 .jumbotron.alpha  {
-	background: rgb(16,37,95);
-	background: linear-gradient(80deg, rgba(16,37,95,1) 30%, rgba(21,30,99,1) 100%);
+	background: rgb(15,30,107);
+	background: linear-gradient(80deg, rgba(15,30,107,1) 0%, rgba(23,15,107,1) 100%);
 	color: #fff;
 }
 
@@ -542,6 +542,12 @@ li.list-group-item.alpha-footer {
 .bd-callout-warning {
     border-left-color: #ffc107;
     border-radius: 0;
+}
+
+.alert-primary {
+    color: #ffffff;
+    background-color: #10255f;
+    border-color: #f1f1f1;
 }
 
 
