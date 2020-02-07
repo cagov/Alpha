@@ -181,16 +181,14 @@ function buildDisplay(wageJson) {
       }
       var options = { year: 'numeric', month: 'long', day: 'numeric' };
       return `
-        <cwds-accordion>
-          <div class="card mb-3" >
-            <div class="card-header accordion-alpha" id="heading${label}">
-              <button class="btn" type="button" aria-expanded="false">
-                <h3 class="pl-2 h4 mb-n1 pr-4 text-left">${translations["Minimum wage rates as of"]} ${new Date(label).toLocaleDateString('en-US', options)} </h3>
-              </button>
-            </div>
-            <div class="card-container collapsed" aria-labelledby="heading${label}">
-              <div class="card-body">
-                <table class="table">
+      <cwds-accordion>
+        <div class="card">
+          <button class="card-header accordion-alpha" type="button" aria-expanded="false">
+            <div class="accordion-title">${translations["Minimum wage rates as of"]} ${new Date(label).toLocaleDateString('en-US', options)} </div>
+          </button>
+          <div class="card-container collapsed">
+            <div class="card-body">
+              <table class="table">
                 <thead>
                     <th scope="col">${translations["Place"]}</th>
                     <th scope="col">${translations["Rate"]}</th>
