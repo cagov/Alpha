@@ -37,7 +37,7 @@ function getGeo() {
   var geoSuccess = function (position) {
     // Do magic with location
     startPos = position;
-    document.querySelector('.js-location-display').innerHTML = `${translations["Showing food banks near"]} ${translations["you"]}`;
+    document.querySelector('.js-location-display').innerHTML = `<h2>${translations["Showing food banks near"]} ${translations["you"]}</h2>`;
     reorient([position.coords.longitude, position.coords.latitude])
   };
   var geoError = function (error) {
@@ -297,7 +297,7 @@ document.querySelector('.js-food-lookup').addEventListener('submit',function(eve
   fetch(url)
   .then( function(resp) { return resp.json() })
   .then(function (data) {
-    document.querySelector('.js-location-display').innerHTML = `${translations["Showing food banks near"]} ${val}`;
+    document.querySelector('.js-location-display').innerHTML = `<h2>${translations["Showing food banks near"]} ${val}</h2>`;
     if(data.features.length > 0) {
       reorient(data.features[0].center);
     } else {
