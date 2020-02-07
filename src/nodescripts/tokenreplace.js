@@ -32,6 +32,8 @@ fs.createReadStream(globalfilepath, {encoding: 'utf16le'})
 
 
 function langloop() {
+  if(!csvresults || csvresults.length==0) throw console.error(globalfilepath+' is empty!')
+
   sortedcsvresults = csvresults.sort((a,b) => 100*(b.path.length-a.path.length)+b.token.length-a.token.length)
 
   for(const targetlang of targetlangs.map(x=>x.code)) 
