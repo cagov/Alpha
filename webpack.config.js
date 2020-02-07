@@ -53,7 +53,7 @@ module.exports = {
     ]),
     new MiniCssExtractPlugin({
       filename: '[name].css',
-      chunkFilename: 'css/[id].css',
+      chunkFilename: 'css/[chunkhash].css',
     }),
     new PurgecssPlugin({
       paths: glob.sync(`${PATHS.src}/**/*`,  { nodir: true }),
