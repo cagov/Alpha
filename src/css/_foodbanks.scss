@@ -19,11 +19,11 @@
 .mr-10 {
   margin-right: 10px;
 }
+.card-set {
+  display: grid;
+  grid-template-columns: 33% 33% 33%; 
+}
 .foodbanks {
-  .card-set {
-    display: grid;
-    grid-template-columns: 33% 33% 33%; 
-  }
   .card-set .card {
     margin-right: 20px;
     min-width: 200px;
@@ -43,10 +43,15 @@
 @media (max-width: 1080px) {
   .card-set {
     grid-template-columns: 50% 50%; 
-  } 
+  }
 }
 @media (max-width: 720px) {
   .card-set {
     grid-template-columns: 100%; 
+  }
+  .foodbanks {
+    .card-set .card {
+      max-width: none;
+    }
   }
 }
