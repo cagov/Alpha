@@ -109,14 +109,14 @@ function loadMap() {
     });  
   });
 }
-if(window.innerWidth > 600) {
-  fetch('https://api.alpha.ca.gov/FoodBanks')
-  .then(function(resp) { return resp.json() })
-  .then(function (data) {
-    window.foodLocations = data;
-    loadMap();
-  })
-}
+
+// get full geojson foodbanks
+fetch('https://api.alpha.ca.gov/FoodBanks')
+.then(function(resp) { return resp.json() })
+.then(function (data) {
+  window.foodLocations = data;
+  loadMap();
+})
 
 function reorient(position) {
   if(window.map) {
