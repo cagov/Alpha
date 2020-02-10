@@ -14,7 +14,7 @@ const globalfilepath = 'src/lang-global.csv'
 const targetlangs = [
   {code:'en',name:'English'},
   {code:'es',name:'Español'},
-  {code:'zh',name:'Chinese'}
+  {code:'zh',name:'中文(简体)'}
 ]
 
 let csvresults = []
