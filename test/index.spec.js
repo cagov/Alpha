@@ -12,6 +12,7 @@ let server
 
 /*
 More info for writing tests:
+retest
 
 Ways to use expect with jest: https://jestjs.io/docs/en/expect
 
