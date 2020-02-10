@@ -4,6 +4,31 @@ import getSteps from './getsteps.js';
 import getObstructions from './getobstructions.js';
 import createHTML from './obstruction-html.js';
 
+let roadStrings = {
+  "es": {
+    "key": "es",
+    "Sorry, we can't find that location. Please enter a valid location in California.": "Lo sentimos, no podemos encontrar ese lugar. Por favor, introduzca una ubicación válida en California.",
+    "Sorry, we can only show road conditions in California. Please enter a California location.": "En este momento, sólo podemos mostrar condiciones de la carretera en California. Por favor, introduzca una ubicación de California."
+  },
+  "en": {
+    "key": "en-US",
+    "Sorry, we can't find that location. Please enter a valid location in California.": "Sorry, we can't find that location. Please enter a valid location in California.",
+    "Sorry, we can only show road conditions in California. Please enter a California location.": "Sorry, we can only show road conditions in California. Please enter a California location."
+  },
+  "zh": {
+    "key": "zh",
+    "Sorry, we can't find that location. Please enter a valid location in California.": "很抱歉，我们无法找到那个地方。请在加利福尼亚州输入有效的位置。",
+    "Sorry, we can only show road conditions in California. Please enter a California location.": "在这个时候，我们只能显示在加利福尼亚州的道路状况。请进入加州的位置。"
+  }
+}
+let roadTranslations = roadStrings.en;
+if(window.location.pathname.indexOf('/es/')==0) {
+  roadTranslations = roadStrings.es;
+}
+if(window.location.pathname.indexOf('/zh/')==0) {
+  roadTranslations = roadStrings.es;
+}
+
 export default function addListeners() {
   document.querySelector('.destination-button').addEventListener('click', async function(event) {
     event.preventDefault();
@@ -24,7 +49,7 @@ export default function addListeners() {
       window.startCoords = startCoords.center;
       document.querySelector('.js-geocoder-start input').value = startCoords.place_name;
       if(!isThatInCali(window.startCoords)) {
-        errorSelector.innerHTML = "Sorry, we can't find that location. Please enter a valid location in California.";
+        errorSelector.innerHTML = roadTranslations["Sorry, we can't find that location. Please enter a valid location in California."];
         errorSelector.style.display = 'block'
       }
     }
@@ -62,7 +87,7 @@ async function readDestination() {
     window.endCoords = endCoords.center;
     document.querySelector('#geocoder input').value = endCoords.place_name;
     if(!isThatInCali(window.endCoords)) {
-      errorSelector.innerHTML = "Sorry, we can't find that location. Please enter a valid location in California.";
+      errorSelector.innerHTML = roadTranslations["Sorry, we can't find that location. Please enter a valid location in California."];
       errorSelector.style.display = 'block'
     }
   }
@@ -88,7 +113,7 @@ window.geocoder = new MapboxGeocoder({
   let errorSelector = document.querySelector('.error1');
   errorSelector.style.display = 'none';
   if(!isThatInCali(window.endCoords)) {
-    errorSelector.innerHTML = "Sorry, we can only show road conditions in California. Please enter a California location.";
+    errorSelector.innerHTML = roadTranslations["Sorry, we can only show road conditions in California. Please enter a California location."];
     errorSelector.style.display = 'block'
   }
   if(window.startCoords) {
@@ -111,7 +136,7 @@ window.geocoderStart = new MapboxGeocoder({
   let errorSelector = document.querySelector('.error2');
   errorSelector.style.display = 'none';
   if(!isThatInCali(window.startCoords)) {
-    errorSelector.innerHTML = "Sorry, we can only show road conditions in California. Please enter a California location.";
+    errorSelector.innerHTML = roadTranslations["Sorry, we can only show road conditions in California. Please enter a California location."];
     errorSelector.style.display = 'block'
   }
   displayObs();
