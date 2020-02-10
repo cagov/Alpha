@@ -2,6 +2,7 @@ const fs = require('fs')
 const fse = require('fs-extra') //https://www.npmjs.com/package/fs-extra
 const csv = require('csv-parser') //https://www.npmjs.com/package/csv-parser
 const replace = require('replace-in-file'); //https://www.npmjs.com/package/replace-in-file
+const fulldomainurl = 'https://www.alpha.ca.gov/'
 
 //start by copying the existing language output to a source folder
 const sourcefolder = 'public/'
@@ -13,13 +14,13 @@ const globalfilepath = 'src/lang-global.csv'
 const targetlangs = [
   {code:'en',name:'English'},
   {code:'es',name:'Español'},
-  {code:'zh',name:'Chinese'}
+  {code:'zh',name:'中文(简体)'}
 ]
 
 let csvresults = []
 let sortedcsvresults = []
-fs.createReadStream(globalfilepath, {encoding: 'utf16le'})
-  .pipe(csv({ separator: '\t', strict: true, skipComments: true, newline: '\r\n', mapHeaders: ({ header }) => header.toLowerCase().trim() } ))
+fs.createReadStream(globalfilepath)
+  .pipe(csv({ separator: ',', strict: true, skipComments: true, newline: '\r\n', mapHeaders: ({ header }) => header.toLowerCase().trim() } ))
   .on('data', data => {
     if(data['']) throw console.error('*** Remove empty columns from CSV file - ' + globalfilepath);
 
@@ -54,12 +55,14 @@ function replaceonelanguage(targetlang) {
       /lang="en"/g,
       /\/en\//g,
       /\[code-language-select\]/g,
+      /\[code-language-alt-meta\]/g,
       /\[FullPath\]/g
     ],
     to:[
       'lang="'+targetlang+'"', 
       targetlang=='en'?'/':'/'+targetlang+'/',
       targetlangs.map(l=>l.code!=targetlang ? '<a class="dropdown-item" rel="alternate" hreflang="'+l.code+'" href="/'+l.code+'[FullPath]/">'+l.name+'</a>' : '').join(''),
+      targetlangs.map(l=>l.code!=targetlang ? '<link rel="alternate" hreflang="'+l.code+'" href="'+fulldomainurl+l.code+'[FullPath]/">' : '').join(''),
       (match, ...args) => fileFromArgs(args,targetlang)
     ]})
 
