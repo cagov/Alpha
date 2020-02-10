@@ -59,7 +59,7 @@ function replaceonelanguage(targetlang) {
     to:[
       'lang="'+targetlang+'"', 
       targetlang=='en'?'/':'/'+targetlang+'/',
-      targetlangs.map(l=>l.code!=targetlang ? '<a class="dropdown-item" href="/'+l.code+'[FullPath]">'+l.name+'</a>' : '').join(''),
+      targetlangs.map(l=>l.code!=targetlang ? '<a class="dropdown-item" rel="alternate" hreflang="'+l.code+'" href="/'+l.code+'[FullPath]/">'+l.name+'</a>' : '').join(''),
       (match, ...args) => fileFromArgs(args,targetlang)
     ]})
 
