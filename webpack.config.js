@@ -17,7 +17,7 @@ const minificationOptions = {
   useShortDoctype: true,
   minifyJS: true
 }
-const excludedChunks = ['minwage', 'food'];
+const excludedChunks = ['minwage', 'food', 'roads'];
 
 module.exports = {
   entry: {
@@ -32,6 +32,9 @@ module.exports = {
     ],
     food: [
       './src/js/foodbanks/index.js'
+    ],
+    roads: [
+      './src/js/roads/index.js'
     ]
   },
   optimization: {
@@ -100,7 +103,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'en/services/find-minimum-wage-your-city/index.html',
       template: 'src/services/find-minimum-wage-your-city/index.html',
-      excludeChunks: ['food'],
+      excludeChunks: ['food','roads'],
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
@@ -142,13 +145,19 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'en/services/find-food-banks-near-you/index.html',
       template: 'src/services/find-food-banks-near-you/index.html',
-      excludeChunks: ['minwage'],
+      excludeChunks: ['minwage','roads'],
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'en/services/hire-licensed-contractor-home-improvements/index.html',
       template: 'src/services/hire-licensed-contractor-home-improvements/index.html',
       excludeChunks: excludedChunks,
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'en/check-lane-closures/index.html',
+      template: 'src/services/check-lane-closures/index.html',
+      excludeChunks: ['minwage', 'food'],
       minify: minificationOptions
     }),
     new ScriptExtHtmlWebpackPlugin({
