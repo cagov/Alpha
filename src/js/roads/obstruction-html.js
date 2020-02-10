@@ -1,4 +1,39 @@
 export default function createHTML(myObstructions, startCoords, endCoords) {
+
+  let roadStrings = {
+    "es": {
+      "key": "es",
+      "Get directions": "Get directions",
+      "Road conditions for your trip": "Road conditions for your trip",
+      "Road condition": "Road condition",
+      "Landmark": "Landmark",
+      "Description": "Description"
+    },
+    "en": {
+      "key": "en-US",
+      "Get directions": "Get directions",
+      "Road conditions for your trip": "Road conditions for your trip",
+      "Road condition": "Road condition",
+      "Landmark": "Landmark",
+      "Description": "Description"
+    },
+    "zh": {
+      "key": "zh",
+      "Get directions": "Get directions",
+      "Road conditions for your trip": "Road conditions for your trip",
+      "Road condition": "Road condition",
+      "Landmark": "Landmark",
+      "Description": "Description"
+    }
+  }
+  let roadTranslations = roadStrings.en;
+  if(window.location.pathname.indexOf('/es/')==0) {
+    roadTranslations = roadStrings.es;
+  }
+  if(window.location.pathname.indexOf('/zh/')==0) {
+    roadTranslations = roadStrings.es;
+  }
+  
   let obstructionMap = new Map();
   let incidentMap = new Map();
   myObstructions.forEach( (obs) => {
@@ -16,7 +51,7 @@ export default function createHTML(myObstructions, startCoords, endCoords) {
     }
   })
   
-  let majorhtml = '<hr><h2 class="mt-20">Road conditions for your trip</h2>';
+  let majorhtml = `<hr><h2 class="mt-20">${roadTranslations["Road conditions for your trip"]}</h2>`;
   let foundMajor = false;
   obstructionMap.forEach( (obstructionArray, key, map) => {
     let internalHTML = '';
@@ -43,7 +78,7 @@ export default function createHTML(myObstructions, startCoords, endCoords) {
       <table class="table">
         <thead class="thead-dark">
           <tr>
-            <th>Road condition</th><th>Landmark</th><th>Description</th>
+            <th>${roadTranslations["Road condition"]}</th><th>${roadTranslations["Landmark"]}</th><th>${roadTranslations["Description"]}</th>
           </tr>
         </thead>
         ${internalHTML}
@@ -73,7 +108,8 @@ export default function createHTML(myObstructions, startCoords, endCoords) {
 
   let directionsUrl = mapsSelector(document.querySelector('.js-geocoder-start input').value,document.querySelector('#geocoder input').value);
   majorhtml += `<p>
-    <a href="${directionsUrl}" target="_new" class="btn btn-primary">Get Directions</a>
+let roadTranslations = roadStrings.en;
+<a href="${directionsUrl}" target="_new" class="btn btn-primary">${roadTranslations["Get Directions"]}</a>
   </p>`;
   return majorhtml;
 }
