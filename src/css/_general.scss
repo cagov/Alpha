@@ -60,6 +60,10 @@ a:hover {
     outline: 2px solid #004abc;
 }
 
+li.list-group-item.inner-list:focus {
+    outline: none;
+}
+
 /* Action Link */
 
 .action-link {
@@ -335,7 +339,7 @@ hr {
 }
 .navbar-inverse, .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
 	background: #0f1e6b;
-    background: linear-gradient(80deg, #0f1e6b 0%, #170f6b 100%);
+    background: linear-gradient(80deg, #0f1e6b 0%, #1f0f6b 100%);
 }
 .navbar-inverse .navbar-toggle {
   border-color: #ffffff;
@@ -373,7 +377,7 @@ hr {
 
 .jumbotron.alpha  {
 	background: #0f1e6b;
-    background: linear-gradient(80deg, #0f1e6b 0%, #170f6b 100%);
+    background: linear-gradient(80deg, #0f1e6b 0%, #1f0f6b 100%);
 	color: #fff;
 }
 
