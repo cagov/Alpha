@@ -170,6 +170,17 @@ ul > li.list-group-item.and-or-lead.list-open {
 	margin-left: 30px!important;
 }
 
+cwds-step-list li.list-group-item:focus-within {
+    outline: 2px solid #0257d5;
+    z-index: 10;  
+	background: rgba(215, 230, 252, 0.2);  
+}
+
+cwds-step-list li .step-interior {
+	padding-top:0;
+	padding-right: 10%;
+}
+
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) { 

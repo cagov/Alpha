@@ -149,7 +149,7 @@ function doubleTemplate(location, wageData) {
                   for(var key in wageitem) {
                     label = key;
                   }
-                  return `<th scope="col">${translations["Employers with"]} ${translations[label]} ${translations["employees"]}</th>`
+                  return `<th class="text-left bold" scope="col">${translations["Employers with"]} ${translations[label]} ${translations["employees"]}</th>`
                 }).join(' ')}`;
             }
             return output
