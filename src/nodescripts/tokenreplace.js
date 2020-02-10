@@ -19,8 +19,8 @@ const targetlangs = [
 
 let csvresults = []
 let sortedcsvresults = []
-fs.createReadStream(globalfilepath, {encoding: 'utf16le'})
-  .pipe(csv({ separator: '\t', strict: true, skipComments: true, newline: '\r\n', mapHeaders: ({ header }) => header.toLowerCase().trim() } ))
+fs.createReadStream(globalfilepath)
+  .pipe(csv())
   .on('data', data => {
     if(data['']) throw console.error('*** Remove empty columns from CSV file - ' + globalfilepath);
 
