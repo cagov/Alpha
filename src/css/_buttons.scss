@@ -100,3 +100,29 @@ button.step-description {
   
 }
 
+button:focus {
+    outline: none;
+}
+
+.btn:focus, .btn.focus {
+    color: #ffffff;
+    background-color: #0257d5;
+    border-color: #0257d5;
+    box-shadow: none;
+}
+
+
+.btn-light:focus, .btn-light.focus {
+    color: #ffffff;
+    background-color: #0257d5;
+    border-color: #0257d5;
+    box-shadow: none;
+}
+
+.btn-dark:focus, .btn-dark.focus {
+    color: #ffffff;
+    background-color: #0257d5;
+    border-color: #0257d5;
+    box-shadow: none;
+}
+
