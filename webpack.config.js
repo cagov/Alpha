@@ -77,7 +77,7 @@ module.exports = {
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: 'news/index.html',
+      filename: 'en/news/index.html',
       template: 'src/news/index.html',
       excludeChunks: excludedChunks,
       minify: minificationOptions
