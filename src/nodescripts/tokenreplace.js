@@ -45,13 +45,15 @@ function langloop() {
   sortedcsvresults = csvresults.sort((a,b) => 100*(b.path.length-a.path.length)+b.token.length-a.token.length)
   fileslist = [...new Set(sortedcsvresults.map(item => item.path))].filter(x=>x)
 
-  for(const targetlang of targetlangs.map(x=>x.code)) 
+  console.log(fileslist)
+
+  targetlangs.map(x=>x.code).forEach(targetlang=>
     // copy source folder to destination
     fse.copy(source, getdestination(targetlang), {overwrite: false, errorOnExist: true}, 
       err => err 
         ? console.error(err)
         : replaceonelanguage(targetlang))
-  
+  )
 } //langloop  
 
 
@@ -74,26 +76,18 @@ function replaceonelanguage(targetlang) {
       (match, ...args) => fileFromArgs(args,targetlang)
     ]})
 
+  fileslist.forEach(path=> {
+    let files = getdestination(targetlang)+path
+    if(!files.endsWith('.html')) files +='/index.html'
 
+    sortedcsvresults
+      .filter(x=>!x.path||x.path===path)
+      .forEach(data=>replaceonetoken(data,targetlang,files))
+  })
 
-
-    fileslist.forEach(path=> {
-      const filteredtokens = sortedcsvresults.filter(x=>!x.path||x.path===path)
-      const files = getdestination(targetlang)+path+'/index.html'
-
-      for(const data of filteredtokens) {
-        replaceonetoken(data,targetlang,files)
-      }
-    })
-
-    const nomatch = sortedcsvresults.find(x=>x.numMatches==0)
-    if(nomatch)
-      return console.error(`no match for "${nomatch.path} -> ${nomatch.token}"`)
-
-
-
-  //run each token in order
-  //sortedcsvresults.forEach(data=>replaceonetoken(data,targetlang))
+  const nomatch = sortedcsvresults.find(x=>x.numMatches==0)
+  if(nomatch)
+    return console.error(`no match for "${nomatch.path} -> ${nomatch.token}"`)
 
   if(targetlang=='en') 
     //English default goes to root
@@ -114,29 +108,12 @@ function replaceonetoken(data,targetlang,files) {
     .replace(/\(/,'\\\(')
     ,'g')] //add token with literal square brackets
 
-  replacement = data[targetlang]
+  const to = data[targetlang]
     .replace(/<\/\s*/g,'<\/') //fixes broken html from auto-translate "</ i>" => "</i>"
 
-  const to = data.path
-  ? (match, ...args) =>
-        //return text, or the original match if the file isn't right
-        data.path==(fileFromArgs(args,targetlang) || '/')
-        ? replacement
-        : match
-  : replacement
-
-
-
-
-
-  //replace this token, return an error if it isn't found
-  const match = replace.sync({files,from,to,countMatches: true})
-  match.forEach(x=>data.numMatches += x.numMatches||0)
-
-
-
-        //.find(value=>value.numMatches != 0)
-    //return console.error(targetlang+': Error - Replacement not found - '+data.path+' - "'+data.token+'"')
+  //replace this token, add the number of matches to the list
+  replace.sync({files,from,to,countMatches: true})
+    .forEach(x=>data.numMatches += x.numMatches||0)
 }
 
 
