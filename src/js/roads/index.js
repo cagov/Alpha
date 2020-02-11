@@ -94,55 +94,63 @@ async function readDestination() {
   return 'done';
 }
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiYWFyb25oYW5zIiwiYSI6ImNqNGs4cms1ZzBocXkyd3FzZGs3a3VtamYifQ.HQjFfVzwwxwCmGr2nvnvSA';
-var map = new mapboxgl.Map({
-  container: 'map',
-  style: 'mapbox://styles/mapbox/streets-v11',
-  center: [-79.4512, 43.6568],
-  zoom: 13
-});
-  
-window.geocoder = new MapboxGeocoder({
-  accessToken: mapboxgl.accessToken,
-  placeholder: ' ',
-  // bbox: [-124.409591, 32.534156, -114.131211, 42.009518],
-  bbox: [-124.7844079, 24.7433195, -66.9513812, 49.3457868],
-  mapboxgl: mapboxgl
-}).on('result',async function(item) {
-  window.endCoords = item.result.center;
-  let errorSelector = document.querySelector('.error1');
-  errorSelector.style.display = 'none';
-  if(!isThatInCali(window.endCoords)) {
-    errorSelector.innerHTML = roadTranslations["Sorry, we can only show road conditions in California. Please enter a California location."];
-    errorSelector.style.display = 'block'
-  }
-  if(window.startCoords) {
-    displayObs();
+function setupRoadConditions() {
+  if(typeof(mapboxgl)!="undefined") {
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYWFyb25oYW5zIiwiYSI6ImNqNGs4cms1ZzBocXkyd3FzZGs3a3VtamYifQ.HQjFfVzwwxwCmGr2nvnvSA';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [-79.4512, 43.6568],
+      zoom: 13
+    });
+      
+    window.geocoder = new MapboxGeocoder({
+      accessToken: mapboxgl.accessToken,
+      placeholder: ' ',
+      // bbox: [-124.409591, 32.534156, -114.131211, 42.009518],
+      bbox: [-124.7844079, 24.7433195, -66.9513812, 49.3457868],
+      mapboxgl: mapboxgl
+    }).on('result',async function(item) {
+      window.endCoords = item.result.center;
+      let errorSelector = document.querySelector('.error1');
+      errorSelector.style.display = 'none';
+      if(!isThatInCali(window.endCoords)) {
+        errorSelector.innerHTML = roadTranslations["Sorry, we can only show road conditions in California. Please enter a California location."];
+        errorSelector.style.display = 'block'
+      }
+      if(window.startCoords) {
+        displayObs();
+      } else {
+        window.geocoderStart.clear();
+      }
+    })
+       
+    document.getElementById('geocoder').appendChild(window.geocoder.onAdd(map));
+    
+    window.geocoderStart = new MapboxGeocoder({
+      accessToken: mapboxgl.accessToken,
+      placeholder: ' ',
+      bbox: [-124.7844079, 24.7433195, -66.9513812, 49.3457868],
+      mapboxgl: mapboxgl
+    }).on('result',async function(item) {
+      let findDest = await readDestination();
+      window.startCoords = item.result.center;
+      let errorSelector = document.querySelector('.error2');
+      errorSelector.style.display = 'none';
+      if(!isThatInCali(window.startCoords)) {
+        errorSelector.innerHTML = roadTranslations["Sorry, we can only show road conditions in California. Please enter a California location."];
+        errorSelector.style.display = 'block'
+      }
+      displayObs();
+    })
+    
+    document.querySelector('.js-geocoder-start').appendChild(window.geocoderStart.onAdd(map));
   } else {
-    window.geocoderStart.clear();
+    setTimeout(setupRoadConditions, 500);
   }
-})
-   
-document.getElementById('geocoder').appendChild(window.geocoder.onAdd(map));
+}
 
-window.geocoderStart = new MapboxGeocoder({
-  accessToken: mapboxgl.accessToken,
-  placeholder: ' ',
-  bbox: [-124.7844079, 24.7433195, -66.9513812, 49.3457868],
-  mapboxgl: mapboxgl
-}).on('result',async function(item) {
-  let findDest = await readDestination();
-  window.startCoords = item.result.center;
-  let errorSelector = document.querySelector('.error2');
-  errorSelector.style.display = 'none';
-  if(!isThatInCali(window.startCoords)) {
-    errorSelector.innerHTML = roadTranslations["Sorry, we can only show road conditions in California. Please enter a California location."];
-    errorSelector.style.display = 'block'
-  }
-  displayObs();
-})
-
-document.querySelector('.js-geocoder-start').appendChild(window.geocoderStart.onAdd(map));
+setupRoadConditions();
 
 function displayObs() {
   if(window.endCoords && window.startCoords) {
