@@ -3,11 +3,11 @@ export default function createHTML(myObstructions, startCoords, endCoords) {
   let roadStrings = {
     "es": {
       "key": "es",
-      "Get directions": "Get directions",
-      "Road conditions for your trip": "Road conditions for your trip",
-      "Road condition": "Road condition",
-      "Landmark": "Landmark",
-      "Description": "Description"
+      "Get directions": "Obtener las direcciones",
+      "Road conditions for your trip": "condiciones de la carretera para su viaje",
+      "Road condition": "Condiciones del camino",
+      "Landmark": "Punto de referencia",
+      "Description": "Descripción"
     },
     "en": {
       "key": "en-US",
@@ -19,13 +19,14 @@ export default function createHTML(myObstructions, startCoords, endCoords) {
     },
     "zh": {
       "key": "zh",
-      "Get directions": "Get directions",
-      "Road conditions for your trip": "Road conditions for your trip",
-      "Road condition": "Road condition",
-      "Landmark": "Landmark",
-      "Description": "Description"
+      "Get directions": "行车路线",
+      "Road conditions for your trip": "道路状况为您的行程",
+      "Road condition": "道路状况",
+      "Landmark": "基准",
+      "Description": "描述"
     }
   }
+
   let roadTranslations = roadStrings.en;
   if(window.location.pathname.indexOf('/es/')==0) {
     roadTranslations = roadStrings.es;
@@ -108,8 +109,7 @@ export default function createHTML(myObstructions, startCoords, endCoords) {
 
   let directionsUrl = mapsSelector(document.querySelector('.js-geocoder-start input').value,document.querySelector('#geocoder input').value);
   majorhtml += `<p>
-let roadTranslations = roadStrings.en;
-<a href="${directionsUrl}" target="_new" class="btn btn-primary">${roadTranslations["Get Directions"]}</a>
+    <a href="${directionsUrl}" target="_new" class="btn btn-primary">${roadTranslations["Get directions"]}</a>
   </p>`;
   return majorhtml;
 }
