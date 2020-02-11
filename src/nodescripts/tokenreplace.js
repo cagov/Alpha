@@ -18,7 +18,6 @@ const targetlangs = [
 ]
 
 let csvresults = []
-let sortedcsvresults = []
 fs.createReadStream(globalfilepath)
   .pipe(csv({ separator: ',', strict: true, skipComments: true, newline: '\r\n', mapHeaders: ({ header }) => header.toLowerCase().trim() } ))
   .on('data', data => {
@@ -35,19 +34,19 @@ fs.createReadStream(globalfilepath)
 function langloop() {
   if(!csvresults || csvresults.length==0) throw console.error(globalfilepath+' is empty!')
 
-  sortedcsvresults = csvresults.sort((a,b) => 100*(b.path.length-a.path.length)+b.token.length-a.token.length)
+  const sortedcsvresults = csvresults.sort((a,b) => 100*(b.path.length-a.path.length)+b.token.length-a.token.length)
 
   for(const targetlang of targetlangs.map(x=>x.code)) 
     // copy source folder to destination
     fse.copy(source, getdestination(targetlang), {overwrite: false, errorOnExist: true}, 
       err => err 
         ? console.error(err)
-        : replaceonelanguage(targetlang))
+        : replaceonelanguage(targetlang,sortedcsvresults))
   
 } //langloop  
 
 
-function replaceonelanguage(targetlang) {
+function replaceonelanguage(targetlang,sortedcsvresults) {
   //Global replace of defaults
   replace.sync({
     files:getfilespath(targetlang),
