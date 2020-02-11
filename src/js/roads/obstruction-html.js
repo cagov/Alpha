@@ -3,19 +3,11 @@ export default function createHTML(myObstructions, startCoords, endCoords) {
   let roadStrings = {
     "es": {
       "key": "es",
-<<<<<<< HEAD
       "Get directions": "Obtener las direcciones",
       "Road conditions for your trip": "condiciones de la carretera para su viaje",
       "Road condition": "Condiciones del camino",
       "Landmark": "Punto de referencia",
       "Description": "Descripción"
-=======
-      "Get directions": "Get directions",
-      "Road conditions for your trip": "Road conditions for your trip",
-      "Road condition": "Road condition",
-      "Landmark": "Landmark",
-      "Description": "Description"
->>>>>>> ie fixes and more translations
     },
     "en": {
       "key": "en-US",
@@ -27,7 +19,6 @@ export default function createHTML(myObstructions, startCoords, endCoords) {
     },
     "zh": {
       "key": "zh",
-<<<<<<< HEAD
       "Get directions": "行车路线",
       "Road conditions for your trip": "道路状况为您的行程",
       "Road condition": "道路状况",
@@ -36,15 +27,6 @@ export default function createHTML(myObstructions, startCoords, endCoords) {
     }
   }
 
-=======
-      "Get directions": "Get directions",
-      "Road conditions for your trip": "Road conditions for your trip",
-      "Road condition": "Road condition",
-      "Landmark": "Landmark",
-      "Description": "Description"
-    }
-  }
->>>>>>> ie fixes and more translations
   let roadTranslations = roadStrings.en;
   if(window.location.pathname.indexOf('/es/')==0) {
     roadTranslations = roadStrings.es;
@@ -127,12 +109,7 @@ export default function createHTML(myObstructions, startCoords, endCoords) {
 
   let directionsUrl = mapsSelector(document.querySelector('.js-geocoder-start input').value,document.querySelector('#geocoder input').value);
   majorhtml += `<p>
-<<<<<<< HEAD
     <a href="${directionsUrl}" target="_new" class="btn btn-primary">${roadTranslations["Get directions"]}</a>
-=======
-let roadTranslations = roadStrings.en;
-<a href="${directionsUrl}" target="_new" class="btn btn-primary">${roadTranslations["Get Directions"]}</a>
->>>>>>> ie fixes and more translations
   </p>`;
   return majorhtml;
 }
