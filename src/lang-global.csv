@@ -392,10 +392,10 @@ Un doctor, una enfermera o un asistente médico debe certificar su condición m�
 /check-lane-closures,,Please enter a starting location in California:,"Por favor, introduzca una ubicación de inicio en California:",请进入加州的开始位置：
 /check-lane-closures,[lang-Enter],Enter,Entrar,进入
 /,,Check for lane closures,Compruebe si el cierre de carriles,检查车道关闭
-/check-lane-closures,,"Sorry, we can't find that location. Please enter a valid location in California.","Lo sentimos, no podemos encontrar ese lugar. Por favor, introduzca una ubicación válida en California.",很抱歉，我们无法找到那个地方。请在加利福尼亚州输入有效的位置。
-/check-lane-closures,,"Sorry, we can only show road conditions in California. Please enter a California location.","En este momento, sólo podemos mostrar condiciones de la carretera en California. Por favor, introduzca una ubicación de California.",在这个时候，我们只能显示在加利福尼亚州的道路状况。请进入加州的位置。
-/check-lane-closures,,Get directions,Obtener las direcciones,行车路线
-/check-lane-closures,,Road conditions for your trip,condiciones de la carretera para su viaje,道路状况为您的行程
-/check-lane-closures,,Road condition,Condiciones del camino,道路状况
-/check-lane-closures,,Landmark,Punto de referencia,基准
-/check-lane-closures,,Description,Descripción,描述
+/news,,"Sorry, we can't find that location. Please enter a valid location in California.","Lo sentimos, no podemos encontrar ese lugar. Por favor, introduzca una ubicación válida en California.",很抱歉，我们无法找到那个地方。请在加利福尼亚州输入有效的位置。
+/news,,"Sorry, we can only show road conditions in California. Please enter a California location.","En este momento, sólo podemos mostrar condiciones de la carretera en California. Por favor, introduzca una ubicación de California.",在这个时候，我们只能显示在加利福尼亚州的道路状况。请进入加州的位置。
+/news,,Get directions,Obtener las direcciones,行车路线
+/news,,Road conditions for your trip,condiciones de la carretera para su viaje,道路状况为您的行程
+/news,,Road condition,Condiciones del camino,道路状况
+/news,,Landmark,Punto de referencia,基准
+/news,,Description,Descripción,描述
