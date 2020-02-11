@@ -199,6 +199,27 @@ describe("mobile", () => {
 
 })
 
+
+describe("lane closures", () => {
+  test("lane closures", async () => {
+    await page.goto(hostname+'/check-lane-closures/')
+    await page.waitForSelector("#geocoder")
+    await page.type("#geocoder input", '95825')
+    await page.click('.mapboxgl-ctrl-geocoder--suggestion-title')
+    await page.type(".js-geocoder-start input", '95670')
+    await page.click('.mapboxgl-ctrl-geocoder--suggestion-title')
+    await page.waitForSelector("#geocoder")
+    await page.waitForFunction(
+      'document.querySelectorAll(".obstructions-major a").length'
+      )
+    let answers = await page.$$eval('.obstructions-major a', answers => { return answers });
+    expect(answers.length).toBeGreaterThan(0);
+
+    
+  }, 16000)
+
+})
+
 afterAll(() => {
   browser.close()
   server.close()
