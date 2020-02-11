@@ -60,9 +60,6 @@ a:hover {
     outline: 2px solid #004abc;
 }
 
-li.list-group-item.inner-list:focus {
-    outline: none;
-}
 
 /* Action Link */
 
@@ -576,6 +573,7 @@ li.list-group-item.alpha-footer {
 	box-shadow: 0 0 0 0.2rem #fff;
 }
 
+
 /*----- Alerts -----*/
 
 .alert-warning {
@@ -705,7 +703,11 @@ a.list-group-item.list-group-item-action.lead {
 	color: #004abc;
 }
 
+span.step-interior > ul:nth-child(3) > li:nth-child(2)
 
+li, .list-group-item.inner-list:focus-within {
+    outline: none;
+}
 
 
 /* Medium devices (tablets, 768px and up)*/
