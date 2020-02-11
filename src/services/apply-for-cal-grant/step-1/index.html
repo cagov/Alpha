@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<%= require('html-loader!../../../partials/meta-common.html') %>
+  <%= require('html-loader!../../../partials/meta-common.html') %>
   <%= require('html-loader!../../../partials/favicons.html') %>
   <meta name="description" content="Follow these steps to apply for a Cal Grant. It’s money for college you don’t have to pay back.">
 	<title>Apply for a Cal Grant: Step 1</title>
@@ -14,15 +14,16 @@
 		<meta property="og:title" content="Apply for a Cal Grant: Step 1 - Alpha.CA.gov">
 		<meta property="og:description" content="Follow these steps to apply for a Cal Grant. It’s money for college you don’t have to pay back.">
 		<meta property="og:url" content="https://alpha.ca.gov/apply-for-cal-grant/step-1/">
-
 		<link rel="canonical" href="https://alpha.ca.gov/apply-for-cal-grant/step-1/" />
 </head>
 
 <body>
-	<%= require('html-loader!../../../partials/official.html') %>
+<header>
+  <%= require('html-loader!../../../partials/official.html') %>
   <%= require('html-loader!../../../partials/experiment-banner.html') %>
   <%= require('html-loader!../../../partials/navbar.html') %>
-
+</header>
+<main>
   <div class="container-fluid jumbotron">
     <div class="container">
       <div class="row">
@@ -75,10 +76,12 @@
 				</div>
 		</div>
 </div>
-	
-	<%= require('html-loader!../../../partials/feedback.html') %>
+</main>
+<footer>
+  <%= require('html-loader!../../../partials/feedback.html') %>
   <%= require('html-loader!../../../partials/footer.html') %>
   <%= require('html-loader!../../../partials/alphabar.html') %>
   <%= require('html-loader!../../../partials/ga.html') %>
+</footer>
 </body>
 </html>

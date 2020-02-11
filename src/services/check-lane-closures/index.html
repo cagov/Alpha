@@ -25,10 +25,12 @@
 
 <body>
   <link href="https://california.azureedge.net/cdt/statetemplate/6.0.0/css/cagov.font-only.min.css" rel="stylesheet" />
+ <header>
   <%= require('html-loader!../../partials/official.html') %>
   <%= require('html-loader!../../partials/experiment-banner.html') %>
   <%= require('html-loader!../../partials/navbar.html') %>
-
+</header>
+<main>
   <div class="container-fluid jumbotron">
     <div class="container">
       <div class="row">
@@ -80,13 +82,14 @@
       </div>
     </div>
   </div>
-
+</main>
+<footer>
   <%= require('html-loader!../../partials/feedback.html') %>
   <%= require('html-loader!../../partials/footer.html') %>
   <%= require('html-loader!../../partials/alphabar.html') %>
+</footer>
   <script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js" defer></script>
-  <script
-  src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js" defer></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js" defer></script>
   <%= require('html-loader!../../partials/ga.html') %>
 
 </body>
