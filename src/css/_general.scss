@@ -337,7 +337,7 @@ hr {
 }
 .navbar-inverse, .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
 	background: #0f1e6b;
-    background: linear-gradient(80deg, #0f1e6b 0%, #1f0f6b 100%);
+    background: linear-gradient(60deg, #0f1e6b 0%, #1f0f6b 70%);
 }
 .navbar-inverse .navbar-toggle {
   border-color: #ffffff;
@@ -375,7 +375,7 @@ hr {
 
 .jumbotron.alpha  {
 	background: #0f1e6b;
-    background: linear-gradient(80deg, #0f1e6b 0%, #1f0f6b 100%);
+    background: linear-gradient(60deg, #0f1e6b 0%, #1f0f6b 70%);
 	color: #fff;
 }
 
@@ -417,11 +417,11 @@ hr {
 
 .official p {
   background-image: url('https://alpha.ca.gov/img/ca-flag.png');
-	background-repeat: no-repeat;
-	background-position: 5px 50%;
-	background-size: contain;
-	margin: 0;
-  padding: 0 0 0 50px;
+  background-repeat: no-repeat;
+  background-position: 5px 50%;
+  background-size: contain;
+  margin: 0;
+  padding: 0 0 0 65px;
 }
 
 .nav-cali-bg {
@@ -723,7 +723,7 @@ li .action-link:focus-within {
 @media (min-width: 768px) { 
 
   .official p {
-    padding: 3px 0 3px 75px;
+    padding: 3px 0 3px 60px;
   }
 
 }
@@ -742,11 +742,6 @@ li .action-link:focus-within {
 	
 li.list-group-item.alpha-footer {
     padding-bottom: 1rem;
-}
-
-.official p {
-	padding: 0 0 0 65px;
-	background-size: contain;
 }
 
 .one-column-fix {
