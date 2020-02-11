@@ -33,11 +33,12 @@ path,token,en,es,zh
 /,,The Alpha website for the State of California.,El sitio web de Alpha para el Estado de California.,阿尔法网站加利福尼亚州。
 /,,Alpha.CA.gov - State of California,Alpha.CA.gov - Estado de California,Alpha.CA.gov  - 加利福尼亚州
 /,,We're making it easier to find and use government services and information in the State of California.,Estamos haciendo más fácil de buscar y usar servicios e información del gobierno.,我们更容易发现和使用信息和服务的政府。
+/,,Apply for a Cal Grant (college financial aid),Solicitar una beca Cal Grant (ayuda financiera para la universidad),申请加州格兰特（上大学助学金）
 ,,Apply for a Cal Grant,Solicitar una beca Cal Grant,申请加州格兰特
 /about,,About us,Sobre nosotros,关于我们
 /about,,The Alpha website for the State of California.,La página web Alfa para el Estado de California.,阿尔法的网页为加利福尼亚州。
 /about,,Follow our progress,Siga nuestro progreso,按照我们的进度
-/about,,We're making it easier to find and use government services and information in the State of California.,Estamos haciendo que sea más fácil de encontrar y servicios de uso e información del gobierno en el Estado de California.,我们使它更容易查找和使用服务，并在加利福尼亚州的政府信息。
+/about,,We're making it easier to find and use government services and information in the State of California.,Estamos haciendo que sea más fácil de encontrar y servicios de uso e información del gobierno en el Estado de California.,我们使它更容易从政府在加利福尼亚州发现和使用服务和信息。
 /about,,About Alpha.CA.gov - State of California,Sobre Alpha.CA.gov - Estado de California,关于Alpha.CA.gov  - 加利福尼亚州
 /about,,"We're a small but mighty team of public servants and outside experts in user research and design. Together, we're reimagining","Somos un equipo pequeño pero poderoso de los funcionarios públicos y expertos externos en la investigación y el diseño de usuario. Juntos, estamos reimaginando",我们是外部公共官员和研究和设计用户专家组成的小而强大的团队。总之，我们reimagining
 /about,,CA.gov</a> with and for the people of California.,CA.gov</a> con y para la gente de California.,CA.gov </a>，提供和加州人民。
@@ -54,24 +55,22 @@ path,token,en,es,zh
 /feedback,,Alpha.CA.gov - State of California,Alpha.CA.gov - Estado de California,Alpha.CA.gov  - 加利福尼亚州
 /feedback,[lang-survey-link],tRaiETqnLgj758hTBazgd_2BHkAkgHavJBdUVWcya_2B9TmX6knDU4u_2FzgDZXNzk7OQy,tRaiETqnLgj758hTBazgd5pfn8XJKc0sU9CSd56Ev1KwNMGA_2B06kF9_2F7NCWSNhTR,tRaiETqnLgj758hTBazgd5pfn8XJKc0sU9CSd56Ev1KwNMGA_2B06kF9_2F7NCWSNhTR
 /feedback,,Feedback,Comentarios,评论
-/services/find-minimum-wage-your-city,[lang-h1],Find the minimum wage in your city,Encuentre el salario mínimo en su ciudad,查找您所在城市最低工资标准
-/services/find-minimum-wage-your-city,[lang-title],Find the minimum wage in your city - Alpha.CA.gov,Encuentre el salario mínimo en su ciudad - Alpha.CA.gov,在城市中找到的最低工资标准 -  Alpha.CA.gov
-/services/find-minimum-wage-your-city,[lang-meta-description],Find the minimum wage in your California city and the State of California. Compare your city's minimum wage to other cities in California.,Encuentre el salario minimo en su ciudad y el Estado de California. Compare el salario minimo en su ciudad a otras ciudades en California.,在城市中找到的最低工资和加利福尼亚州。比较在城市中加州其他城市的最低工资标准。
-/services/find-minimum-wage-your-city,[lang-meta-og-description],Find the minimum wage in your California city and the State of California. Compare your city's minimum wage to other cities in California.,Encuentre el salario minimo en su ciudad y el Estado de California. Compare el salario minimo en su ciudad a otras ciudades en California.,在城市中找到的最低工资和加利福尼亚州。比较在城市中加州其他城市的最低工资标准。
-/services/find-minimum-wage-your-city,[lang-meta-og-title],Find the minimum wage in your city - Alpha.CA.gov,Encuentre el salario mínimo en su ciudad - Alpha.CA.gov,在城市中找到的最低工资标准 -  Alpha.CA.gov
-/services/find-minimum-wage-your-city,[lang-form-label],Please enter your city or zip code:,Por favor introduzca su ciudad o código postal:,请输入您的城市或邮政编码：
-/services/find-minimum-wage-your-city,[lang-form-label-feedback],Please enter a city or zip code in California.,Por favor introduzca la ciudad o código postal en California:,请进入加州城市或邮政编码：
-/services/find-minimum-wage-your-city,[lang-form-button],Find minimum wage,Encuentre el salario minimo,找到最低工资
-/services/find-minimum-wage-your-city,[lang-h2],California minimum wage in 2020,Salario mínimo de California en 2020,在2020年加利福尼亚州的最低工资
-/services/find-minimum-wage-your-city,[lang-h2-p],Minimum wage depends on the city where you work. Some cities have the same minimum wage as the State.,El salario mínimo depende de la ciudad donde trabaja. Algunas ciudades tienen el mismo salario mínimo que el Estado de California.,最低工资取决于他工作的城市。一些城市具有相同的最低工资标准为加利福尼亚州。
-/services/find-minimum-wage-your-city,[lang-table-header-a],Employers with 25 or fewer employees,Empleadores con 25 o menos empleados,有25名或更少的员工的雇主
-/services/find-minimum-wage-your-city,[lang-table-header-b],Employers with 26 or more employees,Empleadores con 26 o más empleados,有26名以上雇员的雇主
-/services/find-minimum-wage-your-city,[lang-table-a1],$12/hour*,$12/hora*,$ 12 /小时*
-/services/find-minimum-wage-your-city,[lang-table-b1],$13/hour*,$13/hora*,$ 13 /小时*
-/services/find-minimum-wage-your-city,[lang-h3],Compare minimum wage across cities,Comparte el salario minimo entre ciudades,分享城市之间的最低工资标准
-/services/find-minimum-wage-your-city,[lang-h3-p-1],These California cities and counties have their own minimum wage laws.,Estas ciudades y condados de California tienen sus propias leyes de salario mínimo,这些市县在加利福尼亚州有自己的最低工资法
-/services/find-minimum-wage-your-city,[lang-h3-p-2a],More about the,Más sobre el,更多关于
-/services/find-minimum-wage-your-city,[lang-h3-p-2b],minimum wage,salario mínimo,最低工资标准
+/services/find-minimum-wage-your-city,,Find the minimum wage in your city,Encuentre el salario mínimo en su ciudad,查找您所在城市最低工资标准
+/services/find-minimum-wage-your-city,,Find the minimum wage in your city - Alpha.CA.gov,Encuentre el salario mínimo en su ciudad - Alpha.CA.gov,在城市中找到的最低工资标准 -  Alpha.CA.gov
+/services/find-minimum-wage-your-city,,Find the minimum wage in your California city and the State of California. Compare your city's minimum wage to other cities in California.,Encuentre el salario minimo en su ciudad y el Estado de California. Compare el salario minimo en su ciudad a otras ciudades en California.,在城市中找到的最低工资和加利福尼亚州。比较在城市中加州其他城市的最低工资标准。
+/services/find-minimum-wage-your-city,,Please enter your city or zip code:,Por favor introduzca su ciudad o código postal:,请输入您的城市或邮政编码：
+/services/find-minimum-wage-your-city,,Please enter a city or zip code in California.,Por favor introduzca la ciudad o código postal en California:,请进入加州城市或邮政编码：
+/services/find-minimum-wage-your-city,,Find minimum wage,Encuentre el salario minimo,找到最低工资
+/services/find-minimum-wage-your-city,,California minimum wage in 2020,Salario mínimo de California en 2020,在2020年加利福尼亚州的最低工资
+/services/find-minimum-wage-your-city,,Minimum wage depends on the city where you work. Some cities have the same minimum wage as the State.,El salario mínimo depende de la ciudad donde trabaja. Algunas ciudades tienen el mismo salario mínimo que el Estado de California.,最低工资取决于他工作的城市。一些城市具有相同的最低工资标准为加利福尼亚州。
+/services/find-minimum-wage-your-city,,Employers with 25 or fewer employees,Empleadores con 25 o menos empleados,有25名或更少的员工的雇主
+/services/find-minimum-wage-your-city,,Employers with 26 or more employees,Empleadores con 26 o más empleados,有26名以上雇员的雇主
+/services/find-minimum-wage-your-city,,$12/hour*,$12/hora*,$ 12 /小时*
+/services/find-minimum-wage-your-city,,$13/hour*,$13/hora*,$ 13 /小时*
+/services/find-minimum-wage-your-city,,Compare minimum wage across cities,Comparte el salario minimo entre ciudades,分享城市之间的最低工资标准
+/services/find-minimum-wage-your-city,,These California cities and counties have their own minimum wage laws.,Estas ciudades y condados de California tienen sus propias leyes de salario mínimo,这些市县在加利福尼亚州有自己的最低工资法
+/services/find-minimum-wage-your-city,,More about the,Más sobre el,更多关于
+/services/find-minimum-wage-your-city,,minimum wage,salario mínimo,最低工资标准
 /services/find-food-banks-near-you,[lang-meta-og-title],Find food banks near you - Alpha.CA.gov,Encuentre bancos de alimentos cerca de usted - Alpha.CA.gov,寻找食物银行您身边 -  Alpha.CA.gov
 /services/find-food-banks-near-you,[lang-meta-og-description],We'll help you find the California food banks and pantries closest to you.,Le ayudaremos a encontrar los bancos de alimentos y despensas más cercanos a usted.,我们将帮助您寻找食物银行和最接近茶水间给你。
 /services/find-food-banks-near-you,[lang-title],Find food banks near you - Alpha.CA.gov,Encuentre bancos de alimentos cerca de usted - Alpha.CA.gov,寻找食物银行您身边 -  Alpha.CA.gov
@@ -112,7 +111,7 @@ path,token,en,es,zh
 /services/state-california-employee-holidays,,"July 1, 2020, to June 30, 2021",Entre el 1 de julio de 2020 a 31 de junio de 2021,与2020年7月1日至31月2021
 /services/state-california-employee-holidays,,More details about holidays,Más información sobre días festivos del Estado,状态节假日更多信息
 /services/state-california-employee-holidays,,Weekend holidays,Días festivos en fines de semana,在周末假期
-/services/state-california-employee-holidays,,"When a holiday is on a Saturday, most employees get one holiday credit (eight hours of leave).","Cuando un día festivo cae en un sábado, la mayoría de empleados reciben un crédito de vacaciones (8 horas de permiso laboral).",当公众假期恰逢周六，大部分员工获得休假学分（8小时工作证）。
+/services/state-california-employee-holidays,,"When a holiday is on a Saturday, most employees get one holiday credit (eight hours of leave).","Cuando un día festivo cae en un sábado, la mayoría de empleados reciben un crédito de vacaciones (8 horas de permiso laboral).",当公众假期适逢星期六，大多数员工获得休假信贷（8小时工作证）。
 /services/state-california-employee-holidays,,"When a holiday is on a Sunday, most employees have a paid holiday on the following Monday.","Cuando un día festivo cae en un domingo, la mayoría de empleados tienen libre el lunes siguiente después del día festivo.",当公众假期适逢星期日，大部分员工都是免费下星期一节后。
 /services/state-california-employee-holidays,,Holiday credits,Crédito de vacaciones,度假信贷
 /services/state-california-employee-holidays,,Spend your holiday credit on the day or hours you choose.,Aplice su crédito de vacaciones durante el día o horas que usted elige.,在您选择的日或小时Aplice您的假期信用。
@@ -223,9 +222,9 @@ path,token,en,es,zh
 /services/hire-licensed-contractor-home-improvements,[lang-step-6-li-2],General liability insurance,Seguro de responsabilidad civil general,一般责任保险
 /services/hire-licensed-contractor-home-improvements,[lang-step-6-p-3],Your homeowners insurance may or may not cover the costs of injuries. But your insurance provider should be able to help you check your contractor's insurance.,Su seguro de propietarios puede o no cubrir los costos de heridas. Pero su proveedor de seguros podrá ayudarle a verificar el seguro de su contratista.,您的家庭财产保险可能会或可能不会覆盖损伤的费用。但是，你的保险供应商可以帮助您确认您的承包商保险。
 /services/hire-licensed-contractor-home-improvements,[lang-step-6and],Confirm their contact information,Confirme su información de contacto,确认您的联系信息
-/services/hire-licensed-contractor-home-improvements,[lang-step-6and-p],"Make sure your contractor has a current business address and phone number. If their work needs repair, you'll want to be able to find them after you've paid the last bill.","Asegúrese que su contratista tenga una dirección comercial y un número de teléfono válido. Así si su trabajo necesita reparos después que el proyecto haya terminado, usted ya tendrá información de contacto después de haber pagado la última factura.",要确保你的承包商有商务地址和有效的电话号码。因此，如果该项目建成后，你的工作需要修理，您已经将联系人信息，您所支付的最后一笔之后。
+/services/hire-licensed-contractor-home-improvements,[lang-step-6and-p],"Make sure your contractor has a current business address and phone number. If their work needs repair, you'll want to be able to find them after you've paid the last bill.","Asegúrese que su contratista tenga una dirección comercial y un número de teléfono válido. Así si su trabajo necesita reparos después que el proyecto haya terminado, usted ya tendrá información de contacto después de haber pagado la última factura.",请确保你的承包商有商务地址和有效的电话号码。因此，如果该项目建成后，你的工作需要修理，您已经将联系人信息，您所支付的最后一笔之后。
 /services/hire-licensed-contractor-home-improvements,[lang-step-7],Contact their references,Póngase en contacto con las referencias del contratista,联系承包商的引用
-/services/hire-licensed-contractor-home-improvements,[lang-step-7-p-1],Ask your contractor for the contact information of their former customers.,Pregúntele a su contratista por la información de contacto de sus clientes anteriores. Esto le ayudará a entender la calidad del trabajo de su contratista.,问问你为自己以前的客户的联系信息承包商。这将帮助你了解你的工作承包商的质量。
+/services/hire-licensed-contractor-home-improvements,[lang-step-7-p-1],Ask your contractor for the contact information of their former customers.,Pregúntele a su contratista por la información de contacto de sus clientes anteriores. Esto le ayudará a entender la calidad del trabajo de su contratista.,问问你的承包商自己以前的客户的联系信息。这将帮助你了解你的工作承包商的质量。
 /services/hire-licensed-contractor-home-improvements,[lang-step-7-p-2],"Then, ask those customers if they were happy with your contractor's project. And ask to see pictures, if possible. This will help you understand the quality of your contractor's work.","Póngase en contacto con esos clientes para preguntar si estaban satisfechos con el proyecto de su contratista. Pida ver fotos, si es posible.",联系这些客户，询问他们是否用其承包的草案感到满意。要求看照片，如果可能的话。
 /services/hire-licensed-contractor-home-improvements,[lang-step-8],Ask to see your contractor's pocket license,Pida ver la licencia de bolsillo de su contratista,要求看他的承包商的许可证口袋
 /services/hire-licensed-contractor-home-improvements,[lang-step-8-p-1],"When your contractor comes to your house, ask to see a copy of their pocket license. Compare it to their driver's license or other photo ID.","Cuando el contratista venga a su casa, pida que le muestre una copia de su licencia de tamaño de bolsillo. Compárelo con su licencia de conducir u otra identificación con foto.",当承包商来到你的家，请展现你的许可口袋大小的副本。与你的驾驶执照或其他带照片证件进行比较。
