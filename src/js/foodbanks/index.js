@@ -212,7 +212,7 @@ function displaySortedResults(coords) {
           }
           var showMore = '';
           if(itemindx == 2) {
-            showMore = `<li class="card mb-20 js-expand-link">
+            showMore = `<li class="card mb-20 js-expand-link border-0">
               <div class="card-body">
                 <p>
                   <a class="action-link" href="#" onclick="showAll()">${translations["Show more"]} &raquo;</a>
@@ -220,7 +220,7 @@ function displaySortedResults(coords) {
               </div>
             </li>`;
           }
-          return `<li class="card mb-20 ${displayClass} border-0">
+          return `<li class="card mb-20 ${displayClass}">
             <div class="card-body">
               <p>${food.distance.toFixed(2)} ${translations["miles away"]}</p>
               <p class="bold">${food.title}</p>
