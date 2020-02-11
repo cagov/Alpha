@@ -27,6 +27,7 @@ fs.createReadStream(globalfilepath)
 
     data.path = data.path.replace(/\n/g, ' ').trim()
     data.token=data.token || data.en
+    data['numMatches']=0
     csvresults.push(data)
   })
   .on('end', langloop)
@@ -42,8 +43,7 @@ function langloop() {
     console.error(globalfilepath+` has ${diff} non-distinct path/token/en combo(s)!`)
 
   sortedcsvresults = csvresults.sort((a,b) => 100*(b.path.length-a.path.length)+b.token.length-a.token.length)
-  fileslist = [...new Set(sortedcsvresults.map(item => item.path))]
-
+  fileslist = [...new Set(sortedcsvresults.map(item => item.path))].filter(x=>x)
 
   for(const targetlang of targetlangs.map(x=>x.code)) 
     // copy source folder to destination
@@ -56,7 +56,7 @@ function langloop() {
 
 
 function replaceonelanguage(targetlang) {
-  //Global replace of defaults
+  //Global replace of HTML defaults
   replace.sync({
     files:getfilespath(targetlang),
     from:[
@@ -74,8 +74,26 @@ function replaceonelanguage(targetlang) {
       (match, ...args) => fileFromArgs(args,targetlang)
     ]})
 
+
+
+
+    fileslist.forEach(path=> {
+      const filteredtokens = sortedcsvresults.filter(x=>!x.path||x.path===path)
+      const files = getdestination(targetlang)+path+'/index.html'
+
+      for(const data of filteredtokens) {
+        replaceonetoken(data,targetlang,files)
+      }
+    })
+
+    const nomatch = sortedcsvresults.find(x=>x.numMatches==0)
+    if(nomatch)
+      return console.error(`no match for "${nomatch.path} -> ${nomatch.token}"`)
+
+
+
   //run each token in order
-  sortedcsvresults.forEach(data=>replaceonetoken(data,targetlang))
+  //sortedcsvresults.forEach(data=>replaceonetoken(data,targetlang))
 
   if(targetlang=='en') 
     //English default goes to root
@@ -88,7 +106,7 @@ function replaceonelanguage(targetlang) {
 } //replaceonelanguage
 
 
-function replaceonetoken(data,targetlang) {
+function replaceonetoken(data,targetlang,files) {
   const from = [new RegExp(data.token
     .replace(/\[/,'\\\[')
     .replace(/\]/,'\\\]')
@@ -107,11 +125,18 @@ function replaceonetoken(data,targetlang) {
         : match
   : replacement
 
+
+
+
+
   //replace this token, return an error if it isn't found
-  if (!replace.sync(
-      {files:getfilespath(targetlang),from,to,countMatches: true})
-        .find(value=>value.numMatches != 0))
-    return console.error(targetlang+': Error - Replacement not found - '+data.path+' - "'+data.token+'"')
+  const match = replace.sync({files,from,to,countMatches: true})
+  match.forEach(x=>data.numMatches += x.numMatches||0)
+
+
+
+        //.find(value=>value.numMatches != 0)
+    //return console.error(targetlang+': Error - Replacement not found - '+data.path+' - "'+data.token+'"')
 }
 
 
