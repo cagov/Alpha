@@ -22,9 +22,11 @@
 
 <body>
 
-  <%= require('html-loader!../../partials/official.html') %>
+ <header>
+ <%= require('html-loader!../../partials/official.html') %>
   <%= require('html-loader!../../partials/experiment-banner.html') %>
   <%= require('html-loader!../../partials/navbar.html') %>
+</header>
 
 
   <div class="container-fluid jumbotron">
@@ -200,11 +202,12 @@
 
     </div>
   </div>
-
+<footer>
   <%= require('html-loader!../../partials/feedback.html') %>
   <%= require('html-loader!../../partials/footer.html') %>
   <%= require('html-loader!../../partials/alphabar.html') %>
   <%= require('html-loader!../../partials/ga.html') %>
+</footer>
 
 </body>
 

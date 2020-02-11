@@ -19,12 +19,13 @@
 </head>
 
 <body>
-
+<header>
   <%= require('html-loader!./partials/official.html') %>
   <%= require('html-loader!./partials/experiment-banner.html') %>
   <%= require('html-loader!./partials/navbar.html') %>
-
-  <div class="container-fluid jumbotron alpha">
+</header>
+<main> 
+  <div class="container-fluid jumbotron alpha pt-5 pb-5">
     <div class="container">
       <div class="row text-left">
         <div class="col-md-12">
@@ -61,11 +62,12 @@
       </div>
     </div>
   </div>
-
+</main>	 
+<footer>
   <%= require('html-loader!./partials/feedback.html') %>
   <%= require('html-loader!./partials/footer.html') %>
   <%= require('html-loader!./partials/alphabar.html') %>
   <%= require('html-loader!./partials/ga.html') %>
-
+</footer>
 </body>
 </html>

@@ -86,6 +86,7 @@ a:hover {
 a.action-link:hover {
     border-color: #000;
 	color: #000;
+	background-color: #d5e6ff;
 }
 
 
@@ -704,9 +705,18 @@ a.list-group-item.list-group-item-action.lead {
 }
 
 
-li, .list-group-item.inner-list:focus-within {
+li .list-group-item.inner-list:focus-within {
     outline: none;
 }
+
+li.list-group-item.unstyled.no-border {
+    outline: none;
+}
+
+li .action-link:focus-within {
+    outline: 2px solid #004abc;
+}
+
 
 
 /* Medium devices (tablets, 768px and up)*/
