@@ -22,11 +22,12 @@
 </head>
 
 <body>
-
+<header>
 <%= require('html-loader!../../partials/official.html') %>
 <%= require('html-loader!../../partials/experiment-banner.html') %>
 <%= require('html-loader!../../partials/navbar.html') %>
-
+</header>
+<main>
   <div class="jumbotron text-left">
     <div class="container">
       <h1>[lang-h1]</h1>
@@ -78,17 +79,15 @@
 				<p></p>
 			  </div>
     </div>
-
-  </div>
-	  
-	  
-
+  </div>	  
+</main>	
+<footer>
   <%= require('html-loader!../../partials/feedback.html') %>
   <%= require('html-loader!../../partials/footer.html') %>
   <script nomodule src="/js/es5Minwage.js?cache=false" ></script>
   <%= require('html-loader!../../partials/alphabar.html') %>
   <%= require('html-loader!../../partials/ga.html') %>
-
+</footer>
 </body>
 
 </html>

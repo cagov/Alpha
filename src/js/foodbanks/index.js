@@ -215,12 +215,12 @@ function displaySortedResults(coords) {
             showMore = `<li class="card mb-20 js-expand-link">
               <div class="card-body">
                 <p>
-                  <a href="#" onclick="showAll()">${translations["Show more"]} &raquo;</a>
+                  <a class="action-link" href="#" onclick="showAll()">${translations["Show more"]} &raquo;</a>
                 </p>
               </div>
             </li>`;
           }
-          return `<li class="card mb-20 ${displayClass}">
+          return `<li class="card mb-20 ${displayClass} border-0">
             <div class="card-body">
               <p>${food.distance.toFixed(2)} ${translations["miles away"]}</p>
               <p class="bold">${food.title}</p>
@@ -228,7 +228,7 @@ function displaySortedResults(coords) {
                 ${food.address2}<br>
               <a href="${food.website}" target="_self">${translations["Visit"]} ${food.title}'s ${translations["website"]}</a><br>
               <p>${food.phone}</p>
-              <a href="geo:${item.geometry.coordinates[1]},${item.geometry.coordinates[0]}" onclick="mapsSelector(${item.geometry.coordinates[1]},${item.geometry.coordinates[0]})" aria-label="${translations["directions to"]} ${food.title}ß" target="_self"class="btn btn-sm">${translations["Get directions"]}</a>
+              <a class="action-link" href="geo:${item.geometry.coordinates[1]},${item.geometry.coordinates[0]}" onclick="mapsSelector(${item.geometry.coordinates[1]},${item.geometry.coordinates[0]})" aria-label="${translations["directions to"]} ${food.title}ß" target="_self"class="btn btn-sm">${translations["Get directions"]}</a>
             </div>
           </li>${showMore}`;
         }).join(' ')}
