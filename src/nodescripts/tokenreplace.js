@@ -11,15 +11,18 @@ fs.renameSync(sourcefolder+'en',source)
 
 const globalfilepath = 'src/lang-global.csv'
 
+//Update this list if you add languages
 const targetlangs = [
   {code:'en',name:'English'},
   {code:'es',name:'Español'},
   {code:'zh',name:'中文(简体)'}
 ]
 
-let csvresults = []
+const csvresults = []
 let sortedcsvresults = []
 let fileslist = []
+
+//Process the CSV file
 fs.createReadStream(globalfilepath)
   .pipe(csv({ separator: ',', strict: true, skipComments: true, newline: '\r\n', mapHeaders: ({ header }) => header.toLowerCase().trim() } ))
   .on('data', data => {
@@ -42,10 +45,11 @@ function langloop() {
   if(diff>0)
     console.error(globalfilepath+` has ${diff} non-distinct path/token/en combo(s)!`)
 
+  //Sort the CSV so that longer tokens are done first
   sortedcsvresults = csvresults.sort((a,b) => 100*(b.path.length-a.path.length)+b.token.length-a.token.length)
-  fileslist = [...new Set(sortedcsvresults.map(item => item.path))].filter(x=>x)
 
-  console.log(fileslist)
+  //Distinct list of files
+  fileslist = [...new Set(sortedcsvresults.map(item => item.path))].filter(x=>x)
 
   targetlangs.map(x=>x.code).forEach(targetlang=>
     // copy source folder to destination
@@ -54,35 +58,37 @@ function langloop() {
         ? console.error(err)
         : replaceonelanguage(targetlang))
   )
-} //langloop  
+} //langloop
+
 
 
 function replaceonelanguage(targetlang) {
-  //Global replace of HTML defaults
-  replace.sync({
-    files:getfilespath(targetlang),
-    from:[
-      /lang="en"/g,
-      /\/en\//g,
-      /\[code-language-select\]/g,
-      /\[code-language-alt-meta\]/g,
-      /\[FullPath\]/g
-    ],
-    to:[
-      'lang="'+targetlang+'"', 
-      targetlang=='en'?'/':'/'+targetlang+'/',
-      targetlangs.map(l=>l.code!=targetlang ? '<a class="dropdown-item" rel="alternate" hreflang="'+l.code+'" href="/'+l.code+'[FullPath]/">'+l.name+'</a>' : '').join(''),
-      targetlangs.map(l=>l.code!=targetlang ? '<link rel="alternate" hreflang="'+l.code+'" href="'+fulldomainurl+l.code+'[FullPath]/">' : '').join(''),
-      (match, ...args) => fileFromArgs(args,targetlang)
-    ]})
-
   fileslist.forEach(path=> {
     let files = getdestination(targetlang)+path
     if(!files.endsWith('.html')) files +='/index.html'
 
+    //using global tokens and path matching tokens
     sortedcsvresults
       .filter(x=>!x.path||x.path===path)
       .forEach(data=>replaceonetoken(data,targetlang,files))
+
+    //Replace custom HTML values based on language
+    replace.sync({
+        files,
+        from:[
+          /lang="en"/g,
+          /\/en\//g,
+          /\[code-language-select\]/g,
+          /\[code-language-alt-meta\]/g,
+          /\[FullPath\]/g
+        ],
+        to:[
+          'lang="'+targetlang+'"', 
+          targetlang=='en'?'/':'/'+targetlang+'/',
+          targetlangs.map(l=>l.code!=targetlang ? '<a class="dropdown-item" rel="alternate" hreflang="'+l.code+'" href="/'+l.code+'[FullPath]/">'+l.name+'</a>' : '').join(''),
+          targetlangs.map(l=>l.code!=targetlang ? '<link rel="alternate" hreflang="'+l.code+'" href="'+fulldomainurl+l.code+'[FullPath]/">' : '').join(''),
+          (match, ...args) => fileFromArgs(args,targetlang)
+        ]})
   })
 
   const nomatch = sortedcsvresults.find(x=>x.numMatches==0)
@@ -116,7 +122,6 @@ function replaceonetoken(data,targetlang,files) {
     .forEach(x=>data.numMatches += x.numMatches||0)
 }
 
-
 function fileFromArgs(args,targetlang) { 
   return args.pop()
     .replace(/\/index.html$/,'') //Remove index.html
@@ -125,8 +130,4 @@ function fileFromArgs(args,targetlang) {
 
 function getdestination(targetlang) {
   return sourcefolder+targetlang
-}
-
-function getfilespath(targetlang) {
-  return getdestination(targetlang)+'/**/*.html'
 }
