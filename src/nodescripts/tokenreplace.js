@@ -18,6 +18,8 @@ const targetlangs = [
 ]
 
 let csvresults = []
+let sortedcsvresults = []
+let fileslist = []
 fs.createReadStream(globalfilepath)
   .pipe(csv({ separator: ',', strict: true, skipComments: true, newline: '\r\n', mapHeaders: ({ header }) => header.toLowerCase().trim() } ))
   .on('data', data => {
@@ -34,19 +36,26 @@ fs.createReadStream(globalfilepath)
 function langloop() {
   if(!csvresults || csvresults.length==0) throw console.error(globalfilepath+' is empty!')
 
-  const sortedcsvresults = csvresults.sort((a,b) => 100*(b.path.length-a.path.length)+b.token.length-a.token.length)
+  //validate for unique combinations of paths/tokens
+  const diff = csvresults.length-[...new Set(csvresults.map(item => item.path+item.token))].length
+  if(diff>0)
+    console.error(globalfilepath+` has ${diff} non-distinct path/token/en combo(s)!`)
+
+  sortedcsvresults = csvresults.sort((a,b) => 100*(b.path.length-a.path.length)+b.token.length-a.token.length)
+  fileslist = [...new Set(sortedcsvresults.map(item => item.path))]
+
 
   for(const targetlang of targetlangs.map(x=>x.code)) 
     // copy source folder to destination
     fse.copy(source, getdestination(targetlang), {overwrite: false, errorOnExist: true}, 
       err => err 
         ? console.error(err)
-        : replaceonelanguage(targetlang,sortedcsvresults))
+        : replaceonelanguage(targetlang))
   
 } //langloop  
 
 
-function replaceonelanguage(targetlang,sortedcsvresults) {
+function replaceonelanguage(targetlang) {
   //Global replace of defaults
   replace.sync({
     files:getfilespath(targetlang),
