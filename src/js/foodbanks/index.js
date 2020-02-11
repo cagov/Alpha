@@ -220,7 +220,7 @@ function displaySortedResults(coords) {
               </div>
             </li>`;
           }
-          return `<li class="card mb-20 ${displayClass}">
+          return `<li class="card mb-20 ${displayClass} border-0">
             <div class="card-body">
               <p>${food.distance.toFixed(2)} ${translations["miles away"]}</p>
               <p class="bold">${food.title}</p>
