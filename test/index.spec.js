@@ -8,6 +8,7 @@ const puppeteer = require('puppeteer')
 const express = require('express')
 const app = express()
 const port = 1338
+const timeout = 60000 //from from 16000
 let server
 
 /*
@@ -46,7 +47,7 @@ describe("homepage", () => {
     const links = await page.$$eval('a', anchors => anchors )
     expect(links.length).toBeGreaterThan(4)
 
-  }, 16000)
+  }, timeout)
 })
 
 describe("minimum wage", () => {
@@ -69,7 +70,7 @@ describe("minimum wage", () => {
     const answers = await page.$$eval('#answer h4', answers => answers )
     expect(answers.length).toBeGreaterThan(0)
 
-  }, 16000)
+  }, timeout)
 })
 
 describe("food banks", () => {
@@ -91,7 +92,7 @@ describe("food banks", () => {
     let answers = await page.$$eval('.js-nearest-results li', answers => { return answers });
     expect(answers.length).toBeGreaterThan(0);
 
-  }, 16000);
+  }, timeout);
 
 });
 
@@ -103,7 +104,7 @@ describe("state holidays", () => {
     let answers = await page.$$eval('.card-body tr', answers => { return answers });
     expect(answers.length).toBeGreaterThan(0);
    
-  }, 16000);
+  }, timeout);
 
 });
 
@@ -123,7 +124,7 @@ describe("language test", () => {
     const links = await page.$$eval('a', anchors => anchors )
     expect(links.length).toBeGreaterThan(4)
 
-  }, 16000)
+  }, timeout)
 
 })
 
@@ -135,7 +136,7 @@ describe("Cal Grant", () => {
     let answers = await page.$$eval('.col-md-8 li', answers => { return answers })
     expect(answers.length).toBeGreaterThan(0);
    
-  }, 16000)
+  }, timeout)
 
 })
 
@@ -147,7 +148,7 @@ describe("Disability", () => {
     let answers = await page.$$eval('.details li', answers => { return answers })
     expect(answers.length).toBeGreaterThan(0);
    
-  }, 16000)
+  }, timeout)
 
 })
 
@@ -159,7 +160,7 @@ describe("licensed contractor", () => {
     let answers = await page.$$eval('.col-md-9 li', answers => { return answers })
     expect(answers.length).toBeGreaterThan(0);
    
-  }, 16000)
+  }, timeout)
 
 })
 
@@ -170,7 +171,7 @@ describe("birth cert", () => {
     let answers = await page.$$eval('.container ul', answers => { return answers })
     expect(answers.length).toBeGreaterThan(0);
    
-  }, 16000)
+  }, timeout)
 
 })
 
@@ -195,7 +196,7 @@ describe("mobile", () => {
     let answers = await page.$$eval('.js-nearest-results li', answers => { return answers });
     expect(answers.length).toBeGreaterThan(0);
 
-  }, 16000);
+  }, timeout);
 
 })
 
@@ -216,7 +217,7 @@ describe("lane closures", () => {
     expect(answers.length).toBeGreaterThan(0);
 
     
-  }, 16000)
+  }, timeout)
 
 })
 
