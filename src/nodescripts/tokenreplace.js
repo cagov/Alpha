@@ -77,6 +77,7 @@ function replaceonelanguage(targetlang) {
         files,
         from:[
           /lang="en"/g,
+          /\[code-url\]/g,
           /\/en\//g,
           /\[code-language-select\]/g,
           /\[code-language-alt-meta\]/g,
@@ -84,6 +85,7 @@ function replaceonelanguage(targetlang) {
         ],
         to:[
           'lang="'+targetlang+'"', 
+          (fulldomainurl+targetlang).replace(/\/en/,'')+'[FullPath]/',
           targetlang=='en'?'/':'/'+targetlang+'/',
           targetlangs.map(l=>l.code!=targetlang ? '<a class="dropdown-item" rel="alternate" hreflang="'+l.code+'" href="/'+l.code+'[FullPath]/">'+l.name+'</a>' : '').join(''),
           targetlangs.map(l=>l.code!=targetlang ? '<link rel="alternate" hreflang="'+l.code+'" href="'+fulldomainurl+l.code+'[FullPath]/">' : '').join(''),
