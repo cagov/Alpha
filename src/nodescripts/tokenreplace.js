@@ -43,7 +43,7 @@ function langloop() {
   //validate for unique combinations of paths/tokens
   const diff = csvresults.length-[...new Set(csvresults.map(item => item.path+item.token))].length
   if(diff>0)
-    console.error(globalfilepath+` has ${diff} non-distinct path/token/en combo(s)!`)
+    throw console.error(globalfilepath+` has ${diff} non-distinct path/token/en combo(s)!`)
 
   //Sort the CSV so that longer tokens are done first
   sortedcsvresults = csvresults.sort((a,b) => 100*(b.path.length-a.path.length)+b.token.length-a.token.length)
@@ -95,7 +95,7 @@ function replaceonelanguage(targetlang) {
 
   const nomatch = sortedcsvresults.find(x=>x.numMatches==0)
   if(nomatch)
-    return console.error(`no match for "${nomatch.path} -> ${nomatch.token}"`)
+    throw console.error(`no match for "${nomatch.path} -> ${nomatch.token}"`)
 
   if(targetlang=='en') 
     //English default goes to root
