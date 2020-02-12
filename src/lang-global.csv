@@ -71,29 +71,27 @@ path,token,en,es,zh
 /services/find-minimum-wage-your-city,,These California cities and counties have their own minimum wage laws.,Estas ciudades y condados de California tienen sus propias leyes de salario mínimo,这些市县在加利福尼亚州有自己的最低工资法
 /services/find-minimum-wage-your-city,,More about the,Más sobre el,更多关于
 /services/find-minimum-wage-your-city,,minimum wage,salario mínimo,最低工资标准
-/services/find-food-banks-near-you,[lang-meta-og-title],Find food banks near you - Alpha.CA.gov,Encuentre bancos de alimentos cerca de usted - Alpha.CA.gov,寻找食物银行您身边 -  Alpha.CA.gov
-/services/find-food-banks-near-you,[lang-meta-og-description],We'll help you find the California food banks and pantries closest to you.,Le ayudaremos a encontrar los bancos de alimentos y despensas más cercanos a usted.,我们将帮助您寻找食物银行和最接近茶水间给你。
-/services/find-food-banks-near-you,[lang-title],Find food banks near you - Alpha.CA.gov,Encuentre bancos de alimentos cerca de usted - Alpha.CA.gov,寻找食物银行您身边 -  Alpha.CA.gov
-/services/find-food-banks-near-you,[lang-h1],Find food banks near you,Encuentre bancos de alimentos cerca de usted,查找您附近的食品银行
-/services/find-food-banks-near-you,[lang-meta-description],We'll help you find the food banks and pantries closest to you.,Le ayudaremos a encontrar los bancos de alimentos y despensas más cercanos a usted.,我们将帮助您寻找食物银行和最接近茶水间给你。
-/services/find-food-banks-near-you,[lang-p-1],We'll help you find the food banks and pantries closest to you.,Le ayudaremos a encontrar los bancos de alimentos y despensas más cercanos a usted.,我们将帮助您寻找食物银行和最接近茶水间给你。
-/services/find-food-banks-near-you,[lang-form-label],Please enter your city or zip code:,Por favor introduzca su ciudad o código postal:,请输入您的城市或邮政编码：
+/services/find-food-banks-near-you,,Find food banks near you - Alpha.CA.gov,Encuentre bancos de alimentos cerca de usted - Alpha.CA.gov,寻找食物银行您身边 -  Alpha.CA.gov
+/services/find-food-banks-near-you,,We'll help you find the California food banks and pantries closest to you.,Le ayudaremos a encontrar los bancos de alimentos y despensas más cercanos a usted.,我们将帮助您寻找食物银行和最接近茶水间给你。
+/services/find-food-banks-near-you,,Find food banks near you,Encuentre bancos de alimentos cerca de usted,查找您附近的食品银行
+/services/find-food-banks-near-you,,We'll help you find the food banks and pantries closest to you.,Le ayudaremos a encontrar los bancos de alimentos y despensas más cercanos a usted.,我们将帮助您寻找食物银行和最接近茶水间给你。
+/services/find-food-banks-near-you,,Please enter your city or zip code:,Por favor introduzca su ciudad o código postal:,请输入您的城市或邮政编码：
 /services/find-food-banks-near-you,[lang-form-button],Search,Buscar,搜索
-/services/find-food-banks-near-you,[lang-form-label-feedback],Please enter a city or zip code in California.,Por favor introduzca una ciudad o código postal:,请输入城市名称或邮政编码：
-/services/find-food-banks-near-you,[lang-h2],Other resources,Otros recursos,其他资源
-/services/find-food-banks-near-you,[lang-h2-1],Text us to find food close to you,Envíe un mensaje de texto para encontrar comida cerca de usted,发送短信去寻找食物靠近你
-/services/find-food-banks-near-you,[lang-h3-1-p-1a],Text us anytime at,Envíenos un mensaje de texto en cualquier momento al,在任何时候发送短信
-/services/find-food-banks-near-you,[lang-h3-1-p-1b],with your city name or zip code.,con el nombre de su ciudad o código postal.,与你的城市名称或邮政编码的名称。
-/services/find-food-banks-near-you,[lang-h3-1-p-2],We'll respond with the food bank closest to you.,Responderemos con el banco de alimentos más cercano a usted.,我们到离您最近的食物银行回应。
-/services/find-food-banks-near-you,[lang-h3-1],Call 211 with your questions,Llame al 211 con sus preguntas,拨打211与您的问题
-/services/find-food-banks-near-you,[lang-h3-2-p-1a],Phone number:,Numero de teléfono,电话号码
-/services/find-food-banks-near-you,[lang-h3-2-p-1b],"Hours: 24 hours a day, every day of the year","Horario: 24 horas al día, todos los días del año",营业时间：每天24小时，一年中的每一天
-/services/find-food-banks-near-you,[lang-h3-2-p-2],"is a source of local social services throughout the United States. A trained expert can help you find many resources, including:","es un sito web que te conecta a varios recursos y servicios sociales en todo Estados Unidos. Un experto capacitado puede ayudarle a encontrar muchos recursos, incluyendo:",这是一个网站，在美国各地您连接到各种资源和社会服务。一个训练有素的专家可以帮助您找到很多资源，包括：
-/services/find-food-banks-near-you,[lang-h3-2-li-1],food programs,programas de alimentación,供餐方案
-/services/find-food-banks-near-you,[lang-h3-2-li-2],shelter and housing,servicios de refugio y vivienda,住房和住房服务
-/services/find-food-banks-near-you,[lang-h3-2-li-3],emergency information,información sobre emergencias,紧急信息
-/services/find-food-banks-near-you,[lang-h3-2-li-4],help with your job search,ayuda con su búsqueda de empleo,你找工作的帮助
-/services/find-food-banks-near-you,[lang-h3-2-li-5],healthcare and shots,cuidado de salud y vacunas,医疗保健和疫苗
+/services/find-food-banks-near-you,,Please enter a city or zip code in California.,Por favor introduzca una ciudad o código postal:,请输入城市名称或邮政编码：
+/services/find-food-banks-near-you,,Other resources,Otros recursos,其他资源
+/services/find-food-banks-near-you,,Text us to find food close to you,Envíe un mensaje de texto para encontrar comida cerca de usted,发送短信去寻找食物靠近你
+/services/find-food-banks-near-you,,Text us anytime at,Envíenos un mensaje de texto en cualquier momento al,在任何时候发送短信
+/services/find-food-banks-near-you,,with your city name or zip code.,con el nombre de su ciudad o código postal.,与你的城市名称或邮政编码的名称。
+/services/find-food-banks-near-you,,We'll respond with the food bank closest to you.,Responderemos con el banco de alimentos más cercano a usted.,我们到离您最近的食物银行回应。
+/services/find-food-banks-near-you,,Call 211 with your questions,Llame al 211 con sus preguntas,拨打211与您的问题
+/services/find-food-banks-near-you,,Phone number:,Numero de teléfono,电话号码
+/services/find-food-banks-near-you,,"Hours: 24 hours a day, every day of the year","Horario: 24 horas al día, todos los días del año",营业时间：每天24小时，一年中的每一天
+/services/find-food-banks-near-you,,"is a source of local social services throughout the United States. A trained expert can help you find many resources, including:","es un sito web que te conecta a varios recursos y servicios sociales en todo Estados Unidos. Un experto capacitado puede ayudarle a encontrar muchos recursos, incluyendo:",这是一个网站，在美国各地您连接到各种资源和社会服务。一个训练有素的专家可以帮助您找到很多资源，包括：
+/services/find-food-banks-near-you,,food programs,programas de alimentación,供餐方案
+/services/find-food-banks-near-you,,shelter and housing,servicios de refugio y vivienda,住房和住房服务
+/services/find-food-banks-near-you,,emergency information,información sobre emergencias,紧急信息
+/services/find-food-banks-near-you,,help with your job search,ayuda con su búsqueda de empleo,你找工作的帮助
+/services/find-food-banks-near-you,,healthcare and shots,cuidado de salud y vacunas,医疗保健和疫苗
 /services/state-california-employee-holidays,,State of California employee holidays,Días festivos para empleados estatales de California,假期在加利福尼亚州的员工
 /services/state-california-employee-holidays,,State of California employee holidays - Alpha.CA.gov,Días festivos para empleados estatales de California - Alpha.CA.gov,假期在加利福尼亚州的员工 -  Alpha.CA.gov
 /services/state-california-employee-holidays,,Upcoming holidays for State of California employees.,Días festivos para empleados estatales de California,假期在加利福尼亚州的员工
@@ -252,9 +250,7 @@ path,token,en,es,zh
 /apply-for-disability-insurance-benefits,,File online,Presentar por internet,目前在线
 /apply-for-disability-insurance-benefits,,File by mail,Presentar por correo,通过邮件提交
 /apply-for-disability-insurance-benefits,,Ask your doctor to certify your disability,Pregúntele a su doctor para certificar su discapacidad,问问你的医生，以证明他们的残疾
-/apply-for-disability-insurance-benefits,,"A doctor, nurse, or physician's assistant has to certify your medical condition. They must submit a form within 49 days of the first day you couldn’t work because of your disability.","
-Un doctor, una enfermera o un asistente médico debe certificar su condición médica. Tienen que presentar un formulario dentro de los 49 días del primer día que no se podía trabajar debido a su discapacidad.","
-医生，护士或医师助理必须证明您的健康状况。他们必须在第一天49天提交表单，你不能因为自己的残疾的工作。"
+/apply-for-disability-insurance-benefits,,"A doctor, nurse, or physician's assistant has to certify your medical condition. They must submit a form within 49 days of the first day you couldn’t work because of your disability.","Un doctor, una enfermera o un asistente médico debe certificar su condición médica. Tienen que presentar un formulario dentro de los 49 días del primer día que no se podía trabajar debido a su discapacidad.",医生，护士或医师助理必须证明您的健康状况。他们必须在第一天49天提交表单，你不能因为自己的残疾的工作。
 /apply-for-disability-insurance-benefits,,Ask them what they need from you to submit the form for disability insurance.,Pregúnteles qué necesitan de usted para enviar el formulario de seguro por discapacidad.,请您需要提交表单伤残保险是什么。
 /apply-for-disability-insurance-benefits,,Read our response,Lee nuestra respuesta en el correo,请阅读我们的邮件响应
 /apply-for-disability-insurance-benefits,,"Within 14 days, we will email you or send you a letter to let you know if you can get disability benefits.","Dentro de 14 días, le enviaremos una carta para hacerle saber si puede obtener beneficios por incapacidad.",在14天内，我们将发送给你一封信，让你知道，如果你能得到残疾津贴。
