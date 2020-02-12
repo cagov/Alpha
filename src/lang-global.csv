@@ -160,33 +160,29 @@ path,token,en,es,zh
 /services/state-california-employee-holidays,[lang-holiday-thanksgiving-2021],&nbsp;November 25,25 de Noviembre,11月25日
 /services/state-california-employee-holidays,[lang-holiday-dayafterthanks-2021],&nbsp;November 26,26 de Noviembre,11月26日
 /services/state-california-employee-holidays,[lang-holiday-xmas-2021],&nbsp;December 25,25 de Diciembre,12月25日
-/services/request-birth-certificate,[lang-h1],Request a birth certificate,Solicitar un certificado de nacimiento,申请出生证明
-/services/request-birth-certificate,[lang-title],Request a birth certificate - Welcome to Alpha.CA.gov,Solicitar un certificado de nacimiento - Bienvenido a Alpha.CA.gov,申请出生证明 - 欢迎Alpha.CA.gov
-/services/request-birth-certificate,[lang-meta-description],"Request a California birth certificate in person, by mail, or online.","Solicitar un certificado de nacimiento en persona, por correo, o por internet",申请出生证的人，通过邮件，或在线
-/services/request-birth-certificate,[lang-meta-og-description],"Request a California birth certificate in person, by mail, or online.","Solicitar un certificado de nacimiento en persona, por correo, o por internet",申请出生证的人，通过邮件，或在线
-/services/request-birth-certificate,[lang-meta-og-title],Request a birth certificate - Alpha.CA.gov,Solicitar un certificado de nacimiento - Alpha.CA.gov,申请出生证明 -  Alpha.CA.gov
-/services/request-birth-certificate,[lang-h1-p],There are three main ways to order a California birth certificate.,Hay tres maneras de pedir un certificado de nacimiento de California.,有三种方法，要求在加州出生证明。
-/services/request-birth-certificate,[lang-h2],Visit a county office,Visita una oficina del condado,访问县委办公室
-/services/request-birth-certificate,[lang-h2-li-1],You have to apply with the county where the person was born.,Tiene que presentar su solicitud con el condado donde nació la persona.,您必须在人出生县提交申请。
-/services/request-birth-certificate,[lang-h2-li-2],Cost: $28,Costo: $28,费用：$ 28日
-/services/request-birth-certificate,[lang-h2-li-3],"Processing time: Varies, but could be as soon as the same day","Tiempo de procesamiento: Varía, pero podría ser tan pronto como el mismo día",处理时间：不定，但可能是早在当天
-/services/request-birth-certificate,[lang-h2-li-4],You'll sign a sworn statement in front of a county worker.,Firmará una declaración jurada frente a un trabajador del condado.,他将签订一个县工人面前宣誓声明。
-/services/request-birth-certificate,[lang-h2-li-5],"You may need to bring a driver's license, passport, or other photo ID from the government that hasn't expired.","Es posible que deba traer una licencia de conducir, pasaporte u otra identificación con foto del gobierno que no haya expirado.",您可能需要携带驾驶执照，护照或尚未到期的政府的其他照片的身份证明。
-/services/request-birth-certificate,[lang-h2-link],Visit a county office,Visita una oficina del condado,访问县委办公室
-/services/request-birth-certificate,[lang-h2-2],Mail a request,Envíe una solicitud por correo,发送通过邮件的请求
-/services/request-birth-certificate,[lang-h2-2-li-1a],"You may have to find a notary to sign your application, depending on whether you want an",Debe contratar a un notario para obtener una,你必须聘请一个公证人
-/services/request-birth-certificate,[lang-h2-2-li-1b],authorized or informational copy,copia autorizada.,授权的拷贝。
-/services/request-birth-certificate,[lang-h2-2-li-2],Cost: $25 (plus the price of notarization),Costo: $25 (más el precio de la notarización),费用：$ 25（加公证的价格）
-/services/request-birth-certificate,[lang-h2-2-li-3a],Processing time: 3 to 4 weeks or more (expected to take longer in 2020 because of the demand for,Tiempo de procesamiento: 3 a 4 semanas o más (se espera que tome más tiempo en 2020 debido a la demanda de,处理时间：3〜4周或更长的时间（比预期在2020年至需要更长的时间，因为需求
-/services/request-birth-certificate,[lang-h2-2-li-3b],Real ID,Real ID,真实身份
-/services/request-birth-certificate,[lang-h2-2-link],Mail a request,Envíe una solicitud por correo,发送通过邮件的请求
-/services/request-birth-certificate,[lang-h2-3],Apply online,Solicitar por internet,在线申请
-/services/request-birth-certificate,[lang-h2-3-li-1],You can apply online through the private companies VitalChek and Vital Records Now.,Puede solicitar en línea a través de empresas privadas VitalChek y Vital Records Now,您可以通过私人公司和重要记录现在VitalChek网上申请
-/services/request-birth-certificate,[lang-h2-3-li-2],Cost: $31–$110,Costo: $31-110,费用：$ 31-110
-/services/request-birth-certificate,[lang-h2-3-li-3],Processing time: 2 to 3 weeks,Tiempo de procesamiento: 2-3 semanas,处理时间：2-3周
-/services/request-birth-certificate,[lang-h2-3-link],Apply online,Solicitar por internet,在线申请
-/services/request-birth-certificate,[lang-h2-3-p-1a],More about requesting a,Más información sobre cómo solicitar un,如何请求更多信息
-/services/request-birth-certificate,[lang-h2-3-p-1b],birth certificate,certificado de nacimiento,出生证明
+/services/request-birth-certificate,,Request a birth certificate,Solicitar un certificado de nacimiento,申请出生证明
+/services/request-birth-certificate,,Request a birth certificate - Welcome to Alpha.CA.gov,Solicitar un certificado de nacimiento - Bienvenido a Alpha.CA.gov,申请出生证明 - 欢迎Alpha.CA.gov
+/services/request-birth-certificate,,"Request a California birth certificate in person, by mail, or online.","Solicitar un certificado de nacimiento en persona, por correo, o por internet",申请出生证的人，通过邮件，或在线
+/services/request-birth-certificate,,Request a birth certificate - Alpha.CA.gov,Solicitar un certificado de nacimiento - Alpha.CA.gov,申请出生证明 -  Alpha.CA.gov
+/services/request-birth-certificate,,There are three main ways to order a California birth certificate.,Hay tres maneras de pedir un certificado de nacimiento de California.,有三种方法，要求在加州出生证明。
+/services/request-birth-certificate,,Visit a county office,Visita una oficina del condado,访问县委办公室
+/services/request-birth-certificate,,You have to apply with the county where the person was born.,Tiene que presentar su solicitud con el condado donde nació la persona.,您必须在人出生县提交申请。
+/services/request-birth-certificate,,Cost: $28,Costo: $28,费用：$ 28日
+/services/request-birth-certificate,,"Processing time: Varies, but could be as soon as the same day","Tiempo de procesamiento: Varía, pero podría ser tan pronto como el mismo día",处理时间：不定，但可能是早在当天
+/services/request-birth-certificate,,You'll sign a sworn statement in front of a county worker.,Firmará una declaración jurada frente a un trabajador del condado.,他将签订一个县工人面前宣誓声明。
+/services/request-birth-certificate,,"You may need to bring a driver's license, passport, or other photo ID from the government that hasn't expired.","Es posible que deba traer una licencia de conducir, pasaporte u otra identificación con foto del gobierno que no haya expirado.",您可能需要携带驾驶执照，护照或尚未到期的政府的其他照片的身份证明。
+/services/request-birth-certificate,,Mail a request,Envíe una solicitud por correo,发送通过邮件的请求
+/services/request-birth-certificate,,"You may have to find a notary to sign your application, depending on whether you want an",Debe contratar a un notario para obtener una,你必须聘请一个公证人
+/services/request-birth-certificate,,authorized or informational copy,copia autorizada.,授权的拷贝。
+/services/request-birth-certificate,,Cost: $25 (plus the price of notarization),Costo: $25 (más el precio de la notarización),费用：$ 25（加公证的价格）
+/services/request-birth-certificate,,Processing time: 3 to 4 weeks or more (expected to take longer in 2020 because of the demand for,Tiempo de procesamiento: 3 a 4 semanas o más (se espera que tome más tiempo en 2020 debido a la demanda de,处理时间：3〜4周或更长的时间（比预期在2020年至需要更长的时间，因为需求
+/services/request-birth-certificate,,Real ID,Real ID,真实身份
+/services/request-birth-certificate,,Apply online,Solicitar por internet,在线申请
+/services/request-birth-certificate,,You can apply online through the private companies VitalChek and Vital Records Now.,Puede solicitar en línea a través de empresas privadas VitalChek y Vital Records Now,您可以通过私人公司和重要记录现在VitalChek网上申请
+/services/request-birth-certificate,,Cost: $31–$110,Costo: $31-110,费用：$ 31-110
+/services/request-birth-certificate,,Processing time: 2 to 3 weeks,Tiempo de procesamiento: 2-3 semanas,处理时间：2-3周
+/services/request-birth-certificate,,More about requesting a,Más información sobre cómo solicitar un,如何请求更多信息
+/services/request-birth-certificate,,birth certificate,certificado de nacimiento,出生证明
 /services/hire-licensed-contractor-home-improvements,[lang-h1],Hire a licensed contractor for home improvements,Contratar un contratista con licencia para mejorar su hogar,聘请有执照的承包商，以提高你的家
 /services/hire-licensed-contractor-home-improvements,[lang-title],Hire a licensed contractor for home improvements - Alpha.CA.gov,Contratar un contratista con licencia para mejorar su hogar - Alpha.CA.gov,聘请有执照的承包商，以提高你的家 -  Alpha.CA.gov
 /services/hire-licensed-contractor-home-improvements,[lang-meta-description],Follow these suggested steps to make home improvements the safe way and protect your home and your money.,Siga estos pasos sugeridos para que las mejoras en su hogar sean de una manera segura y a la vez proteja su hogar y su dinero.,请按照以下步骤建议改善住房的安全，并保护您的家庭的时间和金钱。
