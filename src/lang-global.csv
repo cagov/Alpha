@@ -379,7 +379,7 @@ path,token,en,es,zh
 /check-lane-closures,,What's your starting location?,¿Cuál es el punto de partida?,要点是什么？
 /check-lane-closures,,Please enter a starting location in California:,"Por favor, introduzca una ubicación de inicio en California:",请进入加州的开始位置：
 /check-lane-closures,[lang-Enter],Enter,Entrar,进入
-/,,Check for lane closures,Compruebe si el cierre de carriles,检查车道关闭
+/,,Check lane closures for your trip,Compruebe el cierre de carriles para viajar,检查车道行驶关闭
 /news,,"Sorry, we can't find that location. Please enter a valid location in California.","Lo sentimos, no podemos encontrar ese lugar. Por favor, introduzca una ubicación válida en California.",很抱歉，我们无法找到那个地方。请在加利福尼亚州输入有效的位置。
 /news,,"Sorry, we can only show road conditions in California. Please enter a California location.","En este momento, sólo podemos mostrar condiciones de la carretera en California. Por favor, introduzca una ubicación de California.",在这个时候，我们只能显示在加利福尼亚州的道路状况。请进入加州的位置。
 /news,,Get directions,Obtener las direcciones,行车路线
