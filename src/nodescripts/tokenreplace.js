@@ -108,11 +108,11 @@ function replaceonelanguage(targetlang) {
 
 function replaceonetoken(data,targetlang,files) {
   const from = [new RegExp(data.token
+    .replace(/\//,'\\\/')
     .replace(/\[/,'\\\[')
     .replace(/\]/,'\\\]')
     .replace(/\)/,'\\\)')
     .replace(/\(/,'\\\(')
-    .replace(/\//,'\\\/')
     .replace(/\*/,'\\\*')
     .replace(/\$/g,'\\\$')
     .replace(/\:/,'\\\:')
