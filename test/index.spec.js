@@ -200,7 +200,7 @@ describe("mobile", () => {
 
 })
 
-
+/*
 describe("lane closures", () => {
   test("lane closures", async () => {
     await page.goto(hostname+'/check-lane-closures/')
@@ -220,7 +220,7 @@ describe("lane closures", () => {
   }, timeout)
 
 })
-
+*/
 afterAll(() => {
   browser.close()
   server.close()
