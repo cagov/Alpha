@@ -8,7 +8,8 @@ const puppeteer = require('puppeteer')
 const express = require('express')
 const app = express()
 const port = 1338
-const timeout = 60000 //from from 16000
+const timeout = 60000 //from from 16000, also used for individual tests
+jest.setTimeout(timeout)
 let server
 
 /*
