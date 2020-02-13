@@ -95,24 +95,6 @@ module.exports = {
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: 'en/services/request-birth-certificate/index.html',
-      template: 'src/services/request-birth-certificate/index.html',
-      excludeChunks: excludedChunks,
-      minify: minificationOptions
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'en/services/find-minimum-wage-your-city/index.html',
-      template: 'src/services/find-minimum-wage-your-city/index.html',
-      excludeChunks: ['food','roads'],
-      minify: minificationOptions
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'en/services/state-california-employee-holidays/index.html',
-      template: 'src/services/state-california-employee-holidays/index.html',
-      excludeChunks: excludedChunks,
-      minify: minificationOptions
-    }),
-    new HtmlWebpackPlugin({
       filename: 'en/apply-for-disability-insurance-benefits/index.html',
       template: 'src/services/apply-for-disability-insurance-benefits/index.html',
       excludeChunks: excludedChunks,
@@ -143,7 +125,55 @@ module.exports = {
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
+      filename: 'en/check-lane-closures/index.html',
+      template: 'src/services/check-lane-closures/index.html',
+      excludeChunks: ['minwage', 'food'],
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'en/services/request-birth-certificate/index.html',
+      template: 'src/services/request-birth-certificate/index.html',
+      excludeChunks: excludedChunks,
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'en/request-birth-certificate/index.html',
+      template: 'src/services/request-birth-certificate/index.html',
+      excludeChunks: excludedChunks,
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'en/services/find-minimum-wage-your-city/index.html',
+      template: 'src/services/find-minimum-wage-your-city/index.html',
+      excludeChunks: ['food','roads'],
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'en/find-minimum-wage-your-city/index.html',
+      template: 'src/services/find-minimum-wage-your-city/index.html',
+      excludeChunks: ['food','roads'],
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'en/services/state-california-employee-holidays/index.html',
+      template: 'src/services/state-california-employee-holidays/index.html',
+      excludeChunks: excludedChunks,
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'en/state-california-employee-holidays/index.html',
+      template: 'src/services/state-california-employee-holidays/index.html',
+      excludeChunks: excludedChunks,
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
       filename: 'en/services/find-food-banks-near-you/index.html',
+      template: 'src/services/find-food-banks-near-you/index.html',
+      excludeChunks: ['minwage','roads'],
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'en/find-food-banks-near-you/index.html',
       template: 'src/services/find-food-banks-near-you/index.html',
       excludeChunks: ['minwage','roads'],
       minify: minificationOptions
@@ -155,9 +185,9 @@ module.exports = {
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: 'en/check-lane-closures/index.html',
-      template: 'src/services/check-lane-closures/index.html',
-      excludeChunks: ['minwage', 'food'],
+      filename: 'en/hire-licensed-contractor-home-improvements/index.html',
+      template: 'src/services/hire-licensed-contractor-home-improvements/index.html',
+      excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
     new ScriptExtHtmlWebpackPlugin({
