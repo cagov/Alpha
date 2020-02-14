@@ -12,7 +12,7 @@
     "class-pattern": ["error",{"pattern": "kebabcase"}],
     "close-attr": "error",
     "close-order": "error",
-    "deprecated": "error",
+    "deprecated": "warn",
     "deprecated-rule": "error",
     "doctype-html": "error",
     "element-case": ["error",{"style": "lowercase"}],
@@ -57,6 +57,10 @@
   "elements": ["html5",
     {
       "hr": {
+        "inherit": "hr",
+        "deprecated": true
+      },
+      "br": {
         "inherit": "hr",
         "deprecated": true
       }
