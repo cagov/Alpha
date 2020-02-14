@@ -10,7 +10,7 @@ export default async function getLatLon(place) {
     }  
   })
   .catch((error) => {
-    console.log(error)
+    //console.log(error)
     return {"status": "error", "message": "Please enter a valid city or zip code, such as San Francisco or 95818"}
   });
   return response;

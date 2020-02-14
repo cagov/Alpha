@@ -2,7 +2,7 @@ let fs = require('fs')
 
 let zips = JSON.parse(fs.readFileSync('../unique-zips.json','utf8'));
 
-console.log(zips.length)
+//console.log(zips.length)
 
 let slim = [];
 

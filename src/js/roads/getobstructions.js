@@ -55,7 +55,7 @@
     })
     .catch(function(err) {
       receivedJSON++;
-      console.log(err.message); // some coding error in handling happened
+      //console.log(err.message); // some coding error in handling happened
       checkOut();
     });
   })
@@ -74,7 +74,7 @@
     })
     .catch(function(err) {
       receivedJSON++;
-      console.log(err.message); // some coding error in handling happened
+      //console.log(err.message); // some coding error in handling happened
       checkOut();
     });
   }
