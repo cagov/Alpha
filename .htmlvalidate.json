@@ -53,5 +53,13 @@
     "missing-doctype": "off",
     "no-unknown-elements": "off",
     "no-trailing-whitespace": "off"
-  }
+  },
+  "elements": ["html5",
+    {
+      "hr": {
+        "inherit": "hr",
+        "deprecated": true
+      }
+    }
+  ]
 }
