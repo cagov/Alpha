@@ -4,15 +4,19 @@ export default function getSteps(json) {
   steps.forEach( (step) => {
     step.bannerInstructions.forEach( (inst) => {
       let key = inst.primary.text;
-      if(key.indexOf('/') === -1 && key.indexOf(';') === -1) {
+      if(key.indexOf('fork') === -1 && key.indexOf('/') === -1 && key.indexOf(';') === -1 && step.maneuver.type != 'off ramp') {
+        //console.log('USED: '+key+' '+step.maneuver.type)
         inst.primary.components.forEach( (component) => {
           let roadStr = component.text;
           if((roadStr.indexOf('CA ') == 0) || (roadStr.indexOf('I-') == 0) || (roadStr.indexOf('US ') == 0)) {
             stepMap.set(roadStr, inst)
           }
         })
+      } else {
+        //console.log('SKIPPED: '+key)
       }
     })
   })
+  //console.log(stepMap)
   return stepMap;
 }

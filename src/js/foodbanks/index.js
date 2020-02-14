@@ -44,7 +44,7 @@ function getGeo() {
     switch (error.code) {
       case error.TIMEOUT:
         // The user didn't accept the callout
-        console.log('the use did not accept geolocate permission')
+        //console.log('the use did not accept geolocate permission')
         break;
     }
   };
