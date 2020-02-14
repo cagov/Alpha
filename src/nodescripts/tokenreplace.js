@@ -104,6 +104,8 @@ function replaceonelanguage(targetlang) {
       console.log(targetlang + ': Default Root Complete')
     })
 
+  fse.remove(source)
+
   console.log(targetlang + ': Language Replacement Complete')
 } //replaceonelanguage
 
