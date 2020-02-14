@@ -5,11 +5,7 @@ export default function getSteps(json) {
     step.bannerInstructions.forEach( (inst) => {
       let key = inst.primary.text;
       if(key.indexOf('fork') === -1 && key.indexOf('/') === -1 && key.indexOf(';') === -1 && step.maneuver.type != 'off ramp') {
-<<<<<<< HEAD
-        //console.log('USED: '+key+' '+step.maneuver.type)
-=======
         console.log('USED: '+key+' '+step.maneuver.type)
->>>>>>> update steps logic
         inst.primary.components.forEach( (component) => {
           let roadStr = component.text;
           if((roadStr.indexOf('CA ') == 0) || (roadStr.indexOf('I-') == 0) || (roadStr.indexOf('US ') == 0)) {
@@ -17,18 +13,10 @@ export default function getSteps(json) {
           }
         })
       } else {
-<<<<<<< HEAD
-        //console.log('SKIPPED: '+key)
-      }
-    })
-  })
-  //console.log(stepMap)
-=======
         console.log('SKIPPED: '+key)
       }
     })
   })
   console.log(stepMap)
->>>>>>> update steps logic
   return stepMap;
 }
