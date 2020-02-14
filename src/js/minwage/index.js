@@ -136,7 +136,7 @@ function findWageMatch(city, wageJson, zipMap, cityNames) {
 
 function doubleTemplate(location, wageData) {
   return `
-    <h4>${translations["The minimum wage in"]} ${location}, CA ${translations["is"]}:</h4>
+    <h2>${translations["The minimum wage in"]} ${location}, CA ${translations["is"]}</h2>
     <table class="table">
       <thead>
         <tr>

@@ -1,17 +1,18 @@
 path,token,en,es,zh
 ,[global-lang-about],About,Acerca de,关于
-,[global-lang-feedback-p],Did you find what you were looking for? Please share your feedback to help us improve this page.,¿No encontró lo que buscaba? Por favor comparta su comentarios para ayudarnos a mejorar esta página de internet,他没有找到你想要的吗？请分享您的反馈，帮助我们改进本网站
+,[global-lang-feedback-p],to help us improve this page.,¿No encontró lo que buscaba? Por favor comparta su comentarios para ayudarnos a mejorar esta página de internet,他没有找到你想要的吗？请分享您的反馈，帮助我们改进本网站
 ,[global-lang-feedback],Feedback,Comentarios,评论
 ,[global-lang-news],News,Noticias,新闻
 ,[global-lang-official],State of California,Gobierno del Estado de California,加利福尼亚州政府
-,[global-lang-share-feedback],Share your feedback,Por favor comparta sus comentarios,请分享您的意见
-,[global-lang-state-of-ca],State of California,Estado de California,加利福尼亚州
+,[global-lang-share-feedback],share your feedback,Por favor comparta sus comentarios,请分享您的意见
+,[global-lang-state-of-ca],Official California State Government Website,Sitio Web Oficial del Gobierno del Estado de California,加利福尼亚州政府官方网站
 ,[global-lang-work-in-progress-header],Alpha.CA.gov is a work in progress.,Alpha.CA.gov es un trabajo en progreso.,Alpha.CA.gov是一项正在进行的工作。
 ,[global-lang-work-in-progress-p-1a],"While we test our website, the information here might not be completely accurate. We welcome",Gracias por ayudarnos a probar nuestro proyecto experimental. Agradecemos,感谢您帮助我们测试的实验项目。谢谢
 ,[global-lang-work-in-progress-p-1b],your feedback,sus comentarios,您的意见
 ,[global-lang-work-in-progress-p-1c],Thanks for helping us make government services easier to use.,Gracias por ayudarnos a hacer que los servicios del gobierno sean más fáciles de usar.,感谢您的帮助使政府服务更容易使用。
 ,[global-lang-work-in-progress-p-2a],"If you need the current site, please","Si necesita el sitio actual,",如果您需要当前网站，
 ,[global-lang-work-in-progress-p-2b],visit CA.gov,visite CA.gov,访问CA.gov
+,[global-please],Please,Por favor,请
 ,[global-lang-alphabar-p-1a],This website is a,Este sitio web es un,这个网站是一个
 ,[global-lang-alphabar-p-1b],work in progress,trabajo en progreso,工作正在进行中
 ,[global-lang-select-language],Select language,Seleccione el idioma,选择语言
@@ -215,7 +216,7 @@ path,token,en,es,zh
 /services/hire-licensed-contractor-home-improvements,,Confirm their contact information,Confirme su información de contacto,确认您的联系信息
 /services/hire-licensed-contractor-home-improvements,,"Make sure your contractor has a current business address and phone number. If their work needs repair, you'll want to be able to find them after you've paid the last bill.","Asegúrese que su contratista tenga una dirección comercial y un número de teléfono válido. Así si su trabajo necesita reparos después que el proyecto haya terminado, usted ya tendrá información de contacto después de haber pagado la última factura.",请确保你的承包商有商务地址和有效的电话号码。因此，如果该项目建成后，你的工作需要修理，您已经将联系人信息，您所支付的最后一笔之后。
 /services/hire-licensed-contractor-home-improvements,,Contact their references,Póngase en contacto con las referencias del contratista,联系承包商的引用
-/services/hire-licensed-contractor-home-improvements,,Ask your contractor for the contact information of their former customers.,Pregúntele a su contratista por la información de contacto de sus clientes anteriores. Esto le ayudará a entender la calidad del trabajo de su contratista.,问问你的承包商自己以前的客户的联系信息。这将帮助你了解你的工作承包商的质量。
+/services/hire-licensed-contractor-home-improvements,,Ask your contractor for the contact information of their former customers.,Pregúntele a su contratista por la información de contacto de sus clientes anteriores. Esto le ayudará a entender la calidad del trabajo de su contratista.,问问你的承包商自己以前的客户的联系信息。这将帮助你了解质量工作的承包商。
 /services/hire-licensed-contractor-home-improvements,,"Then, ask those customers if they were happy with your contractor's project. And ask to see pictures, if possible. This will help you understand the quality of your contractor's work.","Póngase en contacto con esos clientes para preguntar si estaban satisfechos con el proyecto de su contratista. Pida ver fotos, si es posible.",联系这些客户，询问他们是否用其承包的草案感到满意。要求看照片，如果可能的话。
 /services/hire-licensed-contractor-home-improvements,,Ask to see your contractor's pocket license,Pida ver la licencia de bolsillo de su contratista,要求看他的承包商的许可证口袋
 /services/hire-licensed-contractor-home-improvements,,"When your contractor comes to your house, ask to see a copy of their pocket license. Compare it to their driver's license or other photo ID.","Cuando el contratista venga a su casa, pida que le muestre una copia de su licencia de tamaño de bolsillo. Compárelo con su licencia de conducir u otra identificación con foto.",当承包商来到你的家，请展现你的许可口袋大小的副本。与你的驾驶执照或其他带照片证件进行比较。
@@ -252,7 +253,7 @@ path,token,en,es,zh
 /apply-for-disability-insurance-benefits,,You can choose to get paid through a,Usted puede elegir a recibir el pago a través de una,您可以选择通过收取货款
 /apply-for-disability-insurance-benefits,,debit card</a> or checks in the mail. (Checks take 7 to 10 days to mail.),tarjeta de débito</a> o cheques por correo. (Toman entre 7 a 10 días en llegar por el correo.),</A>卡或借记卡检查通过邮件。 （他们需要7〜10天通过邮件到达。）
 /apply-for-disability-insurance-benefits,,If you don’t qualify:,Si no califica,如果你不符合条件
-/apply-for-disability-insurance-benefits,,You can tell us you disagree with the decision.,Usted puede decirnos si no está de acuerdo con la decisión.,你可以告诉我们，如果你决定不同意。
+/apply-for-disability-insurance-benefits,,You can tell us you disagree with the decision.,Usted puede decirnos si no está de acuerdo con la decisión.,你可以告诉我们，如果您不同意此决定。
 /apply-for-disability-insurance-benefits,,"In your letter, you’ll also get an Appeal Form. You can fill out this form and send it back to us within 30 days.","En su carta, también obtendrá una Forma de Apelación. Usted puede llenar este formulario y enviarlo de nuevo a nosotros dentro 30 dias.",在你的信，你还可以得到一个上诉表格。您可以填写此表，并在30天内寄回给我们。
 /apply-for-disability-insurance-benefits,,Submit a form to keep getting paid,Presentar una forma de mantener los pagos de sus beneficios,呈现方式，让您收益金
 /apply-for-disability-insurance-benefits,,"To keep your benefits, you have to let us know you still are unable to work. To do that, you must return one of the forms below.","Para mantener sus beneficios, usted tiene que hacernos saber que todavía tiene una discapacidad. Debe devolver una de las siguientes formas:",为了让您的利益，你必须让我们知道，你仍然有残疾。你必须返回下列方式之一：
@@ -310,7 +311,7 @@ path,token,en,es,zh
 /apply-for-cal-grant/step-1,,Apply for the Free Application for Federal Student Aid (FAFSA) if you:,Aplicar para la Solicitud Gratuita de Ayuda Federal para Estudiantes (FAFSA) si:,申请是否免费申请联邦学生援助（FAFSA）：
 /apply-for-cal-grant/step-1,,Have U.S. Citizenship,Tienen la ciudadanía de EE.UU.,他们拥有美国国籍
 /apply-for-cal-grant/step-1,,are a Permanent Resident,es un Residente Permanente,这是一个永久居民
-/apply-for-cal-grant/step-1,,"do not have U.S. Citizenship, but you are","no tienen la ciudadanía de EE.UU., pero usted es",没有美国国籍，但你
+/apply-for-cal-grant/step-1,,"do not have U.S. Citizenship, but you are","no tienen la ciudadanía de EE.UU., pero usted es",他们没有美国国籍，但你
 /apply-for-cal-grant/step-1,,eligible for federal student aid,elegible para ayuda federal para estudiantes,有资格获得联邦学生补助
 /apply-for-cal-grant/step-1,[lang-have-a],have a,tiene un,有
 /apply-for-cal-grant/step-1,,T Visa,Visa T,签证Ť
@@ -547,7 +548,7 @@ path,token,en,es,zh
 /hire-licensed-contractor-home-improvements,,Confirm their contact information,Confirme su información de contacto,确认您的联系信息
 /hire-licensed-contractor-home-improvements,,"Make sure your contractor has a current business address and phone number. If their work needs repair, you'll want to be able to find them after you've paid the last bill.","Asegúrese que su contratista tenga una dirección comercial y un número de teléfono válido. Así si su trabajo necesita reparos después que el proyecto haya terminado, usted ya tendrá información de contacto después de haber pagado la última factura.",请确保你的承包商有商务地址和有效的电话号码。因此，如果该项目建成后，你的工作需要修理，您已经将联系人信息，您所支付的最后一笔之后。
 /hire-licensed-contractor-home-improvements,,Contact their references,Póngase en contacto con las referencias del contratista,联系承包商的引用
-/hire-licensed-contractor-home-improvements,,Ask your contractor for the contact information of their former customers.,Pregúntele a su contratista por la información de contacto de sus clientes anteriores. Esto le ayudará a entender la calidad del trabajo de su contratista.,问问你的承包商自己以前的客户的联系信息。这将帮助你了解你的工作承包商的质量。
+/hire-licensed-contractor-home-improvements,,Ask your contractor for the contact information of their former customers.,Pregúntele a su contratista por la información de contacto de sus clientes anteriores. Esto le ayudará a entender la calidad del trabajo de su contratista.,问问你的承包商自己以前的客户的联系信息。这将帮助你了解质量工作的承包商。
 /hire-licensed-contractor-home-improvements,,"Then, ask those customers if they were happy with your contractor's project. And ask to see pictures, if possible. This will help you understand the quality of your contractor's work.","Póngase en contacto con esos clientes para preguntar si estaban satisfechos con el proyecto de su contratista. Pida ver fotos, si es posible.",联系这些客户，询问他们是否用其承包的草案感到满意。要求看照片，如果可能的话。
 /hire-licensed-contractor-home-improvements,,Ask to see your contractor's pocket license,Pida ver la licencia de bolsillo de su contratista,要求看他的承包商的许可证口袋
 /hire-licensed-contractor-home-improvements,,"When your contractor comes to your house, ask to see a copy of their pocket license. Compare it to their driver's license or other photo ID.","Cuando el contratista venga a su casa, pida que le muestre una copia de su licencia de tamaño de bolsillo. Compárelo con su licencia de conducir u otra identificación con foto.",当承包商来到你的家，请展现你的许可口袋大小的副本。与你的驾驶执照或其他带照片证件进行比较。

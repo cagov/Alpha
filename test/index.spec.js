@@ -68,7 +68,7 @@ describe("minimum wage", () => {
       'document.querySelector("#answer").innerText.includes("Hayward")'
     )
     
-    const answers = await page.$$eval('#answer h4', answers => answers )
+    const answers = await page.$$eval('#answer h2', answers => answers )
     expect(answers.length).toBeGreaterThan(0)
 
   }, timeout)
