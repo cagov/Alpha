@@ -5,8 +5,10 @@ class CWDSStepList extends HTMLElement {
       item.addEventListener('click', this.listen)
       let detailsEl = item.querySelector('.details');
       if(detailsEl) {
-        detailsEl.detailsHeight = detailsEl.scrollHeight;
-        detailsEl.style.display = "none";
+        setTimeout(function() {
+          detailsEl.detailsHeight = detailsEl.scrollHeight;
+          detailsEl.style.display = "none";
+        }, 30)
       }
     })
   }
@@ -25,7 +27,7 @@ class CWDSStepList extends HTMLElement {
       // need to timeout here to prevent the browser from grouping these two statements and killing the animation
       setTimeout(function() {
         detailsEl.style.height = detailsHeight + 'px';
-      }, 3)
+      }, 30)
     } else {
       detailsEl.style.height = 0;
       // timeout here to give animation time to complete before hide
