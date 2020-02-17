@@ -110,6 +110,8 @@ cwds-step-list li .unstyled {
     width: fit-content;
     list-style-type: none;
 	background: none;
+	padding-left: 0;
+    padding-right: 0;
 }
 	  
 	   	  
@@ -193,7 +195,7 @@ cwds-step-list li .step-interior {
 
 
 cwds-step-list li .step-interior {
-    padding-left: 0;
+    padding-right: 0;
     padding-top: 1rem;
 }
 

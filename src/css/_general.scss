@@ -215,6 +215,10 @@ hr {
     background: #f1f1f1;
 }
 
+.card .table thead th {
+    background: transparent;
+}
+
 /* Card */
 
 .card-header {
@@ -791,6 +795,15 @@ li .action-link:focus-within {
 .alpha-footer {
 	padding-left: 20px;
 	padding-top: 1rem;
+	padding-bottom: 0;
+}
+	
+.container-fluid.jumbotron  {
+    padding-left: 0;
+}
+	
+.container-fluid.jumbotron.alpha {
+    padding-left: 15px;
 }
 	
 li.list-group-item.alpha-footer {
