@@ -63,7 +63,7 @@ path,token,en,es,zh
 /services/find-minimum-wage-your-city,,Please enter a city or zip code in California.,Por favor introduzca la ciudad o código postal en California:,请进入加州城市或邮政编码：
 /services/find-minimum-wage-your-city,,Find minimum wage,Encuentre el salario minimo,找到最低工资
 /services/find-minimum-wage-your-city,,California minimum wage in 2020,Salario mínimo de California en 2020,在2020年加利福尼亚州的最低工资
-/services/find-minimum-wage-your-city,,Minimum wage depends on the city where you work. Some cities have the same minimum wage as the State.,El salario mínimo depende de la ciudad donde trabaja. Algunas ciudades tienen el mismo salario mínimo que el Estado de California.,最低工资取决于他工作的城市。一些城市具有相同最低工资标准为加利福尼亚州。
+/services/find-minimum-wage-your-city,,Minimum wage depends on the city where you work. Some cities have the same minimum wage as the State.,El salario mínimo depende de la ciudad donde trabaja. Algunas ciudades tienen el mismo salario mínimo que el Estado de California.,最低工资取决于他工作的城市。一些城市具有相同的最低工资标准为加利福尼亚州。
 /services/find-minimum-wage-your-city,,Employers with 25 or fewer employees,Empleadores con 25 o menos empleados,有25名或更少的员工的雇主
 /services/find-minimum-wage-your-city,,Employers with 26 or more employees,Empleadores con 26 o más empleados,有26名以上雇员的雇主
 /services/find-minimum-wage-your-city,,$12/hour*,$12/hora*,$ 12 /小时*
@@ -189,7 +189,8 @@ path,token,en,es,zh
 /services/hire-licensed-contractor-home-improvements,,Follow these suggested steps to make home improvements the safe way and protect your home and your money.,Siga estos pasos sugeridos para que las mejoras en su hogar sean de una manera segura y a la vez proteja su hogar y su dinero.,请按照以下步骤建议改善住房的安全，并保护您的家庭的时间和金钱。
 /services/hire-licensed-contractor-home-improvements,,Steps to hire a licensed contractor,Pasos para contratar a un contratista con licencia,步骤聘请授权的合同
 /services/hire-licensed-contractor-home-improvements,,Decide what type of contractor you need,Decida qué tipo de contratista necesita,决定什么类型的承包商需求
-/services/hire-licensed-contractor-home-improvements,,"<p><strong>General Engineering Contractors</strong> and <strong>General Building Contractors</strong> usually manage subcontractors for a job.</p><p><strong>Specialty Contractors</strong> are often hired to do a single job, such as roofing or plumbing.</p>","<p><STRONG> Los contratistas de ingeniería general </STRONG> y <STRONG> los contratistas generales de construcción </STRONG> usualmente supervisan proyectos y dirigen trabajos de subcontratistas.</p><p><STRONG> Contratistas especializados </STRONG> a veces son contratados para hacer un solo trabajo, como techos o plomería.</p>",<P> <STRONG>承包商一般工程</ strong>和<strong>常规施工的承包商</ STRONG>通常兼管项目和分包商的直接工作。</ p> <p> <STRONG>专门承包商< / STRONG>有时被雇用来执行一项工作，如屋顶或管道。</ p>
+/services/hire-licensed-contractor-home-improvements,,"<p><strong>General Engineering Contractors</strong> and <strong>General Building Contractors</strong> usually manage subcontractors for a job.</p><p><strong>Specialty Contractors</strong> are often hired to do a single job, such as roofing or plumbing.</p>","<p><strong> Los contratistas de ingeniería general </strong> y <strong> los contratistas generales de construcción </strong> usualmente supervisan proyectos y dirigen trabajos de subcontratistas.</p><p><strong> Contratistas especializados </strong> a veces son contratados para hacer un solo trabajo, como techos o plomería.</p>","<p> <strong>承包商一般工程</ strong>和<strong>常规施工的承包商</strong>通常兼管项目和分包商的直接工作。</ p> <p> <strong>专门承包商< /strong>有时被雇用来执行一项工作，如屋顶或管道。</ p>
+"
 /services/hire-licensed-contractor-home-improvements,,Choose the type of contractor you need,Elija el tipo de contratista que necesite,选择承包商的类型，你需要
 /services/hire-licensed-contractor-home-improvements,,Check if you need a building permit,Compruebe si necesita un permiso de construcción,检查您是否需要建筑许可证
 /services/hire-licensed-contractor-home-improvements,,"You must get a building permit from your local building department for new construction, remodeling, or repairs.","Debe obtener un permiso de construcción de su departamento de construcción local para nuevas construcciones, remodelaciones y reparaciones.",您必须向当地建设部门进行新的建设取得建筑许可证，改造和维修。
@@ -289,7 +290,8 @@ path,token,en,es,zh
 /apply-for-cal-grant,,Attend or plan to attend an,Asistir a un,参加
 /apply-for-cal-grant,,Not already have a bachelor's or professional degree,No haber obtenido un título universitario o profesional de 4 años ,由于没有获得大学专业学位或4年
 /apply-for-cal-grant,,Have U.S. citizenship,Ser ciudadano estadounidense,是美国公民
-/apply-for-cal-grant,,<strong>or</strong> be ,<STRONG>o</STRONG> ser,<strong>或</ STRONG>是
+/apply-for-cal-grant,,<strong>or</strong> be ,<strong>o</strong> ser,"<strong>或</strong>是
+"
 /apply-for-cal-grant,,eligible for federal student aid,elegible para ayuda financiera del gobierno,资格获得政府的财政援助
 /apply-for-cal-grant,,eligible for AB540,o un estudiante elegible para el programa AB540,或符合条件的学生的程序AB540
 /apply-for-cal-grant,,Need financial help to pay for your college's tuition,Necesitar ayuda financiera para pagar la matrícula de su universidad,需要财政援助，以交学费贵校
@@ -307,7 +309,7 @@ path,token,en,es,zh
 /apply-for-cal-grant/step-1,,Follow these steps to apply for a Cal Grant. It’s money for college you don’t have to pay back.,Siga estos pasos para solicitar una beca Cal Grant. Es dinero para la universidad que usted no tiene que pagar.,请按照以下步骤申请加州拨款。这是大学学费，你不必付费。
 /apply-for-cal-grant/step-1,,"Deadline to apply: Monday, March 2, 2020, 11:59 p.m.","Fecha límite para solicitar: Lunes, 2 de marzo de 2020, 11:59 p.m.",申请截止日期：星期一2020年3月2日晚上11:59
 /apply-for-cal-grant/step-1,,"Apply for financial aid, if you haven't already","Presentar una solicitud para ayuda financiera, si no lo ha hecho ",申请财政援助，如果你还没有做
-/apply-for-cal-grant/step-1,,"There are two ways to apply for financial aid that can lead to a Cal Grant. Submit a FAFSA <em>or</em> CADAA form, if you haven't already.","Hay dos maneras de solicitar ayuda financiera que puede conducir a una beca Cal Grant. Presentar un solicitud de FAFSA <EM>o</EM> CADAA, si no lo ha hecho.",有申请财政援助，可能导致一个CAL授权两种方式。提交FAFSA <EM>或</ EM> Cadaa，如果你还没有完成。
+/apply-for-cal-grant/step-1,,"There are two ways to apply for financial aid that can lead to a Cal Grant. Submit a FAFSA <em>or</em> CADAA form, if you haven't already.","Hay dos maneras de solicitar ayuda financiera que puede conducir a una beca Cal Grant. Presentar un solicitud de FAFSA <EM>o</EM> CADAA, si no lo ha hecho.",有申请财政援助，可能导致一个CAL授权两种方式。提交FAFSA <EM>或</ em>的Cadaa，如果你还没有完成。
 /apply-for-cal-grant/step-1,,Apply for the Free Application for Federal Student Aid (FAFSA) if you:,Aplicar para la Solicitud Gratuita de Ayuda Federal para Estudiantes (FAFSA) si:,申请是否免费申请联邦学生援助（FAFSA）：
 /apply-for-cal-grant/step-1,,Have U.S. Citizenship,Tienen la ciudadanía de EE.UU.,他们拥有美国国籍
 /apply-for-cal-grant/step-1,,are a Permanent Resident,es un Residente Permanente,这是一个永久居民
@@ -395,7 +397,7 @@ path,token,en,es,zh
 /find-minimum-wage-your-city,,Please enter a city or zip code in California.,Por favor introduzca la ciudad o código postal en California:,请进入加州城市或邮政编码：
 /find-minimum-wage-your-city,,Find minimum wage,Encuentre el salario minimo,找到最低工资
 /find-minimum-wage-your-city,,California minimum wage in 2020,Salario mínimo de California en 2020,在2020年加利福尼亚州的最低工资
-/find-minimum-wage-your-city,,Minimum wage depends on the city where you work. Some cities have the same minimum wage as the State.,El salario mínimo depende de la ciudad donde trabaja. Algunas ciudades tienen el mismo salario mínimo que el Estado de California.,最低工资取决于他工作的城市。一些城市具有相同最低工资标准为加利福尼亚州。
+/find-minimum-wage-your-city,,Minimum wage depends on the city where you work. Some cities have the same minimum wage as the State.,El salario mínimo depende de la ciudad donde trabaja. Algunas ciudades tienen el mismo salario mínimo que el Estado de California.,最低工资取决于他工作的城市。一些城市具有相同的最低工资标准为加利福尼亚州。
 /find-minimum-wage-your-city,,Employers with 25 or fewer employees,Empleadores con 25 o menos empleados,有25名或更少的员工的雇主
 /find-minimum-wage-your-city,,Employers with 26 or more employees,Empleadores con 26 o más empleados,有26名以上雇员的雇主
 /find-minimum-wage-your-city,,$12/hour*,$12/hora*,$ 12 /小时*
@@ -521,7 +523,8 @@ path,token,en,es,zh
 /hire-licensed-contractor-home-improvements,,Follow these suggested steps to make home improvements the safe way and protect your home and your money.,Siga estos pasos sugeridos para que las mejoras en su hogar sean de una manera segura y a la vez proteja su hogar y su dinero.,请按照以下步骤建议改善住房的安全，并保护您的家庭的时间和金钱。
 /hire-licensed-contractor-home-improvements,,Steps to hire a licensed contractor,Pasos para contratar a un contratista con licencia,步骤聘请授权的合同
 /hire-licensed-contractor-home-improvements,,Decide what type of contractor you need,Decida qué tipo de contratista necesita,决定什么类型的承包商需求
-/hire-licensed-contractor-home-improvements,,"<p><strong>General Engineering Contractors</strong> and <strong>General Building Contractors</strong> usually manage subcontractors for a job.</p><p><strong>Specialty Contractors</strong> are often hired to do a single job, such as roofing or plumbing.</p>","<p><STRONG> Los contratistas de ingeniería general </STRONG> y <STRONG> los contratistas generales de construcción </STRONG> usualmente supervisan proyectos y dirigen trabajos de subcontratistas.</p><p><STRONG> Contratistas especializados </STRONG> a veces son contratados para hacer un solo trabajo, como techos o plomería.</p>",<P> <STRONG>承包商一般工程</ strong>和<strong>常规施工的承包商</ STRONG>通常兼管项目和分包商的直接工作。</ p> <p> <STRONG>专门承包商< / STRONG>有时被雇用来执行一项工作，如屋顶或管道。</ p>
+/hire-licensed-contractor-home-improvements,,"<p><strong>General Engineering Contractors</strong> and <strong>General Building Contractors</strong> usually manage subcontractors for a job.</p><p><strong>Specialty Contractors</strong> are often hired to do a single job, such as roofing or plumbing.</p>","<p><strong> Los contratistas de ingeniería general </STRONG> y <STRONG> los contratistas generales de construcción </STRONG> usualmente supervisan proyectos y dirigen trabajos de subcontratistas.</p><p><STRONG> Contratistas especializados </strong> a veces son contratados para hacer un solo trabajo, como techos o plomería.</p>","<p> <strong>承包商一般工程</strong>和<strong>常规施工的承包商</strong>通常兼管项目和分包商的直接工作。</p> <p> <strong>专门承包商< /strong>有时被雇用来执行一项工作，如屋顶或管道。</p>
+"
 /hire-licensed-contractor-home-improvements,,Choose the type of contractor you need,Elija el tipo de contratista que necesite,选择承包商的类型，你需要
 /hire-licensed-contractor-home-improvements,,Check if you need a building permit,Compruebe si necesita un permiso de construcción,检查您是否需要建筑许可证
 /hire-licensed-contractor-home-improvements,,"You must get a building permit from your local building department for new construction, remodeling, or repairs.","Debe obtener un permiso de construcción de su departamento de construcción local para nuevas construcciones, remodelaciones y reparaciones.",您必须向当地建设部门进行新的建设取得建筑许可证，改造和维修。
