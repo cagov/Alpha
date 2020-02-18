@@ -8,7 +8,7 @@
     "attr-case": ["error",{"style": "lowercase","ignoreForeign": true}],
     "attr-quotes": ["error",{"style": "auto","unquoted": false}],
     "attribute-allowed-values": "error",
-    "attribute-boolean-style": ["warn",{"style": "omit"}],
+    "attribute-boolean-style": ["off",{"style": "omit"}],
     "class-pattern": ["error",{"pattern": "kebabcase"}],
     "close-attr": "error",
     "close-order": "warn",
