@@ -2,288 +2,269 @@
 <html lang="en">
 
 <head>
-  <meta name="description" content="Upcoming holidays for State of California employees.">
-  <%= require('html-loader!../../partials/meta-common.html') %>
-  <%= require('html-loader!../../partials/favicons.html') %>
-
-  <!-- Social media post -->
-  <meta property="og:image" content="/img/thumbnail.png">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:width" content="630">
-  <meta property="og:title" content="State of California employee holidays - Alpha.CA.gov">
-  <meta property="og:description" content="Upcoming holidays for State of California employees.">
-  <meta property="og:url" content="[code-url]">
-
-  <link rel="canonical" href="[code-url]" />
-  <title>State of California employee holidays - Alpha.CA.gov</title>
-
-  <link href="https://california.azureedge.net/cdt/statetemplate/6.0.0/css/cagov.font-only.min.css" rel="stylesheet" />
+    <meta name="description" content="Upcoming holidays for State of California employees.">
+    <%= require('html-loader!../../partials/meta-common.html') %>
+    <%= require('html-loader!../../partials/favicons.html') %>
+    <!-- Social media post -->
+    <meta property="og:image" content="/img/thumbnail.png">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:width" content="630">
+    <meta property="og:title" content="State of California employee holidays - Alpha.CA.gov">
+    <meta property="og:description" content="Upcoming holidays for State of California employees.">
+    <meta property="og:url" content="[code-url]">
+    <link rel="canonical" href="[code-url]" />
+    <title>State of California employee holidays - Alpha.CA.gov</title>
+    <link href="https://california.azureedge.net/cdt/statetemplate/6.0.0/css/cagov.font-only.min.css" rel="stylesheet" />
 </head>
 
 <body>
-<header>
-<%= require('html-loader!../../partials/official.html') %>
-<%= require('html-loader!../../partials/experiment-banner.html') %>
-<%= require('html-loader!../../partials/navbar.html') %>
-</header>  
-<main>	
-  <div class="container-fluid jumbotron">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1>State of California employee holidays</h1>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col col-lg-8">
-        <h2>Next holiday</h2>
-
-        <div class="alert alert-primary " role="alert">
-          <p class="display-4 alert" id="current-holiday-date">&nbsp;</p>
-          <p class="h2 alert" id="current-holiday-name">&nbsp;</p>
-
-        </div>
-
-        <p><i class="far lead ca-gov-icon-calendar"></i> <a href="https://api.alpha.ca.gov/StateHolidayCalendar/.ics"
-            download>Add State holidays to your calendar</a></p>
-
-
-        <h2>Upcoming holidays</h2>
-        <p>State of California employees have paid holidays on the following dates.</p>
-
-        <div class="column mb-20">
-
-          <cwds-accordion>
-            <div class="card">
-                <button class="card-header accordion-alpha" type="button" aria-expanded="false">
-                  <div class="accordion-title">2020 holidays</div>
-                </button>
-              <div class="card-container collapsed">
-                <div class="card-body">
-                  <table class="table table-responsive-sm">
-                    <thead>
-                      <tr>
-                        <th scope="col" class="lead">[Date]</th>
-                        <th scope="col" class="lead">Day of the week</th>
-                        <th scope="col" class="lead">Holiday</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>[lang-holiday-newyears-2020]</td>
-                        <td>Wednesday</td>
-                        <td>[lang-holiday-newyears]</td>
-                      </tr>
-                      <tr>
-                        <td>[lang-holiday-mlk-2020]</td>
-                        <td>Monday</td>
-                        <td>[lang-holiday-mlk]</td>
-                      </tr>
-                      <tr>
-                        <td>[lang-holiday-presidents-2020]</td>
-                        <td>Monday</td>
-                        <td>[lang-holiday-presidents]</td>
-                      </tr>
-                      <tr>
-                        <td>[lang-holiday-chavez-2020]</td>
-                        <td>Tuesday</td>
-                        <td>[lang-holiday-chavez]</td>
-                      </tr>
-                      <tr>
-                        <td>[lang-holiday-memorial-2020]</td>
-                        <td>Monday</td>
-                        <td>[lang-holiday-memorial]</td>
-                      </tr>
-                      <tr>
-                        <td>[lang-holiday-independence-2020] (<a href="#credits">holiday credit</a>)</td>
-                        <td>Saturday</td>
-                        <td>[lang-holiday-independence]</td>
-                      </tr>
-                      <tr>
-                        <td>[lang-holiday-labor-2020]</td>
-                        <td>Monday</td>
-                        <td>[lang-holiday-labor]</td>
-                      </tr>
-                      <tr>
-                        <td>[lang-holiday-veterans-2020]</td>
-                        <td>Wednesday</td>
-                        <td>[lang-holiday-veterans]</td>
-                      </tr>
-                      <tr>
-                        <td>[lang-holiday-thanksgiving-2020]</td>
-                        <td>Thursday</td>
-                        <td>[lang-holiday-thanksgiving]</td>
-                      </tr>
-                      <tr>
-                        <td>[lang-holiday-dayafterthanks-2020]</td>
-                        <td>Friday</td>
-                        <td>[lang-holiday-dayafterthanks]</td>
-                      </tr>
-                      <tr>
-                        <td>[lang-holiday-xmas-2020]</td>
-                        <td>Friday</td>
-                        <td>[lang-holiday-xmas]</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <div class="container">
-
-                    <h3>Other holidays</h3>
-
-                    <div class="alert" role="alert">
-
-                      <p>Most employees get</p>
-                      <p class="display-5 alert"><a href="#credits">1 personal holiday</a></p>
-                      <p>[global-lang-and-lower]</p>
-                      <p class="display-5 alert"><a href="#credits">1 holiday credit (8 hours)</a></p>
-                      <p>July 1, 2020, to June 30, 2021</p>
+    <header>
+        <%= require('html-loader!../../partials/official.html') %>
+        <%= require('html-loader!../../partials/experiment-banner.html') %>
+        <%= require('html-loader!../../partials/navbar.html') %>
+    </header>
+    <main>
+        <div class="container-fluid jumbotron">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>State of California employee holidays</h1>
                     </div>
-
-                  </div>
                 </div>
-              </div>
             </div>
-          </cwds-accordion>
         </div>
-
-        <div class="column mb-20">
-          <cwds-accordion>
-            <div class="card">   
-                <button class="card-header accordion-alpha" type="button" aria-expanded="false">
-                 <div class="accordion-title">2021 holidays</div>
-                </button>
-              <div class="card-container collapsed">
-                <div class="card-body">
-                  <table class="table table-responsive-sm">
-                    <thead>
-                      <tr>
-                        <th scope="col" class="lead">[Date]</th>
-                        <th scope="col" class="lead">Day of the week</th>
-                        <th scope="col" class="lead">Holiday</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>[lang-holiday-newyears-2021]</td>
-                        <td>Friday</td>
-                        <td>[lang-holiday-newyears]</td>
-                      </tr>
-                      <tr>
-                        <td>[lang-holiday-mlk-2021]</td>
-                        <td>Monday</td>
-                        <td>[lang-holiday-mlk]</td>
-                      </tr>
-                      <tr>
-                        <td>[lang-holiday-presidents-2021]</td>
-                        <td>Monday</td>
-                        <td>[lang-holiday-presidents]</td>
-                      </tr>
-                      <tr>
-                        <td>[lang-holiday-chavez-2021]</td>
-                        <td>Wednesday</td>
-                        <td>[lang-holiday-chavez]</td>
-                      </tr>
-                      <tr>
-                        <td>[lang-holiday-memorial-2021]</td>
-                        <td>Monday</td>
-                        <td>[lang-holiday-memorial]</td>
-                      </tr>
-                      <tr>
-                        <td>[lang-holiday-independence-2021]</td>
-                        <td>Sunday (<a href="#credits">holiday credit</a>)</td>
-                        <td>[lang-holiday-independence]</td>
-                      </tr>
-                      <tr>
-                        <td>[lang-holiday-labor-2021]</td>
-                        <td>Monday</td>
-                        <td>[lang-holiday-labor]</td>
-                      </tr>
-                      <tr>
-                        <td>[lang-holiday-veterans-2021]</td>
-                        <td>Thursday</td>
-                        <td>[lang-holiday-veterans]</td>
-                      </tr>
-                      <tr>
-                        <td>[lang-holiday-thanksgiving-2021]</td>
-                        <td>Thursday</td>
-                        <td>[lang-holiday-thanksgiving]</td>
-                      </tr>
-                      <tr>
-                        <td>[lang-holiday-dayafterthanks-2021]</td>
-                        <td>Friday</td>
-                        <td>[lang-holiday-dayafterthanks]</td>
-                      </tr>
-                      <tr>
-                        <td>[lang-holiday-xmas-2021] (<a href="#credits">holiday credit</a>)</td>
-                        <td>Saturday</td>
-                        <td>[lang-holiday-xmas]</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <div class="container">
-                    <h3>Other holidays</h3>
-
-                    <div class="alert " role="alert">
-
-                      <p>Most employees get</p>
-                      <p class="display-5 alert"><a href="#credits">1 personal holiday</a></p>
-                      <p>[global-lang-and-lower]</p>
-                      <p class="display-5 alert"><a href="#credits">1 holiday credit (8 hours)</a></p>
-                      <p>July 1, 2021, to June 30, 2022</p>
+        <div class="container">
+            <div class="row">
+                <div class="col col-lg-8">
+                    <h2>Next holiday</h2>
+                    <div class="alert alert-primary" role="alert">
+                        <p class="display-4 alert" id="current-holiday-date">&nbsp;</p>
+                        <p class="h2 alert" id="current-holiday-name">&nbsp;</p>
                     </div>
-
-                  </div>
+                    <p><a href="https://api.alpha.ca.gov/StateHolidayCalendar/.ics" download><i class="far lead ca-gov-icon-calendar"></i> Add State holidays to your calendar</a></p>
+                    <h2>Upcoming holidays</h2>
+                    <p>State of California employees have paid holidays on the following dates.</p>
+                    <div class="column mb-20">
+                        <cwds-accordion>
+                            <div class="card">
+                                <button class="card-header accordion-alpha" type="button" aria-expanded="false">
+                                    <div class="accordion-title">2020 holidays</div>
+                                </button>
+                                <div class="card-container collapsed">
+                                    <div class="card-body">
+                                        <table class="table table-responsive-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" class="lead">[Date]</th>
+                                                    <th scope="col" class="lead">Day of the week</th>
+                                                    <th scope="col" class="lead">Holiday</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>[lang-holiday-newyears-2020]</td>
+                                                    <td>Wednesday</td>
+                                                    <td>[lang-holiday-newyears]</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>[lang-holiday-mlk-2020]</td>
+                                                    <td>Monday</td>
+                                                    <td>[lang-holiday-mlk]</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>[lang-holiday-presidents-2020]</td>
+                                                    <td>Monday</td>
+                                                    <td>[lang-holiday-presidents]</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>[lang-holiday-chavez-2020]</td>
+                                                    <td>Tuesday</td>
+                                                    <td>[lang-holiday-chavez]</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>[lang-holiday-memorial-2020]</td>
+                                                    <td>Monday</td>
+                                                    <td>[lang-holiday-memorial]</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>[lang-holiday-independence-2020] (<a href="#credits">holiday credit</a>)</td>
+                                                    <td>Saturday</td>
+                                                    <td>[lang-holiday-independence]</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>[lang-holiday-labor-2020]</td>
+                                                    <td>Monday</td>
+                                                    <td>[lang-holiday-labor]</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>[lang-holiday-veterans-2020]</td>
+                                                    <td>Wednesday</td>
+                                                    <td>[lang-holiday-veterans]</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>[lang-holiday-thanksgiving-2020]</td>
+                                                    <td>Thursday</td>
+                                                    <td>[lang-holiday-thanksgiving]</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>[lang-holiday-dayafterthanks-2020]</td>
+                                                    <td>Friday</td>
+                                                    <td>[lang-holiday-dayafterthanks]</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>[lang-holiday-xmas-2020]</td>
+                                                    <td>Friday</td>
+                                                    <td>[lang-holiday-xmas]</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="container">
+                                            <h3>Other holidays</h3>
+                                            <div class="alert" role="alert">
+                                                <p>Most employees get</p>
+                                                <p class="display-5 alert"><a href="#credits">1 personal holiday</a></p>
+                                                <p>[global-lang-and-lower]</p>
+                                                <p class="display-5 alert"><a href="#credits">1 holiday credit (8 hours)</a></p>
+                                                <p>July 1, 2020, to June 30, 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </cwds-accordion>
+                    </div>
+                    <div class="column mb-20">
+                        <cwds-accordion>
+                            <div class="card">
+                                <button class="card-header accordion-alpha" type="button" aria-expanded="false">
+                                    <div class="accordion-title">2021 holidays</div>
+                                </button>
+                                <div class="card-container collapsed">
+                                    <div class="card-body">
+                                        <table class="table table-responsive-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" class="lead">[Date]</th>
+                                                    <th scope="col" class="lead">Day of the week</th>
+                                                    <th scope="col" class="lead">Holiday</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>[lang-holiday-newyears-2021]</td>
+                                                    <td>Friday</td>
+                                                    <td>[lang-holiday-newyears]</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>[lang-holiday-mlk-2021]</td>
+                                                    <td>Monday</td>
+                                                    <td>[lang-holiday-mlk]</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>[lang-holiday-presidents-2021]</td>
+                                                    <td>Monday</td>
+                                                    <td>[lang-holiday-presidents]</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>[lang-holiday-chavez-2021]</td>
+                                                    <td>Wednesday</td>
+                                                    <td>[lang-holiday-chavez]</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>[lang-holiday-memorial-2021]</td>
+                                                    <td>Monday</td>
+                                                    <td>[lang-holiday-memorial]</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>[lang-holiday-independence-2021]</td>
+                                                    <td>Sunday (<a href="#credits">holiday credit</a>)</td>
+                                                    <td>[lang-holiday-independence]</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>[lang-holiday-labor-2021]</td>
+                                                    <td>Monday</td>
+                                                    <td>[lang-holiday-labor]</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>[lang-holiday-veterans-2021]</td>
+                                                    <td>Thursday</td>
+                                                    <td>[lang-holiday-veterans]</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>[lang-holiday-thanksgiving-2021]</td>
+                                                    <td>Thursday</td>
+                                                    <td>[lang-holiday-thanksgiving]</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>[lang-holiday-dayafterthanks-2021]</td>
+                                                    <td>Friday</td>
+                                                    <td>[lang-holiday-dayafterthanks]</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>[lang-holiday-xmas-2021] (<a href="#credits">holiday credit</a>)</td>
+                                                    <td>Saturday</td>
+                                                    <td>[lang-holiday-xmas]</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="container">
+                                            <h3>Other holidays</h3>
+                                            <div class="alert " role="alert">
+                                                <p>Most employees get</p>
+                                                <p class="display-5 alert"><a href="#credits">1 personal holiday</a></p>
+                                                <p>[global-lang-and-lower]</p>
+                                                <p class="display-5 alert"><a href="#credits">1 holiday credit (8 hours)</a></p>
+                                                <p>July 1, 2021, to June 30, 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </cwds-accordion>
+                    </div>
+                    <div class="column">
+                        <a id="credits">
+                            <cwds-accordion class="js-credits">
+                                <div class="card">
+                                    <button class="card-header accordion-alpha" type="button" aria-expanded="false">
+                                        <div class="accordion-title">More details about holidays</div>
+                                    </button>
+                                    <div class="card-container collapsed test-details">
+                                        <div class="card-body">
+                                            <h3>Weekend holidays</h3>
+                                            <ul>
+                                                <li>When a holiday is on a Saturday, most employees get one holiday credit (eight hours of leave).</li>
+                                                <li>When a holiday is on a Sunday, most employees have a paid holiday on the following Monday.</li>
+                                            </ul>
+                                            <h3>Holiday credits</h3>
+                                            <ul>
+                                                <li>Spend your holiday credit on the day or hours you choose.</li>
+                                            </ul>
+                                            <h3>Personal holidays</h3>
+                                            <ul>
+                                                <li>Most employees get one personal holiday every fiscal year (July 1 to June 30).</li>
+                                                <li>Take your personal holiday on the day you choose.</li>
+                                                <li>Most employees start collecting personal holidays after they've worked with the State for six months.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </cwds-accordion>
+                        </a>
+                    </div>
                 </div>
-              </div>
+                <div class="col col-lg-4">
+                </div>
             </div>
-          </cwds-accordion>
         </div>
-
-        <div class="column">
-
-          <a id="credits">
-            <cwds-accordion class="js-credits">
-              <div class="card">
-                   <button class="card-header accordion-alpha" type="button" aria-expanded="false">
-                   <div class="accordion-title">More details about holidays</div>
-                  </button>
-                <div class="card-container collapsed test-details">
-                  <div class="card-body">
-                    <h3>Weekend holidays</h3>
-                    <ul>
-                      <li>When a holiday is on a Saturday, most employees get one holiday credit (eight hours of leave).</li>
-                      <li>When a holiday is on a Sunday, most employees have a paid holiday on the following Monday.</li>
-                    </ul>
-                    <h3>Holiday credits</h3>
-                    <ul>
-                      <li>Spend your holiday credit on the day or hours you choose.</li>
-                    </ul>
-                    <h3>Personal holidays</h3>
-                    <ul>
-                      <li>Most employees get one personal holiday every fiscal year (July 1 to June 30).</li>
-                      <li>Take your personal holiday on the day you choose.</li>
-                      <li>Most employees start collecting personal holidays after they've worked with the State for six months.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </cwds-accordion>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <cwds-holidays></cwds-holidays>
-</main>
-<footer>
-  <%= require('html-loader!../../partials/feedback.html') %>
-  <%= require('html-loader!../../partials/footer.html') %>
-  <%= require('html-loader!../../partials/alphabar.html') %>
-  <%= require('html-loader!../../partials/ga.html') %>
-</footer>
+        <cwds-holidays></cwds-holidays>
+    </main>
+    <footer>
+        <%= require('html-loader!../../partials/feedback.html') %>
+        <%= require('html-loader!../../partials/footer.html') %>
+        <%= require('html-loader!../../partials/alphabar.html') %>
+        <%= require('html-loader!../../partials/ga.html') %>
+    </footer>
 </body>
+
 </html>

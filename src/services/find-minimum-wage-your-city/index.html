@@ -2,93 +2,80 @@
 <html lang="en">
 
 <head>
-  <meta name="description" content="Find the minimum wage in your California city and the State of California. Compare your city's minimum wage to other cities in California.">
-  <%= require('html-loader!../../partials/meta-common.html') %>
-  <%= require('html-loader!../../partials/favicons.html') %>
-
-  <!-- Social media post -->
-  <meta property="og:image" content="/img/thumbnail.png">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:width" content="630">
-  <meta property="og:title" content="Find the minimum wage in your city - Alpha.CA.gov">
-  <meta property="og:description" content="Find the minimum wage in your California city and the State of California. Compare your city's minimum wage to other cities in California.">
-  <meta property="og:url" content="[code-url]">
-
-  <link rel="canonical" href="[code-url]" />
-  <title>Find the minimum wage in your city - Alpha.CA.gov</title>
-
-  <link href="https://california.azureedge.net/cdt/statetemplate/6.0.0/css/cagov.font-only.min.css" rel="stylesheet" />
-
+    <meta name="description" content="Find the minimum wage in your California city and the State of California. Compare your city's minimum wage to other cities in California.">
+    <%= require('html-loader!../../partials/meta-common.html') %>
+    <%= require('html-loader!../../partials/favicons.html') %>
+    <!-- Social media post -->
+    <meta property="og:image" content="/img/thumbnail.png">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:width" content="630">
+    <meta property="og:title" content="Find the minimum wage in your city - Alpha.CA.gov">
+    <meta property="og:description" content="Find the minimum wage in your California city and the State of California. Compare your city's minimum wage to other cities in California.">
+    <meta property="og:url" content="[code-url]">
+    <link rel="canonical" href="[code-url]" />
+    <title>Find the minimum wage in your city - Alpha.CA.gov</title>
+    <link href="https://california.azureedge.net/cdt/statetemplate/6.0.0/css/cagov.font-only.min.css" rel="stylesheet" />
 </head>
 
 <body>
-<header>
-<%= require('html-loader!../../partials/official.html') %>
-<%= require('html-loader!../../partials/experiment-banner.html') %>
-<%= require('html-loader!../../partials/navbar.html') %>
-</header>
-<main>
-  <div class="jumbotron text-left">
-    <div class="container">
-      <h1>Find the minimum wage in your city</h1>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="row">
-
-      <div class="col-md-10">
-
-
-        <form class="form-inline">
-          <div class="form-group wage-city-search">
-            <label for="location-query">Please enter your city or zip code:</label><br>
-            <input type="text" class="city-search form-control mr-3 mb-3" data-multiple id="location-query" aria-controls="submit-form" />
-            <div class="invalid-feedback">Please enter a city or zip code in California.</div>
-			  <button id="submit-form" type="submit" class="btn btn-primary js-wage-lookup mb-3">Find minimum wage</button>
-          </div>
-		  </form>
-        <div id="answer"></div>
-        <p></p>
-        <h2>California minimum wage in 2020</h2>
-        <p>Minimum wage depends on the city where you work. Some cities have the same minimum wage as the State.</p>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Employers with 25 or fewer employees</th>
-              <th scope="col">Employers with 26 or more employees</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>$12/hour*</td>
-              <td>$13/hour*</td>
-            </tr>
-          </tbody>
-        </table>
-        
-        <h3>Compare minimum wage across cities</h3>
-        <p>These California cities and counties have their own minimum wage laws.</p>
-        <div class="display-wage-by-city"></div>
-		  
-
-				
-      </div>
-		<div class="col-md-12 mt-5">
-				<hr>
-				<p>* More about the <a href="https://www.dir.ca.gov/dlse/faq_minimumwage.htm">minimum wage</a>[global-lang-period]</p>
-				<p></p>
-			  </div>
-    </div>
-  </div>	  
-</main>	
-<footer>
-  <%= require('html-loader!../../partials/feedback.html') %>
-  <%= require('html-loader!../../partials/footer.html') %>
-  <script nomodule src="/js/es5Minwage.js?cache=false" ></script>
-  <%= require('html-loader!../../partials/alphabar.html') %>
-  <%= require('html-loader!../../partials/ga.html') %>
-</footer>
+    <header>
+        <%= require('html-loader!../../partials/official.html') %>
+        <%= require('html-loader!../../partials/experiment-banner.html') %>
+        <%= require('html-loader!../../partials/navbar.html') %>
+    </header>
+    <main>
+        <div class="container-fluid jumbotron">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Find the minimum wage in your city</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10">
+                    <form class="form-inline">
+                        <div class="form-group wage-city-search">
+                            <label for="location-query">Please enter your city or zip code:</label>
+                            <input type="text" class="city-search form-control" data-multiple id="location-query" aria-controls="submit-form" />
+                            <div class="invalid-feedback">Please enter a city or zip code in California.</div>
+                            <button id="submit-form" type="submit" class="btn btn-primary js-wage-lookup">Find minimum wage</button>
+                        </div>
+                    </form>
+                    <div id="answer"></div>
+                    <h2>California minimum wage in 2020</h2>
+                    <p>Minimum wage depends on the city where you work. Some cities have the same minimum wage as the State.</p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Employers with 25 or fewer employees</th>
+                                <th scope="col">Employers with 26 or more employees</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>$12/hour*</td>
+                                <td>$13/hour*</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3>Compare minimum wage across cities</h3>
+                    <p>These California cities and counties have their own minimum wage laws.</p>
+                    <div class="display-wage-by-city"></div>
+                    <p>* More about the <a href="https://www.dir.ca.gov/dlse/faq_minimumwage.htm">minimum wage</a>[global-lang-period]</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <%= require('html-loader!../../partials/feedback.html') %>
+        <%= require('html-loader!../../partials/footer.html') %>
+        <script nomodule src="/js/es5Minwage.js?cache=false"></script>
+        <%= require('html-loader!../../partials/alphabar.html') %>
+        <%= require('html-loader!../../partials/ga.html') %>
+    </footer>
 </body>
 
 </html>
