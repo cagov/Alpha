@@ -53,7 +53,7 @@ describe("homepage", () => {
 
 describe("minimum wage", () => {
   test("autocomplete works", async () => {
-    await page.goto(hostname+'/services/find-minimum-wage-your-city/')
+    await page.goto(hostname+'/find-minimum-wage-your-city/')
     await page.waitForSelector(".city-search")
     await page.type(".city-search", '9454')
 
@@ -68,7 +68,7 @@ describe("minimum wage", () => {
       'document.querySelector("#answer").innerText.includes("Hayward")'
     )
     
-    const answers = await page.$$eval('#answer h4', answers => answers )
+    const answers = await page.$$eval('#answer h2', answers => answers )
     expect(answers.length).toBeGreaterThan(0)
 
   }, timeout)
@@ -76,7 +76,7 @@ describe("minimum wage", () => {
 
 describe("food banks", () => {
   test("fb autocomplete works", async () => {
-    await page.goto(hostname+'/services/find-food-banks-near-you/');
+    await page.goto(hostname+'/find-food-banks-near-you/');
     await page.waitForSelector(".city-search");
     await page.type(".city-search", '9582');
 
@@ -99,7 +99,7 @@ describe("food banks", () => {
 
 describe("state holidays", () => {
   test("state holidays", async () => {
-    await page.goto(hostname+'/services/state-california-employee-holidays/');
+    await page.goto(hostname+'/state-california-employee-holidays/');
     await page.click("cwds-accordion button");
     
     let answers = await page.$$eval('.card-body tr', answers => { return answers });
@@ -155,7 +155,7 @@ describe("Disability", () => {
 
 describe("licensed contractor", () => {
   test("licensed contractor", async () => {
-    await page.goto(hostname+'/services/hire-licensed-contractor-home-improvements/')
+    await page.goto(hostname+'/hire-licensed-contractor-home-improvements/')
     await page.click("cwds-step-list")
     
     let answers = await page.$$eval('.col-md-9 li', answers => { return answers })
@@ -167,7 +167,7 @@ describe("licensed contractor", () => {
 
 describe("birth cert", () => {
   test("birth cert", async () => {
-    await page.goto(hostname+'/services/request-birth-certificate/')
+    await page.goto(hostname+'/request-birth-certificate/')
     
     let answers = await page.$$eval('.container ul', answers => { return answers })
     expect(answers.length).toBeGreaterThan(0);
@@ -180,7 +180,7 @@ describe("birth cert", () => {
 describe("mobile", () => {
   test("fb mobile", async () => {
     await page.setViewport({ width:400, height:1200 })
-    await page.goto(hostname+'/services/find-food-banks-near-you/')
+    await page.goto(hostname+'/find-food-banks-near-you/')
     await page.waitForSelector(".city-search")
     await page.type(".city-search", '9582')
 

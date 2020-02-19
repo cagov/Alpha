@@ -85,6 +85,7 @@ cwds-step-list button.step-description {
 	border-radius: 0!important;
     width: min-content!important;
     padding: 0px 5px;
+	min-width: 50px;
 }	 
 	  
 ul > span.nested-and-or {
@@ -109,6 +110,8 @@ cwds-step-list li .unstyled {
     width: fit-content;
     list-style-type: none;
 	background: none;
+	padding-left: 0;
+    padding-right: 0;
 }
 	  
 	   	  
@@ -181,13 +184,18 @@ cwds-step-list li .step-interior {
 	padding-right: 10%;
 }
 
+.cwds-step-list {
+	margin-bottom: 3rem;
+	margin-bottom: 3rem;
+}
+
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) { 
 
 
 cwds-step-list li .step-interior {
-    padding-left: 0;
+    padding-right: 0;
     padding-top: 1rem;
 }
 
