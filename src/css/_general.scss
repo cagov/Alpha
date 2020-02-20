@@ -5,6 +5,7 @@ body {
 
 }
 
+<<<<<<< HEAD
 /* Headers */
 
 h1,
@@ -21,9 +22,16 @@ h6,
 .h6 {
     color: #000;
     font-family: "Public Sans Bold", sans-serif;
+=======
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #000;
+  font-weight: bold;
+  font-family: "Public Sans Bold", sans-serif;
+  letter-spacing: -.01em;
+>>>>>>> master
 }
-
 h1 {
+<<<<<<< HEAD
     padding-bottom: .25rem;
 }
 
@@ -42,6 +50,34 @@ h3 {
 img {
     max-width: 100%;
     height: auto;
+=======
+  padding-bottom: .25rem;
+}
+
+h2 {
+  padding-top: .25rem;
+  padding-bottom: 1.25rem;
+}
+
+h3 {
+  padding-bottom: 1rem;
+  padding-top: .75rem;
+}
+
+/* Unordered lists */
+
+ul {
+  margin-bottom: 1.5rem;
+}
+ul.list-unstyled li {
+  padding-bottom: 1rem;
+}
+
+
+th {
+ font-family: "Public Sans Bold", sans-serif;
+	
+>>>>>>> master
 }
 
 sup {
@@ -54,10 +90,15 @@ hr {
     margin: 3rem 0;
 }
 
+<<<<<<< HEAD
 /* Unordered lists */
 
 ul {
     margin-bottom: 1.5rem;
+=======
+p, li, .list-group-item {
+  font-size: auto !important;
+>>>>>>> master
 }
 
 ul.list-unstyled li {
@@ -70,10 +111,15 @@ li,
     font-size: auto !important;
 }
 
+<<<<<<< HEAD
 /* Pagination */
 
 .pagination {
     font-size: 1rem;
+=======
+a, a:visited, a:hover, .pagination a, a.back-to-top, .list-group-flush a {
+  color: #004abc;
+>>>>>>> master
 }
 
 .pagination a,
@@ -82,6 +128,7 @@ a.back-to-top,
     color: #004abc;
 }
 
+<<<<<<< HEAD
 .pagination a {
     text-decoration: none;
 }
@@ -109,10 +156,17 @@ a:hover,
     text-decoration: none;
 }
 
+=======
+a:hover, .pagination a {
+  text-decoration: none;
+}
+
+>>>>>>> master
 :focus {
     outline: 2px solid #004abc;
 }
 
+<<<<<<< HEAD
 /* Action Link */
 
 .action-link {
@@ -131,6 +185,42 @@ a:hover,
 
 .action-link,
 a.action-link::before {
+=======
+
+.bg-light {
+  padding: .75rem;
+}
+
+/* Action Link */
+
+.pagination {
+  font-size: 1rem;
+}
+.pagination a, a.back-to-top, .list-group-flush a {
+  color: #004abc;
+}
+.pagination a {
+  text-decoration: none;
+}
+
+/* Action Link */
+
+.action-link {
+  color: #004abc;
+  background: #F5F9FF;
+  display: inline-block;
+  padding: .5rem;
+  padding-left: 1.75rem;
+  font-size: 1.2rem;  
+  text-decoration: none;
+  border-bottom: 2px solid #004abc;
+  line-height: 3rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.action-link, a.action-link::before {
+>>>>>>> master
     background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIxMnB4IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA5IDEyIiB3aWR0aD0iOXB4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnNrZXRjaD0iaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoL25zIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHRpdGxlLz48ZGVzYy8+PGRlZnMvPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiPjxnIGZpbGw9IiMwMDAwMDAiIGlkPSJDb3JlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjYwLjAwMDAwMCwgLTkwLjAwMDAwMCkiPjxnIGlkPSJjaGV2cm9uLXJpZ2h0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNjAuNTAwMDAwLCA5MC4wMDAwMDApIj48cGF0aCBkPSJNMSwwIEwtMC40LDEuNCBMNC4yLDYgTC0wLjQsMTAuNiBMMSwxMiBMNyw2IEwxLDAgWiIgaWQ9IlNoYXBlIi8+PC9nPjwvZz48L2c+PC9zdmc+");
     background-size: 1rem;
     background-repeat: no-repeat;
@@ -144,6 +234,7 @@ a.action-link:hover {
     background-color: #d5e6ff;
 }
 
+<<<<<<< HEAD
 /* Tables */
 
 th {
@@ -177,6 +268,9 @@ th {
 
 strong,
 .bold {
+=======
+strong, .bold {
+>>>>>>> master
     font-family: "Public Sans Bold", sans-serif;
 }
 
@@ -237,8 +331,13 @@ a.list-group-item {
 }
 
 a.list-group-item-action {
+<<<<<<< HEAD
     color: #000000;
     text-decoration: none;
+=======
+	  color: #000000;
+	  text-decoration: none;
+>>>>>>> master
 }
 
 .list-group-item-action:hover,
@@ -250,6 +349,14 @@ a.list-group-item-action {
     background-color: #f8f9fa;
 }
 
+<<<<<<< HEAD
+=======
+.list-checkmark li {
+	text-indent: -30px;
+	padding-left: 60px;
+}
+
+>>>>>>> master
 /* Navbar */
 
 .navbar-inverse .navbar-nav>li>a,
@@ -263,6 +370,7 @@ a.navbar-brand:visited {
     font-size: 1.1rem;
 }
 
+<<<<<<< HEAD
 .navbar {
     border-radius: 0;
     margin-bottom: 0;
@@ -282,11 +390,22 @@ a.navbar-brand:visited {
 .navbar-inverse .navbar-form {
     background: #0f1e6b;
     background: linear-gradient(60deg, #0f1e6b 0%, #1f0f6b 70%);
+=======
+sup {
+  font-size: normal !important;
+  font-family: "Public Sans Thin", sans-serif;
+}
+
+hr {
+  border-top: 1px solid #f1f1f1;
+  margin: 3rem 0;
+>>>>>>> master
 }
 
 .navbar-inverse .navbar-toggle {
     border-color: #ffffff;
 }
+<<<<<<< HEAD
 
 .navbar-inverse .navbar-brand,
 .navbar-inverse .navbar-nav>li>a {
@@ -297,6 +416,13 @@ a.navbar-brand:visited {
 .navbar-inverse .navbar-nav>.active>a:focus,
 .navbar-inverse .navbar-nav>.active>a:hover {
     background: #ffffff;
+=======
+.table thead th {
+    background: #f1f1f1;
+}
+.card .table thead th {
+    background: transparent;
+>>>>>>> master
 }
 
 .navbar-header a,
@@ -346,16 +472,24 @@ a.navbar-brand:visited {
     margin-bottom: 20px;
     color: #000;
 }
-
 .alert-secondary h2 {
     margin-top: 0;
     padding-top: 0;
 }
-
 .alert-secondary {
     color: #000000;
     background-color: #f1f1f1;
     border-color: #f1f1f1;
+}
+.alert-primary .h2 {
+  color: #fff;
+  font-family: "Public Sans", sans-serif;
+}
+.alert-left {
+  border-left: 4px solid #0f1e6b;
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .alert-primary .h2 {
@@ -579,6 +713,7 @@ a.navbar-brand:visited {
 
 /* Breadcrumb */
 
+<<<<<<< HEAD
 .breadcrumb {
     background-color: transparent;
     margin-top: -.5%;
@@ -587,27 +722,56 @@ a.navbar-brand:visited {
 
 /* Forms */
 
+=======
+>>>>>>> master
 .form-control:focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem #0257d5;
     color: #000;
 }
-
 form {
     padding-bottom: 2rem;
 }
+<<<<<<< HEAD
 
 form.form-inline input[type=text] {
     margin-right: .5rem;
 }
 
+=======
+form.form-inline input[type=text] {
+    margin-right: .5rem;
+}
+>>>>>>> master
 .form-control {
     margin-right: .50rem;
 }
+label {
+    margin-right: .50rem;
+}
+.btn {
+  font-family: "Public Sans", sans-serif;
+}
+.btn-dark, .btn-dark:hover {
+  color: #fff;
+  background: #000;
+}
 
+<<<<<<< HEAD
 label {
     padding-bottom: .75rem;
     margin-right: .50rem;
+=======
+/* Footer */
+
+.footer {
+  border-top: 1px solid #f1f1f1;
+  background-color: #fff;
+  margin-top: 2rem;
+  margin-bottom: 50px;
+  padding-bottom: 40px;
+  padding-top: 50px;
+>>>>>>> master
 }
 
 .btn {
@@ -688,6 +852,7 @@ li.active ul.nav.bd-sidenav {
 
 /*----- from State Holidays Page -----*/
 
+<<<<<<< HEAD
 .display-4,
 .display-3,
 .display-4,
@@ -699,6 +864,33 @@ li.active ul.nav.bd-sidenav {
 .display-5 {
     font-size: 1.5rem;
 }
+=======
+    .display-4,
+    .display-3,
+    .display-4,
+    .display-5,
+    .display-6 {
+      font-family: 'Public Sans Bold', sans-serif;
+    }
+
+    .display-5 {
+      font-size: 1.5rem;
+    }
+
+    .display-6 {
+      font-size: 1.2rem;
+    }
+
+    .display-6.alert {
+      padding: .2rem 1.25rem;
+    }
+
+
+    .mb-20 {
+      margin-bottom: 20px;
+    }
+
+>>>>>>> master
 
 .display-6 {
     font-size: 1.2rem;
@@ -778,8 +970,13 @@ li .action-link:focus-within {
     outline: 2px solid #004abc;
 }
 
+<<<<<<< HEAD
 .bg-light {
     padding: .75rem;
+=======
+.feedback {
+	margin-top: 3rem;
+>>>>>>> master
 }
 
 /* Medium devices (tablets, 768px and up)*/
@@ -804,6 +1001,7 @@ li .action-link:focus-within {
         padding-bottom: 0;
     }
 
+<<<<<<< HEAD
     .container-fluid.jumbotron {
         padding-left: 0;
     }
@@ -833,4 +1031,22 @@ li .action-link:focus-within {
         padding-left: 20px;
     }
 
+=======
+.one-column-fix {
+	margin-top: -2px;
+}
+	
+.card-body {
+     padding: 5px;
+}
+	
+.list-group {
+     margin-left: -.6rem;
+}
+	
+cwds-step-list li .step-interior {
+    padding-left: 20px;
+}
+	
+>>>>>>> master
 }
