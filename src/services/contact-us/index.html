@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Find out if you’re eligible for the California LifeLine Program, a discounted phone service.">
+  <meta name="author" content="Bootstrap, alpha.ca.gov team">
+  <meta name="generator" content="Hugo 0.61.0">
+  <title>Contact us - Alpha.CA.gov</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cwds.dev/docs/4.3/dist/css/bootstrap.css" rel="stylesheet">
+  <link href="https://cwds.dev/docs/4.3/assets/css/docs.css" rel="stylesheet" />
+ 
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/apple-touch-icon.png"
+    sizes="180x180">
+  <link rel="icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/favicon-32x32.png" sizes="32x32"
+    type="image/png">
+  <link rel="icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/favicon-16x16.png" sizes="16x16"
+    type="image/png">
+
+  <link rel="mask-icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/safari-pinned-tab.svg" color="#1d1a16">
+  <link rel="icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/favicon.ico">
+  <meta name="msapplication-config" content="https://cwds.dev/docs/4.3/assets/img/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#000000">
+  <link href="https://california.azureedge.net/cdt/statetemplate/6.0.0/css/cagov.font-only.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="awesomplete.css" />
+  <script src="awesomplete.js" async></script>
+</head>
+	
+<style>
+
+ul {
+  margin-bottom: 1.5rem;
+}
+ul.list-unstyled li {
+  padding-bottom: 1rem;
+}
+.pagination {
+  font-size: 1rem;
+}
+.pagination a, a.back-to-top, .list-group-flush a {
+  color: #0071bc;
+  text-decoration: none;
+}
+.page-item.active .page-link {
+  background-color: #000000;
+  border-color: #000000;
+}
+form {
+  padding-bottom: 1.5rem;
+}
+form.form-inline input[type=text] {
+  margin-right: .5rem;
+}
+
+</style>
+
+<body>
+  <link href="https://california.azureedge.net/cdt/statetemplate/6.0.0/css/cagov.font-only.min.css" rel="stylesheet" />
+  <div class="official">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p>State of California</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand navbar-left" href="/UX/">CA.gov <sup>(ALPHA)</sup></a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Contact us</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-12">
+
+        <p>Please enter the name of the agency you want to contact:</p>
+
+        <div  class="input-group md-form form-sm form-2">
+          <form class="form-inline" action="results.html" method="get">
+            <label class="sr-only" for="mylist">Name</label>
+            <input type="text" class="form-control" id="itemList" name="item" placeholder="Name" />
+            <button type="submit" class="btn btn-primary">Search</button>
+          </form>
+        </div>
+
+        <h2>Agencies</h2>
+
+	<nav aria-label="Page navigation example">
+		<ul class="pagination flex-wrap" id="agencyNav"></ul>
+        </nav>      
+	
+	      
+	<div id="agencyGroup" class="group"></div>
+	
+<script>
+  var alphaListingResults = [];
+            
+  function processPassedItem (linkOutgoingOrIncomming, nameAgencyOrService) {
+
+    var passedName = nameAgencyOrService.toLowerCase();
+
+    if (linkOutgoingOrIncomming === 'Out') {
+      passedName = passedName.replace(/^[ ]+|[ ]+$/g, '');
+      passedName = passedName.replace("-", "dashline");
+      passedName = encodeURIComponent(passedName);
+
+      var i = 0, strPassedNameLengthOut = passedName.length;
+
+      for (i; i < strPassedNameLengthOut; i++) {
+        passedName = passedName.replace("%20", "-");
+      }
+
+      if (passedName.indexOf("'") !== -1) {
+        passedName = passedName.replace("'", "%27");
+      }
+        
+      //--- BEGIN --- Code Mod to support stange proccesing of job training links  ----
+      passedName = passedName.replace("get-job-training-in-", "job-training-in-");
+      //--- END --- Code Mod to support stange proccesing of job training links  ----
+    }
+    else {
+      passedName = decodeURIComponent(passedName);
+      var j = 0, strPassedNameLength = passedName.length;
+      for (j; j < strPassedNameLength; j++) {
+          passedName = passedName.replace("-", " ");
+      }
+      passedName = passedName.replace("dashline", "-");
+    }
+    return passedName;
+  }		      
+		      
+		      
+  function buildList(idOfDivToFill, lang, agencyLandingPage) {
+    if (lang === "") { lang = "en"; }
+
+    //var apiLocation = "https://as-go-alph-d-002.azurewebsites.net/";
+    var apiLocation = "https://api.stateentityprofile.ca.gov/";
+    
+    var builtApiUrl = apiLocation + "api/Agencies/Get?page=0&pageSize=0&lang=" + lang;
+    var loadFlag = false;
+    var loadCount = 0;
+
+  function loadResults() {
+    if (loadCount === 0) {
+        var putApiRequest = new XMLHttpRequest();
+        putApiRequest.open("POST", builtApiUrl, true);
+        putApiRequest.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200) {
+                alphaListingResults.push(this.responseText);
+            }
+            if (this.readyState === 4 && this.status === 404) {
+                alphaListingResults.push("NONEXISTS");
+            }
+        };
+        putApiRequest.setRequestHeader('Content-Type', 'application/json');
+        putApiRequest.withCredentials = false;
+        putApiRequest.send(null);
+    }
+    loadCount += 1;
+    if (loadFlag === false) {
+        if (typeof alphaListingResults[0] !== "undefined") {
+            if (alphaListingResults[0].length > 10) {
+                loadFlag = true;
+            }
+        }
+        if (loadCount >= 50) {
+            loadFlag = true;
+        }
+        window.setTimeout(loadResults, 100); /* this checks the flag every 100 milliseconds*/
+      }
+      else {
+        if (loadCount < 50) {
+          var result = JSON.parse(alphaListingResults[0]).Data;
+          var arrayLength = result.length;
+          var displayText = "";
+          var recordCount= 0;
+		      var previousNavCharacter = "A";
+		      var currentNavCharacter = "";
+		      var navText = "";
+          var theOrgListArray = [];
+          var theOrgListCount = 0;
+
+          for (var i = 0; i < arrayLength; i++) {
+            var currentNavCharacter = result[i].AgencyName.charAt(0);
+            if (!(currentNavCharacter == previousNavCharacter)) {
+              navText += "<li class=\"page-item\"><a class=\"page-link\" href=\"#" + previousNavCharacter.toLowerCase() +"\">" + previousNavCharacter + "</a></li>";
+              displayText += "<p class=\"h6 text-right\"><a href=\"#\" class=\"back-to-top\">Back to top <span class=\"ca-gov-icon-arrow-fill-up\"></span></a></p>";
+              displayText += "<a name=\""+ currentNavCharacter.toLowerCase() +"\"><h3>" + currentNavCharacter +"</h3>";
+              previousNavCharacter = currentNavCharacter;
+            }
+            else {
+              if (recordCount < 1) {
+                displayText += "<a name=\""+ previousNavCharacter.toLowerCase() +"\">&nbsp;</a><h3>" + previousNavCharacter +"</h3>";
+                recordCount += 1;
+              }
+            }
+            var agencyNameToPass = processPassedItem('Out', result[i].FriendlyName);
+            displayText += "<p><a aria-label=\"View Contact Information for " + result[i].FriendlyName + "\" href=\"" + agencyLandingPage + "?item=" + agencyNameToPass + "\">" + result[i].FriendlyName + "</a></p>";
+            theOrgListArray[theOrgListCount] = result[i].FriendlyName;
+            theOrgListCount += 1;
+          }
+
+          navText += "<li class=\"page-item\"><a class=\"page-link\" href=\"#" + previousNavCharacter.toLowerCase() +"\">" + previousNavCharacter + "</a></li>";			
+          displayText += "<p class=\"h6 text-right\"><a href=\"#\" class=\"back-to-top\">Back to top <span class=\"ca-gov-icon-arrow-fill-up\"></span></a></p>";
+          document.getElementById("agencyNav").innerHTML = navText;
+          document.getElementById(idOfDivToFill).innerHTML = displayText;
+
+          var input = document.getElementById("itemList");
+          new Awesomplete(input, {
+            list: theOrgListArray
+          });
+
+        }
+      }
+    }
+
+    loadResults();
+    }
+
+    buildList('agencyGroup','en','home.html');
+    </script>
+    </div>
+  </div>
+ </div>	
+</div>	
+	
+
+<div class="footer alpha-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12"><ul class="list-group list list-group-horizontal-lg flex-fill list-group-flush"><li class="list-group-item alpha-footer"><a href="/about/">About</a></li><li class="list-group-item alpha-footer"><a href="https://news.alpha.ca.gov/">News</a></li><li class="list-group-item alpha-footer"><a href="/feedback/">Feedback</a></li></ul><p class="text-secondary">Official California State Government Website</p></div>
+    </div>
+  </div>
+</div>
+<script nomodule src="/js/es5.js?cache=false" ></script>
+  <div class="alphabar">
+    <div class="container">
+      <p>This website is a <a href="https://medium.com/cadotgov">work in progress</a>.</p>
+    </div>
+  </div>
+  <script src="https://cagov.github.io/UX/dist/main.js" defer async></script>
+</body>
+
+</html>
