@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Sign up for local emergency alerts - Alpha.CA.gov</title>
     <meta
       name="description"
       content="Sign up for emergency alerts for your county in California."
     />
     <%= require('html-loader!../../partials/meta-common.html') %> <%=
     require('html-loader!../../partials/favicons.html') %>
-    <title>Sign up for local emergency alerts - Alpha.CA.gov</title>
+
     <!-- Social media post -->
     <meta property="og:image" content="/img/thumbnail.png" />
     <meta property="og:image:height" content="630" />
@@ -46,9 +47,9 @@
           <div class="col-md-8">
             <form class="form-inline js-alert-lookup">
               <div class="form-group">
-                <label for="location-query"
-                  >Please enter your county or zip code:</label
-                >
+                <label for="location-query">
+                  Please enter your county or zip code:
+                </label>
                 <div class="awesomplete">
                   <input
                     class="city-search form-control"
