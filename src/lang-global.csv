@@ -216,7 +216,7 @@ path,token,en,es,zh
 /services/hire-licensed-contractor-home-improvements,,What to look for in your contract,Qué buscar en su contrato,如何查找在你的合同
 /services/hire-licensed-contractor-home-improvements,,"Pay no more than $1,000 or 10 percent down, whichever is less","No pague más de $1,000 o el 10% de la cantidad total en su depósito. Escoja la cantidad que sea menos","不支付超过$ 1,000或存款总额的10％。选择量少"
 /services/hire-licensed-contractor-home-improvements,,"By law, a contractor can't charge you a downpayment of more than $1,000 or 10 percent of your total, whichever is less.","Por ley, un contratista no le puede cobrar un depósito que sobresalga $1,000 o 10% de la cantidad total que costará el proyecto. Por ejemplo, si el proyecto le costará $5,000, el contratista no le puede requerir que pague $1,000.00 de depósito, ya que usted puede elegir darle $500.00 (10 por ciento de $5,000) por ser la cantidad más baja.","根据法律规定，承包商可以不收取突出$ 1,000或总金额将花费项目的10％的定金。例如，如果该项目将耗资$ 5,000，承包人不得将要求您支付$ 1,000.00定金，你可以选择给$ 500.00（$ 5,000 10％）用于为最低量。"
-,,Apply for disability insurance benefits,Solicitar beneficios por incapacidad,申请伤残抚恤金
+/apply-for-disability-insurance-benefits,,Apply for disability insurance benefits,Solicitar beneficios por incapacidad,申请伤残抚恤金
 /apply-for-disability-insurance-benefits,,Apply for disability insurance benefits - Alpha.CA.gov,Solicitar beneficios por incapacidad - Alpha.CA.gov,申请伤残津贴 -  Alpha.CA.gov
 /apply-for-disability-insurance-benefits,,Follow these steps to apply for disability insurance benefits.,Siga estos pasos para solicitar el Seguro de Incapacidad (SDI) del Estado.,请按照以下步骤申请国家残疾保险（SDI）。
 /apply-for-disability-insurance-benefits,,Steps to get disability insurance benefits,Pasos para obtener beneficios de Seguro de Incapacidad (SDI) del Estado,步骤，以取得国家从残疾保险（SDI）的好处
@@ -549,3 +549,11 @@ path,token,en,es,zh
 /hire-licensed-contractor-home-improvements,,"Pay no more than $1,000 or 10 percent down, whichever is less","No pague más de $1,000 o el 10% de la cantidad total en su depósito. Escoja la cantidad que sea menos","不支付超过$ 1,000或存款总额的10％。选择量少"
 /hire-licensed-contractor-home-improvements,,"By law, a contractor can't charge you a downpayment of more than $1,000 or 10 percent of your total, whichever is less.","Por ley, un contratista no le puede cobrar un depósito que sobresalga $1,000 o 10% de la cantidad total que costará el proyecto. Por ejemplo, si el proyecto le costará $5,000, el contratista no le puede requerir que pague $1,000.00 de depósito, ya que usted puede elegir darle $500.00 (10 por ciento de $5,000) por ser la cantidad más baja.","根据法律规定，承包商可以不收取突出$ 1,000或总金额将花费项目的10％的定金。例如，如果该项目将耗资$ 5,000，承包人不得将要求您支付$ 1,000.00定金，你可以选择给$ 500.00（$ 5,000 10％）用于为最低量。"
 /hire-licensed-contractor-home-improvements,,"And to protect your money, never pay in cash.","Y para proteger su dinero, nunca pague en efectivo, ya que, si hay algún desacuerdo, usted necesitará prueba de los pagos que hizo.",并保护他们的钱，从来没有支付现金，因为如果有任何异议，您将需要作出的付款证明。
+/sign-up-for-local-emergency-alerts/,,Sign up for emergency alerts for your county in California,Inscribirse para recibir alertas de emergencia de su condado en California,注册接收紧急警报贵县在加利福尼亚州
+/sign-up-for-local-emergency-alerts/,,Sign up for local emergency alerts,Inscribirse para recibir alertas de emergencia locales,注册通知当地紧急
+/sign-up-for-local-emergency-alerts/,,Please enter your county or zip code,Introduzca su condado o código postal,输入您的县或邮政编码
+/sign-up-for-local-emergency-alerts/,,Type 2 or more characters for results,Tipo 2 o más caracteres de los resultados,类型2个或多个字符的结果
+/sign-up-for-local-emergency-alerts/,,Find alerts,Encuentra alertas,查找警报
+/sign-up-for-local-emergency-alerts/,,Please enter a county or zip code in California,"Por favor, introduzca un condado o código postal en California",请输入在加利福尼亚州的一个县或邮政编码
+/sign-up-for-local-emergency-alerts/,,Sign up for,Matricularse en,报名参加
+/sign-up-for-local-emergency-alerts/,,alerts,alertas,警报
