@@ -213,6 +213,7 @@ path,token,en,es,zh
 /services/hire-licensed-contractor-home-improvements,,Contact their references,Póngase en contacto con las referencias del contratista,联系承包商的引用
 /services/hire-licensed-contractor-home-improvements,,Sign a contract,Firme un buen contrato,签好合同
 /services/hire-licensed-contractor-home-improvements,,"A good contract includes how and when the work will be done, the materials used, and the total cost. It will protect you if you have a disagreement with your contractor.","Un buen contrato debe incluir cómo y cuándo se realizará el trabajo, los materiales utilizados y el costo total. Esto le protegerá si tiene un desacuerdo con su contratista.",好的合同应该包括如何以及何时工作将完成，使用的材料和总成本。如果你有你的承包商分歧这将保护你。
+/services/hire-licensed-contractor-home-improvements,,What to look for in your contract,Qué buscar en su contrato,如何查找在你的合同
 /services/hire-licensed-contractor-home-improvements,,"Pay no more than $1,000 or 10 percent down, whichever is less","No pague más de $1,000 o el 10% de la cantidad total en su depósito. Escoja la cantidad que sea menos","不支付超过$ 1,000或存款总额的10％。选择量少"
 /services/hire-licensed-contractor-home-improvements,,"By law, a contractor can't charge you a downpayment of more than $1,000 or 10 percent of your total, whichever is less.","Por ley, un contratista no le puede cobrar un depósito que sobresalga $1,000 o 10% de la cantidad total que costará el proyecto. Por ejemplo, si el proyecto le costará $5,000, el contratista no le puede requerir que pague $1,000.00 de depósito, ya que usted puede elegir darle $500.00 (10 por ciento de $5,000) por ser la cantidad más baja.","根据法律规定，承包商可以不收取突出$ 1,000或总金额将花费项目的10％的定金。例如，如果该项目将耗资$ 5,000，承包人不得将要求您支付$ 1,000.00定金，你可以选择给$ 500.00（$ 5,000 10％）用于为最低量。"
 ,,Apply for disability insurance benefits,Solicitar beneficios por incapacidad,申请伤残抚恤金
@@ -277,7 +278,8 @@ path,token,en,es,zh
 /apply-for-cal-grant,,Attend or plan to attend an,Asistir a un,参加
 /apply-for-cal-grant,,Not already have a bachelor's or professional degree,No haber obtenido un título universitario o profesional de 4 años ,由于没有获得大学专业学位或4年
 /apply-for-cal-grant,,Have U.S. citizenship,Ser ciudadano estadounidense,是美国公民
-/apply-for-cal-grant,,<strong>or</strong> be ,<strong>o</strong> ser,"<strong>或</strong>是"
+/apply-for-cal-grant,,<strong>or</strong> be ,<strong>o</strong> ser,"<strong>或</strong>是
+"
 /apply-for-cal-grant,,eligible for federal student aid,elegible para ayuda financiera del gobierno,资格获得政府的财政援助
 /apply-for-cal-grant,,eligible for AB540,o un estudiante elegible para el programa AB540,或符合条件的学生的程序AB540
 /apply-for-cal-grant,,Need financial help to pay for your college's tuition,Necesitar ayuda financiera para pagar la matrícula de su universidad,需要财政援助，以交学费贵校
@@ -509,7 +511,8 @@ path,token,en,es,zh
 /hire-licensed-contractor-home-improvements,,Follow these suggested steps to make home improvements the safe way and protect your home and your money.,Siga estos pasos sugeridos para que las mejoras en su hogar sean de una manera segura y a la vez proteja su hogar y su dinero.,请按照以下步骤建议改善住房的安全，并保护您的家庭的时间和金钱。
 /hire-licensed-contractor-home-improvements,,Steps to hire a licensed contractor,Pasos para contratar a un contratista con licencia,步骤聘请授权的合同
 /hire-licensed-contractor-home-improvements,,Decide what type of contractor you need,Decida qué tipo de contratista necesita,决定什么类型的承包商需求
-/hire-licensed-contractor-home-improvements,,"<p><strong>General Engineering Contractors</strong> and <strong>General Building Contractors</strong> usually manage subcontractors for a job.</p><p><strong>Specialty Contractors</strong> are often hired to do a single job, such as roofing or plumbing.</p>","<p><strong> Los contratistas de ingeniería general </STRONG> y <STRONG> los contratistas generales de construcción </STRONG> usualmente supervisan proyectos y dirigen trabajos de subcontratistas.</p><p><STRONG> Contratistas especializados </strong> a veces son contratados para hacer un solo trabajo, como techos o plomería.</p>","<p> <strong>承包商一般工程</strong>和<strong>常规施工的承包商</strong>通常兼管项目和分包商的直接工作。</p> <p> <strong>专门承包商< /strong>有时被雇用来执行一项工作，如屋顶或管道。</p>"
+/hire-licensed-contractor-home-improvements,,"<p><strong>General Engineering Contractors</strong> and <strong>General Building Contractors</strong> usually manage subcontractors for a job.</p><p><strong>Specialty Contractors</strong> are often hired to do a single job, such as roofing or plumbing.</p>","<p><strong> Los contratistas de ingeniería general </STRONG> y <STRONG> los contratistas generales de construcción </STRONG> usualmente supervisan proyectos y dirigen trabajos de subcontratistas.</p><p><STRONG> Contratistas especializados </strong> a veces son contratados para hacer un solo trabajo, como techos o plomería.</p>","<p> <strong>承包商一般工程</strong>和<strong>常规施工的承包商</strong>通常兼管项目和分包商的直接工作。</p> <p> <strong>专门承包商< /strong>有时被雇用来执行一项工作，如屋顶或管道。</p>
+"
 /hire-licensed-contractor-home-improvements,,Choose the type of contractor you need,Elija el tipo de contratista que necesite,选择承包商的类型，你需要
 /hire-licensed-contractor-home-improvements,,Check if you need a building permit,Compruebe si necesita un permiso de construcción,检查您是否需要建筑许可证
 /hire-licensed-contractor-home-improvements,,"You must get a building permit from your local building department for new construction, remodeling, or repairs.","Debe obtener un permiso de construcción de su departamento de construcción local para nuevas construcciones, remodelaciones y reparaciones.",您必须向当地建设部门进行新的建设取得建筑许可证，改造和维修。
