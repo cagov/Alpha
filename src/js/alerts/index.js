@@ -74,9 +74,10 @@ function lookupSuccess(inputval) {
     document.querySelector(
       ".js-county-alert"
     ).innerHTML = `<li class="card mb-20  border-0">
+    <h2>Alerts for ${inputval}</h2>
       <div class="card-body bg-light">
         <a class="action-link" href="${url}">
-          Sign up for ${county} alerts
+          Sign up for ${(county.toLowerCase().indexOf('county') > -1) ? county : county + ' County'} alerts
         </a>
       </div>
     </li>`;
