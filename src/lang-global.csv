@@ -23,6 +23,7 @@ path,token,en,es,zh
 ,[global-lang-show],Show,Mostrar,节目
 ,[global-lang-hide],Hide,Ocultar,隐藏
 ,[global-lang-ok],OK,Okay,好
+,[global-feedback-link],https://www.surveymonkey.com/r/Alpha-CA-Gov,https://es.surveymonkey.com/r/Alpha-Ca-Gov-Es,https://es.surveymonkey.com/r/Alpha-Ca-Gov-Es
 /,,We're making it easier to find and use government services and information.,Estamos haciendo más fácil de buscar y usar servicios e información del gobierno.,我们更容易发现和使用信息和服务的政府。
 /,,Welcome to Alpha.CA.gov,Bienvenido a Alpha.CA.gov,欢迎Alpha.CA.gov
 /,,Featured,Servicios Destacados,主要特点
@@ -51,11 +52,6 @@ path,token,en,es,zh
 /about,,GitHub,GitHub,GitHub上
 /about,,"and this website,","y este sitio web,",而这个网站，
 /about,,About Alpha.CA.gov,Sobre Alpha.CA.gov,关于Alpha.CA.gov
-/feedback,,Please share your feedback,Por favor comparta sus comentarios,请分享您的意见
-/feedback,,Please share your feedback to help Alpha.CA.gov improve.,Por favor comparta sus comentarios para ayudar a mejorar Alpha.CA.gov.,请分享您的建议，以帮助提高Alpha.CA.gov。
-/feedback,,Alpha.CA.gov - State of California,Alpha.CA.gov - Estado de California,Alpha.CA.gov  - 加利福尼亚州
-/feedback,[lang-survey-link],tRaiETqnLgj758hTBazgd_2BHkAkgHavJBdUVWcya_2B9TmX6knDU4u_2FzgDZXNzk7OQy,tRaiETqnLgj758hTBazgd5pfn8XJKc0sU9CSd56Ev1KwNMGA_2B06kF9_2F7NCWSNhTR,tRaiETqnLgj758hTBazgd5pfn8XJKc0sU9CSd56Ev1KwNMGA_2B06kF9_2F7NCWSNhTR
-/feedback,,Feedback,Comentarios,评论
 /services/find-minimum-wage-your-city,,Find the minimum wage in your city,Encuentre el salario mínimo en su ciudad,查找您所在城市最低工资标准
 /services/find-minimum-wage-your-city,,Find the minimum wage in your city - Alpha.CA.gov,Encuentre el salario mínimo en su ciudad - Alpha.CA.gov,在城市中找到的最低工资标准 -  Alpha.CA.gov
 /services/find-minimum-wage-your-city,,Find the minimum wage in your California city and the State of California. Compare your city's minimum wage to other cities in California.,Encuentre el salario minimo en su ciudad y el Estado de California. Compare el salario minimo en su ciudad a otras ciudades en California.,在城市中找到的最低工资和加利福尼亚州。比较在城市中加州其他城市的最低工资标准。
@@ -511,8 +507,7 @@ path,token,en,es,zh
 /hire-licensed-contractor-home-improvements,,Follow these suggested steps to make home improvements the safe way and protect your home and your money.,Siga estos pasos sugeridos para que las mejoras en su hogar sean de una manera segura y a la vez proteja su hogar y su dinero.,请按照以下步骤建议改善住房的安全，并保护您的家庭的时间和金钱。
 /hire-licensed-contractor-home-improvements,,Steps to hire a licensed contractor,Pasos para contratar a un contratista con licencia,步骤聘请授权的合同
 /hire-licensed-contractor-home-improvements,,Decide what type of contractor you need,Decida qué tipo de contratista necesita,决定什么类型的承包商需求
-/hire-licensed-contractor-home-improvements,,"<p><strong>General Engineering Contractors</strong> and <strong>General Building Contractors</strong> usually manage subcontractors for a job.</p><p><strong>Specialty Contractors</strong> are often hired to do a single job, such as roofing or plumbing.</p>","<p><strong> Los contratistas de ingeniería general </STRONG> y <STRONG> los contratistas generales de construcción </STRONG> usualmente supervisan proyectos y dirigen trabajos de subcontratistas.</p><p><STRONG> Contratistas especializados </strong> a veces son contratados para hacer un solo trabajo, como techos o plomería.</p>","<p> <strong>承包商一般工程</strong>和<strong>常规施工的承包商</strong>通常兼管项目和分包商的直接工作。</p> <p> <strong>专门承包商< /strong>有时被雇用来执行一项工作，如屋顶或管道。</p>
-"
+/hire-licensed-contractor-home-improvements,,"<p><strong>General Engineering Contractors</strong> and <strong>General Building Contractors</strong> usually manage subcontractors for a job.</p><p><strong>Specialty Contractors</strong> are often hired to do a single job, such as roofing or plumbing.</p>","<p><strong> Los contratistas de ingeniería general </STRONG> y <STRONG> los contratistas generales de construcción </STRONG> usualmente supervisan proyectos y dirigen trabajos de subcontratistas.</p><p><STRONG> Contratistas especializados </strong> a veces son contratados para hacer un solo trabajo, como techos o plomería.</p>","<p> <strong>承包商一般工程</strong>和<strong>常规施工的承包商</strong>通常兼管项目和分包商的直接工作。</p> <p> <strong>专门承包商< /strong>有时被雇用来执行一项工作，如屋顶或管道。</p>"
 /hire-licensed-contractor-home-improvements,,Choose the type of contractor you need,Elija el tipo de contratista que necesite,选择承包商的类型，你需要
 /hire-licensed-contractor-home-improvements,,Check if you need a building permit,Compruebe si necesita un permiso de construcción,检查您是否需要建筑许可证
 /hire-licensed-contractor-home-improvements,,"You must get a building permit from your local building department for new construction, remodeling, or repairs.","Debe obtener un permiso de construcción de su departamento de construcción local para nuevas construcciones, remodelaciones y reparaciones.",您必须向当地建设部门进行新的建设取得建筑许可证，改造和维修。
