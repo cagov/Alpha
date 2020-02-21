@@ -9,13 +9,20 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const PurgecssPlugin = require("purgecss-webpack-plugin");
 const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+
+//Minification options here -> https://github.com/DanielRuf/html-minifier-terser#options-quick-reference
 const minificationOptions = {
+  caseSensitive: true,
   collapseWhitespace: true,
   removeComments: true,
   removeRedundantAttributes: false,
   removeScriptTypeAttributes: true,
   useShortDoctype: true,
-  minifyJS: true
+  minifyJS: true,
+  minifyCSS: true,
+  sortAttributes: true,
+  sortClassName: true,
+  useShortDoctype: true
 };
 const excludedChunks = ["minwage", "food", "roads", "alerts"];
 
