@@ -12,7 +12,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 const minificationOptions = {
   collapseWhitespace: true,
   removeComments: true,
-  removeRedundantAttributes: true,
+  removeRedundantAttributes: false,
   removeScriptTypeAttributes: true,
   useShortDoctype: true,
   minifyJS: true
