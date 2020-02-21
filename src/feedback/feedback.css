@@ -1,0 +1,18 @@
+.smcx-iframe-container {
+    height: 1400px !important;
+}
+
+.smcx-widget {
+    height: 1450px !important;
+    border: 0px !important;
+}
+
+@media (max-width: 575.98px) {
+    .smcx-iframe-container {
+        height: 1500px !important;
+    }
+
+    .smcx-widget {
+        height: 1550px !important;
+    }
+}

@@ -49,20 +49,20 @@ function templateHTML(inputval) {
         return response.json();
       })
       .then(myzip => {
-        lookupSuccess(myzip.county);
+        lookupSuccess(myzip.county, inputval);
       })
       .catch(e => {
         lookupFail();
       });
   } else {
-    lookupSuccess(inputval);
+    lookupSuccess(inputval, inputval);
   }
 }
 
-function lookupSuccess(inputval) {
+function lookupSuccess(inputCounty, inputval) {
   let chosenCounty;
   counties.forEach(county => {
-    if (county.name.toLowerCase() == inputval.toLowerCase()) {
+    if (county.name.toLowerCase() == county, inputCounty.toLowerCase()) {
       chosenCounty = county;
     }
   });
