@@ -11,9 +11,11 @@ class CWDSHolidays extends HTMLElement {
 }
 window.customElements.define('cwds-holidays', CWDSHolidays)
 
-fetch('https://api.alpha.ca.gov/StateHolidayCalendar/next')
-  .then(response => response.json())
-  .then(data => {
-    document.getElementById("current-holiday-date").innerText=data.day_of_week+', '+data.month_name+' '+data.day_of_month
-    document.getElementById("current-holiday-name").innerText=data.name
-})
+if(document.getElementById("current-holiday-date")) {
+  fetch('https://api.alpha.ca.gov/StateHolidayCalendar/next')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("current-holiday-date").innerText=data.day_of_week+', '+data.month_name+' '+data.day_of_month
+      document.getElementById("current-holiday-name").innerText=data.name
+  })
+}

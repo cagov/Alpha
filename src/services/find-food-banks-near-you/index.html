@@ -1,80 +1,108 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta name="description" content="We'll help you find the food banks and pantries closest to you.">
-    <%= require('html-loader!../../partials/meta-common.html') %>
-    <%= require('html-loader!../../partials/favicons.html') %>
+  <head>
+    <meta
+      name="description"
+      content="We'll help you find the food banks and pantries closest to you."
+    />
+    <%= require('html-loader!../../partials/meta-common.html') %> <%=
+    require('html-loader!../../partials/favicons.html') %>
     <!-- Social media post -->
-    <meta property="og:image" content="/img/thumbnail.png">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:width" content="630">
-    <meta property="og:title" content="Find food banks near you - Alpha.CA.gov">
-    <meta property="og:description" content="We'll help you find the California food banks and pantries closest to you.">
-    <meta property="og:url" content="[code-url]">
+    <meta property="og:image" content="/img/thumbnail.png" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:width" content="630" />
+    <meta
+      property="og:title"
+      content="Find food banks near you - Alpha.CA.gov"
+    />
+    <meta
+      property="og:description"
+      content="We'll help you find the California food banks and pantries closest to you."
+    />
+    <meta property="og:url" content="[code-url]" />
     <link rel="canonical" href="[code-url]" />
     <title>Find food banks near you - Alpha.CA.gov</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <%= require('html-loader!../../partials/official.html') %>
-        <%= require('html-loader!../../partials/experiment-banner.html') %>
-        <%= require('html-loader!../../partials/navbar.html') %>
+      <%= require('html-loader!../../partials/official.html') %> <%=
+      require('html-loader!../../partials/experiment-banner.html') %> <%=
+      require('html-loader!../../partials/navbar.html') %>
     </header>
     <main>
-        <div class="container-fluid jumbotron">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h1>Find food banks near you</h1>
-                    </div>
-                </div>
+      <div class="container-fluid jumbotron">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Find food banks near you</h1>
             </div>
+          </div>
         </div>
-        <div class="container foodbanks">
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="lead">We'll help you find the food banks and pantries closest to you.</p>
-                    <div class="form-inline">
-                        <form class="form-group js-food-lookup">
-                            <label for="city-input">Please enter your city or zip code:</label>
-                            <input type="text" class="form-control city-search" id="city-input" data-multiple>
-                            <button type="submit" class="btn btn-primary">[lang-form-button]</button>
-                            <div class="invalid-feedback">Please enter a city or zip code in California.</div>
-                        </form>
-                    </div>
-                    <div class="js-location-display"></div>
-                    <div class="js-nearest-results"></div>
-                    <h2>Map</h2>
-                    <div id="mapid"></div>
-                    <h2>Other resources</h2>
-                    <h3>Text us to find food close to you</h3>
-                    <p>Text us anytime at <a href="tel:1-415-630-4521">(415) 630-4521</a> with your city name or zip code. We'll respond with the food bank closest to you.</p>
-                    <h3>Call 211 with your questions</h3>
-                    <ul>
-                        <li>Phone number: <a href="tel:211">211</a></li>
-                        <li>Hours: 24 hours a day, every day of the year</li>
-                    </ul>
-                    <p><a href="http://211.org">211.org</a> is a source of local social services throughout the United States. A trained expert can help you find many resources, including:</p>
-                    <ul>
-                        <li>food programs</li>
-                        <li>shelter and housing</li>
-                        <li>emergency information</li>
-                        <li>help with your job search</li>
-                        <li>healthcare and shots</li>
-                    </ul>
+      </div>
+      <div class="container foodbanks">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="lead">
+              We'll help you find the food banks and pantries closest to you.
+            </p>
+            <div class="form-inline">
+              <form class="form-group js-food-lookup">
+                <label for="city-input"
+                  >Please enter your city or zip code:</label
+                >
+                <input
+                  type="text"
+                  class="form-control city-search"
+                  id="city-input"
+                  data-multiple
+                />
+                <button type="submit" class="btn btn-primary">
+                  [lang-form-button]
+                </button>
+                <div class="invalid-feedback">
+                  Please enter a city or zip code in California.
                 </div>
+              </form>
             </div>
+            <div class="js-location-display"></div>
+            <div class="js-nearest-results"></div>
+            <h2>Map</h2>
+            <div id="mapid"></div>
+            <h2>Other resources</h2>
+            <h3>Text us to find food close to you</h3>
+            <p>
+              Text us anytime at
+              <a href="tel:1-415-630-4521">(415) 630-4521</a> with your city
+              name or zip code. We'll respond with the food bank closest to you.
+            </p>
+            <h3>Call 211 with your questions</h3>
+            <ul>
+              <li>Phone number: <a href="tel:211">211</a></li>
+              <li>Hours: 24 hours a day, every day of the year</li>
+            </ul>
+            <p>
+              <a href="http://211.org">211.org</a> is a source of local social
+              services throughout the United States. A trained expert can help
+              you find many resources, including:
+            </p>
+            <ul>
+              <li>food programs</li>
+              <li>shelter and housing</li>
+              <li>emergency information</li>
+              <li>help with your job search</li>
+              <li>healthcare and shots</li>
+            </ul>
+          </div>
         </div>
+      </div>
     </main>
     <footer>
-        <%= require('html-loader!../../partials/feedback.html') %>
-        <%= require('html-loader!../../partials/footer.html') %>
-        <script nomodule src="/js/es5Food.js?cache=false"></script>
-        <%= require('html-loader!../../partials/alphabar.html') %>
-        <%= require('html-loader!../../partials/ga.html') %>
+      <%= require('html-loader!../../partials/feedback.html') %> <%=
+      require('html-loader!../../partials/footer.html') %>
+      <script nomodule src="/js/es5Food.js?cache=false"></script>
+      <%= require('html-loader!../../partials/alphabar.html') %> <%=
+      require('html-loader!../../partials/ga.html') %>
     </footer>
-</body>
-
+  </body>
 </html>
