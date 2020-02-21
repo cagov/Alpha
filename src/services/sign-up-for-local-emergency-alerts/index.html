@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign up for local emergency alerts - Alpha.CA.gov</title>
+    <meta
+      name="description"
+      content="Sign up for emergency alerts for your county in California."
+    />
+    <%= require('html-loader!../../partials/meta-common.html') %> <%=
+    require('html-loader!../../partials/favicons.html') %>
+
+    <!-- Social media post -->
+    <meta property="og:image" content="/img/thumbnail.png" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:width" content="630" />
+    <meta
+      property="og:title"
+      content="Sign up for local emergency alerts - Alpha.CA.gov"
+    />
+    <meta
+      property="og:description"
+      content="Sign up for emergency alerts for your county in California."
+    />
+    <meta property="og:url" content="[code-url]" />
+    <link rel="canonical" href="[code-url]" />
+  </head>
+
+  <body>
+    <header>
+      <%= require('html-loader!../../partials/official.html') %> <%=
+      require('html-loader!../../partials/experiment-banner.html') %> <%=
+      require('html-loader!../../partials/navbar.html') %>
+    </header>
+    <main>
+      <div class="container-fluid jumbotron">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Sign up for local emergency alerts</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <form class="form-inline js-alert-lookup">
+              <div class="form-group">
+                <label for="location-query">
+                  Please enter your county or zip code:
+                </label>
+                <div class="awesomplete">
+                  <input
+                    type="text"
+                    class="city-search form-control"
+                    data-multiple=""
+                    id="location-query"
+                    data-list=""
+                    autocomplete="off"
+                    aria-expanded="false"
+                    aria-owns="awesomplete-list-1"
+                    role="combobox"
+                  />
+                  <ul hidden="" role="listbox" id="awesomplete-list-1"></ul>
+                  <span
+                    class="visually-hidden"
+                    role="status"
+                    aria-live="assertive"
+                    aria-atomic="true"
+                    >Type 2 or more characters for results.</span
+                  >
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  Find alerts
+                </button>
+                <div class="invalid-feedback">
+                  Please enter a county or zip code in California.
+                </div>
+              </div>
+            </form>
+            <div class="js-county-alert">
+              <ul class="card-set"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <%= require('html-loader!../../partials/feedback.html') %> <%=
+      require('html-loader!../../partials/footer.html') %> <%=
+      require('html-loader!../../partials/alphabar.html') %>
+    </footer>
+    <script
+      src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"
+      defer
+    ></script>
+    <script
+      src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"
+      defer
+    ></script>
+    <%= require('html-loader!../../partials/ga.html') %>
+  </body>
+</html>
