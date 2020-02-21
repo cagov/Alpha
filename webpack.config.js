@@ -26,6 +26,12 @@ const minificationOptions = {
 };
 const excludedChunks = ["minwage", "food", "roads", "alerts"];
 
+//usage 
+//    excludeChunks: excludeChucksExcept("roads"),
+//    excludeChunks: excludeChucksExcept("roads","alerts"),
+const excludeChucksExcept = (...args) => excludedChunks.filter(x=>!args.includes(x))
+
+
 module.exports = {
   entry: {
     javascript: ["./src/js/index.js"],
@@ -128,13 +134,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "en/check-lane-closures/index.html",
       template: "src/services/check-lane-closures/index.html",
-      excludeChunks: ["minwage", "food", "alerts"],
+      excludeChunks: excludeChucksExcept("roads"),
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: "en/sign-up-for-local-emergency-alerts/index.html",
       template: "src/services/sign-up-for-local-emergency-alerts/index.html",
-      excludeChunks: ["minwage", "food", "roads"],
+      excludeChunks: excludeChucksExcept("alerts"),
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
@@ -152,13 +158,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "en/services/find-minimum-wage-your-city/index.html",
       template: "src/services/find-minimum-wage-your-city/index.html",
-      excludeChunks: ["food", "roads", "alerts"],
+      excludeChunks: excludeChucksExcept("minwage"),
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: "en/find-minimum-wage-your-city/index.html",
       template: "src/services/find-minimum-wage-your-city/index.html",
-      excludeChunks: ["food", "roads"],
+      excludeChunks: excludeChucksExcept("minwage"),
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
@@ -176,13 +182,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "en/services/find-food-banks-near-you/index.html",
       template: "src/services/find-food-banks-near-you/index.html",
-      excludeChunks: ["minwage", "roads", "alerts"],
+      excludeChunks: excludeChucksExcept("food"),
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: "en/find-food-banks-near-you/index.html",
       template: "src/services/find-food-banks-near-you/index.html",
-      excludeChunks: ["minwage", "roads", "alerts"],
+      excludeChunks: excludeChucksExcept("food"),
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
