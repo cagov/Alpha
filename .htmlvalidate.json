@@ -47,10 +47,12 @@
     "wcag/h37": "error",
     "wcag/h67": "error",
 
-    "element-permitted-content": "off",
+    "element-permitted-content": "warn",
+    "missing-doctype": "error",
+
     "void": ["off",{"style": "selfclose"}],
     "require-sri": ["off",{"target": "crossorigin"}],
-    "missing-doctype": "off",
+
     "no-unknown-elements": "off",
     "no-trailing-whitespace": "off"
   },
