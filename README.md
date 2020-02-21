@@ -53,3 +53,8 @@ Some static files are only present in the public folder and are set to be ignore
 - sitemap.xml
 
 Concatenates, minifies and removes unused CSS, builds template partials.
+
+### Class event triggers
+
+Please follow the convention of using classnames with a ```js-``` prefix when using a selector in javascript to interact with an element. We should not allow any CSS attributes to be added to the ```js-``` classnames so these will be used only by javascript and can be safely removed if a listener is changed.
+
