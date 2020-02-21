@@ -133,13 +133,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'en/contact-us/index.html',
       template: 'src/services/contact-us/index.html',
-      excludeChunks: excludedChunksExcept("contactus"),
+      excludeChunks: excludeChucksExcept("contactus"),
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'en/contact-us/results/index.html',
       template: 'src/services/contact-us/results/index.html',
-      excludeChunks: excludedChunksExcept("contactus"),
+      excludeChunks: excludeChucksExcept("contactus"),
       minify: minificationOptions
     }), 
     new HtmlWebpackPlugin({
