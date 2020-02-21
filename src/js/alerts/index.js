@@ -62,7 +62,7 @@ function templateHTML(inputval) {
 function lookupSuccess(inputCounty, inputval) {
   let chosenCounty;
   counties.forEach(county => {
-    if (county.name.toLowerCase() == county, inputCounty.toLowerCase()) {
+    if (county.name.toLowerCase() == inputCounty.toLowerCase()) {
       chosenCounty = county;
     }
   });
