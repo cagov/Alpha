@@ -17,7 +17,7 @@ const minificationOptions = {
   useShortDoctype: true,
   minifyJS: true
 }
-const excludedChunks = ['minwage', 'food', 'roads'];
+const excludedChunks = ['minwage', 'food', 'roads', 'contactus'];
 
 module.exports = {
   entry: {
@@ -33,6 +33,9 @@ module.exports = {
     food: [
       './src/js/foodbanks/index.js'
     ],
+    contactus: [
+      './src/js/contactus/index.js'
+    ],    
     roads: [
       './src/js/roads/index.js'
     ]
@@ -124,6 +127,24 @@ module.exports = {
       excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
+    new HtmlWebpackPlugin({
+      filename: 'en/contact-us/index.html',
+      template: 'src/services/contact-us/index.html',
+      excludeChunks: ['minwage', 'food', 'roads'],
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'en/contact-us/results/index.html',
+      template: 'src/services/contact-us/results/index.html',
+      excludeChunks: ['minwage', 'food', 'roads'],
+      minify: minificationOptions
+    }), 
+    new HtmlWebpackPlugin({
+      filename: 'en/contact-us/home/index.html',
+      template: 'src/services/contact-us/home/index.html',
+      excludeChunks: ['minwage', 'food', 'roads'],
+      minify: minificationOptions
+    }), 
     new HtmlWebpackPlugin({
       filename: 'en/check-lane-closures/index.html',
       template: 'src/services/check-lane-closures/index.html',

@@ -4,8 +4,8 @@
 <head>
     <meta name="description" content="Provides contact information for California government organizations.">
     <title>Contact Us - Alpha.CA.gov</title>
-    <%= require('html-loader!../../partials/meta-common.html') %>
-    <%= require('html-loader!../../partials/favicons.html') %>
+    <%= require('html-loader!../../../partials/meta-common.html') %>
+    <%= require('html-loader!../../../partials/favicons.html') %>
     <!-- Social media post -->
     <meta property="og:image" content="/img/thumbnail.png">
     <meta property="og:image:height" content="630">
@@ -18,9 +18,9 @@
 
 <body>
     <header>
-        <%= require('html-loader!../../partials/official.html') %>
-        <%= require('html-loader!../../partials/experiment-banner.html') %>
-        <%= require('html-loader!../../partials/navbar.html') %>
+        <%= require('html-loader!../../../partials/official.html') %>
+        <%= require('html-loader!../../../partials/experiment-banner.html') %>
+        <%= require('html-loader!../../../partials/navbar.html') %>
     </header>
     <main>
         <div class="container-fluid jumbotron">
@@ -32,38 +32,43 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div iv class="container">
           <div class="row">
       
             <div class="col-lg-12">
       
+              <p>Showing results for <strong><span id="search-term-holder"></span></strong>:</p>
+      
+                    
+              <div id="agency-group" class="group"></div>
+            </div>
+          </div>
+          <div class="row">
+      
+      
+            <div class="col-lg-12">
+      
+              <h2>Search</h2>
+      
               <p>Please enter the name of the agency you want to contact:</p>
       
-              <div  class="input-group md-form form-sm form-2">
-                <form class="form-inline" action="results\" method="get">
+              <div class="input-group md-form form-sm form-2">
+                <form class="form-inline" action="" method="get">
                   <label class="sr-only" for="searchitem">Name</label>
                   <input type="text" class="form-control" id="searchitem" name="searchitem" />
                   <button type="submit" class="btn btn-primary">Search</button>
                 </form>
               </div>
       
-              <h2>Agencies</h2>
+            </div>
       
-        <nav aria-label="Page navigation example">
-          <ul class="pagination flex-wrap" id="agency-nav"></ul>
-              </nav>      
-        
-              
-        <div id="agency-group" class="group"></div>
-        
-          </div>
         </div>
-       </div>	
+       </div>		
     </main>
     <footer>
-        <%= require('html-loader!../../partials/footer.html') %>
-        <%= require('html-loader!../../partials/alphabar.html') %>
-        <%= require('html-loader!../../partials/ga.html') %>
+        <%= require('html-loader!../../../partials/footer.html') %>
+        <%= require('html-loader!../../../partials/alphabar.html') %>
+        <%= require('html-loader!../../../partials/ga.html') %>
     </footer>
 </body>
 </html>
