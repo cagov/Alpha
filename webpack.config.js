@@ -19,7 +19,10 @@ const minificationOptions = {
   removeScriptTypeAttributes: true,
   useShortDoctype: true,
   minifyJS: true,
-  minifyCSS: true
+  minifyCSS: true,
+  sortAttributes: true,
+  sortClassName: true,
+  useShortDoctype: true
 };
 const excludedChunks = ["minwage", "food", "roads", "alerts"];
 
