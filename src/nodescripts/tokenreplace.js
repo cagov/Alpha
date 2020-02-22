@@ -77,6 +77,8 @@ function replaceonelanguage(targetlang) {
         files,
         from:[
           /html lang="en"/g,
+          /xml:lang="en"/g,
+          /\[code-lang\]/g,
           /\[code-url\]/g,
           /\/en\//g,
           /\[code-language-select\]/g,
@@ -84,7 +86,9 @@ function replaceonelanguage(targetlang) {
           /\[FullPath\]/g
         ],
         to:[
-          'html lang="'+targetlang+'"', 
+          'html lang="'+targetlang+'"',
+          'xml:lang="'+targetlang+'"',
+          targetlang,
           (fulldomainurl+targetlang).replace(/\/en/,'')+'[FullPath]/',
           targetlang=='en'?'/':'/'+targetlang+'/',
           targetlangs.map(l=>l.code!=targetlang ? `<a class="dropdown-item" rel="alternate" lang="${l.code}" hreflang="${l.code}" href="/${l.code}[FullPath]/">${l.name}</a>` : '').join(''),
