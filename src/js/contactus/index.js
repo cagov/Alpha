@@ -327,7 +327,7 @@ function loadResults() {
                   facebookItem = facebookItem.replace("http://", "");
                   facebookItem = facebookItem.replace("www.facebook.com/", "");
                   socialMediaInfo += "<a href=\"https://www.facebook.com/" + facebookItem + "\" class=\"list-group-item list-group-item-action\"><span class=\"ca-gov-icon-facebook\"></span>&nbsp;&nbsp;Facebook</a>";
-
+                }
                 if (this.apiData[r].YouTube) {
                   var youTubeItem = this.apiData[r].YouTube;
                   youTubeItem = youTubeItem.replace("https://", "");
@@ -342,7 +342,6 @@ function loadResults() {
           }
         }
       }
-    }
       loadResults();
     }
 
