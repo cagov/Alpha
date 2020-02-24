@@ -208,7 +208,7 @@ describe("lane closures", () => {
     await page.type("#geocoder input", '95825')
     await page.click('.mapboxgl-ctrl-geocoder--suggestion-title')
     await page.type(".js-geocoder-start input", '95670')
-    await page.click('.mapboxgl-ctrl-geocoder--suggestion-address')
+    await page.click('.mapboxgl-ctrl-geocoder--suggestion-title')[2]
     await page.waitForSelector("#geocoder")
     await page.waitForFunction(
       'document.querySelectorAll(".obstructions-major a").length'
