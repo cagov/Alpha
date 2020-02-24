@@ -24,7 +24,7 @@ const minificationOptions = {
   sortClassName: true,
   useShortDoctype: true
 };
-const excludedChunks = ["minwage", "food", "roads", "alerts"];
+const excludedChunks = ["minwage", "food", "roads", "alerts", "contactus"];
 
 //usage 
 //    excludeChunks: excludeChucksExcept("roads"),
@@ -39,6 +39,7 @@ module.exports = {
     minwage: ["./src/js/minwage/index.js"],
     food: ["./src/js/foodbanks/index.js"],
     alerts: ["./src/js/alerts/index.js"],
+    contactus: ['./src/js/contactus/index.js'],    
     roads: ["./src/js/roads/index.js"]
   },
   optimization: {
@@ -127,6 +128,24 @@ module.exports = {
       filename: "en/check-lane-closures/index.html",
       template: "src/services/check-lane-closures/index.html",
       excludeChunks: excludeChucksExcept("roads"),
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'en/contact-us/index.html',
+      template: 'src/services/contact-us/index.html',
+      excludeChunks: excludeChucksExcept("contactus"),
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'en/contact-us/results/index.html',
+      template: 'src/services/contact-us/results/index.html',
+      excludeChunks: excludeChucksExcept("contactus"),
+      minify: minificationOptions
+    }), 
+    new HtmlWebpackPlugin({
+      filename: 'en/contact-us/home/index.html',
+      template: 'src/services/contact-us/home/index.html',
+      excludeChunks: excludeChucksExcept("contactus"),
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
