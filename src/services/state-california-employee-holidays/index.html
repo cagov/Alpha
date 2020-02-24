@@ -16,7 +16,6 @@
     <title>State of California employee holidays - Alpha.CA.gov</title>
     <link href="https://california.azureedge.net/cdt/statetemplate/6.0.0/css/cagov.font-only.min.css" rel="stylesheet" />
 </head>
-
 <body>
     <header>
         <%= require('html-loader!../../partials/official.html') %>
@@ -60,63 +59,7 @@
                                                     <th scope="col" class="lead">Holiday</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>[lang-holiday-newyears-2020]</td>
-                                                    <td>Wednesday</td>
-                                                    <td>[lang-holiday-newyears]</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>[lang-holiday-mlk-2020]</td>
-                                                    <td>Monday</td>
-                                                    <td>[lang-holiday-mlk]</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>[lang-holiday-presidents-2020]</td>
-                                                    <td>Monday</td>
-                                                    <td>[lang-holiday-presidents]</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>[lang-holiday-chavez-2020]</td>
-                                                    <td>Tuesday</td>
-                                                    <td>[lang-holiday-chavez]</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>[lang-holiday-memorial-2020]</td>
-                                                    <td>Monday</td>
-                                                    <td>[lang-holiday-memorial]</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>[lang-holiday-independence-2020] (<a href="#credits">holiday credit</a>)</td>
-                                                    <td>Saturday</td>
-                                                    <td>[lang-holiday-independence]</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>[lang-holiday-labor-2020]</td>
-                                                    <td>Monday</td>
-                                                    <td>[lang-holiday-labor]</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>[lang-holiday-veterans-2020]</td>
-                                                    <td>Wednesday</td>
-                                                    <td>[lang-holiday-veterans]</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>[lang-holiday-thanksgiving-2020]</td>
-                                                    <td>Thursday</td>
-                                                    <td>[lang-holiday-thanksgiving]</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>[lang-holiday-dayafterthanks-2020]</td>
-                                                    <td>Friday</td>
-                                                    <td>[lang-holiday-dayafterthanks]</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>[lang-holiday-xmas-2020]</td>
-                                                    <td>Friday</td>
-                                                    <td>[lang-holiday-xmas]</td>
-                                                </tr>
-                                            </tbody>
+                                            <tbody id="js-tbody-template-2020-results">&nbsp;</tbody>
                                         </table>
                                         <div class="container">
                                             <h3>Other holidays</h3>
@@ -149,63 +92,7 @@
                                                     <th scope="col" class="lead">Holiday</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>[lang-holiday-newyears-2021]</td>
-                                                    <td>Friday</td>
-                                                    <td>[lang-holiday-newyears]</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>[lang-holiday-mlk-2021]</td>
-                                                    <td>Monday</td>
-                                                    <td>[lang-holiday-mlk]</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>[lang-holiday-presidents-2021]</td>
-                                                    <td>Monday</td>
-                                                    <td>[lang-holiday-presidents]</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>[lang-holiday-chavez-2021]</td>
-                                                    <td>Wednesday</td>
-                                                    <td>[lang-holiday-chavez]</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>[lang-holiday-memorial-2021]</td>
-                                                    <td>Monday</td>
-                                                    <td>[lang-holiday-memorial]</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>[lang-holiday-independence-2021]</td>
-                                                    <td>Sunday (<a href="#credits">holiday credit</a>)</td>
-                                                    <td>[lang-holiday-independence]</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>[lang-holiday-labor-2021]</td>
-                                                    <td>Monday</td>
-                                                    <td>[lang-holiday-labor]</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>[lang-holiday-veterans-2021]</td>
-                                                    <td>Thursday</td>
-                                                    <td>[lang-holiday-veterans]</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>[lang-holiday-thanksgiving-2021]</td>
-                                                    <td>Thursday</td>
-                                                    <td>[lang-holiday-thanksgiving]</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>[lang-holiday-dayafterthanks-2021]</td>
-                                                    <td>Friday</td>
-                                                    <td>[lang-holiday-dayafterthanks]</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>[lang-holiday-xmas-2021] (<a href="#credits">holiday credit</a>)</td>
-                                                    <td>Saturday</td>
-                                                    <td>[lang-holiday-xmas]</td>
-                                                </tr>
-                                            </tbody>
+                                            <tbody id="js-tbody-template-2021-results">&nbsp;</tbody>
                                         </table>
                                         <div class="container">
                                             <h3>Other holidays</h3>
@@ -265,6 +152,13 @@
         <%= require('html-loader!../../partials/alphabar.html') %>
         <%= require('html-loader!../../partials/ga.html') %>
     </footer>
+    <template id="js-template">
+        <tr>
+            <td><span class="data-holiday-date">Date</span> <span class="d-none data-holiday-credit-link" style="white-space: nowrap"> (<a href="#credits">holiday credit</a>)</span></td>
+            <td class="data-holiday-day-of-week">day of week</td>
+            <td class="data-holiday-name">name</td>
+        </tr>
+     </template>
 </body>
 
 </html>
