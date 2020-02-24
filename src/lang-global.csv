@@ -117,46 +117,6 @@ path,token,en,es,zh
 /services/state-california-employee-holidays,,holiday credit,Crédito de vacaciones,度假信贷
 /services/state-california-employee-holidays,,2020 holidays,Días festivos de 2020,2020和节假日
 /services/state-california-employee-holidays,,2021 holidays,Días festivos de 2021,2021和节假日
-/services/state-california-employee-holidays,,Sunday,Domingo,星期天
-/services/state-california-employee-holidays,,Monday,Lunes,星期一
-/services/state-california-employee-holidays,,Tuesday,Martes,星期二
-/services/state-california-employee-holidays,,Wednesday,Miércoles,星期三
-/services/state-california-employee-holidays,,Thursday,Jueves,星期四
-/services/state-california-employee-holidays,,Friday,Viernes,星期五
-/services/state-california-employee-holidays,,Saturday,Sábado,星期六
-/services/state-california-employee-holidays,[lang-holiday-newyears],New Year's Day,Año Nuevo,新年
-/services/state-california-employee-holidays,[lang-holiday-mlk],Martin Luther King Jr. Day,Día de Martin Luther King Jr.,马丁·路德·金
-/services/state-california-employee-holidays,[lang-holiday-presidents],Presidents' Day,Día de los Presidentes,总统日
-/services/state-california-employee-holidays,[lang-holiday-chavez],Cesar Chavez Day,Día de Cesar Chavez,塞萨尔·查韦斯日
-/services/state-california-employee-holidays,[lang-holiday-memorial],Memorial Day,Día de la Conmemoración de los Caídos,阵亡将士
-/services/state-california-employee-holidays,[lang-holiday-independence],Independence Day,Día de la Independencia,独立日
-/services/state-california-employee-holidays,[lang-holiday-labor],Labor Day,Día del Trabajo,劳动节
-/services/state-california-employee-holidays,[lang-holiday-veterans],Veterans Day,Día de los Veteranos,退伍军人节
-/services/state-california-employee-holidays,[lang-holiday-thanksgiving],Thanksgiving Day,Día de Acción de Gracias,感恩
-/services/state-california-employee-holidays,[lang-holiday-dayafterthanks],Day after Thanksgiving,Día después del Día de Acción de Gracias,感恩节后的第二天
-/services/state-california-employee-holidays,[lang-holiday-xmas],Christmas Day,Navidad,圣诞节
-/services/state-california-employee-holidays,[lang-holiday-newyears-2020],&nbsp;January 1,1 de Enero,1月1日
-/services/state-california-employee-holidays,[lang-holiday-mlk-2020],&nbsp;January 20,20 de Enero,1月20日
-/services/state-california-employee-holidays,[lang-holiday-presidents-2020],&nbsp;February 17,17 de Febrero,2月17日
-/services/state-california-employee-holidays,[lang-holiday-chavez-2020],&nbsp;March 31,31 de Marzo,3月31日
-/services/state-california-employee-holidays,[lang-holiday-memorial-2020],&nbsp;May 25,25 de Mayo,5月25日
-/services/state-california-employee-holidays,[lang-holiday-independence-2020],&nbsp;July 4,4 de Julio,7月4日
-/services/state-california-employee-holidays,[lang-holiday-labor-2020],&nbsp;September 7,7 de Septiembre,9月7日
-/services/state-california-employee-holidays,[lang-holiday-veterans-2020],&nbsp;November 11,11 de Noviembre,11月11日
-/services/state-california-employee-holidays,[lang-holiday-thanksgiving-2020],&nbsp;November 26,26 de Noviembre,11月26日
-/services/state-california-employee-holidays,[lang-holiday-dayafterthanks-2020],&nbsp;November 27,27 de Noviembre,11月27日
-/services/state-california-employee-holidays,[lang-holiday-xmas-2020],&nbsp;December 25,25 de Diciembre,12月25日
-/services/state-california-employee-holidays,[lang-holiday-newyears-2021],&nbsp;January 1,1 de Enero,1月1日
-/services/state-california-employee-holidays,[lang-holiday-mlk-2021],&nbsp;January 20,20 de Enero,1月20日
-/services/state-california-employee-holidays,[lang-holiday-presidents-2021],&nbsp;February 17,17 de Febrero,2月17日
-/services/state-california-employee-holidays,[lang-holiday-chavez-2021],&nbsp;March 31,31 de Marzo,3月31日
-/services/state-california-employee-holidays,[lang-holiday-memorial-2021],&nbsp;May 31,31 de Mayo,5月31日
-/services/state-california-employee-holidays,[lang-holiday-independence-2021],&nbsp;July 4,4 de Julio,7月4日
-/services/state-california-employee-holidays,[lang-holiday-labor-2021],&nbsp;September 6,6 de Septiembre,9月6日
-/services/state-california-employee-holidays,[lang-holiday-veterans-2021],&nbsp;November 11,11 de Noviembre,11月11日
-/services/state-california-employee-holidays,[lang-holiday-thanksgiving-2021],&nbsp;November 25,25 de Noviembre,11月25日
-/services/state-california-employee-holidays,[lang-holiday-dayafterthanks-2021],&nbsp;November 26,26 de Noviembre,11月26日
-/services/state-california-employee-holidays,[lang-holiday-xmas-2021],&nbsp;December 25,25 de Diciembre,12月25日
 /services/request-birth-certificate,,Request a birth certificate,Solicitar un certificado de nacimiento,申请出生证明
 /services/request-birth-certificate,,Request a birth certificate - Welcome to Alpha.CA.gov,Solicitar un certificado de nacimiento - Bienvenido a Alpha.CA.gov,申请出生证明 - 欢迎Alpha.CA.gov
 /services/request-birth-certificate,,"Request a California birth certificate in person, by mail, or online.","Solicitar un certificado de nacimiento en persona, por correo, o por internet",申请出生证的人，通过邮件，或在线
@@ -439,46 +399,6 @@ path,token,en,es,zh
 /state-california-employee-holidays,,holiday credit,Crédito de vacaciones,度假信贷
 /state-california-employee-holidays,,2020 holidays,Días festivos de 2020,2020和节假日
 /state-california-employee-holidays,,2021 holidays,Días festivos de 2021,2021和节假日
-/state-california-employee-holidays,,Sunday,Domingo,星期天
-/state-california-employee-holidays,,Monday,Lunes,星期一
-/state-california-employee-holidays,,Tuesday,Martes,星期二
-/state-california-employee-holidays,,Wednesday,Miércoles,星期三
-/state-california-employee-holidays,,Thursday,Jueves,星期四
-/state-california-employee-holidays,,Friday,Viernes,星期五
-/state-california-employee-holidays,,Saturday,Sábado,星期六
-/state-california-employee-holidays,[lang-holiday-newyears],New Year's Day,Año Nuevo,新年
-/state-california-employee-holidays,[lang-holiday-mlk],Martin Luther King Jr. Day,Día de Martin Luther King Jr.,马丁·路德·金
-/state-california-employee-holidays,[lang-holiday-presidents],Presidents' Day,Día de los Presidentes,总统日
-/state-california-employee-holidays,[lang-holiday-chavez],Cesar Chavez Day,Día de Cesar Chavez,塞萨尔·查韦斯日
-/state-california-employee-holidays,[lang-holiday-memorial],Memorial Day,Día de la Conmemoración de los Caídos,阵亡将士
-/state-california-employee-holidays,[lang-holiday-independence],Independence Day,Día de la Independencia,独立日
-/state-california-employee-holidays,[lang-holiday-labor],Labor Day,Día del Trabajo,劳动节
-/state-california-employee-holidays,[lang-holiday-veterans],Veterans Day,Día de los Veteranos,退伍军人节
-/state-california-employee-holidays,[lang-holiday-thanksgiving],Thanksgiving Day,Día de Acción de Gracias,感恩
-/state-california-employee-holidays,[lang-holiday-dayafterthanks],Day after Thanksgiving,Día después del Día de Acción de Gracias,感恩节后的第二天
-/state-california-employee-holidays,[lang-holiday-xmas],Christmas Day,Navidad,圣诞节
-/state-california-employee-holidays,[lang-holiday-newyears-2020],&nbsp;January 1,1 de Enero,1月1日
-/state-california-employee-holidays,[lang-holiday-mlk-2020],&nbsp;January 20,20 de Enero,1月20日
-/state-california-employee-holidays,[lang-holiday-presidents-2020],&nbsp;February 17,17 de Febrero,2月17日
-/state-california-employee-holidays,[lang-holiday-chavez-2020],&nbsp;March 31,31 de Marzo,3月31日
-/state-california-employee-holidays,[lang-holiday-memorial-2020],&nbsp;May 25,25 de Mayo,5月25日
-/state-california-employee-holidays,[lang-holiday-independence-2020],&nbsp;July 4,4 de Julio,7月4日
-/state-california-employee-holidays,[lang-holiday-labor-2020],&nbsp;September 7,7 de Septiembre,9月7日
-/state-california-employee-holidays,[lang-holiday-veterans-2020],&nbsp;November 11,11 de Noviembre,11月11日
-/state-california-employee-holidays,[lang-holiday-thanksgiving-2020],&nbsp;November 26,26 de Noviembre,11月26日
-/state-california-employee-holidays,[lang-holiday-dayafterthanks-2020],&nbsp;November 27,27 de Noviembre,11月27日
-/state-california-employee-holidays,[lang-holiday-xmas-2020],&nbsp;December 25,25 de Diciembre,12月25日
-/state-california-employee-holidays,[lang-holiday-newyears-2021],&nbsp;January 1,1 de Enero,1月1日
-/state-california-employee-holidays,[lang-holiday-mlk-2021],&nbsp;January 20,20 de Enero,1月20日
-/state-california-employee-holidays,[lang-holiday-presidents-2021],&nbsp;February 17,17 de Febrero,2月17日
-/state-california-employee-holidays,[lang-holiday-chavez-2021],&nbsp;March 31,31 de Marzo,3月31日
-/state-california-employee-holidays,[lang-holiday-memorial-2021],&nbsp;May 31,31 de Mayo,5月31日
-/state-california-employee-holidays,[lang-holiday-independence-2021],&nbsp;July 4,4 de Julio,7月4日
-/state-california-employee-holidays,[lang-holiday-labor-2021],&nbsp;September 6,6 de Septiembre,9月6日
-/state-california-employee-holidays,[lang-holiday-veterans-2021],&nbsp;November 11,11 de Noviembre,11月11日
-/state-california-employee-holidays,[lang-holiday-thanksgiving-2021],&nbsp;November 25,25 de Noviembre,11月25日
-/state-california-employee-holidays,[lang-holiday-dayafterthanks-2021],&nbsp;November 26,26 de Noviembre,11月26日
-/state-california-employee-holidays,[lang-holiday-xmas-2021],&nbsp;December 25,25 de Diciembre,12月25日
 /request-birth-certificate,,Request a birth certificate,Solicitar un certificado de nacimiento,申请出生证明
 /request-birth-certificate,,Request a birth certificate - Welcome to Alpha.CA.gov,Solicitar un certificado de nacimiento - Bienvenido a Alpha.CA.gov,申请出生证明 - 欢迎Alpha.CA.gov
 /request-birth-certificate,,"Request a California birth certificate in person, by mail, or online.","Solicitar un certificado de nacimiento en persona, por correo, o por internet",申请出生证的人，通过邮件，或在线
