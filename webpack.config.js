@@ -112,7 +112,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "en/who-can-get-discounted-phone-service/index.html",
       template: "src/services/who-can-get-discounted-phone-service/index.html",
-      excludeChunks: excludedChunks,
+      excludeChunks: excludeChucksExcept("lifeline"),
       minify: minificationOptions
     }),
  
