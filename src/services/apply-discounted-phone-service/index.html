@@ -7,7 +7,7 @@
   <meta name="description" content="Follow these six steps to apply for California Lifeline, a discounted phone service. ">
   <meta name="author" content="Bootstrap, alpha.ca.gov team">
   <meta name="generator" content="Hugo 0.61.0">
-  <title>Apply for a discounted phone service - Alpha.CA.gov</title>
+  <title>Apply for a discounted phone service (California LifeLine) - Alpha.CA.gov</title>
 
   <!-- Bootstrap core CSS -->
   <link href="https://cwds.dev/docs/4.3/dist/css/bootstrap.css" rel="stylesheet">
@@ -258,87 +258,6 @@ label.custom-control-label {
       <p>This website is a <a href="https://medium.com/cadotgov">work in progress</a>.</p>
     </div>
   </div>
-  <script src="https://cagov.github.io/UX/dist/main.js" defer async></script>
-
 
 </body>
-
-<script type="text/javascript">
-  (function() {  
-  
-  
-  if  (window.location.href.endsWith('#2') )
-      document.querySelectorAll('.list-group-item-action')
-        .forEach((x,i)=>{if (i==1) setTimeout(()=>x.click(),500)});
-    
-      
-  if  (window.location.href.endsWith('#4') )
-      document.querySelectorAll('.list-group-item-action')
-        .forEach((x,i)=>{if (i==3) setTimeout(()=>x.click(),500)});
-
-  
-    document.querySelectorAll('.show-all').forEach(x=>{
-      const is_close_button = x.classList.contains('d-none')
-
-      x.addEventListener('click',()=>{
-        let wait = 0
-        document.querySelectorAll(`.list-group-item-action${is_close_button?'.list-open':':not(.list-open)'}`)
-          .forEach(x=>setTimeout(()=>x.click(),50*wait++))
-    
-        document.querySelectorAll('.show-all').forEach(y=>y.classList.toggle('d-none'))
-      })
-    });
-
-    
-  })()
-
-//Tooltip support
-Array.prototype.forEach.call(document.querySelectorAll('.tooltip-button'), function(toggletip) {
-  toggletip.setAttribute('type', 'button')
-  toggletip.setAttribute('aria-label', 'Word Definition')
-
-  //wrap a container around the button
-  var container = document.createElement('span')
-  container.setAttribute('class', 'tooltip-container')
-  toggletip.parentNode.insertBefore(container,toggletip)
-  container.appendChild(toggletip)
-
-  // Create the live region
-  var liveRegion = document.createElement('span')
-  liveRegion.setAttribute('role', 'status')
-  
-  // Place the live region in the container
-  container.appendChild(liveRegion)
-  
-  // Get the message from the data-content element
-  var message = toggletip.getAttribute('data-tooltip-content')
-  
-   // Toggle the message
-   toggletip.addEventListener('click', function() {
-liveRegion.innerHTML = ''
-window.setTimeout(function() {
-  liveRegion.innerHTML = '<span class="tooltip-bubble">'+ message +'</span>'
-}, 100)
-  });
-
-  // Close on outside click
-  document.addEventListener('click', function (e) {
-    if (toggletip !== e.target) {
-      liveRegion.innerHTML = ''
-    }
-  });
-
-  // Remove toggletip on ESC
-  toggletip.addEventListener('keydown', function(e) {
-    if ((e.keyCode || e.which) === 27)
-    liveRegion.innerHTML = ''
-  });
-  
-  // Remove on blur
-  toggletip.addEventListener('blur', function (e) {
-    liveRegion.innerHTML = ''
-  })
-})
-
-</script>
 </html>
