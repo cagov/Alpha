@@ -1,72 +1,72 @@
 export default function getCounties() {
   let counties = [
     {
-      name: "Modoc County",
+      name: "Modoc",
       url: "https://public.coderedweb.com/CNE/en-US/BFB9C8502454"
     },
     {
-      name: "Siskiyou County",
+      name: "Siskiyou",
       url:
         "https://www.co.siskiyou.ca.us/emergencyservices/page/codered-emergency-alert-system"
     },
     {
-      name: "Del Norte County",
+      name: "Del Norte",
       url: "http://www.co.del-norte.ca.us/news/delnortecommunityalertsystem"
     },
     {
-      name: "Humboldt County",
+      name: "Humboldt",
       url: "https://humboldtgov.org/2014/Emergency-Notifications"
     },
     {
-      name: "Trinity County",
+      name: "Trinity",
       url: "https://www.trinitycounty.org/oes/codered"
     },
     {
-      name: "Shasta County",
+      name: "Shasta",
       url: "https://public.coderedweb.com/CNE/en-US/BFBDCA5E730B"
     },
     {
-      name: "Lassen County",
+      name: "Lassen",
       url: "https://public.coderedweb.com/CNE/en-US/BFB7CC4C6C0A"
     },
     {
-      name: "Mendocino County",
+      name: "Mendocino",
       url: "https://www.mendocinocounty.org/MendoAlert"
     },
     {
-      name: "Tehama County",
+      name: "Tehama",
       url: "https://member.everbridge.net/index/892807736723620#/signup"
     },
     {
-      name: "Plumas County",
+      name: "Plumas",
       url: "https://www.plumascounty.us/2163/CodeRed-Emergency-Alert-System"
     },
     {
-      name: "Lake County",
+      name: "Lake",
       url: "http://www.lakesheriff.com/About/OES/LakeCoAlerts.htm"
     },
     {
-      name: "Colusa County",
+      name: "Colusa",
       url: "https://www.countyofcolusa.org/index.aspx?NID=64"
     },
     {
-      name: "Glenn County",
+      name: "Glenn",
       url: "https://www.smart911.com/"
     },
     {
-      name: "Butte County",
+      name: "Butte",
       url: "https://public.coderedweb.com/CNE/en-US/BFA19C579EA5"
     },
     {
-      name: "Yuba County",
+      name: "Yuba",
       url: "https://public.coderedweb.com/CNE/en-US/FBE5B4D6F361"
     },
     {
-      name: "Sierra County",
+      name: "Sierra",
       url: "http://www.sierracounty.ca.gov/224/CodeRED"
     },
     {
-      name: "Nevada County",
+      name: "Nevada",
       url: "https://public.coderedweb.com/CNE/en-US/CA8B57E20D17"
     },
     {

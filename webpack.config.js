@@ -228,7 +228,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "en/find-shelter/index.html",
       template: "src/services/find-shelter/index.html",
-      excludeChunks: ["minwage", "food", "roads", "alerts", "contactus"],
+      excludeChunks:excludeChucksExcept("shelters"),
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({

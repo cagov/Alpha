@@ -126,3 +126,7 @@ button:focus {
     box-shadow: none;
 }
 
+button.card-header.accordion-alpha:focus {
+    outline: 2px solid #004abc;
+}
+
