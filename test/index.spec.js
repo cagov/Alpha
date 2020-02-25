@@ -236,6 +236,29 @@ describe("contact us", () => {
 
 })
 
+describe("local emergency alerts", () => {
+  test("local emergency alerts", async () => {
+    await page.goto(hostname+'/sign-up-for-local-emergency-alerts/')
+    await page.waitForSelector(".city-search")
+    await page.type(".city-search", '9582')
+
+    await page.waitForSelector("#awesomplete_list_1 li")
+    const listitems = await page.$$eval('#awesomplete_list_1 li', listitems => listitems )
+    expect(listitems.length).toBeGreaterThan(1)
+
+    await page.type(".city-search", '1')
+    await page.click('button[type="submit"]')
+
+    await page.waitForFunction(
+      'document.querySelectorAll(".card-body a").length'
+      )
+    let answers = await page.$$eval('.card-body a', answers => { return answers });
+    expect(answers.length).toBeGreaterThan(0);
+   
+  }, timeout)
+
+})
+
 afterAll(() => {
   browser.close()
   server.close()
