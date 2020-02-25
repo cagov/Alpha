@@ -44,7 +44,7 @@
                     <p><a href="https://api.alpha.ca.gov/StateHolidayCalendar/.ics" download><i class="far lead ca-gov-icon-calendar"></i> Add State holidays to your calendar</a></p>
                     <h2>Upcoming holidays</h2>
                     <p>State of California employees have paid holidays on the following dates.</p>
-                    <div class="column mb-20">
+                    <div class="column">
                         <cwds-accordion>
                             <div class="card">
                                 <button class="card-header accordion-alpha" type="button" aria-expanded="false">
@@ -133,7 +133,7 @@
                             </div>
                         </cwds-accordion>
                     </div>
-                    <div class="column mb-20">
+                    <div class="column">
                         <cwds-accordion>
                             <div class="card">
                                 <button class="card-header accordion-alpha" type="button" aria-expanded="false">
@@ -265,6 +265,16 @@
         <%= require('html-loader!../../partials/alphabar.html') %>
         <%= require('html-loader!../../partials/ga.html') %>
     </footer>
+<<<<<<< Updated upstream
+=======
+    <template id="js-template">
+        <tr>
+            <td><span class="data-holiday-date">Date</span> <span class="d-none data-holiday-credit-link" style="white-space: nowrap"> (<a href="#credits">holiday credit</a>)</span></td>
+            <td class="data-holiday-day-of-week">day of week</td>
+            <td class="data-holiday-name">name</td>
+        </tr>
+    </template>
+>>>>>>> Stashed changes
 </body>
 
 </html>

@@ -325,8 +325,7 @@ a.navbar-brand:visited {
 /* Alerts */
 
 .alert-primary {
-    color: #ffffff;
-    background-color: #0f1e6b;
+    background-color: #f1f1f1;
     border-color: #f1f1f1;
 }
 
@@ -342,7 +341,7 @@ a.navbar-brand:visited {
 .alert-info,
 .alert-primary {
     background: #f1f1f1;
-    border-color: #cccccc;
+    border-color: #f1f1f1;
     margin-bottom: 20px;
     color: #000;
 }
@@ -357,6 +356,18 @@ a.navbar-brand:visited {
     background-color: #f1f1f1;
     border-color: #f1f1f1;
 }
+<<<<<<< Updated upstream
+=======
+.alert-primary .h2 {
+  font-family: "Public Sans", sans-serif;
+}
+.alert-left {
+  border-left: 4px solid #0f1e6b;
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+>>>>>>> Stashed changes
 
 .alert-primary .h2 {
     color: #fff;
