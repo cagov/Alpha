@@ -24,7 +24,11 @@ const minificationOptions = {
   sortClassName: true,
   useShortDoctype: true
 };
+<<<<<<< HEAD
 const excludedChunks = ["minwage", "food", "alerts", "contactus", "roads", "shelters", "water"];
+=======
+const excludedChunks = ["minwage", "food", "roads", "alerts", "contactus", "shelters"];
+>>>>>>> master
 
 //usage 
 //    excludeChunks: excludeChucksExcept("roads"),
@@ -41,8 +45,12 @@ module.exports = {
     alerts: ["./src/js/alerts/index.js"],
     contactus: ['./src/js/contactus/index.js'],
     roads: ["./src/js/roads/index.js"],
+<<<<<<< HEAD
     shelters: ["./src/js/shelters/index.js"],
     water: ["./src/js/water/index.js"]
+=======
+    shelters: ["./src/js/shelters/index.js"]
+>>>>>>> master
   },
   optimization: {
     splitChunks: {
