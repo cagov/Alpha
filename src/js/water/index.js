@@ -35,22 +35,18 @@ window.geocoder = new MapboxGeocoder({
       gotSystem(systemData);
     })
     .catch(error => {
-      console.error("Error:", error);
       waterButton.innerHTML = `Check your water`;
       document.querySelector(".system-data").style.display = "block";
     });
 });
 
 if(getParameterByName('systemId')) {
-  console.log('getting system data')
   let url = `https://api.alpha.ca.gov/WaterSystem?systemId=${getParameterByName('systemId')}`
-  console.log(url)
   fetch(url)
     .then(response => {
       return response.json();
     })
     .then(systemData => {
-      console.log(systemData)
       gotSystem(systemData);
       document.querySelector(".system-data").style.display = "block";
     })
