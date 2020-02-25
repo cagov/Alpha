@@ -18,7 +18,7 @@ const minificationOptions = {
   removeRedundantAttributes: false,
   removeScriptTypeAttributes: true,
   useShortDoctype: true,
-  minifyJS: true,
+  //minifyJS: true,
   minifyCSS: true,
   sortAttributes: true,
   sortClassName: true,
@@ -93,6 +93,30 @@ module.exports = {
       excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
+
+    /*
+    new HtmlWebpackPlugin({
+      filename: "en/apply-discounted-phone-service/index.html",
+      template: "src/services/apply-discounted-phone-service/index.html",
+      excludeChunks: excludedChunks,
+      minify: minificationOptions
+    }), 
+  */
+
+    new HtmlWebpackPlugin({
+      filename: "en/apply-online-discounted-phone-service/index.html",
+      template: "src/services/apply-online-discounted-phone-service/index.html",
+      excludeChunks: excludedChunks,
+      minify: minificationOptions
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: "en/who-can-get-discounted-phone-service/index.html",
+      template: "src/services/who-can-get-discounted-phone-service/index.html",
+      excludeChunks: excludedChunks,
+      minify: minificationOptions
+    }),
+ 
     new HtmlWebpackPlugin({
       filename: "en/apply-for-disability-insurance-benefits/index.html",
       template:
