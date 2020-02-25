@@ -1,104 +1,97 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xml:lang="en">
 
 <head>
-  <%= require('html-loader!../../partials/meta-common.html') %>
-  <%= require('html-loader!../../partials/favicons.html') %>
-
-  <!-- Social media post -->
-  <meta property="og:image" content="/img/thumbnail.png">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:width" content="630">
-  <meta property="og:title" content="Request a birth certificate - Alpha.CA.gov">
-  <meta property="og:description" content="Request a California birth certificate in person, by mail, or online.">
-  <meta property="og:url" content="[code-url]">
-
-  <link rel="canonical" href="[code-url]" />
-  <title>Request a birth certificate - Welcome to Alpha.CA.gov</title>
-  <meta name="description" content="Request a California birth certificate in person, by mail, or online.">
+    <%= require('html-loader!../../partials/meta-common.html') %>
+    <%= require('html-loader!../../partials/favicons.html') %>
+    <!-- Social media post -->
+    <meta property="og:image" content="/img/thumbnail.png">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:width" content="630">
+    <meta property="og:title" content="Request a birth certificate - Alpha.CA.gov">
+    <meta property="og:description" content="Request a California birth certificate in person, by mail, or online.">
+    <meta property="og:url" content="[code-url]">
+    <link rel="canonical" href="[code-url]" />
+    <title>Request a birth certificate - Welcome to Alpha.CA.gov</title>
+    <meta name="description" content="Request a California birth certificate in person, by mail, or online.">
 </head>
 
 <body>
-<header>
-<%= require('html-loader!../../partials/official.html') %>
-<%= require('html-loader!../../partials/experiment-banner.html') %>
-<%= require('html-loader!../../partials/navbar.html') %>
-</header> 
-<main>
-  <div class="container-fluid jumbotron">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1>Request a birth certificate</h1>
+    <header>
+        <%= require('html-loader!../../partials/official.html') %>
+        <%= require('html-loader!../../partials/experiment-banner.html') %>
+        <%= require('html-loader!../../partials/navbar.html') %>
+    </header>
+    <main>
+        <div class="container-fluid jumbotron">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Request a birth certificate</h1>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <p>There are three main ways to order a California birth certificate.</p>
-    <div class="row">
-      <div class="col-md-4 mb-5">
-		<h2 class="border p-3 bg-light">Visit a county office</h2>
-				<ul class="list-group list-group-flush">
-				  <li class="list-group-item">You have to apply with the county where the person was born.</li>
-				  <li class="list-group-item">Cost: $28</li>
-				  <li class="list-group-item">Processing time: Varies, but could be as soon as the same day</li>
-				  <li class="list-group-item">You'll sign a sworn statement in front of a county worker.</li>
-				  <li class="list-group-item">You may need to bring a driver's license, passport, or other photo ID from the government that hasn't expired.</li>
-				</ul>
-		  <div class="col mt-3">
-        <a class="action-link" href="https://www.cdph.ca.gov/Programs/CHSI/Pages/County-Registrars-and-Recorders.aspx" onclick="ga_send_event('Birth Certificate','Click Away','Visit a county office')">
-          Visit a county office
-        </a>
-		  </div>
-      </div>
-      <div class="col-md-4 mb-5">
-		<h2 class="border p-3 bg-light">Mail a request</h2>
-        <ul class="list-group list-group-flush">
-		<li class="list-group-item">You may have to find a notary to sign your application, depending on whether you want an <a href="https://www.cdph.ca.gov/Programs/CHSI/Pages/Authorized-Copy-vs--Informational-Copy.aspx" onclick="ga_send_event('Birth Certificate','Click Away','authorized or informational copy')">authorized or informational copy</a>[global-lang-period]</li>
-				  <li class="list-group-item">Cost: $25 (plus the price of notarization)</li>
-				  <li class="list-group-item">Processing time: 3 to 4 weeks or more (expected to take longer in 2020 because of the demand for <a href="https://realid.dmv.ca.gov/?gclid=EAIaIQobChMInJeJqoyB5wIVoB6tBh1_PQVpEAAYASAAEgLzfPD_BwE" onclick="ga_send_event('Birth Certificate','Click Away','Real ID')">Real ID</a>)</li>
-				</ul>
-		  <div class="col mt-3">
-        <a class="action-link" href="https://www.cdph.ca.gov/Programs/CHSI/Pages/Birth-Mail.aspx" onclick="ga_send_event('Birth Certificate','Click Away','Mail a request')">
-          Mail a request
-        </a>
-		  </div>
-      </div>
-      <div class="col-md-4 mb-5">
-        <h2 class="border p-3 bg-light">Apply online</h2>
-		  <ul class="list-group list-group-flush">
-				  <li class="list-group-item">You can apply online through the private companies VitalChek and Vital Records Now.</li>
-				  <li class="list-group-item">Cost: $31–$110</li>
-				  <li class="list-group-item">Processing time: 2 to 3 weeks</li>
-				</ul>
-        <div class="col mt-3">
-          <a class="action-link" href="https://www.cdph.ca.gov/Programs/CHSI/Pages/Obtaining-Certified-Copies-Online.aspx" onclick="ga_send_event('Birth Certificate','Click Away','Apply online')">
-            Apply online
-          </a>
+        <div class="container">
+            <p>There are three main ways to order a California birth certificate.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="border bg-light">Visit a county office</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">You have to apply with the county where the person was born.</li>
+                        <li class="list-group-item">Cost: $28</li>
+                        <li class="list-group-item">Processing time: Varies, but could be as soon as the same day</li>
+                        <li class="list-group-item">You'll sign a sworn statement in front of a county worker.</li>
+                        <li class="list-group-item">You may need to bring a driver's license, passport, or other photo ID from the government that hasn't expired.</li>
+                    </ul>
+                    <div class="col">
+                        <a class="action-link" href="https://www.cdph.ca.gov/Programs/CHSI/Pages/County-Registrars-and-Recorders.aspx" onclick="ga_send_event('Birth Certificate','Click Away','Visit a county office')">
+                            Visit a county office
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h2 class="border bg-light">Mail a request</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">You may have to find a notary to sign your application, depending on whether you want an <a href="https://www.cdph.ca.gov/Programs/CHSI/Pages/Authorized-Copy-vs--Informational-Copy.aspx" onclick="ga_send_event('Birth Certificate','Click Away','authorized or informational copy')">authorized or informational copy</a>[global-lang-period]</li>
+                        <li class="list-group-item">Cost: $25 (plus the price of notarization)</li>
+                        <li class="list-group-item">Processing time: 3 to 4 weeks or more (expected to take longer in 2020 because of the demand for <a href="https://realid.dmv.ca.gov/?gclid=EAIaIQobChMInJeJqoyB5wIVoB6tBh1_PQVpEAAYASAAEgLzfPD_BwE" onclick="ga_send_event('Birth Certificate','Click Away','Real ID')">Real ID</a>)</li>
+                    </ul>
+                    <div class="col">
+                        <a class="action-link" href="https://www.cdph.ca.gov/Programs/CHSI/Pages/Birth-Mail.aspx" onclick="ga_send_event('Birth Certificate','Click Away','Mail a request')">
+                            Mail a request
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h2 class="border bg-light">Apply online</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">You can apply online through the private companies VitalChek and Vital Records Now.</li>
+                        <li class="list-group-item">Cost: $31–$110</li>
+                        <li class="list-group-item">Processing time: 2 to 3 weeks</li>
+                    </ul>
+                    <div class="col">
+                        <a class="action-link" href="https://www.cdph.ca.gov/Programs/CHSI/Pages/Obtaining-Certified-Copies-Online.aspx" onclick="ga_send_event('Birth Certificate','Click Away','Apply online')">
+                            Apply online
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-md-12">
-        <hr>
-        <p>More about requesting a <a
-            href="https://www.cdph.ca.gov/Programs/CHSI/Pages/Vital-Records-Obtaining-Certified-Copies-of-Birth-Records.aspx">birth certificate</a>[global-lang-period]</p>
-      </div>
-    </div>
-  </div>
-</main>	
-<footer>
-  <%= require('html-loader!../../partials/feedback.html') %>
-  <%= require('html-loader!../../partials/footer.html') %>
-  <%= require('html-loader!../../partials/alphabar.html') %>
-  <%= require('html-loader!../../partials/ga.html') %>
-</footer>
-
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>More about requesting a <a href="https://www.cdph.ca.gov/Programs/CHSI/Pages/Vital-Records-Obtaining-Certified-Copies-of-Birth-Records.aspx">birth certificate</a>[global-lang-period]</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <%= require('html-loader!../../partials/feedback.html') %>
+        <%= require('html-loader!../../partials/footer.html') %>
+        <%= require('html-loader!../../partials/alphabar.html') %>
+        <%= require('html-loader!../../partials/ga.html') %>
+    </footer>
 </body>
 
 </html>

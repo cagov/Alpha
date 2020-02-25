@@ -1,84 +1,77 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xml:lang="en">
 
 <head>
-  <%= require('html-loader!./partials/meta-common.html') %>
-  <%= require('html-loader!./partials/favicons.html') %>
-
-  <!-- Social media post -->
-  <meta property="og:image" content="/img/thumbnail.png">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:width" content="630">
-  <meta property="og:title" content="Alpha.CA.gov - State of California">
-  <meta property="og:description" content="We're making it easier to find and use government services and information in the State of California.">
-  <meta property="og:url" content="[code-url]">
-
-  <title>Welcome to Alpha.CA.gov</title>
-  <meta name="description" content="The Alpha website for the State of California.">
-  <link rel="canonical" href="[code-url]" />
+    <%= require('html-loader!./partials/meta-common.html') %>
+    <%= require('html-loader!./partials/favicons.html') %>
+    <!-- Social media post -->
+    <meta property="og:image" content="/img/thumbnail.png">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:width" content="630">
+    <meta property="og:title" content="Alpha.CA.gov - State of California">
+    <meta property="og:description" content="We're making it easier to find and use government services and information in the State of California.">
+    <meta property="og:url" content="[code-url]">
+    <title>Welcome to Alpha.CA.gov</title>
+    <meta name="description" content="The Alpha website for the State of California.">
+    <link rel="canonical" href="[code-url]" />
 </head>
 
 <body>
-<header>
-  <%= require('html-loader!./partials/official.html') %>
-  <%= require('html-loader!./partials/experiment-banner.html') %>
-  <%= require('html-loader!./partials/navbar.html') %>
-</header>
-<main> 
-  <div class="container-fluid jumbotron alpha pt-5 pb-5">
-    <div class="container">
-      <div class="row text-left">
-        <div class="col-md-12">
-          <!--<img src="/img/ca-light.png" alt="State of California" title="State of California">-->
-          <h1 class="text-white">Welcome to Alpha.CA.gov</h1>
-          <p class="lead text-white">We're making it easier to find and use government services and information.</p>
+    <header>
+        <%= require('html-loader!./partials/official.html') %>
+        <%= require('html-loader!./partials/experiment-banner.html') %>
+        <%= require('html-loader!./partials/navbar.html') %>
+    </header>
+    <main>
+        <div class="container-fluid jumbotron alpha pt-5 pb-5">
+            <div class="container">
+                <div class="row text-left">
+                    <div class="col-md-12">
+                        <!--<img src="/img/ca-light.png" alt="State of California" title="State of California">-->
+                        <h1 class="text-white">Welcome to Alpha.CA.gov</h1>
+                        <p class="lead text-white">We're making it easier to find and use government services and information.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2>Featured</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="list-group">
-          <a href="apply-for-cal-grant/" class="list-group-item list-group-item-action lead">Apply for a Cal Grant (college financial aid)</a>
-          <a href="check-lane-closures/" class="list-group-item list-group-item-action lead">Check lane closures for your trip</a>
-          <a href="find-food-banks-near-you/" class="list-group-item list-group-item-action lead">Find food banks near you</a>
-          <a href="request-birth-certificate/" class="list-group-item list-group-item-action lead">Request a birth certificate</a>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Featured</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="list-group">
+                        <a href="apply-for-cal-grant/" class="list-group-item list-group-item-action lead">Apply for a Cal Grant (college financial aid)</a>
+                        <a href="check-lane-closures/" class="list-group-item list-group-item-action lead">Check lane closures for your trip</a>
+                        <a href="find-food-banks-near-you/" class="list-group-item list-group-item-action lead">Find food banks near you</a>
+                        <a href="find-shelter/" class="list-group-item list-group-item-action lead">Find shelters near you</a>
+                        <a href="request-birth-certificate/" class="list-group-item list-group-item-action lead">Request a birth certificate</a>
+                        <a href="sign-up-for-local-emergency-alerts/" class="list-group-item list-group-item-action lead">Sign up for local emergency alerts</a>
+                        <a href="apply-online-discounted-phone-service/" class="list-group-item list-group-item-action lead">Apply online for a discounted phone service</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="list-group one-column-fix">
+                        <a href="apply-for-disability-insurance-benefits/" class="list-group-item list-group-item-action lead">Apply for disability insurance benefits</a>
+                        <a href="check-your-tap-water-quality/" class="list-group-item list-group-item-action lead">Check your tap water quality</a>                        
+                        <a href="contact-us/" class="list-group-item list-group-item-action lead">Contact us</a>
+                        <a href="find-minimum-wage-your-city/" class="list-group-item list-group-item-action lead">Find the minimum wage in your city</a>
+                        <a href="hire-licensed-contractor-home-improvements/" class="list-group-item list-group-item-action lead">Hire a licensed contractor for home improvements</a>
+                        <a href="state-california-employee-holidays/" class="list-group-item list-group-item-action lead">State of California employee holidays</a>
+                        <a href="who-can-get-discounted-phone-service/" class="list-group-item list-group-item-action lead">Check if you can get a discounted phone service</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-md-6">
-        <div class="list-group one-column-fix">
-          <a href="apply-for-disability-insurance-benefits/" class="list-group-item list-group-item-action lead">Apply for disability insurance benefits</a>
-          <a href="find-minimum-wage-your-city/" class="list-group-item list-group-item-action lead">Find the minimum wage in your city</a>
-          <a href="hire-licensed-contractor-home-improvements/" class="list-group-item list-group-item-action lead">Hire a licensed contractor for home improvements</a>
-          <a href="state-california-employee-holidays/" class="list-group-item list-group-item-action lead">State of California employee holidays</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</main>	 
-<footer>
-		<div class="container feedback">  
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="alert alert-secondary">
-					<p class="h3 bold">[global-lang-feedback]</p>
-					<p>[global-please] <a href="/en/feedback/">[global-lang-share-feedback]</a> [global-lang-feedback-p]</p>
-					
-				</div>
-			</div>
-		</div>
-	</div>	
-	
-  <%= require('html-loader!./partials/footer.html') %>
-  <%= require('html-loader!./partials/alphabar.html') %>
-  <%= require('html-loader!./partials/ga.html') %>
-</footer>
+    </main>
+    <footer>
+        <%= require('html-loader!./partials/feedback.html') %>
+        <%= require('html-loader!./partials/footer.html') %>
+        <%= require('html-loader!./partials/alphabar.html') %>
+        <%= require('html-loader!./partials/ga.html') %>
+    </footer>
 </body>
+
 </html>

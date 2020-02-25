@@ -76,7 +76,9 @@ function replaceonelanguage(targetlang) {
     replace.sync({
         files,
         from:[
-          /lang="en"/g,
+          /html lang="en"/g,
+          /xml:lang="en"/g,
+          /\[code-lang\]/g,
           /\[code-url\]/g,
           /\/en\//g,
           /\[code-language-select\]/g,
@@ -84,11 +86,13 @@ function replaceonelanguage(targetlang) {
           /\[FullPath\]/g
         ],
         to:[
-          'lang="'+targetlang+'"', 
+          'html lang="'+targetlang+'"',
+          'xml:lang="'+targetlang+'"',
+          targetlang,
           (fulldomainurl+targetlang).replace(/\/en/,'')+'[FullPath]/',
           targetlang=='en'?'/':'/'+targetlang+'/',
-          targetlangs.map(l=>l.code!=targetlang ? '<a class="dropdown-item" rel="alternate" hreflang="'+l.code+'" href="/'+l.code+'[FullPath]/">'+l.name+'</a>' : '').join(''),
-          targetlangs.map(l=>l.code!=targetlang ? '<link rel="alternate" hreflang="'+l.code+'" href="'+fulldomainurl+l.code+'[FullPath]/">' : '').join(''),
+          targetlangs.map(l=>l.code!=targetlang ? `<a class="dropdown-item" rel="alternate" lang="${l.code}" hreflang="${l.code}" href="/${l.code}[FullPath]/">${l.name}</a>` : '').join(''),
+          targetlangs.map(l=>l.code!=targetlang ? `<link rel="alternate" hreflang="${l.code}" href="${fulldomainurl+l.code}[FullPath]/">` : '').join(''),
           (match, ...args) => fileFromArgs(args,targetlang)
         ]})
   })

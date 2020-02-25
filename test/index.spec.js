@@ -200,7 +200,6 @@ describe("mobile", () => {
   }, timeout);
 
 })
-
 /*
 describe("lane closures", () => {
   test("lane closures", async () => {
@@ -209,7 +208,7 @@ describe("lane closures", () => {
     await page.type("#geocoder input", '95825')
     await page.click('.mapboxgl-ctrl-geocoder--suggestion-title')
     await page.type(".js-geocoder-start input", '95670')
-    await page.click('.mapboxgl-ctrl-geocoder--suggestion-title')
+    await page.click('.mapboxgl-ctrl-geocoder--suggestion-title')[2]
     await page.waitForSelector("#geocoder")
     await page.waitForFunction(
       'document.querySelectorAll(".obstructions-major a").length'
@@ -222,6 +221,44 @@ describe("lane closures", () => {
 
 })
 */
+
+
+describe("contact us", () => {
+  test("contact us", async () => {
+    await page.goto(hostname+'/contact-us/')
+    await page.waitForFunction(
+      'document.querySelectorAll("#agency-group p").length'
+      )
+    let answers = await page.$$eval('#agency-group p', answers => { return answers })
+    expect(answers.length).toBeGreaterThan(200);
+   
+  }, timeout)
+
+})
+
+describe("local emergency alerts", () => {
+  test("local emergency alerts", async () => {
+    await page.goto(hostname+'/sign-up-for-local-emergency-alerts/')
+    await page.waitForSelector(".city-search")
+    await page.type(".city-search", '9582')
+
+    await page.waitForSelector("#awesomplete_list_1 li")
+    const listitems = await page.$$eval('#awesomplete_list_1 li', listitems => listitems )
+    expect(listitems.length).toBeGreaterThan(1)
+
+    await page.type(".city-search", '1')
+    await page.click('button[type="submit"]')
+
+    await page.waitForFunction(
+      'document.querySelectorAll(".card-body a").length'
+      )
+    let answers = await page.$$eval('.card-body a', answers => { return answers });
+    expect(answers.length).toBeGreaterThan(0);
+   
+  }, timeout)
+
+})
+
 afterAll(() => {
   browser.close()
   server.close()

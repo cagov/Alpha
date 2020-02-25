@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="description" content="Provides contact information for California government organizations.">
+    <title>Contact us - Alpha.CA.gov</title>
+    <%= require('html-loader!../../../partials/meta-common.html') %>
+    <%= require('html-loader!../../../partials/favicons.html') %>
+    <!-- Social media post -->
+    <meta property="og:image" content="/img/thumbnail.png">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:width" content="630">
+    <meta property="og:title" content="Contact us - Alpha.CA.gov">
+    <meta property="og:description" content="Provides contact information for California government organizations.">
+    <meta property="og:url" content="[code-url]">
+    <link rel="canonical" href="[code-url]" />
+    <link href="https://california.azureedge.net/cdt/statetemplate/6.0.0/css/cagov.font-only.min.css" rel="stylesheet" />
+  </head>
+
+<body>
+    <header>
+        <%= require('html-loader!../../../partials/official.html') %>
+        <%= require('html-loader!../../../partials/experiment-banner.html') %>
+        <%= require('html-loader!../../../partials/navbar.html') %>
+    </header>
+    <main>
+      <div class="container-fluid jumbotron">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 id="org-name-holder">#</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+    
+          <div class="col-lg-8">
+              <h2>About</h2>
+          <p class="lead" id="org-description-holder"></p>
+    
+          <h2>Contact</h2>
+          <ul class="list-unstyled" id="org-contact-info"> 
+         </ul>
+    
+          </div>
+    
+        <div class="col-lg-4" id="org-social-media">
+    
+        </div>
+    
+      </div>
+     </div>	
+      
+    </main>
+    <footer>
+        <%= require('html-loader!../../../partials/footer.html') %>
+        <%= require('html-loader!../../../partials/alphabar.html') %>
+        <%= require('html-loader!../../../partials/ga.html') %>
+    </footer>
+</body>
+</html>

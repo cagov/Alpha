@@ -23,6 +23,7 @@ path,token,en,es,zh
 ,[global-lang-show],Show,Mostrar,节目
 ,[global-lang-hide],Hide,Ocultar,隐藏
 ,[global-lang-ok],OK,Okay,好
+,[global-feedback-link],https://www.surveymonkey.com/r/Alpha-CA-Gov,https://es.surveymonkey.com/r/Alpha-Ca-Gov-Es,https://es.surveymonkey.com/r/Alpha-Ca-Gov-Es
 /,,We're making it easier to find and use government services and information.,Estamos haciendo más fácil de buscar y usar servicios e información del gobierno.,我们更容易发现和使用信息和服务的政府。
 /,,Welcome to Alpha.CA.gov,Bienvenido a Alpha.CA.gov,欢迎Alpha.CA.gov
 /,,Featured,Servicios Destacados,主要特点
@@ -35,6 +36,8 @@ path,token,en,es,zh
 /,,Alpha.CA.gov - State of California,Alpha.CA.gov - Estado de California,Alpha.CA.gov  - 加利福尼亚州
 /,,We're making it easier to find and use government services and information in the State of California.,Estamos haciendo más fácil de buscar y usar servicios e información del gobierno.,我们更容易发现和使用信息和服务的政府。
 /,,Apply for a Cal Grant (college financial aid),Solicitar una beca Cal Grant (ayuda financiera para la universidad),申请加州格兰特（上大学助学金）
+/,,Contact us,Contáctenos,联系我们
+/,,Check if you can get a discounted phone service,Compruebe si se puede obtener un servicio telefónico con descuento,请检查您是否可以享受折扣电话服务
 ,,Apply for a Cal Grant,Solicitar una beca Cal Grant,申请加州格兰特
 /about,,About us,Sobre nosotros,关于我们
 /about,,The Alpha website for the State of California.,La página web Alfa para el Estado de California.,阿尔法的网页为加利福尼亚州。
@@ -51,11 +54,6 @@ path,token,en,es,zh
 /about,,GitHub,GitHub,GitHub上
 /about,,"and this website,","y este sitio web,",而这个网站，
 /about,,About Alpha.CA.gov,Sobre Alpha.CA.gov,关于Alpha.CA.gov
-/feedback,,Please share your feedback,Por favor comparta sus comentarios,请分享您的意见
-/feedback,,Please share your feedback to help Alpha.CA.gov improve.,Por favor comparta sus comentarios para ayudar a mejorar Alpha.CA.gov.,请分享您的建议，以帮助提高Alpha.CA.gov。
-/feedback,,Alpha.CA.gov - State of California,Alpha.CA.gov - Estado de California,Alpha.CA.gov  - 加利福尼亚州
-/feedback,[lang-survey-link],tRaiETqnLgj758hTBazgd_2BHkAkgHavJBdUVWcya_2B9TmX6knDU4u_2FzgDZXNzk7OQy,tRaiETqnLgj758hTBazgd5pfn8XJKc0sU9CSd56Ev1KwNMGA_2B06kF9_2F7NCWSNhTR,tRaiETqnLgj758hTBazgd5pfn8XJKc0sU9CSd56Ev1KwNMGA_2B06kF9_2F7NCWSNhTR
-/feedback,,Feedback,Comentarios,评论
 /services/find-minimum-wage-your-city,,Find the minimum wage in your city,Encuentre el salario mínimo en su ciudad,查找您所在城市最低工资标准
 /services/find-minimum-wage-your-city,,Find the minimum wage in your city - Alpha.CA.gov,Encuentre el salario mínimo en su ciudad - Alpha.CA.gov,在城市中找到的最低工资标准 -  Alpha.CA.gov
 /services/find-minimum-wage-your-city,,Find the minimum wage in your California city and the State of California. Compare your city's minimum wage to other cities in California.,Encuentre el salario minimo en su ciudad y el Estado de California. Compare el salario minimo en su ciudad a otras ciudades en California.,在城市中找到的最低工资和加利福尼亚州。比较在城市中加州其他城市的最低工资标准。
@@ -63,7 +61,7 @@ path,token,en,es,zh
 /services/find-minimum-wage-your-city,,Please enter a city or zip code in California.,Por favor introduzca la ciudad o código postal en California:,请进入加州城市或邮政编码：
 /services/find-minimum-wage-your-city,,Find minimum wage,Encuentre el salario minimo,找到最低工资
 /services/find-minimum-wage-your-city,,California minimum wage in 2020,Salario mínimo de California en 2020,在2020年加利福尼亚州的最低工资
-/services/find-minimum-wage-your-city,,Minimum wage depends on the city where you work. Some cities have the same minimum wage as the State.,El salario mínimo depende de la ciudad donde trabaja. Algunas ciudades tienen el mismo salario mínimo que el Estado de California.,最低工资取决于他工作的城市。一些城市具有相同最低工资标准为加利福尼亚州。
+/services/find-minimum-wage-your-city,,Minimum wage depends on the city where you work. Some cities have the same minimum wage as the State.,El salario mínimo depende de la ciudad donde trabaja. Algunas ciudades tienen el mismo salario mínimo que el Estado de California.,最低工资取决于他工作的城市。一些城市具有相同的最低工资标准为加利福尼亚州。
 /services/find-minimum-wage-your-city,,Employers with 25 or fewer employees,Empleadores con 25 o menos empleados,有25名或更少的员工的雇主
 /services/find-minimum-wage-your-city,,Employers with 26 or more employees,Empleadores con 26 o más empleados,有26名以上雇员的雇主
 /services/find-minimum-wage-your-city,,$12/hour*,$12/hora*,$ 12 /小时*
@@ -108,6 +106,7 @@ path,token,en,es,zh
 /services/state-california-employee-holidays,,1 personal holiday,Un día libre,一天
 /services/state-california-employee-holidays,,1 holiday credit (8 hours),Un crédito de vacaciones (8 horas),一个长假信贷（8小时）
 /services/state-california-employee-holidays,,"July 1, 2020, to June 30, 2021",Entre el 1 de julio de 2020 a 31 de junio de 2021,与2020年7月1日至31月2021
+/services/state-california-employee-holidays,,"July 1, 2021, to June 30, 2022",Entre el 1 de julio de 2021 a 31 de junio de 2022,与2021年7月1日至31月2022
 /services/state-california-employee-holidays,,More details about holidays,Más información sobre días festivos del Estado,状态节假日更多信息
 /services/state-california-employee-holidays,,Weekend holidays,Días festivos en fines de semana,在周末假期
 /services/state-california-employee-holidays,,"When a holiday is on a Saturday, most employees get one holiday credit (eight hours of leave).","Cuando un día festivo cae en un sábado, la mayoría de empleados reciben un crédito de vacaciones (8 horas de permiso laboral).",当公众假期适逢星期六，大多数员工获得休假信贷（8小时工作证）。
@@ -121,46 +120,6 @@ path,token,en,es,zh
 /services/state-california-employee-holidays,,holiday credit,Crédito de vacaciones,度假信贷
 /services/state-california-employee-holidays,,2020 holidays,Días festivos de 2020,2020和节假日
 /services/state-california-employee-holidays,,2021 holidays,Días festivos de 2021,2021和节假日
-/services/state-california-employee-holidays,,Sunday,Domingo,星期天
-/services/state-california-employee-holidays,,Monday,Lunes,星期一
-/services/state-california-employee-holidays,,Tuesday,Martes,星期二
-/services/state-california-employee-holidays,,Wednesday,Miércoles,星期三
-/services/state-california-employee-holidays,,Thursday,Jueves,星期四
-/services/state-california-employee-holidays,,Friday,Viernes,星期五
-/services/state-california-employee-holidays,,Saturday,Sábado,星期六
-/services/state-california-employee-holidays,[lang-holiday-newyears],New Year's Day,Año Nuevo,新年
-/services/state-california-employee-holidays,[lang-holiday-mlk],Martin Luther King Jr. Day,Día de Martin Luther King Jr.,马丁·路德·金
-/services/state-california-employee-holidays,[lang-holiday-presidents],Presidents' Day,Día de los Presidentes,总统日
-/services/state-california-employee-holidays,[lang-holiday-chavez],Cesar Chavez Day,Día de Cesar Chavez,塞萨尔·查韦斯日
-/services/state-california-employee-holidays,[lang-holiday-memorial],Memorial Day,Día de la Conmemoración de los Caídos,阵亡将士
-/services/state-california-employee-holidays,[lang-holiday-independence],Independence Day,Día de la Independencia,独立日
-/services/state-california-employee-holidays,[lang-holiday-labor],Labor Day,Día del Trabajo,劳动节
-/services/state-california-employee-holidays,[lang-holiday-veterans],Veterans Day,Día de los Veteranos,退伍军人节
-/services/state-california-employee-holidays,[lang-holiday-thanksgiving],Thanksgiving Day,Día de Acción de Gracias,感恩
-/services/state-california-employee-holidays,[lang-holiday-dayafterthanks],Day after Thanksgiving,Día después del Día de Acción de Gracias,感恩节后的第二天
-/services/state-california-employee-holidays,[lang-holiday-xmas],Christmas Day,Navidad,圣诞节
-/services/state-california-employee-holidays,[lang-holiday-newyears-2020],&nbsp;January 1,1 de Enero,1月1日
-/services/state-california-employee-holidays,[lang-holiday-mlk-2020],&nbsp;January 20,20 de Enero,1月20日
-/services/state-california-employee-holidays,[lang-holiday-presidents-2020],&nbsp;February 17,17 de Febrero,2月17日
-/services/state-california-employee-holidays,[lang-holiday-chavez-2020],&nbsp;March 31,31 de Marzo,3月31日
-/services/state-california-employee-holidays,[lang-holiday-memorial-2020],&nbsp;May 25,25 de Mayo,5月25日
-/services/state-california-employee-holidays,[lang-holiday-independence-2020],&nbsp;July 4,4 de Julio,7月4日
-/services/state-california-employee-holidays,[lang-holiday-labor-2020],&nbsp;September 7,7 de Septiembre,9月7日
-/services/state-california-employee-holidays,[lang-holiday-veterans-2020],&nbsp;November 11,11 de Noviembre,11月11日
-/services/state-california-employee-holidays,[lang-holiday-thanksgiving-2020],&nbsp;November 26,26 de Noviembre,11月26日
-/services/state-california-employee-holidays,[lang-holiday-dayafterthanks-2020],&nbsp;November 27,27 de Noviembre,11月27日
-/services/state-california-employee-holidays,[lang-holiday-xmas-2020],&nbsp;December 25,25 de Diciembre,12月25日
-/services/state-california-employee-holidays,[lang-holiday-newyears-2021],&nbsp;January 1,1 de Enero,1月1日
-/services/state-california-employee-holidays,[lang-holiday-mlk-2021],&nbsp;January 20,20 de Enero,1月20日
-/services/state-california-employee-holidays,[lang-holiday-presidents-2021],&nbsp;February 17,17 de Febrero,2月17日
-/services/state-california-employee-holidays,[lang-holiday-chavez-2021],&nbsp;March 31,31 de Marzo,3月31日
-/services/state-california-employee-holidays,[lang-holiday-memorial-2021],&nbsp;May 31,31 de Mayo,5月31日
-/services/state-california-employee-holidays,[lang-holiday-independence-2021],&nbsp;July 4,4 de Julio,7月4日
-/services/state-california-employee-holidays,[lang-holiday-labor-2021],&nbsp;September 6,6 de Septiembre,9月6日
-/services/state-california-employee-holidays,[lang-holiday-veterans-2021],&nbsp;November 11,11 de Noviembre,11月11日
-/services/state-california-employee-holidays,[lang-holiday-thanksgiving-2021],&nbsp;November 25,25 de Noviembre,11月25日
-/services/state-california-employee-holidays,[lang-holiday-dayafterthanks-2021],&nbsp;November 26,26 de Noviembre,11月26日
-/services/state-california-employee-holidays,[lang-holiday-xmas-2021],&nbsp;December 25,25 de Diciembre,12月25日
 /services/request-birth-certificate,,Request a birth certificate,Solicitar un certificado de nacimiento,申请出生证明
 /services/request-birth-certificate,,Request a birth certificate - Welcome to Alpha.CA.gov,Solicitar un certificado de nacimiento - Bienvenido a Alpha.CA.gov,申请出生证明 - 欢迎Alpha.CA.gov
 /services/request-birth-certificate,,"Request a California birth certificate in person, by mail, or online.","Solicitar un certificado de nacimiento en persona, por correo, o por internet",申请出生证的人，通过邮件，或在线
@@ -189,14 +148,11 @@ path,token,en,es,zh
 /services/hire-licensed-contractor-home-improvements,,Follow these suggested steps to make home improvements the safe way and protect your home and your money.,Siga estos pasos sugeridos para que las mejoras en su hogar sean de una manera segura y a la vez proteja su hogar y su dinero.,请按照以下步骤建议改善住房的安全，并保护您的家庭的时间和金钱。
 /services/hire-licensed-contractor-home-improvements,,Steps to hire a licensed contractor,Pasos para contratar a un contratista con licencia,步骤聘请授权的合同
 /services/hire-licensed-contractor-home-improvements,,Decide what type of contractor you need,Decida qué tipo de contratista necesita,决定什么类型的承包商需求
-/services/hire-licensed-contractor-home-improvements,,"<p><strong>General Engineering Contractors</strong> and <strong>General Building Contractors</strong> usually manage subcontractors for a job.</p><p><strong>Specialty Contractors</strong> are often hired to do a single job, such as roofing or plumbing.</p>","<p><STRONG> Los contratistas de ingeniería general </STRONG> y <STRONG> los contratistas generales de construcción </STRONG> usualmente supervisan proyectos y dirigen trabajos de subcontratistas.</p><p><STRONG> Contratistas especializados </STRONG> a veces son contratados para hacer un solo trabajo, como techos o plomería.</p>",<P> <STRONG>承包商一般工程</ strong>和<strong>常规施工的承包商</ STRONG>通常兼管项目和分包商的直接工作。</ p> <p> <STRONG>专门承包商< / STRONG>有时被雇用来执行一项工作，如屋顶或管道。</ p>
+/services/hire-licensed-contractor-home-improvements,,"<p><strong>General Engineering Contractors</strong> and <strong>General Building Contractors</strong> usually manage subcontractors for a job.</p><p><strong>Specialty Contractors</strong> are often hired to do a single job, such as roofing or plumbing.</p>","<p><strong> Los contratistas de ingeniería general </strong> y <strong> los contratistas generales de construcción </strong> usualmente supervisan proyectos y dirigen trabajos de subcontratistas.</p><p><strong> Contratistas especializados </strong> a veces son contratados para hacer un solo trabajo, como techos o plomería.</p>",<p> <strong>承包商一般工程</ strong>和<strong>常规施工的承包商</strong>通常兼管项目和分包商的直接工作。</ p> <p> <strong>专门承包商< /strong>有时被雇用来执行一项工作，如屋顶或管道。</ p>
 /services/hire-licensed-contractor-home-improvements,,Choose the type of contractor you need,Elija el tipo de contratista que necesite,选择承包商的类型，你需要
 /services/hire-licensed-contractor-home-improvements,,Check if you need a building permit,Compruebe si necesita un permiso de construcción,检查您是否需要建筑许可证
 /services/hire-licensed-contractor-home-improvements,,"You must get a building permit from your local building department for new construction, remodeling, or repairs.","Debe obtener un permiso de construcción de su departamento de construcción local para nuevas construcciones, remodelaciones y reparaciones.",您必须向当地建设部门进行新的建设取得建筑许可证，改造和维修。
 /services/hire-licensed-contractor-home-improvements,,Check with your local building department,Consulte con su departamento de construcción local,请与当地建设部门
-/services/hire-licensed-contractor-home-improvements,,Find at least three licensed contractors,Compare al menos tres contratistas con licencia,比较到至少三个持牌承包商
-/services/hire-licensed-contractor-home-improvements,,Ask friends and family for contractors they'd recommend.,Pregúntele a amigos y familiares si tienen contratistas que recomienden,让家人和朋友，如果他们有谁推荐的承包商
-/services/hire-licensed-contractor-home-improvements,,"Search online and read reviews, but consider the source.","Busque por internet que commentarios otros tienen acerca del contratista, pero a la vez, asegúrese de que el sitio de internet sea legítimo.",看看网上有关于承包其他意见，但在同一时间，确保该网站是合法的。
 /services/hire-licensed-contractor-home-improvements,,"For repairs, your homeowners insurance might cover the cost and suggest contractors for you.","Si es dueño de su casa, su cobertura de seguro de vivienda podría cubrir el costo y conseguir contratistas por usted.",如果你拥有你的家，你的房屋保险覆盖范围可以覆盖成本承办，并得到你。
 /services/hire-licensed-contractor-home-improvements,,Find licensed contractors in your city,Encuentre contratistas con licencia en su ciudad,查找您所在城市承办许可
 /services/hire-licensed-contractor-home-improvements,,Look up their licenses,Verifique la licencia de su contratista,检查您的承包商执照
@@ -204,9 +160,7 @@ path,token,en,es,zh
 /services/hire-licensed-contractor-home-improvements,,"To look up their licenses, you could:","Para verificar la licencia de su contratista, podría:",要检查你的承包商的许可，您可以：
 /services/hire-licensed-contractor-home-improvements,,Call (800) 321-2752,Llamar a (800) 321-2753,电话（800）321-2753
 /services/hire-licensed-contractor-home-improvements,,Check your contractors' licenses online,Revise la licencias de sus contratistas por internet,检查您的承包商在线许可
-/services/hire-licensed-contractor-home-improvements,,Get at least three price estimates in writing,Obtenga al menos tres precios estimados por escrito,得到至少三种价格估计写作
 /services/hire-licensed-contractor-home-improvements,,Compare your contractors' costs for the same project.,Compare los tres estimados y costos proveídos por el mismo proyecto.,比较三项费用估计和由同一项目提供。
-/services/hire-licensed-contractor-home-improvements,,Beware of a price estimate that's much lower than the others. They may do the job with cheap materials or poor quality of work.,Tenga cuidado con estimaciones que sean mucho más bajos que los demás. Esto puede implicar que le podrían hacer el trabajo con materiales baratos o mala calidad.,当心估计比别人低得多。这可能意味着你可以用廉价的材料或质量差的做的工作。
 /services/hire-licensed-contractor-home-improvements,,Ask your contractor to share their insurance,Pídele a su contratista prueba de seguro,问问你的承包商保险证明
 /services/hire-licensed-contractor-home-improvements,,You might be held responsible for workers' injuries if your contractor doesn't have the right insurance.,Usted podría ser responsable de las heridas de los trabajadores si su contratista no tiene el seguro correcto.,你可以负责工人的伤害，如果你的承包商没有正确的保险。
 /services/hire-licensed-contractor-home-improvements,,Ask them to share the name of their insurance carrier or copies of both their:,Pídales que compartan el nombre de su compañía de seguros o copias de su:,让他们分享您的保险公司或您的副本名称：
@@ -216,18 +170,12 @@ path,token,en,es,zh
 /services/hire-licensed-contractor-home-improvements,,Confirm their contact information,Confirme su información de contacto,确认您的联系信息
 /services/hire-licensed-contractor-home-improvements,,"Make sure your contractor has a current business address and phone number. If their work needs repair, you'll want to be able to find them after you've paid the last bill.","Asegúrese que su contratista tenga una dirección comercial y un número de teléfono válido. Así si su trabajo necesita reparos después que el proyecto haya terminado, usted ya tendrá información de contacto después de haber pagado la última factura.",请确保你的承包商有商务地址和有效的电话号码。因此，如果该项目建成后，你的工作需要修理，您已经将联系人信息，您所支付的最后一笔之后。
 /services/hire-licensed-contractor-home-improvements,,Contact their references,Póngase en contacto con las referencias del contratista,联系承包商的引用
-/services/hire-licensed-contractor-home-improvements,,Ask your contractor for the contact information of their former customers.,Pregúntele a su contratista por la información de contacto de sus clientes anteriores. Esto le ayudará a entender la calidad del trabajo de su contratista.,问问你的承包商自己以前的客户的联系信息。这将帮助你了解你的工作承包商的质量。
-/services/hire-licensed-contractor-home-improvements,,"Then, ask those customers if they were happy with your contractor's project. And ask to see pictures, if possible. This will help you understand the quality of your contractor's work.","Póngase en contacto con esos clientes para preguntar si estaban satisfechos con el proyecto de su contratista. Pida ver fotos, si es posible.",联系这些客户，询问他们是否用其承包的草案感到满意。要求看照片，如果可能的话。
-/services/hire-licensed-contractor-home-improvements,,Ask to see your contractor's pocket license,Pida ver la licencia de bolsillo de su contratista,要求看他的承包商的许可证口袋
-/services/hire-licensed-contractor-home-improvements,,"When your contractor comes to your house, ask to see a copy of their pocket license. Compare it to their driver's license or other photo ID.","Cuando el contratista venga a su casa, pida que le muestre una copia de su licencia de tamaño de bolsillo. Compárelo con su licencia de conducir u otra identificación con foto.",当承包商来到你的家，请展现你的许可口袋大小的副本。与你的驾驶执照或其他带照片证件进行比较。
-/services/hire-licensed-contractor-home-improvements,,This helps you to be extra sure that your contractor is the right person.,Esto le ayuda a estar más seguro de que su contratista es la persona correcta.,这有助于你更加确保您的承包商是合适的人选。
 /services/hire-licensed-contractor-home-improvements,,Sign a contract,Firme un buen contrato,签好合同
 /services/hire-licensed-contractor-home-improvements,,"A good contract includes how and when the work will be done, the materials used, and the total cost. It will protect you if you have a disagreement with your contractor.","Un buen contrato debe incluir cómo y cuándo se realizará el trabajo, los materiales utilizados y el costo total. Esto le protegerá si tiene un desacuerdo con su contratista.",好的合同应该包括如何以及何时工作将完成，使用的材料和总成本。如果你有你的承包商分歧这将保护你。
 /services/hire-licensed-contractor-home-improvements,,What to look for in your contract,Qué buscar en su contrato,如何查找在你的合同
 /services/hire-licensed-contractor-home-improvements,,"Pay no more than $1,000 or 10 percent down, whichever is less","No pague más de $1,000 o el 10% de la cantidad total en su depósito. Escoja la cantidad que sea menos","不支付超过$ 1,000或存款总额的10％。选择量少"
 /services/hire-licensed-contractor-home-improvements,,"By law, a contractor can't charge you a downpayment of more than $1,000 or 10 percent of your total, whichever is less.","Por ley, un contratista no le puede cobrar un depósito que sobresalga $1,000 o 10% de la cantidad total que costará el proyecto. Por ejemplo, si el proyecto le costará $5,000, el contratista no le puede requerir que pague $1,000.00 de depósito, ya que usted puede elegir darle $500.00 (10 por ciento de $5,000) por ser la cantidad más baja.","根据法律规定，承包商可以不收取突出$ 1,000或总金额将花费项目的10％的定金。例如，如果该项目将耗资$ 5,000，承包人不得将要求您支付$ 1,000.00定金，你可以选择给$ 500.00（$ 5,000 10％）用于为最低量。"
-/services/hire-licensed-contractor-home-improvements,,"And to protect your money, never pay in cash.","Y para proteger su dinero, nunca pague en efectivo, ya que, si hay algún desacuerdo, usted necesitará prueba de los pagos que hizo.",并保护他们的钱，从来没有支付现金，因为如果有任何异议，您将需要作出的付款证明。
-,,Apply for disability insurance benefits,Solicitar beneficios por incapacidad,申请伤残抚恤金
+/apply-for-disability-insurance-benefits,,Apply for disability insurance benefits,Solicitar beneficios por incapacidad,申请伤残抚恤金
 /apply-for-disability-insurance-benefits,,Apply for disability insurance benefits - Alpha.CA.gov,Solicitar beneficios por incapacidad - Alpha.CA.gov,申请伤残津贴 -  Alpha.CA.gov
 /apply-for-disability-insurance-benefits,,Follow these steps to apply for disability insurance benefits.,Siga estos pasos para solicitar el Seguro de Incapacidad (SDI) del Estado.,请按照以下步骤申请国家残疾保险（SDI）。
 /apply-for-disability-insurance-benefits,,Steps to get disability insurance benefits,Pasos para obtener beneficios de Seguro de Incapacidad (SDI) del Estado,步骤，以取得国家从残疾保险（SDI）的好处
@@ -289,7 +237,7 @@ path,token,en,es,zh
 /apply-for-cal-grant,,Attend or plan to attend an,Asistir a un,参加
 /apply-for-cal-grant,,Not already have a bachelor's or professional degree,No haber obtenido un título universitario o profesional de 4 años ,由于没有获得大学专业学位或4年
 /apply-for-cal-grant,,Have U.S. citizenship,Ser ciudadano estadounidense,是美国公民
-/apply-for-cal-grant,,<strong>or</strong> be ,<STRONG>o</STRONG> ser,<strong>或</ STRONG>是
+/apply-for-cal-grant,,<strong>or</strong> be ,<strong>o</strong> ser,<strong>或</strong>是
 /apply-for-cal-grant,,eligible for federal student aid,elegible para ayuda financiera del gobierno,资格获得政府的财政援助
 /apply-for-cal-grant,,eligible for AB540,o un estudiante elegible para el programa AB540,或符合条件的学生的程序AB540
 /apply-for-cal-grant,,Need financial help to pay for your college's tuition,Necesitar ayuda financiera para pagar la matrícula de su universidad,需要财政援助，以交学费贵校
@@ -307,7 +255,7 @@ path,token,en,es,zh
 /apply-for-cal-grant/step-1,,Follow these steps to apply for a Cal Grant. It’s money for college you don’t have to pay back.,Siga estos pasos para solicitar una beca Cal Grant. Es dinero para la universidad que usted no tiene que pagar.,请按照以下步骤申请加州拨款。这是大学学费，你不必付费。
 /apply-for-cal-grant/step-1,,"Deadline to apply: Monday, March 2, 2020, 11:59 p.m.","Fecha límite para solicitar: Lunes, 2 de marzo de 2020, 11:59 p.m.",申请截止日期：星期一2020年3月2日晚上11:59
 /apply-for-cal-grant/step-1,,"Apply for financial aid, if you haven't already","Presentar una solicitud para ayuda financiera, si no lo ha hecho ",申请财政援助，如果你还没有做
-/apply-for-cal-grant/step-1,,"There are two ways to apply for financial aid that can lead to a Cal Grant. Submit a FAFSA <em>or</em> CADAA form, if you haven't already.","Hay dos maneras de solicitar ayuda financiera que puede conducir a una beca Cal Grant. Presentar un solicitud de FAFSA <EM>o</EM> CADAA, si no lo ha hecho.",有申请财政援助，可能导致一个CAL授权两种方式。提交FAFSA <EM>或</ EM> Cadaa，如果你还没有完成。
+/apply-for-cal-grant/step-1,,"There are two ways to apply for financial aid that can lead to a Cal Grant. Submit a FAFSA <em>or</em> CADAA form, if you haven't already.","Hay dos maneras de solicitar ayuda financiera que puede conducir a una beca Cal Grant. Presentar un solicitud de FAFSA <EM>o</EM> CADAA, si no lo ha hecho.",有申请财政援助，可能导致一个CAL授权两种方式。提交FAFSA <EM>或</ em>的Cadaa，如果你还没有完成。
 /apply-for-cal-grant/step-1,,Apply for the Free Application for Federal Student Aid (FAFSA) if you:,Aplicar para la Solicitud Gratuita de Ayuda Federal para Estudiantes (FAFSA) si:,申请是否免费申请联邦学生援助（FAFSA）：
 /apply-for-cal-grant/step-1,,Have U.S. Citizenship,Tienen la ciudadanía de EE.UU.,他们拥有美国国籍
 /apply-for-cal-grant/step-1,,are a Permanent Resident,es un Residente Permanente,这是一个永久居民
@@ -379,7 +327,7 @@ path,token,en,es,zh
 /check-lane-closures,,"Sorry, we can't find that location. Please enter a valid location in California.","Lo sentimos, no podemos encontrar ese lugar. Por favor, introduzca una ubicación válida en California.",很抱歉，我们无法找到那个地方。请在加利福尼亚州输入有效的位置。
 /check-lane-closures,,What's your starting location?,¿Cuál es el punto de partida?,要点是什么？
 /check-lane-closures,,Please enter a starting location in California:,"Por favor, introduzca una ubicación de inicio en California:",请进入加州的开始位置：
-/check-lane-closures,[lang-Enter],Enter,Entrar,进入
+/check-lane-closures,,Check lane closures,Comprobar los cierres de carriles,检查车道关闭
 /,,Check lane closures for your trip,Compruebe el cierre de carriles para viajar,检查车道行驶关闭
 /news,,"Sorry, we can't find that location. Please enter a valid location in California.","Lo sentimos, no podemos encontrar ese lugar. Por favor, introduzca una ubicación válida en California.",很抱歉，我们无法找到那个地方。请在加利福尼亚州输入有效的位置。
 /news,,"Sorry, we can only show road conditions in California. Please enter a California location.","En este momento, sólo podemos mostrar condiciones de la carretera en California. Por favor, introduzca una ubicación de California.",在这个时候，我们只能显示在加利福尼亚州的道路状况。请进入加州的位置。
@@ -395,7 +343,7 @@ path,token,en,es,zh
 /find-minimum-wage-your-city,,Please enter a city or zip code in California.,Por favor introduzca la ciudad o código postal en California:,请进入加州城市或邮政编码：
 /find-minimum-wage-your-city,,Find minimum wage,Encuentre el salario minimo,找到最低工资
 /find-minimum-wage-your-city,,California minimum wage in 2020,Salario mínimo de California en 2020,在2020年加利福尼亚州的最低工资
-/find-minimum-wage-your-city,,Minimum wage depends on the city where you work. Some cities have the same minimum wage as the State.,El salario mínimo depende de la ciudad donde trabaja. Algunas ciudades tienen el mismo salario mínimo que el Estado de California.,最低工资取决于他工作的城市。一些城市具有相同最低工资标准为加利福尼亚州。
+/find-minimum-wage-your-city,,Minimum wage depends on the city where you work. Some cities have the same minimum wage as the State.,El salario mínimo depende de la ciudad donde trabaja. Algunas ciudades tienen el mismo salario mínimo que el Estado de California.,最低工资取决于他工作的城市。一些城市具有相同的最低工资标准为加利福尼亚州。
 /find-minimum-wage-your-city,,Employers with 25 or fewer employees,Empleadores con 25 o menos empleados,有25名或更少的员工的雇主
 /find-minimum-wage-your-city,,Employers with 26 or more employees,Empleadores con 26 o más empleados,有26名以上雇员的雇主
 /find-minimum-wage-your-city,,$12/hour*,$12/hora*,$ 12 /小时*
@@ -440,6 +388,7 @@ path,token,en,es,zh
 /state-california-employee-holidays,,1 personal holiday,Un día libre,一天
 /state-california-employee-holidays,,1 holiday credit (8 hours),Un crédito de vacaciones (8 horas),一个长假信贷（8小时）
 /state-california-employee-holidays,,"July 1, 2020, to June 30, 2021",Entre el 1 de julio de 2020 a 31 de junio de 2021,与2020年7月1日至31月2021
+/state-california-employee-holidays,,"July 1, 2021, to June 30, 2022",Entre el 1 de julio de 2021 a 31 de junio de 2022,与2021年7月1日至31月2022
 /state-california-employee-holidays,,More details about holidays,Más información sobre días festivos del Estado,状态节假日更多信息
 /state-california-employee-holidays,,Weekend holidays,Días festivos en fines de semana,在周末假期
 /state-california-employee-holidays,,"When a holiday is on a Saturday, most employees get one holiday credit (eight hours of leave).","Cuando un día festivo cae en un sábado, la mayoría de empleados reciben un crédito de vacaciones (8 horas de permiso laboral).",当公众假期适逢星期六，大多数员工获得休假信贷（8小时工作证）。
@@ -453,46 +402,6 @@ path,token,en,es,zh
 /state-california-employee-holidays,,holiday credit,Crédito de vacaciones,度假信贷
 /state-california-employee-holidays,,2020 holidays,Días festivos de 2020,2020和节假日
 /state-california-employee-holidays,,2021 holidays,Días festivos de 2021,2021和节假日
-/state-california-employee-holidays,,Sunday,Domingo,星期天
-/state-california-employee-holidays,,Monday,Lunes,星期一
-/state-california-employee-holidays,,Tuesday,Martes,星期二
-/state-california-employee-holidays,,Wednesday,Miércoles,星期三
-/state-california-employee-holidays,,Thursday,Jueves,星期四
-/state-california-employee-holidays,,Friday,Viernes,星期五
-/state-california-employee-holidays,,Saturday,Sábado,星期六
-/state-california-employee-holidays,[lang-holiday-newyears],New Year's Day,Año Nuevo,新年
-/state-california-employee-holidays,[lang-holiday-mlk],Martin Luther King Jr. Day,Día de Martin Luther King Jr.,马丁·路德·金
-/state-california-employee-holidays,[lang-holiday-presidents],Presidents' Day,Día de los Presidentes,总统日
-/state-california-employee-holidays,[lang-holiday-chavez],Cesar Chavez Day,Día de Cesar Chavez,塞萨尔·查韦斯日
-/state-california-employee-holidays,[lang-holiday-memorial],Memorial Day,Día de la Conmemoración de los Caídos,阵亡将士
-/state-california-employee-holidays,[lang-holiday-independence],Independence Day,Día de la Independencia,独立日
-/state-california-employee-holidays,[lang-holiday-labor],Labor Day,Día del Trabajo,劳动节
-/state-california-employee-holidays,[lang-holiday-veterans],Veterans Day,Día de los Veteranos,退伍军人节
-/state-california-employee-holidays,[lang-holiday-thanksgiving],Thanksgiving Day,Día de Acción de Gracias,感恩
-/state-california-employee-holidays,[lang-holiday-dayafterthanks],Day after Thanksgiving,Día después del Día de Acción de Gracias,感恩节后的第二天
-/state-california-employee-holidays,[lang-holiday-xmas],Christmas Day,Navidad,圣诞节
-/state-california-employee-holidays,[lang-holiday-newyears-2020],&nbsp;January 1,1 de Enero,1月1日
-/state-california-employee-holidays,[lang-holiday-mlk-2020],&nbsp;January 20,20 de Enero,1月20日
-/state-california-employee-holidays,[lang-holiday-presidents-2020],&nbsp;February 17,17 de Febrero,2月17日
-/state-california-employee-holidays,[lang-holiday-chavez-2020],&nbsp;March 31,31 de Marzo,3月31日
-/state-california-employee-holidays,[lang-holiday-memorial-2020],&nbsp;May 25,25 de Mayo,5月25日
-/state-california-employee-holidays,[lang-holiday-independence-2020],&nbsp;July 4,4 de Julio,7月4日
-/state-california-employee-holidays,[lang-holiday-labor-2020],&nbsp;September 7,7 de Septiembre,9月7日
-/state-california-employee-holidays,[lang-holiday-veterans-2020],&nbsp;November 11,11 de Noviembre,11月11日
-/state-california-employee-holidays,[lang-holiday-thanksgiving-2020],&nbsp;November 26,26 de Noviembre,11月26日
-/state-california-employee-holidays,[lang-holiday-dayafterthanks-2020],&nbsp;November 27,27 de Noviembre,11月27日
-/state-california-employee-holidays,[lang-holiday-xmas-2020],&nbsp;December 25,25 de Diciembre,12月25日
-/state-california-employee-holidays,[lang-holiday-newyears-2021],&nbsp;January 1,1 de Enero,1月1日
-/state-california-employee-holidays,[lang-holiday-mlk-2021],&nbsp;January 20,20 de Enero,1月20日
-/state-california-employee-holidays,[lang-holiday-presidents-2021],&nbsp;February 17,17 de Febrero,2月17日
-/state-california-employee-holidays,[lang-holiday-chavez-2021],&nbsp;March 31,31 de Marzo,3月31日
-/state-california-employee-holidays,[lang-holiday-memorial-2021],&nbsp;May 31,31 de Mayo,5月31日
-/state-california-employee-holidays,[lang-holiday-independence-2021],&nbsp;July 4,4 de Julio,7月4日
-/state-california-employee-holidays,[lang-holiday-labor-2021],&nbsp;September 6,6 de Septiembre,9月6日
-/state-california-employee-holidays,[lang-holiday-veterans-2021],&nbsp;November 11,11 de Noviembre,11月11日
-/state-california-employee-holidays,[lang-holiday-thanksgiving-2021],&nbsp;November 25,25 de Noviembre,11月25日
-/state-california-employee-holidays,[lang-holiday-dayafterthanks-2021],&nbsp;November 26,26 de Noviembre,11月26日
-/state-california-employee-holidays,[lang-holiday-xmas-2021],&nbsp;December 25,25 de Diciembre,12月25日
 /request-birth-certificate,,Request a birth certificate,Solicitar un certificado de nacimiento,申请出生证明
 /request-birth-certificate,,Request a birth certificate - Welcome to Alpha.CA.gov,Solicitar un certificado de nacimiento - Bienvenido a Alpha.CA.gov,申请出生证明 - 欢迎Alpha.CA.gov
 /request-birth-certificate,,"Request a California birth certificate in person, by mail, or online.","Solicitar un certificado de nacimiento en persona, por correo, o por internet",申请出生证的人，通过邮件，或在线
@@ -521,7 +430,7 @@ path,token,en,es,zh
 /hire-licensed-contractor-home-improvements,,Follow these suggested steps to make home improvements the safe way and protect your home and your money.,Siga estos pasos sugeridos para que las mejoras en su hogar sean de una manera segura y a la vez proteja su hogar y su dinero.,请按照以下步骤建议改善住房的安全，并保护您的家庭的时间和金钱。
 /hire-licensed-contractor-home-improvements,,Steps to hire a licensed contractor,Pasos para contratar a un contratista con licencia,步骤聘请授权的合同
 /hire-licensed-contractor-home-improvements,,Decide what type of contractor you need,Decida qué tipo de contratista necesita,决定什么类型的承包商需求
-/hire-licensed-contractor-home-improvements,,"<p><strong>General Engineering Contractors</strong> and <strong>General Building Contractors</strong> usually manage subcontractors for a job.</p><p><strong>Specialty Contractors</strong> are often hired to do a single job, such as roofing or plumbing.</p>","<p><STRONG> Los contratistas de ingeniería general </STRONG> y <STRONG> los contratistas generales de construcción </STRONG> usualmente supervisan proyectos y dirigen trabajos de subcontratistas.</p><p><STRONG> Contratistas especializados </STRONG> a veces son contratados para hacer un solo trabajo, como techos o plomería.</p>",<P> <STRONG>承包商一般工程</ strong>和<strong>常规施工的承包商</ STRONG>通常兼管项目和分包商的直接工作。</ p> <p> <STRONG>专门承包商< / STRONG>有时被雇用来执行一项工作，如屋顶或管道。</ p>
+/hire-licensed-contractor-home-improvements,,"<p><strong>General Engineering Contractors</strong> and <strong>General Building Contractors</strong> usually manage subcontractors for a job.</p><p><strong>Specialty Contractors</strong> are often hired to do a single job, such as roofing or plumbing.</p>","<P><STRONG> Los contratistas de ingeniería general </STRONG> y <STRONG> los contratistas generales de construcción </STRONG> usualmente supervisan proyectos y dirigen trabajos de subcontratistas.</P><P><STRONG> Contratistas especializados </STRONG> a veces son contratados para hacer un solo trabajo, como techos o plomería.</P>",<P> <STRONG>承包商通用工程</ STRONG>和<STRONG>施工总承包</ STRONG>通常兼管项目和分包商的直接工作。</ P>专业<P> <STRONG>承包商< / STRONG>它们有时雇用做一个作业，如屋顶或管道。</ P>
 /hire-licensed-contractor-home-improvements,,Choose the type of contractor you need,Elija el tipo de contratista que necesite,选择承包商的类型，你需要
 /hire-licensed-contractor-home-improvements,,Check if you need a building permit,Compruebe si necesita un permiso de construcción,检查您是否需要建筑许可证
 /hire-licensed-contractor-home-improvements,,"You must get a building permit from your local building department for new construction, remodeling, or repairs.","Debe obtener un permiso de construcción de su departamento de construcción local para nuevas construcciones, remodelaciones y reparaciones.",您必须向当地建设部门进行新的建设取得建筑许可证，改造和维修。
@@ -552,10 +461,21 @@ path,token,en,es,zh
 /hire-licensed-contractor-home-improvements,,"Then, ask those customers if they were happy with your contractor's project. And ask to see pictures, if possible. This will help you understand the quality of your contractor's work.","Póngase en contacto con esos clientes para preguntar si estaban satisfechos con el proyecto de su contratista. Pida ver fotos, si es posible.",联系这些客户，询问他们是否用其承包的草案感到满意。要求看照片，如果可能的话。
 /hire-licensed-contractor-home-improvements,,Ask to see your contractor's pocket license,Pida ver la licencia de bolsillo de su contratista,要求看他的承包商的许可证口袋
 /hire-licensed-contractor-home-improvements,,"When your contractor comes to your house, ask to see a copy of their pocket license. Compare it to their driver's license or other photo ID.","Cuando el contratista venga a su casa, pida que le muestre una copia de su licencia de tamaño de bolsillo. Compárelo con su licencia de conducir u otra identificación con foto.",当承包商来到你的家，请展现你的许可口袋大小的副本。与你的驾驶执照或其他带照片证件进行比较。
-/hire-licensed-contractor-home-improvements,,This helps you to be extra sure that your contractor is the right person.,Esto le ayuda a estar más seguro de que su contratista es la persona correcta.,这有助于你更加确保您的承包商是合适的人选。
 /hire-licensed-contractor-home-improvements,,Sign a contract,Firme un buen contrato,签好合同
 /hire-licensed-contractor-home-improvements,,"A good contract includes how and when the work will be done, the materials used, and the total cost. It will protect you if you have a disagreement with your contractor.","Un buen contrato debe incluir cómo y cuándo se realizará el trabajo, los materiales utilizados y el costo total. Esto le protegerá si tiene un desacuerdo con su contratista.",好的合同应该包括如何以及何时工作将完成，使用的材料和总成本。如果你有你的承包商分歧这将保护你。
 /hire-licensed-contractor-home-improvements,,What to look for in your contract,Qué buscar en su contrato,如何查找在你的合同
 /hire-licensed-contractor-home-improvements,,"Pay no more than $1,000 or 10 percent down, whichever is less","No pague más de $1,000 o el 10% de la cantidad total en su depósito. Escoja la cantidad que sea menos","不支付超过$ 1,000或存款总额的10％。选择量少"
 /hire-licensed-contractor-home-improvements,,"By law, a contractor can't charge you a downpayment of more than $1,000 or 10 percent of your total, whichever is less.","Por ley, un contratista no le puede cobrar un depósito que sobresalga $1,000 o 10% de la cantidad total que costará el proyecto. Por ejemplo, si el proyecto le costará $5,000, el contratista no le puede requerir que pague $1,000.00 de depósito, ya que usted puede elegir darle $500.00 (10 por ciento de $5,000) por ser la cantidad más baja.","根据法律规定，承包商可以不收取突出$ 1,000或总金额将花费项目的10％的定金。例如，如果该项目将耗资$ 5,000，承包人不得将要求您支付$ 1,000.00定金，你可以选择给$ 500.00（$ 5,000 10％）用于为最低量。"
 /hire-licensed-contractor-home-improvements,,"And to protect your money, never pay in cash.","Y para proteger su dinero, nunca pague en efectivo, ya que, si hay algún desacuerdo, usted necesitará prueba de los pagos que hizo.",并保护他们的钱，从来没有支付现金，因为如果有任何异议，您将需要作出的付款证明。
+/sign-up-for-local-emergency-alerts/,,Sign up for emergency alerts for your county in California,Inscribirse para recibir alertas de emergencia de su condado en California,注册接收紧急警报贵县在加利福尼亚州
+/sign-up-for-local-emergency-alerts/,,Sign up for local emergency alerts,Inscribirse para recibir alertas de emergencia locales,注册通知当地紧急
+/sign-up-for-local-emergency-alerts/,,Please enter your county or zip code,Introduzca su condado o código postal,输入您的县或邮政编码
+/sign-up-for-local-emergency-alerts/,,Type 2 or more characters for results,Tipo 2 o más caracteres de los resultados,类型2个或多个字符的结果
+/sign-up-for-local-emergency-alerts/,,Find alerts,Encuentra alertas,查找警报
+/sign-up-for-local-emergency-alerts/,,Please enter a county or zip code in California,"Por favor, introduzca un condado o código postal en California",请输入在加利福尼亚州的一个县或邮政编码
+/contact-us/,,Please enter the name of the agency you want to contact:,"Por favor, introduzca el nombre de la agencia que desea escribir:",请输入您想写入该机构的名称：
+/contact-us/home,,Contact us - Alpha.CA.gov,Contacto - Alpha.CA.gov,联系方式 -  Alpha.CA.gov
+/contact-us/results/,,Contact us - Alpha.CA.gov,Contacto - Alpha.CA.gov,联系方式 -  Alpha.CA.gov
+/find-shelter,,Find shelters near you,Encuentra refugios cerca de usted,找住处靠近你
+/find-shelter,,Search for shelters in every California county,Buscar refugios en todos los condados de California,搜索避难所在加州的每一个县
+/check-your-tap-water-quality,,Check your tap water quality,Compruebe la calidad del agua del grifo,检查自来水质量

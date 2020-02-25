@@ -57,7 +57,9 @@ export default function addListeners() {
   })
 }
 
-addListeners();
+if(document.querySelector('.destination-button')) {
+  addListeners();
+}
 
 function isThatInCali(coords) {
   let lat = coords[1];
@@ -150,7 +152,9 @@ function setupRoadConditions() {
   }
 }
 
-setupRoadConditions();
+if(document.querySelector('.destination-button')) {
+  setupRoadConditions();
+}
 
 function displayObs() {
   if(window.endCoords && window.startCoords) {
