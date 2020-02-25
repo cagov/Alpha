@@ -473,9 +473,41 @@ path,token,en,es,zh
 /sign-up-for-local-emergency-alerts/,,Type 2 or more characters for results,Tipo 2 o más caracteres de los resultados,类型2个或多个字符的结果
 /sign-up-for-local-emergency-alerts/,,Find alerts,Encuentra alertas,查找警报
 /sign-up-for-local-emergency-alerts/,,Please enter a county or zip code in California,"Por favor, introduzca un condado o código postal en California",请输入在加利福尼亚州的一个县或邮政编码
-/contact-us/,,Please enter the name of the agency you want to contact:,"Por favor, introduzca el nombre de la agencia que desea escribir:",请输入您想写入该机构的名称：
+/contact-us/,,Please enter the name of the agency you want to contact:,"Por favor, introduzca el nombre de la agencia con la que desea escribir:",请输入您想写入该机构的名称：
 /contact-us/home,,Contact us - Alpha.CA.gov,Contacto - Alpha.CA.gov,联系方式 -  Alpha.CA.gov
 /contact-us/results/,,Contact us - Alpha.CA.gov,Contacto - Alpha.CA.gov,联系方式 -  Alpha.CA.gov
 /find-shelter,,Find shelters near you,Encuentra refugios cerca de usted,找住处靠近你
 /find-shelter,,Search for shelters in every California county,Buscar refugios en todos los condados de California,搜索避难所在加州的每一个县
 /check-your-tap-water-quality,,Check your tap water quality,Compruebe la calidad del agua del grifo,检查自来水质量
+/apply-discounted-phone-service,,Apply for a discounted phone service (California LifeLine) - Alpha.CA.gov,Solicitar un servicio telefónico con descuento (California LifeLine) - Alpha.CA.gov,申请电话服务优惠（加州的LifeLine） -  Alpha.CA.gov
+/apply-discounted-phone-service,,"Follow these six steps to apply for California Lifeline, a discounted phone service.","Siga estos seis pasos para solicitar California Lifeline, un servicio telefónico con descuento.",按照这六个步骤申请加州生命线折扣电话服务。
+/apply-discounted-phone-service,,Apply for a discounted phone service,Solicitar un servicio telefónico con descuento,要求打折电话服务
+/apply-discounted-phone-service,,California LifeLine lowers the cost of your monthly bill for your cell or landline phone. This discount is for,California Lifeline reduce el costo de su factura mensual de su celular o teléfono fijo. Este descuento es para,加州的生命线，从您的手机或座机减少你每月账单的费用。这个折扣是
+/apply-discounted-phone-service,,A household is a group of people who live together and share income and expenses (even if they are not related to each other).,Un hogar es un grupo de personas que viven juntas y comparten los ingresos y gastos (incluso si no están relacionados entre sí).,一个家庭是一群人谁住在一起，共享收入和支出（即使它们是不相关的）。
+/apply-discounted-phone-service,,households,hogares,户
+/apply-discounted-phone-service,,that:,ese:,即：
+/apply-discounted-phone-service,,Get public assistance,Obtener asistencia pública,获取公共援助
+/apply-discounted-phone-service,,Or have an income below a certain amount,O tienen un ingreso por debajo de una cierta cantidad,或者，他们有低于一定数额的收入
+/apply-discounted-phone-service,,Steps to apply,Pasos para aplicar,步骤申请
+/apply-discounted-phone-service,,Show all,Mostrar todo,显示全部
+/apply-discounted-phone-service,,Hide all,Ocultar todo,隐藏所有
+/apply-discounted-phone-service,,Check if you can get a discount,Compruebe si se puede obtener un descuento,请检查您是否可以享受折扣
+/apply-discounted-phone-service,,Choose a phone company that offers discounts,Elija una compañía telefónica que ofrece descuentos,选择一家电话公司提供折扣
+/apply-discounted-phone-service,,Find a new phone company that offers a California LifeLine discount. Or check if your existing phone company offers a discount.,Encontrar una nueva compañía de teléfonos que ofrece un descuento de California LifeLine. O comprobar si su compañía telefónica existente ofrece un descuento.,寻找一个新的手机公司提供的加州命脉的折扣。或检查现有的电话公司提供的折扣。
+/apply-discounted-phone-service,,Find a phone company,Encontrar una empresa de telefonía,查找电话公司
+/apply-discounted-phone-service,,Contact your phone company,Póngase en contacto con su compañía telefónica,联系电话公司
+/apply-discounted-phone-service,,"Ask the phone company you chose to start your application for the California LifeLine program. They should tell you if you can get a discount and start the application process for you. Then, we'll send you a letter in the mail.","Pedir a la compañía de teléfono que escogió para iniciar la aplicación para el programa LifeLine de California. Deben decirle si usted puede conseguir un descuento y comenzar el proceso de solicitud para usted. A continuación, le enviaremos una carta en el correo.",询问电话公司选择推出针对加州生命线节目有关的应用。他们应该告诉你，如果你能得到的折扣和启动应用程序为您服务。然后，我们会向您发送的邮件的信。
+/apply-discounted-phone-service,,Read our pink letter in the mail,Lea nuestra carta de color rosa en el correo,请阅读我们的粉红色信件在邮寄
+/apply-discounted-phone-service,,"In three weeks, you should get a pink letter in the mail. Open it to find your application form.","En tres semanas, usted debe conseguir una carta de color rosa en el correo. Abrirlo para encontrar el formulario de solicitud.",三个星期后，你应该会在邮箱里粉红色的字母。打开它，找到申请表。
+/apply-discounted-phone-service,,"If you contacted your phone company but still haven’t gotten your application form in the mail, please","Si se puso en contacto con su compañía telefónica, pero todavía no ha recibido su formulario de solicitud en el correo, por favor",如果我在与你的电话公司取得了联系，但还没有收到您的申请表邮寄，请
+/apply-discounted-phone-service,,>contact us<,> Contacto <,>联系<
+/apply-discounted-phone-service,,Apply online or by mail,Aplicar en línea o por correo,在网上或通过邮寄申请
+/apply-discounted-phone-service,,Apply online,Aplica online,在线申请
+/apply-discounted-phone-service,,Apply by mail. Simply fill out and mail back the form inside your pink letter.,Aplicar por correo. Sólo hay que rellenar y enviar por correo el formulario dentro de la carta de color rosa.,通过邮件申请。这里只填写并邮寄信件粉里面的形式。
+/apply-discounted-phone-service,,Get our decision in the mail,Nuestra decisión en el correo,我们在邮件决定
+/apply-discounted-phone-service,,"We’ll send you a letter to let you know if you’re approved. If so, you’ll start getting a monthly discount from your phone company automatically.","Te enviaremos una carta para hacerle saber si usted es aprobado. Si es así, usted comienza a recibir un descuento mensual de su compañía de teléfono de forma automática.",我们会寄信给你，让你知道，如果你的批准。如果是这样，你就开始自动获得来自电话公司每月在减除。
+/apply-discounted-phone-service,,Renew in one year,Renovar en un año,续约一年
+/apply-discounted-phone-service,,"One year from your start date, we'll send you another pink letter in the mail asking you to renew your discount. Then, you can use your letter to renew by mail or","Un año desde la fecha de inicio, te enviaremos otra carta de color rosa en el correo que le pedirá que renueve su descuento. A continuación, puede utilizar su carta para renovar por correo o",从开始之日起一年，我们会派另一个粉红色信件在邮寄要求您更新您的折扣。然后你可以使用你的卡邮寄续约或
+/apply-discounted-phone-service,,>online<,> Línea <,>行<
+/apply-discounted-phone-service,,>Help<,> Ayuda <,>帮助<
+/apply-discounted-phone-service,,"If you need help,","Si necesitas ayuda,",如果您需要帮助，
