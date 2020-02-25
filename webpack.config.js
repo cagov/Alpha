@@ -24,7 +24,7 @@ const minificationOptions = {
   sortClassName: true,
   useShortDoctype: true
 };
-const excludedChunks = ["minwage", "food", "roads", "alerts", "contactus"];
+const excludedChunks = ["minwage", "food", "roads", "alerts", "contactus", "shelters"];
 
 //usage 
 //    excludeChunks: excludeChucksExcept("roads"),
