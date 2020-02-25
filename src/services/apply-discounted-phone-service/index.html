@@ -1,33 +1,19 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xml:lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Follow these six steps to apply for California Lifeline, a discounted phone service. ">
-  <meta name="author" content="Bootstrap, alpha.ca.gov team">
-  <meta name="generator" content="Hugo 0.61.0">
-  <title>Apply for a discounted phone service - Alpha.CA.gov</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="https://cwds.dev/docs/4.3/dist/css/bootstrap.css" rel="stylesheet">
-  <link href="https://cwds.dev/docs/4.3/assets/css/docs.css" rel="stylesheet" />
-  
-
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/apple-touch-icon.png"
-    sizes="180x180">
-  <link rel="icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/favicon-32x32.png" sizes="32x32"
-    type="image/png">
-  <link rel="icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/favicon-16x16.png" sizes="16x16"
-    type="image/png">
-
-  <link rel="mask-icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/safari-pinned-tab.svg" color="#1d1a16">
-  <link rel="icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/favicon.ico">
-  <meta name="msapplication-config" content="https://cwds.dev/docs/4.3/assets/img/favicons/browserconfig.xml">
-  <meta name="theme-color" content="#000000">
-  <link href="https://california.azureedge.net/cdt/statetemplate/6.0.0/css/cagov.font-only.min.css" rel="stylesheet" />
-
+    <%= require('html-loader!../../partials/meta-common.html') %>
+    <%= require('html-loader!../../partials/favicons.html') %>
+  	<meta name="description" content="Follow these six steps to apply for California Lifeline, a discounted phone service. ">
+	<title>Apply for a discounted phone service (California LifeLine) - Alpha.CA.gov</title>
+	<!-- Social media post -->
+    <meta property="og:image" content="/img/thumbnail.png">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:width" content="630">
+    <meta property="og:title" content="Apply for a discounted phone service (California LifeLine) - Alpha.CA.gov">
+    <meta property="og:description" content="Follow these six steps to apply for California Lifeline, a discounted phone service.">
+    <meta property="og:url" content="[code-url]">
+    <link rel="canonical" href="[code-url]" />
 </head>
 	
 <style>
@@ -105,25 +91,13 @@ label.custom-control-label {
 
 
 <body>
-  <link href="https://california.azureedge.net/cdt/statetemplate/6.0.0/css/cagov.font-only.min.css" rel="stylesheet" />
-  <div class="official">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <p>State of California</p>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <nav class="navbar navbar-inverse">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand navbar-left" href="/UX/">CA.gov <sup>(ALPHA)</sup></a>
-      </div>
-    </div>
-  </nav>
-
+<header>
+	<%= require('html-loader!../../partials/official.html') %>
+	<%= require('html-loader!../../partials/experiment-banner.html') %>
+	<%= require('html-loader!../../partials/navbar.html') %>
+</header>
+<main>
   <div class="container-fluid jumbotron">
     <div class="container">
       <div class="row">
@@ -159,12 +133,12 @@ label.custom-control-label {
                 <span class="step-interior">
                   <br>
                   <ul class="unstyled pt-2 pl-0">
-					  <li class="list-group-item unstyled no-border"><a class="action-link" href="/UX/who-can-get-discounted-phone-service/">Check if you can get a discount</a></li>
+					  <li class="list-group-item unstyled no-border"><a class="action-link" href="../who-can-get-discounted-phone-service/">Check if you can get a discount</a></li>
 					</ul>
                 </span>
               </div>
             </li>
-            <li class="list-group-item lead unstyled list-group-item-action">
+            <li class="list-group-item lead unstyled list-group-item-action" id="2">
               <button class="step-description">
                 <span class="list-number">2</span>
                 Choose a phone company that offers discounts
@@ -208,7 +182,7 @@ label.custom-control-label {
               </button><span class="show">Show</span><span class="hide">Hide</span>
               <div class="details"><span class="step-interior"><br>
 				  <ul class="unstyled pt-2 pl-0">
-                <li class="list-group-item unstyled no-border"><a class="action-link" href="/UX/apply-online-discounted-phone-service/">Apply online </a></li><br>
+                <li class="list-group-item unstyled no-border"><a class="action-link" href="../apply-online-discounted-phone-service/">Apply online </a></li><br>
 				    <span class="nested-and-or">or</span>
                   <li class="list-group-item unstyled no-border">Apply by mail. Simply fill out and mail back the form inside your pink letter. </li>
                 </ul>  
@@ -229,7 +203,7 @@ label.custom-control-label {
                  Renew in one year
               </button><span class="show">Show</span><span class="hide">Hide</span>
               <div class="details"><span class="step-interior"><br>
-		 <p>One year from your start date, we'll send you another pink letter in the mail asking you to renew your discount. Then, you can use your letter to renew by mail or <a href="/UX/apply-online-discounted-phone-service/">online</a>.</p> 
+		 <p>One year from your start date, we'll send you another pink letter in the mail asking you to renew your discount. Then, you can use your letter to renew by mail or <a href="../apply-online-discounted-phone-service/">online</a>.</p> 
                 </span></div>
             </li>
           </ul>
@@ -243,102 +217,13 @@ label.custom-control-label {
     </div>
   </div>
 
-<div class="footer alpha-footer">
-  <div class="container">
-    <div class="row">
-            <div class="col-md-12"> 
-<div class="col-md-12"><ul class="list-group list list-group-horizontal-lg flex-fill list-group-flush"><li class="list-group-item alpha-footer"><a href="/about/">About</a></li><li class="list-group-item alpha-footer"><a href="https://news.alpha.ca.gov/">News</a></li><li class="list-group-item alpha-footer"><a href="/feedback/">Feedback</a></li></ul><p class="text-secondary">Official California State Government Website</p></div>
-      </div>
-    </div>
-  </div>
-</div>
-<script nomodule src="/js/es5.js?cache=false" ></script>
-  <div class="alphabar">
-    <div class="container">
-      <p>This website is a <a href="https://medium.com/cadotgov">work in progress</a>.</p>
-    </div>
-  </div>
-  <script src="https://cagov.github.io/UX/dist/main.js" defer async></script>
 
-
+</main>	
+<footer>
+	<%= require('html-loader!../../partials/feedback.html') %>
+	<%= require('html-loader!../../partials/footer.html') %>
+	<%= require('html-loader!../../partials/alphabar.html') %>
+	<%= require('html-loader!../../partials/ga.html') %>
+</footer>
 </body>
-
-<script type="text/javascript">
-  (function() {  
-  
-  
-  if  (window.location.href.endsWith('#2') )
-      document.querySelectorAll('.list-group-item-action')
-        .forEach((x,i)=>{if (i==1) setTimeout(()=>x.click(),500)});
-    
-      
-  if  (window.location.href.endsWith('#4') )
-      document.querySelectorAll('.list-group-item-action')
-        .forEach((x,i)=>{if (i==3) setTimeout(()=>x.click(),500)});
-
-  
-    document.querySelectorAll('.show-all').forEach(x=>{
-      const is_close_button = x.classList.contains('d-none')
-
-      x.addEventListener('click',()=>{
-        let wait = 0
-        document.querySelectorAll(`.list-group-item-action${is_close_button?'.list-open':':not(.list-open)'}`)
-          .forEach(x=>setTimeout(()=>x.click(),50*wait++))
-    
-        document.querySelectorAll('.show-all').forEach(y=>y.classList.toggle('d-none'))
-      })
-    });
-
-    
-  })()
-
-//Tooltip support
-Array.prototype.forEach.call(document.querySelectorAll('.tooltip-button'), function(toggletip) {
-  toggletip.setAttribute('type', 'button')
-  toggletip.setAttribute('aria-label', 'Word Definition')
-
-  //wrap a container around the button
-  var container = document.createElement('span')
-  container.setAttribute('class', 'tooltip-container')
-  toggletip.parentNode.insertBefore(container,toggletip)
-  container.appendChild(toggletip)
-
-  // Create the live region
-  var liveRegion = document.createElement('span')
-  liveRegion.setAttribute('role', 'status')
-  
-  // Place the live region in the container
-  container.appendChild(liveRegion)
-  
-  // Get the message from the data-content element
-  var message = toggletip.getAttribute('data-tooltip-content')
-  
-   // Toggle the message
-   toggletip.addEventListener('click', function() {
-liveRegion.innerHTML = ''
-window.setTimeout(function() {
-  liveRegion.innerHTML = '<span class="tooltip-bubble">'+ message +'</span>'
-}, 100)
-  });
-
-  // Close on outside click
-  document.addEventListener('click', function (e) {
-    if (toggletip !== e.target) {
-      liveRegion.innerHTML = ''
-    }
-  });
-
-  // Remove toggletip on ESC
-  toggletip.addEventListener('keydown', function(e) {
-    if ((e.keyCode || e.which) === 27)
-    liveRegion.innerHTML = ''
-  });
-  
-  // Remove on blur
-  toggletip.addEventListener('blur', function (e) {
-    liveRegion.innerHTML = ''
-  })
-})
-
-</script>
 </html>

@@ -259,6 +259,26 @@ describe("local emergency alerts", () => {
 
 })
 
+describe("water-quality", () => {
+  test("water-quality", async () => {
+    await page.goto(hostname+'/check-your-tap-water-quality/')
+    await page.type(".mapboxgl-ctrl-geocoder--input", '1425 14th St, Sac')
+    await page.click('.mapboxgl-ctrl-geocoder--suggestion-title')
+
+  }, timeout)
+
+})
+
+
+describe("Apply or renew online for a discounted phone service", () => {
+  test("Apply or renew online for a discounted phone service", async () => {
+    await page.goto(hostname+'/apply-online-discounted-phone-service/')
+    await page.click('.action-link')
+   
+  }, timeout)
+
+})
+
 afterAll(() => {
   browser.close()
   server.close()

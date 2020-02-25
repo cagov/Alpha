@@ -24,7 +24,7 @@ const minificationOptions = {
   sortClassName: true,
   useShortDoctype: true
 };
-const excludedChunks = ["minwage", "food", "roads", "alerts", "contactus"];
+const excludedChunks = ["minwage", "food", "alerts", "contactus", "roads", "shelters", "water", "lifeline"];
 
 //usage 
 //    excludeChunks: excludeChucksExcept("roads"),
@@ -39,8 +39,11 @@ module.exports = {
     minwage: ["./src/js/minwage/index.js"],
     food: ["./src/js/foodbanks/index.js"],
     alerts: ["./src/js/alerts/index.js"],
-    contactus: ['./src/js/contactus/index.js'],    
-    roads: ["./src/js/roads/index.js"]
+    contactus: ['./src/js/contactus/index.js'],
+    roads: ["./src/js/roads/index.js"],
+    shelters: ["./src/js/shelters/index.js"],
+    water: ["./src/js/water/index.js"],
+    lifeline: ["./src/js/lifeline/index.js"]
   },
   optimization: {
     splitChunks: {
@@ -93,16 +96,12 @@ module.exports = {
       excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
-
-    /*
     new HtmlWebpackPlugin({
       filename: "en/apply-discounted-phone-service/index.html",
       template: "src/services/apply-discounted-phone-service/index.html",
-      excludeChunks: excludedChunks,
+      excludeChunks: excludeChucksExcept("lifeline"),
       minify: minificationOptions
     }), 
-  */
-
     new HtmlWebpackPlugin({
       filename: "en/apply-online-discounted-phone-service/index.html",
       template: "src/services/apply-online-discounted-phone-service/index.html",
@@ -113,7 +112,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "en/who-can-get-discounted-phone-service/index.html",
       template: "src/services/who-can-get-discounted-phone-service/index.html",
-      excludeChunks: excludedChunks,
+      excludeChunks: excludeChucksExcept("lifeline"),
       minify: minificationOptions
     }),
  
@@ -224,6 +223,18 @@ module.exports = {
       filename: "en/find-food-banks-near-you/index.html",
       template: "src/services/find-food-banks-near-you/index.html",
       excludeChunks: excludeChucksExcept("food"),
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: "en/find-shelter/index.html",
+      template: "src/services/find-shelter/index.html",
+      excludeChunks:excludeChucksExcept("shelters"),
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: "en/check-your-tap-water-quality/index.html",
+      template: "src/services/water/index.html",
+      excludeChunks: excludeChucksExcept("water"),
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
