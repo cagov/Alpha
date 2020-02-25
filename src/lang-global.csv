@@ -36,6 +36,8 @@ path,token,en,es,zh
 /,,Alpha.CA.gov - State of California,Alpha.CA.gov - Estado de California,Alpha.CA.gov  - 加利福尼亚州
 /,,We're making it easier to find and use government services and information in the State of California.,Estamos haciendo más fácil de buscar y usar servicios e información del gobierno.,我们更容易发现和使用信息和服务的政府。
 /,,Apply for a Cal Grant (college financial aid),Solicitar una beca Cal Grant (ayuda financiera para la universidad),申请加州格兰特（上大学助学金）
+/,,Contact us,Contáctenos,联系我们
+/,,Check if you can get a discounted phone service,Compruebe si se puede obtener un servicio telefónico con descuento,请检查您是否可以享受折扣电话服务
 ,,Apply for a Cal Grant,Solicitar una beca Cal Grant,申请加州格兰特
 /about,,About us,Sobre nosotros,关于我们
 /about,,The Alpha website for the State of California.,La página web Alfa para el Estado de California.,阿尔法的网页为加利福尼亚州。
@@ -156,7 +158,7 @@ path,token,en,es,zh
 /services/hire-licensed-contractor-home-improvements,,Look up their licenses,Verifique la licencia de su contratista,检查您的承包商执照
 /services/hire-licensed-contractor-home-improvements,,Contractors must have a license to do work that costs $500 or more.,Cada contratista debe tener una licencia para hacer cualquier tipo de trabajo que cuesta $500 dólares o más.,每个承包商必须有许可证才能做到这一点花费$ 500美元以上的任何工作。
 /services/hire-licensed-contractor-home-improvements,,"To look up their licenses, you could:","Para verificar la licencia de su contratista, podría:",要检查你的承包商的许可，您可以：
-/services/hire-licensed-contractor-home-improvements,,Call (800) 321-2752,Llamar a (800) 321-2753,通话：（800）321-2753
+/services/hire-licensed-contractor-home-improvements,,Call (800) 321-2752,Llamar a (800) 321-2753,电话（800）321-2753
 /services/hire-licensed-contractor-home-improvements,,Check your contractors' licenses online,Revise la licencias de sus contratistas por internet,检查您的承包商在线许可
 /services/hire-licensed-contractor-home-improvements,,Compare your contractors' costs for the same project.,Compare los tres estimados y costos proveídos por el mismo proyecto.,比较三项费用估计和由同一项目提供。
 /services/hire-licensed-contractor-home-improvements,,Ask your contractor to share their insurance,Pídele a su contratista prueba de seguro,问问你的承包商保险证明
@@ -441,7 +443,7 @@ path,token,en,es,zh
 /hire-licensed-contractor-home-improvements,,Look up their licenses,Verifique la licencia de su contratista,检查您的承包商执照
 /hire-licensed-contractor-home-improvements,,Contractors must have a license to do work that costs $500 or more.,Cada contratista debe tener una licencia para hacer cualquier tipo de trabajo que cuesta $500 dólares o más.,每个承包商必须有许可证才能做到这一点花费$ 500美元以上的任何工作。
 /hire-licensed-contractor-home-improvements,,"To look up their licenses, you could:","Para verificar la licencia de su contratista, podría:",要检查你的承包商的许可，您可以：
-/hire-licensed-contractor-home-improvements,,Call (800) 321-2752,Llamar a (800) 321-2753,通话：（800）321-2753
+/hire-licensed-contractor-home-improvements,,Call (800) 321-2752,Llamar a (800) 321-2753,电话（800）321-2753
 /hire-licensed-contractor-home-improvements,,Check your contractors' licenses online,Revise la licencias de sus contratistas por internet,检查您的承包商在线许可
 /hire-licensed-contractor-home-improvements,,Get at least three price estimates in writing,Obtenga al menos tres precios estimados por escrito,得到至少三种价格估计写作
 /hire-licensed-contractor-home-improvements,,Compare your contractors' costs for the same project.,Compare los tres estimados y costos proveídos por el mismo proyecto.,比较三项费用估计和由同一项目提供。
@@ -472,7 +474,7 @@ path,token,en,es,zh
 /sign-up-for-local-emergency-alerts/,,Find alerts,Encuentra alertas,查找警报
 /sign-up-for-local-emergency-alerts/,,Please enter a county or zip code in California,"Por favor, introduzca un condado o código postal en California",请输入在加利福尼亚州的一个县或邮政编码
 /contact-us/,,Please enter the name of the agency you want to contact:,"Por favor, introduzca el nombre de la agencia que desea escribir:",请输入您想写入该机构的名称：
-/contact-us/,,Contact us - Alpha.CA.gov,Contacto - Alpha.CA.gov,联系方式 -  Alpha.CA.gov
+/contact-us/home,,Contact us - Alpha.CA.gov,Contacto - Alpha.CA.gov,联系方式 -  Alpha.CA.gov
 /contact-us/results/,,Contact us - Alpha.CA.gov,Contacto - Alpha.CA.gov,联系方式 -  Alpha.CA.gov
 /find-shelter,,Find shelters near you,Encuentra refugios cerca de usted,找住处靠近你
 /find-shelter,,Search for shelters in every California county,Buscar refugios en todos los condados de California,搜索避难所在加州的每一个县
