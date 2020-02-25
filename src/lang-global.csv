@@ -156,7 +156,7 @@ path,token,en,es,zh
 /services/hire-licensed-contractor-home-improvements,,Look up their licenses,Verifique la licencia de su contratista,检查您的承包商执照
 /services/hire-licensed-contractor-home-improvements,,Contractors must have a license to do work that costs $500 or more.,Cada contratista debe tener una licencia para hacer cualquier tipo de trabajo que cuesta $500 dólares o más.,每个承包商必须有许可证才能做到这一点花费$ 500美元以上的任何工作。
 /services/hire-licensed-contractor-home-improvements,,"To look up their licenses, you could:","Para verificar la licencia de su contratista, podría:",要检查你的承包商的许可，您可以：
-/services/hire-licensed-contractor-home-improvements,,Call (800) 321-2752,Llamar a (800) 321-2753,电话（800）321-2753
+/services/hire-licensed-contractor-home-improvements,,Call (800) 321-2752,Llamar a (800) 321-2753,通话：（800）321-2753
 /services/hire-licensed-contractor-home-improvements,,Check your contractors' licenses online,Revise la licencias de sus contratistas por internet,检查您的承包商在线许可
 /services/hire-licensed-contractor-home-improvements,,Compare your contractors' costs for the same project.,Compare los tres estimados y costos proveídos por el mismo proyecto.,比较三项费用估计和由同一项目提供。
 /services/hire-licensed-contractor-home-improvements,,Ask your contractor to share their insurance,Pídele a su contratista prueba de seguro,问问你的承包商保险证明
@@ -235,8 +235,7 @@ path,token,en,es,zh
 /apply-for-cal-grant,,Attend or plan to attend an,Asistir a un,参加
 /apply-for-cal-grant,,Not already have a bachelor's or professional degree,No haber obtenido un título universitario o profesional de 4 años ,由于没有获得大学专业学位或4年
 /apply-for-cal-grant,,Have U.S. citizenship,Ser ciudadano estadounidense,是美国公民
-/apply-for-cal-grant,,<strong>or</strong> be ,<strong>o</strong> ser,"<strong>或</strong>是
-"
+/apply-for-cal-grant,,<strong>or</strong> be ,<strong>o</strong> ser,<strong>或</strong>是
 /apply-for-cal-grant,,eligible for federal student aid,elegible para ayuda financiera del gobierno,资格获得政府的财政援助
 /apply-for-cal-grant,,eligible for AB540,o un estudiante elegible para el programa AB540,或符合条件的学生的程序AB540
 /apply-for-cal-grant,,Need financial help to pay for your college's tuition,Necesitar ayuda financiera para pagar la matrícula de su universidad,需要财政援助，以交学费贵校
@@ -442,7 +441,7 @@ path,token,en,es,zh
 /hire-licensed-contractor-home-improvements,,Look up their licenses,Verifique la licencia de su contratista,检查您的承包商执照
 /hire-licensed-contractor-home-improvements,,Contractors must have a license to do work that costs $500 or more.,Cada contratista debe tener una licencia para hacer cualquier tipo de trabajo que cuesta $500 dólares o más.,每个承包商必须有许可证才能做到这一点花费$ 500美元以上的任何工作。
 /hire-licensed-contractor-home-improvements,,"To look up their licenses, you could:","Para verificar la licencia de su contratista, podría:",要检查你的承包商的许可，您可以：
-/hire-licensed-contractor-home-improvements,,Call (800) 321-2752,Llamar a (800) 321-2753,电话（800）321-2753
+/hire-licensed-contractor-home-improvements,,Call (800) 321-2752,Llamar a (800) 321-2753,通话：（800）321-2753
 /hire-licensed-contractor-home-improvements,,Check your contractors' licenses online,Revise la licencias de sus contratistas por internet,检查您的承包商在线许可
 /hire-licensed-contractor-home-improvements,,Get at least three price estimates in writing,Obtenga al menos tres precios estimados por escrito,得到至少三种价格估计写作
 /hire-licensed-contractor-home-improvements,,Compare your contractors' costs for the same project.,Compare los tres estimados y costos proveídos por el mismo proyecto.,比较三项费用估计和由同一项目提供。
@@ -472,6 +471,9 @@ path,token,en,es,zh
 /sign-up-for-local-emergency-alerts/,,Type 2 or more characters for results,Tipo 2 o más caracteres de los resultados,类型2个或多个字符的结果
 /sign-up-for-local-emergency-alerts/,,Find alerts,Encuentra alertas,查找警报
 /sign-up-for-local-emergency-alerts/,,Please enter a county or zip code in California,"Por favor, introduzca un condado o código postal en California",请输入在加利福尼亚州的一个县或邮政编码
-/contact-us/,,Please enter the name of the agency you want to contact:,"Por favor, introduzca el nombre de la agencia con la que desea escribir:",请输入您想写入该机构的名称：
-/contact-us/home/,,Contact Us - Alpha.CA.gov,Contacto - Alpha.CA.gov,联系方式 -  Alpha.CA.gov
-/contact-us/results/,,Contact Us - Alpha.CA.gov,Contacto - Alpha.CA.gov,联系方式 -  Alpha.CA.gov
+/contact-us/,,Please enter the name of the agency you want to contact:,"Por favor, introduzca el nombre de la agencia que desea escribir:",请输入您想写入该机构的名称：
+/contact-us/,,Contact us - Alpha.CA.gov,Contacto - Alpha.CA.gov,联系方式 -  Alpha.CA.gov
+/contact-us/results/,,Contact us - Alpha.CA.gov,Contacto - Alpha.CA.gov,联系方式 -  Alpha.CA.gov
+/find-shelter,,Find shelters near you,Encuentra refugios cerca de usted,找住处靠近你
+/find-shelter,,Search for shelters in every California county,Buscar refugios en todos los condados de California,搜索避难所在加州的每一个县
+/check-your-tap-water-quality,,Check your tap water quality,Compruebe la calidad del agua del grifo,检查自来水质量
