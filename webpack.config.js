@@ -39,10 +39,9 @@ module.exports = {
     minwage: ["./src/js/minwage/index.js"],
     food: ["./src/js/foodbanks/index.js"],
     alerts: ["./src/js/alerts/index.js"],
-    contactus: ['./src/js/contactus/index.js'],    
+    contactus: ['./src/js/contactus/index.js'],
     roads: ["./src/js/roads/index.js"],
-    shelters: ["./src/js/shelters/index.js"],
-    shelters: ["./src/js/water/index.js"]
+    shelters: ["./src/js/shelters/index.js"]
   },
   optimization: {
     splitChunks: {
@@ -231,7 +230,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "en/find-shelter/index.html",
       template: "src/services/find-shelter/index.html",
-      excludeChunks: excludeChucksExcept("shelters"),
+      excludeChunks: ["minwage", "food", "roads", "alerts", "contactus"],
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
