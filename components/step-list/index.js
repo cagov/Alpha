@@ -1,41 +1,57 @@
 class CWDSStepList extends HTMLElement {
   connectedCallback() {
-    this.expandTargets = this.querySelectorAll('li');
+    this.expandTargets = this.querySelectorAll('.list-group-item-action');
     this.expandTargets.forEach( (item) => {
-      item.addEventListener('click', this.listen)
       let detailsEl = item.querySelector('.details');
-      if(detailsEl) {
-        setTimeout(function() {
-          detailsEl.detailsHeight = detailsEl.scrollHeight;
-          detailsEl.style.display = "none";
-        }, 30)
-      }
+      detailsEl.setAttribute('data-collapsed', 'true');
+      detailsEl.style.height = '0px'
+      item.addEventListener('click', this.listen)
     })
   }
 
   listen() {
-    let detailsEl = this.querySelector('.details');
-    let detailsHeight = detailsEl.detailsHeight
-
-    if(this.classList.contains('list-open')) {
+    var section = this.querySelector('.details');
+    var isCollapsed = section.getAttribute('data-collapsed') === 'true';
+      
+    if(isCollapsed) {
+      expandSection(section)
+      section.setAttribute('data-collapsed', 'false')
       this.classList.remove('list-open')
     } else {
+      collapseSection(section)
       this.classList.add('list-open')
-    }
-    if(!detailsEl.style.height || detailsEl.style.height.indexOf('0px') == 0) {
-      detailsEl.style.display = "block";
-      // need to timeout here to prevent the browser from grouping these two statements and killing the animation
-      setTimeout(function() {
-        detailsEl.style.height = detailsHeight + 'px';
-      }, 30)
-    } else {
-      detailsEl.style.height = 0;
-      // timeout here to give animation time to complete before hide
-      setTimeout(function() {
-        detailsEl.style.display = "none";
-      }, 300)
-
     }
   }
 }
+
 window.customElements.define('cwds-step-list', CWDSStepList);
+
+/* expand, collapse thanks to: https://css-tricks.com/using-css-transitions-auto-dimensions/ */
+function collapseSection(element) {
+  var sectionHeight = element.scrollHeight;
+  var elementTransition = element.style.transition;
+  element.style.transition = '';
+
+  requestAnimationFrame(function() {
+    element.style.height = sectionHeight + 'px';
+    element.style.transition = elementTransition;
+    
+    requestAnimationFrame(function() {
+      element.style.height = 0 + 'px';
+    });
+  });
+  
+  element.setAttribute('data-collapsed', 'true');
+}
+
+function expandSection(element) {
+  var sectionHeight = element.scrollHeight;
+  element.style.height = sectionHeight + 'px';
+
+  element.addEventListener('transitionend', function(e) {
+    element.removeEventListener('transitionend', arguments.callee);
+    element.style.height = null;
+  });
+  
+  element.setAttribute('data-collapsed', 'false');
+}
