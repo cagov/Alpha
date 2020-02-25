@@ -240,9 +240,13 @@ a.list-group-item-action {
     text-decoration: none;
 }
 
-.list-group-item-action:hover,
-.list-group-item-action:hover,
-.list-group-item-action:focus {
+
+.list-group-item-action {
+    color: #000;
+}
+
+.list-group-item-action:hover, .list-group-item-action:hover, .list-group-item-action:focus {
+
     z-index: 1;
     color: #000;
     text-decoration: none;
