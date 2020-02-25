@@ -96,14 +96,14 @@ module.exports = {
       minify: minificationOptions
     }),
 
-    /*
+    
     new HtmlWebpackPlugin({
       filename: "en/apply-discounted-phone-service/index.html",
       template: "src/services/apply-discounted-phone-service/index.html",
       excludeChunks: excludedChunks,
       minify: minificationOptions
     }), 
-  */
+  
 
     new HtmlWebpackPlugin({
       filename: "en/apply-online-discounted-phone-service/index.html",
