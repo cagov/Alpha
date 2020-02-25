@@ -24,7 +24,7 @@ const minificationOptions = {
   sortClassName: true,
   useShortDoctype: true
 };
-const excludedChunks = ["minwage", "food", "alerts", "contactus", "roads", "shelters", "water"];
+const excludedChunks = ["minwage", "food", "alerts", "contactus", "roads", "shelters", "water", "lifeline"];
 
 //usage 
 //    excludeChunks: excludeChucksExcept("roads"),
@@ -42,7 +42,8 @@ module.exports = {
     contactus: ['./src/js/contactus/index.js'],
     roads: ["./src/js/roads/index.js"],
     shelters: ["./src/js/shelters/index.js"],
-    water: ["./src/js/water/index.js"]
+    water: ["./src/js/water/index.js"],
+    lifeline: ["./src/js/lifeline/index.js"]
   },
   optimization: {
     splitChunks: {
@@ -95,16 +96,12 @@ module.exports = {
       excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
-
-    /*
     new HtmlWebpackPlugin({
       filename: "en/apply-discounted-phone-service/index.html",
       template: "src/services/apply-discounted-phone-service/index.html",
-      excludeChunks: excludedChunks,
+      excludeChunks: excludeChucksExcept("lifeline"),
       minify: minificationOptions
     }), 
-  */
-
     new HtmlWebpackPlugin({
       filename: "en/apply-online-discounted-phone-service/index.html",
       template: "src/services/apply-online-discounted-phone-service/index.html",
@@ -115,7 +112,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "en/who-can-get-discounted-phone-service/index.html",
       template: "src/services/who-can-get-discounted-phone-service/index.html",
-      excludeChunks: excludedChunks,
+      excludeChunks: excludeChucksExcept("lifeline"),
       minify: minificationOptions
     }),
  
