@@ -259,6 +259,16 @@ describe("local emergency alerts", () => {
 
 })
 
+describe("water-quality", () => {
+  test("water-quality", async () => {
+    await page.goto(hostname+'/check-your-tap-water-quality/')
+    await page.type(".mapboxgl-ctrl-geocoder--input", '1425 14th St, Sac')
+    await page.click('.mapboxgl-ctrl-geocoder--suggestion-title')
+
+  }, timeout)
+
+})
+
 afterAll(() => {
   browser.close()
   server.close()
