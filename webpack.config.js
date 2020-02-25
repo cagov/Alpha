@@ -41,7 +41,8 @@ module.exports = {
     alerts: ["./src/js/alerts/index.js"],
     contactus: ['./src/js/contactus/index.js'],    
     roads: ["./src/js/roads/index.js"],
-    shelters: ["./src/js/shelters/index.js"]
+    shelters: ["./src/js/shelters/index.js"],
+    shelters: ["./src/js/water/index.js"]
   },
   optimization: {
     splitChunks: {
@@ -231,6 +232,12 @@ module.exports = {
       filename: "en/find-shelter/index.html",
       template: "src/services/find-shelter/index.html",
       excludeChunks: excludeChucksExcept("shelters"),
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: "en/check-your-tap-water-quality/index.html",
+      template: "src/services/water/index.html",
+      excludeChunks: excludeChucksExcept("water"),
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({

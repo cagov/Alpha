@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+  <head>
+    <meta
+      name="description"
+      content="Check if your tap water is safe to drink. Find out the name of your water system and where your water comes from."
+    />
+    <%= require('html-loader!../../partials/meta-common.html') %> <%=
+    require('html-loader!../../partials/favicons.html') %>
+    <!-- Social media post -->
+    <meta property="og:image" content="/img/thumbnail.png" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:width" content="630" />
+    <meta property="og:title" content="Find shelters near you - Alpha.CA.gov" />
+    <meta
+      property="og:description"
+      content="Search for shelters in every California county."
+    />
+    <meta property="og:url" content="[code-url]" />
+    <link rel="canonical" href="[code-url]" />
+    <title>Check if your tap water is safe to drink - Alpha.CA.gov</title>
+
+    <!-- mapbox autocomplete -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css"
+      type="text/css"
+    />
+    <style>
+      .mapboxgl-ctrl-geocoder {
+        width: 90vw;
+        max-width: 100%;
+        box-shadow: none;
+      }
+      .mapboxgl-ctrl-geocoder--input {
+        display: block;
+        min-height: calc(1.5em + 0.75rem + 2px);
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        text-indent: 20px;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+      .mt-20 {
+        margin-top: 20px;
+      }
+      #geocoder .mapboxgl-ctrl-geocoder {
+        z-index: 99;
+      }
+      .mt-10 {
+        margin: 0 0 10px 0;
+      }
+      .water-label {
+        padding-left: 0;
+        padding-right: 2%;
+        padding-top: 1%;
+        width: 66%;
+      }
+      @media (max-width: 767.98px) {
+        .water-label {
+          padding-left: 10%;
+          padding-top: 0;
+          margin-top: -2%;
+          width: 90%;
+          text-align: center;
+          padding-bottom: 7%;
+        }
+      }
+      .progress {
+        background: none;
+      }
+      .limit {
+        overflow: visible;
+        margin: 0rem 0rem 0 -6rem;
+        color: #fff;
+        z-index: 2;
+        width: 100px;
+        position: absolute;
+        font-size: 1rem;
+        font-family: "Public Sans Bold", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <%= require('html-loader!../../partials/official.html') %> <%=
+      require('html-loader!../../partials/experiment-banner.html') %> <%=
+      require('html-loader!../../partials/navbar.html') %>
+    </header>
+    <main>
+      <div class="container-fluid jumbotron">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Check your tap water quality</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <form class="">
+              <div class="form-group">
+                <label>Please enter your address: </label
+                ><br />
+                <div id="geocoder" class="geocoder"></div>
+                <div class="invalid-feedback">
+                  Please enter a city or zip code in California.
+                </div>
+                <br />
+                <button
+                  id="submit-form"
+                  type="submit"
+                  class="btn btn-primary  mb-3 js-water-lookup"
+                >
+                  Check your water
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="map" class="d-none"></div>
+
+      <div class="container pb-5 chill-d-none system-data" aria-live="polite">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="system-status"></div>
+
+            <div class="system-info">
+              <h3>How your water system checks for safety</h3>
+              <p>
+                Your water system tests at least yearly for chemicals, bacteria,
+                and viruses that could be harmful to human health.
+              </p>
+              <p>
+                They also track changes to the way your water tastes, looks, or
+                smells.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <%= require('html-loader!../../partials/feedback.html') %> <%=
+      require('html-loader!../../partials/footer.html') %>
+      <script nomodule src="/js/es5Food.js?cache=false"></script>
+      <%= require('html-loader!../../partials/alphabar.html') %> <%=
+      require('html-loader!../../partials/ga.html') %>
+    </footer>
+  </body>
+</html>
