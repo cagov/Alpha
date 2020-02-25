@@ -269,6 +269,16 @@ describe("water-quality", () => {
 
 })
 
+
+describe("Apply or renew online for a discounted phone service", () => {
+  test("Apply or renew online for a discounted phone service", async () => {
+    await page.goto(hostname+'/apply-online-discounted-phone-service/')
+    await page.click('.action-link')
+   
+  }, timeout)
+
+})
+
 afterAll(() => {
   browser.close()
   server.close()
