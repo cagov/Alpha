@@ -221,6 +221,21 @@ describe("lane closures", () => {
 
 })
 */
+
+
+describe("contact us", () => {
+  test("contact us", async () => {
+    await page.goto(hostname+'/contact-us/')
+    await page.waitForFunction(
+      'document.querySelectorAll("#agency-group p").length'
+      )
+    let answers = await page.$$eval('#agency-group p', answers => { return answers })
+    expect(answers.length).toBeGreaterThan(200);
+   
+  }, timeout)
+
+})
+
 afterAll(() => {
   browser.close()
   server.close()
