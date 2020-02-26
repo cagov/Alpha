@@ -11,6 +11,7 @@ class CWDSAccordion extends HTMLElement {
     }
     if(this.expandTarget.clientHeight > 0) {
       this.expandTarget.style.height = '0px';
+      this.expandTarget.setAttribute('aria-hidden','true')
       this.querySelector('.card-header').classList.remove('accordion-alpha-open');
       let expando = this.expandTarget;
       setTimeout(function() {
@@ -19,7 +20,9 @@ class CWDSAccordion extends HTMLElement {
     } else {
       this.expandTarget.style.display = "block";
       this.expandTarget.style.height = this.cardBodyHeight+'px';
+      this.expandTarget.setAttribute('aria-hidden','false')
       this.querySelector('.card-header').classList.add('accordion-alpha-open');
+      this.querySelector('.card-container').classList.remove('collapsed');
     }
   }
 }
