@@ -253,16 +253,6 @@ a.list-group-item-action {
     background-color: #f8f9fa;
 }
 
-
-.list-number {
-		text-indent: 0;
-	}
-	
-	
-li.list-group-item.unstyled {
-    text-indent: -45px;
-		padding-left: 50px;
-}
 	
 .list-group-flush.list-group-item {
     font-family: "Public Sans Bold", sans-serif;
@@ -342,10 +332,16 @@ a.navbar-brand:visited {
 
 /* Alerts */
 
+.alert {
+	
+	border: 0;
+}
+
 .alert-primary {
     color: #ffffff;
     background-color: #0f1e6b;
-    border-color: #f1f1f1;
+    border: 0;
+	
 }
 
 .alert-warning {
@@ -374,19 +370,14 @@ a.navbar-brand:visited {
     border-color: #f1f1f1;
 }
 .alert-primary .h2 {
-  color: #fff;
-  font-family: "Public Sans", sans-serif;
+  color: #000;
+  font-family: "Public Sans Bold", sans-serif;
 }
 .alert-left {
   border-left: 4px solid #0f1e6b;
   margin-left: 1rem;
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;
-}
-
-.alert-primary .h2 {
-    color: #fff;
-    font-family: "Public Sans", sans-serif;
 }
 
 .alert-left {
@@ -884,7 +875,7 @@ li .action-link:focus-within {
 
 /*--------- Check box list group ----------*/
 	
-.list-group-item.active {
+.list-group-item-action.list-group-item.active {
     background-color: #000;
     border-color: #000;
 	color:white;
