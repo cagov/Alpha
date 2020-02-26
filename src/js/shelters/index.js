@@ -36,7 +36,6 @@ function displaySortedResults(query) {
       }
   })
   .catch((e) => {
-    console.log(e)
     document.getElementById("div-fail").classList.remove("d-none")
   })  
 }
