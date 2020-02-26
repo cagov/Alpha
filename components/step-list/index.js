@@ -5,6 +5,7 @@ class CWDSStepList extends HTMLElement {
       let detailsEl = item.querySelector('.details');
       detailsEl.setAttribute('data-collapsed', 'true');
       detailsEl.style.height = '0px'
+      detailsEl.setAttribute('aria-hidden','true')
       item.addEventListener('click', this.listen)
     })
   }
@@ -16,6 +17,7 @@ class CWDSStepList extends HTMLElement {
     if(isCollapsed) {
       expandSection(section)
       section.setAttribute('data-collapsed', 'false')
+      section.setAttribute('aria-hidden', 'false')
       this.classList.remove('list-open')
     } else {
       collapseSection(section)
@@ -39,6 +41,7 @@ function collapseSection(element) {
   });
   
   element.setAttribute('data-collapsed', 'true');
+  element.setAttribute('aria-hidden', 'true');
 }
 
 function expandSection(element) {
