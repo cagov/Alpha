@@ -128,7 +128,6 @@ function findWageMatch(city, wageJson, zipMap, cityNames) {
       document.getElementById('answer').innerHTML = html;
     })
     .catch((error) => {
-      console.error('Error:', error);
       document.querySelector('.wage-city-search .invalid-feedback').style.display = 'block';
     });
   }

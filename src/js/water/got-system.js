@@ -1,7 +1,6 @@
 import analytes from "./analytes.js";
 let analyteArray = new analytes();
 let analyteDetails = new Map();
-console.log(analyteArray);
 analyteArray.forEach(an => {
   analyteDetails.set(an.key, an);
 });
@@ -24,7 +23,6 @@ function capitalizer(name) {
 }
 
 export default function gotSystem(systemData) {
-  console.log(systemData);
   let system = systemData[0];
   if (systemData.length > 0) {
     if (systemData.length > 1) {
@@ -66,7 +64,7 @@ export default function gotSystem(systemData) {
           history.forEach(violation => {
             let lastMatch = analyteMap.get(violation.ANALYTE_NAME);
             if (lastMatch) {
-              if (lastMatch.VIOL_END_DATE < violation.VIOL_END_DATE) {
+              if (lastMatch.VIOL_END_DATE < violation.VIOL_END_DATE || (lastMatch.VIOL_END_DATE == violation.VIOL_END_DATE && violation.ENF_ACTION_TYPE_ISSUED == "RETURN TO COMPLIANCE")) {
                 analyteMap.set(violation.ANALYTE_NAME, violation);
               }
             } else {
@@ -75,79 +73,83 @@ export default function gotSystem(systemData) {
           });
 
           resultsOutput = `<h2>Your water quality</h2>
-            <p>Your water did not meet <a href="https://mywaterquality.ca.gov/safe_to_drink/">California’s safety standards</a> as of August 30, 2019. We found these contaminants in your water: </p>`;
+            <p>Your water did not meet <a href="https://mywaterquality.ca.gov/safe_to_drink/">California’s safety standards</a>. We found these contaminants in your water: </p>`;
 
           analyteMap.forEach(analyte => {
-            resultsOutput += `<div class="card border-dark mb-3">
-          <div class="card-body row">
+            if(analyte.ENF_ACTION_TYPE_ISSUED != 'RETURN TO COMPLIANCE') {
+                resultsOutput += `<div class="card border-dark mb-3">
+              <div class="card-body row">
+                ${(function() {
+                  if (
+                    analyte.ANALYTE_NAME == "GROUNDWATER RULE" ||
+                    analyte.ANALYTE_NAME == "SWTR"
+                  ) {
+                    return `<div class="col flex pr-3">
+                      <div class="bold display-4 text-center">
+                        <span class="ca-gov-icon-biohazard display-4" aria-hidden="true"></span>
+                      </div>
+                      <p class="font-weight-light text-center"></p>
+                    </div>
+                    <div class="water-label">
+                      <h5 class="card-title display-5">Microbial pathogens</h5>
+                      <div class="progress" style="height: 40px;">
+                        <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated w-100" aria-hidden="true"></div>
+                      </div>
+                    </div>`;
+                  } else if (analyte.ANALYTE_NAME == "TURBIDITY") {
+                    return `<div class="col flex pr-3">
+                        <div class="bold display-4 text-center">
+                          <span class="ca-gov-icon-biohazard display-4" aria-hidden="true"></span>
+                        </div>
+                        <p class="font-weight-light text-center"></p>
+                      </div>
+                      <div class="water-label">
+                        <h5 class="card-title display-5">Particles that make the water look cloudy or hazy</h5>
+                        <div class="progress" style="height: 40px;">                        
+                          <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated w-100" aria-hidden="true"></div>
+                        </div>
+                      </div>`;
+                  } else {
+                    return `<div class="col flex">
+                      <div class="bold display-4 text-center">${(analyte.RESULT /
+                        analyte.MCL_VALUE).toFixed(1) }x</div>
+                      <p class="font-weight-light text-center">the legal limit</p>
+                    </div>
+                    <div class="water-label">
+                      <h5 class="card-title display-5">${
+                        analyte.ANALYTE_NAME
+                      }</h5>
+                      <div class="progress" style="height: 40px;">
+                        <div class="progress-bar bg-dark" aria-hidden="true" aria-valuenow="10" style="width: ${(100 / (analyte.RESULT /
+                            analyte.MCL_VALUE))}%"></div>
+                        <div class="progress-bar  bg-white" aria-hidden="true" style="width: 1%;"><span class="limit">legal limit</span></div>
+                        <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" aria-hidden="true" style="width: ${(((analyte.RESULT /
+                              analyte.MCL_VALUE) *
+                              100) - 100) / ((analyte.RESULT /
+                                analyte.MCL_VALUE) *
+                                100) * 100}%" ></div>
+                      </div>
+                    </div>`;
+                  }
+                })()}
+              </div>
+            </div>
             ${(function() {
-              if (
-                analyte.ANALYTE_NAME == "GROUNDWATER RULE" ||
-                analyte.ANALYTE_NAME == "SWTR"
-              ) {
-                return `<div class="col flex pr-3">
-                  <div class="bold display-4 text-center">
-                    <span class="ca-gov-icon-biohazard display-4" aria-hidden="true"></span>
-                  </div>
-                  <p class="font-weight-light text-center"></p>
-                </div>
-                <div class="water-label">
-                  <h5 class="card-title display-5">Microbial pathogens</h5>
-                  <div class="progress" style="height: 40px;">
-                    <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated w-100" aria-hidden="true"></div>
-                  </div>
+              if (analyteDetails.get(analyte.ANALYTE_NAME)) {
+                let analyteDets = analyteDetails.get(analyte.ANALYTE_NAME);
+                return `<div class="col">
+                  <h4>When ${analyteDets.name} was found</h4>
+                  <p>On ${new Date(analyte.VIOL_BEGIN_DATE).toLocaleString('en-US', { year: 'numeric', month: 'long',  day: 'numeric'})}, your water system found ${analyteDets.name} in your water.</p>
+                  <h4>Potential health effects from long-term exposure to ${analyteDets.name}</h4>
+                  <p>${analyteDets.risk}</p>
+                  <h4>Common sources of ${analyteDets.name}</h4>
+                  <p>${analyteDets.source}</p>
                 </div>`;
-              } else if (analyte.ANALYTE_NAME == "TURBIDITY") {
-                return `<div class="col flex pr-3">
-                    <div class="bold display-4 text-center">
-                      <span class="ca-gov-icon-biohazard display-4" aria-hidden="true"></span>
-                    </div>
-                    <p class="font-weight-light text-center"></p>
-                  </div>
-                  <div class="water-label">
-                    <h5 class="card-title display-5">Particles that make the water look cloudy or hazy</h5>
-                    <div class="progress" style="height: 40px;">                        
-                      <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated w-100" aria-hidden="true"></div>
-                    </div>
-                  </div>`;
               } else {
-                return `<div class="col flex">
-                  <div class="bold display-4 text-center">${(analyte.RESULT /
-                    analyte.MCL_VALUE).toFixed(1) }x</div>
-                  <p class="font-weight-light text-center">the legal limit</p>
-                </div>
-                <div class="water-label">
-                  <h5 class="card-title display-5">${
-                    analyte.ANALYTE_NAME
-                  }</h5>
-                  <div class="progress" style="height: 40px;">
-                    <div class="progress-bar bg-dark" aria-hidden="true" aria-valuenow="10" style="width: ${(100 / (analyte.RESULT /
-                        analyte.MCL_VALUE))}%"></div>
-                    <div class="progress-bar  bg-white" aria-hidden="true" style="width: 1%;"><span class="limit">legal limit</span></div>
-                    <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" aria-hidden="true" style="width: ${(((analyte.RESULT /
-                          analyte.MCL_VALUE) *
-                          100) - 100) / ((analyte.RESULT /
-                            analyte.MCL_VALUE) *
-                            100) * 100}%" ></div>
-                  </div>
-                </div>`;
+                return ``;
               }
-            })()}
-          </div>
-        </div>
-        ${(function() {
-          if (analyteDetails.get(analyte.ANALYTE_NAME)) {
-            let analyteDets = analyteDetails.get(analyte.ANALYTE_NAME);
-            return `<div class="col">
-              <h4>Potential health effects from long-term exposure to ${analyteDets.name}</h4>
-              <p>${analyteDets.risk}</p>
-              <h4>Common sources of ${analyteDets.name}</h4>
-              <p>${analyteDets.source}</p>
-            </div>`;
-          } else {
-            return ``;
-          }
-          })()}`;
+              })()}`;
+            }
           });
           document.querySelector(
             ".system-status"
@@ -156,7 +158,6 @@ export default function gotSystem(systemData) {
         }
       })
       .catch(error => {
-        console.error("Error 2:", error);
         displaySafe(website_blurb, system);
         cleanup();
       });
@@ -171,8 +172,6 @@ export default function gotSystem(systemData) {
 
 
 function displaySafe(website_blurb, system) {
-  console.log("here");
-
   let html = `<h2>Your water quality</h2>
   <p>Your tap water met <a href="https://mywaterquality.ca.gov/safe_to_drink/">California safety standards</a> as of August 30, 2019. </p>
     ${getSystemHTMLSafe(website_blurb, system)}`;

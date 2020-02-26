@@ -1,5 +1,5 @@
 import gotSystem from "./got-system.js";
-import getParameterByName from './getparams.js';
+import getParameterByName from "./getparams.js";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoiYWFyb25oYW5zIiwiYSI6ImNqNGs4cms1ZzBocXkyd3FzZGs3a3VtamYifQ.HQjFfVzwwxwCmGr2nvnvSA";
@@ -18,6 +18,7 @@ window.geocoder = new MapboxGeocoder({
   bbox: [-124.409591, 32.534156, -114.131211, 42.009518],
   mapboxgl: mapboxgl
 }).on("result", async function(item) {
+  window.waterPoint = item;
   let waterButton = document.querySelector(".js-water-lookup");
 
   waterButton.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
@@ -25,6 +26,20 @@ window.geocoder = new MapboxGeocoder({
   document.querySelector(".system-data").style.display = "none";
 
   // make call to endpoint to find system
+  retrieveSystemData(item, waterButton);
+});
+
+document
+  .querySelector(".js-water-form")
+  .addEventListener("submit", function(event) {
+    event.preventDefault();
+    document.querySelector(".invalid-feedback").style.display = "none";
+    if (item.waterPoint) {
+
+    }
+  });
+
+function retrieveSystemData(item, waterButton) {
   fetch(
     `https://api.alpha.ca.gov/WaterSystem?lat=${item.result.center[1]}&lon=${item.result.center[0]}`
   )
@@ -38,10 +53,12 @@ window.geocoder = new MapboxGeocoder({
       waterButton.innerHTML = `Check your water`;
       document.querySelector(".system-data").style.display = "block";
     });
-});
+}
 
-if(getParameterByName('systemId')) {
-  let url = `https://api.alpha.ca.gov/WaterSystem?systemId=${getParameterByName('systemId')}`
+if (getParameterByName("systemId")) {
+  let url = `https://api.alpha.ca.gov/WaterSystem?systemId=${getParameterByName(
+    "systemId"
+  )}`;
   fetch(url)
     .then(response => {
       return response.json();
@@ -50,8 +67,7 @@ if(getParameterByName('systemId')) {
       gotSystem(systemData);
       document.querySelector(".system-data").style.display = "block";
     })
-    .catch(error => {
-    });
+    .catch(error => {});
 }
 
 document.getElementById("geocoder").appendChild(window.geocoder.onAdd(map));
