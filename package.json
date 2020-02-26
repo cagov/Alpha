@@ -66,7 +66,7 @@
   },
   "dependencies": {
     "@cagov/accordion": "^1.0.2",
-    "@cagov/step-list": "^1.0.1",
+    "@cagov/step-list": "^1.0.7",
     "@tilecloud/mbgl-gesture-handling": "^1.0.9"
   }
 }
