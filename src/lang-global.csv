@@ -572,7 +572,6 @@ path,token,en,es,zh
 /who-can-get-discounted-phone-service,,TTY Number,Número TTY,TTY号码
 /who-can-get-discounted-phone-service,,"Sorry, you may not be able to get a discount.","Lo sentimos, no podrá ser capaz de obtener un descuento.",对不起，您将无法获得折扣。
 /who-can-get-discounted-phone-service,,"To be sure, contact us about California LifeLine:","Para estar seguro, en contacto con nosotros sobre California LifeLine:",可以肯定，与我们联系加州生命线：
-<<<<<<< HEAD
 /who-can-get-discounted-phone-service,[lang-next],Next,próximo,下
 /apply-online-discounted-phone-service,,Apply online for a discounted phone service,Aplicar en línea para un servicio telefónico con descuento,网上申请贴现电话服务
 /apply-online-discounted-phone-service,,(California LifeLine) - Alpha.CA.gov,(California LifeLine) - Alpha.CA.gov,（加州生命线） -  Alpha.CA.gov
@@ -595,6 +594,3 @@ path,token,en,es,zh
 /apply-online-discounted-phone-service,,Another option to apply,Otra opción para aplicar,另一种选择申请
 /apply-online-discounted-phone-service,,You can also apply by mail. Simply fill out and mail back the form inside the pink letter you get after,También puede solicitar por correo. Sólo tiene que rellenar y enviar por correo el formulario de vuelta dentro de la carta de color rosa que se obtiene después,您也可以通过邮件申请。只需填写并邮寄中后得到的粉红色信件的形式回
 /apply-online-discounted-phone-service,,starting your application process,iniciar el proceso de solicitud,启动申请流程
-=======
-/who-can-get-discounted-phone-service,[lang-next],Next,próximo,下
->>>>>>> master
