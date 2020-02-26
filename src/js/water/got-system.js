@@ -76,7 +76,6 @@ export default function gotSystem(systemData) {
             <p>Your water did not meet <a href="https://mywaterquality.ca.gov/safe_to_drink/">California’s safety standards</a>. We found these contaminants in your water: </p>`;
 
           analyteMap.forEach(analyte => {
-            console.log(analyte)
             if(analyte.ENF_ACTION_TYPE_ISSUED != 'RETURN TO COMPLIANCE') {
                 resultsOutput += `<div class="card border-dark mb-3">
               <div class="card-body row">
