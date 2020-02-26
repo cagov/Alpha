@@ -169,7 +169,7 @@ label.custom-control-label {
 							<li class="list-group-item list-group-item-action"><input type="checkbox" id="check-not-sure">
 								<label for="check-not-sure" class="custom-control-label">I’m not sure</label></li>
 							<li class="list-group-item list-group-item-action"><input type="checkbox" id="check-no">
-								<label for="check-no" class="custom-control-label">No</label></li>
+								<label for="check-no" class="custom-control-label">[global-lang-no-camel]</label></li>
 							<li class="list-group-item list-group-item-action"><input type="checkbox" id="check-3">
 								<label for="check-3" class="custom-control-label">Medicaid/Medi-Cal</label></li>
 							<li class="list-group-item list-group-item-action"><input type="checkbox" id="check-4">
@@ -206,7 +206,7 @@ label.custom-control-label {
 								<label for="check-19" class="custom-control-label">Federal Veterans and Survivors Pension Benefit Program</label></li>	
 						</ul>	
 						<p>
-						<input class="btn btn-primary" type="submit" value="Next" id="btn-next" aria-disabled="true" disabled>
+						<input class="btn btn-primary" type="submit" value="[lang-next]" id="btn-next" aria-disabled="true" disabled>
 						</p>
 					</div>
 				</form>
@@ -241,7 +241,7 @@ label.custom-control-label {
 							<div class="form-group">
 							<input type="number" required="required" min="1" max="999" class="form-control form-control-md col-lg-6" id="lst-household-size" name="data">
 
-							<p><input class="btn btn-primary mt-3" type="submit" value="Next" id="btn-select-people">
+							<p><input class="btn btn-primary mt-3" type="submit" value="[lang-next]" id="btn-select-people">
 								</p>
 							</div>
 						</form>
@@ -255,8 +255,8 @@ label.custom-control-label {
 				<div class="row">
 					<div class="col-lg-8">
 						<h2>Is your household’s total income below $<span id="spn-income-cap"></span>?</h2>
-						<button type="button" class="btn btn-primary"  id="btn-yes">Yes</button>
-						<button type="button" class="btn btn-primary ml-2" id="btn-no">No</button>
+						<button type="button" class="btn btn-primary"  id="btn-yes">[global-lang-yes-camel]</button>
+						<button type="button" class="btn btn-primary ml-2" id="btn-no">[global-lang-no-camel]</button>
 						<div class="more">
 						<a href class="" onclick="show('div-checkform')">Back to last question</a>
 						</div>

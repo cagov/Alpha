@@ -42,8 +42,16 @@ function langloop() {
 
   //validate for unique combinations of paths/tokens
   const diff = csvresults.length-[...new Set(csvresults.map(item => item.path+item.token))].length
-  if(diff>0)
-    throw console.error(globalfilepath+` has ${diff} non-distinct path/token/en combo(s)!`)
+  if(diff>0) {
+    //Find first dupe and report
+    const dupe = csvresults.find((value,index) => 
+      csvresults.find((value2,index2) => 
+        index!=index2 && (value.path+value.token)==(value2.path+value2.token))
+    )
+
+    throw console.error(globalfilepath+` has ${diff} non-distinct path/token/en combo(s)! =>\n\n ${JSON.stringify(dupe)}`)
+  }
+
 
   //Sort the CSV so that longer tokens are done first
   sortedcsvresults = csvresults.sort((a,b) => 100*(b.path.length-a.path.length)+b.token.length-a.token.length)
