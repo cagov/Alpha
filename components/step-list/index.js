@@ -18,10 +18,10 @@ class CWDSStepList extends HTMLElement {
       expandSection(section)
       section.setAttribute('data-collapsed', 'false')
       section.setAttribute('aria-hidden', 'false')
-      this.classList.remove('list-open')
+      this.classList.add('list-open')      
     } else {
       collapseSection(section)
-      this.classList.add('list-open')
+      this.classList.remove('list-open')
     }
   }
 }

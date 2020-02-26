@@ -1,6 +1,6 @@
 {
   "name": "@cagov/step-list",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "This custom element provides expansion and contraction inside a list with show/hide links",
   "main": "index.js",
   "scripts": {
