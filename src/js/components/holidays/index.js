@@ -1,13 +1,5 @@
 class CWDSHolidays extends HTMLElement {
   connectedCallback() {
-    document.querySelectorAll('a[href*="#credits"]').forEach(item => {
-      item.addEventListener('click',function(event) {
-        const height = document.querySelector('.js-credits .card-container').style.height
-        if (!height || height == '0px')
-          document.querySelector('.js-credits button.accordion-alpha').click()
-      })
-    })
-
     const htmllang = document.querySelector("html").attributes["lang"].value
     const langquery = htmllang==="en"?"":`?lang=${htmllang}`
 
@@ -51,6 +43,15 @@ class CWDSHolidays extends HTMLElement {
 
       addrows(document.getElementById("js-tbody-template-2020-results"),2020)
       addrows(document.getElementById("js-tbody-template-2021-results"),2021)
+
+      //Add events for the holiday credit links to expand the bottom details
+      document.querySelectorAll('a[href*="#credits"]').forEach(item => 
+        item.addEventListener('click',function(event) {
+          const height = document.querySelector('.js-credits .card-container').style.height
+          if (!height || height == '0px')
+            document.querySelector('.js-credits button.accordion-alpha').click()
+        })
+      )
     })
   }
 }
