@@ -42,24 +42,26 @@ document
   });
 
 function templateHTML(inputval) {
+  let isZip = false;
   if (inputval.match(/^\d+$/)) {
     // we are dealing with a zip code
+    isZip = true;
     fetch("https://api.alpha.ca.gov/countyfromzip/" + inputval)
       .then(response => {
         return response.json();
       })
       .then(myzip => {
-        lookupSuccess(myzip.county, inputval);
+        lookupSuccess(myzip.county, inputval, isZip);
       })
       .catch(e => {
         lookupFail();
       });
   } else {
-    lookupSuccess(inputval, inputval);
+    lookupSuccess(inputval, inputval, isZip);
   }
 }
 
-function lookupSuccess(inputCounty, inputval) {
+function lookupSuccess(inputCounty, inputval, isZip) {
   let chosenCounty;
   counties.forEach(county => {
     if (county.name.toLowerCase() == inputCounty.toLowerCase()) {
@@ -75,6 +77,13 @@ function lookupSuccess(inputCounty, inputval) {
       ".js-county-alert"
     ).innerHTML = `<li class="card mb-20  border-0">
     <h2>Alerts for ${inputval}</h2>
+    ${(function() {
+      if(isZip) {
+        return `<p>Your zip code, ${inputval}, is in ${(county.toLowerCase().indexOf('county') > -1) ? county : county + ' County'}.</p>`
+      } else {
+        return ``;
+      }
+    })()}
       <div class="card-body bg-light">
         <a class="action-link" href="${url}">
           Sign up for ${(county.toLowerCase().indexOf('county') > -1) ? county : county + ' County'} alerts
