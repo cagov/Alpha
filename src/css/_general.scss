@@ -844,11 +844,10 @@ li .action-link:focus-within {
 }
 
 .awesomplete {
-    display: block;
+    display: contents;
     position: relative;
     margin-right: .5rem;
 }
-
 
 
 /*--------- Tool Tip ----------*/
