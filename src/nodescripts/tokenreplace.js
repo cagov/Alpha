@@ -125,19 +125,9 @@ function replaceonelanguage(targetlang) {
   }
 } //replaceonelanguage
 
-
 function replaceonetoken(data,targetlang,files) {
   const from = [new RegExp(data.token
-    .replace(/\//,'\\\/')
-    .replace(/\[/,'\\\[')
-    .replace(/\]/,'\\\]')
-    .replace(/\)/,'\\\)')
-    .replace(/\(/,'\\\(')
-    .replace(/\*/,'\\\*')
-    .replace(/\$/g,'\\\$')
-    .replace(/\?/,'\\\?')
-    .replace(/\:/,'\\\:')
-    .replace(/\-/,'\\\-')
+    .replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&')// escape regex characters
 
     ,'g')] //add token with literal square brackets
 
