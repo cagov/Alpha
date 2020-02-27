@@ -1,7 +1,9 @@
 import getCounties from "./counties.js";
 import getZips from "./zips.js";
 
-if(document.querySelector('body.js-alerts')) {
+if (document.querySelector("body.js-alerts")) {
+  console.log("hi");
+
   const counties = getCounties();
   const zips = getZips();
 
@@ -41,60 +43,68 @@ if(document.querySelector('body.js-alerts')) {
       var finalval = this.querySelector("input").value;
       templateHTML(finalval);
     });
-}
 
-function templateHTML(inputval) {
-  let isZip = false;
-  if (inputval.match(/^\d+$/)) {
-    // we are dealing with a zip code
-    isZip = true;
-    fetch("https://api.alpha.ca.gov/countyfromzip/" + inputval)
-      .then(response => {
-        return response.json();
-      })
-      .then(myzip => {
-        lookupSuccess(myzip.county, inputval, isZip);
-      })
-      .catch(e => {
-        lookupFail();
-      });
-  } else {
-    lookupSuccess(inputval, inputval, isZip);
-  }
-}
-
-function lookupSuccess(inputCounty, inputval, isZip) {
-  let chosenCounty;
-  counties.forEach(county => {
-    if (county.name.toLowerCase() == inputCounty.toLowerCase()) {
-      chosenCounty = county;
+  function templateHTML(inputval) {
+    let isZip = false;
+    if (inputval.match(/^\d+$/)) {
+      // we are dealing with a zip code
+      isZip = true;
+      fetch("https://api.alpha.ca.gov/countyfromzip/" + inputval)
+        .then(response => {
+          return response.json();
+        })
+        .then(myzip => {
+          lookupSuccess(myzip.county, inputval, isZip);
+        })
+        .catch(e => {
+          lookupFail();
+        });
+    } else {
+      lookupSuccess(inputval, inputval, isZip);
     }
-  });
-  if (!chosenCounty) {
-    lookupFail();
-  } else {
-    let county = chosenCounty.name;
-    let url = chosenCounty.url;
-    document.querySelector(
-      ".js-county-alert"
-    ).innerHTML = `<li class="card mb-20  border-0">
+  }
+
+  function lookupSuccess(inputCounty, inputval, isZip) {
+    let chosenCounty;
+    counties.forEach(county => {
+      if (county.name.toLowerCase() == inputCounty.toLowerCase()) {
+        chosenCounty = county;
+      }
+    });
+    if (!chosenCounty) {
+      lookupFail();
+    } else {
+      let county = chosenCounty.name;
+      let url = chosenCounty.url;
+      document.querySelector(
+        ".js-county-alert"
+      ).innerHTML = `<li class="card mb-20  border-0">
     <h2>Alerts for ${inputval}</h2>
     ${(function() {
-      if(isZip) {
-        return `<p>Your zip code, ${inputval}, is in ${(county.toLowerCase().indexOf('county') > -1) ? county : county + ' County'}.</p>`
+      if (isZip) {
+        return `<p>Your zip code, ${inputval}, is in ${
+          county.toLowerCase().indexOf("county") > -1
+            ? county
+            : county + " County"
+        }.</p>`;
       } else {
         return ``;
       }
     })()}
       <div class="card-body bg-light">
         <a class="action-link" href="${url}">
-          Sign up for ${(county.toLowerCase().indexOf('county') > -1) ? county : county + ' County'} alerts
+          Sign up for ${
+            county.toLowerCase().indexOf("county") > -1
+              ? county
+              : county + " County"
+          } alerts
         </a>
       </div>
     </li>`;
+    }
   }
-}
 
-function lookupFail() {
-  document.querySelector(".invalid-feedback").style.display = "block";
+  function lookupFail() {
+    document.querySelector(".invalid-feedback").style.display = "block";
+  }
 }
