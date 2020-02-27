@@ -11,10 +11,6 @@ if(document.querySelector('body.js-water')) {
     zoom: 13
   });
 
-  // look for pwsid in url, should also have location
-
-  console.log('what the fuck');
-  
   window.geocoder = new MapboxGeocoder({
     accessToken: mapboxgl.accessToken,
     placeholder: " ",
@@ -24,8 +20,12 @@ if(document.querySelector('body.js-water')) {
     window.waterPoint = item;
     let waterButton = document.querySelector(".js-water-lookup");
 
-    waterButton.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-    Loading...`;
+    const template = document.getElementById("loading")
+    const node = template.content.cloneNode(true)
+    
+    console.log(node.querySelector('div').innerHTML)
+
+    waterButton.innerHTML = node.querySelector('div').innerHTML;
     document.querySelector(".system-data").style.display = "none";
 
     // make call to endpoint to find system

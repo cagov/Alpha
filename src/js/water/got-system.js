@@ -172,29 +172,33 @@ export default function gotSystem(systemData) {
 
 
 function displaySafe(website_blurb, system) {
-  let html = `<h2>Your water quality</h2>
-  <p>Your tap water met <a href="https://mywaterquality.ca.gov/safe_to_drink/">California safety standards</a> as of August 30, 2019. </p>
-    ${getSystemHTMLSafe(website_blurb, system)}`;
+  const template = document.getElementById("water-detail-template")
+  const node = template.content.cloneNode(true)
+  let html = `${node.querySelector('.safe-desc').innerHTML} ${getSystemHTMLSafe(website_blurb, system, node)}`;
 
   document.querySelector(".system-status").innerHTML = html;
 }
 
-function getSystemHTMLSafe(website_blurb, system) {
-  return `<h3 class="card-title">Where your water comes from</h3>
-    <p>Your water system is <strong>${capitalizer(system.properties.name)}</strong>.
-    They test your water before it leaves their facilities. Your water system also has the most up-to-date and detailed information about your water. They publish a yearly report on your water quality called a <a href="https://www.epa.gov/ccr/ccr-information-consumers">Consumer Confidence Report</a>. ${website_blurb} </p>`;
+function getSystemHTMLSafe(website_blurb, system, node) {
+  return `${node.querySelector('.comes-from').innerHTML}
+    <p>${node.querySelector('.your-water-sys').innerHTML} <strong>${capitalizer(system.properties.name)}</strong>.
+    ${node.querySelector('.when-tested').innerHTML}
+    ${website_blurb} </p>`;
 }
 
 function getSystemHTMLUnSafe(website_blurb, system) {
-  return `<h3 class="card-title">Where your water comes from</h3>
-    <p class="card-text">Your water system 
-is <strong>${capitalizer(system.properties.name)}</strong>.
-    They test your water before it leaves their facilities. Your water system also keeps the most up-to-date and detailed information about your water. They publish a yearly report on your water quality called a <a href="https://www.epa.gov/ccr/ccr-information-consumers">Consumer Confidence Report</a>. </p> 
-    <p>Now that your water is not safe to drink, they will have advice about what to do. ${website_blurb}</p>`;
+  const template = document.getElementById("water-detail-template")
+  const node = template.content.cloneNode(true)
+  return `${node.querySelector('.comes-from').innerHTML}
+    <p class="card-text">${node.querySelector('.your-water-sys').innerHTML} <strong>${capitalizer(system.properties.name)}</strong>.
+    ${node.querySelector('.system-test-desc').innerHTML}</p>
+    <p>${node.querySelector('.advice').innerHTML} ${website_blurb}</p>`;
 }
 
 function cleanup() {
+  const template = document.getElementById("water-detail-template")
+  const node = template.content.cloneNode(true)
   let waterButton = document.querySelector(".js-water-lookup");
-  waterButton.innerHTML = `Check your water`;
+  waterButton.innerHTML = `${node.querySelector('.check-water').innerHTML}`;
   document.querySelector(".system-data").style.display = "block";
 }
