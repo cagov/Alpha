@@ -228,7 +228,6 @@ path,token,en,es,zh
 /apply-for-cal-grant,,Apply for a Cal Grant (college financial aid),Solicitar una beca Cal Grant (ayuda financiera para la universidad),申请加州格兰特（上大学助学金）
 /apply-for-cal-grant,,"Deadline to apply: Monday, March 2, 2020, 11:59 p.m.","Fecha límite para solicitar: Lunes, 2 de marzo de 2020, 11:59p.m.",申请截止日期：星期一，2020年3月2日晚上11:59
 /apply-for-cal-grant,,A Cal Grant is money for college you don’t have to pay back.,La beca Cal Grant es dinero para la universidad no tiene que pagar.,加州格兰特大学学费并不需要支付。
-/apply-for-cal-grant,,Steps to apply ,Pasos para solicitar una beca Cal Grant,步骤申请加州格兰特
 /apply-for-cal-grant,,"Apply for financial aid, if you haven't already","Presentar una solicitud para ayuda financiera, si no lo ha hecho ",申请财政援助，如果你还没有做
 /apply-for-cal-grant,,Submit the Free Application for Federal Student Aid (FAFSA),Presentar la Solicitud Gratuita de Ayuda Federal para Estudiantes (FAFSA),提交联邦学生援助免费申请（FAFSA）
 /apply-for-cal-grant,,the California Dream Act Application (CADAA),la Solicitud Dream Act de California (CADAA),应用加州梦想法案（Cadaa）
@@ -485,7 +484,13 @@ path,token,en,es,zh
 /contact-us/results/,,Contact us - Alpha.CA.gov,Contáctenos - Alpha.CA.gov,联系我们 -  Alpha.CA.gov
 /find-shelter,,Find shelters near you,Encuentre refugios mas cercano de usted ,查找离您最近的庇护所
 /find-shelter,,Search for shelters in every California county,Busque refugios in cada condado de California,寻求庇护了在加利福尼亚州各县
-/find-shelter,,"Search for temporary housing, disaster relief shelters, and homeless shelters near you.",,#VALUE!
+/find-shelter,,"Search for temporary housing, disaster relief shelters, and homeless shelters near you.","Busque alojamiento temporal, refugios de socorro, y refugios cerca de usted. 
+
+","寻找临时住房，应急避难场所，以及您附近收容所。
+
+"
+/find-shelter,,"Please enter your address, city, or zip code:","Por favor introduzca se direccion, ciudad, o codigo postal",
+/find-shelter,,Find shelters,Encuentre refugios,
 /check-your-tap-water-quality,,Check your tap water quality,Examine la calidad del agua del grifo,检查自来水质量
 /check-your-tap-water-quality,,Loading...,Buscando...,搜索...
 /check-your-tap-water-quality,,Your water quality,La calidad del agua,水质
