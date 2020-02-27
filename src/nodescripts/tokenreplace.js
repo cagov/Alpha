@@ -108,7 +108,7 @@ function replaceonelanguage(targetlang) {
 
   const nomatch = sortedcsvresults.find(x=>x.numMatches==0)
   if(nomatch)
-    throw console.error(`no match for "${nomatch.path} -> ${nomatch.token}"`)
+    console.warn(`no match for "${nomatch.path} -> ${nomatch.token}"`)
 
   if(targetlang=='en') 
     //English default goes to root
