@@ -50,7 +50,9 @@ function show(id) {
 }
 
 function showone(id) {
-  document.getElementById(id).classList.remove("d-none");
+  if(document.getElementById(id)) {
+    document.getElementById(id).classList.remove("d-none");
+  }
 }
 
 function updateSelections() {
@@ -88,44 +90,49 @@ function noclick() {
     document.getElementById("lst-household-size").focus();
   }
 }
+if(document.getElementById("btn-select-people")) {
+  document
+    .getElementById("btn-select-people")
+    .addEventListener("click", function() {
+      if (html5formvalid(this)) {
+        const people = Number(
+          document.getElementById("lst-household-size").value || 0
+        );
 
-document
-  .getElementById("btn-select-people")
-  .addEventListener("click", function() {
-    if (html5formvalid(this)) {
-      const people = Number(
-        document.getElementById("lst-household-size").value || 0
-      );
+        let bucks = 0;
+        switch (people) {
+          case 1:
+          case 2:
+            bucks = 27500;
+            break;
+          case 3:
+            bucks = 31900;
+            break;
+          default:
+            bucks = 38800 + 6900 * (people - 3);
+        }
 
-      let bucks = 0;
-      switch (people) {
-        case 1:
-        case 2:
-          bucks = 27500;
-          break;
-        case 3:
-          bucks = 31900;
-          break;
-        default:
-          bucks = 38800 + 6900 * (people - 3);
+        document.getElementById(
+          "spn-income-cap"
+        ).innerText = bucks.toLocaleString();
+
+        show("div-total-income");
       }
+    });
+}
 
-      document.getElementById(
-        "spn-income-cap"
-      ).innerText = bucks.toLocaleString();
+if(document.getElementById("btn-yes")) {
+  document.getElementById("btn-yes").addEventListener("click", function() {
+    show("div-qualified-income");
+  });  
+}
 
-      show("div-total-income");
-    }
+if(document.getElementById("btn-no")) {
+  document.getElementById("btn-no").addEventListener("click", function() {
+    if (document.querySelector("li.active #check-no")) show("div-not-qualified");
+    else show("div-not-sure-qualified");
   });
-
-document.getElementById("btn-yes").addEventListener("click", function() {
-  show("div-qualified-income");
-});
-
-document.getElementById("btn-no").addEventListener("click", function() {
-  if (document.querySelector("li.active #check-no")) show("div-not-qualified");
-  else show("div-not-sure-qualified");
-});
+}
 
 function itemclick(o) {
   o.addEventListener("click", function() {
