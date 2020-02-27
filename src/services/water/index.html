@@ -104,5 +104,37 @@
       <%= require('html-loader!../../partials/alphabar.html') %> <%=
       require('html-loader!../../partials/ga.html') %>
     </footer>
+
+    <template id="loading">
+      <div>
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        Loading...
+      </div>
+    </template>
+    <template id="water-detail-template">
+      <div class="safe-desc">
+        <h2>Your water quality</h2>
+        <p>Your tap water met <a href="https://mywaterquality.ca.gov/safe_to_drink/">California safety standards</a> as of August 30, 2019. </p>
+      </div>
+      <div class="comes-from">
+        <h3 class="card-title">Where your water comes from</h3>
+      </div>
+      <div class="system-test-desc">
+        They test your water before it leaves their facilities. Your water system also keeps the most up-to-date and detailed information about your water. They publish a yearly report on your water quality called a <a href="https://www.epa.gov/ccr/ccr-information-consumers">Consumer Confidence Report</a>.
+      </div>
+      <div class="your-water-sys">Your water system is</div>
+      <div class="advice">
+        Now that your water is not safe to drink, they will have advice about what to do.
+      </div>
+      <div class="when-tested">
+        They test your water before it leaves their facilities. Your water system also has the most up-to-date and detailed information about your water. They publish a yearly report on your water quality called a <a href="https://www.epa.gov/ccr/ccr-information-consumers">Consumer Confidence Report</a>.
+      </div>
+      <div class="check-water">Check your water</div>
+    </template>
+
+
+
+
+
   </body>
 </html>
