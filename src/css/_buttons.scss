@@ -130,3 +130,8 @@ button.card-header.accordion-alpha:focus {
     outline: 2px solid #004abc;
 }
 
+.btn-primary.disabled, .btn-primary:disabled {
+    color: #fff;
+    background-color: #2d2d2d;
+    border-color: #2d2d2d;
+}
