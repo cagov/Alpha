@@ -131,8 +131,10 @@ function replaceonetoken(data,targetlang,files) {
     .replace(/\(/,'\\\(')
     .replace(/\*/,'\\\*')
     .replace(/\$/g,'\\\$')
+    .replace(/\?/,'\\\?')
     .replace(/\:/,'\\\:')
     .replace(/\-/,'\\\-')
+
     ,'g')] //add token with literal square brackets
 
   const to = data[targetlang]
