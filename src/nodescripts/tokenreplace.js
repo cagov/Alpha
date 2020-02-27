@@ -18,6 +18,8 @@ const targetlangs = [
   {code:'zh',name:'中文(简体)'}
 ]
 
+var remainingfolders = targetlangs.length //for checking if it is safe to delete
+
 const csvresults = []
 let sortedcsvresults = []
 let fileslist = []
@@ -33,8 +35,7 @@ fs.createReadStream(globalfilepath)
     data['numMatches']=0
     csvresults.push(data)
   })
-  .on('end', langloop)
-
+  .on('end',langloop)
 
 
 function langloop() {
@@ -116,9 +117,12 @@ function replaceonelanguage(targetlang) {
       console.log(targetlang + ': Default Root Complete')
     })
 
-  fse.remove(source)
-
   console.log(targetlang + ': Language Replacement Complete')
+
+  if(!--remainingfolders) { //When the last folder is copied, delete the source
+    fse.remove(source)
+    console.log('Removed temp lang folder')
+  }
 } //replaceonelanguage
 
 
