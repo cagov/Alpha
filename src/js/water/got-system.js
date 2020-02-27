@@ -137,7 +137,7 @@ export default function gotSystem(systemData) {
             ${(function() {
               if (analyteDetails.get(analyte.ANALYTE_NAME)) {
                 let analyteDets = analyteDetails.get(analyte.ANALYTE_NAME);
-                return `<div class="col">
+                return `<div>
                   <h4>When ${analyteDets.name} was found</h4>
                   <p>On ${new Date(analyte.VIOL_BEGIN_DATE).toLocaleString('en-US', { year: 'numeric', month: 'long',  day: 'numeric'})}, your water system found ${analyteDets.name} in your water.</p>
                   <h4>Potential health effects from long-term exposure to ${analyteDets.name}</h4>
