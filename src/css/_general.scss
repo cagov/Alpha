@@ -118,18 +118,18 @@ a:hover,
     color: #004abc;
     background: #F5F9FF;
     display: inline-block;
-    padding: .5rem;
+    padding: .5rem .5rem;
     padding-left: 1.75rem;
     font-size: 1.2rem;
     text-decoration: none;
     border-bottom: 2px solid #004abc;
-    line-height: 3rem;
-    margin-bottom: 1.5rem;
-    margin-top: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .action-link,
-a.action-link::before {
+a.action-link::after {
     background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIxMnB4IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA5IDEyIiB3aWR0aD0iOXB4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnNrZXRjaD0iaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoL25zIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHRpdGxlLz48ZGVzYy8+PGRlZnMvPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiPjxnIGZpbGw9IiMwMDAwMDAiIGlkPSJDb3JlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjYwLjAwMDAwMCwgLTkwLjAwMDAwMCkiPjxnIGlkPSJjaGV2cm9uLXJpZ2h0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNjAuNTAwMDAwLCA5MC4wMDAwMDApIj48cGF0aCBkPSJNMSwwIEwtMC40LDEuNCBMNC4yLDYgTC0wLjQsMTAuNiBMMSwxMiBMNyw2IEwxLDAgWiIgaWQ9IlNoYXBlIi8+PC9nPjwvZz48L2c+PC9zdmc+");
     background-size: 1rem;
     background-repeat: no-repeat;
@@ -209,6 +209,26 @@ a.list-group-item {
     padding: 20px;
 }
 
+a.list-group-item-action {
+    color: #000000;
+    text-decoration: none;
+}
+
+
+.list-group-item-action {
+    color: #000;
+}
+
+a.list-group-item.list-group-item-action.lead {
+    //text-decoration: underline;
+    color: #004abc;
+	border-bottom: solid;
+	border-top: 1px solid rgba(0,0,0,0.125);
+	border-radius: .25rem;
+	margin: 9px;
+}
+
+
 .list-group-item:first-child {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -233,16 +253,6 @@ a.list-group-item {
     border-bottom: 0;
     font-family: "Public Sans Bold", sans-serif;
     padding-left: 33px;
-}
-
-a.list-group-item-action {
-    color: #000000;
-    text-decoration: none;
-}
-
-
-.list-group-item-action {
-    color: #000;
 }
 
 .list-group-item-action:hover, .list-group-item-action:hover, .list-group-item-action:focus {
@@ -786,12 +796,6 @@ figcaption {
 }
 
 
-a.list-group-item.list-group-item-action.lead {
-    text-decoration: underline;
-    color: #004abc;
-}
-
-
 li .list-group-item.inner-list:focus-within {
     outline: none;
 }
@@ -839,6 +843,11 @@ li .action-link:focus-within {
     padding-top: 1rem;
 }
 
+.awesomplete {
+    display: contents;
+    position: relative;
+    margin-right: .5rem;
+}
 
 
 /*--------- Tool Tip ----------*/
@@ -876,7 +885,7 @@ li .action-link:focus-within {
 /*--------- Check box list group ----------*/
 	
 .list-group-item-action.list-group-item.active {
-    background-color: #000;
+    background-color: #0f1e6b;
     border-color: #000;
 	color:white;
 }
