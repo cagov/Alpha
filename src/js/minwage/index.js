@@ -2,88 +2,90 @@ import * as wageJsonData from './wage-data.json';
 import * as citiesJson from '../../json/just-cities.json';
 import * as uniqueZipJson from '../../json/unique-zips-slim.json';
 
-const apiurl = 'https://api.alpha.ca.gov/caziplookup/';
+if(document.querySelector('body.js-min-wage')) {
+  const apiurl = 'https://api.alpha.ca.gov/caziplookup/';
 
-let trStrings = {
-  "es": {
-    "key": "es",
-    "The minimum wage in": "Mostrar bancos de alimentos cerca de",
-    "Minimum wage rates as of": "Aumento de salario mínimo a partir del",
-    "Place": "Ubicación",
-    "Rate": "Tasa",
-    "25 or fewer": "25 o menos",
-    "26 or more": "26 o más",
-    "is": "es",
-    "hour": "hora",
-    "employees": "empleados",
-    "Employers with": "Empleadores con",
-    "for employers with": "para empleadores con"
-  },
-  "en": {
-    "key": "en-US",
-    "The minimum wage in": "The minimum wage in",
-    "Minimum wage rates as of": "Minimum wage rates as of",
-    "Place": "Place",
-    "Rate": "Rate",
-    "25 or fewer": "25 or fewer",
-    "26 or more": "26 or more",
-    "is": "is",
-    "hour": "hour",
-    "employees": "employees",
-    "Employers with": "Employers with",
-    "for employers with": "for employers with"
+  let trStrings = {
+    "es": {
+      "key": "es",
+      "The minimum wage in": "Mostrar bancos de alimentos cerca de",
+      "Minimum wage rates as of": "Aumento de salario mínimo a partir del",
+      "Place": "Ubicación",
+      "Rate": "Tasa",
+      "25 or fewer": "25 o menos",
+      "26 or more": "26 o más",
+      "is": "es",
+      "hour": "hora",
+      "employees": "empleados",
+      "Employers with": "Empleadores con",
+      "for employers with": "para empleadores con"
+    },
+    "en": {
+      "key": "en-US",
+      "The minimum wage in": "The minimum wage in",
+      "Minimum wage rates as of": "Minimum wage rates as of",
+      "Place": "Place",
+      "Rate": "Rate",
+      "25 or fewer": "25 or fewer",
+      "26 or more": "26 or more",
+      "is": "is",
+      "hour": "hour",
+      "employees": "employees",
+      "Employers with": "Employers with",
+      "for employers with": "for employers with"
+    }
   }
-}
 
-let translations = trStrings.en;
-if(window.location.pathname.indexOf('/es/')==0) {
-  translations = trStrings.es;
-}
-
-// display HTML of add city wages
-let wageJson = wageJsonData.MinimumWage[0]['2020-01-01T08:00:00'];
-let html = buildDisplay(wageJsonData.MinimumWage);
-document.querySelector('.display-wage-by-city').innerHTML = html;
-
-// handle search autocomplete
-let uniqueZipArray = [];
-let zipMap = new Map();
-
-let cityNames = new Map();
-let cleanCities = [];
-citiesJson.default.forEach( (item) => {
-  cityNames.set(item.replace(', CA', '').toLowerCase(), item)
-  cleanCities.push(item.replace(', CA', ''))
-})
-
-
-// let awesompleteList = [...cleanCities, ...uniqueZipArray];
-let awesompleteList = [...cleanCities, ...uniqueZipJson.default];
-
-new Awesomplete('input[data-multiple]', {
-  list: awesompleteList,
-  filter: function(text, input) {
-    return Awesomplete.FILTER_CONTAINS(text, input.match(/[^,]*$/)[0]);
-  },
-
-  item: function(text, input) {
-    document.querySelector('.wage-city-search .invalid-feedback').style.display = 'none';
-    return Awesomplete.ITEM(text, input.match(/[^,]*$/)[0]);
-  },
-
-  replace: function(text) {
-    var before = this.input.value.match(/^.+,\s*|/)[0];
-    let finalval = before + text;
-    this.input.value = finalval;
-    findWageMatch(finalval, wageJson, zipMap, cityNames);
+  let translations = trStrings.en;
+  if(window.location.pathname.indexOf('/es/')==0) {
+    translations = trStrings.es;
   }
-});
 
-document.querySelector('.js-wage-lookup').addEventListener('click',(event) => {
-  event.preventDefault();
-  let location = document.getElementById('location-query').value;
-  findWageMatch(location, wageJson, zipMap, cityNames);
-})
+  // display HTML of add city wages
+  let wageJson = wageJsonData.MinimumWage[0]['2020-01-01T08:00:00'];
+  let html = buildDisplay(wageJsonData.MinimumWage);
+  document.querySelector('.display-wage-by-city').innerHTML = html;
+
+  // handle search autocomplete
+  let uniqueZipArray = [];
+  let zipMap = new Map();
+
+  let cityNames = new Map();
+  let cleanCities = [];
+  citiesJson.default.forEach( (item) => {
+    cityNames.set(item.replace(', CA', '').toLowerCase(), item)
+    cleanCities.push(item.replace(', CA', ''))
+  })
+
+
+  // let awesompleteList = [...cleanCities, ...uniqueZipArray];
+  let awesompleteList = [...cleanCities, ...uniqueZipJson.default];
+
+  new Awesomplete('input[data-multiple]', {
+    list: awesompleteList,
+    filter: function(text, input) {
+      return Awesomplete.FILTER_CONTAINS(text, input.match(/[^,]*$/)[0]);
+    },
+
+    item: function(text, input) {
+      document.querySelector('.wage-city-search .invalid-feedback').style.display = 'none';
+      return Awesomplete.ITEM(text, input.match(/[^,]*$/)[0]);
+    },
+
+    replace: function(text) {
+      var before = this.input.value.match(/^.+,\s*|/)[0];
+      let finalval = before + text;
+      this.input.value = finalval;
+      findWageMatch(finalval, wageJson, zipMap, cityNames);
+    }
+  });
+
+  document.querySelector('.js-wage-lookup').addEventListener('click',(event) => {
+    event.preventDefault();
+    let location = document.getElementById('location-query').value;
+    findWageMatch(location, wageJson, zipMap, cityNames);
+  })
+}
 
 function findWageMatch(city, wageJson, zipMap, cityNames) {
   // if there are any letters this is not a zip code
