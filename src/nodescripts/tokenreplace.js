@@ -106,10 +106,6 @@ function replaceonelanguage(targetlang) {
         ]})
   })
 
-  const nomatch = sortedcsvresults.find(x=>x.numMatches==0)
-  if(nomatch)
-    console.warn(`no match for "${nomatch.path} -> ${nomatch.token}"`)
-
   if(targetlang=='en') 
     //English default goes to root
     fse.copy(getdestination(targetlang), sourcefolder, {overwrite: true, errorOnExist: false}, err => {
@@ -119,9 +115,12 @@ function replaceonelanguage(targetlang) {
 
   console.log(targetlang + ': Language Replacement Complete')
 
-  if(!--remainingfolders) { //When the last folder is copied, delete the source
+  if(!--remainingfolders) { //When the last folder is copied, delete the source and report on nomatches
     fse.remove(source)
     console.log('Removed temp lang folder')
+
+    sortedcsvresults.filter(x=>x.numMatches==0).forEach(x=>
+      console.warn(`WARNING - no language match for "${x.path} -> ${x.token}"`))
   }
 } //replaceonelanguage
 
