@@ -1,5 +1,6 @@
 import '@webcomponents/webcomponentsjs'
 import 'whatwg-fetch'
+import './polyfills/endswith.js'
 import './libs/awesomplete.js'
 import '@cagov/accordion'
 import '@cagov/step-list'

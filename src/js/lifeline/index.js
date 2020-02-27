@@ -50,7 +50,9 @@ function show(id) {
 }
 
 function showone(id) {
-  document.getElementById(id).classList.remove("d-none");
+  if(document.getElementById(id)) {
+    document.getElementById(id).classList.remove("d-none");
+  }
 }
 
 function updateSelections() {
@@ -67,27 +69,28 @@ function updateSelections() {
 
 //if(document.getElementById("#check-not-sure")) {
 
-  document
-    .querySelectorAll("#check-not-sure,#check-no")
-    .forEach(x => x.addEventListener("click", () => setTimeout(noclick, 1000)));
+document
+  .querySelectorAll("#check-not-sure,#check-no")
+  .forEach(x => x.addEventListener("click", () => setTimeout(noclick, 1000)));
+
+if (document.querySelector("#btn-next")) {
   document.querySelector("#btn-next").addEventListener("click", nextclick);
+}
 
-  function nextclick() {
-    updateSelections();
-    show("div-qualified");
+function nextclick() {
+  updateSelections();
+  show("div-qualified");
+  showone("div-return");
+}
+
+function noclick() {
+  if (document.querySelector("li.active #check-not-sure,li.active #check-no")) {
+    show("div-no-not-sure");
     showone("div-return");
+    document.getElementById("lst-household-size").focus();
   }
-
-  function noclick() {
-    if (
-      document.querySelector("li.active #check-not-sure,li.active #check-no")
-    ) {
-      show("div-no-not-sure");
-      showone("div-return");
-      document.getElementById("lst-household-size").focus();
-    }
-  }
-
+}
+if(document.getElementById("btn-select-people")) {
   document
     .getElementById("btn-select-people")
     .addEventListener("click", function() {
@@ -116,89 +119,93 @@ function updateSelections() {
         show("div-total-income");
       }
     });
+}
 
+if(document.getElementById("btn-yes")) {
   document.getElementById("btn-yes").addEventListener("click", function() {
     show("div-qualified-income");
-  });
+  });  
+}
 
+if(document.getElementById("btn-no")) {
   document.getElementById("btn-no").addEventListener("click", function() {
-    if (document.querySelector("li.active #check-no"))
-      show("div-not-qualified");
+    if (document.querySelector("li.active #check-no")) show("div-not-qualified");
     else show("div-not-sure-qualified");
   });
+}
 
-  function itemclick(o) {
-    o.addEventListener("click", function() {
-      this.parentNode.classList.toggle("active");
+function itemclick(o) {
+  o.addEventListener("click", function() {
+    this.parentNode.classList.toggle("active");
 
-      //X-able the next button based on selections
-      const button = document.querySelector("#btn-next");
-      if (document.querySelector(".list-group li.active")) {
-        button.setAttribute("aria-disabled", "false");
-        button.removeAttribute("disabled");
-      } else {
-        button.setAttribute("aria-disabled", "true");
-        button.setAttribute("disabled", "");
+    //X-able the next button based on selections
+    const button = document.querySelector("#btn-next");
+    if (document.querySelector(".list-group li.active")) {
+      button.setAttribute("aria-disabled", "false");
+      button.removeAttribute("disabled");
+    } else {
+      button.setAttribute("aria-disabled", "true");
+      button.setAttribute("disabled", "");
+    }
+
+    updateSelections();
+  });
+}
+
+//Add click event to every checkbox listitem
+Array.prototype.forEach.call(
+  document.querySelectorAll(".list-group-item input"),
+  itemclick
+);
+
+//Tooltip support
+Array.prototype.forEach.call(
+  document.querySelectorAll(".tooltip-button"),
+  function(toggletip) {
+    toggletip.setAttribute("type", "button");
+    toggletip.setAttribute("aria-label", "Word Definition");
+
+    //wrap a container around the button
+    var container = document.createElement("span");
+    container.setAttribute("class", "tooltip-container");
+    toggletip.parentNode.insertBefore(container, toggletip);
+    container.appendChild(toggletip);
+
+    // Create the live region
+    var liveRegion = document.createElement("span");
+    liveRegion.setAttribute("role", "status");
+
+    // Place the live region in the container
+    container.appendChild(liveRegion);
+
+    // Get the message from the data-content element
+    var message = toggletip.getAttribute("data-tooltip-content");
+
+    // Toggle the message
+    toggletip.addEventListener("click", function() {
+      liveRegion.innerHTML = "";
+      window.setTimeout(function() {
+        liveRegion.innerHTML =
+          '<span class="tooltip-bubble">' + message + "</span>";
+      }, 100);
+    });
+
+    // Close on outside click
+    document.addEventListener("click", function(e) {
+      if (toggletip !== e.target) {
+        liveRegion.innerHTML = "";
       }
+    });
 
-      updateSelections();
+    // Remove toggletip on ESC
+    toggletip.addEventListener("keydown", function(e) {
+      if ((e.keyCode || e.which) === 27) liveRegion.innerHTML = "";
+    });
+
+    // Remove on blur
+    toggletip.addEventListener("blur", function(e) {
+      liveRegion.innerHTML = "";
     });
   }
-
-  //Add click event to every checkbox listitem
-  Array.prototype.forEach.call(
-    document.querySelectorAll(".list-group-item input"),
-    itemclick
-  );
-
-  //Tooltip support
-  Array.prototype.forEach.call(
-    document.querySelectorAll(".tooltip-button"),
-    function(toggletip) {
-      toggletip.setAttribute("type", "button");
-      toggletip.setAttribute("aria-label", "Word Definition");
-
-      //wrap a container around the button
-      var container = document.createElement("span");
-      container.setAttribute("class", "tooltip-container");
-      toggletip.parentNode.insertBefore(container, toggletip);
-      container.appendChild(toggletip);
-
-      // Create the live region
-      var liveRegion = document.createElement("span");
-      liveRegion.setAttribute("role", "status");
-
-      // Place the live region in the container
-      container.appendChild(liveRegion);
-
-      // Get the message from the data-content element
-      var message = toggletip.getAttribute("data-tooltip-content");
-
-      // Toggle the message
-      toggletip.addEventListener("click", function() {
-        liveRegion.innerHTML = "";
-        window.setTimeout(function() {
-          liveRegion.innerHTML =
-            '<span class="tooltip-bubble">' + message + "</span>";
-        }, 100);
-      });
-
-      // Close on outside click
-      document.addEventListener("click", function(e) {
-        if (toggletip !== e.target) {
-          liveRegion.innerHTML = "";
-        }
-      });
-
-      // Remove toggletip on ESC
-      toggletip.addEventListener("keydown", function(e) {
-        if ((e.keyCode || e.which) === 27) liveRegion.innerHTML = "";
-      });
-
-      // Remove on blur
-      toggletip.addEventListener("blur", function(e) {
-        liveRegion.innerHTML = "";
-      });
-    }
-  );
-  //}
+);
+//}
