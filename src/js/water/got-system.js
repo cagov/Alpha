@@ -180,7 +180,7 @@ function displaySafe(website_blurb, system) {
 }
 
 function getSystemHTMLSafe(website_blurb, system, node) {
-  return `<h3 class="card-title">Where your water comes from</h3>
+  return `${node.querySelector('.comes-from').innerHTML}
     <p>${node.querySelector('.your-water-sys').innerHTML} <strong>${capitalizer(system.properties.name)}</strong>.
     ${node.querySelector('.when-tested').innerHTML}
     ${website_blurb} </p>`;
