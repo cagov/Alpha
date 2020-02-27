@@ -13,6 +13,7 @@ cwds-accordion .card-header {
 cwds-accordion .collapsed {
   display: block;
   overflow: hidden;
+  visibility: hidden;
 }
 
 cwds-accordion .card-header .button {

@@ -185,6 +185,10 @@ cwds-step-list li .step-interior {
 	margin-bottom: 3rem;
 }
 
+cwds-step-list li .details[data-collapsed="true"] {
+	visibility: hidden;
+}
+
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) { 
