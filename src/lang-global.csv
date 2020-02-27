@@ -154,7 +154,6 @@ path,token,en,es,zh
 /services/hire-licensed-contractor-home-improvements,,Hire a licensed contractor for home improvements,Contratar un contratista con licencia para mejorar su hogar,聘请有执照的承包商，以提高你的家
 /services/hire-licensed-contractor-home-improvements,,Hire a licensed contractor for home improvements - Alpha.CA.gov,Contratar un contratista con licencia para mejorar su hogar - Alpha.CA.gov,聘请有执照的承包商，以提高你的家 -  Alpha.CA.gov
 /services/hire-licensed-contractor-home-improvements,,Follow these suggested steps to make home improvements the safe way and protect your home and your money.,Siga estos pasos sugeridos para que las mejoras en su hogar sean de una manera segura y a la vez proteja su hogar y su dinero.,请按照以下步骤建议改善住房的安全，并保护您的家庭的时间和金钱。
-/services/hire-licensed-contractor-home-improvements,,Steps to hire a licensed contractor,Pasos para contratar a un contratista con licencia,步骤聘请授权的合同
 /services/hire-licensed-contractor-home-improvements,,Decide what type of contractor you need,Decida qué tipo de contratista necesita,决定什么类型的承包商需求
 /services/hire-licensed-contractor-home-improvements,,"<p><strong>General Engineering Contractors</strong> and <strong>General Building Contractors</strong> usually manage subcontractors for a job.</p><p><strong>Specialty Contractors</strong> are often hired to do a single job, such as roofing or plumbing.</p>","<p><strong> Los contratistas de ingeniería general </strong> y <strong> los contratistas generales de construcción </strong> usualmente supervisan proyectos y dirigen trabajos de subcontratistas.</p><p><strong> Contratistas especializados </strong> a veces son contratados para hacer un solo trabajo, como techos o plomería.</p>",<p> <strong>承包商一般工程</ strong>和<strong>常规施工的承包商</strong>通常兼管项目和分包商的直接工作。</ p> <p> <strong>专门承包商< /strong>有时被雇用来执行一项工作，如屋顶或管道。</ p>
 /services/hire-licensed-contractor-home-improvements,,Choose the type of contractor you need,Elija el tipo de contratista que necesite,选择承包商的类型，你需要
@@ -190,7 +189,9 @@ path,token,en,es,zh
 /apply-for-disability-insurance-benefits,,Sick,una enfermedad,疾病
 /apply-for-disability-insurance-benefits,,injured,una lesión,伤
 /apply-for-disability-insurance-benefits,,pregnant,por embarazo,怀孕
-/apply-for-disability-insurance-benefits,,Check if you can get disability insurance benefits,Verifique si usted puede obtener beneficios por incapacidad,检查是否可以得到伤残补助金
+/apply-for-disability-insurance-benefits,,Check if you qualify,"Compruebe si califica
+","检查您是否有资格
+"
 /apply-for-disability-insurance-benefits,,If your employer has a,Si su empleador tiene un,如果你的雇主有
 /apply-for-disability-insurance-benefits,,"Voluntary Plan</a>, talk to your human resources office to apply for disability benefits.","plan Voluntario</a>, hable con su oficina de recursos humanos para solicitar los beneficios por incapacidad.",志愿者</A>计划，请向您的人力资源办公室申请伤残津贴。
 /apply-for-disability-insurance-benefits,,"If you're self-employed, you can","Si usted trabaja por cuenta propia, usted puede",如果你是自雇人士，你可以
@@ -227,7 +228,6 @@ path,token,en,es,zh
 /apply-for-cal-grant,,Apply for a Cal Grant (college financial aid),Solicitar una beca Cal Grant (ayuda financiera para la universidad),申请加州格兰特（上大学助学金）
 /apply-for-cal-grant,,"Deadline to apply: Monday, March 2, 2020, 11:59 p.m.","Fecha límite para solicitar: Lunes, 2 de marzo de 2020, 11:59p.m.",申请截止日期：星期一，2020年3月2日晚上11:59
 /apply-for-cal-grant,,A Cal Grant is money for college you don’t have to pay back.,La beca Cal Grant es dinero para la universidad no tiene que pagar.,加州格兰特大学学费并不需要支付。
-/apply-for-cal-grant,,Steps to apply ,Pasos para solicitar una beca Cal Grant,步骤申请加州格兰特
 /apply-for-cal-grant,,"Apply for financial aid, if you haven't already","Presentar una solicitud para ayuda financiera, si no lo ha hecho ",申请财政援助，如果你还没有做
 /apply-for-cal-grant,,Submit the Free Application for Federal Student Aid (FAFSA),Presentar la Solicitud Gratuita de Ayuda Federal para Estudiantes (FAFSA),提交联邦学生援助免费申请（FAFSA）
 /apply-for-cal-grant,,the California Dream Act Application (CADAA),la Solicitud Dream Act de California (CADAA),应用加州梦想法案（Cadaa）
@@ -483,7 +483,14 @@ path,token,en,es,zh
 /contact-us/home,,Contact us - Alpha.CA.gov,Contáctenos - Alpha.CA.gov,联系我们 -  Alpha.CA.gov
 /contact-us/results/,,Contact us - Alpha.CA.gov,Contáctenos - Alpha.CA.gov,联系我们 -  Alpha.CA.gov
 /find-shelter,,Find shelters near you,Encuentre refugios mas cercano de usted ,查找离您最近的庇护所
-/find-shelter,,Search for shelters in every California county,Busce refugios in cada condado de California,在加州的每一个县Busce避难所
+/find-shelter,,Search for shelters in every California county,Busque refugios in cada condado de California,寻求庇护了在加利福尼亚州各县
+/find-shelter,,"Search for temporary housing, disaster relief shelters, and homeless shelters near you.","Busque alojamiento temporal, refugios de socorro, y refugios cerca de usted. 
+
+","寻找临时住房，应急避难场所，以及您附近收容所。
+
+"
+/find-shelter,,"Please enter your address, city, or zip code:","Por favor introduzca se direccion, ciudad, o codigo postal",
+/find-shelter,,Find shelters,Encuentre refugios,
 /check-your-tap-water-quality,,Check your tap water quality,Examine la calidad del agua del grifo,检查自来水质量
 /check-your-tap-water-quality,,Loading...,Buscando...,搜索...
 /check-your-tap-water-quality,,Your water quality,La calidad del agua,水质
@@ -510,8 +517,9 @@ path,token,en,es,zh
 /apply-discounted-phone-service,,that:,que,那
 /apply-discounted-phone-service,,Get public assistance,Reciben asistencia pública,公共援助
 /apply-discounted-phone-service,,Or have an income below a certain amount,O tienen un ingreso por debajo de cierta cantidad,或者，他们有低于一定数额的收入
-/apply-discounted-phone-service,,Steps to apply,Pasos para solicitar,步骤申请
 /apply-discounted-phone-service,,Show all,Mostrar todo,显示全部
+/apply-discounted-phone-service,,This discount is for households that,Este descuento es para los hogares que,该折扣是家庭
+/apply-discounted-phone-service,,A household is a group of people who live together and share income and expenses (even if they are not related to each other),Un hogar es un grupo de personas que viven juntas y comparten los ingresos y gastos (incluso si no están relacionados entre sí),一个家庭是一群人谁住在一起，共享收入和支出（即使他们无关）
 /apply-discounted-phone-service,,Hide all,Ocultar todo,隐藏所有
 /apply-discounted-phone-service,,Check if you can get a discount,Verifique si puede recibir el descuento,检查您是否能够获得折扣
 /apply-discounted-phone-service,,Choose a phone company that offers discounts,Elije una compañía telefónica que ofrezca descuentos,选择一个电话公司，提供折扣
