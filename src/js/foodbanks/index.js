@@ -51,7 +51,6 @@ function getGeo() {
 
   navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
 };
-getGeo();
 
 function loadScript( url, callback ) {
   var script = document.createElement( "script" )
@@ -110,13 +109,17 @@ function loadMap() {
   });
 }
 
-// get full geojson foodbanks
-fetch('https://api.alpha.ca.gov/FoodBanks')
-.then(function(resp) { return resp.json() })
-.then(function (data) {
-  window.foodLocations = data;
-  loadMap();
-})
+if(document.querySelector('body.js-food-banks')) {
+  getGeo();
+
+  // get full geojson foodbanks
+  fetch('https://api.alpha.ca.gov/FoodBanks')
+  .then(function(resp) { return resp.json() })
+  .then(function (data) {
+    window.foodLocations = data;
+    loadMap();
+  })
+}
 
 function reorient(position) {
   if(window.map) {
@@ -255,57 +258,60 @@ function mapsSelector(lat,lon) {
   }
 }
 
-// handle search autocomplete
-var cityNames = new Map();
-citiesJson.default.forEach( function(item) {
-  cityNames.set(item.replace(', CA', '').toLowerCase(), item)
-})
-let awesompleteList = [...citiesJson.default, ...uniqueZipJson.default];
-
-new Awesomplete('input[data-multiple]', {
-  list: awesompleteList,
-  filter: function(text, input) {
-    return Awesomplete.FILTER_CONTAINS(text, input.match(/[^,]*$/)[0]);
-  },
-
-  item: function(text, input) {
-    document.querySelector('.invalid-feedback').style.display = 'none';
-    return Awesomplete.ITEM(text, input.match(/[^,]*$/)[0]);
-  },
-
-  replace: function(text) {
-    var before = this.input.value.match(/^.+,\s*|/)[0];
-    var finalval = before + text;
-    this.input.value = finalval;
-    var cabb = '-124.409591,32.534156,-114.131211,42.009518';
-    var url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${finalval}.json?bbox=${cabb}&access_token=${mapboxToken}`;
-    fetch(url)
-    .then(function(resp) { return resp.json() })
-    .then(function (data) {
-      document.querySelector('.js-location-display').innerHTML = "<h2>Showing food banks near "+finalval+"</h2>";
-      reorient(data.features[0].center);
-    })
-  }
-});
-
-document.querySelector('.js-food-lookup').addEventListener('submit',function(event) {
-  event.preventDefault();
-  document.querySelector('.invalid-feedback').style.display = 'none';
-  var val = this.querySelector('input').value;
-  var cabb = '-124.409591,32.534156,-114.131211,42.009518';
-  var url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${val}.json?bbox=${cabb}&access_token=${mapboxToken}`;
-  fetch(url)
-  .then( function(resp) { return resp.json() })
-  .then(function (data) {
-    document.querySelector('.js-location-display').innerHTML = `<h2>${translations["Showing food banks near"]} ${val}</h2>`;
-    if(data.features.length > 0) {
-      reorient(data.features[0].center);
-    } else {
-      document.querySelector('.invalid-feedback').style.display = 'block';
-    }
+if(document.querySelector('body.js-food-banks')) {
+  // handle search autocomplete
+  var cityNames = new Map();
+  citiesJson.default.forEach( function(item) {
+    cityNames.set(item.replace(', CA', '').toLowerCase(), item)
   })
-})
+  let awesompleteList = [...citiesJson.default, ...uniqueZipJson.default];
 
+  new Awesomplete('input[data-multiple]', {
+    list: awesompleteList,
+    filter: function(text, input) {
+      return Awesomplete.FILTER_CONTAINS(text, input.match(/[^,]*$/)[0]);
+    },
+
+    item: function(text, input) {
+      document.querySelector('.invalid-feedback').style.display = 'none';
+      return Awesomplete.ITEM(text, input.match(/[^,]*$/)[0]);
+    },
+
+    replace: function(text) {
+      var before = this.input.value.match(/^.+,\s*|/)[0];
+      var finalval = before + text;
+      this.input.value = finalval;
+      var cabb = '-124.409591,32.534156,-114.131211,42.009518';
+      var url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${finalval}.json?bbox=${cabb}&access_token=${mapboxToken}`;
+      fetch(url)
+      .then(function(resp) { return resp.json() })
+      .then(function (data) {
+        document.querySelector('.js-location-display').innerHTML = "<h2>Showing food banks near "+finalval+"</h2>";
+        reorient(data.features[0].center);
+      })
+    }
+  });
+
+  document.querySelector('.js-food-lookup').addEventListener('submit',function(event) {
+    event.preventDefault();
+    document.querySelector('.invalid-feedback').style.display = 'none';
+    var val = this.querySelector('input').value;
+    var cabb = '-124.409591,32.534156,-114.131211,42.009518';
+    var url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${val}.json?bbox=${cabb}&access_token=${mapboxToken}`;
+    fetch(url)
+    .then( function(resp) { return resp.json() })
+    .then(function (data) {
+      document.querySelector('.js-location-display').innerHTML = `<h2>${translations["Showing food banks near"]} ${val}</h2>`;
+      if(data.features.length > 0) {
+        reorient(data.features[0].center);
+      } else {
+        document.querySelector('.invalid-feedback').style.display = 'block';
+      }
+    })
+  })
+}
+
+// these get triggered from the map
 window.showAll = function() {
   event.preventDefault();
   document.querySelectorAll('.card-set li.d-none').forEach( function(item) {
@@ -324,9 +330,12 @@ window.mapsSelector = function(lat,lon) {
 }
 
 //Change ARIA Label to Awesomeplete list
-
-document.getElementById('awesomplete_list_1').setAttribute('aria-hidden', true);
-document.getElementById('awesomplete_list_1').setAttribute('aria-label', 'autosuggest');
-document.getElementById('city-input').setAttribute('role', 'textbox');
-document.getElementById('city-input').removeAttribute('aria-controls');
-document.getElementById('city-input').removeAttribute('aria-expanded');
+if(document.getElementById('awesomplete_list_1')) {
+  document.getElementById('awesomplete_list_1').setAttribute('aria-hidden', true);
+  document.getElementById('awesomplete_list_1').setAttribute('aria-label', 'autosuggest');
+}
+if(document.getElementById('city-input')) {
+  document.getElementById('city-input').setAttribute('role', 'textbox');
+  document.getElementById('city-input').removeAttribute('aria-controls');
+  document.getElementById('city-input').removeAttribute('aria-expanded');
+}

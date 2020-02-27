@@ -23,7 +23,7 @@
     <title>Find food banks near you - Alpha.CA.gov</title>
   </head>
 
-  <body>
+  <body class="js-food-banks">
     <header>
       <%= require('html-loader!../../partials/official.html') %> <%=
       require('html-loader!../../partials/experiment-banner.html') %> <%=
@@ -66,6 +66,10 @@
             </div>
             <div class="js-location-display" aria-live="polite"></div>
             <div class="js-nearest-results" aria-live="polite"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
             <h2>Map</h2>
             <div id="mapid"></div>
             <h2>Other resources</h2>

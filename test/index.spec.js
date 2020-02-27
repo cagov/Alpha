@@ -279,6 +279,22 @@ describe("Apply or renew online for a discounted phone service", () => {
 
 })
 
+
+describe("find-shelter", () => {
+  test("find-shelter", async () => {
+    await page.goto(hostname+'/find-shelter/')
+    await page.type(".city-search", '95825')
+    await page.click('button[type="submit"]')
+    await page.waitForFunction(
+      'document.querySelectorAll(".js-nearest-results li").length'
+      );
+    let answers = await page.$$eval('.js-nearest-results li', answers => { return answers });
+    expect(answers.length).toBeGreaterThan(0);
+   
+  }, timeout)
+
+})
+
 afterAll(() => {
   browser.close()
   server.close()

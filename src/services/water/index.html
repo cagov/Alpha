@@ -34,7 +34,7 @@
     />
   </head>
 
-  <body>
+  <body class="js-water">
     <header>
       <%= require('html-loader!../../partials/official.html') %> <%=
       require('html-loader!../../partials/experiment-banner.html') %> <%=
@@ -78,7 +78,7 @@
 
       <div id="map" class="d-none"></div>
 
-      <div class="container pb-5 chill-d-none system-data" aria-live="polite">
+      <div class="container pb-5 d-none system-data" aria-live="polite">
         <div class="row">
           <div class="col-lg-8">
             <div class="system-status"></div>
@@ -86,12 +86,10 @@
             <div class="system-info">
               <h3>How your water system checks for safety</h3>
               <p>
-                Your water system tests at least yearly for chemicals, bacteria,
-                and viruses that could be harmful to human health.
+                Your water system tests at least yearly for chemicals, bacteria, and viruses that could be harmful to human health.
               </p>
               <p>
-                They also track changes to the way your water tastes, looks, or
-                smells.
+                They also track changes to the way your water tastes, looks, or smells.
               </p>
             </div>
           </div>
@@ -101,9 +99,40 @@
     <footer>
       <%= require('html-loader!../../partials/feedback.html') %> <%=
       require('html-loader!../../partials/footer.html') %>
-      <script nomodule src="/js/es5Food.js?cache=false"></script>
       <%= require('html-loader!../../partials/alphabar.html') %> <%=
       require('html-loader!../../partials/ga.html') %>
     </footer>
+
+    <template id="loading">
+      <div>
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        Loading...
+      </div>
+    </template>
+    <template id="water-detail-template">
+      <div class="safe-desc">
+        <h2>Your water quality</h2>
+        <p>Your tap water met <a href="https://mywaterquality.ca.gov/safe_to_drink/">California safety standards</a> as of August 30, 2019.</p>
+      </div>
+      <div class="comes-from">
+        <h3 class="card-title">Where your water comes from</h3>
+      </div>
+      <div class="system-test-desc">
+        They test your water before it leaves their facilities. Your water system also keeps the most up-to-date and detailed information about your water. They publish a yearly report on your water quality called a <a href="https://www.epa.gov/ccr/ccr-information-consumers">Consumer Confidence Report</a>.
+      </div>
+      <div class="your-water-sys">Your water system is</div>
+      <div class="advice">
+        Now that your water is not safe to drink, they will have advice about what to do.
+      </div>
+      <div class="when-tested">
+        They test your water before it leaves their facilities. Your water system also has the most up-to-date and detailed information about your water. They publish a yearly report on your water quality called a <a href="https://www.epa.gov/ccr/ccr-information-consumers">Consumer Confidence Report</a>.
+      </div>
+      <div class="check-water">Check your water</div>
+    </template>
+
+
+
+
+
   </body>
 </html>
