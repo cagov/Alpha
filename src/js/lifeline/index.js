@@ -67,29 +67,6 @@ function updateSelections() {
   });
 }
 
-//if(document.getElementById("#check-not-sure")) {
-
-document
-  .querySelectorAll("#check-not-sure,#check-no")
-  .forEach(x => x.addEventListener("click", () => setTimeout(noclick, 1000)));
-
-if (document.querySelector("#btn-next")) {
-  document.querySelector("#btn-next").addEventListener("click", nextclick);
-}
-
-function nextclick() {
-  updateSelections();
-  show("div-qualified");
-  showone("div-return");
-}
-
-function noclick() {
-  if (document.querySelector("li.active #check-not-sure,li.active #check-no")) {
-    show("div-no-not-sure");
-    showone("div-return");
-    document.getElementById("lst-household-size").focus();
-  }
-}
 if(document.getElementById("btn-select-people")) {
   document
     .getElementById("btn-select-people")

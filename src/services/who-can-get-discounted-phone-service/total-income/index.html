@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" xml:lang="en">
+
+<head>
+    <%= require('html-loader!../../../partials/meta-common.html') %>
+    <%= require('html-loader!../../../partials/favicons.html') %>
+  	<meta name="description" content="Find out if you’re eligible for the California LifeLine Program, a discounted phone service.">
+  	<title>Check if you can get a discounted phone service (California LifeLine) - Alpha.CA.gov</title>
+	<!-- Social media post -->
+    <meta property="og:image" content="/img/thumbnail.png">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:width" content="630">
+    <meta property="og:title" content="Check if you can get a discounted phone service (California LifeLine) - Alpha.CA.gov">
+    <meta property="og:description" content="Find out if you’re eligible for the California LifeLine Program, a discounted phone service.">
+    <meta property="og:url" content="[code-url]">
+    <link rel="canonical" href="[code-url]" />
+	<link href="https://california.azureedge.net/cdt/statetemplate/6.0.0/css/cagov.font-only.min.css" rel="stylesheet" />
+</head>
+
+<body>
+ 
+<header>
+	<%= require('html-loader!../../../partials/official.html') %>
+	<%= require('html-loader!../../../partials/experiment-banner.html') %>
+	<%= require('html-loader!../../../partials/navbar.html') %>
+</header>
+		
+<main>	
+  <div class="container-fluid jumbotron">
+    <div class="container">
+		<nav aria-label="breadcrumb">
+		  <ol class="breadcrumb">
+			<li class="breadcrumb-item"><span class="ca-gov-icon-arrow-prev pr-1 smaller"></span><a href="../../apply-discounted-phone-service/">Apply for a discounted phone service</a></li>
+		  </ol>
+		</nav>
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Check if you can get a discounted phone service</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+    <div class="row">
+      <div class="col-lg-8" >
+
+			<div class="container" id="div-total-income">
+				<div class="row">
+					<div class="col-lg-8">
+						<h2>Is your household’s total income below $<span id="spn-income-cap"></span>?</h2>
+						<a href="../qualified-income/" class="btn btn-primary">[global-lang-yes-camel]</a>
+						<a href="../not-qualified/" class="btn btn-primary ml-2" id="btn-not-qualified">[global-lang-no-camel]</a>
+						<a href="../not-sure-qualified/" class="btn btn-primary ml-2" id="btn-not-sure-qualified">[global-lang-no-camel]</a>
+						<div class="more">
+						<a href="javascript:window.history.back()" class="">Back to last question</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		  
+		  
+		</div>
+	</div>
+</div>		  
+</main>	
+<footer>
+	<%= require('html-loader!../../../partials/feedback.html') %>
+	<%= require('html-loader!../../../partials/footer.html') %>
+	<%= require('html-loader!../../../partials/alphabar.html') %>
+	<%= require('html-loader!../../../partials/ga.html') %>
+</footer>
+</body>
+</html>
