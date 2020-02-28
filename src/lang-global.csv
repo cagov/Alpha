@@ -1,6 +1,6 @@
 path,token,en,es,zh
 ,[global-lang-about],About,Acerca de,关于
-,[global-lang-feedback-p],to help us improve this page.,Por favor comparta su comentarios para ayudarnos a mejorar esta página de internet,请分享您的反馈，帮助我们改进本网站
+,[global-lang-feedback-p],to help us improve this page.,para ayudarnos a mejorar esta página de internet.,为了帮助我们改进本网站。
 ,[global-lang-feedback],Feedback,Comentarios,评论
 ,[global-lang-news],News,Noticias,新闻
 ,[global-lang-official],State of California,Gobierno del Estado de California,加利福尼亚州政府
@@ -204,6 +204,7 @@ path,token,en,es,zh
 /apply-for-disability-insurance-benefits,,Ask them what they need from you to submit the form for disability insurance.,Pregúnteles qué necesitan de usted para enviar el formulario de seguro por discapacidad.,请您需要提交表单伤残保险是什么。
 /apply-for-disability-insurance-benefits,,Read our response,Lee nuestra respuesta en el correo,请阅读我们的邮件响应
 /apply-for-disability-insurance-benefits,,"Within 14 days, we will email you or send you a letter to let you know if you can get disability benefits.","Dentro de 14 días, le enviaremos una carta para hacerle saber si puede obtener beneficios por incapacidad.",在14天内，我们将发送给你一封信，让你知道，如果你能得到残疾津贴。
+/apply-for-disability-insurance-benefits,,Check if you can get disability insurance benefits,Compruebe si puede obtener beneficios de seguro por discapacidad,检查你是否能得到残疾保险金
 /apply-for-disability-insurance-benefits,,If you do qualify:,Si cumple con los requisitos:,如果您符合要求：
 /apply-for-disability-insurance-benefits,,You can get paid eight days after the start of your claim.,Se le puede pagar ocho días después del inicio de su reclamo.,您可以要求开始后得到报酬八天。
 /apply-for-disability-insurance-benefits,,You can choose to get paid through a,Usted puede elegir a recibir el pago a través de una,您可以选择通过收取货款
@@ -228,7 +229,6 @@ path,token,en,es,zh
 /apply-for-cal-grant,,Apply for a Cal Grant (college financial aid),Solicitar una beca Cal Grant (ayuda financiera para la universidad),申请加州格兰特（上大学助学金）
 /apply-for-cal-grant,,"Deadline to apply: Monday, March 2, 2020, 11:59 p.m.","Fecha límite para solicitar: Lunes, 2 de marzo de 2020, 11:59p.m.",申请截止日期：星期一，2020年3月2日晚上11:59
 /apply-for-cal-grant,,A Cal Grant is money for college you don’t have to pay back.,La beca Cal Grant es dinero para la universidad no tiene que pagar.,加州格兰特大学学费并不需要支付。
-/apply-for-cal-grant,,Steps to apply ,Pasos para solicitar una beca Cal Grant,步骤申请加州格兰特
 /apply-for-cal-grant,,"Apply for financial aid, if you haven't already","Presentar una solicitud para ayuda financiera, si no lo ha hecho ",申请财政援助，如果你还没有做
 /apply-for-cal-grant,,Submit the Free Application for Federal Student Aid (FAFSA),Presentar la Solicitud Gratuita de Ayuda Federal para Estudiantes (FAFSA),提交联邦学生援助免费申请（FAFSA）
 /apply-for-cal-grant,,the California Dream Act Application (CADAA),la Solicitud Dream Act de California (CADAA),应用加州梦想法案（Cadaa）
@@ -485,7 +485,13 @@ path,token,en,es,zh
 /contact-us/results/,,Contact us - Alpha.CA.gov,Contáctenos - Alpha.CA.gov,联系我们 -  Alpha.CA.gov
 /find-shelter,,Find shelters near you,Encuentre refugios mas cercano de usted ,查找离您最近的庇护所
 /find-shelter,,Search for shelters in every California county,Busque refugios in cada condado de California,寻求庇护了在加利福尼亚州各县
-/find-shelter,,"Search for temporary housing, disaster relief shelters, and homeless shelters near you.",,#VALUE!
+/find-shelter,,"Search for temporary housing, disaster relief shelters, and homeless shelters near you.","Busque alojamiento temporal, refugios de socorro, y refugios cerca de usted. 
+
+","寻找临时住房，应急避难场所，以及您附近收容所。
+
+"
+/find-shelter,,"Please enter your address, city, or zip code:","Por favor introduzca se direccion, ciudad, o codigo postal",
+/find-shelter,,Find shelters,Encuentre refugios,
 /check-your-tap-water-quality,,Check your tap water quality,Examine la calidad del agua del grifo,检查自来水质量
 /check-your-tap-water-quality,,Loading...,Buscando...,搜索...
 /check-your-tap-water-quality,,Your water quality,La calidad del agua,水质
