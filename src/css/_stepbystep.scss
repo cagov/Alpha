@@ -195,7 +195,7 @@ cwds-step-list ul {
 }
 
 @supports (-ms-ime-align:auto) {
-    button.step-description:focus {
+    .step-description:focus {
         outline:2px solid #0257d5;
 		z-index: 2; 
     }
