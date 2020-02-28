@@ -827,7 +827,6 @@ li .action-link:focus-within {
     padding: 0px 7px;
 	font-family: "Public Sans Bold", sans-serif;
 	font-size:1.5rem;
-	
 }
 	
 .show-all {
@@ -970,6 +969,10 @@ label.custom-control-label {
 	
 	.form-control {
     	margin-bottom: 1rem;
+	}
+	
+	.mobile-margin-top {
+		margin-top: 1rem;
 	}
 
 }

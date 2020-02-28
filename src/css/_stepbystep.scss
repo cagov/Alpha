@@ -190,6 +190,10 @@ cwds-step-list li .details[data-collapsed="true"] {
 	visibility: hidden;
 }
 
+cwds-step-list ul {
+    margin-left: -0.5rem;
+}
+
 @supports (-ms-ime-align:auto) {
     .step-description:focus {
         outline:2px solid #0257d5;
