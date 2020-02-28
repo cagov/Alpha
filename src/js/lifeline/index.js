@@ -31,30 +31,6 @@ function html5formvalid(input) {
   return !input.form.checkValidity || input.form.checkValidity();
 }
 
-function hide(id) {
-  document.getElementById(id).classList.add("d-none");
-}
-function hideall() {
-  hide("div-checkform");
-  hide("div-no-not-sure");
-  hide("div-qualified");
-  hide("div-total-income");
-  hide("div-qualified-income");
-}
-
-function show(id) {
-  hideall();
-  window.scrollTo(0, 0);
-  updateSelections();
-  showone(id);
-}
-
-function showone(id) {
-  if(document.getElementById(id)) {
-    document.getElementById(id).classList.remove("d-none");
-  }
-}
-
 function updateSelections() {
   const ul_programs = document.getElementById("ul-programs");
   while (ul_programs.firstChild)
@@ -67,36 +43,45 @@ function updateSelections() {
   });
 }
 
-if(document.getElementById("btn-select-people")) {
-  document
-    .getElementById("btn-select-people")
-    .addEventListener("click", function() {
-      if (html5formvalid(this)) {
-        const people = Number(
-          document.getElementById("lst-household-size").value || 0
-        );
+//Count of programs selected
+const programs = new URLSearchParams(window.location.search).get("programs")
 
-        let bucks = 0;
-        switch (people) {
-          case 1:
-          case 2:
-            bucks = 27500;
-            break;
-          case 3:
-            bucks = 31900;
-            break;
-          default:
-            bucks = 38800 + 6900 * (people - 3);
-        }
+if(programs) {
+  const btn_not_qualified = document.getElementById("btn-not-qualified")
+  const btn_not_sure_qualified = document.getElementById("btn-not-sure-qualified")
 
-        document.getElementById(
-          "spn-income-cap"
-        ).innerText = bucks.toLocaleString();
+  if(btn_not_qualified&&btn_not_sure_qualified) {
+    if(programs=="no")
+      btn_not_sure_qualified.classList.toggle("d-none")
+    else
+      btn_not_qualified.classList.toggle("d-none")
+  }
 
-        show("div-total-income");
-      }
-    });
+  const programs_box = document.getElementById("programs")
+  if(programs_box) programs_box.value = programs
 }
+
+const household = new URLSearchParams(window.location.search).get("household")
+if(household) {
+  const people = Number(household)
+
+  let bucks = 0
+  switch (people) {
+    case 1:
+    case 2:
+      bucks = 27500
+      break
+    case 3:
+      bucks = 31900
+      break
+    default:
+      bucks = 38800 + 6900 * (people - 3)
+  }
+
+  document.getElementById("js-spn-income-cap").innerText = bucks.toLocaleString()
+}
+
+
 
 if(document.getElementById("btn-yes")) {
   document.getElementById("btn-yes").addEventListener("click", function() {

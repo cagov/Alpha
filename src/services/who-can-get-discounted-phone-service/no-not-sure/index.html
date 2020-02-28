@@ -54,14 +54,15 @@
 						<p>A household is a group of people who live together and share income and expenses (even if they are not related to each other).</p>
 						<form method="get" action="../total-income/"  >
 							<div class="form-group">
-							<input type="number" required="required" min="1" max="999" class="form-control form-control-md col-lg-6" id="lst-household-size" name="data">
+								<input type="hidden" id="programs" name="programs">
+								<input type="number" required="required" min="1" max="999" class="form-control form-control-md col-lg-6" name="household">
 
-							<p><input class="btn btn-primary mt-3" type="submit" value="[lang-next]" id="btn-select-people">
+							<p><input class="btn btn-primary mt-3" type="submit" value="[lang-next]">
 								</p>
 							</div>
 						</form>
 						<div class="more">
-						<a href="../" class="">Back to last question</a>
+						<a href="javascript:window.history.back()" class="">Back to last question</a>
 						</div>
 				</div>
 			</div>
