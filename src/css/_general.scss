@@ -185,25 +185,6 @@ strong,
 
 /* List group */
 
-.list-number {
-    background: #000000;
-    border-color: #000000;
-    border-width: 3px;
-    color: #ffffff;
-    font-family: "Public Sans Bold", sans-serif;
-    font-size: 1.2rem;
-    margin-right: 10px;
-    line-height: normal;
-    position: relative;
-    display: inline-block;
-    width: 33px;
-    height: 33px;
-    border-style: solid;
-    border-radius: 50%;
-    text-align: center;
-    line-height: inherit;
-    text-indent: 0;
-}
 
 a.list-group-item {
     padding: 20px;
@@ -829,12 +810,6 @@ li .action-link:focus-within {
 	font-size:1.5rem;
 }
 	
-.show-all {
-    padding: .5rem;
-    text-align: right;
-	margin-top: -3.5rem;
-	float: right;
-}
 	
 .more {
 	margin-top: 3rem;
