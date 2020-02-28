@@ -175,6 +175,12 @@ cwds-step-list li.list-group-item:focus-within {
 	background: rgba(215, 230, 252, 0.2);  
 }
 
+@supports (-ms-ime-align:auto) {
+    button.step-description {
+        outline:2px solid #0257d5;
+    }
+}
+
 cwds-step-list li .step-interior {
 	padding-top:0;
 	padding-right: 10%;
