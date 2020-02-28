@@ -171,8 +171,14 @@ ul > li.list-group-item.and-or-lead.list-open {
 
 cwds-step-list li.list-group-item:focus-within {
     outline: 2px solid #0257d5;
-    z-index: 10;  
+    z-index: 2;  
 	background: rgba(215, 230, 252, 0.2);  
+}
+
+@supports (-ms-ime-align:auto) {
+    button.step-description {
+        outline:2px solid #0257d5;
+    }
 }
 
 cwds-step-list li .step-interior {
@@ -187,6 +193,18 @@ cwds-step-list li .step-interior {
 
 cwds-step-list li .details[data-collapsed="true"] {
 	visibility: hidden;
+}
+
+@supports (-ms-ime-align:auto) {
+    button.step-description:focus {
+        outline:2px solid #0257d5;
+		z-index: 2; 
+    }
+	
+	button.card-header:focus {
+		outline:2px solid #0257d5;
+		z-index: 2; 
+	}
 }
 
 
