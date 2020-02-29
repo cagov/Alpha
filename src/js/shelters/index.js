@@ -12,6 +12,9 @@ function displaySortedResults(query) {
 
       document.querySelector(".data-match").innerHTML=data.match.match
       document.querySelector(".js-location-display").classList.remove('d-none');
+
+      history.pushState({query}, window.title, window.location.origin + window.location.pathname + '?q='+query)
+
       
       for (const row of data.results) {
         const addresscombo = `${row.address}, ${row.city}, ${row.state} ${row.zipcode}`
@@ -45,9 +48,21 @@ if(query) {
   displaySortedResults(query);
 }
 
-document.querySelector('.js-lookup').addEventListener('submit',function(event) {
-  event.preventDefault();
-  document.querySelector('.invalid-feedback').style.display = 'none';
-  var val = this.querySelector('input').value;
-  displaySortedResults(val);
-})
+if(document.querySelector('.shelters')) {
+  document.querySelector('.js-lookup').addEventListener('submit',function(event) {
+    event.preventDefault();
+    document.querySelector('.invalid-feedback').style.display = 'none';
+    var val = this.querySelector('input').value;
+    displaySortedResults(val);
+  })
+
+  window.addEventListener('popstate', function(event) {
+    let query = getParameterByName("q");
+    if(query) {
+      displaySortedResults(query);
+    } else {
+      document.querySelector(".js-location-display").classList.add('d-none');
+      document.querySelector(".js-nearest-results").innerHTML = '';
+    }
+  });
+}
