@@ -237,6 +237,47 @@ module.exports = {
       excludeChunks: excludeChucksExcept("water"),
       minify: minificationOptions
     }),
+
+    new HtmlWebpackPlugin({
+      filename: "en/apply-for-unemployment-insurance/index.html",
+      template: "src/services/apply-for-unemployment-insurance/index.html",
+      excludeChunks: excludedChunks,
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: "en/apply-for-unemployment-insurance/after-you-apply/index.html",
+      template: "src/services/apply-for-unemployment-insurance/after-you-apply/index.html",
+      excludeChunks: excludedChunks,
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: "en/apply-for-unemployment-insurance/how-to-apply/index.html",
+      template: "src/services/apply-for-unemployment-insurance/how-to-apply/index.html",
+      excludeChunks: excludedChunks,
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: "en/apply-for-unemployment-insurance/update-us-every-two-weeks/index.html",
+      template: "src/services/apply-for-unemployment-insurance/update-us-every-two-weeks/index.html",
+      excludeChunks: excludedChunks,
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: "en/apply-for-unemployment-insurance/what-you-need-before-you-apply/index.html",
+      template: "src/services/apply-for-unemployment-insurance/what-you-need-before-you-apply/index.html",
+      excludeChunks: excludedChunks,
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: "en/apply-for-unemployment-insurance/when-to-apply/index.html",
+      template: "src/services/apply-for-unemployment-insurance/when-to-apply/index.html",
+      excludeChunks: excludedChunks,
+      minify: minificationOptions
+    }),
+
+
+
+
     new HtmlWebpackPlugin({
       filename:
         "en/services/hire-licensed-contractor-home-improvements/index.html",
