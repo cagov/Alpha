@@ -1,5 +1,10 @@
 /* Step by Step List expandable classes */
 
+cwds-step-list {
+    padding-top: 5px;
+    display: block;
+}
+
 cwds-step-list li .details {
   height: 0px;
   overflow: hidden;
@@ -7,20 +12,22 @@ cwds-step-list li .details {
 }
 cwds-step-list li.list-group-item.unstyled.list-group-item-action {
   	cursor: pointer;
-	border-left: solid #e8e8e8;
+	border-left: solid #fff;
     border-left-width: 4px;
 	margin-left: 10px;
 }
 
 cwds-step-list li.list-group-item.unstyled.list-group-item-action.list-open {
-    border-left: solid #004abc;
+    border-left: solid #d8d8d8;
     border-left-width: 4px;
+	background: #f1f1f1;
+	background: linear-gradient(90deg, rgba(251,251,251,1) 0%, rgba(255,255,255,1) 100%);
 }
 
 cwds-step-list li.list-open .list-number {
     border-style: solid;
     border-radius: 50%;
-    border-color: #000;
+    border-color: #0f1e6b;
     text-align: center;
 	font-weight: 500 !important;
 	text-indent: 0;
@@ -28,7 +35,7 @@ cwds-step-list li.list-open .list-number {
 
 cwds-step-list li .step-interior {
 	padding-left: 40px;
-	padding-left: 32px;
+	padding-left: 35px;
     padding-top: 1rem;
 	display: block;
 	font-size: initial;
@@ -40,6 +47,26 @@ cwds-step-list li .unstyled {
 	border-left-width: 0!important;
     border: none!important;
 	list-style-type: none;
+}
+
+.list-number {
+    background: #0f1e6b;
+    border-color: #0f1e6b;
+    border-width: 3px;
+    color: #ffffff;
+    font-family: "Public Sans Bold", sans-serif;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    line-height: normal;
+    position: relative;
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    border-style: solid;
+    border-radius: 50%;
+    text-align: center;
+    line-height: inherit;
+    text-indent: 0;
 }
 
 	  
@@ -55,6 +82,14 @@ cwds-step-list li .unstyled {
     font-size: 15px;
     color: #004abc;
     text-decoration: underline;
+}
+
+.show-all {
+    padding-right: .5rem;
+    text-align: right;
+    margin-top: -1.6rem;
+    float: right;
+	font-size: 1rem;
 }
 	  
 cwds-step-list li .hide {
@@ -77,7 +112,7 @@ cwds-step-list li.list-open .hide {
 cwds-step-list button.step-description {
     background: transparent;
     border: none;
-    text-indent: -50px;
+    text-indent: -45px;
     padding-left: 45px;
 }
 	  
@@ -153,6 +188,10 @@ cwds-step-list li .unstyled {
     color: #073984;
 }
 
+.step-interior ul {
+    margin-left: -2rem;
+}
+
    
 ul > li.list-group-item.and-or-lead.list-open {
    border-bottom-width: 0!important;
@@ -175,11 +214,6 @@ cwds-step-list li.list-group-item:focus-within {
 	background: rgba(215, 230, 252, 0.2);  
 }
 
-@supports (-ms-ime-align:auto) {
-    button.step-description {
-        outline:2px solid #0257d5;
-    }
-}
 
 cwds-step-list li .step-interior {
 	padding-top:0;
@@ -195,8 +229,12 @@ cwds-step-list li .details[data-collapsed="true"] {
 	visibility: hidden;
 }
 
+cwds-step-list ul {
+    margin-left: -0.5rem;
+}
+
 @supports (-ms-ime-align:auto) {
-    button.step-description:focus {
+    .step-description:focus {
         outline:2px solid #0257d5;
 		z-index: 2; 
     }
@@ -210,12 +248,18 @@ cwds-step-list li .details[data-collapsed="true"] {
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) { 
-
+	
+	cwds-step-list {
+    padding-top: 30px;
+    display: block;
+}
 
 cwds-step-list li .step-interior {
     padding-right: 0;
     padding-top: 1rem;
 }
+	
+	
 
 }
 
