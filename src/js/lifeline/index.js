@@ -27,25 +27,35 @@ document.querySelectorAll(".show-all").forEach(x => {
   });
 });
 
-function html5formvalid(input) {
-  return !input.form.checkValidity || input.form.checkValidity();
-}
+//for /qualified
+const ul_programs = document.getElementById("ul-programs")
 
-function updateSelections() {
-  const ul_programs = document.getElementById("ul-programs");
+if(ul_programs) {
+  const programs = new URLSearchParams(window.location.search).getAll("programs")
+   
   while (ul_programs.firstChild)
-    ul_programs.removeChild(ul_programs.firstChild);
+    ul_programs.removeChild(ul_programs.firstChild)
 
-  document.querySelectorAll("li.active label").forEach(x => {
+  programs.forEach(x => {
     const li = document.createElement("li");
-    li.innerText = x.innerText;
+    li.innerText = x;
     ul_programs.appendChild(li);
-  });
+  }) 
 }
+
+
+
+//Setup the list
+const checklabels = document.querySelectorAll(".form-group .custom-control-label")
+checklabels.forEach(x=>{
+  const checkbox = document.getElementById(x.htmlFor)
+  checkbox.name="programs"
+  checkbox.value=x.innerHTML
+})
+
 
 //Count of programs selected
 const programs = new URLSearchParams(window.location.search).get("programs")
-
 if(programs) {
   const btn_not_qualified = document.getElementById("btn-not-qualified")
   const btn_not_sure_qualified = document.getElementById("btn-not-sure-qualified")
@@ -81,21 +91,6 @@ if(household) {
   document.getElementById("js-spn-income-cap").innerText = bucks.toLocaleString()
 }
 
-
-
-if(document.getElementById("btn-yes")) {
-  document.getElementById("btn-yes").addEventListener("click", function() {
-    show("div-qualified-income");
-  });  
-}
-
-if(document.getElementById("btn-no")) {
-  document.getElementById("btn-no").addEventListener("click", function() {
-    if (document.querySelector("li.active #check-no")) show("div-not-qualified");
-    else show("div-not-sure-qualified");
-  });
-}
-
 function itemclick(o) {
   o.addEventListener("click", function() {
     this.parentNode.classList.toggle("active");
@@ -109,8 +104,6 @@ function itemclick(o) {
       button.setAttribute("aria-disabled", "true");
       button.setAttribute("disabled", "");
     }
-
-    updateSelections();
   });
 }
 
