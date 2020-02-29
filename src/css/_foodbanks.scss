@@ -23,13 +23,15 @@
   display: grid;
   grid-template-columns: 33% 33% 33%; 
 }
-.foodbanks {
+.foodbanks, .shelters {
   .card-set .card {
     margin-right: 20px;
     min-width: 200px;
     max-width: 360px;
     float: left;
   }
+}
+.foodbanks {
   #mapid {
     width: 100%;
   }
