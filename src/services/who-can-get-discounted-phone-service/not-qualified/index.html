@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" xml:lang="en">
+
+<head>
+    <%= require('html-loader!../../../partials/meta-common.html') %>
+    <%= require('html-loader!../../../partials/favicons.html') %>
+  	<meta name="description" content="Find out if you’re eligible for the California LifeLine Program, a discounted phone service.">
+  	<title>Check if you can get a discounted phone service (California LifeLine) - Alpha.CA.gov</title>
+	<!-- Social media post -->
+    <meta property="og:image" content="/img/thumbnail.png">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:width" content="630">
+    <meta property="og:title" content="Check if you can get a discounted phone service (California LifeLine) - Alpha.CA.gov">
+    <meta property="og:description" content="Find out if you’re eligible for the California LifeLine Program, a discounted phone service.">
+    <meta property="og:url" content="[code-url]">
+    <link rel="canonical" href="[code-url]" />
+	<link href="https://california.azureedge.net/cdt/statetemplate/6.0.0/css/cagov.font-only.min.css" rel="stylesheet" />
+</head>
+
+<body>
+ 
+<header>
+	<%= require('html-loader!../../../partials/official.html') %>
+	<%= require('html-loader!../../../partials/experiment-banner.html') %>
+	<%= require('html-loader!../../../partials/navbar.html') %>
+</header>
+		
+<main>	
+  <div class="container-fluid jumbotron">
+    <div class="container">
+		<nav aria-label="breadcrumb">
+		  <ol class="breadcrumb">
+			<li class="breadcrumb-item"><span class="ca-gov-icon-arrow-prev pr-1 smaller"></span><a href="../../apply-discounted-phone-service/">Apply for a discounted phone service</a></li>
+		  </ol>
+		</nav>
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Check if you can get a discounted phone service</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+    <div class="row">
+      <div class="col-lg-8" >
+			<div class="container" id="div-not-qualified">
+				<div class="row">
+					<div class="col-lg-8 pl-0">	
+						<h2>Sorry, you may not be able to get a discount. </h2>
+						 <p>To be sure, contact us about California LifeLine:</p>
+							<p><strong>Monday–Friday</strong><br>
+							7 a.m.–7 p.m.</p>
+							
+							<p><strong>General number</strong> 1-866-272-0357<br>
+							<strong>English</strong> 1-866-272-0349<br>
+							<strong>Spanish</strong> 1-866-272-0350<br>
+							<strong>Lao/Hmong</strong> 1-866-272-0351<br>
+							<strong>Khmer (Cambodian)</strong> 1-866-272-0352<br>
+							<strong>Tagalog</strong> 1-866-272-0353<br>
+							<strong>Korean</strong> 1-866-272-0354<br>
+							<strong>Vietnamese</strong> 1-866-272-0355 <br>
+							<strong>Chinese</strong> (Mandarin/Cantonese)1-866-272-0356<br>
+							<strong>Japanese</strong> 1-866-296-0860<br>
+							<strong>TTY Number</strong> 866-272-0358<br>
+							</p>
+					</div>
+				</div>
+			</div>
+	
+		  
+		  
+		</div>
+	</div>
+</div>		  
+</main>	
+<footer>
+	<%= require('html-loader!../../../partials/feedback.html') %>
+	<%= require('html-loader!../../../partials/footer.html') %>
+	<%= require('html-loader!../../../partials/alphabar.html') %>
+	<%= require('html-loader!../../../partials/ga.html') %>
+</footer>
+</body>
+</html>

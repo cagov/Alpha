@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" xml:lang="en">
+
+<head>
+    <%= require('html-loader!../../../partials/meta-common.html') %>
+    <%= require('html-loader!../../../partials/favicons.html') %>
+  	<meta name="description" content="Find out if you’re eligible for the California LifeLine Program, a discounted phone service.">
+  	<title>Check if you can get a discounted phone service (California LifeLine) - Alpha.CA.gov</title>
+	<!-- Social media post -->
+    <meta property="og:image" content="/img/thumbnail.png">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:width" content="630">
+    <meta property="og:title" content="Check if you can get a discounted phone service (California LifeLine) - Alpha.CA.gov">
+    <meta property="og:description" content="Find out if you’re eligible for the California LifeLine Program, a discounted phone service.">
+    <meta property="og:url" content="[code-url]">
+    <link rel="canonical" href="[code-url]" />
+	<link href="https://california.azureedge.net/cdt/statetemplate/6.0.0/css/cagov.font-only.min.css" rel="stylesheet" />
+</head>
+
+<body>
+ 
+<header>
+	<%= require('html-loader!../../../partials/official.html') %>
+	<%= require('html-loader!../../../partials/experiment-banner.html') %>
+	<%= require('html-loader!../../../partials/navbar.html') %>
+</header>
+		
+<main>	
+  <div class="container-fluid jumbotron">
+    <div class="container">
+		<nav aria-label="breadcrumb">
+		  <ol class="breadcrumb">
+			<li class="breadcrumb-item"><span class="ca-gov-icon-arrow-prev pr-1 smaller"></span><a href="../../apply-discounted-phone-service/">Apply for a discounted phone service</a></li>
+		  </ol>
+		</nav>
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Check if you can get a discounted phone service</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+    <div class="row">
+      <div class="col-lg-8" >
+	
+			<div class="container" id="div-qualified-income">
+				<div class="row">
+					<div class="col-lg-8 pl-0">	
+					<h2>You can get a discount!</h2>
+						<p>Next, you’ll want to find one of the following documents:</p>
+						<ul>
+						<li>The front page of your state, federal, or tribal tax return from last year.</li>
+						<li>Or income statements or paycheck stubs for three months in a row. Those three months should be within the past 12 months.</li>			  
+						</ul>
+						<p>Have the document with you as you continue to step two. </p>
+						<a class="action-link" href="../../apply-discounted-phone-service/#2" target="_self">Go to step 2</a>
+					</div>
+				</div>
+			</div>
+		  
+		</div>
+	</div>
+</div>		  
+</main>	
+<footer>
+	<%= require('html-loader!../../../partials/feedback.html') %>
+	<%= require('html-loader!../../../partials/footer.html') %>
+	<%= require('html-loader!../../../partials/alphabar.html') %>
+	<%= require('html-loader!../../../partials/ga.html') %>
+</footer>
+</body>
+</html>
