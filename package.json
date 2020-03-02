@@ -4,7 +4,7 @@
   "description": "This will be the product/dev repo of the CA.gov Alpha.",
   "main": "public/index.html",
   "scripts": {
-    "build": "npm run build:modern && npm run build:ancient && npm run validate && npm run langsplit",
+    "build": "npm run build:rollup && npm run build:modern && npm run build:ancient && npm run build:rollupend && npm run validate && npm run langsplit",
     "build:modern": "webpack --mode production",
     "build:dev": "webpack --mode development",
     "build:ancient": "webpack --config src/nodescripts/webpack.config.es5.js",
@@ -18,7 +18,9 @@
     "test": "jest test/*.spec.js",
     "validate": "html-validate 'public/en/**/*.html' --c .htmlvalidate.json",
     "langsplit": "node src/nodescripts/tokenreplace.js",
-    "gimmetranslations": "node src/nodescripts/get-translations.js"
+    "gimmetranslations": "node src/nodescripts/get-translations.js",
+    "build:rollup": "rollup --config src/nodescripts/rollup.config.js && rollup --config src/nodescripts/rollup.config.food.js",
+    "build:rollupend": "mv src/js/es6/*.js public/js && rm src/js/es6/*.html"
   },
   "repository": {
     "type": "git",
@@ -34,6 +36,9 @@
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
+    "@open-wc/rollup-plugin-html": "^0.1.1",
+    "@rollup/plugin-json": "^4.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
     "@webcomponents/webcomponentsjs": "^2.4.1",
     "babel-loader": "^8.0.6",
     "babel-plugin-transform-custom-element-classes": "^0.1.0",
@@ -55,6 +60,10 @@
     "puppeteer": "^2.0.0",
     "purgecss-webpack-plugin": "^1.6.0",
     "replace-in-file": "^5.0.2",
+    "rollup": "^1.32.0",
+    "rollup-plugin-index-html": "^1.10.0",
+    "rollup-plugin-terser": "^5.2.0",
+    "rollup-plugin-uglify-es": "0.0.1",
     "sass-loader": "^8.0.0",
     "script-ext-html-webpack-plugin": "^2.1.4",
     "style-loader": "^1.1.2",

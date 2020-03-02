@@ -119,6 +119,9 @@ if(document.querySelector('body.js-food-banks')) {
     window.foodLocations = data;
     loadMap();
   })
+  .catch((e) => {
+    console.log(e)
+  })
 }
 
 function reorient(position) {

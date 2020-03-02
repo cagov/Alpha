@@ -87,18 +87,11 @@
       </div>
     </main>
     <footer>
-      <%= require('html-loader!../../partials/feedback.html') %> <%=
-      require('html-loader!../../partials/footer.html') %> <%=
-      require('html-loader!../../partials/alphabar.html') %>
-    </footer>
-    <script
-      src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"
-      defer
-    ></script>
-    <script
-      src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"
-      defer
-    ></script>
-    <%= require('html-loader!../../partials/ga.html') %>
+      <%= require('html-loader!../../partials/feedback.html') %>
+      <%= require('html-loader!../../partials/footer.html') %>
+      <%= require('html-loader!../../partials/alphabar.html') %>
+      <%= require('html-loader!../../partials/ga.html') %>
+  </footer>
+  <%= require('html-loader!../../js/es6/jszips.html') %>
   </body>
 </html>

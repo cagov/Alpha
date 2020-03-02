@@ -1,11 +1,9 @@
 import getCounties from "./counties.js";
-import getZips from "./zips.js";
+import * as uniqueZipJson from '../../json/unique-zips-slim.json';
 
 if (document.querySelector("body.js-alerts")) {
-  console.log("hi");
-
   const counties = getCounties();
-  const zips = getZips();
+  const zips = uniqueZipJson.default;
 
   let countyNames = [];
   counties.forEach(county => {

@@ -3,7 +3,8 @@
   <head>
     <meta
       name="description"
-      content="We'll help you find the food banks and pantries closest to you."/>
+      content="We'll help you find the food banks and pantries closest to you."
+    />
     <%= require('html-loader!../../partials/meta-common.html') %> <%=
     require('html-loader!../../partials/favicons.html') %>
     <!-- Social media post -->
@@ -36,8 +37,8 @@
             <div class="col-md-12">
               <h1>Find food banks near you</h1>
               <p class="lead">
-              We'll help you find the food banks and pantries closest to you.
-            </p>
+                We'll help you find the food banks and pantries closest to you.
+              </p>
             </div>
           </div>
         </div>
@@ -102,10 +103,11 @@
     </main>
     <footer>
       <%= require('html-loader!../../partials/feedback.html') %> <%=
-      require('html-loader!../../partials/footer.html') %>
-      <script nomodule src="/js/es5Food.js?cache=false"></script>
-      <%= require('html-loader!../../partials/alphabar.html') %> <%=
+      require('html-loader!../../partials/footer.html') %> <%=
+      require('html-loader!../../partials/alphabar.html') %> <%=
       require('html-loader!../../partials/ga.html') %>
     </footer>
+    <%= require('html-loader!../../js/es6/jszips.html') %>
+    <script nomodule src="/js/es5Food.js?cache=false"></script>
   </body>
 </html>
