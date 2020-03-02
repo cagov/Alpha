@@ -50,12 +50,12 @@
 			<div class="container" id="div-no-not-sure">
 				<div class="row">
 					<div class="col-lg-8 pl-0">	
-					<h2>How many people are in your household?</h2>
+					<h2><label for="household">How many people are in your household?</label></h2>
 						<p>A household is a group of people who live together and share income and expenses (even if they are not related to each other).</p>
 						<form method="get" action="../total-income/"  >
 							<div class="form-group">
 								<input type="hidden" id="programs" name="programs">
-								<input type="number" required="required" min="1" max="999" class="form-control form-control-md col-lg-6" name="household">
+								<input type="number" required="required" min="1" max="999" class="form-control form-control-md col-lg-6" id="household" name="household">
 
 							<p><button class="btn btn-primary mt-3" type="submit">[global-lang-next]</button>
 								</p>
