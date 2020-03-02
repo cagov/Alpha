@@ -74,7 +74,7 @@ function langloop() {
 function replaceonelanguage(targetlang) {
   fileslist.forEach(path=> {
     let files = getdestination(targetlang)+path
-    if(!files.endsWith('.html')) files +='/index.html'
+    if(!files.includes('.')) files +='/**/*.html'
 
     //using global tokens and path matching tokens
     sortedcsvresults
