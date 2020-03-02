@@ -55,19 +55,9 @@ function getGeo() {
 function loadScript( url, callback ) {
   var script = document.createElement( "script" )
   script.type = "text/javascript";
-  if(script.readyState) {  // only required for IE <9
-    script.onreadystatechange = function() {
-      if ( script.readyState === "loaded" || script.readyState === "complete" ) {
-        script.onreadystatechange = null;
-        callback();
-      }
-    };
-  } else {  //Others
-    script.onload = function() {
-      callback();
-    };
-  }
-
+  script.onload = function() {
+    callback();
+  };
   script.src = url;
   document.getElementsByTagName( "head" )[0].appendChild( script );
 }
@@ -120,6 +110,7 @@ if(document.querySelector('body.js-food-banks')) {
     loadMap();
   })
   .catch((e) => {
+    console.log('error occurred retrieving full set of food bank locations')
     console.log(e)
   })
 }
@@ -129,7 +120,7 @@ function reorient(position) {
     window.map.flyTo({
       center: position,
       essential: false // this animation is not considered essential with respect to prefers-reduced-motion
-    });  
+    });
   }
   displaySortedResults(position)
 }
