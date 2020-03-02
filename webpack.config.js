@@ -96,6 +96,7 @@ module.exports = {
       excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
+    //*************** Begin Lifeline
     new HtmlWebpackPlugin({
       filename: "en/apply-discounted-phone-service/index.html",
       template: "src/services/apply-discounted-phone-service/index.html",
@@ -115,6 +116,45 @@ module.exports = {
       excludeChunks: excludeChucksExcept("lifeline"),
       minify: minificationOptions
     }),
+
+    new HtmlWebpackPlugin({
+      filename: "en/who-can-get-discounted-phone-service/no-not-sure/index.html",
+      template: "src/services/who-can-get-discounted-phone-service/no-not-sure/index.html",
+      excludeChunks: excludeChucksExcept("lifeline"),
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: "en/who-can-get-discounted-phone-service/not-qualified/index.html",
+      template: "src/services/who-can-get-discounted-phone-service/not-qualified/index.html",
+      excludeChunks: excludeChucksExcept("lifeline"),
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: "en/who-can-get-discounted-phone-service/not-sure-qualified/index.html",
+      template: "src/services/who-can-get-discounted-phone-service/not-sure-qualified/index.html",
+      excludeChunks: excludeChucksExcept("lifeline"),
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: "en/who-can-get-discounted-phone-service/qualified/index.html",
+      template: "src/services/who-can-get-discounted-phone-service/qualified/index.html",
+      excludeChunks: excludeChucksExcept("lifeline"),
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: "en/who-can-get-discounted-phone-service/qualified-income/index.html",
+      template: "src/services/who-can-get-discounted-phone-service/qualified-income/index.html",
+      excludeChunks: excludeChucksExcept("lifeline"),
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: "en/who-can-get-discounted-phone-service/total-income/index.html",
+      template: "src/services/who-can-get-discounted-phone-service/total-income/index.html",
+      excludeChunks: excludeChucksExcept("lifeline"),
+      minify: minificationOptions
+    }),
+
+    //*************** End Begin Lifeline
  
     new HtmlWebpackPlugin({
       filename: "en/apply-for-disability-insurance-benefits/index.html",
