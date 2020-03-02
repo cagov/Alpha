@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en" xml:lang="en">
+
+<head>
+    <meta name="description" content="Follow these suggested steps to protect yourself and your family from a wildfire.">
+    <%= require('html-loader!../../partials/meta-common.html') %>
+    <%= require('html-loader!../../partials/favicons.html') %>
+    <title>Steps to prepare for a wildfire - Alpha.CA.gov</title>
+    <!-- Social media post -->
+    <meta property="og:image" content="/img/thumbnail.png">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:width" content="630">
+    <meta property="og:title" content="Steps to prepare for a wildfire - Alpha.CA.gov">
+    <meta property="og:description" content="Follow these suggested steps to protect yourself and your family from a wildfire.">
+    <meta property="og:url" content="[code-url]">
+    <link rel="canonical" href="[code-url]" />
+    <!-- mapbox autocomplete -->
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css" type="text/css" />
+</head>
+
+<body>
+    <link href="https://california.azureedge.net/cdt/statetemplate/6.0.0/css/cagov.font-only.min.css" rel="stylesheet" />
+    <header>
+        <%= require('html-loader!../../partials/official.html') %>
+        <%= require('html-loader!../../partials/experiment-banner.html') %>
+        <%= require('html-loader!../../partials/navbar.html') %>
+    </header>
+    <main>
+        <div class="container-fluid jumbotron">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Prepare for a wildfire</h1>
+                        <p class="lead">Follow these suggested steps to protect yourself and your family from a wildfire. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+					<cwds-step-list>
+					<a href="#" class="show-all">Show all</a>
+        			<a href="#" class="show-all d-none">Hide all</a>
+					  <ul class="list-group list-group-flush">
+						<li class="list-group-item unstyled list-group-item-action">
+						  <button class="step-description">
+							<span class="list-number" aria-label="step one">1</span>Sign up for emergency alerts</button>
+							<span class="show">[global-lang-show]</span><span class="hide">[global-lang-hide]</span>
+						  <div class="details"><span class="step-interior pt-3">
+							<a class="action-link" href="../alerts/">Get local alerts</a>
+							</span></div>
+						</li>
+					  <li class="list-group-item unstyled list-group-item-action">
+						  <button class="step-description">
+							<span class="list-number" aria-label="step two">2</span>Clear a fire-resistant zone around your home
+						  </button><span class="show">[global-lang-show]</span><span class="hide">[global-lang-hide]</span>
+						  <div class="details"><span class="step-interior">
+						  <p>State law requires property owners to clear a fire-resistant zone 100 feet around their homes or buildings.</p>
+						  <a class="action-link" href="https://www.readyforwildfire.org/prepare-for-wildfire/get-ready/defensible-space/">Learn about fire-resistant zones</a> 
+						   </span>
+						  </div>
+						</li> 
+						<li class="list-group-item unstyled list-group-item-action">
+						  <button class="step-description">
+							<span class="list-number" aria-label="step three">3</span>Make an evacuation plan 
+						  </button><span class="show">[global-lang-show]</span><span class="hide">[global-lang-hide]</span>
+						  <div class="details"><span class="step-interior">
+							<ul class="inner-list">
+							  <li>Learn a few ways to evacuate your area for each of your family members. Your city might have evacuation maps, or you may need to find a few routes on your own.</li>
+							  <li>Pick a meeting place with your family.</li>
+					  <li>Practice traveling your evacuation routes.</li>
+							  <li>Find a few shelters along your routes.</li>
+							  <li>Make a plan to evacuate or protect your pets and livestock.</li>
+							  <li>Share your evacuation plans with your neighbors and ask about theirs.</li>
+							</ul>
+						   </span>
+						  </div>
+						</li>            
+						<li class="list-group-item unstyled list-group-item-action">
+						  <button class="step-description">
+						   <span class="list-number step-list-and-or">[global-lang-and-lower]</span>Make a family communication plan
+						  </button><span class="show">[global-lang-show]</span><span class="hide">[global-lang-hide]</span>
+						  <div class="details">
+							<span class="step-interior">
+							<ul class="inner-list">
+							  <li>Choose one out-of-town person to communicate among everyone. That way, if you get separated, you can stay in touch if cell signals are cutting in and out.</li>
+							  <li>Keep a list of emergency contact numbers in your emergency kit. </li>
+							</ul>
+						   </span>
+						  </div>
+						</li> 
+						<li class="list-group-item unstyled list-group-item-action">
+						  <button class="step-description">
+							<span class="list-number" aria-label="step four">4</span>Gather supplies 
+						  </button><span class="show">[global-lang-show]</span><span class="hide">[global-lang-hide]</span>
+						  <div class="details"><span class="step-interior">
+							<p>Pack an emergency kit with:</p> 
+							<ul class="inner-list">
+					  <li>Cash</li>
+							  <li>Canned food</li>
+					  <li>Manual can opener</li>
+							  <li>Bottled water </li>
+							  <li><a href="https://www.cdph.ca.gov/Programs/EPO/Pages/Wildfire%20Pages/N95-Respirators-FAQs.aspx">N95 respirator masks</a></li>
+							  <li>First aid kit</li>
+							  <li>Fire extinguisher</li>
+							  <li>Flashlight and batteries</li>
+					  <li>A battery-operated radio or a scanner (it could help you learn safe routes to evacuate when cell signals are down) </li>
+							</ul>
+						   </span>
+						  </div>
+						</li>   
+						<li class="list-group-item unstyled list-group-item-action">
+						  <button class="step-description">
+							<span class="list-number" aria-label="step five">5</span>Learn how to shut off utilities 
+						  </button><span class="show">[global-lang-show]</span><span class="hide">[global-lang-hide]</span>
+						  <div class="details"><span class="step-interior">
+							<p>Teach your family how to shut off your water, gas, and electricity. </p> 
+							<ul class="inner-list">
+							  <li>Natural gas leaks can cause explosions and fires. So it’s helpful to turn off the gas during a disaster. </li>
+							  <li>Clean water can be hard to find after a disaster. Turning off the water valve can protect your tap water from cracked lines and pollution. </li>
+							  <li>Electrical sparks can ignite natural gas leaks. To prevent damage during a wildfire, turn off the power to all of your house in your circuit box. <span class="bold">Please note: Start by turning off all of the smaller circuits before you shut off the main circuit.</span> 
+							  </li>
+							</ul>
+						   </span>
+						  </div>
+						</li>    
+
+						<li class="list-group-item unstyled list-group-item-action">
+						  <button class="step-description">
+							<span class="list-number" aria-label="step six">6</span>Store documents in a fireproof place
+						  </button><span class="show">[global-lang-show]</span><span class="hide">[global-lang-hide]</span>
+						  <div class="details"><span class="step-interior">
+							<p>Make digital and hard copies of your important documents and IDs. Then, store those hard copies in a fireproof place.</p> 
+							<p>Take pictures of your belongings and property and store those photos there, too.</p> 
+						   </span>
+						  </div>
+						</li>   
+
+						<li class="list-group-item unstyled list-group-item-action">
+						  <button class="step-description">
+							<span class="list-number" aria-label="step seven">7</span>Check your insurance coverage 
+						  </button><span class="show">[global-lang-show]</span><span class="hide">[global-lang-hide]</span>
+						  <div class="details"><span class="step-interior">
+							<p>Make sure your insurance plans would be enough to replace your home and all of your belongings. 
+						  </p> 
+						   </span>
+						  </div>
+						</li>    
+					  </ul>
+					</cwds-step-list>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <%= require('html-loader!../../partials/feedback.html') %>
+        <%= require('html-loader!../../partials/footer.html') %>
+        <%= require('html-loader!../../partials/alphabar.html') %>
+		<%= require('html-loader!../../partials/ga.html') %>
+		<%= require('html-loader!../../js/es6/js.html') %>
+    </footer>
+</body>
+
+</html>
+
+
+
+
