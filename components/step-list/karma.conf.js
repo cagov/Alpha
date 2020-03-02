@@ -10,15 +10,15 @@ module.exports = config => {
         //
         // npm run test -- --grep test/foo/bar.test.js
         // npm run test -- --grep test/bar/*
-        { pattern: config.grep ? config.grep : 'test/**/*.test.js', type: 'module' },
+        { pattern: config.grep ? config.grep : 'test/**/*.test.js', type: 'module' }
       ],
 
       // see the karma-esm docs for all options
       esm: {
         // if you are using 'bare module imports' you will need this option
-        nodeResolve: true,
-      },
-    }),
+        nodeResolve: true
+      }
+    })
   );
   return config;
 };

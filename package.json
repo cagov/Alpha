@@ -20,7 +20,9 @@
     "langsplit": "node src/nodescripts/tokenreplace.js",
     "gimmetranslations": "node src/nodescripts/get-translations.js",
     "build:rollup": "rollup --config src/nodescripts/rollup.config.js && rollup --config src/nodescripts/rollup.config.food.js",
-    "build:rollupend": "mv src/js/es6/*.js public/js && rm src/js/es6/*.html"
+    "build:rollupend": "mv src/js/es6/*.js public/js && rm src/js/es6/*.html",
+    "lint:js": "semistandard --parser babel-eslint | snazzy",
+    "lint:fixjs": "semistandard --fix"
   },
   "repository": {
     "type": "git",
@@ -40,6 +42,7 @@
     "@rollup/plugin-json": "^4.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "@webcomponents/webcomponentsjs": "^2.4.1",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-transform-custom-element-classes": "^0.1.0",
     "babel-preset-env": "^1.7.0",
@@ -66,6 +69,8 @@
     "rollup-plugin-uglify-es": "0.0.1",
     "sass-loader": "^8.0.0",
     "script-ext-html-webpack-plugin": "^2.1.4",
+    "semistandard": "^14.2.0",
+    "snazzy": "^8.0.0",
     "style-loader": "^1.1.2",
     "uglifycss": "0.0.29",
     "uncss": "^0.17.2",

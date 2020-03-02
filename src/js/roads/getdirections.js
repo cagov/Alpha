@@ -1,5 +1,5 @@
-export default async function getDirections(data) {
-  let url = 'https://api.mapbox.com/directions/v5/mapbox/driving?access_token=pk.eyJ1IjoiYWxwaGEtY2EtZ292IiwiYSI6ImNrNTZ5em1qMDA4ZWkzbG1yMDg4OXJyaDIifQ.GleKGsZsaOcmxfsYUR9bTg';
+export default async function getDirections (data) {
+  const url = 'https://api.mapbox.com/directions/v5/mapbox/driving?access_token=pk.eyJ1IjoiYWxwaGEtY2EtZ292IiwiYSI6ImNrNTZ5em1qMDA4ZWkzbG1yMDg4OXJyaDIifQ.GleKGsZsaOcmxfsYUR9bTg';
 
   const response = await fetch(url, {
     method: 'POST', // *GET, POST, PUT, DELETE, etc.

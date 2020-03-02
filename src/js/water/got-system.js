@@ -1,52 +1,52 @@
-import analytes from "./analytes.js";
-let analyteArray = new analytes();
-let analyteDetails = new Map();
+import analytes from './analytes.js';
+const analyteArray = new analytes();
+const analyteDetails = new Map();
 analyteArray.forEach(an => {
   analyteDetails.set(an.key, an);
 });
 
-function capitalizer(name) {
-  let noCap = ['of','and','for','a'];
-  let allCap = ['mud']
-  let pieces = name.split(' ');
+function capitalizer (name) {
+  const noCap = ['of', 'and', 'for', 'a'];
+  const allCap = ['mud'];
+  const pieces = name.split(' ');
   let finalString = '';
-  pieces.forEach( (piece) => {
-    if(noCap.indexOf(piece.toLowerCase()) > -1) {
+  pieces.forEach((piece) => {
+    if (noCap.indexOf(piece.toLowerCase()) > -1) {
       finalString += piece.toLowerCase() + ' ';
-    } else if(allCap.indexOf(piece.toLowerCase()) > -1) {
+    } else if (allCap.indexOf(piece.toLowerCase()) > -1) {
       finalString += piece.toUpperCase() + ' ';
     } else {
-      finalString += piece[0].toUpperCase() + piece.substr(1,piece.length - 1).toLowerCase() + ' ';
+      finalString += piece[0].toUpperCase() + piece.substr(1, piece.length - 1).toLowerCase() + ' ';
     }
-  })
+  });
   return finalString.trim();
 }
 
-export default function gotSystem(systemData) {
+export default function gotSystem (systemData) {
   let system = systemData[0];
   if (systemData.length > 0) {
     if (systemData.length > 1) {
       system = systemData[systemData.length - 1];
     }
 
-    let systemId = system.properties.pwsid;
-    let website_blurb = "";
-    let website_blurb_1 = "";
-    let resultsOutput = "";
+    const systemId = system.properties.pwsid;
+    let website_blurb = '';
+    let website_blurb_1 = '';
+    let resultsOutput = '';
     if (
       system.properties.systemData &&
       system.properties.systemData.meta &&
       system.properties.systemData.meta.website
     ) {
-      let website = system.properties.systemData.meta.website;
-      if (website.indexOf("http") < 0) {
+      const website = system.properties.systemData.meta.website;
+      if (website.indexOf('http') < 0) {
         website_blurb = `<p class="mb-5"><a class="action-link" href="http://${website}">Visit your water system</a></p>`;
       }
       website_blurb_1 = ` Your water system has the most detailed information about your water quality. <a href="${website}" target="_self">Visit your water system</a>`;
     }
-    
-    document.querySelector(".system-info").style.display = 'block';
-    history.pushState({systemId: systemId}, window.title, window.location.origin + window.location.pathname + '?systemId='+systemId)
+
+    document.querySelector('.system-info').style.display = 'block';
+    history.pushState({ systemId: systemId }, window.title, window.location.origin + window.location.pathname + '?systemId=' + systemId);
 
     fetch(
       `https://api.alpha.ca.gov/WaterSystemHistory?systemId=${systemId}`
@@ -60,11 +60,11 @@ export default function gotSystem(systemData) {
           cleanup();
         } else {
           // create map of latest violation for
-          let analyteMap = new Map();
+          const analyteMap = new Map();
           history.forEach(violation => {
-            let lastMatch = analyteMap.get(violation.ANALYTE_NAME);
+            const lastMatch = analyteMap.get(violation.ANALYTE_NAME);
             if (lastMatch) {
-              if (lastMatch.VIOL_END_DATE < violation.VIOL_END_DATE || (lastMatch.VIOL_END_DATE == violation.VIOL_END_DATE && violation.ENF_ACTION_TYPE_ISSUED == "RETURN TO COMPLIANCE")) {
+              if (lastMatch.VIOL_END_DATE < violation.VIOL_END_DATE || (lastMatch.VIOL_END_DATE == violation.VIOL_END_DATE && violation.ENF_ACTION_TYPE_ISSUED == 'RETURN TO COMPLIANCE')) {
                 analyteMap.set(violation.ANALYTE_NAME, violation);
               }
             } else {
@@ -76,13 +76,13 @@ export default function gotSystem(systemData) {
             <p>Your water did not meet <a href="https://mywaterquality.ca.gov/safe_to_drink/">California’s safety standards</a>. We found these contaminants in your water: </p>`;
 
           analyteMap.forEach(analyte => {
-            if(analyte.ENF_ACTION_TYPE_ISSUED != 'RETURN TO COMPLIANCE') {
-                resultsOutput += `<div class="card border-dark mb-3">
+            if (analyte.ENF_ACTION_TYPE_ISSUED != 'RETURN TO COMPLIANCE') {
+              resultsOutput += `<div class="card border-dark mb-3">
               <div class="card-body row">
-                ${(function() {
+                ${(function () {
                   if (
-                    analyte.ANALYTE_NAME == "GROUNDWATER RULE" ||
-                    analyte.ANALYTE_NAME == "SWTR"
+                    analyte.ANALYTE_NAME == 'GROUNDWATER RULE' ||
+                    analyte.ANALYTE_NAME == 'SWTR'
                   ) {
                     return `<div class="col flex pr-3">
                       <div class="bold display-4 text-center">
@@ -96,7 +96,7 @@ export default function gotSystem(systemData) {
                         <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated w-100" aria-hidden="true"></div>
                       </div>
                     </div>`;
-                  } else if (analyte.ANALYTE_NAME == "TURBIDITY") {
+                  } else if (analyte.ANALYTE_NAME == 'TURBIDITY') {
                     return `<div class="col flex pr-3">
                         <div class="bold display-4 text-center">
                           <span class="ca-gov-icon-biohazard display-4" aria-hidden="true"></span>
@@ -112,7 +112,7 @@ export default function gotSystem(systemData) {
                   } else {
                     return `<div class="col flex">
                       <div class="bold display-4 text-center">${(analyte.RESULT /
-                        analyte.MCL_VALUE).toFixed(1) }x</div>
+                        analyte.MCL_VALUE).toFixed(1)}x</div>
                       <p class="font-weight-light text-center">the legal limit</p>
                     </div>
                     <div class="water-label">
@@ -134,25 +134,25 @@ export default function gotSystem(systemData) {
                 })()}
               </div>
             </div>
-            ${(function() {
+            ${(function () {
               if (analyteDetails.get(analyte.ANALYTE_NAME)) {
-                let analyteDets = analyteDetails.get(analyte.ANALYTE_NAME);
+                const analyteDets = analyteDetails.get(analyte.ANALYTE_NAME);
                 return `<div>
                   <h4>When ${analyteDets.name} was found</h4>
-                  <p>On ${new Date(analyte.VIOL_BEGIN_DATE).toLocaleString('en-US', { year: 'numeric', month: 'long',  day: 'numeric'})}, your water system found ${analyteDets.name} in your water.</p>
+                  <p>On ${new Date(analyte.VIOL_BEGIN_DATE).toLocaleString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}, your water system found ${analyteDets.name} in your water.</p>
                   <h4>Potential health effects from long-term exposure to ${analyteDets.name}</h4>
                   <p>${analyteDets.risk}</p>
                   <h4>Common sources of ${analyteDets.name}</h4>
                   <p>${analyteDets.source}</p>
                 </div>`;
               } else {
-                return ``;
+                return '';
               }
               })()}`;
             }
           });
           document.querySelector(
-            ".system-status"
+            '.system-status'
           ).innerHTML = resultsOutput + `${getSystemHTMLUnSafe(website_blurb, system)}`;
           cleanup();
         }
@@ -163,42 +163,41 @@ export default function gotSystem(systemData) {
       });
   } else {
     document.querySelector(
-      ".system-status"
-    ).innerHTML = `<div class="invalid-feedback error1 alert alert-warning" style="display: block;">Sorry, we couldn't find a water system for that location</div>`;
-    document.querySelector(".system-info").innerHTML = "";
+      '.system-status'
+    ).innerHTML = '<div class="invalid-feedback error1 alert alert-warning" style="display: block;">Sorry, we couldn\'t find a water system for that location</div>';
+    document.querySelector('.system-info').innerHTML = '';
     cleanup();
   }
 }
 
+function displaySafe (website_blurb, system) {
+  const template = document.getElementById('water-detail-template');
+  const node = template.content.cloneNode(true);
+  const html = `${node.querySelector('.safe-desc').innerHTML} ${getSystemHTMLSafe(website_blurb, system, node)}`;
 
-function displaySafe(website_blurb, system) {
-  const template = document.getElementById("water-detail-template")
-  const node = template.content.cloneNode(true)
-  let html = `${node.querySelector('.safe-desc').innerHTML} ${getSystemHTMLSafe(website_blurb, system, node)}`;
-
-  document.querySelector(".system-status").innerHTML = html;
+  document.querySelector('.system-status').innerHTML = html;
 }
 
-function getSystemHTMLSafe(website_blurb, system, node) {
+function getSystemHTMLSafe (website_blurb, system, node) {
   return `${node.querySelector('.comes-from').innerHTML}
     <p>${node.querySelector('.your-water-sys').innerHTML} <strong>${capitalizer(system.properties.name)}</strong>.
     ${node.querySelector('.when-tested').innerHTML}
     ${website_blurb} </p>`;
 }
 
-function getSystemHTMLUnSafe(website_blurb, system) {
-  const template = document.getElementById("water-detail-template")
-  const node = template.content.cloneNode(true)
+function getSystemHTMLUnSafe (website_blurb, system) {
+  const template = document.getElementById('water-detail-template');
+  const node = template.content.cloneNode(true);
   return `${node.querySelector('.comes-from').innerHTML}
     <p class="card-text">${node.querySelector('.your-water-sys').innerHTML} <strong>${capitalizer(system.properties.name)}</strong>.
     ${node.querySelector('.system-test-desc').innerHTML}</p>
     <p>${node.querySelector('.advice').innerHTML} ${website_blurb}</p>`;
 }
 
-function cleanup() {
-  const template = document.getElementById("water-detail-template")
-  const node = template.content.cloneNode(true)
-  let waterButton = document.querySelector(".js-water-lookup");
+function cleanup () {
+  const template = document.getElementById('water-detail-template');
+  const node = template.content.cloneNode(true);
+  const waterButton = document.querySelector('.js-water-lookup');
   waterButton.innerHTML = `${node.querySelector('.check-water').innerHTML}`;
-  document.querySelector(".system-data").style.display = "block";
+  document.querySelector('.system-data').style.display = 'block';
 }

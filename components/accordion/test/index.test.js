@@ -2,7 +2,7 @@ import { fixture, expect } from '@open-wc/testing';
 
 import '../index.js';
 
-function resolveAfter2Seconds(x) { 
+function resolveAfter2Seconds (x) {
   return new Promise(resolve => {
     setTimeout(() => {
       resolve(x);
@@ -10,11 +10,10 @@ function resolveAfter2Seconds(x) {
   });
 }
 
-function elementExists(selector) {
+function elementExists (selector) {
   return new Promise(resolve => {
-
-    function checkForElement(selector, callback) {
-      if(document.querySelector(selector)) {
+    function checkForElement (selector, callback) {
+      if (document.querySelector(selector)) {
         callback();
       } else {
         setTimeout(() => {
@@ -23,13 +22,13 @@ function elementExists(selector) {
       }
     }
 
-    checkForElement(selector, function() {
+    checkForElement(selector, function () {
       resolve(true);
-    })
+    });
   });
 }
 
-describe('renders', function() {
+describe('renders', function () {
   it('an element', async () => {
     const el = await fixture(`<cwds-accordion>
     <div class="card">
@@ -45,7 +44,7 @@ describe('renders', function() {
       </div>
     </div>
   </cwds-accordion>`);
-  let results = await elementExists('.card-body');
+    const results = await elementExists('.card-body');
     expect(el.querySelectorAll('.card-body').length).to.be.above(0);
   });
 });
