@@ -30,7 +30,7 @@ fs.createReadStream(globalfilepath)
   .on('data', data => {
     if(data['']) throw console.error('*** Remove empty columns from CSV file - ' + globalfilepath);
 
-    data.path = data.path.replace(/\n/g, ' ').trim()
+    data.path = data.path.replace(/\n/g, ' ').replace(/\/$/,'').trim()
     data.token=data.token || data.en
     data['numMatches']=0
     csvresults.push(data)
