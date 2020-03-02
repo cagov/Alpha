@@ -18,12 +18,15 @@ const minificationOptions = {
   removeRedundantAttributes: false,
   removeScriptTypeAttributes: true,
   useShortDoctype: true,
-  //minifyJS: true,
+  minifyJS: true,
   minifyCSS: true,
   sortAttributes: true,
   sortClassName: true,
   useShortDoctype: true
 };
+let minificationOptionsWithComments = JSON.parse(JSON.stringify(minificationOptions))
+minificationOptionsWithComments["removeComments"]=false
+
 const excludedChunks = ["contactus", "roads", "shelters", "water", "lifeline"];
 const allChunks = ["style", "contactus", "roads", "shelters", "water", "lifeline"];
 
@@ -79,7 +82,7 @@ module.exports = {
       filename: "en/news/index.html",
       template: "src/news/index.html",
       excludeChunks: allChunks,
-      minify: minificationOptions
+      minify: minificationOptionsWithComments
     }),
     new HtmlWebpackPlugin({
       filename: "news/post.html",
