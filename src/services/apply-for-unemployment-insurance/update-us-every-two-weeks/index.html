@@ -2,136 +2,27 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="How to update us every two weeks to continue your unemployment insurance (UI).">
-    <meta name="author" content="Bootstrap, alpha.ca.gov team">
-    <meta name="generator" content="Hugo 0.61.0">
+    <%= require('html-loader!../../../partials/meta-common.html') %>
+    <%= require('html-loader!../../../partials/favicons.html') %>
+  	<meta name="description" content="How to update us every two weeks to continue your unemployment insurance (UI).">
     <title>Update us every two weeks - Apply for unemployment insurance - Alpha.CA.gov</title>
-    <!-- Bootstrap core CSS -->
-    <link href="https://cwds.dev/docs/4.3/dist/css/bootstrap.css" rel="stylesheet">
-    <link href="https://cwds.dev/docs/4.3/assets/css/docs.css" rel="stylesheet" />
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="mask-icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/safari-pinned-tab.svg" color="#1d1a16">
-    <link rel="icon" href="https://cwds.dev/docs/4.3/assets/img/favicons/favicon.ico">
-    <meta name="msapplication-config" content="https://cwds.dev/docs/4.3/assets/img/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#000000">
-    <link href="https://california.azureedge.net/cdt/statetemplate/6.0.0/css/cagov.font-only.min.css" rel="stylesheet" />
 </head>
-<style>
-.tooltip-container {
-    position: relative;
-    display: inline-block;
-}
-
-/* the bubble element, added inside the toggletip live region */
-
-.tooltip-bubble {
-    display: inline-block;
-    position: absolute;
-    left: 100%;
-    top: 0;
-    width: 10em;
-    padding: 0.5rem;
-    background: #000;
-    color: #fff;
-    z-index: 10;
-}
-
-.tooltip-button {
-    background: none;
-    border: 0;
-    padding: 0;
-    color: #0071bc;
-    text-decoration: underline;
-    background: #fff;
-}
-
-.list-group-item.active {
-    background: linear-gradient(60deg, #0f1e6b 0%, #1f0f6b 70%);
-    border-color: #0f1e6b;
-    color: white;
-}
-
-label {
-    margin-bottom: auto;
-    vertical-align: middle;
-}
-
-label.custom-control-label {
-    text-indent: 0px;
-    width: 100%;
-    padding-left: 30px;
-    text-indent: 0;
-
-}
-
-.list-group input[type="checkbox"] {
-    margin-right: -20px;
-}
-
-.aside {
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-
-}
-
-.aside .step-title {
-
-    border: solid #ccc 3px;
-    padding: 0px 7px;
-    font-family: "Public Sans Bold", sans-serif;
-    font-size: 1.5rem;
-
-}
-
-.list-number {
-    text-indent: 0;
-}
-
-
-li.list-group-item.unstyled {
-    text-indent: -45px;
-    padding-left: 50px;
-}
-
-.list-group-flush.list-group-item {
-    font-family: "Public Sans Bold", sans-serif;
-}
-
-.list-group-item {
-    background: transparent;
-}
-
-</style>
-
+		
 <body>
-    <link href="https://california.azureedge.net/cdt/statetemplate/6.0.0/css/cagov.font-only.min.css" rel="stylesheet" />
-    <div class="official">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <p>State of California</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <nav class="navbar navbar-inverse">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand navbar-left" href="/UX/">CA.gov <sup>(ALPHA)</sup></a>
-            </div>
-        </div>
-    </nav>
+	
+<header>
+	<%= require('html-loader!../../../partials/official.html') %>
+	<%= require('html-loader!../../../partials/experiment-banner.html') %>
+	<%= require('html-loader!../../../partials/navbar.html') %>
+</header>
+
+<main>
     <div class="container-fluid jumbotron">
         <div class="container">
             <nav aria-label="breadcrumb">
                 <!--  <ol class="breadcrumb">
-      <li class="breadcrumb-item"><span class="ca-gov-icon-arrow-prev pr-1 smaller"></span><a href="/UX/apply-discounted-phone-service/">Apply for a discounted phone service</a></li>
-      </ol> -->
+			<li class="breadcrumb-item"><span class="ca-gov-icon-arrow-prev pr-1 smaller"></span><a href="/UX/apply-discounted-phone-service/">Apply for a discounted phone service</a></li>
+		  </ol> -->
             </nav>
             <div class="row">
                 <div class="col-lg-8">
@@ -144,14 +35,14 @@ li.list-group-item.unstyled {
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
-                <div class="aside"><span class="display-5"></span>
+                <div class="aside">
                     <div class="list-group">
-                        <a href="index.html#who" class="list-group-item list-group-item-action ">Who can apply</a>
-                        <a href="when-to-apply.html#when" class="list-group-item list-group-item-action">When to apply</a>
-                        <a href="what-you-need-before-you-apply.html#what" class="list-group-item list-group-item-action">What you need before you apply</a>
-                        <a href="how-to-apply.html#how" class="list-group-item list-group-item-action ">How to apply</a>
-                        <a href="after-you-apply.html#after" class="list-group-item list-group-item-action ">After you apply</a>
-                        <a href="#update" class="list-group-item list-group-item-action active">Update us every two weeks</a>
+                        <a href="/apply-for-unemployment-insurance/#who" class="list-group-item list-group-item-action guide">Who can apply</a>
+                        <a href="../when-to-apply/#when" class="list-group-item list-group-item-action guide">When to apply</a>
+                        <a href="../what-you-need-before-you-apply/#what" class="list-group-item list-group-item-action guide">What you need before you apply</a>
+                        <a href="../how-to-apply/#how" class="list-group-item list-group-item-action guide">How to apply</a>
+                        <a href="../after-you-apply/#after" class="list-group-item list-group-item-action guide">After you apply</a>
+                        <a href="/#update" class="list-group-item list-group-item-action guide active">Update us every two weeks</a>
                     </div>
                 </div>
             </div>
@@ -168,11 +59,13 @@ li.list-group-item.unstyled {
             </div>
         </div>
     </div>
-    <footer>
-        <%= require('html-loader!../../../partials/footer.html') %>
-        <%= require('html-loader!../../../partials/alphabar.html') %>
-        <%= require('html-loader!../../../partials/ga.html') %>
-    </footer>
+</main>
+<footer>
+	<%= require('html-loader!../../../partials/footer.html') %>
+	<%= require('html-loader!../../../partials/alphabar.html') %>
+	<%= require('html-loader!../../../partials/ga.html') %>
+</footer>
 </body>
 
 </html>
+
