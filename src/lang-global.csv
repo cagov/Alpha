@@ -28,6 +28,8 @@ path,token,en,es,zh
 ,[global-lang-yes-camel],Yes,si,如果
 ,[global-lang-contact-us],Contact Us,Contáctenos,联系我们
 ,[global-lang-next],Next,Próximo,下
+,,Show all,Mostrar todo,显示全部
+,,Hide all,Ocultar todo,隐藏所有
 /,,We're making it easier to find and use government services and information.,Estamos haciendo más fácil de buscar y usar servicios e información del gobierno.,我们更容易发现和使用信息和服务的政府。
 /,,Welcome to Alpha.CA.gov,Bienvenido a Alpha.CA.gov,欢迎Alpha.CA.gov
 /,,Featured,Servicios Destacados,主要特点
@@ -192,8 +194,10 @@ path,token,en,es,zh
 /apply-for-disability-insurance-benefits,,pregnant,por embarazo,怀孕
 /apply-for-disability-insurance-benefits,,Check if you qualify,Compruebe si califica,检查您是否有资格
 /apply-for-disability-insurance-benefits,,If your employer has a,Si su empleador tiene un,如果你的雇主有
-/apply-for-disability-insurance-benefits,,"Voluntary Plan</a>, talk to your human resources office to apply for disability benefits.","plan Voluntario</a>, hable con su oficina de recursos humanos para solicitar los beneficios por incapacidad.",志愿者</A>计划，请向您的人力资源办公室申请伤残津贴。
-/apply-for-disability-insurance-benefits,,"If you're self-employed, you can","Si usted trabaja por cuenta propia, usted puede",如果你是自雇人士，你可以
+/apply-for-disability-insurance-benefits,,Voluntary Plan,plan Voluntario,志愿者计划
+/apply-for-disability-insurance-benefits,,", talk to your human resources office to apply for disability benefits.",", hable con su oficina de recursos humanos para solicitar los beneficios por incapacidad.",谈谈你的人力资源办公室申请伤残津贴。
+/apply-for-disability-insurance-benefits,,If you're self-employed,Si usted trabaja por cuenta propia,如果你是自雇人士
+/apply-for-disability-insurance-benefits,,", you can",", usted puede",，你可以
 /apply-for-disability-insurance-benefits,,apply for disability insurance,aplicar para el seguro de incapacidad,申请伤残保险
 /apply-for-disability-insurance-benefits,,File your claim,Presentar su solicitud,提交申请
 /apply-for-disability-insurance-benefits,,File online,Presentar por internet,目前在线
@@ -512,10 +516,8 @@ path,token,en,es,zh
 /apply-discounted-phone-service,,that:,que,那
 /apply-discounted-phone-service,,Get public assistance,Reciben asistencia pública,公共援助
 /apply-discounted-phone-service,,Or have an income below a certain amount,O tienen un ingreso por debajo de cierta cantidad,或者，他们有低于一定数额的收入
-/apply-discounted-phone-service,,Show all,Mostrar todo,显示全部
 /apply-discounted-phone-service,,This discount is for households that,Este descuento es para los hogares que,该折扣是家庭
 /apply-discounted-phone-service,,A household is a group of people who live together and share income and expenses (even if they are not related to each other),Un hogar es un grupo de personas que viven juntas y comparten los ingresos y gastos (incluso si no están relacionados entre sí),一个家庭是一群人谁住在一起，共享收入和支出（即使他们无关）
-/apply-discounted-phone-service,,Hide all,Ocultar todo,隐藏所有
 /apply-discounted-phone-service,,Check if you can get a discount,Verifique si puede recibir el descuento,检查您是否能够获得折扣
 /apply-discounted-phone-service,,Choose a phone company that offers discounts,Elije una compañía telefónica que ofrezca descuentos,选择一个电话公司，提供折扣
 /apply-discounted-phone-service,,Find a new phone company that offers a California LifeLine discount. Or check if your existing phone company offers a discount.,Encuentre una nueva compañía telefónica que ofrezca un descuento del Programa California LifeLine.,找到一个新的电话公司，提供加州生命线课程的折扣。
