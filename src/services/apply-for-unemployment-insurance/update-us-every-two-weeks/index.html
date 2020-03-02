@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%= require('html-loader!../../../partials/meta-common.html') %>
+    <%= require('html-loader!../../../partials/favicons.html') %>
+  	<meta name="description" content="How to update us every two weeks to continue your unemployment insurance (UI).">
+    <title>Update us every two weeks - Apply for unemployment insurance - Alpha.CA.gov</title>
+</head>
+		
+<body>
+	
+<header>
+	<%= require('html-loader!../../../partials/official.html') %>
+	<%= require('html-loader!../../../partials/experiment-banner.html') %>
+	<%= require('html-loader!../../../partials/navbar.html') %>
+</header>
+
+<main>
+    <div class="container-fluid jumbotron">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <!--  <ol class="breadcrumb">
+			<li class="breadcrumb-item"><span class="ca-gov-icon-arrow-prev pr-1 smaller"></span><a href="/UX/apply-discounted-phone-service/">Apply for a discounted phone service</a></li>
+		  </ol> -->
+            </nav>
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1>Apply for unemployment insurance </h1>
+                    <p class="lead">Unemployment insurance (UI) pays part of your income after your employer lays you off or reduces your hours. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="aside">
+                    <div class="list-group">
+                        <a href="/apply-for-unemployment-insurance/#who" class="list-group-item list-group-item-action guide">Who can apply</a>
+                        <a href="../when-to-apply/#when" class="list-group-item list-group-item-action guide">When to apply</a>
+                        <a href="../what-you-need-before-you-apply/#what" class="list-group-item list-group-item-action guide">What you need before you apply</a>
+                        <a href="../how-to-apply/#how" class="list-group-item list-group-item-action guide">How to apply</a>
+                        <a href="../after-you-apply/#after" class="list-group-item list-group-item-action guide">After you apply</a>
+                        <a href="/#update" class="list-group-item list-group-item-action guide active">Update us every two weeks</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <h2 id="update">Update us every two weeks</h2>
+                <p>To keep getting payments, you have to contact us every two weeks to let us know you still qualify for UI. This is called <strong>certifying for benefits</strong>. </p>
+                <a class="action-link" href="https://www.edd.ca.gov/unemployment/UI_Online.htm" target="_self">Certify online</a>
+                <div class="and-or mt-4 mb-4">or</div>
+                <p><strong>Certify by phone</strong></p>
+                <p><a href="tel:866-333-4606">1-866-333-4606</a></p>
+                <div class="and-or mt-4 mb-4">or</div>
+                <p><strong>Certify by mail</strong></p>
+                <p>We’ll mail you a <a href="https://www.edd.ca.gov/pdf_pub_ctr/de4581cto.pdf" target="_self">Continued Claim Form (DE 4581CTO)</a> within 10 days after we’ve processed your application. Fill it out and mail it to the address we've listed in your letter.</p>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+	<%= require('html-loader!../../../partials/footer.html') %>
+	<%= require('html-loader!../../../partials/alphabar.html') %>
+	<%= require('html-loader!../../../partials/ga.html') %>
+</footer>
+</body>
+
+</html>
+

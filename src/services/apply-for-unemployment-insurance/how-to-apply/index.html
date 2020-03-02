@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%= require('html-loader!../../../partials/meta-common.html') %>
+    <%= require('html-loader!../../../partials/favicons.html') %>
+  	<meta name="description" content="Follow these six steps to apply for California Lifeline, a discounted phone service. ">
+	<title>How to apply - Apply for unemployment insurance - Alpha.CA.gov</title>
+</head>
+		
+<body>
+	
+<header>
+	<%= require('html-loader!../../../partials/official.html') %>
+	<%= require('html-loader!../../../partials/experiment-banner.html') %>
+	<%= require('html-loader!../../../partials/navbar.html') %>
+</header>
+
+<main>
+    <div class="container-fluid jumbotron">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <!--  <ol class="breadcrumb">
+			<li class="breadcrumb-item"><span class="ca-gov-icon-arrow-prev pr-1 smaller"></span><a href="/UX/apply-discounted-phone-service/">Apply for a discounted phone service</a></li>
+		  </ol> -->
+            </nav>
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1>Apply for unemployment insurance </h1>
+                    <p class="lead">Unemployment insurance (UI) pays part of your income after your employer lays you off or reduces your hours. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="aside">
+                    <div class="list-group">
+                        <a href="/apply-for-unemployment-insurance/#who" class="list-group-item list-group-item-action guide">Who can apply</a>
+                        <a href="../when-to-apply/#when" class="list-group-item list-group-item-action guide">When to apply</a>
+                        <a href="../what-you-need-before-you-apply/#what" class="list-group-item list-group-item-action guide">What you need before you apply</a>
+                        <a href="/#how" class="list-group-item list-group-item-action guide active">How to apply</a>
+                        <a href="../after-you-apply/#after" class="list-group-item list-group-item-action guide">After you apply</a>
+                        <a href="../update-us-every-two-weeks/#update" class="list-group-item list-group-item-action guide">Update us every two weeks</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <h2 id="how">How to apply</h2>
+                <cwds-accordion>
+                    <div class="card">
+                        <button class="card-header accordion-alpha" type="button" aria-expanded="false">
+                            <div class="accordion-title">Apply online</div>
+                        </button>
+                        <div class="card-container collapsed">
+                            <div class="card-body">
+                                <p class="">Applying online is the fastest way to file for unemployment insurance. You can apply during the times below. </p>
+                                <table class="table">
+                                    <tbody>
+                                        <thead>
+                                            <tr>
+                                                <th>Days</th>
+                                                <th>Available times</th>
+                                            </tr>
+                                        </thead>
+                                        <tr>
+                                            <td>Sunday </td>
+                                            <td>5 a.m. – 8:30 p.m.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Monday </td>
+                                            <td>4 a.m. – 10 p.m.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tuesday – Friday</td>
+                                            <td>2 a.m. – 10 p.m.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Saturday</td>
+                                            <td>2 a.m. – 8 p.m.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a class="action-link" href="https://www.edd.ca.gov/Benefit_Programs_Online.htm" target="_self">Apply online</a>
+                            </div>
+                        </div>
+                    </div>
+                </cwds-accordion>
+                <cwds-accordion>
+                    <div class="card">
+                        <button class="card-header accordion-alpha" type="button" aria-expanded="false">
+                            <div class="accordion-title">Apply by phone</div>
+                        </button>
+                        <div class="card-container collapsed">
+                            <div class="card-body">
+                                <table class="table">
+                                    <tbody>
+                                        <thead>
+                                            <tr>
+                                                <th>Days</th>
+                                                <th>Available times</th>
+                                            </tr>
+                                        </thead>
+                                        <tr>
+                                            <td>Monday – Friday (except <a href="https://alpha.ca.gov/services/state-california-employee-holidays/" target="_self">state holidays</a>) </td>
+                                            <td>8 a.m. – 12 p.m. noon</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="bold">Toll-free numbers </p>
+                                <ul class="list-unstyled">
+                                    <li><strong>English</strong> 1-800-300-5616</li>
+                                    <li><strong>Spanish</strong> 1-800-326-8937</li>
+                                    <li><strong>Cantonese</strong> 1-800-547-3506</li>
+                                    <li><strong>Mandarin</strong> 1-866-303-0706</li>
+                                    <li><strong>Vietnamese</strong> 1-800-547-2058</li>
+                                    <li><strong>TTY</strong> 1-800-815-9387</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </cwds-accordion>
+                <cwds-accordion>
+                    <div class="card">
+                        <button class="card-header accordion-alpha" type="button" aria-expanded="false">
+                            <div class="accordion-title">Apply by mail or fax</div>
+                        </button>
+                        <div class="card-container collapsed">
+                            <div class="card-body">
+                                <p>If you mail or fax your application, processing could take up to 10 days.</p>
+                                <p class="bold">Print and fill out an application form:</p>
+                                <ul class="list-unstyled">
+                                    <li>If you worked in California: <a href="https://www.edd.ca.gov/pdf_pub_ctr/1101i/de1101id.pdf">English</a> | <a href="https://www.edd.ca.gov/pdf_pub_ctr/1101i/de1101ids.pdf">Spanish</a></li>
+                                    <li>If you worked in California and another state: <a href="https://www.edd.ca.gov/pdf_pub_ctr/1101i/de1101id.pdf">English</a> | <a href="https://www.edd.ca.gov/pdf_pub_ctr/1101i/de1101ids.pdf">Spanish</a> </li>
+                                    <li>If you served in the military: <a href="https://www.edd.ca.gov/pdf_pub_ctr/1101i/de1101iad.pdf">English</a> | <a href="https://www.edd.ca.gov/pdf_pub_ctr/1101i/de1101iads.pdf">Spanish</a></li>
+                                    <li>If you worked for the federal government: <a href="https://www.edd.ca.gov/pdf_pub_ctr/1101i/de1101ibd.pdf">English</a> | <a href="https://www.edd.ca.gov/pdf_pub_ctr/1101i/de1101ibds.pdf">Spanish</a></li>
+                                </ul>
+                                <p class="bold">Mail your application to: </p>
+                                <p>
+                                    <strong>EDD</strong> <br>
+                                    P.O. Box 12906 <br>
+                                    Oakland, CA 94604-2909 <br>
+                                </p><span class="and-or">or</span>
+                                <p><strong>Fax it to:</strong> 1-866-215-9159</p>
+                            </div>
+                        </div>
+                    </div>
+                </cwds-accordion>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+	<%= require('html-loader!../../../partials/footer.html') %>
+	<%= require('html-loader!../../../partials/alphabar.html') %>
+	<%= require('html-loader!../../../partials/ga.html') %>
+</footer>
+</body>
+
+</html>

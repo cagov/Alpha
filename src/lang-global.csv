@@ -27,6 +27,7 @@ path,token,en,es,zh
 ,[global-lang-no-camel],No,No,不
 ,[global-lang-yes-camel],Yes,si,如果
 ,[global-lang-contact-us],Contact Us,Contáctenos,联系我们
+,[global-lang-next],Next,Próximo,下
 /,,We're making it easier to find and use government services and information.,Estamos haciendo más fácil de buscar y usar servicios e información del gobierno.,我们更容易发现和使用信息和服务的政府。
 /,,Welcome to Alpha.CA.gov,Bienvenido a Alpha.CA.gov,欢迎Alpha.CA.gov
 /,,Featured,Servicios Destacados,主要特点
@@ -44,8 +45,8 @@ path,token,en,es,zh
 /,,Apply for disability insurance benefits,Solicitar los beneficios de seguro de invalidez,申请伤残保险
 /,,Check your tap water quality,Compruebe la calidad del agua del grifo,检查自来水质量
 /,,Sign up for local emergency alerts,Inscribirse para recibir alertas de emergencia locales,注册通知当地紧急
-/,,Apply for a discounted phone service,Solicitar un servicio telefónico con descuento,要求打折电话服务
-/,,Check if you can get a discounted phone service,Compruebe si se puede obtener un servicio telefónico con descuento,请检查您是否可以享受折扣电话服务
+,,Apply for a discounted phone service,Solicitar un servicio telefónico con descuento,要求打折电话服务
+,,Check if you can get a discounted phone service,Compruebe si se puede obtener un servicio telefónico con descuento,请检查您是否可以享受折扣电话服务
 ,,Apply for a Cal Grant,Solicitar una beca Cal Grant,申请加州格兰特
 /about,,About us,Sobre nosotros,关于我们
 /about,,The Alpha website for the State of California.,La página web Alfa para el Estado de California.,阿尔法的网页为加利福尼亚州。
@@ -557,7 +558,7 @@ Un año después de su fecha de inicio, le enviaremos otra carta rosa por correo
 /who-can-get-discounted-phone-service,,Apply for a discounted phone service,Solicite un servicio telefónico con descuento,要求打折电话服务
 /who-can-get-discounted-phone-service,,Check if you can get a discounted phone service,Verifique si puede recibir un servicio telefónico con descuento,检查是否可以接受折扣电话服务
 /who-can-get-discounted-phone-service,,Do you or someone in your,Usted o alguien en su,您或您
-/who-can-get-discounted-phone-service,,A household is a group of people who live together and share income and expenses (even if they are not related to each other).,Un hogar es un grupo de personas que viven juntas y comparten ingresos y gastos (incluso si no están relacionados uno al otro).,一个家庭是一群人谁住在一起，共享收入和支出（即使它们与一个其他）。
+/who-can-get-discounted-phone-service/no-not-sure,,A household is a group of people who live together and share income and expenses (even if they are not related to each other).,Un hogar es un grupo de personas que viven juntas y comparten ingresos y gastos (incluso si no están relacionados uno al otro).,一个家庭是一群人谁住在一起，共享收入和支出（即使它们与一个其他）。
 /who-can-get-discounted-phone-service,,>household<,>hogar<,>首页<
 /who-can-get-discounted-phone-service,,get support from any of these programs?,recibe apoyo de alguno de estos programas?,接收从这些方案的一个支持？
 /who-can-get-discounted-phone-service,,Please check all that apply.,Por favor marque todos los que apliquen.,请检查所有适用。
@@ -585,41 +586,54 @@ Un año después de su fecha de inicio, le enviaremos otra carta rosa por correo
 "
 /who-can-get-discounted-phone-service,,Food Distribution Program on Indian Reservations,Programa de Distribución de Alimentos en Reservaciones Indígenas (FDPIR),食品配送计划对印度预订（FDPIR）
 /who-can-get-discounted-phone-service,,Federal Veterans and Survivors Pension Benefit Program,Beneficio de Pensión para Veteranos y Sobrevivientes,养老金福利退伍军人和遗属
-/who-can-get-discounted-phone-service,,You can get a discount!,¡Usted puede obtener un servicio telefónico con descuento!,你可以得到一个打折的电话服务！
-/who-can-get-discounted-phone-service,,"Next, you’ll want to find an official document to prove you get support from:","A continuación, querrá encontrar un documento oficial para demostrar que recibe asistencia de:",然后，你会希望有一个正式文件，证明从接受援助：
-/who-can-get-discounted-phone-service,,Have your document with you as you,Téngalo cerca cuando termine su aplicación.,保持接近，当你完成你的应用程序。
-/who-can-get-discounted-phone-service,,continue to step two</a>. Here are examples of documents that could prove you qualify:,continúe con el paso dos </a>. Aquí hay ejemplos de documentos que podrían probar que califica:,前进至步骤2 </A>。下面是一些可能证明资格的文件类型：
-/who-can-get-discounted-phone-service,,ID card,tarjeta de identificación (ID),识别卡（ID）
-/who-can-get-discounted-phone-service,,Decision letter,Carta de determinación,测定信
-/who-can-get-discounted-phone-service,,Statement of benefits,Declaración de beneficios,利益声明
-/who-can-get-discounted-phone-service,,Other official documents,"Otros documentos oficiales
+/who-can-get-discounted-phone-service/qualified,,You can get a discount!,¡Usted puede obtener un servicio telefónico con descuento!,你可以得到一个打折的电话服务！
+/who-can-get-discounted-phone-service/qualified,,"Next, you’ll want to find an official document to prove you get support from:","A continuación, querrá encontrar un documento oficial para demostrar que recibe asistencia de:",然后，你会希望有一个正式文件，证明从接受援助：
+/who-can-get-discounted-phone-service/qualified,,Have your document with you as you,Téngalo cerca cuando termine su aplicación.,保持接近，当你完成你的应用程序。
+/who-can-get-discounted-phone-service/qualified,,continue to step two</a>. Here are examples of documents that could prove you qualify:,continúe con el paso dos </a>. Aquí hay ejemplos de documentos que podrían probar que califica:,前进至步骤2 </A>。下面是一些可能证明资格的文件类型：
+/who-can-get-discounted-phone-service/qualified,,ID card,tarjeta de identificación (ID),识别卡（ID）
+/who-can-get-discounted-phone-service/qualified,,Decision letter,Carta de determinación,测定信
+/who-can-get-discounted-phone-service/qualified,,Statement of benefits,Declaración de beneficios,利益声明
+/who-can-get-discounted-phone-service/qualified,,Other official documents,"Otros documentos oficiales
 ","其他官方文件
 "
-/who-can-get-discounted-phone-service,,How many people are in your household?,¿Cuántas personas viven en su hogar?,有多少人住在你的家庭吗？
-/who-can-get-discounted-phone-service,,Back to last question,Volver a la última pregunta,回到最后一个问题
-/who-can-get-discounted-phone-service,,Is your household’s total income below,Esta el ingreso total de su hogar debajo de,下面这个家庭总收入
-/who-can-get-discounted-phone-service,,"Next, you’ll want to find one of the following documents:","Next, you’ll want to find one of the following documents:",接下来，你要寻找以下文件之一：
-/who-can-get-discounted-phone-service,,"The front page of your state, federal, or tribal tax return from last year.","La primera página de su declaración de impuestos estatal, federal o tribal del año pasado",你的国家，部族或联邦去年的税收第一页
-/who-can-get-discounted-phone-service,,Or income statements or paycheck stubs for three months in a row. Those three months should be within the past 12 months.,O declaraciones de ingresos o recibos de sueldo durante tres meses seguidos. Esos tres meses deben estar dentro de los últimos 12 meses.,或损益表或连续三个月的工资单。那三个月必须是在过去12个月内。
-/who-can-get-discounted-phone-service,,Have the document with you as you continue to step two.,Ten el documento con usted mientras continúe con el paso dos.,有文件，而你继续第二步。
-/who-can-get-discounted-phone-service,,Go to step 2,Regrese al paso 2,返回到第2步
-/who-can-get-discounted-phone-service,,Contact us to find out if you can get California LifeLine,Contáctenos para averiguar si puede obtener California LifeLine,联系我们找出如果你能得到加州生命线
-/who-can-get-discounted-phone-service,,Monday–Friday,Lunes–Viernes,MF
-/who-can-get-discounted-phone-service,,7 a.m.–7 p.m.,7 a.m.–7 p.m.,上午7点 - 下午7时。
-/who-can-get-discounted-phone-service,,General number,Numero General,一般数
-/who-can-get-discounted-phone-service,,English,Inglés,英语
-/who-can-get-discounted-phone-service,,Spanish,Español,西班牙语
-/who-can-get-discounted-phone-service,,Lao/Hmong,Lao/Hmong ,劳/苗族
-/who-can-get-discounted-phone-service,,Khmer (Cambodian),Jemer (Camboyano),Jemer（柬埔寨）
-/who-can-get-discounted-phone-service,,Tagalog,Tagalo,他加禄语
-/who-can-get-discounted-phone-service,,Korean,Coreano,朝鲜的
-/who-can-get-discounted-phone-service,,Vietnamese,Vietnamita,越南
-/who-can-get-discounted-phone-service,,Chinese,Chino (Mandarín / Cantonés),（普通话/广东话）
-/who-can-get-discounted-phone-service,,Japanese,Japonés,日本
-/who-can-get-discounted-phone-service,,TTY Number,Número TTY ,TTY号码
-/who-can-get-discounted-phone-service,,"Sorry, you may not be able to get a discount.","Lo sentimos, es posible que no pueda obtener un descuento.",对不起，你可能不会得到折扣。
-/who-can-get-discounted-phone-service,,"To be sure, contact us about California LifeLine:","Para estar seguro, contáctenos sobre el Programa California LifeLine.",可以肯定的，请联系我们在加州生命线课程。
-/who-can-get-discounted-phone-service,[lang-next],Next,Próximo,下
+/who-can-get-discounted-phone-service/no-not-sure,,How many people are in your household?,¿Cuántas personas viven en su hogar?,有多少人住在你的家庭吗？
+/who-can-get-discounted-phone-service/no-not-sure,,Back to last question,Volver a la última pregunta,回到最后一个问题
+/who-can-get-discounted-phone-service/total-income,,Is your household’s total income below,Esta el ingreso total de su hogar debajo de,下面这个家庭总收入
+/who-can-get-discounted-phone-service/qualified-income,,You can get a discount!,¡Usted puede obtener un servicio telefónico con descuento!,你可以得到一个打折的电话服务！
+/who-can-get-discounted-phone-service/qualified-income,,"Next, you’ll want to find one of the following documents:","Next, you’ll want to find one of the following documents:",接下来，你要寻找以下文件之一：
+/who-can-get-discounted-phone-service/qualified-income,,"The front page of your state, federal, or tribal tax return from last year.","La primera página de su declaración de impuestos estatal, federal o tribal del año pasado",你的国家，部族或联邦去年的税收第一页
+/who-can-get-discounted-phone-service/qualified-income,,Or income statements or paycheck stubs for three months in a row. Those three months should be within the past 12 months.,O declaraciones de ingresos o recibos de sueldo durante tres meses seguidos. Esos tres meses deben estar dentro de los últimos 12 meses.,或损益表或连续三个月的工资单。那三个月必须是在过去12个月内。
+/who-can-get-discounted-phone-service/qualified-income,,Have the document with you as you continue to step two.,Ten el documento con usted mientras continúe con el paso dos.,有文件，而你继续第二步。
+/who-can-get-discounted-phone-service/qualified-income,,Go to step 2,Regrese al paso 2,返回到第2步
+/who-can-get-discounted-phone-service/not-sure-qualified,,Contact us to find out if you can get California LifeLine,Contáctenos para averiguar si puede obtener California LifeLine,联系我们找出如果你能得到加州生命线
+/who-can-get-discounted-phone-service/not-sure-qualified,,Monday–Friday,Lunes–Viernes,MF
+/who-can-get-discounted-phone-service/not-sure-qualified,,7 a.m.–7 p.m.,7 a.m.–7 p.m.,上午7点 - 下午7时。
+/who-can-get-discounted-phone-service/not-sure-qualified,,General number,Numero General,一般数
+/who-can-get-discounted-phone-service/not-sure-qualified,,English,Inglés,英语
+/who-can-get-discounted-phone-service/not-sure-qualified,,Spanish,Español,西班牙语
+/who-can-get-discounted-phone-service/not-sure-qualified,,Lao/Hmong,Lao/Hmong ,劳/苗族
+/who-can-get-discounted-phone-service/not-sure-qualified,,Khmer (Cambodian),Jemer (Camboyano),Jemer（柬埔寨）
+/who-can-get-discounted-phone-service/not-sure-qualified,,Tagalog,Tagalo,他加禄语
+/who-can-get-discounted-phone-service/not-sure-qualified,,Korean,Coreano,朝鲜的
+/who-can-get-discounted-phone-service/not-sure-qualified,,Vietnamese,Vietnamita,越南
+/who-can-get-discounted-phone-service/not-sure-qualified,,Chinese,Chino (Mandarín / Cantonés),（普通话/广东话）
+/who-can-get-discounted-phone-service/not-sure-qualified,,Japanese,Japonés,日本
+/who-can-get-discounted-phone-service/not-sure-qualified,,TTY Number,Número TTY ,TTY号码
+/who-can-get-discounted-phone-service/not-qualified,,"Sorry, you may not be able to get a discount.","Lo sentimos, es posible que no pueda obtener un descuento.",对不起，你可能不会得到折扣。
+/who-can-get-discounted-phone-service/not-qualified,,"To be sure, contact us about California LifeLine:","Para estar seguro, contáctenos sobre el Programa California LifeLine.",可以肯定的，请联系我们在加州生命线课程。
+/who-can-get-discounted-phone-service/not-qualified,,Monday–Friday,Lunes–Viernes,MF
+/who-can-get-discounted-phone-service/not-qualified,,7 a.m.–7 p.m.,7 a.m.–7 p.m.,上午7点 - 下午7时。
+/who-can-get-discounted-phone-service/not-qualified,,General number,Numero General,一般数
+/who-can-get-discounted-phone-service/not-qualified,,English,Inglés,英语
+/who-can-get-discounted-phone-service/not-qualified,,Spanish,Español,西班牙语
+/who-can-get-discounted-phone-service/not-qualified,,Lao/Hmong,Lao/Hmong ,劳/苗族
+/who-can-get-discounted-phone-service/not-qualified,,Khmer (Cambodian),Jemer (Camboyano),Jemer（柬埔寨）
+/who-can-get-discounted-phone-service/not-qualified,,Tagalog,Tagalo,他加禄语
+/who-can-get-discounted-phone-service/not-qualified,,Korean,Coreano,朝鲜的
+/who-can-get-discounted-phone-service/not-qualified,,Vietnamese,Vietnamita,越南
+/who-can-get-discounted-phone-service/not-qualified,,Chinese,Chino (Mandarín / Cantonés),（普通话/广东话）
+/who-can-get-discounted-phone-service/not-qualified,,Japanese,Japonés,日本
+/who-can-get-discounted-phone-service/not-qualified,,TTY Number,Número TTY ,TTY号码
 /apply-online-discounted-phone-service,,Apply online for a discounted phone service,Solicite un servicio telefónico con descuento,要求打折电话服务
 /apply-online-discounted-phone-service,,(California LifeLine) - Alpha.CA.gov,(Programa Lifeline de Califronia) - Alpha.CA.gov,（生命线计划Califronia） -  Alpha.CA.gov
 /apply-online-discounted-phone-service,,"Learn how to apply or renew online for California LifeLine, a discounted phone service.","Aprende cómo solicitar o renovar por internet el programa California LifeLine, un servicio telefónico con descuento.",了解如何申请或在线更新加州生命线节目，折扣电话服务。
