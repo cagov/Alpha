@@ -22,7 +22,7 @@ module.exports = {
         })
         return inputHtml.replace(
           '<html><head></head><!-- put zips js here --><body></body></html>',
-          `hello<script type="module" src="/js/${outputName}"></script>bye`,
+          `<script type="module" src="/js/${outputName}"></script>`,
         );
       },
     }),
