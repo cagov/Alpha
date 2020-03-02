@@ -99,7 +99,7 @@ function replaceonelanguage(targetlang) {
           'xml:lang="'+targetlang+'"',
           targetlang,
           removeenfrompath(fulldomainurl+targetlang)+'[FullPath]/',
-          targetlang==removeenfrompath('/'+targetlang+'/'),
+          removeenfrompath('/'+targetlang+'/'),
           targetlangs.map(l=>l.code!=targetlang ? `<a class="dropdown-item" rel="alternate" lang="${l.code}" hreflang="${l.code}" href="${removeenfrompath("/"+l.code)}[FullPath]/">${l.name}</a>` : '').join(''),
           targetlangs.map(l=>l.code!=targetlang ? `<link rel="alternate" hreflang="${l.code}" href="${removeenfrompath(fulldomainurl+l.code)}[FullPath]/">` : '').join(''),
           (match, ...args) => fileFromArgs(args,targetlang)
