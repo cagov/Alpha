@@ -30,8 +30,8 @@ fs.createReadStream(globalfilepath)
   .on('data', data => {
     if(data['']) throw console.error('*** Remove empty columns from CSV file - ' + globalfilepath);
 
-    data.path = data.path.replace(/\n/g, ' ').trim()
-    data.token=data.token || data.en
+    data.path = data.path.replace(/\n/g, ' ').replace(/\/$/,'').trim()
+    data.token=(data.token || data.en).trim()
     data['numMatches']=0
     csvresults.push(data)
   })
@@ -74,7 +74,7 @@ function langloop() {
 function replaceonelanguage(targetlang) {
   fileslist.forEach(path=> {
     let files = getdestination(targetlang)+path
-    if(!files.endsWith('.html')) files +='/index.html'
+    if(!files.includes('.')) files +='/**/*.html'
 
     //using global tokens and path matching tokens
     sortedcsvresults
@@ -98,10 +98,10 @@ function replaceonelanguage(targetlang) {
           'html lang="'+targetlang+'"',
           'xml:lang="'+targetlang+'"',
           targetlang,
-          (fulldomainurl+targetlang).replace(/\/en/,'')+'[FullPath]/',
-          targetlang=='en'?'/':'/'+targetlang+'/',
-          targetlangs.map(l=>l.code!=targetlang ? `<a class="dropdown-item" rel="alternate" lang="${l.code}" hreflang="${l.code}" href="/${l.code}[FullPath]/">${l.name}</a>` : '').join(''),
-          targetlangs.map(l=>l.code!=targetlang ? `<link rel="alternate" hreflang="${l.code}" href="${fulldomainurl+l.code}[FullPath]/">` : '').join(''),
+          removeenfrompath(fulldomainurl+targetlang)+'[FullPath]/',
+          targetlang==removeenfrompath('/'+targetlang+'/'),
+          targetlangs.map(l=>l.code!=targetlang ? `<a class="dropdown-item" rel="alternate" lang="${l.code}" hreflang="${l.code}" href="${removeenfrompath("/"+l.code)}[FullPath]/">${l.name}</a>` : '').join(''),
+          targetlangs.map(l=>l.code!=targetlang ? `<link rel="alternate" hreflang="${l.code}" href="${removeenfrompath(fulldomainurl+l.code)}[FullPath]/">` : '').join(''),
           (match, ...args) => fileFromArgs(args,targetlang)
         ]})
   })
@@ -146,4 +146,8 @@ function fileFromArgs(args,targetlang) {
 
 function getdestination(targetlang) {
   return sourcefolder+targetlang
+}
+
+function removeenfrompath(path) {
+  return path.replace(/\/en/,'')
 }
