@@ -315,7 +315,20 @@ module.exports = {
       minify: minificationOptions
     }),
 
-
+    //*************** End Begin Fire Stories
+ 
+    new HtmlWebpackPlugin({
+      filename: "en/steps-to-prepare-for-wildfire/index.html",
+      template:"src/services/steps-to-prepare-for-wildfire/index.html",
+      excludeChunks: allChunks,
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: "en/steps-to-take-after-wildfire/index.html",
+      template: "src/services/steps-to-take-after-wildfire/index.html",
+      excludeChunks: allChunks,
+      minify: minificationOptions
+    }),
 
 
     new HtmlWebpackPlugin({
