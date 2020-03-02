@@ -8,7 +8,6 @@
     "attr-case": ["error",{"style": "lowercase","ignoreForeign": true}],
     "attr-quotes": ["error",{"style": "auto","unquoted": false}],
     "attribute-allowed-values": "error",
-    "attribute-boolean-style": ["off",{"style": "omit"}],
     "class-pattern": ["error",{"pattern": "kebabcase"}],
     "close-attr": "error",
     "close-order": "warn",
@@ -26,7 +25,7 @@
     "heading-level": "warn",
     "id-pattern": ["error",{"pattern": "kebabcase"}],
     "input-missing-label": "warn",
-    "long-title": ["warn",{"maxlength": 70}],
+    "long-title": ["warn",{"maxlength": 100}],
     "no-conditional-comment": "error",
     "no-deprecated-attr": "error",
     "no-dup-attr": "error",
@@ -46,13 +45,13 @@
     "wcag/h36": "error",
     "wcag/h37": "error",
     "wcag/h67": "error",
-
-    "element-permitted-content": "warn",
+    "element-permitted-content": "off",
     "missing-doctype": "error",
 
+
+    "attribute-boolean-style": ["off",{"style": "omit"}],
     "void": ["off",{"style": "selfclose"}],
     "require-sri": ["off",{"target": "crossorigin"}],
-
     "no-unknown-elements": "off",
     "no-trailing-whitespace": "off"
   },
@@ -63,8 +62,8 @@
         "deprecated": true
       },
       "br": {
-        "inherit": "hr",
-        "deprecated": true
+        "inherit": "br",
+        "deprecated": false
       }
     }
   ]
