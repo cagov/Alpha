@@ -190,9 +190,7 @@ path,token,en,es,zh
 /apply-for-disability-insurance-benefits,,Sick,una enfermedad,疾病
 /apply-for-disability-insurance-benefits,,injured,una lesión,伤
 /apply-for-disability-insurance-benefits,,pregnant,por embarazo,怀孕
-/apply-for-disability-insurance-benefits,,Check if you qualify,"Compruebe si califica
-","检查您是否有资格
-"
+/apply-for-disability-insurance-benefits,,Check if you qualify,Compruebe si califica,检查您是否有资格
 /apply-for-disability-insurance-benefits,,If your employer has a,Si su empleador tiene un,如果你的雇主有
 /apply-for-disability-insurance-benefits,,"Voluntary Plan</a>, talk to your human resources office to apply for disability benefits.","plan Voluntario</a>, hable con su oficina de recursos humanos para solicitar los beneficios por incapacidad.",志愿者</A>计划，请向您的人力资源办公室申请伤残津贴。
 /apply-for-disability-insurance-benefits,,"If you're self-employed, you can","Si usted trabaja por cuenta propia, usted puede",如果你是自雇人士，你可以
@@ -443,7 +441,7 @@ path,token,en,es,zh
 /hire-licensed-contractor-home-improvements,,Check if you need a building permit,Compruebe si necesita un permiso de construcción,检查您是否需要建筑许可证
 /hire-licensed-contractor-home-improvements,,"You must get a building permit from your local building department for new construction, remodeling, or repairs.","Debe obtener un permiso de construcción de su departamento de construcción local para nuevas construcciones, remodelaciones y reparaciones.",您必须向当地建设部门进行新的建设取得建筑许可证，改造和维修。
 /hire-licensed-contractor-home-improvements,,Check with your local building department,Consulte con su departamento de construcción local,请与当地建设部门
-/hire-licensed-contractor-home-improvements,,Find at least three licensed contractors,Compare al menos tres contratistas con licencia,比较到至少三个持牌承包商
+/hire-licensed-contractor-home-improvements,,Find at least three licensed contractors,Compare al menos tres contratistas con licencia,它比较到至少三个许可承包商
 /hire-licensed-contractor-home-improvements,,Ask friends and family for contractors they'd recommend.,Pregúntele a amigos y familiares si tienen contratistas que recomienden,让家人和朋友，如果他们有谁推荐的承包商
 /hire-licensed-contractor-home-improvements,,"Search online and read reviews, but consider the source.","Busque por internet que commentarios otros tienen acerca del contratista, pero a la vez, asegúrese de que el sitio de internet sea legítimo.",看看网上有关于承包其他意见，但在同一时间，确保该网站是合法的。
 /hire-licensed-contractor-home-improvements,,"For repairs, your homeowners insurance might cover the cost and suggest contractors for you.","Si es dueño de su casa, su cobertura de seguro de vivienda podría cubrir el costo y conseguir contratistas por usted.",如果你拥有你的家，你的房屋保险覆盖范围可以覆盖成本承办，并得到你。
@@ -486,13 +484,9 @@ path,token,en,es,zh
 /contact-us/results/,,Contact us - Alpha.CA.gov,Contáctenos - Alpha.CA.gov,联系我们 -  Alpha.CA.gov
 /find-shelter,,Find shelters near you,Encuentre refugios mas cercano de usted ,查找离您最近的庇护所
 /find-shelter,,Search for shelters in every California county,Busque refugios in cada condado de California,寻求庇护了在加利福尼亚州各县
-/find-shelter,,"Search for temporary housing, disaster relief shelters, and homeless shelters near you.","Busque alojamiento temporal, refugios de socorro, y refugios cerca de usted. 
-
-","寻找临时住房，应急避难场所，以及您附近收容所。
-
-"
-/find-shelter,,"Please enter your address, city, or zip code:","Por favor introduzca se direccion, ciudad, o codigo postal",
-/find-shelter,,Find shelters,Encuentre refugios,
+/find-shelter,,"Search for temporary housing, disaster relief shelters, and homeless shelters near you.","Busque alojamiento temporal, refugios de socorro, y refugios cerca de usted.",寻找临时住房，应急避难场所，以及您附近收容所。
+/find-shelter,,"Please enter your address, city, or zip code:","Por favor introduzca se direccion, ciudad, o codigo postal",请输入意志地址，城市或邮政编码
+/find-shelter,,Find shelters,Encuentre refugios,寻找庇护所
 /check-your-tap-water-quality,,Check your tap water quality,Examine la calidad del agua del grifo,检查自来水质量
 /check-your-tap-water-quality,,Loading...,Buscando...,搜索...
 /check-your-tap-water-quality,,Your water quality,La calidad del agua,水质
@@ -512,7 +506,6 @@ path,token,en,es,zh
 /check-your-tap-water-quality,,"They also track changes to the way your water tastes, looks, or smells.","También hacen cambios en la forma en que su agua sabe, se ve, o huele.",此外，他们做出改变的方式你的水的口味，外观或气味。
 /apply-discounted-phone-service,,(California LifeLine) - Alpha.CA.gov,(Programa Lifeline de Califronia) - Alpha.CA.gov,（生命线计划Califronia） -  Alpha.CA.gov
 /apply-discounted-phone-service,,"Follow these six steps to apply for California Lifeline, a discounted phone service.","Sigue estos seis pasos para solicitar el programa California Lifeline, un servicio telefónico con descuento.",按照这六个步骤申请加州生命线节目，折扣电话服务。
-/apply-discounted-phone-service,,Apply for a discounted phone service,Solicite un servicio telefónico con descuento,要求打折电话服务
 /apply-discounted-phone-service,,California LifeLine lowers the cost of your monthly bill for your cell or landline phone.,El programa California LifeLine reduce el costo de su factura mensual de su teléfono celular o fijo. Este descuento es para hogares,加州生命线程序从您的手机或座机减少你每月账单的费用。该折扣是家庭
 /apply-discounted-phone-service,,A household is a group of people who live together and share income and expenses (even if they are not related to each other).,Un hogar es un grupo de personas que viven juntas y comparten ingresos y gastos (incluso si no están relacionados uno al otro).,一个家庭是一群人谁住在一起，共享收入和支出（即使它们与一个其他）。
 /apply-discounted-phone-service,,households,hogares,户
@@ -525,37 +518,26 @@ path,token,en,es,zh
 /apply-discounted-phone-service,,Hide all,Ocultar todo,隐藏所有
 /apply-discounted-phone-service,,Check if you can get a discount,Verifique si puede recibir el descuento,检查您是否能够获得折扣
 /apply-discounted-phone-service,,Choose a phone company that offers discounts,Elije una compañía telefónica que ofrezca descuentos,选择一个电话公司，提供折扣
-/apply-discounted-phone-service,,Find a new phone company that offers a California LifeLine discount. Or check if your existing phone company offers a discount.,"
-Encuentre una nueva compañía telefónica que ofrezca un descuento del Programa California LifeLine.","
-找到一个新的电话公司，提供加州生命线课程的折扣。"
+/apply-discounted-phone-service,,Find a new phone company that offers a California LifeLine discount. Or check if your existing phone company offers a discount.,Encuentre una nueva compañía telefónica que ofrezca un descuento del Programa California LifeLine.,找到一个新的电话公司，提供加州生命线课程的折扣。
 /apply-discounted-phone-service,,Find a phone company,Encuentra una compañía telefónica,是电话公司
 /apply-discounted-phone-service,,Contact your phone company,Contacte a su compañía telefónica,联系电话公司
-/apply-discounted-phone-service,,"Ask the phone company you chose to start your application for the California LifeLine program. They should tell you if you can get a discount and start the application process for you. Then, we'll send you a letter in the mail.","
-Preguntale a la compañía telefónica que elije que inicie su aplicación para el programa California LifeLine. Deben decirle si puede obtener un descuento e iniciar el proceso de aplicacar por usted. Luego, le enviaremos una carta por correo.","
-要求电话公司，你选择你开始为加州生命线程序应用。你应该告诉你，如果你能得到的折扣和启动过程aplicacar你。然后，我们会通过邮件发送一封信。"
-/apply-discounted-phone-service,,Read our pink letter in the mail,"Lee nuestra carta rosa en el correo
-","请阅读我们的粉红色信件在邮寄
-"
+/apply-discounted-phone-service,,"Ask the phone company you chose to start your application for the California LifeLine program. They should tell you if you can get a discount and start the application process for you. Then, we'll send you a letter in the mail.","Preguntale a la compañía telefónica que elije que inicie su aplicación para el programa California LifeLine. Deben decirle si puede obtener un descuento e iniciar el proceso de aplicacar por usted. Luego, le enviaremos una carta por correo.",要求电话公司，你选择你开始为加州生命线程序应用。你应该告诉你，如果你能得到的折扣和启动过程aplicacar你。然后，我们会通过邮件发送一封信。
+/apply-discounted-phone-service,,Read our pink letter in the mail,Lee nuestra carta rosa en el correo,请阅读我们的粉红色信件在邮寄
 /apply-discounted-phone-service,,"In three weeks, you should get a pink letter in the mail. Open it to find your application form.","En tres semanas, debería recibir una carta rosa por correo. Ábralo para encontrar su formulario para aplicar.",三个星期后，您会收到邮寄玫瑰一封信。打开它，找到你的表格申请。
 /apply-discounted-phone-service,,"If you contacted your phone company but still haven’t gotten your application form in the mail, please","Si contactó a su compañía telefónica pero aún no recibió su formulario para solicitar por correo, por favor ",如果您联系您的电话公司，但尚未收到您的申请表邮寄，请
 /apply-discounted-phone-service,,>contact us,>contáctenos,>联系
 /apply-discounted-phone-service,,Apply online or by mail,Solicite por internet o por correo,在网上或通过邮寄申请
 /apply-discounted-phone-service,,Apply online,Solicite por internet,在线申请
-/apply-discounted-phone-service,,Apply by mail. Simply fill out and mail back the form inside your pink letter.,"Solicite por correo. Simplemente complete y envíe por correo la aplicación dentro de su carta rosa.
-","通过邮件索取。只需填写并邮寄其粉红色的信中的应用。
-"
+/apply-discounted-phone-service,,Apply by mail. Simply fill out and mail back the form inside your pink letter.,Solicite por correo. Simplemente complete y envíe por correo la aplicación dentro de su carta rosa.,通过邮件索取。只需填写并邮寄其粉红色的信中的应用。
 /apply-discounted-phone-service,,Get our decision in the mail,Recibe nuestra determinación en el correo,接收我们决心在邮件
 /apply-discounted-phone-service,,"We’ll send you a letter to let you know if you’re approved. If so, you’ll start getting a monthly discount from your phone company automatically.","Le enviaremos una carta para informarle si está aprobado. Si es así, comenzará a obtener un descuento mensual de su compañía telefónica automáticamente.",如果获得批准，我们将寄给您一封信。如果是这样，你将开始自动从你的电话公司每月在减除。
 /apply-discounted-phone-service,,Renew in one year,Renueve en un año,续约一年
-/apply-discounted-phone-service,,"One year from your start date, we'll send you another pink letter in the mail asking you to renew your discount. Then, you can use your letter to renew by mail or","
-Un año después de su fecha de inicio, le enviaremos otra carta rosa por correo solicitándole que renueve su descuento. Luego, puede usar su carta para renovar por correo o","
-它的起始日期一年之后，我们将再次发送信件玫瑰在邮件中要求您更新您的折扣。然后你可以使用你的卡邮寄续约或"
+/apply-discounted-phone-service,,"One year from your start date, we'll send you another pink letter in the mail asking you to renew your discount. Then, you can use your letter to renew by mail or","Un año después de su fecha de inicio, le enviaremos otra carta rosa por correo solicitándole que renueve su descuento. Luego, puede usar su carta para renovar por correo o",它的起始日期一年之后，我们将再次发送信件玫瑰在邮件中要求您更新您的折扣。然后你可以使用你的卡邮寄续约或
 /apply-discounted-phone-service,,>online<,>por internet<,>在线<
 /apply-discounted-phone-service,,>Help<,>Ayuda<,>帮助<
 /apply-discounted-phone-service,,"If you need help,",Si necesitas asistencia,如果您需要帮助
 /who-can-get-discounted-phone-service,,"Find out if you’re eligible for the California LifeLine Program, a discounted phone service.","Averigüe si es elegible para el Programa California LifeLine, un servicio telefónico con descuento.",了解你是否有资格获得美国加州生命线课程，贴现电话服务。
 /who-can-get-discounted-phone-service,,(California LifeLine) - Alpha.CA.gov,(Programa Lifeline de Califronia) - Alpha.CA.gov,（生命线计划Califronia） -  Alpha.CA.gov
-/who-can-get-discounted-phone-service,,Apply for a discounted phone service,Solicite un servicio telefónico con descuento,要求打折电话服务
 /who-can-get-discounted-phone-service,,Check if you can get a discounted phone service,Verifique si puede recibir un servicio telefónico con descuento,检查是否可以接受折扣电话服务
 /who-can-get-discounted-phone-service,,Do you or someone in your,Usted o alguien en su,您或您
 /who-can-get-discounted-phone-service/no-not-sure,,A household is a group of people who live together and share income and expenses (even if they are not related to each other).,Un hogar es un grupo de personas que viven juntas y comparten ingresos y gastos (incluso si no están relacionados uno al otro).,一个家庭是一群人谁住在一起，共享收入和支出（即使它们与一个其他）。
@@ -566,9 +548,7 @@ Un año después de su fecha de inicio, le enviaremos otra carta rosa por correo
 /who-can-get-discounted-phone-service,,Medicaid/Medi-Cal,Medicaid/Medi-Cal,医疗/的Medi-Cal
 /who-can-get-discounted-phone-service,,"CalFresh, Food Stamps or Supplemental Nutrition Assistance Program (SNAP)","CalFresh, Estampillas para Alimentos o Programa de Asistencia para Nutrición Suplementaria (SNAP)",CalFresh，食品券计划或营养补助（SNAP）
 /who-can-get-discounted-phone-service,,Low Income Home Energy Assistance Program (LIHEAP),Programa de Asistencia Energética para Hogares de Bajos Ingresos (LIHEAP),能源援助计划为低收入（LIHEAP）
-/who-can-get-discounted-phone-service,,Supplemental Security Income (SSI),"Ingreso Suplementario de Seguridad (SSI)
-","补充保障收入（SSI）
-"
+/who-can-get-discounted-phone-service,,Supplemental Security Income (SSI),Ingreso Suplementario de Seguridad (SSI),补充保障收入（SSI）
 /who-can-get-discounted-phone-service,,Federal Public Housing Assistance or Section 8,Programa Federal de Asistencia para la Vivienda o Sección 8,联邦计划住房援助或第8
 /who-can-get-discounted-phone-service,,"Women, Infants and Children Program (WIC)","Programa Especial de Nutrición Suplementaria para Mujeres, Infantes y Niños (WIC)",特别补充营养计划的妇女，婴儿和儿童（WIC）
 /who-can-get-discounted-phone-service,,National School Lunch Program (NSL),Programa nacional de almuerzos escolares gratuitos,全国免费学校午餐计划
@@ -578,12 +558,8 @@ Un año después de su fecha de inicio, le enviaremos otra carta rosa por correo
 /who-can-get-discounted-phone-service,,Welfare-to-Work (WTW),Programa Welfare-To-Work (WTW),福利到工作（WTW）
 /who-can-get-discounted-phone-service,,Greater Avenues for Independence (GAIN),Mejores Opciones Para Independizarse (GAIN),独立最佳选择（GAIN）
 /who-can-get-discounted-phone-service,,Tribal TANF,Asistencia Temporal para Familias Necesitadas de Tribus (TANF Tribal),贫困家庭部落临时援助（TANF部落）
-/who-can-get-discounted-phone-service,,Bureau of Indian Affairs General Assistance,"Asistencia General del Bureau of Indian Affairs (BIA)
-","印第安人事务局的一般援助（BIA）
-"
-/who-can-get-discounted-phone-service,,Head Start Income Eligible (Tribal Only),"Head Start (Solo los hogares que cumplen con el estándar de ingresos)
-","开端（只有符合收入水平的家庭）
-"
+/who-can-get-discounted-phone-service,,Bureau of Indian Affairs General Assistance,Asistencia General del Bureau of Indian Affairs (BIA),印第安人事务局的一般援助（BIA）
+/who-can-get-discounted-phone-service,,Head Start Income Eligible (Tribal Only),Head Start (Solo los hogares que cumplen con el estándar de ingresos),开端（只有符合收入水平的家庭）
 /who-can-get-discounted-phone-service,,Food Distribution Program on Indian Reservations,Programa de Distribución de Alimentos en Reservaciones Indígenas (FDPIR),食品配送计划对印度预订（FDPIR）
 /who-can-get-discounted-phone-service,,Federal Veterans and Survivors Pension Benefit Program,Beneficio de Pensión para Veteranos y Sobrevivientes,养老金福利退伍军人和遗属
 /who-can-get-discounted-phone-service/qualified,,You can get a discount!,¡Usted puede obtener un servicio telefónico con descuento!,你可以得到一个打折的电话服务！
@@ -593,11 +569,10 @@ Un año después de su fecha de inicio, le enviaremos otra carta rosa por correo
 /who-can-get-discounted-phone-service/qualified,,ID card,tarjeta de identificación (ID),识别卡（ID）
 /who-can-get-discounted-phone-service/qualified,,Decision letter,Carta de determinación,测定信
 /who-can-get-discounted-phone-service/qualified,,Statement of benefits,Declaración de beneficios,利益声明
-/who-can-get-discounted-phone-service/qualified,,Other official documents,"Otros documentos oficiales
-","其他官方文件
-"
+/who-can-get-discounted-phone-service/qualified,,Other official documents,Otros documentos oficiales,其他官方文件
 /who-can-get-discounted-phone-service/no-not-sure,,How many people are in your household?,¿Cuántas personas viven en su hogar?,有多少人住在你的家庭吗？
 /who-can-get-discounted-phone-service/no-not-sure,,Back to last question,Volver a la última pregunta,回到最后一个问题
+/who-can-get-discounted-phone-service/total-income,,Back to last question,Volver a la última pregunta,回到最后一个问题
 /who-can-get-discounted-phone-service/total-income,,Is your household’s total income below,Esta el ingreso total de su hogar debajo de,下面这个家庭总收入
 /who-can-get-discounted-phone-service/qualified-income,,You can get a discount!,¡Usted puede obtener un servicio telefónico con descuento!,你可以得到一个打折的电话服务！
 /who-can-get-discounted-phone-service/qualified-income,,"Next, you’ll want to find one of the following documents:","Next, you’ll want to find one of the following documents:",接下来，你要寻找以下文件之一：
@@ -616,7 +591,8 @@ Un año después de su fecha de inicio, le enviaremos otra carta rosa por correo
 /who-can-get-discounted-phone-service/not-sure-qualified,,Tagalog,Tagalo,他加禄语
 /who-can-get-discounted-phone-service/not-sure-qualified,,Korean,Coreano,朝鲜的
 /who-can-get-discounted-phone-service/not-sure-qualified,,Vietnamese,Vietnamita,越南
-/who-can-get-discounted-phone-service/not-sure-qualified,,Chinese,Chino (Mandarín / Cantonés),（普通话/广东话）
+/who-can-get-discounted-phone-service/not-sure-qualified,,Chinese,Chino,中国
+/who-can-get-discounted-phone-service/not-sure-qualified,,(Mandarin/Cantonese),(Mandarín / Cantonés),（普通话/广东话）
 /who-can-get-discounted-phone-service/not-sure-qualified,,Japanese,Japonés,日本
 /who-can-get-discounted-phone-service/not-sure-qualified,,TTY Number,Número TTY ,TTY号码
 /who-can-get-discounted-phone-service/not-qualified,,"Sorry, you may not be able to get a discount.","Lo sentimos, es posible que no pueda obtener un descuento.",对不起，你可能不会得到折扣。
@@ -631,13 +607,13 @@ Un año después de su fecha de inicio, le enviaremos otra carta rosa por correo
 /who-can-get-discounted-phone-service/not-qualified,,Tagalog,Tagalo,他加禄语
 /who-can-get-discounted-phone-service/not-qualified,,Korean,Coreano,朝鲜的
 /who-can-get-discounted-phone-service/not-qualified,,Vietnamese,Vietnamita,越南
-/who-can-get-discounted-phone-service/not-qualified,,Chinese,Chino (Mandarín / Cantonés),（普通话/广东话）
+/who-can-get-discounted-phone-service/not-qualified,,Chinese,Chino,中国
+/who-can-get-discounted-phone-service/not-qualified,,(Mandarin/Cantonese),(Mandarín / Cantonés),（普通话/广东话）
 /who-can-get-discounted-phone-service/not-qualified,,Japanese,Japonés,日本
 /who-can-get-discounted-phone-service/not-qualified,,TTY Number,Número TTY ,TTY号码
 /apply-online-discounted-phone-service,,Apply online for a discounted phone service,Solicite un servicio telefónico con descuento,要求打折电话服务
 /apply-online-discounted-phone-service,,(California LifeLine) - Alpha.CA.gov,(Programa Lifeline de Califronia) - Alpha.CA.gov,（生命线计划Califronia） -  Alpha.CA.gov
 /apply-online-discounted-phone-service,,"Learn how to apply or renew online for California LifeLine, a discounted phone service.","Aprende cómo solicitar o renovar por internet el programa California LifeLine, un servicio telefónico con descuento.",了解如何申请或在线更新加州生命线节目，折扣电话服务。
-/apply-online-discounted-phone-service,,Apply for a discounted phone service,Solicite un servicio telefónico con descuento,要求打折电话服务
 /apply-online-discounted-phone-service,,Apply or renew online for a discounted phone service,Solicite o renove por internet un servicio telefónico con descuento.,Renove请求或网上折扣电话服务。
 /apply-online-discounted-phone-service,,Applying online for California LifeLine takes around five minutes.,Solicite por internet para el programa California LifeLine toma solo cinco minutos.,在线申请加州生命线程序只需要五分钟。
 /apply-online-discounted-phone-service,,Apply or renew online,Solicite o renove por internet,Renove请求或在线
@@ -653,7 +629,5 @@ Un año después de su fecha de inicio, le enviaremos otra carta rosa por correo
 /apply-online-discounted-phone-service,,applicant’s phone number,número de teléfono del solicitante,申请人电话号码
 /apply-online-discounted-phone-service,,or enrollment code,o código de inscripción,或注册码
 /apply-online-discounted-phone-service,,Another option to apply,Otra opción para que solicite,另一种选择，以请求
-/apply-online-discounted-phone-service,,You can also apply by mail. Simply fill out and mail back the form inside the pink letter you get after,"También puede solicitar por correo. Simplemente complete y envíe por correo el formulario dentro de el sobre rosado que recibirá despues que 
-","您也可以通过邮件申请。只需填写并邮寄的粉红色信封的形式，您将收到后你
-"
+/apply-online-discounted-phone-service,,You can also apply by mail. Simply fill out and mail back the form inside the pink letter you get after,También puede solicitar por correo. Simplemente complete y envíe por correo el formulario dentro de el sobre rosado que recibirá despues que ,您也可以通过邮件申请。只需填写并邮寄的粉红色信封的形式，您将收到后你
 /apply-online-discounted-phone-service,,starting your application process,empieze su proceso de solicitud,启动应用程序
