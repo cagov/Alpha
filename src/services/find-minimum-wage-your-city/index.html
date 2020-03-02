@@ -72,10 +72,10 @@
     <footer>
         <%= require('html-loader!../../partials/feedback.html') %>
         <%= require('html-loader!../../partials/footer.html') %>
-        <script nomodule src="/js/es5Minwage.js?cache=false"></script>
         <%= require('html-loader!../../partials/alphabar.html') %>
         <%= require('html-loader!../../partials/ga.html') %>
     </footer>
+    <%= require('html-loader!../../js/es6/jszips.html') %>
+    <script nomodule src="/js/es5Minwage.js?cache=false"></script>
 </body>
-
 </html>

@@ -24,7 +24,8 @@ const minificationOptions = {
   sortClassName: true,
   useShortDoctype: true
 };
-const excludedChunks = ["minwage", "food", "alerts", "contactus", "roads", "shelters", "water", "lifeline"];
+const excludedChunks = ["contactus", "roads", "shelters", "water", "lifeline"];
+const allChunks = ["javascript", "style", "styles", "contactus", "roads", "shelters", "water", "lifeline"];
 
 //usage 
 //    excludeChunks: excludeChucksExcept("roads"),
@@ -34,11 +35,7 @@ const excludeChucksExcept = (...args) => excludedChunks.filter(x=>!args.includes
 
 module.exports = {
   entry: {
-    javascript: ["./src/js/index.js"],
     style: ["./src/css/_index.scss"],
-    minwage: ["./src/js/minwage/index.js"],
-    food: ["./src/js/foodbanks/index.js"],
-    alerts: ["./src/js/alerts/index.js"],
     contactus: ['./src/js/contactus/index.js'],
     roads: ["./src/js/roads/index.js"],
     shelters: ["./src/js/shelters/index.js"],
@@ -75,25 +72,25 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "en/index.html",
       template: "src/index.html",
-      excludeChunks: excludedChunks,
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: "en/news/index.html",
       template: "src/news/index.html",
-      excludeChunks: excludedChunks,
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: "news/post.html",
       template: "src/news/post.html",
-      excludeChunks: excludedChunks,
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: "en/about/index.html",
       template: "src/about/index.html",
-      excludeChunks: excludedChunks,
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
@@ -105,7 +102,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "en/apply-online-discounted-phone-service/index.html",
       template: "src/services/apply-online-discounted-phone-service/index.html",
-      excludeChunks: excludedChunks,
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
 
@@ -120,31 +117,31 @@ module.exports = {
       filename: "en/apply-for-disability-insurance-benefits/index.html",
       template:
         "src/services/apply-for-disability-insurance-benefits/index.html",
-      excludeChunks: excludedChunks,
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: "en/apply-for-cal-grant/index.html",
       template: "src/services/apply-for-cal-grant/index.html",
-      excludeChunks: excludedChunks,
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: "en/apply-for-cal-grant/step-1/index.html",
       template: "src/services/apply-for-cal-grant/step-1/index.html",
-      excludeChunks: excludedChunks,
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: "en/apply-for-cal-grant/step-2/index.html",
       template: "src/services/apply-for-cal-grant/step-2/index.html",
-      excludeChunks: excludedChunks,
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: "en/apply-for-cal-grant/finish/index.html",
       template: "src/services/apply-for-cal-grant/finish/index.html",
-      excludeChunks: excludedChunks,
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
@@ -174,55 +171,55 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "en/sign-up-for-local-emergency-alerts/index.html",
       template: "src/services/sign-up-for-local-emergency-alerts/index.html",
-      excludeChunks: excludeChucksExcept("alerts"),
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: "en/services/request-birth-certificate/index.html",
       template: "src/services/request-birth-certificate/index.html",
-      excludeChunks: excludedChunks,
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: "en/request-birth-certificate/index.html",
       template: "src/services/request-birth-certificate/index.html",
-      excludeChunks: excludedChunks,
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: "en/services/find-minimum-wage-your-city/index.html",
       template: "src/services/find-minimum-wage-your-city/index.html",
-      excludeChunks: excludeChucksExcept("minwage"),
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: "en/find-minimum-wage-your-city/index.html",
       template: "src/services/find-minimum-wage-your-city/index.html",
-      excludeChunks: excludeChucksExcept("minwage"),
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: "en/services/state-california-employee-holidays/index.html",
       template: "src/services/state-california-employee-holidays/index.html",
-      excludeChunks: excludedChunks,
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: "en/state-california-employee-holidays/index.html",
       template: "src/services/state-california-employee-holidays/index.html",
-      excludeChunks: excludedChunks,
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: "en/services/find-food-banks-near-you/index.html",
       template: "src/services/find-food-banks-near-you/index.html",
-      excludeChunks: excludeChucksExcept("food"),
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: "en/find-food-banks-near-you/index.html",
       template: "src/services/find-food-banks-near-you/index.html",
-      excludeChunks: excludeChucksExcept("food"),
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
@@ -242,19 +239,18 @@ module.exports = {
         "en/services/hire-licensed-contractor-home-improvements/index.html",
       template:
         "src/services/hire-licensed-contractor-home-improvements/index.html",
-      excludeChunks: excludedChunks,
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: "en/hire-licensed-contractor-home-improvements/index.html",
       template:
         "src/services/hire-licensed-contractor-home-improvements/index.html",
-      excludeChunks: excludedChunks,
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new ScriptExtHtmlWebpackPlugin({
-      defaultAttribute: "defer",
-      module: "js"
+      defaultAttribute: "defer"
     })
   ],
   module: {
