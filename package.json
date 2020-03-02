@@ -17,6 +17,7 @@
     "watch": "webpack --watch",
     "test": "jest test/*.spec.js",
     "validate": "html-validate 'public/en/**/*.html' --c .htmlvalidate.json",
+    "validate:dev": "html-validate 'src/**/*.html' --c .htmlvalidate.json",
     "langsplit": "node src/nodescripts/tokenreplace.js",
     "gimmetranslations": "node src/nodescripts/get-translations.js",
     "build:rollup": "rollup --config src/nodescripts/rollup.config.js && rollup --config src/nodescripts/rollup.config.food.js",
