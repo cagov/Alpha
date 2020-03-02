@@ -25,7 +25,7 @@ const minificationOptions = {
   useShortDoctype: true
 };
 const excludedChunks = ["contactus", "roads", "shelters", "water", "lifeline"];
-const allChunks = ["javascript", "style", "styles", "contactus", "roads", "shelters", "water", "lifeline"];
+const allChunks = ["style", "contactus", "roads", "shelters", "water", "lifeline"];
 
 //usage 
 //    excludeChunks: excludeChucksExcept("roads"),
