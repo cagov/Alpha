@@ -75,8 +75,8 @@
     "whatwg-fetch": "^3.0.0"
   },
   "dependencies": {
-    "@cagov/accordion": "^1.0.5",
-    "@cagov/step-list": "^1.0.10",
+    "@cagov/accordion": "^1.0.6",
+    "@cagov/step-list": "^1.0.11",
     "@tilecloud/mbgl-gesture-handling": "^1.0.9"
   }
 }

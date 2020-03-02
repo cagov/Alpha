@@ -11,17 +11,21 @@ class CWDSStepList extends HTMLElement {
   }
 
   listen() {
-    var section = this.querySelector('.details');
-    var isCollapsed = section.getAttribute('data-collapsed') === 'true';
+    let section = this.querySelector('.details');
+    let activeButton = this.querySelector('.step-description');
+
+    let isCollapsed = section.getAttribute('data-collapsed') === 'true';
       
     if(isCollapsed) {
       expandSection(section)
       section.setAttribute('data-collapsed', 'false')
+      activeButton.setAttribute('aria-expanded','true');
       section.setAttribute('aria-hidden', 'false')
       this.classList.add('list-open')      
     } else {
       collapseSection(section)
       this.classList.remove('list-open')
+      activeButton.setAttribute('aria-expanded','false');
     }
   }
 }
