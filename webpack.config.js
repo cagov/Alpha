@@ -316,15 +316,15 @@ module.exports = {
 
 //** Error Pages //
 new HtmlWebpackPlugin({
-  filename: "errorpages/500.aspx",
-  template: "src/errorpages/500.aspx",
+  filename: "en/errorpages/500.html",
+  template: "src/errorpages/500.html",
   excludeChunks: excludedChunks,
   minify: minificationOptions
 }),
 
 new HtmlWebpackPlugin({
-  filename: "errorpages/404.aspx",
-  template: "src/errorpages/404.aspx",
+  filename: "en/errorpages/404.html",
+  template: "src/errorpages/404.html",
   excludeChunks: excludedChunks,
   minify: minificationOptions
 }),

@@ -104,7 +104,9 @@ function replaceonelanguage(targetlang) {
           /\/en\//g,
           /\[code-language-select\]/g,
           /\[code-language-alt-meta\]/g,
-          /\[FullPath\]/g
+          /\[FullPath\]/g,
+          /\[Error404\]/g,
+          /\[Error500\]/g,
         ],
         to:[
           'html lang="'+targetlang+'"',
@@ -114,9 +116,15 @@ function replaceonelanguage(targetlang) {
           removeenfrompath('/'+targetlang+'/'),
           targetlangs.map(l=>l.code!=targetlang ? `<a class="dropdown-item" rel="alternate" lang="${l.code}" hreflang="${l.code}" href="${removeenfrompath("/"+l.code)}[FullPath]/">${l.name}</a>` : '').join(''),
           targetlangs.map(l=>l.code!=targetlang ? `<link rel="alternate" hreflang="${l.code}" href="${removeenfrompath(fulldomainurl+l.code)}[FullPath]/">` : '').join(''),
-          (match, ...args) => fileFromArgs(args,targetlang)
+          (match, ...args) => fileFromArgs(args,targetlang),
+          '<%@ Page Language="C#" %><% Response.StatusCode = 404;Response.TrySkipIisCustomErrors = true;%>',
+          '<%@ Page Language="C#" %><% Response.StatusCode = 500;Response.TrySkipIisCustomErrors = true;%>'
         ]})
   })
+
+  //Rename the error pages
+  fs.renameSync(getdestination(targetlang)+"/errorpages/404.html",getdestination(targetlang)+"/errorpages/404.aspx")
+  fs.renameSync(getdestination(targetlang)+"/errorpages/500.html",getdestination(targetlang)+"/errorpages/500.aspx")
 
   if(targetlang=='en') 
     //English default goes to root
@@ -135,6 +143,10 @@ function replaceonelanguage(targetlang) {
     sortedcsvresults.filter(x=>x.numMatches==0).forEach(x=>
       console.warn(`WARNING - no language match for "${x.path} -> ${x.token}"`))
   }
+
+
+
+
 } //replaceonelanguage
 
 function replaceonetoken(data,targetlang,files) {
