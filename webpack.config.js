@@ -294,13 +294,13 @@ module.exports = {
     //*************** End Begin Fire Stories
  
     new HtmlWebpackPlugin({
-      filename: "en/steps-to-prepare-for-wildfire/index.html",
+      filename: "en/prepare-for-wildfire/index.html",
       template:"src/services/steps-to-prepare-for-wildfire/index.html",
       excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: "en/steps-to-take-after-wildfire/index.html",
+      filename: "en/considerations-after-wildfire/index.html",
       template: "src/services/steps-to-take-after-wildfire/index.html",
       excludeChunks: allChunks,
       minify: minificationOptions
