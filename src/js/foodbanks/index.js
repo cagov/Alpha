@@ -1,6 +1,6 @@
 import * as citiesJson from '../../json/just-cities.json';
 import * as uniqueZipJson from '../../json/unique-zips-slim.json';
-import GestureHandling from '@tilecloud/mbgl-gesture-handling';
+import GestureHandling from './gesture.js';
 const mapboxToken = 'pk.eyJ1IjoiYWxwaGEtY2EtZ292IiwiYSI6ImNrNTZ5em1qMDA4ZWkzbG1yMDg4OXJyaDIifQ.GleKGsZsaOcmxfsYUR9bTg';
 
 let trStrings = {
