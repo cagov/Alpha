@@ -218,20 +218,8 @@ module.exports = {
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: "en/services/request-birth-certificate/index.html",
-      template: "src/services/request-birth-certificate/index.html",
-      excludeChunks: allChunks,
-      minify: minificationOptions
-    }),
-    new HtmlWebpackPlugin({
       filename: "en/request-birth-certificate/index.html",
       template: "src/services/request-birth-certificate/index.html",
-      excludeChunks: allChunks,
-      minify: minificationOptions
-    }),
-    new HtmlWebpackPlugin({
-      filename: "en/services/find-minimum-wage-your-city/index.html",
-      template: "src/services/find-minimum-wage-your-city/index.html",
       excludeChunks: allChunks,
       minify: minificationOptions
     }),
@@ -242,20 +230,8 @@ module.exports = {
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: "en/services/state-california-employee-holidays/index.html",
-      template: "src/services/state-california-employee-holidays/index.html",
-      excludeChunks: allChunks,
-      minify: minificationOptions
-    }),
-    new HtmlWebpackPlugin({
       filename: "en/state-california-employee-holidays/index.html",
       template: "src/services/state-california-employee-holidays/index.html",
-      excludeChunks: allChunks,
-      minify: minificationOptions
-    }),
-    new HtmlWebpackPlugin({
-      filename: "en/services/find-food-banks-near-you/index.html",
-      template: "src/services/find-food-banks-near-you/index.html",
       excludeChunks: allChunks,
       minify: minificationOptions
     }),
@@ -318,27 +294,18 @@ module.exports = {
     //*************** End Begin Fire Stories
  
     new HtmlWebpackPlugin({
-      filename: "en/steps-to-prepare-for-wildfire/index.html",
+      filename: "en/prepare-for-wildfire/index.html",
       template:"src/services/steps-to-prepare-for-wildfire/index.html",
       excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: "en/steps-to-take-after-wildfire/index.html",
+      filename: "en/considerations-after-wildfire/index.html",
       template: "src/services/steps-to-take-after-wildfire/index.html",
       excludeChunks: allChunks,
       minify: minificationOptions
     }),
 
-
-    new HtmlWebpackPlugin({
-      filename:
-        "en/services/hire-licensed-contractor-home-improvements/index.html",
-      template:
-        "src/services/hire-licensed-contractor-home-improvements/index.html",
-      excludeChunks: allChunks,
-      minify: minificationOptions
-    }),
     new HtmlWebpackPlugin({
       filename: "en/hire-licensed-contractor-home-improvements/index.html",
       template:
