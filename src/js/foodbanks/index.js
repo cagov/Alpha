@@ -299,6 +299,7 @@ if(document.querySelector('body.js-food-banks')) {
       if(data.features.length > 0) {
         reorient(data.features[0].center);
       } else {
+        document.querySelector('.js-nearest-results').innerHTML = '';
         document.querySelector('.invalid-feedback').style.display = 'block';
       }
     })
