@@ -1,32 +1,31 @@
-class CWDSAccordion extends HTMLElement {
-
-  connectedCallback() {
+class CWDSAccordion extends window.HTMLElement {
+  connectedCallback () {
     this.expandTarget = this.querySelector('.card-container');
     this.expandButton = this.querySelector('.card-header');
-    this.expandButton.addEventListener('click', this.listen.bind(this))
+    this.expandButton.addEventListener('click', this.listen.bind(this));
     this.activateButton = this.querySelector('.card-header');
   }
 
-  listen() {
-    if(!this.cardBodyHeight) {
+  listen () {
+    if (!this.cardBodyHeight) {
       this.cardBodyHeight = this.querySelector('.card-body').clientHeight;
     }
-    if(this.expandTarget.clientHeight > 0) {
+    if (this.expandTarget.clientHeight > 0) {
       this.expandTarget.style.height = '0px';
-      this.expandTarget.setAttribute('aria-hidden','true')
+      this.expandTarget.setAttribute('aria-hidden', 'true');
       this.querySelector('.card-header').classList.remove('accordion-alpha-open');
-      let expando = this.expandTarget;
-      this.activateButton.setAttribute('aria-expanded','false');
-      setTimeout(function() {
-        expando.style.display = "none";
-      }, 300)
+      const expando = this.expandTarget;
+      this.activateButton.setAttribute('aria-expanded', 'false');
+      setTimeout(function () {
+        expando.style.display = 'none';
+      }, 300);
     } else {
-      this.expandTarget.style.display = "block";
-      this.expandTarget.style.height = this.cardBodyHeight+'px';
-      this.expandTarget.setAttribute('aria-hidden','false')
+      this.expandTarget.style.display = 'block';
+      this.expandTarget.style.height = this.cardBodyHeight + 'px';
+      this.expandTarget.setAttribute('aria-hidden', 'false');
       this.querySelector('.card-header').classList.add('accordion-alpha-open');
       this.querySelector('.card-container').classList.remove('collapsed');
-      this.activateButton.setAttribute('aria-expanded','true');
+      this.activateButton.setAttribute('aria-expanded', 'true');
     }
   }
 }
