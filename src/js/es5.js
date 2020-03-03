@@ -1,6 +1,7 @@
 import '@webcomponents/webcomponentsjs'
 import 'whatwg-fetch'
 import './polyfills/endswith.js'
+import 'url-search-params-polyfill';
 import './libs/awesomplete.js'
 import '@cagov/accordion'
 import '@cagov/step-list'
