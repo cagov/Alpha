@@ -76,7 +76,11 @@ path,token,en,es,zh
 /about,,"and this website,","y este sitio web,",而这个网站，
 /about,,About Alpha.CA.gov,Sobre Alpha.CA.gov,关于Alpha.CA.gov
 /apply-for-disability-insurance-benefits,,Apply for disability insurance benefits,Solicite beneficios por incapacidad,申请伤残抚恤金
+<<<<<<< HEAD
 /apply-for-disability-insurance-benefits,,These short-term payments replace part of your income if you can’t work for at least eight days because you’re,Usted puede obtener estos pagos a corto plazo si no puede trabajar por al menos ocho días debido a:,这些短期支付更换你的收入的一部分，如果你能不工作在至少八个天，因为你
+=======
+/apply-for-disability-insurance-benefits,,These short-term payments replace part of your income if you can’t work for at least eight days because you’re,Estos pagos a corto plazo sustituyen parte de sus ingresos si no puede funcionar durante al menos ocho días porque eres,这些短期支付更换你的收入的一部分，如果你能不工作在至少八个天，因为你
+>>>>>>> master
 /apply-for-disability-insurance-benefits,,Apply for disability insurance benefits - Alpha.CA.gov,Solicite beneficios por incapacidad - Alpha.CA.gov,申请伤残津贴 -  Alpha.CA.gov
 /apply-for-disability-insurance-benefits,,Follow these steps to apply for disability insurance benefits.,Sigue estos pasos para obtener beneficios de Seguro por Incapacidad (SDI) del Estado,按照国家的这些步骤得到实惠残疾保险（SDI）
 /apply-for-disability-insurance-benefits,,You could possibly get these short-term payments if you can’t work for at least eight days because you’re:,Usted puede obtener estos pagos a corto plazo si no puede trabajar por al menos ocho días debido a:,你可以得到这些短期的支付，如果无法为在至少八个天内支付工作：
@@ -735,5 +739,10 @@ path,token,en,es,zh
 /considerations-after-wildfire/,,"Let your local police department know if you temporarily leave your home. That way, they’ll know your property should be empty, and they can help to protect it.","Informale a su departamento de policía local si deja temporalmente su casa. De esa manera, sabrán que su propiedad esta vacía, y pueden ayudar a protegerla.",Informale当地警察局，如果你暂时离开家。这样一来，你知道你的财产是空的，可以帮助保护它。
 /considerations-after-wildfire/,,Save receipts related to wildfire loss,Guarde sus recibos relacionados con la pérdida debido a los incendios forestales,由于森林火灾有关损失保存您的收据
 /considerations-after-wildfire/,,You may need your receipts later to get the payments you need from your insurance company. The receipts will also help you include your losses on your tax return.,Es posible que usted necesite sus recibos más tarde para conseguir los pagos que necesite de su compañía de seguros. Los recibos también le ayudan a incluir sus pérdidas en su declaración de impuestos.,以后您可能需要您的收据，让你从你的保险公司需要支付。收据还可以帮助你包括你的报税亏损。
+<<<<<<< HEAD
 /errorpages/404.html,,Error 404,error 404,404
 /errorpages/500.html,,Error 500,error 500,错误500
+=======
+/errorpages/404.aspx,,Error 404,error 404,404
+/errorpages/500.aspx,,Error 500,error 500,错误500
+>>>>>>> master
