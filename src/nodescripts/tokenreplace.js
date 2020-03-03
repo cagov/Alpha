@@ -58,6 +58,21 @@ function langloop() {
   //Distinct list of files
   fileslist = [...new Set(sortedcsvresults.map(item => item.path))].filter(x=>x)
 
+  //Render a sitemap
+  const sitemappath = sourcefolder + "sitemap.xml"
+  const sitemapxml = '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">\n'
+    +fileslist
+      .filter(x=>!x.includes('index.html'))
+      .sort()
+      .map(x=>`<url><loc>${fulldomainurl.replace(/\/$/,'')}${x}</loc></url>`)
+      .join('\n')
+    +'\n</urlset>'
+
+  fs.writeFile(sitemappath,sitemapxml,  err => {
+      if (err) throw err
+      console.log('Sitemap built.')
+    })
+
   targetlangs.map(x=>x.code).forEach(targetlang=>
     // copy source folder to destination
     fse.copy(source, getdestination(targetlang), {overwrite: false, errorOnExist: true}, 
@@ -66,7 +81,6 @@ function langloop() {
         : replaceonelanguage(targetlang))
   )
 } //langloop
-
 
 
 function replaceonelanguage(targetlang) {
