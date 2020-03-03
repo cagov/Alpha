@@ -313,6 +313,28 @@ module.exports = {
       excludeChunks: allChunks,
       minify: minificationOptions
     }),
+
+//** Error Pages //
+new HtmlWebpackPlugin({
+  filename: "errorpages/500.aspx",
+  template: "src/errorpages/500.aspx",
+  excludeChunks: excludedChunks,
+  minify: minificationOptions
+}),
+
+new HtmlWebpackPlugin({
+  filename: "errorpages/404.aspx",
+  template: "src/errorpages/404.aspx",
+  excludeChunks: excludedChunks,
+  minify: minificationOptions
+}),
+
+
+//************ End Pages */
+
+
+
+
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: "defer"
     })
