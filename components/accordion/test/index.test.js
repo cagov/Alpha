@@ -1,10 +1,10 @@
-import { fixture, expect } from "@open-wc/testing";
+import { fixture, expect } from '@open-wc/testing';
 
-import "../index.js";
+import '../index.js';
 
-function elementExists(selector) {
+function elementExists (selector) {
   return new Promise(resolve => {
-    function checkForElement(selector, callback) {
+    function checkForElement (selector, callback) {
       if (document.querySelector(selector)) {
         callback();
       } else {
@@ -14,14 +14,14 @@ function elementExists(selector) {
       }
     }
 
-    checkForElement(selector, function() {
+    checkForElement(selector, function () {
       resolve(true);
     });
   });
 }
 
-describe("renders", function() {
-  it("an element", async () => {
+describe('renders', function () {
+  it('an element', async () => {
     const el = await fixture(`<cwds-accordion>
       <div class="card">
         <div class="card-header py-20" id="heading-one">
@@ -36,7 +36,7 @@ describe("renders", function() {
         </div>
       </div>
     </cwds-accordion>`);
-    await elementExists(".card-body");
-    expect(el.querySelectorAll(".card-body").length).to.be.above(0);
+    await elementExists('.card-body');
+    expect(el.querySelectorAll('.card-body').length).to.be.above(0);
   });
 });

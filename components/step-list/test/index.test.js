@@ -1,10 +1,10 @@
-import { fixture, expect } from "@open-wc/testing";
+import { fixture, expect } from '@open-wc/testing';
 
-import "../index.js";
+import '../index.js';
 
-function elementExists(selector) {
+function elementExists (selector) {
   return new Promise(resolve => {
-    function checkForElement(selector, callback) {
+    function checkForElement (selector, callback) {
       if (document.querySelector(selector)) {
         callback();
       } else {
@@ -14,14 +14,14 @@ function elementExists(selector) {
       }
     }
 
-    checkForElement(selector, function() {
+    checkForElement(selector, function () {
       resolve(true);
     });
   });
 }
 
-describe("renders", function() {
-  it("an element", async () => {
+describe('renders', function () {
+  it('an element', async () => {
     const el = await fixture(`<cwds-step-list>
     <ul class="list-group list-group-flush">
       <li class="list-group-item lead unstyled list-group-item-action">
@@ -55,7 +55,7 @@ describe("renders", function() {
       </li>
     </ul>
   </cwds-step-list>`);
-    await elementExists("ul");
-    expect(el.querySelectorAll("ul li").length).to.be.above(1);
+    await elementExists('ul');
+    expect(el.querySelectorAll('ul li').length).to.be.above(1);
   });
 });
