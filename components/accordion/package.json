@@ -1,6 +1,6 @@
 {
   "name": "@cagov/accordion",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "This custom element recreates the bootstrap accordion component functionality without the jquery dependency",
   "main": "index.js",
   "scripts": {

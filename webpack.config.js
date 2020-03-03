@@ -111,44 +111,44 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      filename: "en/who-can-get-discounted-phone-service/index.html",
+      filename: "en/check-if-you-can-get-discounted-phone-service/index.html",
       template: "src/services/who-can-get-discounted-phone-service/index.html",
       excludeChunks: excludeChucksExcept("lifeline"),
       minify: minificationOptions
     }),
 
     new HtmlWebpackPlugin({
-      filename: "en/who-can-get-discounted-phone-service/no-not-sure/index.html",
+      filename: "en/check-if-you-can-get-discounted-phone-service/no-not-sure/index.html",
       template: "src/services/who-can-get-discounted-phone-service/no-not-sure/index.html",
       excludeChunks: excludeChucksExcept("lifeline"),
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: "en/who-can-get-discounted-phone-service/not-qualified/index.html",
+      filename: "en/check-if-you-can-get-discounted-phone-service/not-qualified/index.html",
       template: "src/services/who-can-get-discounted-phone-service/not-qualified/index.html",
       excludeChunks: excludeChucksExcept("lifeline"),
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: "en/who-can-get-discounted-phone-service/not-sure-qualified/index.html",
+      filename: "en/check-if-you-can-get-discounted-phone-service/not-sure-qualified/index.html",
       template: "src/services/who-can-get-discounted-phone-service/not-sure-qualified/index.html",
       excludeChunks: excludeChucksExcept("lifeline"),
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: "en/who-can-get-discounted-phone-service/qualified/index.html",
+      filename: "en/check-if-you-can-get-discounted-phone-service/qualified/index.html",
       template: "src/services/who-can-get-discounted-phone-service/qualified/index.html",
       excludeChunks: excludeChucksExcept("lifeline"),
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: "en/who-can-get-discounted-phone-service/qualified-income/index.html",
+      filename: "en/check-if-you-can-get-discounted-phone-service/qualified-income/index.html",
       template: "src/services/who-can-get-discounted-phone-service/qualified-income/index.html",
       excludeChunks: excludeChucksExcept("lifeline"),
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: "en/who-can-get-discounted-phone-service/total-income/index.html",
+      filename: "en/check-if-you-can-get-discounted-phone-service/total-income/index.html",
       template: "src/services/who-can-get-discounted-phone-service/total-income/index.html",
       excludeChunks: excludeChucksExcept("lifeline"),
       minify: minificationOptions
@@ -266,7 +266,7 @@ module.exports = {
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: "en/find-shelter/index.html",
+      filename: "en/find-shelters-near-you/index.html",
       template: "src/services/find-shelter/index.html",
       excludeChunks:excludeChucksExcept("shelters"),
       minify: minificationOptions
@@ -315,7 +315,20 @@ module.exports = {
       minify: minificationOptions
     }),
 
-
+    //*************** End Begin Fire Stories
+ 
+    new HtmlWebpackPlugin({
+      filename: "en/steps-to-prepare-for-wildfire/index.html",
+      template:"src/services/steps-to-prepare-for-wildfire/index.html",
+      excludeChunks: allChunks,
+      minify: minificationOptions
+    }),
+    new HtmlWebpackPlugin({
+      filename: "en/steps-to-take-after-wildfire/index.html",
+      template: "src/services/steps-to-take-after-wildfire/index.html",
+      excludeChunks: allChunks,
+      minify: minificationOptions
+    }),
 
 
     new HtmlWebpackPlugin({

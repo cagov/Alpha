@@ -30,8 +30,11 @@ fs.createReadStream(globalfilepath)
   .on('data', data => {
     if(data['']) throw console.error('*** Remove empty columns from CSV file - ' + globalfilepath);
 
-    data.path = data.path.replace(/\n/g, ' ').trim()
-    data.token=data.token || data.en
+    data.path = data.path.replace(/\n/g, ' ').replace(/\/$/,'').trim()
+    if(!data.path.includes('.'))
+      data.path=data.path+'/' //a path will always have a slash at the end.  Files will not
+
+    data.token=(data.token || data.en).trim()
     data['numMatches']=0
     csvresults.push(data)
   })
@@ -41,18 +44,13 @@ fs.createReadStream(globalfilepath)
 function langloop() {
   if(!csvresults || csvresults.length==0) throw console.error(globalfilepath+' is empty!')
 
-  //validate for unique combinations of paths/tokens
-  const diff = csvresults.length-[...new Set(csvresults.map(item => item.path+item.token))].length
-  if(diff>0) {
-    //Find first dupe and report
-    const dupe = csvresults.find((value,index) => 
-      csvresults.find((value2,index2) => 
-        index!=index2 && (value.path+value.token)==(value2.path+value2.token))
-    )
-
-    throw console.error(globalfilepath+` has ${diff} non-distinct path/token/en combo(s)! =>\n\n ${JSON.stringify(dupe)}`)
-  }
-
+  //Check for duplicate searches
+  const dupe = csvresults.map((x,row)=> ({row:row+2,path:x.path,token:x.token})).filter((value,index) => 
+    csvresults.find((value2,index2) =>
+      index!=index2 && value.token==value2.token  && value.path.startsWith(value2.path))
+  )
+  if(dupe.length>0)
+    console.warn(`WARNING: ${globalfilepath} has ${dupe.length} non-distinct path/token/en combo(s)! =>\n\n ${JSON.stringify(dupe,null,4)}`)
 
   //Sort the CSV so that longer tokens are done first
   sortedcsvresults = csvresults.sort((a,b) => 100*(b.path.length-a.path.length)+b.token.length-a.token.length)
@@ -74,7 +72,7 @@ function langloop() {
 function replaceonelanguage(targetlang) {
   fileslist.forEach(path=> {
     let files = getdestination(targetlang)+path
-    if(!files.endsWith('.html')) files +='/index.html'
+    if(!path.includes('.')) files +='**/*.html'
 
     //using global tokens and path matching tokens
     sortedcsvresults
@@ -98,10 +96,10 @@ function replaceonelanguage(targetlang) {
           'html lang="'+targetlang+'"',
           'xml:lang="'+targetlang+'"',
           targetlang,
-          (fulldomainurl+targetlang).replace(/\/en/,'')+'[FullPath]/',
-          targetlang=='en'?'/':'/'+targetlang+'/',
-          targetlangs.map(l=>l.code!=targetlang ? `<a class="dropdown-item" rel="alternate" lang="${l.code}" hreflang="${l.code}" href="/${l.code}[FullPath]/">${l.name}</a>` : '').join(''),
-          targetlangs.map(l=>l.code!=targetlang ? `<link rel="alternate" hreflang="${l.code}" href="${fulldomainurl+l.code}[FullPath]/">` : '').join(''),
+          removeenfrompath(fulldomainurl+targetlang)+'[FullPath]/',
+          removeenfrompath('/'+targetlang+'/'),
+          targetlangs.map(l=>l.code!=targetlang ? `<a class="dropdown-item" rel="alternate" lang="${l.code}" hreflang="${l.code}" href="${removeenfrompath("/"+l.code)}[FullPath]/">${l.name}</a>` : '').join(''),
+          targetlangs.map(l=>l.code!=targetlang ? `<link rel="alternate" hreflang="${l.code}" href="${removeenfrompath(fulldomainurl+l.code)}[FullPath]/">` : '').join(''),
           (match, ...args) => fileFromArgs(args,targetlang)
         ]})
   })
@@ -146,4 +144,8 @@ function fileFromArgs(args,targetlang) {
 
 function getdestination(targetlang) {
   return sourcefolder+targetlang
+}
+
+function removeenfrompath(path) {
+  return path.replace(/\/en/,'')
 }
