@@ -276,6 +276,11 @@ a.list-group-item.list-group-item-action.guide:last-child {
     font-family: "Public Sans Bold", sans-serif;
 }
 
+.list-group.home {
+    margin-left: -.5rem;
+}
+
+
 /* Navbar */
 
 .navbar-inverse .navbar-nav>li>a,
@@ -836,6 +841,9 @@ li .action-link:focus-within {
 	margin-top: 3rem;
     border-top: 2px #ccc solid;
     padding-top: 1rem;
+    font-size: 1.5rem;
+    font-family: "Public Sans Bold", sans-serif;
+
 }
 
 .awesomplete {
