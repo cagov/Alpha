@@ -475,11 +475,11 @@ path,token,en,es,zh
 /contact-us/,,Please enter the name of the agency you want to contact:,Ingrese el nombre de la agencia con la que desea contactar:,输入您要联络机构的名称：
 /contact-us/home,,Contact us - Alpha.CA.gov,Contáctenos - Alpha.CA.gov,联系我们 -  Alpha.CA.gov
 /contact-us/results/,,Contact us - Alpha.CA.gov,Contáctenos - Alpha.CA.gov,联系我们 -  Alpha.CA.gov
-/find-shelter,,Find shelters near you,Encuentre refugios mas cercano de usted ,查找离您最近的庇护所
-/find-shelter,,Search for shelters in every California county,Busque refugios in cada condado de California,寻求庇护了在加利福尼亚州各县
-/find-shelter,,"Search for temporary housing, disaster relief shelters, and homeless shelters near you.","Busque alojamiento temporal, refugios de socorro, y refugios cerca de usted.",寻找临时住房，应急避难场所，以及您附近收容所。
-/find-shelter,,"Please enter your address, city, or zip code:","Por favor introduzca se direccion, ciudad, o codigo postal",请输入意志地址，城市或邮政编码
-/find-shelter,,Find shelters,Encuentre refugios,寻找庇护所
+/find-shelters-near-you,,Find shelters near you,Encuentre refugios mas cercano de usted ,查找离您最近的庇护所
+/find-shelters-near-you,,Search for shelters in every California county,Busque refugios in cada condado de California,寻求庇护了在加利福尼亚州各县
+/find-shelters-near-you,,"Search for temporary housing, disaster relief shelters, and homeless shelters near you.","Busque alojamiento temporal, refugios de socorro, y refugios cerca de usted.",寻找临时住房，应急避难场所，以及您附近收容所。
+/find-shelters-near-you,,"Please enter your address, city, or zip code:","Por favor introduzca se direccion, ciudad, o codigo postal",请输入意志地址，城市或邮政编码
+/find-shelters-near-you,,Find shelters,Encuentre refugios,寻找庇护所
 /check-your-tap-water-quality,,Check your tap water quality,Examine la calidad del agua del grifo,检查自来水质量
 /check-your-tap-water-quality,,Loading...,Buscando...,搜索...
 /check-your-tap-water-quality,,Your water quality,La calidad del agua,水质
@@ -527,80 +527,80 @@ path,token,en,es,zh
 /apply-discounted-phone-service,,>online<,>por internet<,>在线<
 /apply-discounted-phone-service,,>Help<,>Ayuda<,>帮助<
 /apply-discounted-phone-service,,"If you need help,",Si necesitas asistencia,如果您需要帮助
-/who-can-get-discounted-phone-service,,"Find out if you’re eligible for the California LifeLine Program, a discounted phone service.","Averigüe si es elegible para el Programa California LifeLine, un servicio telefónico con descuento.",了解你是否有资格获得美国加州生命线课程，贴现电话服务。
-/who-can-get-discounted-phone-service,,(California LifeLine) - Alpha.CA.gov,(Programa Lifeline de Califronia) - Alpha.CA.gov,（生命线计划Califronia） -  Alpha.CA.gov
-/who-can-get-discounted-phone-service,,Do you or someone in your,Usted o alguien en su,您或您
-/who-can-get-discounted-phone-service/no-not-sure,,A household is a group of people who live together and share income and expenses (even if they are not related to each other).,Un hogar es un grupo de personas que viven juntas y comparten ingresos y gastos (incluso si no están relacionados uno al otro).,一个家庭是一群人谁住在一起，共享收入和支出（即使它们与一个其他）。
-/who-can-get-discounted-phone-service,,>household<,>hogar<,>首页<
-/who-can-get-discounted-phone-service,,get support from any of these programs?,recibe apoyo de alguno de estos programas?,接收从这些方案的一个支持？
-/who-can-get-discounted-phone-service,,Please check all that apply.,Por favor marque todos los que apliquen.,请检查所有适用。
-/who-can-get-discounted-phone-service,,I’m not sure,No estoy seguro,我不知道
-/who-can-get-discounted-phone-service,,Medicaid/Medi-Cal,Medicaid/Medi-Cal,医疗/的Medi-Cal
-/who-can-get-discounted-phone-service,,"CalFresh, Food Stamps or Supplemental Nutrition Assistance Program (SNAP)","CalFresh, Estampillas para Alimentos o Programa de Asistencia para Nutrición Suplementaria (SNAP)",CalFresh，食品券计划或营养补助（SNAP）
-/who-can-get-discounted-phone-service,,Low Income Home Energy Assistance Program (LIHEAP),Programa de Asistencia Energética para Hogares de Bajos Ingresos (LIHEAP),能源援助计划为低收入（LIHEAP）
-/who-can-get-discounted-phone-service,,Supplemental Security Income (SSI),Ingreso Suplementario de Seguridad (SSI),补充保障收入（SSI）
-/who-can-get-discounted-phone-service,,Federal Public Housing Assistance or Section 8,Programa Federal de Asistencia para la Vivienda o Sección 8,联邦计划住房援助或第8
-/who-can-get-discounted-phone-service,,"Women, Infants and Children Program (WIC)","Programa Especial de Nutrición Suplementaria para Mujeres, Infantes y Niños (WIC)",特别补充营养计划的妇女，婴儿和儿童（WIC）
-/who-can-get-discounted-phone-service,,National School Lunch Program (NSL),Programa nacional de almuerzos escolares gratuitos,全国免费学校午餐计划
-/who-can-get-discounted-phone-service,,Temporary Assistance for Needy Families (TANF),Asistencia temporal para familias necesitadas (TANF),贫困家庭临时援助（TANF）
-/who-can-get-discounted-phone-service,,California Work Opportunity and Responsibility to Kids (CalWORKs),Programa de Oportunidad de Trabajo y Responsabilidad para Niños (CalWORKs),工作计划机会和责任给孩子们（CalWORKs）
-/who-can-get-discounted-phone-service,,Stanislaus County Work Opportunity and Responsibility to Kids (StanWORKs),"Programa StanWORKs, para los que viven en el condado de Stanislaus",StanWORKs程序那些生活在斯坦尼斯劳斯县
-/who-can-get-discounted-phone-service,,Welfare-to-Work (WTW),Programa Welfare-To-Work (WTW),福利到工作（WTW）
-/who-can-get-discounted-phone-service,,Greater Avenues for Independence (GAIN),Mejores Opciones Para Independizarse (GAIN),独立最佳选择（GAIN）
-/who-can-get-discounted-phone-service,,Tribal TANF,Asistencia Temporal para Familias Necesitadas de Tribus (TANF Tribal),贫困家庭部落临时援助（TANF部落）
-/who-can-get-discounted-phone-service,,Bureau of Indian Affairs General Assistance,Asistencia General del Bureau of Indian Affairs (BIA),印第安人事务局的一般援助（BIA）
-/who-can-get-discounted-phone-service,,Head Start Income Eligible (Tribal Only),Head Start (Solo los hogares que cumplen con el estándar de ingresos),开端（只有符合收入水平的家庭）
-/who-can-get-discounted-phone-service,,Food Distribution Program on Indian Reservations,Programa de Distribución de Alimentos en Reservaciones Indígenas (FDPIR),食品配送计划对印度预订（FDPIR）
-/who-can-get-discounted-phone-service,,Federal Veterans and Survivors Pension Benefit Program,Beneficio de Pensión para Veteranos y Sobrevivientes,养老金福利退伍军人和遗属
-/who-can-get-discounted-phone-service/qualified,,You can get a discount!,¡Usted puede obtener un servicio telefónico con descuento!,你可以得到一个打折的电话服务！
-/who-can-get-discounted-phone-service/qualified,,"Next, you’ll want to find an official document to prove you get support from:","A continuación, querrá encontrar un documento oficial para demostrar que recibe asistencia de:",然后，你会希望有一个正式文件，证明从接受援助：
-/who-can-get-discounted-phone-service/qualified,,Have your document with you as you,Téngalo cerca cuando termine su aplicación.,保持接近，当你完成你的应用程序。
-/who-can-get-discounted-phone-service/qualified,,continue to step two</a>. Here are examples of documents that could prove you qualify:,continúe con el paso dos </a>. Aquí hay ejemplos de documentos que podrían probar que califica:,前进至步骤2 </A>。下面是一些可能证明资格的文件类型：
-/who-can-get-discounted-phone-service/qualified,,ID card,tarjeta de identificación (ID),识别卡（ID）
-/who-can-get-discounted-phone-service/qualified,,Decision letter,Carta de determinación,测定信
-/who-can-get-discounted-phone-service/qualified,,Statement of benefits,Declaración de beneficios,利益声明
-/who-can-get-discounted-phone-service/qualified,,Other official documents,Otros documentos oficiales,其他官方文件
-/who-can-get-discounted-phone-service/no-not-sure,,How many people are in your household?,¿Cuántas personas viven en su hogar?,有多少人住在你的家庭吗？
-/who-can-get-discounted-phone-service/no-not-sure,,Back to last question,Volver a la última pregunta,回到最后一个问题
-/who-can-get-discounted-phone-service/total-income,,Back to last question,Volver a la última pregunta,回到最后一个问题
-/who-can-get-discounted-phone-service/total-income,,Is your household’s total income below,Esta el ingreso total de su hogar debajo de,下面这个家庭总收入
-/who-can-get-discounted-phone-service/qualified-income,,You can get a discount!,¡Usted puede obtener un servicio telefónico con descuento!,你可以得到一个打折的电话服务！
-/who-can-get-discounted-phone-service/qualified-income,,"Next, you’ll want to find one of the following documents:","Next, you’ll want to find one of the following documents:",接下来，你要寻找以下文件之一：
-/who-can-get-discounted-phone-service/qualified-income,,"The front page of your state, federal, or tribal tax return from last year.","La primera página de su declaración de impuestos estatal, federal o tribal del año pasado",你的国家，部族或联邦去年的税收第一页
-/who-can-get-discounted-phone-service/qualified-income,,Or income statements or paycheck stubs for three months in a row. Those three months should be within the past 12 months.,O declaraciones de ingresos o recibos de sueldo durante tres meses seguidos. Esos tres meses deben estar dentro de los últimos 12 meses.,或损益表或连续三个月的工资单。那三个月必须是在过去12个月内。
-/who-can-get-discounted-phone-service/qualified-income,,Have the document with you as you continue to step two.,Ten el documento con usted mientras continúe con el paso dos.,有文件，而你继续第二步。
-/who-can-get-discounted-phone-service/qualified-income,,Go to step 2,Regrese al paso 2,返回到第2步
-/who-can-get-discounted-phone-service/not-sure-qualified,,Contact us to find out if you can get California LifeLine,Contáctenos para averiguar si puede obtener California LifeLine,联系我们找出如果你能得到加州生命线
-/who-can-get-discounted-phone-service/not-sure-qualified,,Monday–Friday,Lunes–Viernes,MF
-/who-can-get-discounted-phone-service/not-sure-qualified,,7 a.m.–7 p.m.,7 a.m.–7 p.m.,上午7点 - 下午7时。
-/who-can-get-discounted-phone-service/not-sure-qualified,,General number,Numero General,一般数
-/who-can-get-discounted-phone-service/not-sure-qualified,,English,Inglés,英语
-/who-can-get-discounted-phone-service/not-sure-qualified,,Spanish,Español,西班牙语
-/who-can-get-discounted-phone-service/not-sure-qualified,,Lao/Hmong,Lao/Hmong ,劳/苗族
-/who-can-get-discounted-phone-service/not-sure-qualified,,Khmer (Cambodian),Jemer (Camboyano),Jemer（柬埔寨）
-/who-can-get-discounted-phone-service/not-sure-qualified,,Tagalog,Tagalo,他加禄语
-/who-can-get-discounted-phone-service/not-sure-qualified,,Korean,Coreano,朝鲜的
-/who-can-get-discounted-phone-service/not-sure-qualified,,Vietnamese,Vietnamita,越南
-/who-can-get-discounted-phone-service/not-sure-qualified,,Chinese,Chino,中国
-/who-can-get-discounted-phone-service/not-sure-qualified,,(Mandarin/Cantonese),(Mandarín / Cantonés),（普通话/广东话）
-/who-can-get-discounted-phone-service/not-sure-qualified,,Japanese,Japonés,日本
-/who-can-get-discounted-phone-service/not-sure-qualified,,TTY Number,Número TTY ,TTY号码
-/who-can-get-discounted-phone-service/not-qualified,,"Sorry, you may not be able to get a discount.","Lo sentimos, es posible que no pueda obtener un descuento.",对不起，你可能不会得到折扣。
-/who-can-get-discounted-phone-service/not-qualified,,"To be sure, contact us about California LifeLine:","Para estar seguro, contáctenos sobre el Programa California LifeLine.",可以肯定的，请联系我们在加州生命线课程。
-/who-can-get-discounted-phone-service/not-qualified,,Monday–Friday,Lunes–Viernes,MF
-/who-can-get-discounted-phone-service/not-qualified,,7 a.m.–7 p.m.,7 a.m.–7 p.m.,上午7点 - 下午7时。
-/who-can-get-discounted-phone-service/not-qualified,,General number,Numero General,一般数
-/who-can-get-discounted-phone-service/not-qualified,,English,Inglés,英语
-/who-can-get-discounted-phone-service/not-qualified,,Spanish,Español,西班牙语
-/who-can-get-discounted-phone-service/not-qualified,,Lao/Hmong,Lao/Hmong ,劳/苗族
-/who-can-get-discounted-phone-service/not-qualified,,Khmer (Cambodian),Jemer (Camboyano),Jemer（柬埔寨）
-/who-can-get-discounted-phone-service/not-qualified,,Tagalog,Tagalo,他加禄语
-/who-can-get-discounted-phone-service/not-qualified,,Korean,Coreano,朝鲜的
-/who-can-get-discounted-phone-service/not-qualified,,Vietnamese,Vietnamita,越南
-/who-can-get-discounted-phone-service/not-qualified,,Chinese,Chino,中国
-/who-can-get-discounted-phone-service/not-qualified,,(Mandarin/Cantonese),(Mandarín / Cantonés),（普通话/广东话）
-/who-can-get-discounted-phone-service/not-qualified,,Japanese,Japonés,日本
-/who-can-get-discounted-phone-service/not-qualified,,TTY Number,Número TTY ,TTY号码
+/check-if-you-can-get-discounted-phone-service,,"Find out if you’re eligible for the California LifeLine Program, a discounted phone service.","Averigüe si es elegible para el Programa California LifeLine, un servicio telefónico con descuento.",了解你是否有资格获得美国加州生命线课程，贴现电话服务。
+/check-if-you-can-get-discounted-phone-service,,(California LifeLine) - Alpha.CA.gov,(Programa Lifeline de Califronia) - Alpha.CA.gov,（生命线计划Califronia） -  Alpha.CA.gov
+/check-if-you-can-get-discounted-phone-service,,Do you or someone in your,Usted o alguien en su,您或您
+/check-if-you-can-get-discounted-phone-service/no-not-sure,,A household is a group of people who live together and share income and expenses (even if they are not related to each other).,Un hogar es un grupo de personas que viven juntas y comparten ingresos y gastos (incluso si no están relacionados uno al otro).,一个家庭是一群人谁住在一起，共享收入和支出（即使它们与一个其他）。
+/check-if-you-can-get-discounted-phone-service,,>household<,>hogar<,>首页<
+/check-if-you-can-get-discounted-phone-service,,get support from any of these programs?,recibe apoyo de alguno de estos programas?,接收从这些方案的一个支持？
+/check-if-you-can-get-discounted-phone-service,,Please check all that apply.,Por favor marque todos los que apliquen.,请检查所有适用。
+/check-if-you-can-get-discounted-phone-service,,I’m not sure,No estoy seguro,我不知道
+/check-if-you-can-get-discounted-phone-service,,Medicaid/Medi-Cal,Medicaid/Medi-Cal,医疗/的Medi-Cal
+/check-if-you-can-get-discounted-phone-service,,"CalFresh, Food Stamps or Supplemental Nutrition Assistance Program (SNAP)","CalFresh, Estampillas para Alimentos o Programa de Asistencia para Nutrición Suplementaria (SNAP)",CalFresh，食品券计划或营养补助（SNAP）
+/check-if-you-can-get-discounted-phone-service,,Low Income Home Energy Assistance Program (LIHEAP),Programa de Asistencia Energética para Hogares de Bajos Ingresos (LIHEAP),能源援助计划为低收入（LIHEAP）
+/check-if-you-can-get-discounted-phone-service,,Supplemental Security Income (SSI),Ingreso Suplementario de Seguridad (SSI),补充保障收入（SSI）
+/check-if-you-can-get-discounted-phone-service,,Federal Public Housing Assistance or Section 8,Programa Federal de Asistencia para la Vivienda o Sección 8,联邦计划住房援助或第8
+/check-if-you-can-get-discounted-phone-service,,"Women, Infants and Children Program (WIC)","Programa Especial de Nutrición Suplementaria para Mujeres, Infantes y Niños (WIC)",特别补充营养计划的妇女，婴儿和儿童（WIC）
+/check-if-you-can-get-discounted-phone-service,,National School Lunch Program (NSL),Programa nacional de almuerzos escolares gratuitos,全国免费学校午餐计划
+/check-if-you-can-get-discounted-phone-service,,Temporary Assistance for Needy Families (TANF),Asistencia temporal para familias necesitadas (TANF),贫困家庭临时援助（TANF）
+/check-if-you-can-get-discounted-phone-service,,California Work Opportunity and Responsibility to Kids (CalWORKs),Programa de Oportunidad de Trabajo y Responsabilidad para Niños (CalWORKs),工作计划机会和责任给孩子们（CalWORKs）
+/check-if-you-can-get-discounted-phone-service,,Stanislaus County Work Opportunity and Responsibility to Kids (StanWORKs),"Programa StanWORKs, para los que viven en el condado de Stanislaus",StanWORKs程序那些生活在斯坦尼斯劳斯县
+/check-if-you-can-get-discounted-phone-service,,Welfare-to-Work (WTW),Programa Welfare-To-Work (WTW),福利到工作（WTW）
+/check-if-you-can-get-discounted-phone-service,,Greater Avenues for Independence (GAIN),Mejores Opciones Para Independizarse (GAIN),独立最佳选择（GAIN）
+/check-if-you-can-get-discounted-phone-service,,Tribal TANF,Asistencia Temporal para Familias Necesitadas de Tribus (TANF Tribal),贫困家庭部落临时援助（TANF部落）
+/check-if-you-can-get-discounted-phone-service,,Bureau of Indian Affairs General Assistance,Asistencia General del Bureau of Indian Affairs (BIA),印第安人事务局的一般援助（BIA）
+/check-if-you-can-get-discounted-phone-service,,Head Start Income Eligible (Tribal Only),Head Start (Solo los hogares que cumplen con el estándar de ingresos),开端（只有符合收入水平的家庭）
+/check-if-you-can-get-discounted-phone-service,,Food Distribution Program on Indian Reservations,Programa de Distribución de Alimentos en Reservaciones Indígenas (FDPIR),食品配送计划对印度预订（FDPIR）
+/check-if-you-can-get-discounted-phone-service,,Federal Veterans and Survivors Pension Benefit Program,Beneficio de Pensión para Veteranos y Sobrevivientes,养老金福利退伍军人和遗属
+/check-if-you-can-get-discounted-phone-service/qualified,,You can get a discount!,¡Usted puede obtener un servicio telefónico con descuento!,你可以得到一个打折的电话服务！
+/check-if-you-can-get-discounted-phone-service/qualified,,"Next, you’ll want to find an official document to prove you get support from:","A continuación, querrá encontrar un documento oficial para demostrar que recibe asistencia de:",然后，你会希望有一个正式文件，证明从接受援助：
+/check-if-you-can-get-discounted-phone-service/qualified,,Have your document with you as you,Téngalo cerca cuando termine su aplicación.,保持接近，当你完成你的应用程序。
+/check-if-you-can-get-discounted-phone-service/qualified,,continue to step two</a>. Here are examples of documents that could prove you qualify:,continúe con el paso dos </a>. Aquí hay ejemplos de documentos que podrían probar que califica:,前进至步骤2 </A>。下面是一些可能证明资格的文件类型：
+/check-if-you-can-get-discounted-phone-service/qualified,,ID card,tarjeta de identificación (ID),识别卡（ID）
+/check-if-you-can-get-discounted-phone-service/qualified,,Decision letter,Carta de determinación,测定信
+/check-if-you-can-get-discounted-phone-service/qualified,,Statement of benefits,Declaración de beneficios,利益声明
+/check-if-you-can-get-discounted-phone-service/qualified,,Other official documents,Otros documentos oficiales,其他官方文件
+/check-if-you-can-get-discounted-phone-service/no-not-sure,,How many people are in your household?,¿Cuántas personas viven en su hogar?,有多少人住在你的家庭吗？
+/check-if-you-can-get-discounted-phone-service/no-not-sure,,Back to last question,Volver a la última pregunta,回到最后一个问题
+/check-if-you-can-get-discounted-phone-service/total-income,,Back to last question,Volver a la última pregunta,回到最后一个问题
+/check-if-you-can-get-discounted-phone-service/total-income,,Is your household’s total income below,Esta el ingreso total de su hogar debajo de,下面这个家庭总收入
+/check-if-you-can-get-discounted-phone-service/qualified-income,,You can get a discount!,¡Usted puede obtener un servicio telefónico con descuento!,你可以得到一个打折的电话服务！
+/check-if-you-can-get-discounted-phone-service/qualified-income,,"Next, you’ll want to find one of the following documents:","Next, you’ll want to find one of the following documents:",接下来，你要寻找以下文件之一：
+/check-if-you-can-get-discounted-phone-service/qualified-income,,"The front page of your state, federal, or tribal tax return from last year.","La primera página de su declaración de impuestos estatal, federal o tribal del año pasado",你的国家，部族或联邦去年的税收第一页
+/check-if-you-can-get-discounted-phone-service/qualified-income,,Or income statements or paycheck stubs for three months in a row. Those three months should be within the past 12 months.,O declaraciones de ingresos o recibos de sueldo durante tres meses seguidos. Esos tres meses deben estar dentro de los últimos 12 meses.,或损益表或连续三个月的工资单。那三个月必须是在过去12个月内。
+/check-if-you-can-get-discounted-phone-service/qualified-income,,Have the document with you as you continue to step two.,Ten el documento con usted mientras continúe con el paso dos.,有文件，而你继续第二步。
+/check-if-you-can-get-discounted-phone-service/qualified-income,,Go to step 2,Regrese al paso 2,返回到第2步
+/check-if-you-can-get-discounted-phone-service/not-sure-qualified,,Contact us to find out if you can get California LifeLine,Contáctenos para averiguar si puede obtener California LifeLine,联系我们找出如果你能得到加州生命线
+/check-if-you-can-get-discounted-phone-service/not-sure-qualified,,Monday–Friday,Lunes–Viernes,MF
+/check-if-you-can-get-discounted-phone-service/not-sure-qualified,,7 a.m.–7 p.m.,7 a.m.–7 p.m.,上午7点 - 下午7时。
+/check-if-you-can-get-discounted-phone-service/not-sure-qualified,,General number,Numero General,一般数
+/check-if-you-can-get-discounted-phone-service/not-sure-qualified,,English,Inglés,英语
+/check-if-you-can-get-discounted-phone-service/not-sure-qualified,,Spanish,Español,西班牙语
+/check-if-you-can-get-discounted-phone-service/not-sure-qualified,,Lao/Hmong,Lao/Hmong ,劳/苗族
+/check-if-you-can-get-discounted-phone-service/not-sure-qualified,,Khmer (Cambodian),Jemer (Camboyano),Jemer（柬埔寨）
+/check-if-you-can-get-discounted-phone-service/not-sure-qualified,,Tagalog,Tagalo,他加禄语
+/check-if-you-can-get-discounted-phone-service/not-sure-qualified,,Korean,Coreano,朝鲜的
+/check-if-you-can-get-discounted-phone-service/not-sure-qualified,,Vietnamese,Vietnamita,越南
+/check-if-you-can-get-discounted-phone-service/not-sure-qualified,,Chinese,Chino,中国
+/check-if-you-can-get-discounted-phone-service/not-sure-qualified,,(Mandarin/Cantonese),(Mandarín / Cantonés),（普通话/广东话）
+/check-if-you-can-get-discounted-phone-service/not-sure-qualified,,Japanese,Japonés,日本
+/check-if-you-can-get-discounted-phone-service/not-sure-qualified,,TTY Number,Número TTY ,TTY号码
+/check-if-you-can-get-discounted-phone-service/not-qualified,,"Sorry, you may not be able to get a discount.","Lo sentimos, es posible que no pueda obtener un descuento.",对不起，你可能不会得到折扣。
+/check-if-you-can-get-discounted-phone-service/not-qualified,,"To be sure, contact us about California LifeLine:","Para estar seguro, contáctenos sobre el Programa California LifeLine.",可以肯定的，请联系我们在加州生命线课程。
+/check-if-you-can-get-discounted-phone-service/not-qualified,,Monday–Friday,Lunes–Viernes,MF
+/check-if-you-can-get-discounted-phone-service/not-qualified,,7 a.m.–7 p.m.,7 a.m.–7 p.m.,上午7点 - 下午7时。
+/check-if-you-can-get-discounted-phone-service/not-qualified,,General number,Numero General,一般数
+/check-if-you-can-get-discounted-phone-service/not-qualified,,English,Inglés,英语
+/check-if-you-can-get-discounted-phone-service/not-qualified,,Spanish,Español,西班牙语
+/check-if-you-can-get-discounted-phone-service/not-qualified,,Lao/Hmong,Lao/Hmong ,劳/苗族
+/check-if-you-can-get-discounted-phone-service/not-qualified,,Khmer (Cambodian),Jemer (Camboyano),Jemer（柬埔寨）
+/check-if-you-can-get-discounted-phone-service/not-qualified,,Tagalog,Tagalo,他加禄语
+/check-if-you-can-get-discounted-phone-service/not-qualified,,Korean,Coreano,朝鲜的
+/check-if-you-can-get-discounted-phone-service/not-qualified,,Vietnamese,Vietnamita,越南
+/check-if-you-can-get-discounted-phone-service/not-qualified,,Chinese,Chino,中国
+/check-if-you-can-get-discounted-phone-service/not-qualified,,(Mandarin/Cantonese),(Mandarín / Cantonés),（普通话/广东话）
+/check-if-you-can-get-discounted-phone-service/not-qualified,,Japanese,Japonés,日本
+/check-if-you-can-get-discounted-phone-service/not-qualified,,TTY Number,Número TTY ,TTY号码
 /apply-online-discounted-phone-service,,Apply online for a discounted phone service,Solicite un servicio telefónico con descuento,要求打折电话服务
 /apply-online-discounted-phone-service,,(California LifeLine) - Alpha.CA.gov,(Programa Lifeline de Califronia) - Alpha.CA.gov,（生命线计划Califronia） -  Alpha.CA.gov
 /apply-online-discounted-phone-service,,"Learn how to apply or renew online for California LifeLine, a discounted phone service.","Aprende cómo solicitar o renovar por internet el programa California LifeLine, un servicio telefónico con descuento.",了解如何申请或在线更新加州生命线节目，折扣电话服务。
@@ -752,3 +752,96 @@ path,token,en,es,zh
 /apply-for-unemployment-insurance/update-us-every-two-weeks,,Continued Claim Form (DE 4581CTO),Le enviaremos por correo un formulario de Solicitud de Beneficios Continuos (DE 4581CTO) dentro de los 10 días después de que hayamos procesado su solicitud.,我们将在10天内邮寄给你一种形式继续索赔（DE 4581CTO）我们处理您的请求后。
 /apply-for-unemployment-insurance/update-us-every-two-weeks,,within 10 days after we’ve processed your application.,Le enviaremos por correo un formulario de Solicitud de Beneficios Continuos (DE 4581CTO) dentro de los 10 días después de que hayamos procesado su solicitud.,我们将在10天内邮寄给你一种形式继续索赔（DE 4581CTO）我们处理您的请求后。
 /apply-for-unemployment-insurance/update-us-every-two-weeks,,Fill it out and mail it to the address we've listed in your letter.,Llenarla y enviarla por correo a la dirección que hemos enumerado en su carta.,填好后邮寄给我们在您的信中所列的地址。
+/steps-to-prepare-for-wildfire/,,Prepare for a wildfire,Prepararse para un incendio forestal,准备野火
+/steps-to-prepare-for-wildfire/,,Follow these suggested steps to protect yourself and your family from a wildfire.,Siga estos pasos sugeridos para protegerse y proteger a su familia de un incendio forestal.,按照这些建议的步骤来保护自己和家人从森林火灾。
+/steps-to-prepare-for-wildfire/,,Sign up for emergency alerts,Inscribirse para recibir alertas de emergencia,注册接收紧急警报
+/steps-to-prepare-for-wildfire/,,Get local alerts,Recibe alertas locales,本地快讯
+/steps-to-prepare-for-wildfire/,,Clear a fire-resistant zone around your home,Despejar una zona resistente al fuego alrededor de su casa,清除在你的家里防火区
+/steps-to-prepare-for-wildfire/,,State law requires property owners to clear a fire-resistant zone 100 feet around their homes or buildings.,La ley estatal requiere que los dueños de propiedades para limpiar una zona resistente al fuego de 100 pies alrededor de sus casas o edificios.,州法律要求业主清理防火区域百英尺自己家周围或建筑物。
+/steps-to-prepare-for-wildfire/,,Learn about fire-resistant zones,Aprender acerca de las zonas resistentes al fuego,了解防火区
+/steps-to-prepare-for-wildfire/,,Make an evacuation plan,Hacer un plan de evacuación,做一个疏散计划
+/steps-to-prepare-for-wildfire/,,"Learn a few ways to evacuate your area for each of your family members. Your city might have evacuation maps, or you may need to find a few routes on your own.","Aprender algunas formas de evacuar su área para cada uno de los miembros de su familia. Tu ciudad podría tener mapas de evacuación, o puede que tenga que encontrar unas cuantas rutas por su cuenta.",学习一些方法来疏散您所在地区的每个家庭成员。你所在的城市可能有疏散地图，或者你可能需要找到自己的几条路线。
+/steps-to-prepare-for-wildfire/,,Pick a meeting place with your family.,Elija un lugar de encuentro con su familia.,选择与家人的聚会场所。
+/steps-to-prepare-for-wildfire/,,Practice traveling your evacuation routes.,Practicar viajar las rutas de evacuación.,旅游实践疏散路线。
+/steps-to-prepare-for-wildfire/,,Find a few shelters along your routes.,Encontrar un par de refugios a lo largo de sus rutas.,查找沿着他们的路线一对夫妇的住所。
+/steps-to-prepare-for-wildfire/,,Make a plan to evacuate or protect your pets and livestock.,Haga un plan para evacuar o proteger a sus mascotas y ganado.,制定一个计划撤离或保护自己的宠物和家畜。
+/steps-to-prepare-for-wildfire/,,Share your evacuation plans with your neighbors and ask about theirs.,Compartir sus planes de evacuación con sus vecinos y preguntar acerca de ellos.,分享您的疏散计划与你的邻居，并询问他们。
+/steps-to-prepare-for-wildfire/,,Make a family communication plan,Hacer un plan de comunicación familiar,做一个家庭沟通计划
+/steps-to-prepare-for-wildfire/,,"Choose one out-of-town person to communicate among everyone. That way, if you get separated, you can stay in touch if cell signals are cutting in and out.","Elige a una persona fuera de la ciudad para comunicarse entre todos. De esta manera, si se separan, puede mantenerse en contacto si las señales celulares están reduciendo de entrada y salida.",选择一个人出城与大家进行交流。因此，如果独立的，可以如果蜂窝信号被减少的输入和输出保持接触。
+/steps-to-prepare-for-wildfire/,,Keep a list of emergency contact numbers in your emergency kit.,Mantenga una lista de números de contacto de emergencia en su equipo de emergencia.,保持紧急联络号码列表中的应急包。
+/steps-to-prepare-for-wildfire/,,Gather supplies,Reúna los materiales,收集材料
+/steps-to-prepare-for-wildfire/,,Pack an emergency kit with:,Empacar un kit de emergencia con:,包一个应急包有：
+/steps-to-prepare-for-wildfire/,,Cash,Efectivo,有效
+/steps-to-prepare-for-wildfire/,,Canned food,Comida enlatada,罐头食品
+/steps-to-prepare-for-wildfire/,,Manual can opener,abrelatas manual,手动开罐器。
+/steps-to-prepare-for-wildfire/,,Bottled water,Agua embotellada,瓶装水
+/steps-to-prepare-for-wildfire/,,N95 respirator masks,máscaras respiratorias N95,呼吸面罩N95
+/steps-to-prepare-for-wildfire/,,First aid kit,Kit de primeros auxilios,急救包
+/steps-to-prepare-for-wildfire/,,Fire extinguisher,Extintor de incendios,灭火器
+/steps-to-prepare-for-wildfire/,,Flashlight and batteries,Linterna y baterías,手电筒和电池
+/steps-to-prepare-for-wildfire/,,A battery-operated radio or a scanner (it could help you learn safe routes to evacuate when cell signals are down),Una radio de pilas o un escáner (que podrían ayudarle a aprender las rutas seguras para evacuar cuando las señales celulares están abajo),由电池供电的无线电或扫描仪（可以帮助你学习安全路线撤离时，蜂窝信号低于）
+/steps-to-prepare-for-wildfire/,,Learn how to shut off utilities,Aprender a desconectar los servicios públicos,了解如何关闭公用事业
+/steps-to-prepare-for-wildfire/,,"Teach your family how to shut off your water, gas, and electricity.","Enseñe a su familia cómo cortar el suministro de agua, gas y electricidad.",教你的家人如何关闭水，煤气和电。
+/steps-to-prepare-for-wildfire/,,Natural gas leaks can cause explosions and fires. So it’s helpful to turn off the gas during a disaster.,Fugas de gas natural pueden provocar incendios y explosiones. Por lo que es útil para apagar el gas durante un desastre.,天然气泄漏可引起火灾和爆炸。所以这是一个灾难期间关掉煤气有用。
+/steps-to-prepare-for-wildfire/,,Clean water can be hard to find after a disaster. Turning off the water valve can protect your tap water from cracked lines and pollution.,El agua limpia puede ser difícil de encontrar después de un desastre. Apagado de la válvula de agua puede proteger su agua del grifo de líneas rotas y la contaminación.,干净的水是很难在灾难发生后找到。关闭水阀水龙头虚线和污染可以保护水。
+/steps-to-prepare-for-wildfire/,,"Electrical sparks can ignite natural gas leaks. To prevent damage during a wildfire, turn off the power to all of your house in your circuit box. ","Las chispas eléctricas pueden encender los escapes de gas natural. Para evitar daños durante un incendio forestal, desconecte la alimentación de todos los de su casa en la caja de circuitos.",电火花可以点燃天然气泄漏。为了防止森林火灾过程中损坏，关闭所有你的房子在电路盒。
+/steps-to-prepare-for-wildfire/,,Please note: Start by turning off all of the smaller circuits before you shut off the main circuit.,Por favor nota: Inicio apagando todos los circuitos más pequeños antes de apagar el circuito principal.,请注意：开始通过关闭主电路之前关闭了所有的小电路。
+/steps-to-prepare-for-wildfire/,,Store documents in a fireproof place,almacenar documentos en un lugar a prueba de fuego,在一个防火的地方存储文档
+/steps-to-prepare-for-wildfire/,,"Make digital and hard copies of your important documents and IDs. Then, store those hard copies in a fireproof place.","Hacer copias digitales e impresas de sus documentos importantes y los ID. A continuación, almacenar esas copias impresas en un lugar a prueba de fuego.",制作数字拷贝和打印您的重要文件和ID。然后，这些打印存储在一个地方防火。
+/steps-to-prepare-for-wildfire/,,"Take pictures of your belongings and property and store those photos there, too.","Tomar imágenes de sus pertenencias y propiedad y almacenar esas fotos allí, también.",把你的财物和财产的照片，并将这些照片在那里。
+/steps-to-prepare-for-wildfire/,,Check your insurance coverage,Compruebe su cobertura de seguro,检查您的保险覆盖面
+/steps-to-prepare-for-wildfire/,,Make sure your insurance plans would be enough to replace your home and all of your belongings.,Asegúrese de que sus planes de seguro serían suficientes para reemplazar su casa y todas sus pertenencias.,确保你的保险计划将足以取代您的家庭和财产。
+/steps-to-take-after-wildfire/,,Considerations after a wildfire,Consideraciones después de un incendio forestal,森林火灾后的思考
+/steps-to-take-after-wildfire/,,Every wildfire affects survivors differently. Consider these general suggestions and do what makes sense for your situation.,Cada incendio forestal afecta a sobrevivientes de manera diferente. Tenga en cuenta estas sugerencias generales y hacer lo que tiene sentido para su situación.,每个森林大火幸存者的影响是不同的。考虑到这些一般性的提示，做有意义您的具体情况。
+/steps-to-take-after-wildfire/,,Find shelter,Encontrar refugio,找到避难所
+/steps-to-take-after-wildfire/,,Find shelters near you,Encuentra refugios cerca de usted,找住处靠近你
+/steps-to-take-after-wildfire/,,Find out if your area is safe to enter,Para saber si su área es segura para entrar,要了解，如果你的领域是安全进入
+/steps-to-take-after-wildfire/,,Your local officials should make an announcement when your area is safe to enter.,Los funcionarios locales deben hacer un anuncio cuando el área es segura para entrar.,当区域安全进入当地官员应当公告。
+/steps-to-take-after-wildfire/,,Contact your disaster relief service,Póngase en contacto con el servicio de atención de desastres,联系服务灾区
+/steps-to-take-after-wildfire/,,"If the governor declares a state of emergency, your area should have a Local Assistance Center. The center can help you with all of the steps on this list.","Si el gobernador declara un estado de emergencia, el área debe tener un Centro de Asistencia Local. El centro le puede ayudar con todos los pasos de esta lista.",如果州长宣布进入紧急状态，该地区必须有本地支持中心。该中心可以帮助您在这个列表中的每一步。
+/steps-to-take-after-wildfire/,,"Otherwise, you can contact","De lo contrario, puede ponerse en contacto con",否则，您可以联系
+/steps-to-take-after-wildfire/,,Red Cross,Cruz Roja,红十字会
+/steps-to-take-after-wildfire/,,and,y,和
+/steps-to-take-after-wildfire/,,Ask the DMV to replace lost IDs,Pedir al DMV para reemplazar identificadores perdidos,问DMV以取代失去的ID
+/steps-to-take-after-wildfire/,,"Go to any DMV office or your Local Assistance Center to replace your lost driver’s license or ID card. They can look up your name and picture to send you a new ID. Then, you can use your driver’s license to replace your birth certificate and other important documents.","Ir a cualquier oficina del DMV o el Centro de Asistencia Local para reemplazar la tarjeta de identificación o licencia de conducir perdido. Pueden buscar su nombre y la imagen que le envíe un nuevo ID. A continuación, puede utilizar su licencia de conducir para reemplazar su certificado de nacimiento y otros documentos importantes.",去任何DMV办公室或当地服务中心更换身份证或驾照丢失。他们可以搜索他们的名字和图像发送新的ID。然后你可以使用你的驾驶执照更换你的出生证明等重要证件。
+/steps-to-take-after-wildfire/,,"If the governor has declared a state of emergency, your drivers license should be processed within a week.","Si el gobernador ha declarado el estado de emergencia, su licencia de conducir debe ser procesada dentro de una semana.",如果州长已经宣布进入紧急状态，你的驾驶执照必须在一周内进行处理。
+/steps-to-take-after-wildfire/,,Junk burned vehicles,Basura quemada vehículos,垃圾焚烧车辆
+/steps-to-take-after-wildfire/,,Report or find burned vehicles,Informe o hallazgo quemaron vehículos,报告或发现车辆烧毁
+/steps-to-take-after-wildfire/,,If you have insurance,Si usted tiene seguro,如果你有保险
+/steps-to-take-after-wildfire/,,report any burned vehicles to your insurance company.,informar de cualquier vehículos quemados a su compañía de seguros.,报告任何车辆烧毁您的保险公司。
+/steps-to-take-after-wildfire/,,They should make a settlement on your vehicle and pay you for it.,Deben hacer un arreglo de su vehículo y pagar por ello.,他们应该让你的车的安排，为它付出。
+/steps-to-take-after-wildfire/,,Next you’ll file a,A continuación vamos a presentar una,然后，我们将提出一个
+/steps-to-take-after-wildfire/,,Notice of Release of Liability ,Aviso de Liberación de Responsabilidad,对责任免除的通知
+/steps-to-take-after-wildfire/,,so that you're no longer legally responsible for the vehicle.,por lo que ya no es legalmente responsable del vehículo.,因此它不再对车辆负有法律责任。
+/steps-to-take-after-wildfire/,,"If you own your vehicle outright (that is, you don't lease it), you should","Si usted es dueño de su vehículo abierta (es decir, no se arrienda), que debiera",如果你拥有自己的汽车直接（即不租用），这应该
+/steps-to-take-after-wildfire/,,transfer the title ,transferir el título,所有权转让
+/steps-to-take-after-wildfire/,,to your insurance company. Then you'll no longer own it.,a su compañía de seguros. Entonces usted ya no lo posee.,您的保险公司。然后，你不再拥有它。
+/steps-to-take-after-wildfire/,,"If you still own your vehicle and you don’t know where it is,","Si todavía es dueño de su vehículo y usted no sabe dónde está,",如果您仍然拥有你的车，你不知道他在哪里，
+/steps-to-take-after-wildfire/,, you might get a bill from a storage or tow company. Ask the ,#REF!,#REF!
+/steps-to-take-after-wildfire/,,California Highway Patrol , es posible que reciba una factura de una empresa de almacenamiento o de remolque. Pregunta la,你可以从一家存储公司或拖车收到账单。质疑
+/steps-to-take-after-wildfire/,,to help find your vehicle.,Para ayudar a encontrar su vehículo.,为了帮助您找到您的车辆。
+/steps-to-take-after-wildfire/,,Ask about your utilities,Preguntará acerca de sus utilidades,询问有关利润
+/steps-to-take-after-wildfire/,,"Local officials should tell you when it’s safe to turn on your water, gas, and electricity. If the fire department has shut them off, it’s unsafe to turn them on yourself.","Las autoridades locales deben dirá cuando es seguro para encender el agua, gas y electricidad. Si el departamento de bomberos les ha apagado, que no es seguro para convertirlos en sí mismo.",地方当局应该告诉你当它是安全的，打开水，天然气和电力。如果消防部门已关闭它们，这是不安全的转本身。
+/steps-to-take-after-wildfire/,,Contact your home or renters insurance,Póngase en contacto con su casa o inquilinos Seguro,请联系您的家庭或租房保险
+/steps-to-take-after-wildfire/,,"If you have home or renters insurance, report the fire to them. ","Si tiene casa o seguro para inquilinos, informar al fuego para ellos.",如果你有家庭或租房保险，通知消防他们。
+/steps-to-take-after-wildfire/,,"Find out how they want you to make a list of things that were lost or damaged in the fire. Make sure that your insurance pays you for the cost to rebuild or move to a new home in California today. That includes the current cost of building permits, regulations, materials, and labor.","Descubre cómo quieren que haga una lista de las cosas que se han perdido o dañado en el incendio. Asegúrese de que su seguro le paga por el costo de reconstruir o mover a un nuevo hogar en California hoy. Eso incluye el costo actual de los permisos de construcción, los reglamentos, los materiales y la mano de obra.",发现他们想如何使已经丢失或烧毁东西的清单。确保你的保险支付重建或移动今天在加州的一个新的家的费用。这包括建筑许可，法规，原材料和劳动力的实际成本。
+/steps-to-take-after-wildfire/,,"If you have a Local Assistance Center, ","Si usted tiene un Centro de Asistencia Local,",如果你有一个本地支持中心，
+/steps-to-take-after-wildfire/,,ask for their advice about reporting the wildfire to your insurance company. Housing advocates are there to help you get payments to replace what you’ve lost.,pedir su consejo sobre la notificación de la pólvora a su compañía de seguros. defensores de la vivienda están ahí para ayudar a obtener pagos para reemplazar lo que has perdido.,问他对火药的通知，建议您的保险公司。住房倡导者那里，以帮助支付来代替你已经失去了什么。
+/steps-to-take-after-wildfire/,,"If you don't have home or renters insurance, ","Si usted no tiene seguro de casa o inquilinos,",如果你没有家庭或租房保险，
+/steps-to-take-after-wildfire/,,"you can contact your Local Assistance Center, ","puede ponerse en contacto con el Centro de Asistencia Local,",您可以联系本地支持中心，
+/steps-to-take-after-wildfire/,,or ,o,或
+/steps-to-take-after-wildfire/,,for help.,en busca de ayuda.,寻求帮助。
+/steps-to-take-after-wildfire/,,Contact your landlord or mortgage company,Póngase en contacto con su compañía arrendador o hipoteca,请联系您的房东或抵押贷款公司
+/steps-to-take-after-wildfire/,,Contact your landlord or mortgage company to learn if they’ll let you pause on payments. They could also save you from late fees or a lower credit score.,Póngase en contacto con su compañía arrendador o hipoteca para saber si dejan que hace una pausa en los pagos. También se podrían salvar de tasas finales o una menor puntuación de crédito.,请联系您的房东或抵押贷款公司，看看他们是否站在停止支付。他们还可以从滞纳金或更低的信用分数保存。
+/steps-to-take-after-wildfire/,,Learn about debris removal,Aprender sobre la remoción de escombros,了解杂物清除
+/steps-to-take-after-wildfire/,,"After large wildfires, there are usually a few stages to debris removal:","Después de grandes incendios forestales, por lo general hay un par de etapas para la remoción de escombros:",重大森林火灾后，通常有一对夫妇的碎片拆卸步骤：
+/steps-to-take-after-wildfire/,,"We will remove dangerous waste, ","Vamos a eliminar los residuos peligrosos,",我们将删除有害废物，
+/steps-to-take-after-wildfire/,,such as lead and asbestos.,tales como el plomo y el amianto.,如铅和石棉。
+/steps-to-take-after-wildfire/,,We will also remove debris from your property for free if you send us a ,También vamos a eliminar los restos de su propiedad de forma gratuita si usted nos envía una,我们也会从你的财产免费清除杂物，如果你给我们一个
+/steps-to-take-after-wildfire/,,Right of Entry Form,Derecho del formulario de inscripción,权登记表
+/steps-to-take-after-wildfire/,,"Please note that we will remove your foundation. If you want to keep it, you could choose to remove debris on your own. Then, you could check if your foundation is able to be saved or repaired.","Tenga en cuenta que vamos a eliminar la base de maquillaje. Si desea mantenerlo, se puede optar por eliminar los residuos por su cuenta. Entonces, podrías comprobar si su fundamento es capaz de ser salvado o reparado.",请注意，我们将删除你的基础。如果你想保留，您可以选择消除对自己的浪费。所以，你可以检查，如果你的基础是能够被保存或修复。
+/steps-to-take-after-wildfire/,,You'll have to remove dangerous trees from your property.,Vas a tener que eliminar los árboles peligrosos de su propiedad.,你必须从你的财产拆除危险的树木。
+/steps-to-take-after-wildfire/,,"If you leave your home, let officials know","Si deja su casa, dejar que los funcionarios saben",如果你离开你的房子，让官员知道
+/steps-to-take-after-wildfire/,,"Let your local police department know if you temporarily leave your home. That way, they’ll know your property should be empty, and they can help to protect it.","Deje que su know departamento de policía local si deja temporalmente su casa. De esa manera, sabrá que su propiedad debe estar vacía, y que puede ayudar a protegerlo.",让当地公安部门知道，如果你暂时离开家。这样一来，你知道你的财产必须是空的，并能帮助保护它。
+/steps-to-take-after-wildfire/,,Save receipts related to wildfire loss,Guarde los recibos relacionados con la pérdida de incendios forestales,请有关森林火灾的损失收据
+/steps-to-take-after-wildfire/,,You may need your receipts later to get the payments you need from your insurance company. The receipts will also help you include your losses on your tax return.,Es posible que tenga sus recibos más tarde para conseguir los pagos que necesita de su compañía de seguros. Los recibos también le ayudará a incluir sus pérdidas en su declaración de impuestos.,你可以有你的收据后，让你从你的保险公司需要支付。收据也将帮助你包括你的报税亏损。
