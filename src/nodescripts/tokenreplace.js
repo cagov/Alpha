@@ -107,6 +107,7 @@ function replaceonelanguage(targetlang) {
   if(targetlang=='en') 
     //English default goes to root
     fse.copy(getdestination(targetlang), sourcefolder, {overwrite: true, errorOnExist: false}, err => {
+      fse.remove(getdestination(targetlang))
       if (err) return console.error(err)
       console.log(targetlang + ': Default Root Complete')
     })
