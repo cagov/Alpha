@@ -2,20 +2,20 @@ import gotSystem from './got-system.js';
 import getParameterByName from './getparams.js';
 
 if (document.querySelector('body.js-water')) {
-  mapboxgl.accessToken =
+  window.mapboxgl.accessToken =
     'pk.eyJ1IjoiYWFyb25oYW5zIiwiYSI6ImNqNGs4cms1ZzBocXkyd3FzZGs3a3VtamYifQ.HQjFfVzwwxwCmGr2nvnvSA';
-  var map = new mapboxgl.Map({
+  var map = new window.mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
     center: [-79.4512, 43.6568],
     zoom: 13
   });
 
-  window.geocoder = new MapboxGeocoder({
-    accessToken: mapboxgl.accessToken,
+  window.geocoder = new window.MapboxGeocoder({
+    accessToken: window.mapboxgl.accessToken,
     placeholder: ' ',
     bbox: [-124.409591, 32.534156, -114.131211, 42.009518],
-    mapboxgl: mapboxgl
+    mapboxgl: window.mapboxgl
   }).on('result', async function (item) {
     window.waterPoint = item;
     const waterButton = document.querySelector('.js-water-lookup');
@@ -37,13 +37,10 @@ if (document.querySelector('body.js-water')) {
     .addEventListener('submit', function (event) {
       event.preventDefault();
       document.querySelector('.invalid-feedback').style.display = 'none';
-      if (item.waterPoint) {
-
-      }
     });
 
   function retrieveSystemData (item, waterButton) {
-    fetch(
+    window.fetch(
       `https://api.alpha.ca.gov/WaterSystem?lat=${item.result.center[1]}&lon=${item.result.center[0]}`
     )
       .then(response => {
@@ -62,7 +59,7 @@ if (document.querySelector('body.js-water')) {
     const url = `https://api.alpha.ca.gov/WaterSystem?systemId=${getParameterByName(
       'systemId'
     )}`;
-    fetch(url)
+    window.fetch(url)
       .then(response => {
         return response.json();
       })

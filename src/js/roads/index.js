@@ -22,10 +22,10 @@ const roadStrings = {
   }
 };
 let roadTranslations = roadStrings.en;
-if (window.location.pathname.indexOf('/es/') == 0) {
+if (window.location.pathname.indexOf('/es/') === 0) {
   roadTranslations = roadStrings.es;
 }
-if (window.location.pathname.indexOf('/zh/') == 0) {
+if (window.location.pathname.indexOf('/zh/') === 0) {
   roadTranslations = roadStrings.es;
 }
 
@@ -37,7 +37,7 @@ export default function addListeners () {
 
   document.querySelector('.start-button').addEventListener('click', async function (event) {
     event.preventDefault();
-    const findDest = await readDestination();
+    // const findDest = await readDestination();
     const endPlace = document.querySelector('.js-geocoder-start input').value;
     const startCoords = await getLatLon(endPlace);
     const errorSelector = document.querySelector('.error2');
@@ -64,8 +64,6 @@ if (document.querySelector('.destination-button')) {
 function isThatInCali (coords) {
   const lat = coords[1];
   const lon = coords[0];
-  // Cali bbox = xmin, ymin, xmax, ymax
-  // -124.409591	32.534156	-114.131211	42.009518
   const caliYMin = 32.534156;
   const caliYMax = 42.009518;
   const caliXMin = -124.409591;
@@ -97,9 +95,9 @@ async function readDestination () {
 }
 
 function setupRoadConditions () {
-  if (typeof (mapboxgl) !== 'undefined') {
-    mapboxgl.accessToken = 'pk.eyJ1IjoiYWFyb25oYW5zIiwiYSI6ImNqNGs4cms1ZzBocXkyd3FzZGs3a3VtamYifQ.HQjFfVzwwxwCmGr2nvnvSA';
-    var map = new mapboxgl.Map({
+  if (typeof (window.mapboxgl) !== 'undefined') {
+    window.mapboxgl.accessToken = 'pk.eyJ1IjoiYWFyb25oYW5zIiwiYSI6ImNqNGs4cms1ZzBocXkyd3FzZGs3a3VtamYifQ.HQjFfVzwwxwCmGr2nvnvSA';
+    var map = new window.mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11',
       center: [-79.4512, 43.6568],
@@ -107,11 +105,11 @@ function setupRoadConditions () {
     });
 
     window.geocoder = new MapboxGeocoder({
-      accessToken: mapboxgl.accessToken,
+      accessToken: window.mapboxgl.accessToken,
       placeholder: ' ',
       // bbox: [-124.409591, 32.534156, -114.131211, 42.009518],
       bbox: [-124.7844079, 24.7433195, -66.9513812, 49.3457868],
-      mapboxgl: mapboxgl
+      mapboxgl: window.mapboxgl
     }).on('result', async function (item) {
       window.endCoords = item.result.center;
       const errorSelector = document.querySelector('.error1');
@@ -129,13 +127,13 @@ function setupRoadConditions () {
 
     document.getElementById('geocoder').appendChild(window.geocoder.onAdd(map));
 
-    window.geocoderStart = new MapboxGeocoder({
-      accessToken: mapboxgl.accessToken,
+    window.geocoderStart = new window.MapboxGeocoder({
+      accessToken: window.mapboxgl.accessToken,
       placeholder: ' ',
       bbox: [-124.7844079, 24.7433195, -66.9513812, 49.3457868],
-      mapboxgl: mapboxgl
+      mapboxgl: window.mapboxgl
     }).on('result', async function (item) {
-      const findDest = await readDestination();
+      // const findDest = await readDestination();
       window.startCoords = item.result.center;
       const errorSelector = document.querySelector('.error2');
       errorSelector.style.display = 'none';

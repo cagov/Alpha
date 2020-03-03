@@ -1,5 +1,5 @@
-import analytes from './analytes.js';
-const analyteArray = new analytes();
+import Analytes from './analytes.js';
+const analyteArray = new Analytes();
 const analyteDetails = new Map();
 analyteArray.forEach(an => {
   analyteDetails.set(an.key, an);
@@ -30,8 +30,7 @@ export default function gotSystem (systemData) {
     }
 
     const systemId = system.properties.pwsid;
-    let website_blurb = '';
-    let website_blurb_1 = '';
+    let websiteBlurb = '';
     let resultsOutput = '';
     if (
       system.properties.systemData &&
@@ -40,23 +39,22 @@ export default function gotSystem (systemData) {
     ) {
       const website = system.properties.systemData.meta.website;
       if (website.indexOf('http') < 0) {
-        website_blurb = `<p class="mb-5"><a class="action-link" href="http://${website}">Visit your water system</a></p>`;
+        websiteBlurb = `<p class="mb-5"><a class="action-link" href="http://${website}">Visit your water system</a></p>`;
       }
-      website_blurb_1 = ` Your water system has the most detailed information about your water quality. <a href="${website}" target="_self">Visit your water system</a>`;
     }
 
     document.querySelector('.system-info').style.display = 'block';
-    history.pushState({ systemId: systemId }, window.title, window.location.origin + window.location.pathname + '?systemId=' + systemId);
+    window.history.pushState({ systemId: systemId }, window.title, window.location.origin + window.location.pathname + '?systemId=' + systemId);
 
-    fetch(
+    window.fetch(
       `https://api.alpha.ca.gov/WaterSystemHistory?systemId=${systemId}`
     )
       .then(response => {
         return response.json();
       })
       .then(history => {
-        if (history.length == 0) {
-          displaySafe(website_blurb, system);
+        if (history.length === 0) {
+          displaySafe(websiteBlurb, system);
           cleanup();
         } else {
           // create map of latest violation for
@@ -64,7 +62,7 @@ export default function gotSystem (systemData) {
           history.forEach(violation => {
             const lastMatch = analyteMap.get(violation.ANALYTE_NAME);
             if (lastMatch) {
-              if (lastMatch.VIOL_END_DATE < violation.VIOL_END_DATE || (lastMatch.VIOL_END_DATE == violation.VIOL_END_DATE && violation.ENF_ACTION_TYPE_ISSUED == 'RETURN TO COMPLIANCE')) {
+              if (lastMatch.VIOL_END_DATE < violation.VIOL_END_DATE || (lastMatch.VIOL_END_DATE === violation.VIOL_END_DATE && violation.ENF_ACTION_TYPE_ISSUED === 'RETURN TO COMPLIANCE')) {
                 analyteMap.set(violation.ANALYTE_NAME, violation);
               }
             } else {
@@ -76,13 +74,13 @@ export default function gotSystem (systemData) {
             <p>Your water did not meet <a href="https://mywaterquality.ca.gov/safe_to_drink/">California’s safety standards</a>. We found these contaminants in your water: </p>`;
 
           analyteMap.forEach(analyte => {
-            if (analyte.ENF_ACTION_TYPE_ISSUED != 'RETURN TO COMPLIANCE') {
+            if (analyte.ENF_ACTION_TYPE_ISSUED !== 'RETURN TO COMPLIANCE') {
               resultsOutput += `<div class="card border-dark mb-3">
               <div class="card-body row">
                 ${(function () {
                   if (
-                    analyte.ANALYTE_NAME == 'GROUNDWATER RULE' ||
-                    analyte.ANALYTE_NAME == 'SWTR'
+                    analyte.ANALYTE_NAME === 'GROUNDWATER RULE' ||
+                    analyte.ANALYTE_NAME === 'SWTR'
                   ) {
                     return `<div class="col flex pr-3">
                       <div class="bold display-4 text-center">
@@ -96,7 +94,7 @@ export default function gotSystem (systemData) {
                         <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated w-100" aria-hidden="true"></div>
                       </div>
                     </div>`;
-                  } else if (analyte.ANALYTE_NAME == 'TURBIDITY') {
+                  } else if (analyte.ANALYTE_NAME === 'TURBIDITY') {
                     return `<div class="col flex pr-3">
                         <div class="bold display-4 text-center">
                           <span class="ca-gov-icon-biohazard display-4" aria-hidden="true"></span>
@@ -153,12 +151,12 @@ export default function gotSystem (systemData) {
           });
           document.querySelector(
             '.system-status'
-          ).innerHTML = resultsOutput + `${getSystemHTMLUnSafe(website_blurb, system)}`;
+          ).innerHTML = resultsOutput + `${getSystemHTMLUnSafe(websiteBlurb, system)}`;
           cleanup();
         }
       })
       .catch(error => {
-        displaySafe(website_blurb, system);
+        displaySafe(websiteBlurb, system);
         cleanup();
       });
   } else {
@@ -170,28 +168,28 @@ export default function gotSystem (systemData) {
   }
 }
 
-function displaySafe (website_blurb, system) {
+function displaySafe (websiteBlurb, system) {
   const template = document.getElementById('water-detail-template');
   const node = template.content.cloneNode(true);
-  const html = `${node.querySelector('.safe-desc').innerHTML} ${getSystemHTMLSafe(website_blurb, system, node)}`;
+  const html = `${node.querySelector('.safe-desc').innerHTML} ${getSystemHTMLSafe(websiteBlurb, system, node)}`;
 
   document.querySelector('.system-status').innerHTML = html;
 }
 
-function getSystemHTMLSafe (website_blurb, system, node) {
+function getSystemHTMLSafe (websiteBlurb, system, node) {
   return `${node.querySelector('.comes-from').innerHTML}
     <p>${node.querySelector('.your-water-sys').innerHTML} <strong>${capitalizer(system.properties.name)}</strong>.
     ${node.querySelector('.when-tested').innerHTML}
-    ${website_blurb} </p>`;
+    ${websiteBlurb} </p>`;
 }
 
-function getSystemHTMLUnSafe (website_blurb, system) {
+function getSystemHTMLUnSafe (websiteBlurb, system) {
   const template = document.getElementById('water-detail-template');
   const node = template.content.cloneNode(true);
   return `${node.querySelector('.comes-from').innerHTML}
     <p class="card-text">${node.querySelector('.your-water-sys').innerHTML} <strong>${capitalizer(system.properties.name)}</strong>.
     ${node.querySelector('.system-test-desc').innerHTML}</p>
-    <p>${node.querySelector('.advice').innerHTML} ${website_blurb}</p>`;
+    <p>${node.querySelector('.advice').innerHTML} ${websiteBlurb}</p>`;
 }
 
 function cleanup () {

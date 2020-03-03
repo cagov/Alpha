@@ -27,17 +27,17 @@ export default function createHTML (myObstructions, startCoords, endCoords) {
   };
 
   let roadTranslations = roadStrings.en;
-  if (window.location.pathname.indexOf('/es/') == 0) {
+  if (window.location.pathname.indexOf('/es/') === 0) {
     roadTranslations = roadStrings.es;
   }
-  if (window.location.pathname.indexOf('/zh/') == 0) {
+  if (window.location.pathname.indexOf('/zh/') === 0) {
     roadTranslations = roadStrings.es;
   }
 
   const obstructionMap = new Map();
   const incidentMap = new Map();
   myObstructions.forEach((obs) => {
-    if (obs.name && (obs.name.indexOf('CHP Incident') > -1 || obs.name == 'Caltrans Highway Information')) {
+    if (obs.name && (obs.name.indexOf('CHP Incident') > -1 || obs.name === 'Caltrans Highway Information')) {
       incidentMap.set(`${obs.lat},${obs.lon}`, obs);
     } else {
       const obsKey = `${obs.lcs.location.begin.beginRoute} affecting flow ${obs.lcs.location.travelFlowDirection}`;
@@ -59,7 +59,7 @@ export default function createHTML (myObstructions, startCoords, endCoords) {
     obstructionArray.forEach((obs) => {
       if (!uniqueObsMap.get(obs.lcs.closure.closureID)) {
         uniqueObsMap.set(obs.lcs.closure.closureID, 'here');
-        if (obs.lcs.closure.isCHINReportable == 'true') {
+        if (obs.lcs.closure.isCHINReportable === 'true') {
           // remove duplicates
           internalHTML += `<tr>
             <td>${obs.lcs.closure.typeOfWork}</td>
@@ -73,7 +73,7 @@ export default function createHTML (myObstructions, startCoords, endCoords) {
       }
     });
 
-    if (internalHTML != '') {
+    if (internalHTML !== '') {
       majorhtml += `<h3>${key}</h3>
       <table class="table">
         <thead class="thead-dark">
@@ -92,14 +92,14 @@ export default function createHTML (myObstructions, startCoords, endCoords) {
     majorhtml += item.description;
   });
 
-  if (!foundMajor || myObstructions.length == 0) {
+  if (!foundMajor || myObstructions.length === 0) {
     majorhtml += '<p>No major obstructions on your route</p>';
   }
 
   function mapsSelector (start, end) {
-    if ((navigator.platform.indexOf('iPhone') != -1) ||
-       (navigator.platform.indexOf('iPad') != -1) ||
-       (navigator.platform.indexOf('iPod') != -1)) {
+    if ((navigator.platform.indexOf('iPhone') !== -1) ||
+       (navigator.platform.indexOf('iPad') !== -1) ||
+       (navigator.platform.indexOf('iPod') !== -1)) {
       return `http://maps.apple.com/?saddr=${start}&daddr=${end}&dirflg=d`;
     } else {
       return `https://maps.google.com/maps/dir/?api=1&origin=${start}&destination=${end}`;

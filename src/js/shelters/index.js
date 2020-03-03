@@ -1,8 +1,7 @@
-import getGeo from './getgeo.js';
 import getParameterByName from './getparams.js';
 
 function displaySortedResults (query) {
-  fetch(`https://api.alpha.ca.gov/HomelessShelters/?q=${query}`)
+  window.fetch(`https://api.alpha.ca.gov/HomelessShelters/?q=${query}`)
     .then(response => response.json())
     .then(data => {
       const results = document.querySelector('.js-nearest-results');
@@ -12,7 +11,7 @@ function displaySortedResults (query) {
       document.querySelector('.data-match').innerHTML = data.match.match;
       document.querySelector('.js-location-display').classList.remove('d-none');
 
-      history.pushState({ query }, window.title, window.location.origin + window.location.pathname + '?q=' + query);
+      window.history.pushState({ query }, window.title, window.location.origin + window.location.pathname + '?q=' + query);
 
       for (const row of data.results) {
         const addresscombo = `${row.address}, ${row.city}, ${row.state} ${row.zipcode}`;
