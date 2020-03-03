@@ -282,7 +282,7 @@ describe("Apply or renew online for a discounted phone service", () => {
 
 describe("find-shelter", () => {
   test("find-shelter", async () => {
-    await page.goto(hostname+'/find-shelter/')
+    await page.goto(hostname+'/find-shelters-near-you/')
     await page.type(".city-search", '95825')
     await page.click('button[type="submit"]')
     await page.waitForFunction(

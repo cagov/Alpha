@@ -320,19 +320,19 @@ path,token,en,es,zh
 /apply-for-cal-grant/finish,,If you're a high school graduate or in college,Si usted es un graduado de la escuela secundaria o estas inscribido en la universidad,如果你是从高中或大学这些inscribido毕业
 /apply-for-cal-grant/finish,,We'll send you an email to let you know if you qualify for a Cal Grant.,Te enviaremos un correo electrónico para hacerle saber si usted califica para una beca Cal Grant.,我们向您发送电子邮件，让你知道，如果你有资格获得加州格兰特。
 /apply-for-cal-grant/finish,,Return to the beginning:,Regresar al principio:,回到开头：
-/check-lane-closures,,Check lane closures for your trip,Compruebe el cierre de carriles para viajar,检查车道行驶关闭
-/check-lane-closures,,Find highway lanes that have been closed because of planned maintenance.,Encuentra carriles de la carretera que se han cerrado debido a un mantenimiento planificado.,找到高速公路的车道是由于计划内维护关闭。
-/check-lane-closures,,Where are you going?,¿A dónde vas?,你要去哪里？
-/check-lane-closures,,Please enter a destination in California:,Introduce un destino en California:,输入在加利福尼亚州一个目的地：
+/check-lane-closures,,Check lane closures for your trip,Verifique las condiciones del camino para su viaje,检查道路状况的行程
+/check-lane-closures,,Find highway lanes that have been closed because of planned maintenance.,Encuentre carriles de la carretera que se han cerrado debido a un mantenimiento planificado.,发现由于计划检修，他们已经关闭了高速公路的车道。
+/check-lane-closures,,Where are you going?,¿A dónde va?,你要去哪里？
+/check-lane-closures,,Please enter a destination in California:,Por favor introduce un destino en California:,请输入在加利福尼亚州一个目的地：
 /check-lane-closures,,"Sorry, we can't find that location. Please enter a valid location in California.","Lo sentimos, no podemos encontrar ese lugar. Por favor, introduzca una ubicación válida en California.",很抱歉，我们无法找到那个地方。请在加利福尼亚州输入有效的位置。
-/check-lane-closures,,What's your starting location?,¿Cuál es el punto de partida?,要点是什么？
-/check-lane-closures,,Please enter a starting location in California:,"Por favor, introduzca una ubicación de inicio en California:",请进入加州的开始位置：
-/check-lane-closures,,Check lane closures,Comprobar los cierres de carriles,检查车道关闭
-/index.html,,Check lane closures for your trip,Compruebe el cierre de carriles para viajar,检查车道行驶关闭
+/check-lane-closures,,What's your starting location?,¿Cuál es su ubicación inicial?,什么是你最初的位置？
+/check-lane-closures,,Please enter a starting location in California:,"Por favor, introduzca una ubicación inicial en California:",请进入加州初始位置：
+/check-lane-closures,,Check lane closures,Verifique los cierres de carriles,检查车道关闭
+/index.html,,Check lane closures for your trip,Verifique los cierre de carriles para su viaje,检查车道关闭的行程
 /news,,"Sorry, we can't find that location. Please enter a valid location in California.","Lo sentimos, no podemos encontrar ese lugar. Por favor, introduzca una ubicación válida en California.",很抱歉，我们无法找到那个地方。请在加利福尼亚州输入有效的位置。
-/news,,"Sorry, we can only show road conditions in California. Please enter a California location.","En este momento, sólo podemos mostrar condiciones de la carretera en California. Por favor, introduzca una ubicación de California.",在这个时候，我们只能显示在加利福尼亚州的道路状况。请进入加州的位置。
-/news,,Get directions,Obtener las direcciones,行车路线
-/news,,Road conditions for your trip,condiciones de la carretera para su viaje,道路状况为您的行程
+/news,,"Sorry, we can only show road conditions in California. Please enter a California location.","En este momento, sólo podemos mostrar condiciones de la carretera en California. Por favor, introduzca una ubicación en California.",在这个时候，我们只能显示在加利福尼亚州的道路状况。请进入加州的位置。
+/news,,Get directions,Obtener direcciones,行车路线
+/news,,Road conditions for your trip,Condiciones de la carretera para su viaje,为你的出行道路条件
 /news,,Road condition,Condiciones del camino,道路状况
 /news,,Landmark,Punto de referencia,基准
 /news,,Description,Descripción,描述
@@ -610,7 +610,7 @@ path,token,en,es,zh
 /apply-online-discounted-phone-service,,Before you start,Antes de empezar,开始之前
 /apply-online-discounted-phone-service,,"If you don't have an application form, please","Si no tiene su solicitud, por favor",如果没有您的要求，请
 /apply-online-discounted-phone-service,,go to the application process,visite al proceso de solicitud,访问应用程序
-/apply-online-discounted-phone-service,,contact us,Contactenos,接触
+/apply-online-discounted-phone-service,,contact us,contactenos,接触
 /apply-online-discounted-phone-service,,"If you need a renewal form, please","Si necesita una solicitud para renovar, por favor",如果你需要一个应用程序更新，请
 /apply-online-discounted-phone-service,,What you need to apply,Que necesites para solicitar,你需要申请
 /apply-online-discounted-phone-service,,"To apply online, you’ll need two details from your application form:","Para que solicite por internet, necesitará dos detalles de su solicitud:",在网上申请，您将需要您的要求的两个细节：
@@ -625,19 +625,19 @@ path,token,en,es,zh
 /apply-for-unemployment-insurance,,Unemployment insurance (UI) pays part of your income after your employer lays you off or reduces your hours.,El seguro de desempleo (UI) paga parte de sus ingresos después de que su empleador lo despide o reduce sus horas,失业保险（UI）雇主火灾后支付你的收入的一部分或减少工作时间
 /apply-for-unemployment-insurance,,Who can apply,Quién puede solicitar,谁可以申请
 /apply-for-unemployment-insurance/index.html,,"To get UI, you must be:","Para recibir UI, debe ser:",要接收UI应该是：
-/apply-for-unemployment-insurance/index.html,,Fully or partly unemployed,Total o parcialmente desempleado.,全部或部分失业。
+/apply-for-unemployment-insurance/index.html,,Fully or partly unemployed,Totalmente o parcialmente desempleado.,完全或部分失业。
 /apply-for-unemployment-insurance/index.html,,Unemployed not because of anything you did,Desempleado sin culpa de usted,失业过错的你
 /apply-for-unemployment-insurance/index.html,,Physically able to work,Físicamente apto para trabajar,身体健康工作
 /apply-for-unemployment-insurance/index.html,,Available and willing to work,Disponible para trabajar,可用于工作
 /apply-for-unemployment-insurance/index.html,,Looking for work,Buscando trabajo,找工作
-/apply-for-unemployment-insurance/index.html,,You also must have made enough money in the last 18 months to get UI benefits. Find out what your UI payments would be with our calculator:,También debe haber ganado suficiente dinero en los últimos 18 meses para obtener beneficios de UI. Descubra cuáles serían sus pagos de UI calculando sus beneficios.,还必须在过去18个月赚了足够的钱，获得失业救济金。找出你的款项将被计算失业救济金。
-/apply-for-unemployment-insurance/index.html,,Calculate payments,Calcular los beneficios,计算的好处
-/apply-for-unemployment-insurance/index.html,,How to apply for unemployment insurance (UI).,¿Cómo solicitar el seguro de desempleo (UI).,如何申请失业保险（UI）。
+/apply-for-unemployment-insurance/index.html,,You also must have made enough money in the last 18 months to get UI benefits. Find out what your UI payments would be with our calculator:,También debe haber ganado suficiente dinero en los últimos 18 meses para obtener beneficios de UI. Descubra cuáles serían sus pagos de UI usando nuestra calculadora:,还必须在过去18个月赚了足够的钱，获得失业救济金。找出你的付款将使用我们的计算器界面：
+/apply-for-unemployment-insurance/index.html,,Calculate payments,Calcule sus beneficios,计算你的好处
+/apply-for-unemployment-insurance/index.html,,How to apply for unemployment insurance (UI).,Cómo solicitar el seguro de desempleo (UI).,如何申请失业保险（UI）。
 /apply-for-unemployment-insurance,,When to apply,Cuando presentar una solicitud,当提交申请
-/apply-for-unemployment-insurance/when-to-apply,,When to apply for unemployment insurance (UI).,Cuando para solicitar el seguro de desempleo (UI).,当申请失业保险（UI）。
+/apply-for-unemployment-insurance/when-to-apply,,When to apply for unemployment insurance (UI).,Cuándo solicitar el seguro de desempleo (UI).,请求当失业保险（UI）。
 /apply-for-unemployment-insurance/when-to-apply,,"Apply within the first week after your employer laid you off or reduced your hours. If you wait, you might delay your payments.","Presente su solicitud para beneficios durante la primera semana en que usted este desempleado o le han reducido sus horas de trabajo. Si espera, puede retrasar sus pagos",在第一个星期你是失业或你已经减少工作时间提交你的好处的应用程序。如果你等待，你可以延迟付款
 /apply-for-unemployment-insurance,,What you need before you apply,Que necesitas antes de presentar una solicitud,您在提交申请之前，需要
-/apply-for-unemployment-insurance/what-you-need-before-you-apply,,What you need to apply for unemployment insurance (UI).,Lo que hay que aplicar para el seguro de desempleo (UI).,你需要申请失业保险（UI）是什么。
+/apply-for-unemployment-insurance/what-you-need-before-you-apply,,What you need to apply for unemployment insurance (UI).,Que necesitas antes de presentar su solicitud para el seguro de desempleo (UI).,你申请失业保险（UI）之前，您需要。
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,Last employer information,Información sobre su último empleador,关于你的最后一个雇主信息
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,"The last employer is the last company you worked for. Or, if your employer reduced your hours, you could still work there part-time.","El último empleador es la última compañía para la que trabajó. O, si su empleador reduce sus horas, todavía podría trabajar allí a tiempo parcial.",最后一个雇主是最后的公司我的工作。或者，如果你的雇主减少你的时间，还是他能在那里工作的兼职。
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,Name of the company as it appears on your paycheck or W-2 form,Nombre de la compañía tal como aparece en sus talones de cheques o en la forma W-2.,公司名称，因为它出现在你的薪水存根或W-2表格。
@@ -651,7 +651,7 @@ path,token,en,es,zh
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,"All of your employers from the last 18 months, including your last employer",Todos los empleadores en los últimos 18 meses incluyendo al último empleador,在过去的18个月，所有用人单位，包括最后的用人单位
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,List them as they appear on your paycheck or W-2 form,Enumerarlos tal como aparecen en su talón de cheque ó forma W-2,枚举，因为他们是它的头或W-2
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,Your start and end dates,Fecha que comenzó y en la que terminó de trabajar,开始日期和结束了工作
-/apply-for-unemployment-insurance/what-you-need-before-you-apply,,Total wages earned,Sueldos que ganó,挣工资
+/apply-for-unemployment-insurance/what-you-need-before-you-apply,,Total wages earned,Todos los sueldos que ganó,所有挣工资
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,"How often you were paid (hourly, weekly, monthly)","Cómo se le pagaba (por hora, semanal, mensual)",如何支付（每小时，每周，每月）
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,Hours worked per week,Horas trabajadas por semana,小时每周工作
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,Your information,Su información,信息
@@ -660,9 +660,9 @@ path,token,en,es,zh
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,Citizenship status,Estado de ciudadanía,公民身份
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,Mailing address,Dirección de envio,邮寄地址
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,Telephone number,Número de teléfono,电话号码
-/apply-for-unemployment-insurance/what-you-need-before-you-apply,,"Name, including names you no longer use (such as your married or maiden names)",Nombre (incluyendo nombres anteriores que haya usado (como de casado o de soltero),名称（包括使用以前的名称（如已婚或未婚）
+/apply-for-unemployment-insurance/what-you-need-before-you-apply,,"Name, including names you no longer use (such as your married or maiden names)","Nombre, incluyendo nombres anteriores que haya usado (como de casado o de soltero)",名称，包括使用以前的名称（如已婚或未婚）
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,Other information,Otra información,其他信息
-/apply-for-unemployment-insurance/what-you-need-before-you-apply,,"If you don't have U.S. citizenship, information from your employment authorization document","Si usted no es un ciudadano estadounidense, la información de su documento de autorización de empleo",如果你不是美国公民，你的就业授权文件的信息
+/apply-for-unemployment-insurance/what-you-need-before-you-apply,,"If you don't have U.S. citizenship, information from your employment authorization document","Si usted no tiene ciudadania estadounidense, la información de su documento de autorización de empleo",如果你不具备美国国籍，你的就业授权文件的信息
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,"If you are a former federal employee, your Notice to Federal Employees About Unemployment Insurance, Standard Form 8","Si usted es un ex empleado federal, su forma titulada en ingles, Standard Form 8, Notice to Federal Employees About Unemployment Insurance",如果你是一个前联邦雇员的形式在英国，标准表格8，通知标题为联邦雇员失业保险
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,"If you served in the military in the last 18 months, your DD Form 214","Si estuvo en el servicio militar en los últimos 18 meses, su Formulario DD 214",如果你是在军队服役，在过去18个月中，你的DD表格214
 /apply-for-unemployment-insurance,,How to apply,Cómo presentar una solicitud,如何申请
@@ -679,7 +679,7 @@ path,token,en,es,zh
 /apply-for-unemployment-insurance/how-to-apply,,4 a.m. – 10 p.m.,4 a.m. – 10 p.m.,凌晨4时 - 晚上10点
 /apply-for-unemployment-insurance/how-to-apply,,2 a.m. – 10 p.m.,2 a.m. – 10 p.m.,凌晨2时 - 晚上10点
 /apply-for-unemployment-insurance/how-to-apply,,2 a.m. – 8 p.m.,2 a.m. – 8 p.m.,凌晨2时 - 晚上8点
-/apply-for-unemployment-insurance/how-to-apply,,Apply by phone,Solicitar por teléfono,通过电话订购
+/apply-for-unemployment-insurance/how-to-apply,,Apply by phone,Solicite por teléfono,通过电话申请
 /apply-for-unemployment-insurance/how-to-apply,,Monday – Friday (except,Lunes – Viernes (excepto,周一 - 周五（除
 /apply-for-unemployment-insurance/how-to-apply,,state holidays,días festivos estatales,国家假期
 /apply-for-unemployment-insurance/how-to-apply,,8 a.m. – 12 p.m. noon,8 a.m. – 12 p.m. mediodía,上午8点 -  12PM中午
@@ -703,55 +703,55 @@ path,token,en,es,zh
 /apply-for-unemployment-insurance/how-to-apply,,"Oakland, CA 94604-2909","Oakland, CA 94604-2909",奥克兰，CA 94604-2909
 /apply-for-unemployment-insurance/how-to-apply,,Fax it to:,Por fax al:,传真至：
 /apply-for-unemployment-insurance,,After you apply,Después de presentar su solicitud,提交申请后，
-/apply-for-unemployment-insurance/after-you-apply,,What to expect after you apply for unemployment insurance (UI).,¿Qué esperar después de solicitar el seguro de desempleo (UI).,申请失业保险（UI）后会发生什么。
+/apply-for-unemployment-insurance/after-you-apply,,What to expect after you apply for unemployment insurance (UI).,Qué esperar después de solicitar el seguro de desempleo (UI).,申请失业保险（UI）后会发生什么。
 /apply-for-unemployment-insurance/after-you-apply,,We might call you,Le podríamos llamar,你可以调用
 /apply-for-unemployment-insurance/after-you-apply,,"If we have any questions about whether you can get UI, we’ll schedule a call with you.","Si tenemos alguna pregunta acerca de si se puede obtener el seguro de desempleo (UI), programaremos una llamada con usted.",如果你对你是否能得到失业保险有任何疑问（UI），我们安排与你的电话。
-/apply-for-unemployment-insurance/after-you-apply,,"If you don’t pick up, we’ll use the information from your application to make a decision. Your application might be delayed or rejected.","Si no descuelga, vamos a utilizar la información de su solicitud para tomar una decisión. Su aplicación podría ser retrasada o rechazada.",如果没有回复，我们将使用你的应用程序中的信息来做出决定。您的申请可能被延迟或拒绝。
-/apply-for-unemployment-insurance/after-you-apply,,You can reschedule your call,Usted puede reprogramar su llamada por internet o comunicándose con UI.,你可以重新定义你的互联网电话或联系UI。
+/apply-for-unemployment-insurance/after-you-apply,,"If you don’t pick up, we’ll use the information from your application to make a decision. Your application might be delayed or rejected.","Si no respondes, vamos a utilizar la información de su solicitud para tomar una decisión. Su aplicación podría ser retrasada o rechazada.",如果你不回应，我们将使用你的应用程序中的信息来做出决定。您的申请可能被延迟或拒绝。
+/apply-for-unemployment-insurance/after-you-apply,,You can reschedule your call,Usted puede cambiar la cita de su llamada,您可以重新安排您的通话
 /apply-for-unemployment-insurance/after-you-apply,,online,por internet,在线
 /apply-for-unemployment-insurance/after-you-apply,,contact UI,comunicándose con UI,接触IU
 /apply-for-unemployment-insurance/after-you-apply,,"If so, prepare for our call","Si es así, prepararse para nuestra llamada",如果是这样，准备为我们的呼叫
 /apply-for-unemployment-insurance/after-you-apply,,"If we decide to call you, we’ll mail you a letter with the time and date of our call.","Si decidimos llamarle, le enviaremos por correo una carta con la fecha y la hora de nuestra llamada telefónica.",如果我们决定要调用它，我们会发邮件与我们通话的日期和时间的函。
-/apply-for-unemployment-insurance/after-you-apply,,It will include several questions that we might ask you.,Incluirá varias preguntas que le puede hacer.,这将包括几个问题，你可以做。
-/apply-for-unemployment-insurance/after-you-apply,,Review the questions and think about your answers. Be prepared to:,Revise las preguntas y piense en sus respuestas. Esté  preparado para:,审查的问题，想想你的答案。有备无患：
-/apply-for-unemployment-insurance/after-you-apply,,Share why you no longer work for your last employer,Comparte por qué ya no hay trabajo para su último empleador,分享为什么有你的上一位老板不再工作
+/apply-for-unemployment-insurance/after-you-apply,,It will include several questions that we might ask you.,Incluirá varias preguntas que se le puede hacer.,这将包括几个问题，你可以做。
+/apply-for-unemployment-insurance/after-you-apply,,Review the questions and think about your answers. Be prepared to:,Revise las preguntas y piense en sus respuestas. Esté  preparado para que:,审查的问题，想想你的答案。有备无患：
+/apply-for-unemployment-insurance/after-you-apply,,Share why you no longer work for your last employer,Comparte por qué ya no trabaja para su último empleador,分享为什么你的上一位老板不再工作
 /apply-for-unemployment-insurance/after-you-apply,,Answer our questions with detailed responses,Responde a nuestras preguntas con respuestas detalladas,答案我们详细解答疑问
 /apply-for-unemployment-insurance/after-you-apply,,Read our responses,Lee nuestras respuestas,请阅读我们的答案
 /apply-for-unemployment-insurance/after-you-apply,,We’ll mail you two important letters:,Le enviaremos por correo dos cartas importantes:,我们将寄给两个重要信件：
-/apply-for-unemployment-insurance/after-you-apply,,We’ll let you know if we’ve approved your application.,Nosotros le haremos saber si hemos aprobado su solicitud.,我们将让你知道，如果我们已批准你的申请。
-/apply-for-unemployment-insurance/after-you-apply,,We’ll send you a,Le enviaremos un formulario de Solicitud de Beneficios Continuos (DE 4581/S). Tenga en cuenta:,我们将派遣一个表格续索赔（DE 4581 / S）。请注意：
-/apply-for-unemployment-insurance/after-you-apply,,Continued Claim Form (DE 4581),Le enviaremos un formulario de Solicitud de Beneficios Continuos (DE 4581/S). Tenga en cuenta:,我们将派遣一个表格续索赔（DE 4581 / S）。请注意：
-/apply-for-unemployment-insurance/after-you-apply,,Please note: You have to fill it out and mail it back to us to keep getting payments.,Usted tiene que llenar y enviar de nuevo a nosotros a seguir recibiendo pagos.,你必须填写并寄回给我们以继续接收付款。
+/apply-for-unemployment-insurance/after-you-apply,,We’ll let you know if we’ve approved your application.,Nosotros nos pondremos en contacto con usted si hemos aprobado su solicitud.,如果我们已批准你的申请，我们将与您联系。
+/apply-for-unemployment-insurance/after-you-apply,,We’ll send you a,Le enviaremos un,我们将发送
+/apply-for-unemployment-insurance/after-you-apply,,Continued Claim Form (DE 4581),formulario de Solicitud de Beneficios Continuos (DE 4581/S).,续形成如权利要求（DE 4581 / S）。
+/apply-for-unemployment-insurance/after-you-apply,,Please note: You have to fill it out and mail it back to us to keep getting payments.,Ten en cuenta: Usted tiene que llenar y enviar de nuevo a nosotros su solicitud para seguir recibiendo pagos.,注意：必须填写并寄回给我们您的要求，以继续接收付款。
 /apply-for-unemployment-insurance/after-you-apply,,Sign up for CalJOBS,Inscríbirse para CalJOBS,注册为CalJOBS
-/apply-for-unemployment-insurance/after-you-apply,,"If you're approved for UI, you'll likely have to","Si es aprobado para UI, es probable que tenga que registrarte para CalJOBS.",如果批准了UI，你可能需要注册为CalJOBS。
-/apply-for-unemployment-insurance/after-you-apply,,sign up for CalJOBS,"Si es aprobado para UI, es probable que tenga que registrarte para CalJOBS.",如果批准了UI，你可能需要注册为CalJOBS。
-/apply-for-unemployment-insurance/after-you-apply,,You'll also need to create an online resume that employers can find.,Usted también necesita crear un resumen por internet que los empleadores pueden encontrar.,您还需要创建一个在线的总结，雇主可以找到。
-/apply-for-unemployment-insurance/after-you-apply,,You must create your profile within 21 days after you get the form,Debe crear su perfil dentro de los 21 días después de recibir el formulario de Notificación sobre los requisitos para registrarse para un empleo (DE 8405/S).,您必须在收到对就业登记规定的申报书后，创建于21日内对您的个人资料（DE 8405 / S）。
-/apply-for-unemployment-insurance/after-you-apply,,Notice of Requirement to Register for Work (DE 8405),Debe crear su perfil dentro de los 21 días después de recibir el formulario de Notificación sobre los requisitos para registrarse para un empleo (DE 8405/S).,您必须在收到对就业登记规定的申报书后，创建于21日内对您的个人资料（DE 8405 / S）。
+/apply-for-unemployment-insurance/after-you-apply,,"If you're approved for UI, you'll likely have to","Si es aprobado para UI, es probable que tenga que",如果批准了UI，你可能需要
+/apply-for-unemployment-insurance/after-you-apply,,sign up for CalJOBS,registrarse para CalJOBS.,注册CalJOBS。
+/apply-for-unemployment-insurance/after-you-apply,,You'll also need to create an online resume that employers can find.,También necesitará que crear un resumen por internet que los empleadores pueden encontrar.,您还需要创建一个在线的总结，雇主可以找到。
+/apply-for-unemployment-insurance/after-you-apply,,You must create your profile within 21 days after you get the form,Debe crear su perfil dentro de los 21 días después de recibir el formulario de,您必须在收到表格后，创建于21天，您的个人资料
+/apply-for-unemployment-insurance/after-you-apply,,Notice of Requirement to Register for Work (DE 8405),Notificación sobre los requisitos para registrarse para un empleo (DE 8405/S).,通知要求，为就业登记（DE 8405 / S）。
 /apply-for-unemployment-insurance/after-you-apply,,"Please note: If you don’t, you might delay or lose your UI payments.","Tenga en cuenta: Si no lo hace, es posible retrasar o perder sus pagos de UI.",注意：如果你不这样做，有可能延缓或失去他们的UI付款。
 /apply-for-unemployment-insurance/after-you-apply,,How to register for CalJOBS and post a resume (YouTube),Cómo registrarse para CalJOBS y publicar un resumen (YouTube),如何注册CalJOBS并发布汇总（YouTube）的
 /apply-for-unemployment-insurance/after-you-apply,,Get payments,Obtener pagos,获取付款
 /apply-for-unemployment-insurance/after-you-apply,,We’ll mail you a debit card for your first payment. ,Le enviaremos por correo una tarjeta de débito para su primer pago.,我们将寄给你的首付款借记卡。
-/apply-for-unemployment-insurance/after-you-apply,,"Then, you can activate it in two ways:","A continuación, se puede activar de dos maneras:",然后，你可以把在两个方面：
+/apply-for-unemployment-insurance/after-you-apply,,"Then, you can activate it in two ways:","Después, se puede activar de dos maneras:",然后，你可以把在两个方面：
 /apply-for-unemployment-insurance/after-you-apply,,Online,Por internet,在线
 /apply-for-unemployment-insurance/after-you-apply,,Or by phone:,O por teléfono:,或致电：
-/apply-for-unemployment-insurance/after-you-apply,,Outside of the U.S.: Call collect at,Fuera de EE.UU: Llama por cobrar al,美国境外：从呼叫账款
+/apply-for-unemployment-insurance/after-you-apply,,Outside of the U.S.: Call collect at,Fuera de los Estados Unidos: Llama por cobrar al,美国以外的国家：从呼叫账款
 /apply-for-unemployment-insurance/after-you-apply,,You can transfer money to your other bank accounts for free.,Usted puede transferir dinero a sus otras cuentas bancarias de forma gratuita.,到其他银行账户免费，您可以汇款。
-/apply-for-unemployment-insurance/after-you-apply,,Set up the transfer,Configure la transferencia por internet o llamando al número de teléfono en el banco de la tarjeta de débito que le enviamos.,配置传输在线或致电银行借记卡，我们送你上的电话号码。
-/apply-for-unemployment-insurance/after-you-apply,,or by calling the phone number on the back of the debit card we send you.,Configure la transferencia por internet o llamando al número de teléfono en el banco de la tarjeta de débito que le enviamos.,配置传输在线或致电银行借记卡，我们送你上的电话号码。
-/apply-for-unemployment-insurance/after-you-apply,,Get updates about your payments,Obtenga recordatorios sobre sus pagos por internet o llamando al 1-866-333-4606.,获取有关您的付款提醒，在网上或通过调用1-866-333-4606。
-/apply-for-unemployment-insurance/after-you-apply,,or by calling 1-866-333-4606.,Obtenga recordatorios sobre sus pagos por internet o llamando al 1-866-333-4606.,获取有关您的付款提醒，在网上或通过调用1-866-333-4606。
-/apply-for-unemployment-insurance,,Update us every two weeks,Pongase en contacto son nosotros cada dos semanas,他们是我们请每两个星期联系
-/apply-for-unemployment-insurance/update-us-every-two-weeks,,How to update us every two weeks to continue your unemployment insurance (UI).,Cómo nos actualizar cada dos semanas para continuar con su seguro de desempleo (UI).,我们如何更新每两个星期来继续他们的失业保险（UI）。
-/apply-for-unemployment-insurance/update-us-every-two-weeks,,"To keep getting payments, you have to contact us every two weeks to let us know you still qualify for UI. This is called","Para seguir recibiendo sus pagos, usted tiene que ponerse en contacto con nosotros cada dos semanas para hacernos saber que todavía califica para UI. Esto se conoce como la certificación de los beneficios.",要继续收到付款，你必须与我们联系，每两个星期，让我们知道您仍然有资格UI。这就是所谓的好处认证。
-/apply-for-unemployment-insurance/update-us-every-two-weeks,,certifying for benefits,"Para seguir recibiendo sus pagos, usted tiene que ponerse en contacto con nosotros cada dos semanas para hacernos saber que todavía califica para UI. Esto se conoce como la certificación de los beneficios.",要继续收到付款，你必须与我们联系，每两个星期，让我们知道您仍然有资格UI。这就是所谓的好处认证。
-/apply-for-unemployment-insurance/update-us-every-two-weeks,,Certify online,Certifica en por internet,在互联网上提供认证
+/apply-for-unemployment-insurance/after-you-apply,,Set up the transfer,Configure la transferencia,配置转移
+/apply-for-unemployment-insurance/after-you-apply,,or by calling the phone number on the back of the debit card we send you.,o llamando al número de teléfono en el banco de la tarjeta de débito que le enviamos.,或致电银行借记卡上的电话号码，我们送你。
+/apply-for-unemployment-insurance/after-you-apply,,Get updates about your payments,Obtenga recordatorios sobre sus pagos,获取提醒您的付款
+/apply-for-unemployment-insurance/after-you-apply,,or by calling 1-866-333-4606.,o llamando al 1-866-333-4606.,或致电1-866-333-4606。
+/apply-for-unemployment-insurance,,Update us every two weeks,Pongase en contacto con nosotros cada dos semanas,请联系我们每两周
+/apply-for-unemployment-insurance/update-us-every-two-weeks,,How to update us every two weeks to continue your unemployment insurance (UI).,Cómo ponerse en contacto con nosotros cada dos semanas para continuar con su seguro de desempleo (UI).,联系我们每两个星期来继续他们的失业保险（UI）。
+/apply-for-unemployment-insurance/update-us-every-two-weeks,,"To keep getting payments, you have to contact us every two weeks to let us know you still qualify for UI. This is called","Para seguir recibiendo sus pagos, usted tiene que ponerse en contacto con nosotros cada dos semanas para hacernos saber que todavía califica para UI. Esto se conoce como",要继续收到付款，你必须与我们联系，每两个星期，让我们知道您仍然有资格UI。这就是所谓的
+/apply-for-unemployment-insurance/update-us-every-two-weeks,,certifying for benefits,la certificación de los beneficios.,认证的好处。
+/apply-for-unemployment-insurance/update-us-every-two-weeks,,Certify online,Certifica por internet,网上提供认证
 /apply-for-unemployment-insurance/update-us-every-two-weeks,,Certify by phone,Certifica por teléfono,通过电话提供认证
 /apply-for-unemployment-insurance/update-us-every-two-weeks,,Certify by mail,Certifica por correo,邮件提供认证
-/apply-for-unemployment-insurance/update-us-every-two-weeks,,We’ll mail you a,Le enviaremos por correo un formulario de Solicitud de Beneficios Continuos (DE 4581CTO) dentro de los 10 días después de que hayamos procesado su solicitud.,我们将在10天内邮寄给你一种形式继续索赔（DE 4581CTO）我们处理您的请求后。
-/apply-for-unemployment-insurance/update-us-every-two-weeks,,Continued Claim Form (DE 4581CTO),Le enviaremos por correo un formulario de Solicitud de Beneficios Continuos (DE 4581CTO) dentro de los 10 días después de que hayamos procesado su solicitud.,我们将在10天内邮寄给你一种形式继续索赔（DE 4581CTO）我们处理您的请求后。
-/apply-for-unemployment-insurance/update-us-every-two-weeks,,within 10 days after we’ve processed your application.,Le enviaremos por correo un formulario de Solicitud de Beneficios Continuos (DE 4581CTO) dentro de los 10 días después de que hayamos procesado su solicitud.,我们将在10天内邮寄给你一种形式继续索赔（DE 4581CTO）我们处理您的请求后。
-/apply-for-unemployment-insurance/update-us-every-two-weeks,,Fill it out and mail it to the address we've listed in your letter.,Llenarla y enviarla por correo a la dirección que hemos enumerado en su carta.,填好后邮寄给我们在您的信中所列的地址。
+/apply-for-unemployment-insurance/update-us-every-two-weeks,,We’ll mail you a,Le enviaremos por correo un,我们将寄给你一个
+/apply-for-unemployment-insurance/update-us-every-two-weeks,,Continued Claim Form (DE 4581CTO),formulario de Solicitud de Beneficios Continuos (DE 4581CTO),续形成如权利要求（DE 4581CTO）
+/apply-for-unemployment-insurance/update-us-every-two-weeks,,within 10 days after we’ve processed your application.,dentro de los 10 días después de que hayamos procesado su solicitud.,后10天内我们处理该请求。
+/apply-for-unemployment-insurance/update-us-every-two-weeks,,Fill it out and mail it to the address we've listed in your letter.,Llénala y enviela por correo a la dirección que hemos indicado en su carta.,填好后，邮寄给你在你的信中指定的地址。
 /steps-to-prepare-for-wildfire/,,Prepare for a wildfire,Prepararse para un incendio forestal,准备野火
 /steps-to-prepare-for-wildfire/,,Follow these suggested steps to protect yourself and your family from a wildfire.,Siga estos pasos sugeridos para protegerse y proteger a su familia de un incendio forestal.,按照这些建议的步骤来保护自己和家人从森林火灾。
 /steps-to-prepare-for-wildfire/,,Sign up for emergency alerts,Inscribirse para recibir alertas de emergencia,注册接收紧急警报
@@ -840,15 +840,8 @@ path,token,en,es,zh
 /steps-to-take-after-wildfire/,,We will also remove debris from your property for free if you send us a ,También vamos a eliminar los restos de su propiedad de forma gratuita si usted nos envía una,我们也会从你的财产免费清除杂物，如果你给我们一个
 /steps-to-take-after-wildfire/,,Right of Entry Form,Derecho del formulario de inscripción,权登记表
 /steps-to-take-after-wildfire/,,"Please note that we will remove your foundation. If you want to keep it, you could choose to remove debris on your own. Then, you could check if your foundation is able to be saved or repaired.","Tenga en cuenta que vamos a eliminar la base de maquillaje. Si desea mantenerlo, se puede optar por eliminar los residuos por su cuenta. Entonces, podrías comprobar si su fundamento es capaz de ser salvado o reparado.",请注意，我们将删除你的基础。如果你想保留，您可以选择消除对自己的浪费。所以，你可以检查，如果你的基础是能够被保存或修复。
-/steps-to-take-after-wildfire/,,or ,o,或
-/steps-to-take-after-wildfire/,,or ,o,或
-/steps-to-take-after-wildfire/,,or ,o,或
-/steps-to-take-after-wildfire/,,or ,o,或
-/steps-to-take-after-wildfire/,,or ,o,或
-/steps-to-take-after-wildfire/,,or ,o,或
-/steps-to-take-after-wildfire/,,or ,o,或
-/steps-to-take-after-wildfire/,,or ,o,或
-/steps-to-take-after-wildfire/,,or ,o,或
-/steps-to-take-after-wildfire/,,or ,o,或
-/steps-to-take-after-wildfire/,,or ,o,或
-/steps-to-take-after-wildfire/,,or ,o,或
+/steps-to-take-after-wildfire/,,You'll have to remove dangerous trees from your property.,Vas a tener que eliminar los árboles peligrosos de su propiedad.,你必须从你的财产拆除危险的树木。
+/steps-to-take-after-wildfire/,,"If you leave your home, let officials know","Si deja su casa, dejar que los funcionarios saben",如果你离开你的房子，让官员知道
+/steps-to-take-after-wildfire/,,"Let your local police department know if you temporarily leave your home. That way, they’ll know your property should be empty, and they can help to protect it.","Deje que su know departamento de policía local si deja temporalmente su casa. De esa manera, sabrá que su propiedad debe estar vacía, y que puede ayudar a protegerlo.",让当地公安部门知道，如果你暂时离开家。这样一来，你知道你的财产必须是空的，并能帮助保护它。
+/steps-to-take-after-wildfire/,,Save receipts related to wildfire loss,Guarde los recibos relacionados con la pérdida de incendios forestales,请有关森林火灾的损失收据
+/steps-to-take-after-wildfire/,,You may need your receipts later to get the payments you need from your insurance company. The receipts will also help you include your losses on your tax return.,Es posible que tenga sus recibos más tarde para conseguir los pagos que necesita de su compañía de seguros. Los recibos también le ayudará a incluir sus pérdidas en su declaración de impuestos.,你可以有你的收据后，让你从你的保险公司需要支付。收据也将帮助你包括你的报税亏损。
