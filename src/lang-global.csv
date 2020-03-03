@@ -263,15 +263,11 @@ path,token,en,es,zh
 /apply-for-cal-grant,,Meet the,Cumplir con los,拜见
 /apply-for-cal-grant,,Satisfactory Academic Progress standards</a> set by your school,progreso académico satisfactorio por los estándares</a> establecidos por su escuela,令人满意的学业进步的标准由</A>他们学校成立
 /apply-for-cal-grant/step-1,,Apply for a Cal Grant: Step 1,Solicitar una beca Cal Grant: Paso 1,申请加州格兰特：第1步
-/apply-for-cal-grant/step-1,,Follow these steps to apply for a Cal Grant. It’s money for college you don’t have to pay back.,Siga estos pasos para solicitar una beca Cal Grant. Es dinero para la universidad que usted no tiene que pagar.,请按照以下步骤申请加州拨款。这是大学学费，你不必付费。
-/apply-for-cal-grant/step-1,,"Deadline to apply: Monday, March 2, 2020, 11:59 p.m.","Fecha límite para solicitar: Lunes, 2 de marzo de 2020, 11:59 p.m.",申请截止日期：星期一2020年3月2日晚上11:59
-/apply-for-cal-grant/step-1,,"Apply for financial aid, if you haven't already","Presentar una solicitud para ayuda financiera, si no lo ha hecho ",申请财政援助，如果你还没有做
 /apply-for-cal-grant/step-1,,"There are two ways to apply for financial aid that can lead to a Cal Grant. Submit a FAFSA <em>or</em> CADAA form, if you haven't already.","Hay dos maneras de solicitar ayuda financiera que puede conducir a una beca Cal Grant. Presentar un solicitud de FAFSA <EM>o</EM> CADAA, si no lo ha hecho.",有申请财政援助，可能导致一个CAL授权两种方式。提交FAFSA <EM>或</ em>的Cadaa，如果你还没有完成。
 /apply-for-cal-grant/step-1,,Apply for the Free Application for Federal Student Aid (FAFSA) if you:,Aplicar para la Solicitud Gratuita de Ayuda Federal para Estudiantes (FAFSA) si:,申请是否免费申请联邦学生援助（FAFSA）：
 /apply-for-cal-grant/step-1,,Have U.S. Citizenship,Tienen la ciudadanía de EE.UU.,他们拥有美国国籍
 /apply-for-cal-grant/step-1,,are a Permanent Resident,es un Residente Permanente,这是一个永久居民
 /apply-for-cal-grant/step-1,,"do not have U.S. Citizenship, but you are","no tienen la ciudadanía de EE.UU., pero usted es",他们没有美国国籍，但你
-/apply-for-cal-grant/step-1,,eligible for federal student aid,elegible para ayuda federal para estudiantes,有资格获得联邦学生补助
 /apply-for-cal-grant/step-1,[lang-have-a],have a,tiene un,有
 /apply-for-cal-grant/step-1,,T Visa,Visa T,签证Ť
 /apply-for-cal-grant/step-1,,Apply for FAFSA,Aplicar al FAFSA,适用于FAFSA
@@ -281,17 +277,11 @@ path,token,en,es,zh
 /apply-for-cal-grant/step-1,[lang-have],have,tiene,你有
 /apply-for-cal-grant/step-1,[lang-are],are,es,这是
 /apply-for-cal-grant/step-1,,Temporary Protected Status (TPS),el Estatus de Protección Temporal (TPS),临时保护身份（TPS）
-/apply-for-cal-grant/step-1,,eligible for AB540,es elegible para el programa AB540,你有资格的程序AB540
 /apply-for-cal-grant/step-1,,Apply for CADAA,Aplicar al CADAA,适用于Cadaa
 /apply-for-cal-grant/step-1,,Next step:,Próximo paso:,下一步：
-/apply-for-cal-grant/step-1,,Check your GPA status,Verifique el estado de su promedio de calificaciones (GPA),检查你的平均成绩的状态（GPA）
 /apply-for-cal-grant/step-1,,Return to the beginning:,Regresar al principio,回到开头
 /apply-for-cal-grant/step-2,,Apply for a Cal Grant: Step 2,Solicitar una beca Cal Grant: Paso 2,申请加州格兰特：第2步
 /apply-for-cal-grant/step-2,,Apply for a Cal Grant: Step 2 - Alpha.CA.gov,Solicitar una beca Cal Grant: Paso 2 - Alpha.CA.gov,申请加州格兰特：第2步 -  Alpha.CA.gov
-/apply-for-cal-grant/step-2,,Follow these steps to apply for a Cal Grant. It’s money for college you don’t have to pay back.,Siga estos pasos para solicitar una beca Cal Grant. Es dinero para la universidad que usted no tiene que pagar.,请按照以下步骤申请加州拨款。这是大学学费，你不必付费。
-/apply-for-cal-grant/step-2,,"Deadline to apply: Monday, March 2, 2020, 11:59 p.m.","Fecha límite para solicitar: Lunes, 2 de marzo de 2020, 11:59 p.m.",申请截止日期：星期一2020年3月2日晚上11:59
-/apply-for-cal-grant/step-2,,Check if your school has shared your GPA,Verifique si su escuela ha compartido su promedio de calificaciones,检查您的学校共享你的GPA
-/apply-for-cal-grant/step-2,,"Once you've applied for financial aid, check if your school has shared your GPA with us.","Una vez que usted ha solicitado ayuda financiera, verifique si su escuela ha compartido su promedio de calificaciones (GPA) con nosotros.",一旦你已经申请了财政援助，检查学校是否与我们分享了他的平均成绩（GPA）。
 /apply-for-cal-grant/step-2,,"To do so, simply","Para hacer esto,",要做到这一点，
 /apply-for-cal-grant/step-2,,"log into WebGrants 4 Students</a>. There, you'll find out if we've received your financial aid application and your GPA. If we have both, you've finished your Cal Grant application.","inicie una sesión en WebGrants 4 Students</a>. Allí, averiguará si hemos recibido su solicitud de ayuda financiera y su promedio de calificaciones. Si hemos recibido ambos, entonces ha completado su solicitud para la beca CalGrant.",登录WebGrants 4名</A>学生。在那里，你会发现，如果我们已经收到您的财政援助和你的GPA要求。如果你收到了两个，那么你完成你的CalGrant奖学金申请。
 /apply-for-cal-grant/step-2,,"If they haven't, submit your own GPA form","Si no, envie su propio formulario de su Promedio de Calificaciones (GPA)",如果不是，从你的平均成绩发送自己的表单（GPA）
@@ -311,7 +301,6 @@ path,token,en,es,zh
 /apply-for-cal-grant/step-2,,Next step:,Próximo paso:,下一步：
 /apply-for-cal-grant/step-2,,Finish,Final,结束
 /apply-for-cal-grant/step-2,,Return to the beginning:,Para volver al principio:,要返回到开头：
-/apply-for-cal-grant/finish,,Follow these steps to apply for a Cal Grant. It’s money for college you don’t have to pay back.,Siga estos pasos para solicitar una beca Cal Grant. Es dinero para la universidad que usted no tiene que pagar.,请按照以下步骤申请加州拨款。这是大学学费，你不必付费。
 /apply-for-cal-grant/finish,,Apply for a Cal Grant: Finish,Solicitar una beca Cal Grant: Final,申请加州格兰特：决赛
 /apply-for-cal-grant/finish,,Apply for a Cal Grant: Finish - Alpha.CA.gov,Solicitar una beca Cal Grant - Alpha.CA.gov,申请加州格兰特 -  Alpha.CA.gov
 /apply-for-cal-grant/finish,,Finish applying for a Cal Grant,Finalizar la solicitud para una beca Cal Grant,完成了加州批准该申请
@@ -540,7 +529,6 @@ path,token,en,es,zh
 /apply-discounted-phone-service,,"If you need help,",Si necesitas asistencia,如果您需要帮助
 /who-can-get-discounted-phone-service,,"Find out if you’re eligible for the California LifeLine Program, a discounted phone service.","Averigüe si es elegible para el Programa California LifeLine, un servicio telefónico con descuento.",了解你是否有资格获得美国加州生命线课程，贴现电话服务。
 /who-can-get-discounted-phone-service,,(California LifeLine) - Alpha.CA.gov,(Programa Lifeline de Califronia) - Alpha.CA.gov,（生命线计划Califronia） -  Alpha.CA.gov
-/who-can-get-discounted-phone-service,,Check if you can get a discounted phone service,Verifique si puede recibir un servicio telefónico con descuento,检查是否可以接受折扣电话服务
 /who-can-get-discounted-phone-service,,Do you or someone in your,Usted o alguien en su,您或您
 /who-can-get-discounted-phone-service/no-not-sure,,A household is a group of people who live together and share income and expenses (even if they are not related to each other).,Un hogar es un grupo de personas que viven juntas y comparten ingresos y gastos (incluso si no están relacionados uno al otro).,一个家庭是一群人谁住在一起，共享收入和支出（即使它们与一个其他）。
 /who-can-get-discounted-phone-service,,>household<,>hogar<,>首页<
