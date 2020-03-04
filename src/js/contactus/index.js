@@ -426,7 +426,7 @@ function showAgencyDetails(searchvalue, lang) {
               socialMediaInfo +=
                 '<a href="https://twitter.com/' +
                 twitterItem +
-                '" class="list-group-item list-group-item-action"><span class="ca-gov-icon-twitter"></span>&nbsp;&nbsp;Twitter</a>';
+                '" class="list-group-item list-group-item-action border-0"><span class="ca-gov-icon-twitter"></span>&nbsp;&nbsp;Twitter</a>';
             }
             if (this.apiData[r].Facebook) {
               var facebookItem = this.apiData[r].Facebook;
@@ -436,7 +436,7 @@ function showAgencyDetails(searchvalue, lang) {
               socialMediaInfo +=
                 '<a href="https://www.facebook.com/' +
                 facebookItem +
-                '" class="list-group-item list-group-item-action"><span class="ca-gov-icon-facebook"></span>&nbsp;&nbsp;Facebook</a>';
+                '" class="list-group-item list-group-item-action border-0"><span class="ca-gov-icon-facebook"></span>&nbsp;&nbsp;Facebook</a>';
             }
             if (this.apiData[r].YouTube) {
               var youTubeItem = this.apiData[r].YouTube;
@@ -446,7 +446,7 @@ function showAgencyDetails(searchvalue, lang) {
               socialMediaInfo +=
                 '<a href="https://www.youtube.com/' +
                 youTubeItem +
-                '" class="list-group-item list-group-item-action"><span class="ca-gov-icon-youtube"></span>&nbsp;&nbsp;YouTube</a>';
+                '" class="list-group-item list-group-item-action border-0"><span class="ca-gov-icon-youtube"></span>&nbsp;&nbsp;YouTube</a>';
             }
 
             document.getElementById("org-social-media").innerHTML =
