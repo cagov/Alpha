@@ -28,7 +28,7 @@ h1 {
 
 h2 {
     padding-top: .25rem;
-    padding-bottom: 1.25rem;
+    padding-bottom: .5rem;
 }
 
 h3 {
@@ -275,6 +275,11 @@ a.list-group-item.list-group-item-action.guide:last-child {
 .list-group-flush.list-group-item {
     font-family: "Public Sans Bold", sans-serif;
 }
+
+.list-group.home {
+    margin-left: -.5rem;
+}
+
 
 /* Navbar */
 
@@ -836,12 +841,24 @@ li .action-link:focus-within {
 	margin-top: 3rem;
     border-top: 2px #ccc solid;
     padding-top: 1rem;
+    font-size: 1.5rem;
+    font-family: "Public Sans Bold", sans-serif;
+
 }
 
 .awesomplete {
     display: contents;
     position: relative;
     margin-right: .5rem;
+}
+
+.wage-city-search label {
+    display: block;
+}
+
+.form-control {	
+    border: 1px solid #000000;
+    border-radius: 0;
 }
 
 
@@ -965,6 +982,10 @@ label.custom-control-label {
 	
 	.mobile-margin-top {
 		margin-top: 1rem;
+	}
+	
+	.mobile-padding-top {
+		padding-top: 3rem;
 	}
 
 }
