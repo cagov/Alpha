@@ -1,7 +1,7 @@
 import resolve from '@rollup/plugin-node-resolve';
 import json from '@rollup/plugin-json';
 import html from '@open-wc/rollup-plugin-html';
-import {terser} from 'rollup-plugin-terser';
+import { terser } from 'rollup-plugin-terser';
 
 module.exports = {
   input: 'src/js/index.js',
@@ -15,16 +15,16 @@ module.exports = {
     html({
       inputPath: 'src/partials/js.html',
       inject: false,
-      template({ inputHtml, bundle }) {
+      template ({ inputHtml, bundle }) {
         let outputName = '';
-        Object.entries(bundle.bundle).forEach( (item, obj) => {
+        Object.entries(bundle.bundle).forEach((item, obj) => {
           outputName = item[1].fileName;
-        })
+        });
         return inputHtml.replace(
           '<html><head></head><!-- put js here --><body></body></html>',
-          `<script type="module" src="/js/${outputName}"></script>`,
+          `<script type="module" src="/js/${outputName}"></script>`
         );
-      },
+      }
     }),
     terser()
   ]

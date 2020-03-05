@@ -4,7 +4,7 @@ module.exports = {
   mode: 'production',
   entry: {
     es5: [
-      './src/js/es5.js',
+      './src/js/es5.js'
     ],
     es5Minwage: [
       './src/js/minwage/index.js'
@@ -25,16 +25,16 @@ module.exports = {
               targets: {
                 browsers: [
                   '> 1%'
-                ],
-              },
-            }],
+                ]
+              }
+            }]
           ]
-        },
-      },
-    }],
+        }
+      }
+    }]
   },
   output: {
-    filename: "js/[name].js",
-    path: path.resolve(__dirname, '../../public/'),
+    filename: 'js/[name].js',
+    path: path.resolve(__dirname, '../../public/')
   }
 };

@@ -1,17 +1,17 @@
-"use strict"
+'use strict';
 // this is a file forked from https://github.com/geolonia/mbgl-gesture-handling/blob/master/mbgl-gesture-handling.js because legacy edge was freaking about ...optiosn on line 16
 class GestureHandling {
-  constructor(options) {
+  constructor (options) {
     this.fullscreen = false;
     this.id = `mbgl-gesture-handling-help-container-${GestureHandling.count}`;
     GestureHandling.count++;
     this.timer = null;
 
-    this.settings = options
+    this.settings = options;
 
     this.helpElement = document.querySelector(`#${this.id}`);
 
-    if (null === this.helpElement) {
+    if (this.helpElement === null) {
       this.helpElement = document.createElement('div');
       this.helpElement.id = this.id;
       this.helpElement.style.backgroundColor = this.settings.backgroundColor;
@@ -24,14 +24,14 @@ class GestureHandling {
       const textBox = document.createElement('div');
       textBox.style.textAlign = 'center';
       textBox.style.color = this.settings.textColor;
-      textBox.innerText = "";
+      textBox.innerText = '';
 
       this.helpElement.appendChild(textBox);
       document.body.appendChild(this.helpElement);
     }
   }
 
-  showHelp(map, message) {
+  showHelp (map, message) {
     const rect = map.getContainer().getBoundingClientRect();
     this.helpElement.style.top = `${rect.top + window.scrollY}px`;
     this.helpElement.style.left = `${rect.left + window.scrollX}px`;
@@ -42,16 +42,16 @@ class GestureHandling {
     this.helpElement.querySelector('div').innerText = message;
   }
 
-  hideHelp() {
+  hideHelp () {
     this.helpElement.style.display = 'none';
   }
 
-  addTo(map) {
+  addTo (map) {
     map.scrollZoom.disable();
 
     this.helpElement.addEventListener('wheel', (event) => {
-      if (event.altKey || true === this.fullscreen) {
-        event.preventDefault()
+      if (event.altKey || this.fullscreen === true) {
+        event.preventDefault();
         this.hideHelp();
       } else {
         clearTimeout(this.timer);
@@ -62,9 +62,9 @@ class GestureHandling {
     });
 
     map.getContainer().addEventListener('wheel', (event) => {
-      if (event.altKey || true === this.fullscreen) {
-        event.preventDefault()
-        if (! map.scrollZoom.isEnabled()) {
+      if (event.altKey || this.fullscreen === true) {
+        event.preventDefault();
+        if (!map.scrollZoom.isEnabled()) {
           map.scrollZoom.enable();
         }
       } else {
@@ -77,7 +77,7 @@ class GestureHandling {
     });
 
     this.helpElement.addEventListener('touchstart', (event) => {
-      if (event.touches && (2 <= event.touches.length || true === this.fullscreen)) {
+      if (event.touches && (event.touches.length >= 2 || this.fullscreen === true)) {
         clearTimeout(this.timer);
         this.hideHelp();
         map.dragPan.enable();
@@ -86,8 +86,8 @@ class GestureHandling {
     });
 
     map.on('movestart', (event) => {
-      if (event.originalEvent && 'touches' in event.originalEvent
-              && 2 > event.originalEvent.touches.length && false === this.fullscreen) {
+      if (event.originalEvent && 'touches' in event.originalEvent &&
+              event.originalEvent.touches.length < 2 && this.fullscreen === false) {
         this.showHelp(map, this.settings.textMessageMobile);
         map.dragPan.disable();
         this.timer = setTimeout(() => {
@@ -97,8 +97,8 @@ class GestureHandling {
       }
     });
 
-    document.addEventListener("fullscreenchange", () => {
-      if ( document.fullscreenElement ) {
+    document.addEventListener('fullscreenchange', () => {
+      if (document.fullscreenElement) {
         this.fullscreen = true;
       } else {
         this.fullscreen = false;
@@ -107,6 +107,6 @@ class GestureHandling {
   }
 }
 
-GestureHandling.count = 0 // static
+GestureHandling.count = 0; // static
 
 export default GestureHandling;

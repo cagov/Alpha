@@ -1,108 +1,50 @@
-import getCounties from "./counties.js";
+import getCounties from './counties.js';
 import * as uniqueZipJson from '../../json/unique-zips-slim.json';
+import Awesomplete from 'awesomplete-es6';
+import templateHTML from './template.js';
 
-if (document.querySelector("body.js-alerts")) {
+if (document.querySelector('body.js-alerts')) {
   const counties = getCounties();
   const zips = uniqueZipJson.default;
 
-  let countyNames = [];
+  const countyNames = [];
   counties.forEach(county => {
     countyNames.push(county.name);
   });
 
-  let awesompleteList = [...countyNames, ...zips];
+  const awesompleteList = [...countyNames, ...zips];
 
-  new Awesomplete("input[data-multiple]", {
+  const awesompleteSettings = {
     list: awesompleteList,
-    filter: function(text, input) {
+    filter: function (text, input) {
       return Awesomplete.FILTER_CONTAINS(text, input.match(/[^,]*$/)[0]);
     },
 
-    item: function(text, input) {
-      document.querySelector(".invalid-feedback").style.display = "none";
-      document.querySelector(".city-search").classList.remove("is-invalid");
+    item: function (text, input) {
+      document.querySelector('.invalid-feedback').style.display = 'none';
+      document.querySelector('.city-search').classList.remove('is-invalid');
       return Awesomplete.ITEM(text, input.match(/[^,]*$/)[0]);
     },
 
-    replace: function(text) {
+    replace: function (text) {
       var before = this.input.value.match(/^.+,\s*|/)[0];
       var finalval = before + text;
       this.input.value = finalval;
-      templateHTML(finalval);
+      templateHTML(finalval, counties);
     }
-  });
+  };
+
+  /* eslint-disable no-unused-vars */
+  const awesomplete = new Awesomplete('input[data-multiple]', awesompleteSettings);
+  /* eslint-enable no-unused-vars */
 
   document
-    .querySelector(".js-alert-lookup")
-    .addEventListener("submit", function(event) {
+    .querySelector('.js-alert-lookup')
+    .addEventListener('submit', function (event) {
       event.preventDefault();
-      document.querySelector(".invalid-feedback").style.display = "none";
-      document.querySelector(".city-search").classList.remove("is-invalid");
-      var finalval = this.querySelector("input").value;
+      document.querySelector('.invalid-feedback').style.display = 'none';
+      document.querySelector('.city-search').classList.remove('is-invalid');
+      var finalval = this.querySelector('input').value;
       templateHTML(finalval);
     });
-
-  function templateHTML(inputval) {
-    let isZip = false;
-    if (inputval.match(/^\d+$/)) {
-      // we are dealing with a zip code
-      isZip = true;
-      fetch("https://api.alpha.ca.gov/countyfromzip/" + inputval)
-        .then(response => {
-          return response.json();
-        })
-        .then(myzip => {
-          lookupSuccess(myzip.county, inputval, isZip);
-        })
-        .catch(e => {
-          lookupFail();
-        });
-    } else {
-      lookupSuccess(inputval, inputval, isZip);
-    }
-  }
-
-  function lookupSuccess(inputCounty, inputval, isZip) {
-    let chosenCounty;
-    counties.forEach(county => {
-      if (county.name.toLowerCase() == inputCounty.toLowerCase()) {
-        chosenCounty = county;
-      }
-    });
-    if (!chosenCounty) {
-      lookupFail();
-    } else {
-      let county = chosenCounty.name;
-      let url = chosenCounty.url;
-      document.querySelector(
-        ".js-county-alert"
-      ).innerHTML = `<li class="card mb-20  border-0">
-    <h2>Alerts for ${inputval}</h2>
-    ${(function() {
-      if (isZip) {
-        return `<p>Your zip code, ${inputval}, is in ${
-          county.toLowerCase().indexOf("county") > -1
-            ? county
-            : county + " County"
-        }.</p>`;
-      } else {
-        return ``;
-      }
-    })()}
-      <div class="card-body bg-light">
-        <a class="action-link" href="${url}">
-          Sign up for ${
-            county.toLowerCase().indexOf("county") > -1
-              ? county
-              : county + " County"
-          } alerts
-        </a>
-      </div>
-    </li>`;
-    }
-  }
-
-  function lookupFail() {
-    document.querySelector(".invalid-feedback").style.display = "block";
-  }
 }

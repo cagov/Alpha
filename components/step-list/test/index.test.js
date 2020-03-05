@@ -2,19 +2,10 @@ import { fixture, expect } from '@open-wc/testing';
 
 import '../index.js';
 
-function resolveAfter2Seconds(x) { 
+function elementExists (selector) {
   return new Promise(resolve => {
-    setTimeout(() => {
-      resolve(x);
-    }, 1000 * x);
-  });
-}
-
-function elementExists(selector) {
-  return new Promise(resolve => {
-
-    function checkForElement(selector, callback) {
-      if(document.querySelector(selector)) {
+    function checkForElement (selector, callback) {
+      if (document.querySelector(selector)) {
         callback();
       } else {
         setTimeout(() => {
@@ -23,13 +14,13 @@ function elementExists(selector) {
       }
     }
 
-    checkForElement(selector, function() {
+    checkForElement(selector, function () {
       resolve(true);
-    })
+    });
   });
 }
 
-describe('renders', function() {
+describe('renders', function () {
   it('an element', async () => {
     const el = await fixture(`<cwds-step-list>
     <ul class="list-group list-group-flush">
@@ -64,7 +55,7 @@ describe('renders', function() {
       </li>
     </ul>
   </cwds-step-list>`);
-  let results = await elementExists('ul');
+    await elementExists('ul');
     expect(el.querySelectorAll('ul li').length).to.be.above(1);
   });
 });

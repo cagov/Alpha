@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en" xml:lang="en">
+<html lang="en">
 
 <head>
     <title>Code coverage report for index.js</title>
@@ -22,16 +22,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">35.71% </span>
+                <span class="strong">23.81% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>5/14</span>
+                <span class='fraction'>5/21</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>0/4</span>
             </div>
         
             
@@ -43,9 +43,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">35.71% </span>
+                <span class="strong">23.81% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>5/14</span>
+                <span class='fraction'>5/21</span>
             </div>
         
             
@@ -79,7 +79,16 @@
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -90,6 +99,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -99,40 +113,53 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">class CWDSAccordion extends HTMLElement {
-  connectedCallback() {
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">class CWDSAccordion extends window.HTMLElement {
+  connectedCallback () {
     this.expandTarget = this.querySelector('.card-container');
     this.expandButton = this.querySelector('.card-header');
-    this.expandButton.addEventListener('click', this.listen.bind(this))
-    this.cardBodyHeight = this.querySelector('.card-body').clientHeight;
+    this.expandButton.addEventListener('click', this.listen.bind(this));
+    this.activateButton = this.querySelector('.card-header');
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  li</span>sten() {
-<span class="cstat-no" title="statement not covered" >    if(this.expandTarget.clientHeight &gt; 0) {</span>
+<span class="fstat-no" title="function not covered" >  li</span>sten () {
+<span class="cstat-no" title="statement not covered" >    if (!this.cardBodyHeight) {</span>
+<span class="cstat-no" title="statement not covered" >      this.cardBodyHeight = this.querySelector('.card-body').clientHeight;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    if (this.expandTarget.clientHeight &gt; 0) {</span>
 <span class="cstat-no" title="statement not covered" >      this.expandTarget.style.height = '0px';</span>
+<span class="cstat-no" title="statement not covered" >      this.expandTarget.setAttribute('aria-hidden', 'true');</span>
 <span class="cstat-no" title="statement not covered" >      this.querySelector('.card-header').classList.remove('accordion-alpha-open');</span>
-      let expando = <span class="cstat-no" title="statement not covered" >this.expandTarget;</span>
-<span class="cstat-no" title="statement not covered" >      setTimeout(<span class="fstat-no" title="function not covered" >fu</span>nction() {</span>
-<span class="cstat-no" title="statement not covered" >        expando.style.display = "none";</span>
-      }, 300)
+      const expando = <span class="cstat-no" title="statement not covered" >this.expandTarget;</span>
+<span class="cstat-no" title="statement not covered" >      this.activateButton.setAttribute('aria-expanded', 'false');</span>
+<span class="cstat-no" title="statement not covered" >      setTimeout(<span class="fstat-no" title="function not covered" >fu</span>nction () {</span>
+<span class="cstat-no" title="statement not covered" >        expando.style.display = 'none';</span>
+      }, 300);
     } else {
-<span class="cstat-no" title="statement not covered" >      this.expandTarget.style.display = "block";</span>
-<span class="cstat-no" title="statement not covered" >      this.expandTarget.style.height = this.cardBodyHeight+'px';</span>
+<span class="cstat-no" title="statement not covered" >      this.expandTarget.style.display = 'block';</span>
+<span class="cstat-no" title="statement not covered" >      this.expandTarget.style.height = this.cardBodyHeight + 'px';</span>
+<span class="cstat-no" title="statement not covered" >      this.expandTarget.setAttribute('aria-hidden', 'false');</span>
 <span class="cstat-no" title="statement not covered" >      this.querySelector('.card-header').classList.add('accordion-alpha-open');</span>
+<span class="cstat-no" title="statement not covered" >      this.querySelector('.card-container').classList.remove('collapsed');</span>
+<span class="cstat-no" title="statement not covered" >      this.activateButton.setAttribute('aria-expanded', 'true');</span>
     }
   }
 }
-window.customElements.define('cwds-accordion', CWDSAccordion);</pre></td></tr></table></pre>
+window.customElements.define('cwds-accordion', CWDSAccordion);
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Jan 27 2020 15:47:04 GMT-0800 (Pacific Standard Time)
+                at Tue Mar 03 2020 11:39:57 GMT-0800 (Pacific Standard Time)
             </div>
         </div>
         <script src="prettify.js"></script>
