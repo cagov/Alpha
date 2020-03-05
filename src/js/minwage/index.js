@@ -1,6 +1,7 @@
 import * as wageJsonData from './wage-data.json';
 import * as citiesJson from '../../json/just-cities.json';
 import * as uniqueZipJson from '../../json/unique-zips-slim.json';
+import Awesomplete from 'awesomplete-es6';
 
 if (document.querySelector('body.js-min-wage')) {
   const apiurl = 'https://api.alpha.ca.gov/caziplookup/';

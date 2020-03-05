@@ -2,7 +2,7 @@ import '@webcomponents/webcomponentsjs';
 import 'whatwg-fetch';
 import './polyfills/endswith.js';
 import 'url-search-params-polyfill';
-import './libs/awesomplete.js';
+import Awesomplete from 'awesomplete-es6';
 import '@cagov/accordion';
 import '@cagov/step-list';
 import './libs/regenerator-runtime.js';

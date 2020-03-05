@@ -1,6 +1,7 @@
 import * as citiesJson from '../../json/just-cities.json';
 import * as uniqueZipJson from '../../json/unique-zips-slim.json';
 import GestureHandling from './gesture.js';
+import Awesomplete from 'awesomplete-es6';
 const mapboxToken = 'pk.eyJ1IjoiYWxwaGEtY2EtZ292IiwiYSI6ImNrNTZ5em1qMDA4ZWkzbG1yMDg4OXJyaDIifQ.GleKGsZsaOcmxfsYUR9bTg';
 
 const trStrings = {
@@ -27,16 +28,13 @@ const trStrings = {
 };
 
 let translations = trStrings.en;
-if (window.location.pathname.indexOf('/es/') == 0) {
+if (window.location.pathname.indexOf('/es/') === 0) {
   translations = trStrings.es;
 }
 
 function getGeo () {
-  var startPos;
-
   var geoSuccess = function (position) {
     // Do magic with location
-    startPos = position;
     document.querySelector('.js-location-display').innerHTML = `<h2>${translations['Showing food banks near']} ${translations.you}</h2>`;
     reorient([position.coords.longitude, position.coords.latitude]);
   };
@@ -69,9 +67,9 @@ function loadMap () {
   document.head.appendChild(st);
 
   loadScript('https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js', function () {
-    mapboxgl.accessToken = mapboxToken;
+    window.mapboxgl.accessToken = mapboxToken;
 
-    window.map = new mapboxgl.Map({
+    window.map = new window.mapboxgl.Map({
       container: 'mapid',
       style: 'mapbox://styles/mapbox/streets-v11',
       center: [-121.500665, 38.583843],
@@ -103,7 +101,7 @@ if (document.querySelector('body.js-food-banks')) {
   getGeo();
 
   // get full geojson foodbanks
-  fetch('https://api.alpha.ca.gov/FoodBanks')
+  window.fetch('https://api.alpha.ca.gov/FoodBanks')
     .then(function (resp) { return resp.json(); })
     .then(function (data) {
       window.foodLocations = data;
@@ -167,7 +165,7 @@ function setupMapInteractions () {
         coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
       }
 
-      new mapboxgl.Popup()
+      new window.mapboxgl.Popup()
         .setLngLat(coordinates)
         .setHTML(`${food.title}<br>
           ${food.address}<br>
@@ -196,7 +194,7 @@ function displaySortedResults (coords) {
       displaySortedResults(coords);
     }, 300);
   } else {
-    fetch(`https://api.alpha.ca.gov/FoodBanks?lat=${coords[1]}&lon=${coords[0]}`)
+    window.fetch(`https://api.alpha.ca.gov/FoodBanks?lat=${coords[1]}&lon=${coords[0]}`)
       .then(function (resp) { return resp.json(); })
       .then(function (data) {
         const outputLocs = data;
@@ -208,7 +206,7 @@ function displaySortedResults (coords) {
             displayClass = 'd-none';
           }
           var showMore = '';
-          if (itemindx == 2) {
+          if (itemindx === 2) {
             showMore = `<li class="card mb-20 js-expand-link border-0">
               <div class="card-body">
                 <p>
@@ -235,14 +233,7 @@ function displaySortedResults (coords) {
   }
 }
 
-function showAll () {
-  event.preventDefault();
-  document.querySelectorAll('.card-set li.d-none').forEach(function (item) {
-    item.classList.remove('d-none');
-  });
-  document.querySelector('.js-expand-link').style.display = 'none';
-}
-
+/* eslint-disable no-unused-vars */
 function mapsSelector (lat, lon) {
   event.preventDefault();
   if ((navigator.platform.indexOf('iPhone') != -1) || (navigator.platform.indexOf('iPad') != -1) || (navigator.platform.indexOf('iPod') != -1)) {
@@ -251,6 +242,7 @@ function mapsSelector (lat, lon) {
     window.open(`https://maps.google.com/maps?daddr=${lat},${lon}`);
   }
 }
+/* eslint-enable no-unused-vars */
 
 if (document.querySelector('body.js-food-banks')) {
   // handle search autocomplete
@@ -277,7 +269,7 @@ if (document.querySelector('body.js-food-banks')) {
       this.input.value = finalval;
       var cabb = '-124.409591,32.534156,-114.131211,42.009518';
       var url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${finalval}.json?bbox=${cabb}&access_token=${mapboxToken}`;
-      fetch(url)
+      window.fetch(url)
         .then(function (resp) { return resp.json(); })
         .then(function (data) {
           document.querySelector('.js-location-display').innerHTML = '<h2>Showing food banks near ' + finalval + '</h2>';
@@ -292,7 +284,7 @@ if (document.querySelector('body.js-food-banks')) {
     var val = this.querySelector('input').value;
     var cabb = '-124.409591,32.534156,-114.131211,42.009518';
     var url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${val}.json?bbox=${cabb}&access_token=${mapboxToken}`;
-    fetch(url)
+    window.fetch(url)
       .then(function (resp) { return resp.json(); })
       .then(function (data) {
         document.querySelector('.js-location-display').innerHTML = `<h2>${translations['Showing food banks near']} ${val}</h2>`;

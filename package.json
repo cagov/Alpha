@@ -83,6 +83,14 @@
     "@cagov/accordion": "^1.0.6",
     "@cagov/step-list": "^1.0.11",
     "@tilecloud/mbgl-gesture-handling": "^1.0.9",
+    "awesomplete-es6": "^1.2.2",
     "url-search-params-polyfill": "^8.0.0"
+  },
+  "semistandard": {
+    "ignore": [
+      "/src/js/libs/*.js",
+      "/src/js/es5.js",
+      "/src/js/polyfills/*.js"
+    ]
   }
 }

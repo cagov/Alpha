@@ -1,9 +1,9 @@
-class CWDSHolidays extends HTMLElement {
+class CWDSHolidays extends window.HTMLElement {
   connectedCallback () {
     const htmllang = document.querySelector('html').attributes.lang.value;
     const langquery = htmllang === 'en' ? '' : `?lang=${htmllang}`;
 
-    fetch(`https://api.alpha.ca.gov/StateHolidayCalendar/all${langquery}`)
+    window.fetch(`https://api.alpha.ca.gov/StateHolidayCalendar/all${langquery}`)
       .then(response => response.json())
       .then(data => {
         data.forEach(x => x.dateobject = new Date(x.date));
