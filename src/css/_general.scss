@@ -756,9 +756,11 @@ li.active ul.nav.bd-sidenav {
     padding: 20px 0;
 }
 
-/* minimum wage override */
-.wage-city-search label {
-    justify-content: left;
+/* minimum wage and water label override */
+.wage-city-search, .check-water {
+    label {
+        justify-content: left;
+    }
 }
 
 /* Food Banks Map Fix */

@@ -19,19 +19,6 @@
     <meta property="og:url" content="[code-url]" />
     <link rel="canonical" href="[code-url]" />
     <title>Check your tap water quality - Alpha.CA.gov</title>
-
-    <!-- mapbox autocomplete -->
-    <script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"></script>
-    <link
-      href="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css"
-      rel="stylesheet"
-    />
-    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css"
-      type="text/css"
-    />
   </head>
 
   <body class="js-water">
@@ -54,35 +41,53 @@
       <div class="container check-water">
         <div class="row">
           <div class="col-md-8">
-            <form class="js-water-form">
+            <form class="form-inline js-water-form">
               <div class="form-group">
-                <label>Please enter your address: </label
-                ><br />
-                <div id="geocoder" class="geocoder"></div>
-                <div class="invalid-feedback">
-                  Please enter a city or zip code in California.
+                <label for="testauto">Please enter your address: </label
+                >
+                <div class="awesomplete">
+                  <input
+                    type="text"
+                    class="city-search form-control"
+                    data-multiple=""
+                    id="testauto"
+                    data-list=""
+                    autocomplete="off"
+                    aria-expanded="false"
+                    aria-owns="awesomplete-list-1"
+                    role="combobox"
+                  />
+                  <ul hidden="" role="listbox" id="awesomplete-list-1"></ul>
+                  <span
+                    class="visually-hidden"
+                    role="status"
+                    aria-live="assertive"
+                    aria-atomic="true"
+                    >Type 2 or more characters for results.</span
+                  >
                 </div>
-                <br />
                 <button
                   id="submit-form"
                   type="submit"
-                  class="btn btn-primary  mb-3 js-water-lookup"
+                  class="btn btn-primary js-water-lookup"
                 >
                   Check your water
                 </button>
+                <div class="invalid-feedback">
+                  Please enter a city or zip code in California.
+                </div>
               </div>
             </form>
           </div>
         </div>
       </div>
-
+              
       <div id="map" class="d-none"></div>
 
       <div class="container pb-5 d-none system-data" aria-live="polite">
         <div class="row">
           <div class="col-lg-8">
             <div class="system-status"></div>
-
             <div class="system-info">
               <h2>How your water system checks for safety</h2>
               <p>
@@ -130,10 +135,6 @@
       </div>
       <div class="check-water">Check your water</div>
     </template>
-
-
-
-
 
   </body>
 </html>

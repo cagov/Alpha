@@ -1,36 +1,76 @@
 import gotSystem from './got-system.js';
 import getParameterByName from './getparams.js';
+import Awesomplete from 'awesomplete-es6';
 
 if (document.querySelector('body.js-water')) {
-  window.mapboxgl.accessToken =
-    'pk.eyJ1IjoiYWFyb25oYW5zIiwiYSI6ImNqNGs4cms1ZzBocXkyd3FzZGs3a3VtamYifQ.HQjFfVzwwxwCmGr2nvnvSA';
-  var map = new window.mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: [-79.4512, 43.6568],
-    zoom: 13
+  const fieldSelector = '#testauto';
+  window.waterPlete = new Awesomplete(fieldSelector, {
+    list: [],
+    autoFirst: true,
+    filter: function (text, input) {
+      return Awesomplete.FILTER_CONTAINS(text, input.match(/[^,]*$/)[0]);
+    },
+
+    item: function (text, input) {
+      return Awesomplete.ITEM(text, input.match(/[^,]*$/)[0]);
+    },
+
+    replace: function (text) {
+      var before = this.input.value.match(/^.+,\s*|/)[0];
+      var finalval = before + text;
+      this.input.value = finalval;
+      answerChosen(finalval);
+    }
   });
 
-  window.geocoder = new window.MapboxGeocoder({
-    accessToken: window.mapboxgl.accessToken,
-    placeholder: ' ',
-    bbox: [-124.409591, 32.534156, -114.131211, 42.009518],
-    mapboxgl: window.mapboxgl
-  }).on('result', async function (item) {
-    window.waterPoint = item;
+  function queryLoc (q) {
+    window.lookup = q;
+    const url = `https://api.alpha.ca.gov/alphageotypeahead?onlyca=true&q=${q}`;
+    window.fetch(url)
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        const list = [];
+        data.match.forEach((item) => {
+          list.push(item.address);
+        });
+        window.waterPlete.list = list;
+      })
+      .catch(error => {
+        resetForm();
+      });
+  }
+
+  document.querySelector(fieldSelector).addEventListener('keydown', event => {
+    if (event.isComposing || event.keyCode === 229) {
+      return;
+    }
+    let skipKeys = [13, 9, 27, 38, 40]
+    if (event.target.value.length >= 2) {
+      if(skipKeys.indexOf(event.keyCode) === -1) {
+        queryLoc(event.target.value);
+      }
+    }
+  });
+
+  function resetForm () {
+    document.querySelector('.js-water-lookup').innerHTML = 'Check your water';
+    document.querySelector('.system-data').style.display = 'block';
+  }
+
+  function answerChosen (item) {
     const waterButton = document.querySelector('.js-water-lookup');
 
     const template = document.getElementById('loading');
     const node = template.content.cloneNode(true);
 
-    console.log(node.querySelector('div').innerHTML);
-
     waterButton.innerHTML = node.querySelector('div').innerHTML;
     document.querySelector('.system-data').style.display = 'none';
 
     // make call to endpoint to find system
-    retrieveSystemData(item, waterButton);
-  });
+    retrieveSystemData(item);
+  }
 
   document
     .querySelector('.js-water-form')
@@ -39,9 +79,9 @@ if (document.querySelector('body.js-water')) {
       document.querySelector('.invalid-feedback').style.display = 'none';
     });
 
-  function retrieveSystemData (item, waterButton) {
+  function retrieveSystemData (item) {
     window.fetch(
-      `https://api.alpha.ca.gov/WaterSystem?lat=${item.result.center[1]}&lon=${item.result.center[0]}`
+      `https://api.alpha.ca.gov/WaterSystem?stringLoc=${item}`
     )
       .then(response => {
         return response.json();
@@ -50,8 +90,7 @@ if (document.querySelector('body.js-water')) {
         gotSystem(systemData);
       })
       .catch(error => {
-        waterButton.innerHTML = 'Check your water';
-        document.querySelector('.system-data').style.display = 'block';
+        resetForm();
       });
   }
 
@@ -69,6 +108,4 @@ if (document.querySelector('body.js-water')) {
       })
       .catch(error => {});
   }
-
-  document.getElementById('geocoder').appendChild(window.geocoder.onAdd(map));
 }
