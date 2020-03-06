@@ -3,7 +3,7 @@ import getParameterByName from '../util/get-params.js';
 import Awesomplete from 'awesomplete-es6';
 
 if (document.querySelector('body.js-water')) {
-  const fieldSelector = '#testauto';
+  const fieldSelector = '.water-location-field';
   window.waterPlete = new Awesomplete(fieldSelector, {
     list: [],
     autoFirst: true,
