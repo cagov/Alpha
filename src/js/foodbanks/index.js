@@ -89,7 +89,9 @@ function loadMap () {
       timeout: 2000
     };
 
-    new GestureHandling(options).addTo(window.map);
+    /* eslint-disable no-unused-vars */
+    const stopAccidentalZoom = new GestureHandling(options).addTo(window.map);
+    /* eslint-enable no-unused-vars */
 
     window.map.on('load', function () {
       mapInteractions();
@@ -233,17 +235,6 @@ function displaySortedResults (coords) {
   }
 }
 
-/* eslint-disable no-unused-vars */
-function mapsSelector (lat, lon) {
-  event.preventDefault();
-  if ((navigator.platform.indexOf('iPhone') != -1) || (navigator.platform.indexOf('iPad') != -1) || (navigator.platform.indexOf('iPod') != -1)) {
-    window.open(`maps://maps.apple.com/maps?daddr=${lat},${lon}`);
-  } else {
-    window.open(`https://maps.google.com/maps?daddr=${lat},${lon}`);
-  }
-}
-/* eslint-enable no-unused-vars */
-
 if (document.querySelector('body.js-food-banks')) {
   // handle search autocomplete
   var cityNames = new Map();
@@ -252,8 +243,9 @@ if (document.querySelector('body.js-food-banks')) {
   });
   const awesompleteList = [...citiesJson.default, ...uniqueZipJson.default];
 
-  new Awesomplete('input[data-multiple]', {
+  const awesompleteSettings = {
     list: awesompleteList,
+    autoFirst: true,
     filter: function (text, input) {
       return Awesomplete.FILTER_CONTAINS(text, input.match(/[^,]*$/)[0]);
     },
@@ -276,7 +268,11 @@ if (document.querySelector('body.js-food-banks')) {
           reorient(data.features[0].center);
         });
     }
-  });
+  };
+
+  /* eslint-disable no-unused-vars */
+  const awesomplete = new Awesomplete('input[data-multiple]', awesompleteSettings);
+  /* eslint-enable no-unused-vars */
 
   document.querySelector('.js-food-lookup').addEventListener('submit', function (event) {
     event.preventDefault();
@@ -299,7 +295,7 @@ if (document.querySelector('body.js-food-banks')) {
 }
 
 // these get triggered from the map
-window.showAll = function () {
+window.showAll = function (event) {
   event.preventDefault();
   document.querySelectorAll('.card-set li.d-none').forEach(function (item) {
     item.classList.remove('d-none');
@@ -309,7 +305,7 @@ window.showAll = function () {
 
 window.mapsSelector = function (lat, lon) {
   event.preventDefault();
-  if ((navigator.platform.indexOf('iPhone') != -1) || (navigator.platform.indexOf('iPad') != -1) || (navigator.platform.indexOf('iPod') != -1)) {
+  if ((navigator.platform.indexOf('iPhone') !== -1) || (navigator.platform.indexOf('iPad') !== -1) || (navigator.platform.indexOf('iPod') !== -1)) {
     window.open(`maps://maps.apple.com/maps?daddr=${lat},${lon}`);
   } else {
     window.open(`https://maps.google.com/maps?daddr=${lat},${lon}`);

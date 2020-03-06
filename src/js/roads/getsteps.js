@@ -4,10 +4,10 @@ export default function getSteps (json) {
   steps.forEach((step) => {
     step.bannerInstructions.forEach((inst) => {
       const key = inst.primary.text;
-      if (key.indexOf('fork') === -1 && key.indexOf('/') === -1 && key.indexOf(';') === -1 && step.maneuver.type != 'off ramp') {
+      if (key.indexOf('fork') === -1 && key.indexOf('/') === -1 && key.indexOf(';') === -1 && step.maneuver.type !== 'off ramp') {
         inst.primary.components.forEach((component) => {
           const roadStr = component.text;
-          if ((roadStr.indexOf('CA ') == 0) || (roadStr.indexOf('I-') == 0) || (roadStr.indexOf('US ') == 0)) {
+          if ((roadStr.indexOf('CA ') === 0) || (roadStr.indexOf('I-') === 0) || (roadStr.indexOf('US ') === 0)) {
             stepMap.set(roadStr, inst);
           }
         });
