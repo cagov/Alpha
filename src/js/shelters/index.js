@@ -1,4 +1,4 @@
-import getParameterByName from './getparams.js';
+import getParameterByName from '../util/get-params.js';
 
 function displaySortedResults (query) {
   window.fetch(`https://api.alpha.ca.gov/HomelessShelters/?q=${query}`)

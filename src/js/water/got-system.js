@@ -155,7 +155,7 @@ export default function gotSystem (systemData) {
           cleanup();
         }
       })
-      .catch(error => {
+      .catch(() => {
         displaySafe(websiteBlurb, system);
         cleanup();
       });
