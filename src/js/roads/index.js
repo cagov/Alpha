@@ -37,15 +37,13 @@ export default function addListeners () {
 
   document.querySelector('.start-button').addEventListener('click', async function (event) {
     event.preventDefault();
-    // const findDest = await readDestination();
     const endPlace = document.querySelector('.js-geocoder-start input').value;
     const startCoords = await getLatLon(endPlace);
     const errorSelector = document.querySelector('.error2');
-    if (startCoords.status != '200') {
+    if (startCoords.status !== 200) {
       errorSelector.innerHTML = startCoords.message;
       errorSelector.style.display = 'block';
     } else {
-      hideErrors();
       window.startCoords = startCoords.center;
       document.querySelector('.js-geocoder-start input').value = startCoords.place_name;
       if (!isThatInCali(window.startCoords)) {
@@ -75,25 +73,6 @@ function isThatInCali (coords) {
   }
 }
 
-async function readDestination () {
-  const myPlace = document.querySelector('#geocoder input').value;
-  const endCoords = await getLatLon(myPlace);
-  const errorSelector = document.querySelector('.error1');
-  errorSelector.style.display = 'none';
-  if (endCoords.status != '200') {
-    errorSelector.innerHTML = endCoords.message;
-    errorSelector.style.display = 'block';
-  } else {
-    window.endCoords = endCoords.center;
-    document.querySelector('#geocoder input').value = endCoords.place_name;
-    if (!isThatInCali(window.endCoords)) {
-      errorSelector.innerHTML = roadTranslations["Sorry, we can't find that location. Please enter a valid location in California."];
-      errorSelector.style.display = 'block';
-    }
-  }
-  return 'done';
-}
-
 function setupRoadConditions () {
   if (typeof (window.mapboxgl) !== 'undefined') {
     window.mapboxgl.accessToken = 'pk.eyJ1IjoiYWFyb25oYW5zIiwiYSI6ImNqNGs4cms1ZzBocXkyd3FzZGs3a3VtamYifQ.HQjFfVzwwxwCmGr2nvnvSA';
@@ -104,7 +83,7 @@ function setupRoadConditions () {
       zoom: 13
     });
 
-    window.geocoder = new MapboxGeocoder({
+    window.geocoder = new window.MapboxGeocoder({
       accessToken: window.mapboxgl.accessToken,
       placeholder: ' ',
       // bbox: [-124.409591, 32.534156, -114.131211, 42.009518],
@@ -133,7 +112,6 @@ function setupRoadConditions () {
       bbox: [-124.7844079, 24.7433195, -66.9513812, 49.3457868],
       mapboxgl: window.mapboxgl
     }).on('result', async function (item) {
-      // const findDest = await readDestination();
       window.startCoords = item.result.center;
       const errorSelector = document.querySelector('.error2');
       errorSelector.style.display = 'none';

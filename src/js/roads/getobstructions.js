@@ -40,7 +40,7 @@ export default async function getObstructions (stepMap, coords, callback) {
 
   routeArr.forEach((route, index) => {
     const url = `https://api.alpha.ca.gov/LaneClosures/${route}?lat1=${coords.startCoords[1]}&lat2=${coords.endCoords[1]}&lon1=${coords.startCoords[0]}&lon2=${coords.endCoords[0]}&direction=${routeMap.get(routeArr[index])}`;
-    fetch(url)
+    window.fetch(url)
       .then((response) => {
         return response.json();
       })
@@ -52,34 +52,14 @@ export default async function getObstructions (stepMap, coords, callback) {
         receivedJSON++;
         checkOut();
       })
-      .catch(function (err) {
+      .catch(function () {
         receivedJSON++;
-        // console.log(err.message); // some coding error in handling happened
         checkOut();
       });
   });
 
-  function getKML (url) {
-    fetch(url)
-      .then((response) => {
-        return response.json();
-      })
-      .then((json) => {
-        json.forEach((issue) => {
-          finalObstructions.push(issue);
-        });
-        receivedJSON++;
-        checkOut();
-      })
-      .catch(function (err) {
-        receivedJSON++;
-        // console.log(err.message); // some coding error in handling happened
-        checkOut();
-      });
-  }
-
   function checkOut () {
-    if (receivedJSON == targetJSON) {
+    if (receivedJSON === targetJSON) {
       callback(finalObstructions);
     } else {
     }
