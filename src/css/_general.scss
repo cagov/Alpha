@@ -5,6 +5,11 @@ body {
 
 }
 
+/*
+html {
+	scroll-behavior: smooth;
+}
+*/
 /* Headers */
 
 h1,
@@ -67,6 +72,13 @@ p,
 li,
 .list-group-item {
     font-size: auto !important;
+}
+
+/* Colors */
+
+.bg-primary {
+	background-color: #0f1e6b !important;
+	background: linear-gradient(60deg, #0f1e6b 0%, #1f0f6b 70%);
 }
 
 /* Pagination */

@@ -288,6 +288,12 @@ module.exports = {
       excludeChunks: excludedChunks,
       minify: minificationOptions
     }),
+	new HtmlWebpackPlugin({
+      filename: 'en/office-of-digital-innovation/index.html',
+      template: 'src/office-of-digital-innovation/index.html',
+      excludeChunks: excludedChunks,
+      minify: minificationOptions
+    }),
 
     //* ************** End Begin Fire Stories
 
