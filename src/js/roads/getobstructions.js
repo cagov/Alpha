@@ -10,13 +10,13 @@ export default async function getObstructions (stepMap, coords, callback) {
   const routeMap = new Map();
   const routeArr = [];
 
-  stepMap.forEach((value, key, map) => {
+  stepMap.forEach(value => {
     // example: "Byron Highway CA 4 East" - which splits into three components
     const numParts = value.primary.components.length;
     const parts = value.primary.components;
     let filename = '';
     let direction = '';
-    parts.forEach((part) => {
+    parts.forEach(part => {
       if (part.text.indexOf('US ') > -1 || part.text.indexOf('CA ') > -1 || part.text.indexOf('I-') > -1) {
         filename = part.text.replace('US ', 'US-').replace('CA ', 'SR-');
       }
@@ -41,18 +41,18 @@ export default async function getObstructions (stepMap, coords, callback) {
   routeArr.forEach((route, index) => {
     const url = `https://api.alpha.ca.gov/LaneClosures/${route}?lat1=${coords.startCoords[1]}&lat2=${coords.endCoords[1]}&lon1=${coords.startCoords[0]}&lon2=${coords.endCoords[0]}&direction=${routeMap.get(routeArr[index])}`;
     window.fetch(url)
-      .then((response) => {
+      .then(response => {
         return response.json();
       })
-      .then((json) => {
-        json.route.forEach((issue) => {
+      .then(json => {
+        json.route.forEach(issue => {
           finalObstructions.push(issue);
         });
 
         receivedJSON++;
         checkOut();
       })
-      .catch(function () {
+      .catch(() => {
         receivedJSON++;
         checkOut();
       });

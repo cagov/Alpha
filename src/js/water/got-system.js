@@ -10,7 +10,7 @@ function capitalizer (name) {
   const allCap = ['mud'];
   const pieces = name.split(' ');
   let finalString = '';
-  pieces.forEach((piece) => {
+  pieces.forEach(piece => {
     if (noCap.indexOf(piece.toLowerCase()) > -1) {
       finalString += piece.toLowerCase() + ' ';
     } else if (allCap.indexOf(piece.toLowerCase()) > -1) {
@@ -62,7 +62,7 @@ export default function gotSystem (systemData) {
           history.forEach(violation => {
             const lastMatch = analyteMap.get(violation.ANALYTE_NAME);
             if (lastMatch) {
-              if (lastMatch.VIOL_END_DATE < violation.VIOL_END_DATE || (lastMatch.VIOL_END_DATE === violation.VIOL_END_DATE && violation.ENF_ACTION_TYPE_ISSUED === 'RETURN TO COMPLIANCE')) {
+              if (lastMatch.VIOL_END_DATE < violation.VIOL_END_DATE || lastMatch.VIOL_END_DATE === violation.VIOL_END_DATE && violation.ENF_ACTION_TYPE_ISSUED === 'RETURN TO COMPLIANCE') {
                 analyteMap.set(violation.ANALYTE_NAME, violation);
               }
             } else {
@@ -118,13 +118,13 @@ export default function gotSystem (systemData) {
                         analyte.ANALYTE_NAME
                       }</h5>
                       <div class="progress" style="height: 40px;">
-                        <div class="progress-bar bg-dark" aria-hidden="true" aria-valuenow="10" style="width: ${(100 / (analyte.RESULT /
-                            analyte.MCL_VALUE))}%"></div>
+                        <div class="progress-bar bg-dark" aria-hidden="true" aria-valuenow="10" style="width: ${100 / (analyte.RESULT /
+                            analyte.MCL_VALUE)}%"></div>
                         <div class="progress-bar  bg-white" aria-hidden="true" style="width: 1%;"><span class="limit">legal limit</span></div>
-                        <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" aria-hidden="true" style="width: ${(((analyte.RESULT /
-                              analyte.MCL_VALUE) *
-                              100) - 100) / ((analyte.RESULT /
-                                analyte.MCL_VALUE) *
+                        <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" aria-hidden="true" style="width: ${(analyte.RESULT /
+                              analyte.MCL_VALUE *
+                              100 - 100) / (analyte.RESULT /
+                                analyte.MCL_VALUE *
                                 100) * 100}%" ></div>
                       </div>
                     </div>`;

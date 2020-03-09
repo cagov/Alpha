@@ -36,7 +36,7 @@ if (document.querySelector('body.js-water')) {
 
   document
     .querySelector('.js-water-form')
-    .addEventListener('submit', function (event) {
+    .addEventListener('submit', event => {
       event.preventDefault();
       document.querySelector('.invalid-feedback').style.display = 'none';
     });
@@ -78,7 +78,7 @@ function queryLoc (q) {
     })
     .then(data => {
       const list = [];
-      data.match.forEach((item) => {
+      data.match.forEach(item => {
         list.push(item.address);
       });
       window.waterPlete.list = list;

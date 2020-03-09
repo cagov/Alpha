@@ -51,7 +51,7 @@ if (document.querySelector('.shelters')) {
     displaySortedResults(val);
   });
 
-  window.addEventListener('popstate', function () {
+  window.addEventListener('popstate', () => {
     if (query) {
       displaySortedResults(query);
     } else {

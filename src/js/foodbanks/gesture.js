@@ -49,7 +49,7 @@ class GestureHandling {
   addTo (map) {
     map.scrollZoom.disable();
 
-    this.helpElement.addEventListener('wheel', (event) => {
+    this.helpElement.addEventListener('wheel', event => {
       if (event.altKey || this.fullscreen === true) {
         event.preventDefault();
         this.hideHelp();
@@ -61,7 +61,7 @@ class GestureHandling {
       }
     });
 
-    map.getContainer().addEventListener('wheel', (event) => {
+    map.getContainer().addEventListener('wheel', event => {
       if (event.altKey || this.fullscreen === true) {
         event.preventDefault();
         if (!map.scrollZoom.isEnabled()) {
@@ -76,7 +76,7 @@ class GestureHandling {
       }
     });
 
-    this.helpElement.addEventListener('touchstart', (event) => {
+    this.helpElement.addEventListener('touchstart', event => {
       if (event.touches && (event.touches.length >= 2 || this.fullscreen === true)) {
         clearTimeout(this.timer);
         this.hideHelp();
@@ -85,7 +85,7 @@ class GestureHandling {
       }
     });
 
-    map.on('movestart', (event) => {
+    map.on('movestart', event => {
       if (event.originalEvent && 'touches' in event.originalEvent &&
               event.originalEvent.touches.length < 2 && this.fullscreen === false) {
         this.showHelp(map, this.settings.textMessageMobile);

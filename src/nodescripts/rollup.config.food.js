@@ -17,7 +17,7 @@ module.exports = {
       inject: false,
       template ({ inputHtml, bundle }) {
         let outputName = '';
-        Object.entries(bundle.bundle).forEach((item) => {
+        Object.entries(bundle.bundle).forEach(item => {
           outputName = item[1].fileName;
         });
         return inputHtml.replace(
