@@ -1,7 +1,7 @@
 import doubleTemplate from './double-template.js';
 const zipApiUrl = 'https://api.alpha.ca.gov/caziplookup/';
 
-export default function findWageMatch (city, wageJson, zipMap, cityNames) {
+export default function findWageMatch (city, wageJson, zipMap, cityNames, wageTranslations) {
   // if there are any letters this is not a zip code
   let wageData = [{ '25 or fewer': '12' }, { '26 or more': '13' }];
   if (city.match(/[a-zA-Z]+/g)) {
@@ -16,7 +16,8 @@ export default function findWageMatch (city, wageJson, zipMap, cityNames) {
     if (foundCity) {
       document.getElementById('answer').innerHTML = doubleTemplate(
         foundCity.replace(', CA', ''),
-        wageData
+        wageData,
+        wageTranslations
       );
     } else {
       document.querySelector(
@@ -39,11 +40,11 @@ export default function findWageMatch (city, wageJson, zipMap, cityNames) {
               wageData = item.wage;
               match = true;
               // creating multiple rows of html results if zip code crosses multiple cities
-              html += doubleTemplate(aCity.name, wageData);
+              html += doubleTemplate(aCity.name, wageData, wageTranslations);
             }
           });
           if (!match) {
-            html += doubleTemplate(aCity.name, wageData);
+            html += doubleTemplate(aCity.name, wageData, wageTranslations);
           }
         });
         document.getElementById('answer').innerHTML = html;

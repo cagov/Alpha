@@ -1,5 +1,4 @@
 import gotSystem from './got-system.js';
-import getParameterByName from '../util/get-params.js';
 import Awesomplete from 'awesomplete-es6';
 
 if (document.querySelector('body.js-water')) {
@@ -42,10 +41,9 @@ if (document.querySelector('body.js-water')) {
       document.querySelector('.invalid-feedback').style.display = 'none';
     });
 
-  if (getParameterByName('systemId')) {
-    const url = `https://api.alpha.ca.gov/WaterSystem?systemId=${getParameterByName(
-      'systemId'
-    )}`;
+  const systemid = new URLSearchParams(window.location.search).get('q');
+  if (systemid) {
+    const url = `https://api.alpha.ca.gov/WaterSystem?systemId=${systemid}`;
     window.fetch(url)
       .then(response => {
         return response.json();

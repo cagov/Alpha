@@ -1,7 +1,7 @@
-export default function doubleTemplate (location, wageData) {
+export default function doubleTemplate (location, wageData, wageTranslations) {
   return `
-  <h2>${wageTranslations['The minimum wage in']} ${location}, CA ${
-    wageTranslations.is
+  <h2>${wageTranslations['trans-The-minimum-wage-in']} ${location}, CA ${
+    wageTranslations['trans-is']
   }</h2>
   <table class="table">
     <thead>
@@ -16,7 +16,7 @@ export default function doubleTemplate (location, wageData) {
                   for (var key in wageitem) {
                     label = key;
                   }
-                  return `<th class="text-left bold" scope="col">${wageTranslations['Employers with']} ${wageTranslations[label]} ${wageTranslations.employees}</th>`;
+                  return `<th class="text-left bold" scope="col">${wageTranslations['trans-Employers-with']} ${wageTranslations['trans-' + label]} ${wageTranslations['trans-employees']}</th>`;
                 })
                 .join(' ')}`;
           }
@@ -32,7 +32,7 @@ export default function doubleTemplate (location, wageData) {
             for (var key in wageitem) {
               wageVal = wageitem[key];
             }
-            return `<td>$${wageVal}/${wageTranslations.hour}</td>`;
+            return `<td>$${wageVal}/${wageTranslations['trans-hour']}</td>`;
           })
           .join(' ')}
       </tr>

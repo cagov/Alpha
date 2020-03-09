@@ -1,16 +1,16 @@
 import * as wageJsonData from './wage-data.json';
 import * as citiesJson from '../../json/just-cities.json';
 import * as uniqueZipJson from '../../json/unique-zips-slim.json';
+import * as translationStrings from './strings.json';
 import Awesomplete from 'awesomplete-es6';
 import minWageHTML from './wage.js';
 import findWageMatch from './find-wage-match.js';
 
-// get wageTranslations from the template in the HTML
-
 if (document.querySelector('body.js-min-wage')) {
+  let wageTranslations = translationStrings.default;
   // display HTML of add city wages
   const wageJson = wageJsonData.MinimumWage[0]['2020-01-01T08:00:00'];
-  const html = buildDisplay(wageJsonData.MinimumWage);
+  const html = buildDisplay(wageJsonData.MinimumWage, wageTranslations);
   document.querySelector('.display-wage-by-city').innerHTML = html;
 
   // handle search autocomplete
@@ -43,7 +43,7 @@ if (document.querySelector('body.js-min-wage')) {
       var before = this.input.value.match(/^.+,\s*|/)[0];
       const finalval = before + text;
       this.input.value = finalval;
-      findWageMatch(finalval, wageJson, zipMap, cityNames);
+      findWageMatch(finalval, wageJson, zipMap, cityNames, wageTranslations);
     }
   };
 
@@ -54,7 +54,7 @@ if (document.querySelector('body.js-min-wage')) {
   document.querySelector('.js-wage-lookup').addEventListener('click', event => {
     event.preventDefault();
     const location = document.getElementById('location-query').value;
-    findWageMatch(location, wageJson, zipMap, cityNames);
+    findWageMatch(location, wageJson, zipMap, cityNames, wageTranslations);
   });
 
   // Add ARIA Label to Awesomeplete list
@@ -68,7 +68,7 @@ if (document.querySelector('body.js-min-wage')) {
   }
 }
 
-function buildDisplay (wageJson) {
+function buildDisplay (wageJson, wageTranslations) {
   return `
   ${wageJson
     .map(function (date) {
@@ -79,7 +79,7 @@ function buildDisplay (wageJson) {
         cityWages = date[key];
       }
       var options = { year: 'numeric', month: 'long', day: 'numeric' };
-      return minWageHTML(cityWages, options);
+      return minWageHTML(cityWages, options, label, wageTranslations);
     })
     .join(' ')}
 `;

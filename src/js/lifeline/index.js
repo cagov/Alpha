@@ -1,27 +1,29 @@
 if (window.location.href.endsWith('#2')) {
   document.querySelectorAll('.list-group-item-action').forEach((x, i) => {
-    if (i == 1) setTimeout(() => x.click(), 500);
+    if (i === 1) setTimeout(() => x.click(), 500);
   });
 }
 
 if (window.location.href.endsWith('#4')) {
   document.querySelectorAll('.list-group-item-action').forEach((x, i) => {
-    if (i == 3) setTimeout(() => x.click(), 500);
+    if (i === 3) setTimeout(() => x.click(), 500);
   });
 }
 
 // for /qualified
-const ul_programs = document.getElementById('ul-programs');
+const ulPrograms = document.getElementById('ul-programs');
 
-if (ul_programs) {
+if (ulPrograms) {
   const programs = new URLSearchParams(window.location.search).getAll('programs');
 
-  while (ul_programs.firstChild) { ul_programs.removeChild(ul_programs.firstChild); }
+  while (ulPrograms.firstChild) {
+    ulPrograms.removeChild(ulPrograms.firstChild);
+  }
 
   programs.forEach(x => {
     const li = document.createElement('li');
     li.innerText = x;
-    ul_programs.appendChild(li);
+    ulPrograms.appendChild(li);
   });
 }
 
@@ -36,15 +38,15 @@ checklabels.forEach(x => {
 // Count of programs selected
 const programs = new URLSearchParams(window.location.search).get('programs');
 if (programs) {
-  const btn_not_qualified = document.getElementById('btn-not-qualified');
-  const btn_not_sure_qualified = document.getElementById('btn-not-sure-qualified');
+  const btnNotQualified = document.getElementById('btn-not-qualified');
+  const btnNotSureQualified = document.getElementById('btn-not-sure-qualified');
 
-  if (btn_not_qualified && btn_not_sure_qualified) {
-    if (programs == 'no') { btn_not_sure_qualified.classList.toggle('d-none'); } else { btn_not_qualified.classList.toggle('d-none'); }
+  if (btnNotQualified && btnNotSureQualified) {
+    if (programs === 'no') { btnNotSureQualified.classList.toggle('d-none'); } else { btnNotQualified.classList.toggle('d-none'); }
   }
 
-  const programs_box = document.getElementById('programs');
-  if (programs_box) programs_box.value = programs;
+  const programsBox = document.getElementById('programs');
+  if (programsBox) programsBox.value = programs;
 }
 
 const household = new URLSearchParams(window.location.search).get('household');

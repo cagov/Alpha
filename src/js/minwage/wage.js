@@ -1,44 +1,45 @@
-export default function minWageHTML(cityWages, options) {
+export default function minWageHTML (cityWages, options, label, wageTranslations) {
+  console.log(wageTranslations)
   // /*html*/ comment below required to enable es6-string-html vscode syntax highlighting
-  /*html*/
+  /* html */
   return `<cwds-accordion>
   <div class="card">
     <button class="card-header accordion-alpha" type="button" aria-expanded="false">
       <div class="accordion-title">${
-        wageTranslations["Minimum wage rates as of"]
-      } ${new Date(label).toLocaleDateString("en-US", options)} </div>
+        wageTranslations['trans-Minimum-wage-rates-as-of']
+      } ${new Date(label).toLocaleDateString(wageTranslations['trans-key'], options)} </div>
     </button>
     <div class="card-container collapsed">
       <div class="card-body">
         <table class="table">
           <thead>
-              <th scope="col">${wageTranslations.Place}</th>
-              <th scope="col">${wageTranslations.Rate}</th>
+              <th scope="col">${wageTranslations['trans-Place']}</th>
+              <th scope="col">${wageTranslations['trans-Rate']}</th>
             </tr>
           </thead>
           <tbody>
           ${cityWages
-            .map(function(city) {
+            .map(function (city) {
               return ` <tr>
               <td>${city.name}</td>
               <td>
-                ${(function() {
+                ${(function () {
                   const wageData = city.wage;
-                  let output = "";
+                  let output = '';
                   if (
                     city.wage[0].everybody &&
                     city.wage[0].everybody.match(/[a-zA-Z]+/g)
                   ) {
                     output = `<p>${city.wage[0].everybody}</p>`;
                   } else {
-                    output = `<p>$${city.wage[0].everybody}/${wageTranslations.hour}</p>`;
+                    output = `<p>$${city.wage[0].everybody}/${wageTranslations['trans-hour']}</p>`;
                   }
                   if (wageData.length > 1) {
                     output = `
                       ${wageData
                         .map(wageitem => {
-                          let label = "";
-                          let value = "0";
+                          let label = '';
+                          let value = '0';
                           for (var key in wageitem) {
                             value = wageitem[key];
                             label = key;
@@ -46,17 +47,17 @@ export default function minWageHTML(cityWages, options) {
                           if (value.match(/[a-zA-Z]+/g)) {
                             return `<p>${value}</p>`;
                           } else {
-                            return `<p>$${value}/${wageTranslations.hour} ${wageTranslations["for employers with"]} ${wageTranslations[label]} ${wageTranslations.employees}</p>`;
+                            return `<p>$${value}/${wageTranslations['trans-hour']} ${wageTranslations['trans-for-employers-with']} ${wageTranslations['trans-' + label]} ${wageTranslations['trans-employees']}</p>`;
                           }
                         })
-                        .join(" ")}`;
+                        .join(' ')}`;
                   }
                   return output;
                 })()}
               </td>
             </tr>`;
             })
-            .join(" ")}
+            .join(' ')}
           </tbody>
         </table>
       </div>
