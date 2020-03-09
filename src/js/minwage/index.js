@@ -2,44 +2,10 @@ import * as wageJsonData from './wage-data.json';
 import * as citiesJson from '../../json/just-cities.json';
 import * as uniqueZipJson from '../../json/unique-zips-slim.json';
 import Awesomplete from 'awesomplete-es6';
+import minWageHTML from './wage.js';
+import findWageMatch from './find-wage-match.js';
 
-const zipApiUrl = 'https://api.alpha.ca.gov/caziplookup/';
-
-const wageTrStrings = {
-  es: {
-    key: 'es',
-    'The minimum wage in': 'Mostrar bancos de alimentos cerca de',
-    'Minimum wage rates as of': 'Aumento de salario mínimo a partir del',
-    Place: 'Ubicación',
-    Rate: 'Tasa',
-    '25 or fewer': '25 o menos',
-    '26 or more': '26 o más',
-    is: 'es',
-    hour: 'hora',
-    employees: 'empleados',
-    'Employers with': 'Empleadores con',
-    'for employers with': 'para empleadores con'
-  },
-  en: {
-    key: 'en-US',
-    'The minimum wage in': 'The minimum wage in',
-    'Minimum wage rates as of': 'Minimum wage rates as of',
-    Place: 'Place',
-    Rate: 'Rate',
-    '25 or fewer': '25 or fewer',
-    '26 or more': '26 or more',
-    is: 'is',
-    hour: 'hour',
-    employees: 'employees',
-    'Employers with': 'Employers with',
-    'for employers with': 'for employers with'
-  }
-};
-
-let wageTranslations = wageTrStrings.en;
-if (window.location.pathname.indexOf('/es/') === 0) {
-  wageTranslations = wageTrStrings.es;
-}
+// get wageTranslations from the template in the HTML
 
 if (document.querySelector('body.js-min-wage')) {
   // display HTML of add city wages
@@ -57,7 +23,6 @@ if (document.querySelector('body.js-min-wage')) {
     cleanCities.push(item.replace(', CA', ''));
   });
 
-  // let awesompleteList = [...cleanCities, ...uniqueZipArray];
   const awesompleteList = [...cleanCities, ...uniqueZipJson.default];
 
   const awesompleteSettings = {
@@ -103,103 +68,6 @@ if (document.querySelector('body.js-min-wage')) {
   }
 }
 
-function findWageMatch (city, wageJson, zipMap, cityNames) {
-  // if there are any letters this is not a zip code
-  let wageData = [{ '25 or fewer': '12' }, { '26 or more': '13' }];
-  if (city.match(/[a-zA-Z]+/g)) {
-    wageJson.forEach(item => {
-      if (item.name === city) {
-        wageData = item.wage;
-      }
-    });
-
-    // try match in cityNames
-    const foundCity = cityNames.get(city.toLowerCase());
-    if (foundCity) {
-      document.getElementById('answer').innerHTML = doubleTemplate(
-        foundCity.replace(', CA', ''),
-        wageData
-      );
-    } else {
-      document.querySelector(
-        '.wage-city-search .invalid-feedback'
-      ).style.display = 'block';
-    }
-  } else {
-    // no letters, try to find a match in zipMap
-    window.fetch(zipApiUrl + `${city}`)
-      .then(response => {
-        return response.json();
-      })
-      .then(foundZip => {
-        let html = '';
-        foundZip.cities.forEach(aCity => {
-          wageData = [{ '25 or fewer': '12' }, { '26 or more': '13' }];
-          let match = false;
-          wageJson.forEach(item => {
-            if (item.name === aCity.name) {
-              wageData = item.wage;
-              match = true;
-              // creating multiple rows of html results if zip code crosses multiple cities
-              html += doubleTemplate(aCity.name, wageData);
-            }
-          });
-          if (!match) {
-            html += doubleTemplate(aCity.name, wageData);
-          }
-        });
-        document.getElementById('answer').innerHTML = html;
-      })
-      .catch(() => {
-        document.querySelector(
-          '.wage-city-search .invalid-feedback'
-        ).style.display = 'block';
-      });
-  }
-}
-
-function doubleTemplate (location, wageData) {
-  return `
-  <h2>${wageTranslations['The minimum wage in']} ${location}, CA ${
-    wageTranslations.is
-  }</h2>
-  <table class="table">
-    <thead>
-      <tr>
-        ${(function () {
-          let output = '';
-          if (wageData.length > 1) {
-            output = `
-              ${wageData
-                .map(wageitem => {
-                  let label = '';
-                  for (var key in wageitem) {
-                    label = key;
-                  }
-                  return `<th class="text-left bold" scope="col">${wageTranslations['Employers with']} ${wageTranslations[label]} ${wageTranslations.employees}</th>`;
-                })
-                .join(' ')}`;
-          }
-          return output;
-        })()}
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        ${wageData
-          .map(wageitem => {
-            let wageVal = '';
-            for (var key in wageitem) {
-              wageVal = wageitem[key];
-            }
-            return `<td>$${wageVal}/${wageTranslations.hour}</td>`;
-          })
-          .join(' ')}
-      </tr>
-    </tbody>
-  </table>`;
-}
-
 function buildDisplay (wageJson) {
   return `
   ${wageJson
@@ -211,69 +79,7 @@ function buildDisplay (wageJson) {
         cityWages = date[key];
       }
       var options = { year: 'numeric', month: 'long', day: 'numeric' };
-      return `
-    <cwds-accordion>
-      <div class="card">
-        <button class="card-header accordion-alpha" type="button" aria-expanded="false">
-          <div class="accordion-title">${
-            wageTranslations['Minimum wage rates as of']
-          } ${new Date(label).toLocaleDateString('en-US', options)} </div>
-        </button>
-        <div class="card-container collapsed">
-          <div class="card-body">
-            <table class="table">
-              <thead>
-                  <th scope="col">${wageTranslations.Place}</th>
-                  <th scope="col">${wageTranslations.Rate}</th>
-                </tr>
-              </thead>
-              <tbody>
-              ${cityWages
-                .map(function (city) {
-                  return ` <tr>
-                  <td>${city.name}</td>
-                  <td>
-                    ${(function () {
-                      const wageData = city.wage;
-                      let output = '';
-                      if (
-                        city.wage[0].everybody &&
-                        city.wage[0].everybody.match(/[a-zA-Z]+/g)
-                      ) {
-                        output = `<p>${city.wage[0].everybody}</p>`;
-                      } else {
-                        output = `<p>$${city.wage[0].everybody}/${wageTranslations.hour}</p>`;
-                      }
-                      if (wageData.length > 1) {
-                        output = `
-                          ${wageData
-                            .map(wageitem => {
-                              let label = '';
-                              let value = '0';
-                              for (var key in wageitem) {
-                                value = wageitem[key];
-                                label = key;
-                              }
-                              if (value.match(/[a-zA-Z]+/g)) {
-                                return `<p>${value}</p>`;
-                              } else {
-                                return `<p>$${value}/${wageTranslations.hour} ${wageTranslations['for employers with']} ${wageTranslations[label]} ${wageTranslations.employees}</p>`;
-                              }
-                            })
-                            .join(' ')}`;
-                      }
-                      return output;
-                    })()}
-                  </td>
-                </tr>`;
-                })
-                .join(' ')}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </cwds-accordion>`;
+      return minWageHTML(cityWages, options);
     })
     .join(' ')}
 `;
