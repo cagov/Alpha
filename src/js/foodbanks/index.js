@@ -228,7 +228,7 @@ function displaySortedResults (coords) {
               <a href="${food.website}" target="_self">${translations.Visit} ${food.title}'s ${translations.website}</a><br>
               <p>${food.phone}</p>
               <a target="_new" href="maps://maps.apple.com/maps?daddr=${item.geometry.coordinates[1]},${item.geometry.coordinates[0]}">
-                <a target="_new" class="action-link" href="https://maps.google.com/maps?daddr=${item.geometry.coordinates[1]},${item.geometry.coordinates[0]}" aria-label="${translations['directions to']} ${food.title}ß" target="_self"class="btn btn-sm">${translations['Get directions']}</a>
+                <a target="_new" wclass="action-link" href="https://maps.google.com/maps?daddr=${item.geometry.coordinates[1]},${item.geometry.coordinates[0]}" aria-label="${translations['directions to']} ${food.title}ß" target="_self"class="btn btn-sm">${translations['Get directions']}</a>
               </a>
             </div>
           </li>${showMore}`;
