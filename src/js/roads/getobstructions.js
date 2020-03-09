@@ -61,7 +61,6 @@ export default async function getObstructions (stepMap, coords, callback) {
   function checkOut () {
     if (receivedJSON === targetJSON) {
       callback(finalObstructions);
-    } else {
     }
   }
   // reverted promise.all version which didn't include proper catch logic because sometimes routes can be missing

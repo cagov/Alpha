@@ -41,7 +41,7 @@ Array.prototype.forEach.call(document.querySelectorAll('.tooltip-button'), funct
   });
 
   // Remove on blur
-  toggletip.addEventListener('blur', function (e) {
+  toggletip.addEventListener('blur', function () {
     liveRegion.innerHTML = '';
   });
 });

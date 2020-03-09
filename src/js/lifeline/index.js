@@ -136,7 +136,7 @@ Array.prototype.forEach.call(
     });
 
     // Remove on blur
-    toggletip.addEventListener('blur', function (e) {
+    toggletip.addEventListener('blur', function () {
       liveRegion.innerHTML = '';
     });
   }

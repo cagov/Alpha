@@ -33,7 +33,7 @@ function displaySortedResults (query) {
         results.appendChild(node);
       }
     })
-    .catch((e) => {
+    .catch(() => {
       document.getElementById('div-fail').classList.remove('d-none');
     });
 }
@@ -51,8 +51,7 @@ if (document.querySelector('.shelters')) {
     displaySortedResults(val);
   });
 
-  window.addEventListener('popstate', function (event) {
-    const query = new URLSearchParams(window.location.search).get('q');
+  window.addEventListener('popstate', function () {
     if (query) {
       displaySortedResults(query);
     } else {

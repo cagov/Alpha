@@ -37,7 +37,7 @@ class CWDSHolidays extends window.HTMLElement {
 
         // Add events for the holiday credit links to expand the bottom details
         document.querySelectorAll('a[href*="#credits"]').forEach(item =>
-          item.addEventListener('click', function (event) {
+          item.addEventListener('click', function () {
             const height = document.querySelector('.js-credits .card-container').style.height;
             if (!height || height === '0px') { document.querySelector('.js-credits button.accordion-alpha').click(); }
           })

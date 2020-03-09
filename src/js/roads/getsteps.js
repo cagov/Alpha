@@ -11,7 +11,6 @@ export default function getSteps (json) {
             stepMap.set(roadStr, inst);
           }
         });
-      } else {
       }
     });
   });
