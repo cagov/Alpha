@@ -40,12 +40,12 @@ fs.createReadStream(globalfilepath)
   .on('end', langloop);
 
 function langloop () {
-  if (!csvresults || csvresults.length == 0) throw console.error(globalfilepath + ' is empty!');
+  if (!csvresults || csvresults.length === 0) throw console.error(globalfilepath + ' is empty!');
 
   // Check for duplicate searches
   const dupe = csvresults.map((x, row) => ({ row: row + 2, path: x.path, token: x.token })).filter((value, index) =>
     csvresults.find((value2, index2) =>
-      index != index2 && value.token == value2.token && value.path.startsWith(value2.path))
+      index !== index2 && value.token === value2.token && value.path.startsWith(value2.path))
   );
   if (dupe.length > 0) { console.warn(`WARNING: ${globalfilepath} has ${dupe.length} non-distinct path/token/en combo(s)! =>\n\n ${JSON.stringify(dupe, null, 4)}`); }
 
@@ -108,16 +108,15 @@ function replaceonelanguage (targetlang) {
         targetlang,
         removeenfrompath(fulldomainurl + targetlang) + '[FullPath]/',
         removeenfrompath('/' + targetlang + '/'),
-        targetlangs.map(l => l.code != targetlang ? `<a class="dropdown-item" rel="alternate" lang="${l.code}" hreflang="${l.code}" href="${removeenfrompath('/' + l.code)}[FullPath]/">${l.name}</a>` : '').join(''),
-        targetlangs.map(l => l.code != targetlang ? `<link rel="alternate" hreflang="${l.code}" href="${removeenfrompath(fulldomainurl + l.code)}[FullPath]/">` : '').join(''),
+        targetlangs.map(l => l.code !== targetlang ? `<a class="dropdown-item" rel="alternate" lang="${l.code}" hreflang="${l.code}" href="${removeenfrompath('/' + l.code)}[FullPath]/">${l.name}</a>` : '').join(''),
+        targetlangs.map(l => l.code !== targetlang ? `<link rel="alternate" hreflang="${l.code}" href="${removeenfrompath(fulldomainurl + l.code)}[FullPath]/">` : '').join(''),
         (match, ...args) => fileFromArgs(args, targetlang)
       ]
     });
   });
 
-  if (targetlang == 'en')
-  // English default goes to root
-  {
+  if (targetlang === 'en') {
+    // English default goes to root
     fse.copy(getdestination(targetlang), sourcefolder, { overwrite: true, errorOnExist: false }, err => {
       fse.remove(getdestination(targetlang));
       if (err) return console.error(err);
@@ -131,7 +130,7 @@ function replaceonelanguage (targetlang) {
     fse.remove(source);
     console.log('Removed temp lang folder');
 
-    sortedcsvresults.filter(x => x.numMatches == 0).forEach(x =>
+    sortedcsvresults.filter(x => x.numMatches === 0).forEach(x =>
       console.warn(`WARNING - no language match for "${x.path} -> ${x.token}"`));
   }
 } // replaceonelanguage
@@ -143,17 +142,17 @@ function replaceonetoken (data, targetlang, files) {
   , 'g')]; // add token with literal square brackets
 
   const to = data[targetlang]
-    .replace(/<\/\s*/g, '<\/'); // fixes broken html from auto-translate "</ i>" => "</i>"
+    .replace(/<\/\s*/g, '</'); // fixes broken html from auto-translate "</ i>" => "</i>"
 
   // replace this token, add the number of matches to the list
   replace.sync({ files, from, to, countMatches: true })
-    .forEach(x => data.numMatches += x.numMatches || 0);
+    .forEach(x => { data.numMatches += x.numMatches; });
 }
 
 function fileFromArgs (args, targetlang) {
   return args.pop()
     .replace(/\/index.html$/, '') // Remove index.html
-    .replace(new RegExp('^' + getdestination(targetlang).replace(/\//, '\/')), ''); // Remove "public/en"
+    .replace(new RegExp('^' + getdestination(targetlang).replace(/\//, '/')), ''); // Remove "public/en"
 }
 
 function getdestination (targetlang) {
