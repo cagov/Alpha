@@ -172,9 +172,11 @@ function setupMapInteractions () {
         .setHTML(`${food.title}<br>
           ${food.address}<br>
             ${food.address2}<br>
-          <a href="${food.website}" target="_self">${translations.Visit} ${food.title}'s ${translations.website}</a><br>
+          <a target="_new" href="${food.website}" target="_self">${translations.Visit} ${food.title}'s ${translations.website}</a><br>
           ${food.phone}<br>
-          <a href="geo:${item.geometry.coordinates[1]},${item.geometry.coordinates[0]}" onclick="mapsSelector(${item.geometry.coordinates[1]},${item.geometry.coordinates[0]})" aria-label="${translations['directions to']} ${food.title}ß" target="_self"class="btn btn-primary">${translations['Get directions']}</a>`)
+          <a href="maps://maps.apple.com/maps?daddr=${item.geometry.coordinates[1]},${item.geometry.coordinates[0]}">
+            <a target="_new" href="https://maps.google.com/maps?daddr=${item.geometry.coordinates[1]},${item.geometry.coordinates[0]}" aria-label="${translations['directions to']} ${food.title}ß" target="_self"class="btn btn-primary">${translations['Get directions']}</a>
+          </a>`)
         .addTo(window.map);
     });
 
@@ -225,7 +227,9 @@ function displaySortedResults (coords) {
                 ${food.address2}<br>
               <a href="${food.website}" target="_self">${translations.Visit} ${food.title}'s ${translations.website}</a><br>
               <p>${food.phone}</p>
-              <a class="action-link" href="geo:${item.geometry.coordinates[1]},${item.geometry.coordinates[0]}" onclick="mapsSelector(${item.geometry.coordinates[1]},${item.geometry.coordinates[0]})" aria-label="${translations['directions to']} ${food.title}ß" target="_self"class="btn btn-sm">${translations['Get directions']}</a>
+              <a target="_new" href="maps://maps.apple.com/maps?daddr=${item.geometry.coordinates[1]},${item.geometry.coordinates[0]}">
+                <a target="_new" class="action-link" href="https://maps.google.com/maps?daddr=${item.geometry.coordinates[1]},${item.geometry.coordinates[0]}" aria-label="${translations['directions to']} ${food.title}ß" target="_self"class="btn btn-sm">${translations['Get directions']}</a>
+              </a>
             </div>
           </li>${showMore}`;
         }).join(' ')}
@@ -241,10 +245,8 @@ if (document.querySelector('body.js-food-banks')) {
   citiesJson.default.forEach(function (item) {
     cityNames.set(item.replace(', CA', '').toLowerCase(), item);
   });
-  const awesompleteList = [...citiesJson.default, ...uniqueZipJson.default];
 
   const awesompleteSettings = {
-    list: awesompleteList,
     autoFirst: true,
     filter: function (text, input) {
       return Awesomplete.FILTER_CONTAINS(text, input.match(/[^,]*$/)[0]);
@@ -270,9 +272,7 @@ if (document.querySelector('body.js-food-banks')) {
     }
   };
 
-  /* eslint-disable no-unused-vars */
-  const awesomplete = new Awesomplete('input[data-multiple]', awesompleteSettings);
-  /* eslint-enable no-unused-vars */
+  new Awesomplete('input[data-multiple]', awesompleteSettings).list = [...citiesJson.default, ...uniqueZipJson.default];
 
   document.querySelector('.js-food-lookup').addEventListener('submit', function (event) {
     event.preventDefault();
@@ -301,15 +301,6 @@ window.showAll = function (event) {
     item.classList.remove('d-none');
   });
   document.querySelector('.js-expand-link').style.display = 'none';
-};
-
-window.mapsSelector = function (lat, lon) {
-  event.preventDefault();
-  if ((navigator.platform.indexOf('iPhone') !== -1) || (navigator.platform.indexOf('iPad') !== -1) || (navigator.platform.indexOf('iPod') !== -1)) {
-    window.open(`maps://maps.apple.com/maps?daddr=${lat},${lon}`);
-  } else {
-    window.open(`https://maps.google.com/maps?daddr=${lat},${lon}`);
-  }
 };
 
 // Change ARIA Label to Awesomeplete list
