@@ -1,3 +1,5 @@
+import Awesomplete from 'awesomplete-es6';
+
 function processPassedItem (linkOutgoingOrIncomming, nameAgencyOrService) {
   var passedName = nameAgencyOrService.toLowerCase();
 
@@ -49,7 +51,7 @@ function buildAlphaAllList (idOfDivToFill, lang, agencyLandingPage) {
 
   function loadResults () {
     if (loadCount === 0) {
-      var putApiRequest = new XMLHttpRequest();
+      var putApiRequest = new window.XMLHttpRequest();
       putApiRequest.open('POST', builtApiUrl, true);
       putApiRequest.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
@@ -90,8 +92,8 @@ function buildAlphaAllList (idOfDivToFill, lang, agencyLandingPage) {
         var theOrgListCount = 0;
 
         for (var i = 0; i < arrayLength; i++) {
-          var currentNavCharacter = result[i].AgencyName.charAt(0);
-          if (!(currentNavCharacter == previousNavCharacter)) {
+          currentNavCharacter = result[i].AgencyName.charAt(0);
+          if (!(currentNavCharacter === previousNavCharacter)) {
             navText +=
               '<li class="page-item"><a class="page-link" href="#' +
               previousNavCharacter.toLowerCase() +
@@ -148,9 +150,7 @@ function buildAlphaAllList (idOfDivToFill, lang, agencyLandingPage) {
         document.getElementById(idOfDivToFill).innerHTML = displayText;
 
         var input = document.getElementById('searchitem');
-        new Awesomplete(input, {
-          list: theOrgListArray
-        });
+        new Awesomplete(input, {}).list = theOrgListArray;
       }
     }
   }
@@ -160,8 +160,8 @@ function buildAlphaAllList (idOfDivToFill, lang, agencyLandingPage) {
 
 if (
   window.location.href.indexOf('contact-us/') > -1 &&
-  window.location.href.indexOf('contact-us/results/') == -1 &&
-  window.location.href.indexOf('contact-us/home/') == -1
+  window.location.href.indexOf('contact-us/results/') === -1 &&
+  window.location.href.indexOf('contact-us/home/') === -1
 ) {
   buildAlphaAllList('agency-group', 'en', 'home/');
 }
@@ -194,7 +194,7 @@ function buildResultsList (
 
   function loadResults () {
     if (loadCount === 0) {
-      var putApiRequest = new XMLHttpRequest();
+      var putApiRequest = new window.XMLHttpRequest();
       putApiRequest.open('POST', builtApiUrl, true);
       putApiRequest.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
@@ -229,7 +229,6 @@ function buildResultsList (
 
         var arrayLength = resultsArray.length;
         var displayText = '';
-        var recordCount = 0;
 
         if (arrayLength === 0) {
           displayText =
@@ -261,7 +260,7 @@ function buildResultsList (
 
 function cleanInputItem (itemSubmitted) {
   var punctuationless = decodeURIComponent(itemSubmitted).replace(
-    /[.,\/#!$%\^"&\*;:{}=\-_`~()]/g,
+    /[.,/#!$%^"&*;:{}=\-_`~()]/g,
     ''
   );
   itemSubmitted = punctuationless.replace(/\s{2,}/g, ' ');
@@ -278,7 +277,7 @@ function getQueryStringValue (uri, key) {
     uri.replace(
       new RegExp(
         '^(?:.*[&\\?]' +
-          encodeURIComponent(key).replace(/[\.\+\*]/g, '\\$&') +
+          encodeURIComponent(key).replace(/[.+*]/g, '\\$&') +
           '(?:\\=([^&]*))?)?.*$',
         'i'
       ),
@@ -329,7 +328,7 @@ function showAgencyDetails (searchvalue, lang) {
 
   function loadResults () {
     if (loadCount === 0) {
-      var getApiRequest = new XMLHttpRequest();
+      var getApiRequest = new window.XMLHttpRequest();
       getApiRequest.open('GET', builtApiUrl, true);
       getApiRequest.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
