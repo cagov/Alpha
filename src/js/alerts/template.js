@@ -10,7 +10,7 @@ export default function templateHTML (inputval, counties) {
       .then(myzip => {
         lookupSuccess(myzip.county, inputval, isZip, counties);
       })
-      .catch(e => {
+      .catch(() => {
         lookupFail();
       });
   } else {

@@ -66,7 +66,7 @@ function loadMap () {
   st.rel = 'stylesheet';
   document.head.appendChild(st);
 
-  loadScript('https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js', function () {
+  loadScript('https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js', () => {
     window.mapboxgl.accessToken = mapboxToken;
 
     window.map = new window.mapboxgl.Map({
@@ -93,7 +93,7 @@ function loadMap () {
     const stopAccidentalZoom = new GestureHandling(options).addTo(window.map);
     /* eslint-enable no-unused-vars */
 
-    window.map.on('load', function () {
+    window.map.on('load', () => {
       mapInteractions();
     });
   });
@@ -104,12 +104,12 @@ if (document.querySelector('body.js-food-banks')) {
 
   // get full geojson foodbanks
   window.fetch('https://api.alpha.ca.gov/FoodBanks')
-    .then(function (resp) { return resp.json(); })
-    .then(function (data) {
+    .then(resp => { return resp.json(); })
+    .then(data => {
       window.foodLocations = data;
       loadMap();
     })
-    .catch((e) => {
+    .catch(e => {
       console.log('error occurred retrieving full set of food bank locations');
       console.log(e);
     });
@@ -134,7 +134,7 @@ function mapInteractions () {
 }
 
 function setupMapInteractions () {
-  window.map.loadImage('/img/marker.png', function (error, image) {
+  window.map.loadImage('/img/marker.png', (error, image) => {
     if (error) throw error;
     window.map.addImage('custom-marker', image);
 
@@ -155,7 +155,7 @@ function setupMapInteractions () {
     );
     // When a click event occurs on a feature in the foods layer, open a popup at the
     // location of the feature, with description HTML from its properties.
-    window.map.on('click', 'foods', function (e) {
+    window.map.on('click', 'foods', e => {
       let coordinates = e.features[0].geometry.coordinates.slice();
       let item = e.features[0];
       let food = item.properties;
@@ -181,12 +181,12 @@ function setupMapInteractions () {
     });
 
     // Change the cursor to a pointer when the mouse is over the foods layer.
-    window.map.on('mouseenter', 'foods', function () {
+    window.map.on('mouseenter', 'foods', () => {
       window.map.getCanvas().style.cursor = 'pointer';
     });
 
     // Change it back to a pointer when it leaves.
-    window.map.on('mouseleave', 'foods', function () {
+    window.map.on('mouseleave', 'foods', () => {
       window.map.getCanvas().style.cursor = '';
     });
   });
@@ -194,16 +194,16 @@ function setupMapInteractions () {
 
 function displaySortedResults (coords) {
   if (!window.foodLocations) {
-    setTimeout(function () {
+    setTimeout(() => {
       displaySortedResults(coords);
     }, 300);
   } else {
     window.fetch(`https://api.alpha.ca.gov/FoodBanks?lat=${coords[1]}&lon=${coords[0]}`)
-      .then(function (resp) { return resp.json(); })
-      .then(function (data) {
+      .then(resp => { return resp.json(); })
+      .then(data => {
         const outputLocs = data;
         const html = `<ul class="pl-0 card-set">
-        ${outputLocs.map(function (item, itemindx) {
+        ${outputLocs.map((item, itemindx) => {
           let food = item.properties;
           let displayClass = '';
           if (itemindx > 2) {
@@ -242,7 +242,7 @@ function displaySortedResults (coords) {
 if (document.querySelector('body.js-food-banks')) {
   // handle search autocomplete
   let cityNames = new Map();
-  citiesJson.default.forEach(function (item) {
+  citiesJson.default.forEach(item => {
     cityNames.set(item.replace(', CA', '').toLowerCase(), item);
   });
 
@@ -264,8 +264,8 @@ if (document.querySelector('body.js-food-banks')) {
       let cabb = '-124.409591,32.534156,-114.131211,42.009518';
       let url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${finalval}.json?bbox=${cabb}&access_token=${mapboxToken}`;
       window.fetch(url)
-        .then(function (resp) { return resp.json(); })
-        .then(function (data) {
+        .then(resp => { return resp.json(); })
+        .then(data => {
           document.querySelector('.js-location-display').innerHTML = '<h2>Showing food banks near ' + finalval + '</h2>';
           reorient(data.features[0].center);
         });
@@ -281,8 +281,8 @@ if (document.querySelector('body.js-food-banks')) {
     let cabb = '-124.409591,32.534156,-114.131211,42.009518';
     let url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${val}.json?bbox=${cabb}&access_token=${mapboxToken}`;
     window.fetch(url)
-      .then(function (resp) { return resp.json(); })
-      .then(function (data) {
+      .then(resp => { return resp.json(); })
+      .then(data => {
         document.querySelector('.js-location-display').innerHTML = `<h2>${translations['Showing food banks near']} ${val}</h2>`;
         if (data.features.length > 0) {
           reorient(data.features[0].center);
@@ -297,7 +297,7 @@ if (document.querySelector('body.js-food-banks')) {
 // these get triggered from the map
 window.showAll = function (event) {
   event.preventDefault();
-  document.querySelectorAll('.card-set li.d-none').forEach(function (item) {
+  document.querySelectorAll('.card-set li.d-none').forEach(item => {
     item.classList.remove('d-none');
   });
   document.querySelector('.js-expand-link').style.display = 'none';

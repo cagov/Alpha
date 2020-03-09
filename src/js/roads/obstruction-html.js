@@ -1,4 +1,4 @@
-export default function createHTML (myObstructions, startCoords, endCoords) {
+export default function createHTML (myObstructions) {
   const roadStrings = {
     es: {
       key: 'es',
@@ -36,7 +36,7 @@ export default function createHTML (myObstructions, startCoords, endCoords) {
 
   const obstructionMap = new Map();
   const incidentMap = new Map();
-  myObstructions.forEach((obs) => {
+  myObstructions.forEach(obs => {
     if (obs.name && (obs.name.indexOf('CHP Incident') > -1 || obs.name === 'Caltrans Highway Information')) {
       incidentMap.set(`${obs.lat},${obs.lon}`, obs);
     } else {
@@ -53,10 +53,10 @@ export default function createHTML (myObstructions, startCoords, endCoords) {
 
   let majorhtml = `<hr><h2 class="mt-20">${roadTranslations['Road conditions for your trip']}</h2>`;
   let foundMajor = false;
-  obstructionMap.forEach((obstructionArray, key, map) => {
+  obstructionMap.forEach((obstructionArray, key) => {
     let internalHTML = '';
     const uniqueObsMap = new Map();
-    obstructionArray.forEach((obs) => {
+    obstructionArray.forEach(obs => {
       if (!uniqueObsMap.get(obs.lcs.closure.closureID)) {
         uniqueObsMap.set(obs.lcs.closure.closureID, 'here');
         if (obs.lcs.closure.isCHINReportable === 'true') {
@@ -88,7 +88,7 @@ export default function createHTML (myObstructions, startCoords, endCoords) {
   if (incidentMap.length > 0) {
     majorhtml += '<h2>Incidents in the area</h2>';
   }
-  incidentMap.forEach((item, key, map) => {
+  incidentMap.forEach(item => {
     majorhtml += item.description;
   });
 
