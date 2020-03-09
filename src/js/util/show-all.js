@@ -1,7 +1,7 @@
-document.querySelectorAll('.show-all').forEach(x => {
-  const isCloseButton = x.classList.contains('d-none');
+document.querySelectorAll('.show-all').forEach(btn => {
+  const isCloseButton = btn.classList.contains('d-none');
 
-  x.addEventListener('click', () => {
+  btn.addEventListener('click', () => {
     let wait = 0;
     document
       .querySelectorAll(
@@ -9,7 +9,7 @@ document.querySelectorAll('.show-all').forEach(x => {
           isCloseButton ? '.list-open' : ':not(.list-open)'
         }`
       )
-      .forEach(x => setTimeout(() => x.click(), 50 * wait++));
+      .forEach(lstitem => setTimeout(() => lstitem.click(), 50 * wait++));
 
     document
       .querySelectorAll('.show-all')

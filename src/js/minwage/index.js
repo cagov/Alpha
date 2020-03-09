@@ -203,7 +203,7 @@ function doubleTemplate (location, wageData) {
 function buildDisplay (wageJson) {
   return `
   ${wageJson
-    .map(function (date) {
+    .map(date => {
       let label = '';
       let cityWages = '';
       for (let key in date) {
@@ -229,7 +229,7 @@ function buildDisplay (wageJson) {
               </thead>
               <tbody>
               ${cityWages
-                .map(function (city) {
+                .map(city => {
                   return ` <tr>
                   <td>${city.name}</td>
                   <td>

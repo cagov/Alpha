@@ -113,7 +113,10 @@
       "no-extra-parens": "warn",
       "block-scoped-var": "warn",
       "class-methods-use-this": "warn",
-      "no-shadow": "warn"
+      "no-shadow": "warn",
+      "arrow-parens": ["warn", "as-needed"],
+      "no-undef": "warn",
+      "prefer-arrow-callback": "warn"
     }
   }
 }

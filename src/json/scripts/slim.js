@@ -6,7 +6,7 @@ const zips = JSON.parse(fs.readFileSync('../unique-zips.json', 'utf8'));
 
 const slim = [];
 
-zips.forEach((item) => {
+zips.forEach(item => {
   for (let key in item) {
     slim.push(key);
     fs.writeFileSync('../zips/' + key + '.json', JSON.stringify(item[key]), 'utf8');
