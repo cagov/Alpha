@@ -75,7 +75,7 @@ if (document.querySelector('body.js-min-wage')) {
     },
 
     replace: function (text) {
-      var before = this.input.value.match(/^.+,\s*|/)[0];
+      let before = this.input.value.match(/^.+,\s*|/)[0];
       const finalval = before + text;
       this.input.value = finalval;
       findWageMatch(finalval, wageJson, zipMap, cityNames);
@@ -173,7 +173,7 @@ function doubleTemplate (location, wageData) {
               ${wageData
                 .map(wageitem => {
                   let label = '';
-                  for (var key in wageitem) {
+                  for (let key in wageitem) {
                     label = key;
                   }
                   return `<th class="text-left bold" scope="col">${wageTranslations['Employers with']} ${wageTranslations[label]} ${wageTranslations.employees}</th>`;
@@ -189,7 +189,7 @@ function doubleTemplate (location, wageData) {
         ${wageData
           .map(wageitem => {
             let wageVal = '';
-            for (var key in wageitem) {
+            for (let key in wageitem) {
               wageVal = wageitem[key];
             }
             return `<td>$${wageVal}/${wageTranslations.hour}</td>`;
@@ -206,11 +206,11 @@ function buildDisplay (wageJson) {
     .map(function (date) {
       let label = '';
       let cityWages = '';
-      for (var key in date) {
+      for (let key in date) {
         label = key;
         cityWages = date[key];
       }
-      var options = { year: 'numeric', month: 'long', day: 'numeric' };
+      let options = { year: 'numeric', month: 'long', day: 'numeric' };
       return `
     <cwds-accordion>
       <div class="card">
@@ -250,7 +250,7 @@ function buildDisplay (wageJson) {
                             .map(wageitem => {
                               let label = '';
                               let value = '0';
-                              for (var key in wageitem) {
+                              for (let key in wageitem) {
                                 value = wageitem[key];
                                 label = key;
                               }

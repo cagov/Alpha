@@ -27,8 +27,8 @@ if (document.querySelector('body.js-alerts')) {
     },
 
     replace: function (text) {
-      var before = this.input.value.match(/^.+,\s*|/)[0];
-      var finalval = before + text;
+      let before = this.input.value.match(/^.+,\s*|/)[0];
+      let finalval = before + text;
       this.input.value = finalval;
       templateHTML(finalval, counties);
     }
@@ -44,7 +44,7 @@ if (document.querySelector('body.js-alerts')) {
       event.preventDefault();
       document.querySelector('.invalid-feedback').style.display = 'none';
       document.querySelector('.city-search').classList.remove('is-invalid');
-      var finalval = this.querySelector('input').value;
+      let finalval = this.querySelector('input').value;
       templateHTML(finalval);
     });
 }
