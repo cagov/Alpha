@@ -1,5 +1,3 @@
-import getParameterByName from '../util/get-params.js';
-
 function displaySortedResults (query) {
   window.fetch(`https://api.alpha.ca.gov/HomelessShelters/?q=${query}`)
     .then(response => response.json())
@@ -40,7 +38,7 @@ function displaySortedResults (query) {
     });
 }
 
-const query = getParameterByName('q');
+const query = new URLSearchParams(window.location.search).get('q');
 if (query) {
   displaySortedResults(query);
 }
@@ -54,7 +52,7 @@ if (document.querySelector('.shelters')) {
   });
 
   window.addEventListener('popstate', function (event) {
-    const query = getParameterByName('q');
+    const query = new URLSearchParams(window.location.search).get('q');
     if (query) {
       displaySortedResults(query);
     } else {
