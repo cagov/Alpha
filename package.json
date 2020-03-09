@@ -23,7 +23,8 @@
     "build:rollup": "rollup --config src/nodescripts/rollup.config.js && rollup --config src/nodescripts/rollup.config.food.js",
     "build:rollupend": "mv src/js/es6/*.js public/js && rm src/js/es6/*.html",
     "lint:js": "semistandard --parser babel-eslint --env jest | snazzy",
-    "lint:fixjs": "semistandard --parser babel-eslint --env jest --fix"
+    "lint:fixjs": "semistandard --parser babel-eslint --env jest --fix",
+    "eslint": "node_modules/eslint/bin/eslint.js ./src"
   },
   "repository": {
     "type": "git",
@@ -92,5 +93,27 @@
       "/src/js/es5.js",
       "/src/js/polyfills/*.js"
     ]
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 11,
+      "sourceType": "module",
+      "ecmaFeatures": {
+          "jsx": true
+      }
+    },
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "extends": "eslint:recommended",
+    "ignorePatterns": ["regenerator-runtime.js"],
+    "rules": {
+      "no-var": "warn",
+      "no-extra-parens": "warn",
+      "block-scoped-var": "warn",
+      "class-methods-use-this": "warn",
+      "no-shadow": "warn"
+    }
   }
 }
