@@ -47,7 +47,7 @@ export default function minWageHTML (cityWages, options, label, wageTranslations
                           if (value.match(/[a-zA-Z]+/g)) {
                             return `<p>${value}</p>`;
                           } else {
-                            return `<p>$${value}/${wageTranslations['trans-hour']} ${wageTranslations['trans-for-employers-with']} ${wageTranslations['trans-' + label]} ${wageTranslations['trans-employees']}</p>`;
+                            return `<p>$${value}/${wageTranslations['trans-hour']} ${wageTranslations['trans-for-employers-with']} ${wageTranslations['trans-' + label.replace(/ /g,'-')]} ${wageTranslations['trans-employees']}</p>`;
                           }
                         })
                         .join(' ')}`;

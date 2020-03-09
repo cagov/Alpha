@@ -93,7 +93,7 @@ function buildDisplay (wageJson, wageTranslations) {
         cityWages = date[key];
       }
       var options = { year: 'numeric', month: 'long', day: 'numeric' };
-      return minWageHTML(cityWages, options, label, wageTranslations);
+      return minWageHTML(cityWages, options, label.replace(/ /g,'-'), wageTranslations);
     })
     .join(' ')}
 `;

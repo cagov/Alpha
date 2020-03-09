@@ -16,7 +16,7 @@ export default function doubleTemplate (location, wageData, wageTranslations) {
                   for (var key in wageitem) {
                     label = key;
                   }
-                  return `<th class="text-left bold" scope="col">${wageTranslations['trans-employers-with']} ${wageTranslations['trans-' + label]} ${wageTranslations['trans-employees']}</th>`;
+                  return `<th class="text-left bold" scope="col">${wageTranslations['trans-employers-with']} ${wageTranslations['trans-' + label.replace(/ /g,'-')]} ${wageTranslations['trans-employees']}</th>`;
                 })
                 .join(' ')}`;
           }
