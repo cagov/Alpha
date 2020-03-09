@@ -33,12 +33,12 @@ if (window.location.pathname.indexOf('/es/') === 0) {
 }
 
 function getGeo () {
-  var geoSuccess = function (position) {
+  let geoSuccess = function (position) {
     // Do magic with location
     document.querySelector('.js-location-display').innerHTML = `<h2>${translations['Showing food banks near']} ${translations.you}</h2>`;
     reorient([position.coords.longitude, position.coords.latitude]);
   };
-  var geoError = function (error) {
+  let geoError = function (error) {
     switch (error.code) {
       case error.TIMEOUT:
         // The user didn't accept the callout
@@ -51,7 +51,7 @@ function getGeo () {
 }
 
 function loadScript (url, callback) {
-  var script = document.createElement('script');
+  let script = document.createElement('script');
   script.type = 'text/javascript';
   script.onload = function () {
     callback();
@@ -61,7 +61,7 @@ function loadScript (url, callback) {
 }
 
 function loadMap () {
-  var st = document.createElement('link');
+  let st = document.createElement('link');
   st.href = 'https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css';
   st.rel = 'stylesheet';
   document.head.appendChild(st);
@@ -156,9 +156,9 @@ function setupMapInteractions () {
     // When a click event occurs on a feature in the foods layer, open a popup at the
     // location of the feature, with description HTML from its properties.
     window.map.on('click', 'foods', function (e) {
-      var coordinates = e.features[0].geometry.coordinates.slice();
-      var item = e.features[0];
-      var food = item.properties;
+      let coordinates = e.features[0].geometry.coordinates.slice();
+      let item = e.features[0];
+      let food = item.properties;
 
       // Ensure that if the map is zoomed out such that multiple
       // copies of the feature are visible, the popup appears
@@ -204,12 +204,12 @@ function displaySortedResults (coords) {
         const outputLocs = data;
         const html = `<ul class="pl-0 card-set">
         ${outputLocs.map(function (item, itemindx) {
-          var food = item.properties;
-          var displayClass = '';
+          let food = item.properties;
+          let displayClass = '';
           if (itemindx > 2) {
             displayClass = 'd-none';
           }
-          var showMore = '';
+          let showMore = '';
           if (itemindx === 2) {
             showMore = `<li class="card mb-20 js-expand-link border-0">
               <div class="card-body">
@@ -241,7 +241,7 @@ function displaySortedResults (coords) {
 
 if (document.querySelector('body.js-food-banks')) {
   // handle search autocomplete
-  var cityNames = new Map();
+  let cityNames = new Map();
   citiesJson.default.forEach(function (item) {
     cityNames.set(item.replace(', CA', '').toLowerCase(), item);
   });
@@ -258,11 +258,11 @@ if (document.querySelector('body.js-food-banks')) {
     },
 
     replace: function (text) {
-      var before = this.input.value.match(/^.+,\s*|/)[0];
-      var finalval = before + text;
+      let before = this.input.value.match(/^.+,\s*|/)[0];
+      let finalval = before + text;
       this.input.value = finalval;
-      var cabb = '-124.409591,32.534156,-114.131211,42.009518';
-      var url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${finalval}.json?bbox=${cabb}&access_token=${mapboxToken}`;
+      let cabb = '-124.409591,32.534156,-114.131211,42.009518';
+      let url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${finalval}.json?bbox=${cabb}&access_token=${mapboxToken}`;
       window.fetch(url)
         .then(function (resp) { return resp.json(); })
         .then(function (data) {
@@ -277,9 +277,9 @@ if (document.querySelector('body.js-food-banks')) {
   document.querySelector('.js-food-lookup').addEventListener('submit', function (event) {
     event.preventDefault();
     document.querySelector('.invalid-feedback').style.display = 'none';
-    var val = this.querySelector('input').value;
-    var cabb = '-124.409591,32.534156,-114.131211,42.009518';
-    var url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${val}.json?bbox=${cabb}&access_token=${mapboxToken}`;
+    let val = this.querySelector('input').value;
+    let cabb = '-124.409591,32.534156,-114.131211,42.009518';
+    let url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${val}.json?bbox=${cabb}&access_token=${mapboxToken}`;
     window.fetch(url)
       .then(function (resp) { return resp.json(); })
       .then(function (data) {

@@ -15,8 +15,8 @@ if (document.querySelector('body.js-water')) {
     },
 
     replace: function (text) {
-      var before = this.input.value.match(/^.+,\s*|/)[0];
-      var finalval = before + text;
+      let before = this.input.value.match(/^.+,\s*|/)[0];
+      let finalval = before + text;
       this.input.value = finalval;
       answerChosen(finalval);
     }

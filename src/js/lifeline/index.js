@@ -99,20 +99,20 @@ Array.prototype.forEach.call(
     toggletip.setAttribute('aria-label', 'Word Definition');
 
     // wrap a container around the button
-    var container = document.createElement('span');
+    let container = document.createElement('span');
     container.setAttribute('class', 'tooltip-container');
     toggletip.parentNode.insertBefore(container, toggletip);
     container.appendChild(toggletip);
 
     // Create the live region
-    var liveRegion = document.createElement('span');
+    let liveRegion = document.createElement('span');
     liveRegion.setAttribute('role', 'status');
 
     // Place the live region in the container
     container.appendChild(liveRegion);
 
     // Get the message from the data-content element
-    var message = toggletip.getAttribute('data-tooltip-content');
+    let message = toggletip.getAttribute('data-tooltip-content');
 
     // Toggle the message
     toggletip.addEventListener('click', function () {

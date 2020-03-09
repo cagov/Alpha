@@ -40,7 +40,7 @@ if (document.querySelector('body.js-min-wage')) {
     },
 
     replace: function (text) {
-      var before = this.input.value.match(/^.+,\s*|/)[0];
+      let before = this.input.value.match(/^.+,\s*|/)[0];
       const finalval = before + text;
       this.input.value = finalval;
       findWageMatch(finalval, wageJson, zipMap, cityNames, wageTranslations);
@@ -74,7 +74,7 @@ function buildDisplay (wageJson, wageTranslations) {
     .map(function (date) {
       let label = '';
       let cityWages = '';
-      for (var key in date) {
+      for (let key in date) {
         label = key;
         cityWages = date[key];
       }
