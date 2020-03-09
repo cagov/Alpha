@@ -243,13 +243,18 @@ path,token,en,es,zh
 /find-minimum-wage-your-city,,These California cities and counties have their own minimum wage laws.,Estas ciudades y condados de California tienen sus propias leyes de salario mínimo,这些市县在加利福尼亚州有自己的最低工资法
 /find-minimum-wage-your-city,,More about the,Más sobre el,更多关于
 /find-minimum-wage-your-city,,minimum wage,salario mínimo,最低工资标准
-/find-food-banks-near-you,,Find food banks near you - Alpha.CA.gov,Encuentre bancos de alimentos cerca de usted - Alpha.CA.gov,寻找食物银行您身边 -  Alpha.CA.gov
-/find-food-banks-near-you,,We'll help you find the California food banks and pantries closest to you.,Le ayudaremos a encontrar los bancos de alimentos y despensas más cercanos a usted.,我们将帮助您寻找食物银行和最接近茶水间给你。
-/find-food-banks-near-you,,Find food banks near you,Encuentre bancos de alimentos cerca de usted,查找您附近的食品银行
-/find-food-banks-near-you,,We'll help you find the food banks and pantries closest to you.,Le ayudaremos a encontrar los bancos de alimentos y despensas más cercanos a usted.,我们将帮助您寻找食物银行和最接近茶水间给你。
-/find-food-banks-near-you,,Please enter your city or zip code:,Por favor introduzca su ciudad o código postal:,请输入您的城市或邮政编码：
-/find-food-banks-near-you,[lang-form-button],Search,Buscar,搜索
-/find-food-banks-near-you,,Please enter a city or zip code in California.,Por favor introduzca una ciudad o código postal:,请输入城市名称或邮政编码：
+/find-minimum-wage-your-city,,en-US,es,ch
+/find-minimum-wage-your-city,,The minimum wage in,El salario mínimo en,最低工资标准
+/find-minimum-wage-your-city,,Minimum wage rates as of,las tasas de salario mínimo a partir de,从最低工资标准
+/find-minimum-wage-your-city,,Place,Sitio,现场
+/find-minimum-wage-your-city,,Rate,Velocidad,速度
+/find-minimum-wage-your-city,,25 or fewer,25 o menos,25以下
+/find-minimum-wage-your-city,,26 or more,26 o más,26以上
+/find-minimum-wage-your-city,,is,es,这是
+/find-minimum-wage-your-city,,hour,hora,时间
+/find-minimum-wage-your-city,,employees,empleados,员工
+/find-minimum-wage-your-city,,Employers with,Los empleadores con,与雇主
+/find-minimum-wage-your-city,,for employers with,para los empleadores con,雇主
 /find-food-banks-near-you,,Other resources,Otros recursos,其他资源
 /find-food-banks-near-you,,Text us to find food close to you,Envíe un mensaje de texto para encontrar comida cerca de usted,发送短信去寻找食物靠近你
 /find-food-banks-near-you,,Text us anytime at,Envíenos un mensaje de texto en cualquier momento al,在任何时候发送短信
