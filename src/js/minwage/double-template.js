@@ -1,6 +1,6 @@
 export default function doubleTemplate (location, wageData, wageTranslations) {
   return `
-  <h2>${wageTranslations['trans-The-minimum-wage-in']} ${location}, CA ${
+  <h2>${wageTranslations['trans-the-minimum-wage-in']} ${location}, CA ${
     wageTranslations['trans-is']
   }</h2>
   <table class="table">
@@ -16,7 +16,7 @@ export default function doubleTemplate (location, wageData, wageTranslations) {
                   for (var key in wageitem) {
                     label = key;
                   }
-                  return `<th class="text-left bold" scope="col">${wageTranslations['trans-Employers-with']} ${wageTranslations['trans-' + label]} ${wageTranslations['trans-employees']}</th>`;
+                  return `<th class="text-left bold" scope="col">${wageTranslations['trans-employers-with']} ${wageTranslations['trans-' + label]} ${wageTranslations['trans-employees']}</th>`;
                 })
                 .join(' ')}`;
           }

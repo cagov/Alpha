@@ -6,15 +6,15 @@ export default function minWageHTML (cityWages, options, label, wageTranslations
   <div class="card">
     <button class="card-header accordion-alpha" type="button" aria-expanded="false">
       <div class="accordion-title">${
-        wageTranslations['trans-Minimum-wage-rates-as-of']
+        wageTranslations['trans-minimum-wage-rates-as-of']
       } ${new Date(label).toLocaleDateString(wageTranslations['trans-key'], options)} </div>
     </button>
     <div class="card-container collapsed">
       <div class="card-body">
         <table class="table">
           <thead>
-              <th scope="col">${wageTranslations['trans-Place']}</th>
-              <th scope="col">${wageTranslations['trans-Rate']}</th>
+              <th scope="col">${wageTranslations['trans-place']}</th>
+              <th scope="col">${wageTranslations['trans-rate']}</th>
             </tr>
           </thead>
           <tbody>

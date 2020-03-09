@@ -57,7 +57,7 @@ path,token,en,es,zh
 /index.html,,Utilities,Servicios publicos,公共服务
 /index.html,,Housing,Vivienda,住宅
 /index.html,,Disaster,Desastre,灾难
-/index.html,,State information,información de estado,状态信息
+/index.html,,State information,Información del Estado,国家信息
 /index.html,,Local services,Servicios locales,本地服务
 /index.html,,Transportation,Transporte,运输
 /about,,About us,Sobre nosotros,关于我们
@@ -67,7 +67,7 @@ path,token,en,es,zh
 /about,,About Alpha.CA.gov - State of California,Sobre Alpha.CA.gov - Estado de California,关于Alpha.CA.gov  - 加利福尼亚州
 /about,,"We're a small but mighty team of public servants and outside experts in user research and design. Together, we're reimagining","Somos un equipo pequeño pero poderoso de los funcionarios públicos y expertos externos en la investigación y el diseño de usuario. Juntos, estamos reimaginando",我们是外部公共官员和研究和设计用户专家组成的小而强大的团队。总之，我们reimagining
 /about,,CA.gov</a> with and for the people of California.,CA.gov</a> con y para la gente de California.,CA.gov </a>，提供和加州人民。
-/about,,Our first step: Make CA.gov easier for Californians to use. We've been working to help you access the services and information you need since December 2019.,Nuestro primer paso: hacer CA.gov más fácil para los californianos a su uso. Hemos estado trabajando para ayudarle a acceder a los servicios e información que necesita desde diciembre del año 2019.,我们第一步：制作CA.gov容易加州使用。我们一直在努力帮助您访问从2019十二月需要的服务和信息。
+/about,,Our first step: Make CA.gov easier for Californians to use. We've been working to help you access the services and information you need since December 2019.,Nuestro primer paso: hacer CA.gov más fácil para los californianos a su uso. Hemos estado trabajando para ayudarle a acceder a los servicios e información que necesita desde diciembre del año 2019.,我们第一步：制作CA.gov容易加州使用。我们一直在努力帮助您访问从2019年十二月需要的服务和信息。
 /about,,We're sharing our insights on our,Estamos compartiendo nuestras ideas en nuestra,我们分享我们的想法在我们的
 /about,,blog,Blog,博客
 /about,,Twitter,Gorjeo,颤音
@@ -595,7 +595,7 @@ path,token,en,es,zh
 /apply-for-unemployment-insurance/how-to-apply,,Fax it to:,Por fax al:,传真至：
 /apply-for-unemployment-insurance,,After you apply,Después de presentar su solicitud,提交申请后，
 /apply-for-unemployment-insurance/after-you-apply,,What to expect after you apply for unemployment insurance (UI).,Qué esperar después de solicitar el seguro de desempleo (UI).,申请失业保险（UI）后会发生什么。
-/apply-for-unemployment-insurance/after-you-apply,,We might call you,Le podríamos llamar,你可以调用
+/apply-for-unemployment-insurance/after-you-apply,,We might call you,Le podríamos llamar,您可以拨打
 /apply-for-unemployment-insurance/after-you-apply,,"If we have any questions about whether you can get UI, we’ll schedule a call with you.","Si tenemos alguna pregunta acerca de si se puede obtener el seguro de desempleo (UI), programaremos una llamada con usted.",如果你对你是否能得到失业保险有任何疑问（UI），我们安排与你的电话。
 /apply-for-unemployment-insurance/after-you-apply,,"If you don’t pick up, we’ll use the information from your application to make a decision. Your application might be delayed or rejected.","Si no respondes, vamos a utilizar la información de su solicitud para tomar una decisión. Su aplicación podría ser retrasada o rechazada.",如果你不回应，我们将使用你的应用程序中的信息来做出决定。您的申请可能被延迟或拒绝。
 /apply-for-unemployment-insurance/after-you-apply,,You can reschedule your call,Usted puede cambiar la cita de su llamada,您可以重新安排您的通话
