@@ -30,12 +30,12 @@ if (window.location.pathname.indexOf('/zh/') === 0) {
 }
 
 export default function addListeners () {
-  document.querySelector('.destination-button').addEventListener('click', async function (event) {
+  document.querySelector('.destination-button').addEventListener('click', async event => {
     event.preventDefault();
     // deleted this button
   });
 
-  document.querySelector('.start-button').addEventListener('click', async function (event) {
+  document.querySelector('.start-button').addEventListener('click', async event => {
     event.preventDefault();
     const endPlace = document.querySelector('.js-geocoder-start input').value;
     const startCoords = await getLatLon(endPlace);
@@ -89,7 +89,7 @@ function setupRoadConditions () {
       // bbox: [-124.409591, 32.534156, -114.131211, 42.009518],
       bbox: [-124.7844079, 24.7433195, -66.9513812, 49.3457868],
       mapboxgl: window.mapboxgl
-    }).on('result', async function (item) {
+    }).on('result', async item => {
       window.endCoords = item.result.center;
       const errorSelector = document.querySelector('.error1');
       errorSelector.style.display = 'none';
@@ -111,7 +111,7 @@ function setupRoadConditions () {
       placeholder: ' ',
       bbox: [-124.7844079, 24.7433195, -66.9513812, 49.3457868],
       mapboxgl: window.mapboxgl
-    }).on('result', async function (item) {
+    }).on('result', async item => {
       window.startCoords = item.result.center;
       const errorSelector = document.querySelector('.error2');
       errorSelector.style.display = 'none';
@@ -136,9 +136,9 @@ function displayObs () {
   if (window.endCoords && window.startCoords) {
     if (isThatInCali(window.startCoords) && isThatInCali(window.endCoords)) {
       getDirections(`coordinates=${window.startCoords};${window.endCoords}&steps=true&banner_instructions=true`)
-        .then((data) => {
+        .then(data => {
           const stepMap = getSteps(data);
-          getObstructions(stepMap, { startCoords: window.startCoords, endCoords: window.endCoords }, function (myObstructions) {
+          getObstructions(stepMap, { startCoords: window.startCoords, endCoords: window.endCoords }, myObstructions => {
             document.querySelector('.obstructions-major').innerHTML = createHTML(myObstructions, window.startCoords, window.endCoords);
           });
         });
