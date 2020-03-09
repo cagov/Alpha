@@ -29,7 +29,7 @@ const download = (url, dest, cb) => {
   });
 };
 
-download('https://docs.google.com/spreadsheets/d/e/2PACX-1vT8aUVX-O2vt3Z0y3k0pipxtILfx7E5VFk4yKGOm_nniHF8DNAeaZcM_yMma8rpOP0xjv9N8fi9lPGo/pub?output=csv&extra=' + (new Date().getTime().toString()), './src/lang-global.csv', function (error) {
+download('https://docs.google.com/spreadsheets/d/e/2PACX-1vT8aUVX-O2vt3Z0y3k0pipxtILfx7E5VFk4yKGOm_nniHF8DNAeaZcM_yMma8rpOP0xjv9N8fi9lPGo/pub?output=csv&extra=' + new Date().getTime().toString(), './src/lang-global.csv', function (error) {
   if (error) {
     console.log(error);
   }

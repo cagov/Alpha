@@ -18,7 +18,7 @@ const targetlangs = [
   { code: 'zh', name: '中文(简体)' }
 ];
 
-var remainingfolders = targetlangs.length; // for checking if it is safe to delete
+let remainingfolders = targetlangs.length; // for checking if it is safe to delete
 
 const csvresults = [];
 let sortedcsvresults = [];

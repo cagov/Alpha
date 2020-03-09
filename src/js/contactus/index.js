@@ -1,15 +1,15 @@
 import Awesomplete from 'awesomplete-es6';
 
 function processPassedItem (linkOutgoingOrIncomming, nameAgencyOrService) {
-  var passedName = nameAgencyOrService.toLowerCase();
+  let passedName = nameAgencyOrService.toLowerCase();
 
   if (linkOutgoingOrIncomming === 'Out') {
     passedName = passedName.replace(/^[ ]+|[ ]+$/g, '');
     passedName = passedName.replace('-', 'dashline');
     passedName = encodeURIComponent(passedName);
 
-    var i = 0;
-    var strPassedNameLengthOut = passedName.length;
+    let i = 0;
+    let strPassedNameLengthOut = passedName.length;
 
     for (i; i < strPassedNameLengthOut; i++) {
       passedName = passedName.replace('%20', '-');
@@ -24,8 +24,8 @@ function processPassedItem (linkOutgoingOrIncomming, nameAgencyOrService) {
     // --- END --- Code Mod to support stange proccesing of job training links  ----
   } else {
     passedName = decodeURIComponent(passedName);
-    var j = 0;
-    var strPassedNameLength = passedName.length;
+    let j = 0;
+    let strPassedNameLength = passedName.length;
     for (j; j < strPassedNameLength; j++) {
       passedName = passedName.replace('-', ' ');
     }
@@ -35,23 +35,23 @@ function processPassedItem (linkOutgoingOrIncomming, nameAgencyOrService) {
 }
 
 function buildAlphaAllList (idOfDivToFill, lang, agencyLandingPage) {
-  var alphaListingResults = [];
+  let alphaListingResults = [];
 
   if (lang === '') {
     lang = 'en';
   }
 
   // var apiLocation = "https://as-go-alph-d-002.azurewebsites.net/";
-  var apiLocation = 'https://api.stateentityprofile.ca.gov/';
+  let apiLocation = 'https://api.stateentityprofile.ca.gov/';
 
-  var builtApiUrl =
+  let builtApiUrl =
     apiLocation + 'api/Agencies/Get?page=0&pageSize=0&lang=' + lang;
-  var loadFlag = false;
-  var loadCount = 0;
+  let loadFlag = false;
+  let loadCount = 0;
 
   function loadResults () {
     if (loadCount === 0) {
-      var putApiRequest = new window.XMLHttpRequest();
+      let putApiRequest = new window.XMLHttpRequest();
       putApiRequest.open('POST', builtApiUrl, true);
       putApiRequest.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
@@ -81,17 +81,17 @@ function buildAlphaAllList (idOfDivToFill, lang, agencyLandingPage) {
       ); /* this checks the flag every 100 milliseconds */
     } else {
       if (loadCount < 50) {
-        var result = JSON.parse(alphaListingResults[0]).Data;
-        var arrayLength = result.length;
-        var displayText = '';
-        var recordCount = 0;
-        var previousNavCharacter = 'A';
-        var currentNavCharacter = '';
-        var navText = '';
-        var theOrgListArray = [];
-        var theOrgListCount = 0;
+        let result = JSON.parse(alphaListingResults[0]).Data;
+        let arrayLength = result.length;
+        let displayText = '';
+        let recordCount = 0;
+        let previousNavCharacter = 'A';
+        let currentNavCharacter = '';
+        let navText = '';
+        let theOrgListArray = [];
+        let theOrgListCount = 0;
 
-        for (var i = 0; i < arrayLength; i++) {
+        for (let i = 0; i < arrayLength; i++) {
           currentNavCharacter = result[i].AgencyName.charAt(0);
           if (!(currentNavCharacter === previousNavCharacter)) {
             navText +=
@@ -120,7 +120,7 @@ function buildAlphaAllList (idOfDivToFill, lang, agencyLandingPage) {
               recordCount += 1;
             }
           }
-          var agencyNameToPass = processPassedItem(
+          let agencyNameToPass = processPassedItem(
             'Out',
             result[i].FriendlyName
           );
@@ -149,7 +149,7 @@ function buildAlphaAllList (idOfDivToFill, lang, agencyLandingPage) {
         document.getElementById('agency-nav').innerHTML = navText;
         document.getElementById(idOfDivToFill).innerHTML = displayText;
 
-        var input = document.getElementById('searchitem');
+        let input = document.getElementById('searchitem');
         new Awesomplete(input, {}).list = theOrgListArray;
       }
     }
@@ -172,12 +172,12 @@ function buildResultsList (
   lang,
   agencyLandingPage
 ) {
-  var alphaListingResults = [];
+  let alphaListingResults = [];
   if (lang === '') {
     lang = 'en';
   }
 
-  var data = JSON.stringify({
+  let data = JSON.stringify({
     lang: lang,
     name: termToSearchFor,
     page: 0,
@@ -186,15 +186,15 @@ function buildResultsList (
   });
 
   // var apiLocation = "https://as-go-alph-d-002.azurewebsites.net/";
-  var apiLocation = 'https://api.stateentityprofile.ca.gov/';
+  let apiLocation = 'https://api.stateentityprofile.ca.gov/';
 
-  var builtApiUrl = apiLocation + 'api/Agencies/Query';
-  var loadFlag = false;
-  var loadCount = 0;
+  let builtApiUrl = apiLocation + 'api/Agencies/Query';
+  let loadFlag = false;
+  let loadCount = 0;
 
   function loadResults () {
     if (loadCount === 0) {
-      var putApiRequest = new window.XMLHttpRequest();
+      let putApiRequest = new window.XMLHttpRequest();
       putApiRequest.open('POST', builtApiUrl, true);
       putApiRequest.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
@@ -224,18 +224,18 @@ function buildResultsList (
       ); /* this checks the flag every 100 milliseconds */
     } else {
       if (loadCount < 50) {
-        var theResults = JSON.parse(alphaListingResults[0]);
-        var resultsArray = theResults.Results;
+        let theResults = JSON.parse(alphaListingResults[0]);
+        let resultsArray = theResults.Results;
 
-        var arrayLength = resultsArray.length;
-        var displayText = '';
+        let arrayLength = resultsArray.length;
+        let displayText = '';
 
         if (arrayLength === 0) {
           displayText =
             '<div class="alert alert-warning" role="alert">No results returned for information submitted.</div>';
         } else {
-          for (var i = 0; i < arrayLength; i++) {
-            var agencyNameToPass = processPassedItem(
+          for (let i = 0; i < arrayLength; i++) {
+            let agencyNameToPass = processPassedItem(
               'Out',
               resultsArray[i].FriendlyName
             );
@@ -259,12 +259,12 @@ function buildResultsList (
 }
 
 function cleanInputItem (itemSubmitted) {
-  var punctuationless = decodeURIComponent(itemSubmitted).replace(
+  let punctuationless = decodeURIComponent(itemSubmitted).replace(
     /[.,/#!$%^"&*;:{}=\-_`~()]/g,
     ''
   );
   itemSubmitted = punctuationless.replace(/\s{2,}/g, ' ');
-  var temp = document.createElement('div');
+  let temp = document.createElement('div');
   temp.textContent = itemSubmitted;
   itemSubmitted = temp.innerHTML;
   itemSubmitted = itemSubmitted.split('+').join(' ');
@@ -287,7 +287,7 @@ function getQueryStringValue (uri, key) {
 }
 
 if (window.location.href.indexOf('contact-us/results/') > -1) {
-  var searchTerm = cleanInputItem(
+  let searchTerm = cleanInputItem(
     getQueryStringValue(window.location.href, 'searchitem')
   );
 
@@ -306,29 +306,29 @@ if (window.location.href.indexOf('contact-us/results/') > -1) {
 }
 
 function showAgencyDetails (searchvalue, lang) {
-  var agencyDetailsResults = [];
-  var agencyNamePassed = processPassedItem('In', searchvalue);
+  let agencyDetailsResults = [];
+  let agencyNamePassed = processPassedItem('In', searchvalue);
 
   if (lang === '') {
     lang = 'en';
   }
 
   // var apiLocation = "https://as-go-alph-d-002.azurewebsites.net/";
-  var apiLocation = 'https://api.stateentityprofile.ca.gov/';
+  let apiLocation = 'https://api.stateentityprofile.ca.gov/';
 
-  var builtApiUrl =
+  let builtApiUrl =
     apiLocation +
     'api/Agencies/FindAgenciesByName/' +
     agencyNamePassed +
     '/' +
     lang;
 
-  var loadFlag = false;
-  var loadCount = 0;
+  let loadFlag = false;
+  let loadCount = 0;
 
   function loadResults () {
     if (loadCount === 0) {
-      var getApiRequest = new window.XMLHttpRequest();
+      let getApiRequest = new window.XMLHttpRequest();
       getApiRequest.open('GET', builtApiUrl, true);
       getApiRequest.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
@@ -358,12 +358,12 @@ function showAgencyDetails (searchvalue, lang) {
       ); /* this checks the flag every 100 milliseconds */
     } else {
       if (loadCount < 1000) {
-        var result = JSON.parse(agencyDetailsResults[0]);
+        let result = JSON.parse(agencyDetailsResults[0]);
 
         this.apiData = result;
 
-        var r = 0;
-        var agencyArrayLength = this.apiData.length;
+        let r = 0;
+        let agencyArrayLength = this.apiData.length;
         if (agencyArrayLength > 0) {
           document.getElementById('org-name-holder').innerHTML = this.apiData[
             r
@@ -377,7 +377,7 @@ function showAgencyDetails (searchvalue, lang) {
           document.getElementById(
             'org-description-holder'
           ).innerHTML = this.apiData[r].Description;
-          var contactInfo = '';
+          let contactInfo = '';
           if (this.apiData[r].ContactPhone) {
             contactInfo +=
               '<li><strong>General Information: </strong> <a href="tel:' +
@@ -414,11 +414,11 @@ function showAgencyDetails (searchvalue, lang) {
             this.apiData[r].Facebook ||
             this.apiData[r].YouTube
           ) {
-            var socialMediaInfo =
+            let socialMediaInfo =
               '<h2>Connect</h2><div class="list-group-flush">';
 
             if (this.apiData[r].TwitterAccount) {
-              var twitterItem = this.apiData[r].TwitterAccount;
+              let twitterItem = this.apiData[r].TwitterAccount;
               twitterItem = twitterItem.replace('https://', '');
               twitterItem = twitterItem.replace('http://', '');
               twitterItem = twitterItem.replace('www.twitter.com/', '');
@@ -428,7 +428,7 @@ function showAgencyDetails (searchvalue, lang) {
                 '" class="list-group-item list-group-item-action border-0"><span class="ca-gov-icon-twitter"></span>&nbsp;&nbsp;Twitter</a>';
             }
             if (this.apiData[r].Facebook) {
-              var facebookItem = this.apiData[r].Facebook;
+              let facebookItem = this.apiData[r].Facebook;
               facebookItem = facebookItem.replace('https://', '');
               facebookItem = facebookItem.replace('http://', '');
               facebookItem = facebookItem.replace('www.facebook.com/', '');
@@ -438,7 +438,7 @@ function showAgencyDetails (searchvalue, lang) {
                 '" class="list-group-item list-group-item-action border-0"><span class="ca-gov-icon-facebook"></span>&nbsp;&nbsp;Facebook</a>';
             }
             if (this.apiData[r].YouTube) {
-              var youTubeItem = this.apiData[r].YouTube;
+              let youTubeItem = this.apiData[r].YouTube;
               youTubeItem = youTubeItem.replace('https://', '');
               youTubeItem = youTubeItem.replace('http://', '');
               youTubeItem = youTubeItem.replace('www.youtube.com/', '');
@@ -459,7 +459,7 @@ function showAgencyDetails (searchvalue, lang) {
 }
 
 if (window.location.href.indexOf('contact-us/home/') > -1) {
-  var agencyToGet = getQueryStringValue(window.location.href, 'item');
+  let agencyToGet = getQueryStringValue(window.location.href, 'item');
   agencyToGet = agencyToGet.replace(/\s+$/, '');
   showAgencyDetails(agencyToGet, '');
 }

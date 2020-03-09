@@ -74,9 +74,9 @@ function isThatInCali (coords) {
 }
 
 function setupRoadConditions () {
-  if (typeof (window.mapboxgl) !== 'undefined') {
+  if (typeof window.mapboxgl !== 'undefined') {
     window.mapboxgl.accessToken = 'pk.eyJ1IjoiYWFyb25oYW5zIiwiYSI6ImNqNGs4cms1ZzBocXkyd3FzZGs3a3VtamYifQ.HQjFfVzwwxwCmGr2nvnvSA';
-    var map = new window.mapboxgl.Map({
+    let map = new window.mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11',
       center: [-79.4512, 43.6568],

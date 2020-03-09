@@ -47,7 +47,7 @@ if (document.querySelector('.shelters')) {
   document.querySelector('.js-lookup').addEventListener('submit', function (event) {
     event.preventDefault();
     document.querySelector('.invalid-feedback').style.display = 'none';
-    var val = this.querySelector('input').value;
+    let val = this.querySelector('input').value;
     displaySortedResults(val);
   });
 

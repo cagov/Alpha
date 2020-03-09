@@ -97,9 +97,9 @@ export default function createHTML (myObstructions, startCoords, endCoords) {
   }
 
   function mapsSelector (start, end) {
-    if ((navigator.platform.indexOf('iPhone') !== -1) ||
-       (navigator.platform.indexOf('iPad') !== -1) ||
-       (navigator.platform.indexOf('iPod') !== -1)) {
+    if (navigator.platform.indexOf('iPhone') !== -1 ||
+       navigator.platform.indexOf('iPad') !== -1 ||
+       navigator.platform.indexOf('iPod') !== -1) {
       return `http://maps.apple.com/?saddr=${start}&daddr=${end}&dirflg=d`;
     } else {
       return `https://maps.google.com/maps/dir/?api=1&origin=${start}&destination=${end}`;
