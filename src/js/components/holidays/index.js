@@ -6,7 +6,7 @@ class CWDSHolidays extends window.HTMLElement {
     window.fetch(`https://api.alpha.ca.gov/StateHolidayCalendar/all${langquery}`)
       .then(response => response.json())
       .then(data => {
-        data.forEach(x => x.dateobject = new Date(x.date));
+        data.forEach(x => { x.dateobject = new Date(x.date); });
 
         const now = new Date();
         const nextrow = data.filter(x => x.dateobject > now)[0];
@@ -18,11 +18,6 @@ class CWDSHolidays extends window.HTMLElement {
         document.getElementById('current-holiday-name').innerText = nextrow.name;
 
         const template = document.getElementById('js-template');
-        // const results = document.getElementById("js-tbody-template-2020-results")
-
-        // <td><span class="data-holiday-date">Date</span><span class="d-none data-holiday-credit-link">(<a href="#credits">holiday credit</a>)</span></td>
-        // <td class="data-holiday-day-of-week">day of week</td>
-        // <td class="data-holiday-name">name</td>
 
         const addrows = (targetcontainer, year) => {
           for (const row of data.filter(x => x.dateobject.getFullYear() === year)) {
@@ -44,7 +39,7 @@ class CWDSHolidays extends window.HTMLElement {
         document.querySelectorAll('a[href*="#credits"]').forEach(item =>
           item.addEventListener('click', function (event) {
             const height = document.querySelector('.js-credits .card-container').style.height;
-            if (!height || height == '0px') { document.querySelector('.js-credits button.accordion-alpha').click(); }
+            if (!height || height === '0px') { document.querySelector('.js-credits button.accordion-alpha').click(); }
           })
         );
       });
