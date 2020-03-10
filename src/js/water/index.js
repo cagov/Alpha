@@ -23,9 +23,6 @@ if (document.querySelector('body.js-water')) {
   });
 
   document.querySelector(fieldSelector).addEventListener('keydown', event => {
-    if (event.isComposing || event.keyCode === 229) {
-      return;
-    }
     const skipKeys = [13, 9, 27, 38, 40]; // do not reset suggestion list if using arrow keys, enter, tab
     if (event.target.value.length >= 2) {
       if (skipKeys.indexOf(event.keyCode) === -1) {
