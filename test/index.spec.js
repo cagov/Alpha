@@ -328,6 +328,37 @@ describe("apply-for-unemployment-insurance-update-us-every-two-weeks", () => {
 
 })
 
+
+describe("prepare-for-wildfire", () => {
+  test("prepare-for-wildfire", async () => {
+    await page.goto(hostname+'/prepare-for-wildfire/')
+
+    let answers = await page.$$eval('.col-lg-8 cwds-step-list', answers => { return answers })
+    expect(answers.length).toBeGreaterThan(0);
+
+    let answers2 = await page.$$eval('.col-md-12 p', answers2 => { return answers2 })
+    expect(answers2.length).toBeGreaterThan(0);
+   
+  }, timeout)
+
+})
+
+
+describe("considerations-after-wildfire", () => {
+  test("considerations-after-wildfire", async () => {
+    await page.goto(hostname+'/considerations-after-wildfire/')
+
+    let answers = await page.$$eval('.col-lg-8 cwds-step-list', answers => { return answers })
+    expect(answers.length).toBeGreaterThan(0);
+
+    let answers2 = await page.$$eval('.col-lg-8 p', answers2 => { return answers2 })
+    expect(answers2.length).toBeGreaterThan(0);
+   
+  }, timeout)
+
+})
+
+
 afterAll(() => {
   browser.close();
   server.close();
