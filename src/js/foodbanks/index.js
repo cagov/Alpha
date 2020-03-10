@@ -214,7 +214,7 @@ function displaySortedResults (coords) {
             showMore = `<li class="card mb-20 js-expand-link border-0">
               <div class="card-body">
                 <p>
-                  <a class="action-link" href="#" onclick="showAll()">${translations['Show more']} &raquo;</a>
+                  <a class="action-link js-show-all-results" href="#">${translations['Show more']} &raquo;</a>
                 </p>
               </div>
             </li>`;
@@ -292,16 +292,17 @@ if (document.querySelector('body.js-food-banks')) {
         }
       });
   });
-}
 
-// these get triggered from the map
-window.showAll = function (event) {
-  event.preventDefault();
-  document.querySelectorAll('.card-set li.d-none').forEach(item => {
-    item.classList.remove('d-none');
-  });
-  document.querySelector('.js-expand-link').style.display = 'none';
-};
+  document.querySelector('.js-nearest-results').addEventListener('click', function(event) {
+    if(event.target.classList.contains('js-show-all-results')) {
+      event.preventDefault();
+      document.querySelectorAll('.card-set li.d-none').forEach(item => {
+        item.classList.remove('d-none');
+      });
+      document.querySelector('.js-expand-link').style.display = 'none';
+    }
+  }, true)
+}
 
 // Change ARIA Label to Awesomeplete list
 if (document.getElementById('awesomplete_list_1')) {

@@ -152,11 +152,16 @@
         <%= require('html-loader!../../js/es6/js.html') %>
     </footer>
     <template id="js-template">
-        <tr>
+        <!-- Must keep the full table structure or IE11 will not display table elements  -->
+        <table>
+        <tbody>
+        <tr class="data-holiday-row">
             <td><span class="data-holiday-date">Date</span> <span class="d-none data-holiday-credit-link badge"> (<a href="#credits">holiday credit</a>)</span></td>
             <td class="data-holiday-day-of-week">day of week</td>
             <td class="data-holiday-name">name</td>
         </tr>
+        </tbody>
+        </table>
      </template>
 </body>
 

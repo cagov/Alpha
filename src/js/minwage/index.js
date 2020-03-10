@@ -6,7 +6,20 @@ import minWageHTML from './wage.js';
 import findWageMatch from './find-wage-match.js';
 
 if (document.querySelector('body.js-min-wage')) {
-  let template = document.querySelector('#wage-template')
+  waitFor('#wage-template', setupMinWage);
+}
+
+function waitFor(selector, callback) {
+  if(document.querySelector(selector)) {
+    callback();
+  } else {
+    setTimeout(function() {
+      waitFor(selector, callback);
+    }, 2000)
+  }
+}
+function setupMinWage() {
+  let template = document.querySelector('#wage-template');
   const wageNode = template.content.cloneNode(true);
   let wageTranslations = {};
   wageTranslations['trans-key'] = wageNode.querySelector('.trans-key').innerHTML;

@@ -114,20 +114,21 @@
       require('html-loader!../../partials/ga.html') %>
     </footer>
     <template id="wage-template">
-      <span class="trans-key">en-US</span>
-      <span class="trans-the-minimum-wage-in">The minimum wage in</span>
-      <span class="trans-minimum-wage-rates-as-of">Minimum wage rates as of</span>
-      <span class="trans-place">Place</span>
-      <span class="trans-rate">Rate</span>
-      <span class="trans-25-or-fewer">25 or fewer</span>
-      <span class="trans-26-or-more">26 or more</span>
-      <span class="trans-is">is</span>
-      <span class="trans-hour">hour</span>
-      <span class="trans-employees">employees</span>
-      <span class="trans-employers-with">Employers with</span>
-      <span class="trans-for-employers-with">for employers with</span>
+      <div>
+        <span class="trans-key">en-US</span>
+        <span class="trans-the-minimum-wage-in">The minimum wage in</span>
+        <span class="trans-minimum-wage-rates-as-of">Minimum wage rates as of</span>
+        <span class="trans-place">Place</span>
+        <span class="trans-rate">Rate</span>
+        <span class="trans-25-or-fewer">25 or fewer</span>
+        <span class="trans-26-or-more">26 or more</span>
+        <span class="trans-is">is</span>
+        <span class="trans-hour">hour</span>
+        <span class="trans-employees">employees</span>
+        <span class="trans-employers-with">Employers with</span>
+        <span class="trans-for-employers-with">for employers with</span>
+      </div>
     </template>
     <%= require('html-loader!../../js/es6/jszips.html') %>
-    <script nomodule src="/js/es5Minwage.js?cache=false"></script>
   </body>
 </html>

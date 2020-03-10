@@ -64,6 +64,10 @@
       "br": {
         "inherit": "br",
         "deprecated": false
+      },
+      "tr": {
+        "inherit": "tr",
+        "requiredAncestors": ["table > tbody > tr", "table > thead > tr"]
       }
     }
   ]
