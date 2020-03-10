@@ -26,13 +26,12 @@ const minificationOptions = {
 const minificationOptionsWithComments = JSON.parse(JSON.stringify(minificationOptions));
 minificationOptionsWithComments.removeComments = false;
 
-const excludedChunks = ['roads', 'shelters', 'lifeline'];
 const allChunks = ['style', 'roads', 'shelters', 'lifeline'];
 
 // usage
 //    excludeChunks: excludeChucksExcept("roads"),
 //    excludeChunks: excludeChucksExcept("roads","alerts"),
-const excludeChucksExcept = (...args) => excludedChunks.filter(x => !args.includes(x));
+const excludeChucksExcept = (...args) => allChunks.filter(x => !args.includes(x));
 
 module.exports = {
   entry: {
@@ -253,43 +252,43 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'en/apply-for-unemployment-insurance/index.html',
       template: 'src/services/apply-for-unemployment-insurance/index.html',
-      excludeChunks: excludedChunks,
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'en/apply-for-unemployment-insurance/after-you-apply/index.html',
       template: 'src/services/apply-for-unemployment-insurance/after-you-apply/index.html',
-      excludeChunks: excludedChunks,
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'en/apply-for-unemployment-insurance/how-to-apply/index.html',
       template: 'src/services/apply-for-unemployment-insurance/how-to-apply/index.html',
-      excludeChunks: excludedChunks,
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'en/apply-for-unemployment-insurance/update-us-every-two-weeks/index.html',
       template: 'src/services/apply-for-unemployment-insurance/update-us-every-two-weeks/index.html',
-      excludeChunks: excludedChunks,
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'en/apply-for-unemployment-insurance/what-you-need-before-you-apply/index.html',
       template: 'src/services/apply-for-unemployment-insurance/what-you-need-before-you-apply/index.html',
-      excludeChunks: excludedChunks,
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'en/apply-for-unemployment-insurance/when-to-apply/index.html',
       template: 'src/services/apply-for-unemployment-insurance/when-to-apply/index.html',
-      excludeChunks: excludedChunks,
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
 	new HtmlWebpackPlugin({
       filename: 'en/office-of-digital-innovation/index.html',
       template: 'src/office-of-digital-innovation/index.html',
-      excludeChunks: excludedChunks,
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
 

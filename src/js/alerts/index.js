@@ -16,6 +16,7 @@ if (document.querySelector('body.js-alerts')) {
 
   const awesompleteSettings = {
     list: awesompleteList,
+    autoFirst: true,
     filter: function (text, input) {
       return Awesomplete.FILTER_CONTAINS(text, input.match(/[^,]*$/)[0]);
     },
