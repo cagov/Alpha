@@ -28,7 +28,7 @@ class CWDSHolidays extends window.HTMLElement {
 
             if (row.dateobject.getDay() === 0 || row.dateobject.getDay() === 6) { node.querySelector('.data-holiday-credit-link').classList.remove('d-none'); }
 
-            targetcontainer.appendChild(node);
+            targetcontainer.appendChild(node.querySelector('.data-holiday-row'));
           }
         };
 
