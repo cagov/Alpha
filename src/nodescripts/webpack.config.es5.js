@@ -6,9 +6,6 @@ module.exports = {
     es5: [
       './src/js/es5.js'
     ],
-    es5Minwage: [
-      './src/js/minwage/index.js'
-    ],
     es5Food: [
       './src/js/foodbanks/index.js'
     ]
