@@ -26,8 +26,8 @@ const minificationOptions = {
 const minificationOptionsWithComments = JSON.parse(JSON.stringify(minificationOptions));
 minificationOptionsWithComments.removeComments = false;
 
-const excludedChunks = ['contactus', 'roads', 'shelters', 'lifeline'];
-const allChunks = ['style', 'contactus', 'roads', 'shelters', 'lifeline'];
+const excludedChunks = ['roads', 'shelters', 'lifeline'];
+const allChunks = ['style', 'roads', 'shelters', 'lifeline'];
 
 // usage
 //    excludeChunks: excludeChucksExcept("roads"),
@@ -37,7 +37,6 @@ const excludeChucksExcept = (...args) => excludedChunks.filter(x => !args.includ
 module.exports = {
   entry: {
     style: ['./src/css/_index.scss'],
-    contactus: ['./src/js/contactus/index.js'],
     roads: ['./src/js/roads/index.js'],
     shelters: ['./src/js/shelters/index.js'],
     lifeline: ['./src/js/lifeline/index.js']
@@ -193,19 +192,19 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'en/contact-us/index.html',
       template: 'src/services/contact-us/index.html',
-      excludeChunks: excludeChucksExcept('contactus'),
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'en/contact-us/results/index.html',
       template: 'src/services/contact-us/results/index.html',
-      excludeChunks: excludeChucksExcept('contactus'),
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'en/contact-us/home/index.html',
       template: 'src/services/contact-us/home/index.html',
-      excludeChunks: excludeChucksExcept('contactus'),
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
