@@ -26,8 +26,8 @@ const minificationOptions = {
 const minificationOptionsWithComments = JSON.parse(JSON.stringify(minificationOptions));
 minificationOptionsWithComments.removeComments = false;
 
-const excludedChunks = ['contactus', 'roads', 'shelters', 'water', 'lifeline'];
-const allChunks = ['style', 'contactus', 'roads', 'shelters', 'water', 'lifeline'];
+const excludedChunks = ['contactus', 'roads', 'shelters', 'lifeline'];
+const allChunks = ['style', 'contactus', 'roads', 'shelters', 'lifeline'];
 
 // usage
 //    excludeChunks: excludeChucksExcept("roads"),
@@ -40,7 +40,6 @@ module.exports = {
     contactus: ['./src/js/contactus/index.js'],
     roads: ['./src/js/roads/index.js'],
     shelters: ['./src/js/shelters/index.js'],
-    water: ['./src/js/water/index.js'],
     lifeline: ['./src/js/lifeline/index.js']
   },
   optimization: {
@@ -248,7 +247,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'en/check-your-tap-water-quality/index.html',
       template: 'src/services/water/index.html',
-      excludeChunks: excludeChucksExcept('water'),
+      excludeChunks: allChunks,
       minify: minificationOptions
     }),
 
