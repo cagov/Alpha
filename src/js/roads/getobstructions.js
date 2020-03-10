@@ -63,5 +63,8 @@ export default async function getObstructions (stepMap, coords, callback) {
       callback(finalObstructions);
     }
   }
+
+  // call checkout here in case we have 0 steps with highways
+  checkOut();
   // reverted promise.all version which didn't include proper catch logic because sometimes routes can be missing
 }
