@@ -771,7 +771,7 @@ li.active ul.nav.bd-sidenav {
 /* minimum wage and water label override */
 .wage-city-search, .check-water {
     label {
-        justify-content: left;
+        justify-content: flex-start;
     }
 }
 
