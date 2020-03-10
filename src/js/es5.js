@@ -15,3 +15,4 @@ import './util/show-all.js';
 import './water/index.js';
 import './shelters/index.js';
 import './minwage/index.js';
+import './contactus/index.js';
