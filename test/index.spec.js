@@ -96,7 +96,6 @@ describe('food banks', () => {
 describe('state holidays', () => {
   test('state holidays', async () => {
     await page.goto(hostname + '/state-california-employee-holidays/');
-    await page.click('cwds-accordion button');
 
     const answers = await page.$$eval('.card-body tr', answers => { return answers; });
     expect(answers.length).toBeGreaterThan(0);
@@ -260,6 +259,74 @@ describe('find-shelter', () => {
     expect(answers.length).toBeGreaterThan(0);
   }, timeout);
 });
+
+describe("apply-for-unemployment-insurance", () => {
+  test("UI - who can apply", async () => {
+
+    await page.goto(hostname+'/apply-for-unemployment-insurance/')
+    let answers = await page.$$eval('.col-lg-8 li', answers => { return answers })
+    expect(answers.length).toBeGreaterThan(0);
+   
+  }, timeout)
+
+})
+
+describe("apply-for-unemployment-insurance-when-to-apply", () => {
+  test("UI - when to apply", async () => {
+
+    await page.goto(hostname+'/apply-for-unemployment-insurance/when-to-apply/')
+    let answers = await page.$$eval('.col-lg-8 p', answers => { return answers })
+    expect(answers.length).toBeGreaterThan(0);
+   
+  }, timeout)
+
+})
+
+
+describe("apply-for-unemployment-insurance-what-you-need-before-you-apply", () => {
+  test("UI - what you need before", async () => {
+
+    await page.goto(hostname+'/apply-for-unemployment-insurance/what-you-need-before-you-apply/')
+    let answers = await page.$$eval('.col-lg-8 h3', answers => { return answers })
+    expect(answers.length).toBeGreaterThan(0);
+   
+  }, timeout)
+
+})
+
+
+describe("apply-for-unemployment-insurance-how-to-apply", () => {
+  test("UI - how to apply", async () => {
+
+    await page.goto(hostname+'/apply-for-unemployment-insurance/how-to-apply/')
+    let answers = await page.$$eval('.col-lg-8 cwds-accordion', answers => { return answers })
+    expect(answers.length).toBeGreaterThan(0);
+   
+  }, timeout)
+
+})
+
+describe("apply-for-unemployment-insurance-after-you-apply", () => {
+  test("UI - after-you-apply", async () => {
+
+    await page.goto(hostname+'/apply-for-unemployment-insurance/after-you-apply/')
+    let answers = await page.$$eval('.col-lg-8 li', answers => { return answers })
+    expect(answers.length).toBeGreaterThan(0);
+   
+  }, timeout)
+
+})
+
+describe("apply-for-unemployment-insurance-update-us-every-two-weeks", () => {
+  test("UI - update-us-every-two-weeks", async () => {
+
+    await page.goto(hostname+'/apply-for-unemployment-insurance/update-us-every-two-weeks/')
+    let answers = await page.$$eval('.col-lg-8 p', answers => { return answers })
+    expect(answers.length).toBeGreaterThan(0);
+   
+  }, timeout)
+
+})
 
 afterAll(() => {
   browser.close();
