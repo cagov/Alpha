@@ -40,7 +40,7 @@ export default function addListeners () {
     const endPlace = document.querySelector('.js-geocoder-start input').value;
     const startCoords = await getLatLon(endPlace);
     const errorSelector = document.querySelector('.error2');
-    if (startCoords.status !== 200) {
+    if (startCoords.status !== '200') {
       errorSelector.innerHTML = startCoords.message;
       errorSelector.style.display = 'block';
     } else {
