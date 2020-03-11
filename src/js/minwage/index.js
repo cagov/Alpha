@@ -20,7 +20,7 @@ function waitFor(selector, callback) {
 }
 function setupMinWage() {
   let template = document.querySelector('#wage-template');
-  const wageNode = template.content.cloneNode(true);
+  const wageNode = template.content;
   let wageTranslations = {};
   wageTranslations['trans-key'] = wageNode.querySelector('.trans-key').innerHTML;
   wageTranslations['trans-the-minimum-wage-in'] = wageNode.querySelector('.trans-the-minimum-wage-in').innerHTML;
@@ -29,16 +29,16 @@ function setupMinWage() {
   wageTranslations['trans-rate'] = wageNode.querySelector('.trans-rate').innerHTML;
   wageTranslations['trans-25-or-fewer'] = wageNode.querySelector('.trans-25-or-fewer').innerHTML;
   wageTranslations['trans-26-or-more'] = wageNode.querySelector('.trans-26-or-more').innerHTML;
-  wageTranslations['trans-is'] = wageNode.querySelector('.trans-is').innerHTML;
-  wageTranslations['trans-hour'] = wageNode.querySelector('.trans-hour').innerHTML;
-  wageTranslations['trans-employees'] = wageNode.querySelector('.trans-employees').innerHTML;
+  wageTranslations['trans-is'] = wageNode.querySelector('.trans-i-s').innerHTML;
+  wageTranslations['trans-hour'] = wageNode.querySelector('.trans-ho-ur').innerHTML;
+  wageTranslations['trans-employees'] = wageNode.querySelector('.trans-employ-ees').innerHTML;
   wageTranslations['trans-employers-with'] = wageNode.querySelector('.trans-employers-with').innerHTML;
   wageTranslations['trans-for-employers-with'] = wageNode.querySelector('.trans-for-employers-with').innerHTML;
 
   // display HTML of add city wages
   const wageJson = wageJsonData.MinimumWage[0]['2020-01-01T08:00:00'];
   const html = buildDisplay(wageJsonData.MinimumWage, wageTranslations);
-  document.querySelector('.display-wage-by-city').innerHTML = html;
+  document.querySelector('.js-wage-by-city').innerHTML = html;
 
   // handle search autocomplete
   const zipMap = new Map();
