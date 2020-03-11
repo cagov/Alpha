@@ -23,6 +23,8 @@ function capitalizer (name) {
 }
 
 export default function gotSystem (systemData) {
+  const template = document.getElementById('water-detail-template');
+  
   let system = systemData[0];
   if (systemData.length > 0) {
     if (systemData.length > 1) {
@@ -39,7 +41,7 @@ export default function gotSystem (systemData) {
     ) {
       const website = system.properties.systemData.meta.website;
       if (website.indexOf('http') < 0) {
-        websiteBlurb = `<p class="mb-5"><a class="action-link" href="http://${website}">Visit your water system</a></p>`;
+        websiteBlurb = `<p class="mb-5"><a class="action-link" href="http://${website}">${template.content.querySelector('.visit-water-system').innerText}</a></p>`;
       }
     }
 
