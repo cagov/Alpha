@@ -65,7 +65,7 @@
     "puppeteer": "^2.0.0",
     "purgecss-webpack-plugin": "^1.6.0",
     "replace-in-file": "^5.0.2",
-    "rollup": "^1.32.0",
+    "rollup": "^2.0.3",
     "rollup-plugin-index-html": "^1.10.0",
     "rollup-plugin-terser": "^5.2.0",
     "rollup-plugin-uglify-es": "0.0.1",
@@ -99,7 +99,7 @@
       "ecmaVersion": 11,
       "sourceType": "module",
       "ecmaFeatures": {
-          "jsx": true
+        "jsx": true
       }
     },
     "env": {
@@ -107,14 +107,19 @@
       "node": true
     },
     "extends": "eslint:recommended",
-    "ignorePatterns": ["regenerator-runtime.js"],
+    "ignorePatterns": [
+      "regenerator-runtime.js"
+    ],
     "rules": {
       "no-var": "warn",
       "no-extra-parens": "warn",
       "block-scoped-var": "warn",
       "class-methods-use-this": "warn",
       "no-shadow": "warn",
-      "arrow-parens": ["warn", "as-needed"],
+      "arrow-parens": [
+        "warn",
+        "as-needed"
+      ],
       "no-undef": "warn",
       "prefer-arrow-callback": "warn"
     }
