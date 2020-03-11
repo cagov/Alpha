@@ -397,6 +397,7 @@ path,token,en,es,zh
 /check-your-tap-water-quality,,"Your water system tests at least yearly for chemicals, bacteria, and viruses that could be harmful to human health.","Su sistema de agua hace pruebas al menos una vez al año para detectar productos químicos, bacterias y virus que podrían ser dañoso para la salud humana.",你的水系统，使至少检查一次，每年检测的化学物质，细菌和病毒，可能对人体健康有害。
 /check-your-tap-water-quality,,Please enter your address,"Por favor, introduzca su dirección de",请输入您的地址
 /check-your-tap-water-quality,,"They also track changes to the way your water tastes, looks, or smells.","También hacen cambios en la forma en que su agua sabe, se ve, o huele.",此外，他们做出改变的方式你的水的口味，外观或气味。
+/check-your-tap-water-quality,,Visit your water system,Visita su sistema de agua,访问您的供水系统
 /apply-discounted-phone-service,,(California LifeLine) - Alpha.CA.gov,(Programa Lifeline de Califronia) - Alpha.CA.gov,（生命线计划Califronia） -  Alpha.CA.gov
 /apply-discounted-phone-service,,"Follow these six steps to apply for California Lifeline, a discounted phone service.","Sigue estos seis pasos para solicitar el programa California Lifeline, un servicio telefónico con descuento.",按照这六个步骤申请加州生命线节目，折扣电话服务。
 /apply-discounted-phone-service,,California LifeLine lowers the cost of your monthly bill for your cell or landline phone.,El programa California LifeLine reduce el costo de su factura mensual de su teléfono celular o fijo. Este descuento es para hogares,加州生命线程序从您的手机或座机减少你每月账单的费用。该折扣是家庭
@@ -645,7 +646,7 @@ path,token,en,es,zh
 /apply-for-unemployment-insurance/update-us-every-two-weeks,,How to update us every two weeks to continue your unemployment insurance (UI).,Cómo ponerse en contacto con nosotros cada dos semanas para continuar con su seguro de desempleo (UI).,联系我们每两个星期来继续他们的失业保险（UI）。
 /apply-for-unemployment-insurance/update-us-every-two-weeks,,"To keep getting payments, you have to contact us every two weeks to let us know you still qualify for UI. This is called","Para seguir recibiendo sus pagos, usted tiene que ponerse en contacto con nosotros cada dos semanas para hacernos saber que todavía califica para UI. Esto se conoce como",要继续收到付款，你必须与我们联系，每两个星期，让我们知道您仍然有资格UI。这就是所谓的
 /apply-for-unemployment-insurance/update-us-every-two-weeks,,certifying for benefits,la certificación de los beneficios.,认证的好处。
-/apply-for-unemployment-insurance/update-us-every-two-weeks,,Certify online,Certifique por internet,网上的Certify
+/apply-for-unemployment-insurance/update-us-every-two-weeks,,Certify online,Certifique por internet,#VALUE!
 /apply-for-unemployment-insurance/update-us-every-two-weeks,,Certify by phone,Certifique por teléfono,核证电话
 /apply-for-unemployment-insurance/update-us-every-two-weeks,,Certify by mail,Certifique por correo,的Certify邮件
 /apply-for-unemployment-insurance/update-us-every-two-weeks,,We’ll mail you a,Le enviaremos por correo un,我们将寄给你一个
