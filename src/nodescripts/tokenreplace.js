@@ -142,7 +142,7 @@ function replaceonetoken (data, targetlang, files) {
   , 'g')]; // add token with literal square brackets
 
   const to = data[targetlang]
-    .replace(/<\/\s*/g, '</'); // fixes broken html from auto-translate "</ i>" => "</i>"
+    .replace(/<\s*\/\s*/g, '</'); // fixes broken html from auto-translate "< / i>" => "</i>"
 
   // replace this token, add the number of matches to the list
   replace.sync({ files, from, to, countMatches: true })
