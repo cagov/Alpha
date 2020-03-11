@@ -107,44 +107,44 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       filename: 'en/check-if-you-can-get-discounted-phone-service/index.html',
-      template: 'src/services/who-can-get-discounted-phone-service/index.html',
+      template: 'src/services/check-if-you-can-get-discounted-phone-service/index.html',
       excludeChunks: excludeChucksExcept('lifeline'),
       minify: minificationOptions
     }),
 
     new HtmlWebpackPlugin({
       filename: 'en/check-if-you-can-get-discounted-phone-service/no-not-sure/index.html',
-      template: 'src/services/who-can-get-discounted-phone-service/no-not-sure/index.html',
+      template: 'src/services/check-if-you-can-get-discounted-phone-service/no-not-sure/index.html',
       excludeChunks: excludeChucksExcept('lifeline'),
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'en/check-if-you-can-get-discounted-phone-service/not-qualified/index.html',
-      template: 'src/services/who-can-get-discounted-phone-service/not-qualified/index.html',
+      template: 'src/services/check-if-you-can-get-discounted-phone-service/not-qualified/index.html',
       excludeChunks: excludeChucksExcept('lifeline'),
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'en/check-if-you-can-get-discounted-phone-service/not-sure-qualified/index.html',
-      template: 'src/services/who-can-get-discounted-phone-service/not-sure-qualified/index.html',
+      template: 'src/services/check-if-you-can-get-discounted-phone-service/not-sure-qualified/index.html',
       excludeChunks: excludeChucksExcept('lifeline'),
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'en/check-if-you-can-get-discounted-phone-service/qualified/index.html',
-      template: 'src/services/who-can-get-discounted-phone-service/qualified/index.html',
+      template: 'src/services/check-if-you-can-get-discounted-phone-service/qualified/index.html',
       excludeChunks: excludeChucksExcept('lifeline'),
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'en/check-if-you-can-get-discounted-phone-service/qualified-income/index.html',
-      template: 'src/services/who-can-get-discounted-phone-service/qualified-income/index.html',
+      template: 'src/services/check-if-you-can-get-discounted-phone-service/qualified-income/index.html',
       excludeChunks: excludeChucksExcept('lifeline'),
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
       filename: 'en/check-if-you-can-get-discounted-phone-service/total-income/index.html',
-      template: 'src/services/who-can-get-discounted-phone-service/total-income/index.html',
+      template: 'src/services/check-if-you-can-get-discounted-phone-service/total-income/index.html',
       excludeChunks: excludeChucksExcept('lifeline'),
       minify: minificationOptions
     }),
