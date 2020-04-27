@@ -1,4 +1,4 @@
-# Step by step list component
+# Lookup: search form + autocomplete
 
 This custom element renders a search form with autocomplete (using awesomplete) which calls the api endpoint defined in the element attribute. The example markup below calls the api.alpha.ca.gov endpoint to autocomplete California counties or zip codes.
 
