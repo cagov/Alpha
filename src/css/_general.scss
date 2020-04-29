@@ -942,6 +942,10 @@ label.custom-control-label {
     	margin-right: -20px;
 }
 
+spacer-home-link {
+	min-height: 92px;
+}
+
 
 
 
@@ -957,6 +961,11 @@ label.custom-control-label {
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
+	
+	spacer-home-link {
+		display: none;
+}
+
 
     .alphabar {
         font-size: .7em;
