@@ -1,5 +1,4 @@
 export default function minWageHTML (cityWages, options, label, wageTranslations) {
-  console.log(wageTranslations)
   // /*html*/ comment below required to enable es6-string-html vscode syntax highlighting
   /* html */
   return `<cwds-accordion>
