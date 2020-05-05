@@ -8,7 +8,7 @@ export default function templateHTML (inputval, counties) {
         return response.json();
       })
       .then(myzip => {
-        lookupSuccess(myzip.county, inputval, isZip, counties);
+        lookupSuccess(myzip[0].county, inputval, isZip, counties);
       })
       .catch(() => {
         lookupFail();
