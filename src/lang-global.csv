@@ -1,14 +1,15 @@
 path,token,en,es,zh
 ,[global-lang-about],About,Acerca de,关于
 ,[global-lang-feedback-p],to help us improve this page.,para ayudarnos a mejorar esta página de internet.,为了帮助我们改进本网站。
-,[global-lang-feedback],Feedback,Comentarios,评论
+,[global-lang-feedback],Feedback,Comentarios,注释
 ,[global-lang-news],News,Noticias,新闻
+,[global-lang-roles],Roles,Roles,的角色
 ,[global-lang-official],State of California,Gobierno del Estado de California,加利福尼亚州政府
 ,[global-lang-share-feedback],share your feedback,comparta sus comentarios,分享您的意见
 ,[global-lang-state-of-ca],Official California State Government Website,Sitio Web Oficial del Gobierno del Estado de California,加利福尼亚州政府官方网站
 ,[global-lang-work-in-progress-header],Alpha.CA.gov is a work in progress.,Alpha.CA.gov es un trabajo en progreso.,Alpha.CA.gov是一项正在进行的工作。
 ,[global-lang-work-in-progress-p-1a],"While we test our website, the information here might not be completely accurate. We welcome",Gracias por ayudarnos a probar nuestro proyecto experimental. Agradecemos,感谢您帮助我们测试的实验项目。谢谢
-,[global-lang-work-in-progress-p-1b],your feedback,sus comentarios,您的意见
+,[global-lang-work-in-progress-p-1b],your feedback,sus comentarios,你的评论
 ,[global-lang-work-in-progress-p-1c],Thanks for helping us make government services easier to use.,Gracias por ayudarnos a hacer que los servicios del gobierno sean más fáciles de usar.,感谢您的帮助使政府服务更容易使用。
 ,[global-lang-work-in-progress-p-2a],"If you need the current site, please","Si necesita el sitio actual,",如果您需要当前网站，
 ,[global-lang-work-in-progress-p-2b],visit CA.gov,visite CA.gov,访问CA.gov
@@ -17,21 +18,21 @@ path,token,en,es,zh
 ,[global-lang-alphabar-p-1b],work in progress,trabajo en progreso,工作正在进行中
 ,[global-lang-select-language],Select language,Seleccione el idioma,选择语言
 ,[global-lang-period],.,.,。
-,[global-lang-or-lower],or,O,Ø
-,[global-lang-or-camel],Or,O,Ø
+,[global-lang-or-lower],or,O,要么
+,[global-lang-or-camel],Or,O,要么
 ,[global-lang-and-lower],and,y,和
-,[global-lang-show],Show,Mostrar,节目
+,[global-lang-show],Show,Mostrar,以显示
 ,[global-lang-hide],Hide,Ocultar,隐藏
 ,[global-lang-ok],OK,Okay,好
 ,[global-feedback-link],https://www.surveymonkey.com/r/Alpha-CA-Gov,https://es.surveymonkey.com/r/Alpha-Ca-Gov-Es,https://es.surveymonkey.com/r/Alpha-Ca-Gov-Es
-,[global-lang-no-camel],No,No,不
-,[global-lang-yes-camel],Yes,Si,如果
+,[global-lang-no-camel],No,No,没有
+,[global-lang-yes-camel],Yes,Si,是
 ,[global-lang-contact-us],Contact Us,Contáctenos,联系我们
-,[global-lang-next],Next,Próximo,下
-,[global-lang-home],Home,Hogar,家
+,[global-lang-next],Next,Próximo,下一个
+,[global-lang-home],Home,Casa,屋
 ,[global-lang-form-search-button],Search,Buscar,搜索
-,,Show all,Mostrar todo,显示全部
-,,Hide all,Ocultar todo,隐藏所有
+,,Show all,Mostrar todo,显示一切
+,,Hide all,Ocultar todo,全部藏起来
 /index.html,,We’re making it easier to find and use government services and information.,Estamos haciendo más fácil de buscar y usar servicios e información del gobierno.,我们更容易发现和使用信息和服务的政府。
 /index.html,,Welcome to Alpha.CA.gov,Bienvenido a Alpha.CA.gov,欢迎Alpha.CA.gov
 /index.html,,Find the minimum wage in your city,Encuentre el salario mínimo en su ciudad,查找您所在城市最低工资标准
@@ -54,11 +55,11 @@ path,token,en,es,zh
 ,,Check if you can get a discounted phone service,Verifique si se puede obtener un servicio telefónico con descuento,请检查您是否可以享受折扣电话服务
 ,,Apply for a Cal Grant,Solicitar una beca Cal Grant,申请加州格兰特
 /index.html,,Education,Educación,教育
-/index.html,,Identification,Identificación,鉴定
-/index.html,,Employment,Trabajo,我的工作
+/index.html,,Identification,Identificación,ID
+/index.html,,Employment,Trabajo,工作
 /index.html,,Utilities,Servicios publicos,公共服务
-/index.html,,Housing,Vivienda,住宅
-/index.html,,Disaster,Desastre,灾难
+/index.html,,Housing,Vivienda,住的地方
+/index.html,,Disaster,Desastre,灾害
 /index.html,,State information,Información del Estado,国家信息
 /index.html,,Local services,Servicios locales,本地服务
 /index.html,,Transportation,Transporte,运输
@@ -72,7 +73,7 @@ path,token,en,es,zh
 /about,,Our first step: Make CA.gov easier for Californians to use. We’ve been working to help you access the services and information you need since December 2019.,Nuestro primer paso: hacer CA.gov más fácil para los californianos a su uso. Hemos estado trabajando para ayudarle a acceder a los servicios e información que necesita desde diciembre del año 2019.,我们第一步：制作CA.gov容易加州使用。我们一直在努力帮助您访问从2019十二月需要的服务和信息。
 /about,,We’re sharing our insights on our,Estamos compartiendo nuestras ideas en nuestra,我们分享我们的想法在我们的
 /about,,blog,Blog,博客
-/about,,Twitter,Gorjeo,颤音
+/about,,Twitter,Gorjeo,推特
 /about,,Our work in progress will live on,Nuestro trabajo en progreso vivirá,我们正在进行的工作现场
 /about,,GitHub,GitHub,GitHub上
 /about,,"and this website,","y este sitio web,",而这个网站，
@@ -82,17 +83,17 @@ path,token,en,es,zh
 /apply-for-disability-insurance-benefits,,Apply for disability insurance benefits - Alpha.CA.gov,Solicite beneficios por incapacidad - Alpha.CA.gov,申请伤残津贴 -  Alpha.CA.gov
 /apply-for-disability-insurance-benefits,,Follow these steps to apply for disability insurance benefits.,Sigue estos pasos para obtener beneficios de Seguro por Incapacidad (SDI) del Estado,按照国家的这些步骤得到实惠残疾保险（SDI）
 /apply-for-disability-insurance-benefits,,Sick,una enfermedad,疾病
-/apply-for-disability-insurance-benefits,,injured,una lesión,伤
+/apply-for-disability-insurance-benefits,,injured,una lesión,受伤
 /apply-for-disability-insurance-benefits,,pregnant,por embarazo,怀孕
 /apply-for-disability-insurance-benefits,,Check if you qualify,Verifique si califica,检查您是否有资格
 /apply-for-disability-insurance-benefits,,If your employer has a,Si su empleador tiene un,如果你的雇主有
 /apply-for-disability-insurance-benefits,,Voluntary Plan,plan Voluntario,志愿者计划
 /apply-for-disability-insurance-benefits,,", talk to your human resources office to apply for disability benefits.",", hable con su oficina de recursos humanos para que solicite los beneficios por incapacidad.",谈谈你的人力资源办公室申请伤残津贴。
 /apply-for-disability-insurance-benefits,,If you’re self-employed,Si usted trabaja por su cuenta propia,如果你对自己的工作
-/apply-for-disability-insurance-benefits,,", you can",", usted puede",，你可以
+/apply-for-disability-insurance-benefits,,", you can",", usted puede",， 您可以
 /apply-for-disability-insurance-benefits,,apply for disability insurance,aplicar para el seguro de incapacidad,申请伤残保险
 /apply-for-disability-insurance-benefits,,File your claim,Presente su solicitud,提交申请
-/apply-for-disability-insurance-benefits,,File online,Solicite por internet,在线申请
+/apply-for-disability-insurance-benefits,,File online,Solicite por internet,线上申请
 /apply-for-disability-insurance-benefits,,File by mail,Solicite por correo,通过电子邮件申请
 /apply-for-disability-insurance-benefits,,Ask your doctor to certify your disability,Pregúntele a su doctor para certificar su discapacidad,问问你的医生，以证明他们的残疾
 /apply-for-disability-insurance-benefits,,"A doctor, nurse, or physician’s assistant has to certify your medical condition. They must submit a form within 49 days of the first day you couldn’t work because of your disability.","Un doctor, una enfermera o un asistente médico debe certificar su condición médica. Ellos tienen que presentar una  solicitud dentro de los 49 días del primer día que no se podía trabajar debido a su discapacidad.",医生，护士或医师助理必须证明您的健康状况。他们有内部的第一天，我不能因为他的残疾工作49天提出申请。
@@ -152,7 +153,7 @@ path,token,en,es,zh
 /apply-for-cal-grant,,required to register,está obligado a registrarse,您需要注册
 /apply-for-cal-grant,,Not owe a refund on any state or federal grant or be in default on a student loan,No deber dinero por ninguna beca estatal o federal o en incumplimiento de un préstamo estudiantil,不欠退税上的任何州或联邦赠款或将拖欠学生贷款
 /apply-for-cal-grant,,Not be in jail,No estar encarcelado,不被禁闭
-/apply-for-cal-grant,,Meet the,Cumplir con los,拜见
+/apply-for-cal-grant,,Meet the,Cumplir con los,实现
 /apply-for-cal-grant,,Satisfactory Academic Progress standards</a> set by your school,progreso académico satisfactorio por los estándares</a> establecidos por su escuela,令人满意的学业进步的标准由</A>他们学校成立
 /apply-for-cal-grant/step-1,,Apply for a Cal Grant: Step 1,Solicitar una beca Cal Grant: Paso 1,申请加州格兰特：第1步
 /apply-for-cal-grant/step-1,,"There are two ways to apply for financial aid that can lead to a Cal Grant. Submit a FAFSA <em>or</em> CADAA form, if you haven’t already.","Hay dos maneras de solicitar ayuda financiera que puede conducir a una beca Cal Grant. Presentar un solicitud de FAFSA <EM>o</EM> CADAA, si no lo ha hecho.",有申请财政援助，可能导致一个CAL授权两种方式。提交FAFSA <EM>或</ em>的Cadaa，如果你还没有完成。
@@ -160,21 +161,21 @@ path,token,en,es,zh
 /apply-for-cal-grant/step-1,,Have U.S. Citizenship,Tienen la ciudadanía de EE.UU.,他们拥有美国国籍
 /apply-for-cal-grant/step-1,,are a Permanent Resident,es un Residente Permanente,这是一个永久居民
 /apply-for-cal-grant/step-1,,"do not have U.S. Citizenship, but you are","no tienen la ciudadanía de EE.UU., pero usted es",他们没有美国国籍，但你
-/apply-for-cal-grant/step-1,[lang-have-a],have a,tiene un,有
+/apply-for-cal-grant/step-1,[lang-have-a],have a,tiene un,有一个
 /apply-for-cal-grant/step-1,,T Visa,Visa T,签证Ť
 /apply-for-cal-grant/step-1,,Apply for FAFSA,Aplicar al FAFSA,适用于FAFSA
 /apply-for-cal-grant/step-1,,Apply for the California Dream Act Application (CADAA) if you:,Solicita la aplicación del Dream Act de California (CADAA) si usted:,请加州梦想法案（Cadaa）如果你的应用程序：
 /apply-for-cal-grant/step-1,,Are undocumented,Es indocumentado,它是非法的
 /apply-for-cal-grant/step-1,,have Deferred Action for Childhood Arrivals (DACA) — valid or expired,esta debajo el programa Acción para Llegados en la Infancia (DACA) - válido o vencido,是行动纲领童年抵达（DACA）下 - 有效或过期
-/apply-for-cal-grant/step-1,[lang-have],have,tiene,你有
-/apply-for-cal-grant/step-1,[lang-are],are,es,这是
+/apply-for-cal-grant/step-1,[lang-have],have,tiene,已
+/apply-for-cal-grant/step-1,[lang-are],are,es,是
 /apply-for-cal-grant/step-1,,Temporary Protected Status (TPS),el Estatus de Protección Temporal (TPS),临时保护身份（TPS）
 /apply-for-cal-grant/step-1,,Apply for CADAA,Aplicar al CADAA,适用于Cadaa
 /apply-for-cal-grant/step-1,,Next step:,Próximo paso:,下一步：
 /apply-for-cal-grant/step-1,,Return to the beginning:,Regresar al principio,回到开头
 /apply-for-cal-grant/step-2,,Apply for a Cal Grant: Step 2,Solicitar una beca Cal Grant: Paso 2,申请加州格兰特：第2步
 /apply-for-cal-grant/step-2,,Apply for a Cal Grant: Step 2 - Alpha.CA.gov,Solicitar una beca Cal Grant: Paso 2 - Alpha.CA.gov,申请加州格兰特：第2步 -  Alpha.CA.gov
-/apply-for-cal-grant/step-2,,"To do so, simply","Para hacer esto,",要做到这一点，
+/apply-for-cal-grant/step-2,,"To do so, simply","Para hacer esto,",去做这个，
 /apply-for-cal-grant/step-2,,"log into WebGrants 4 Students</a>. There, you’ll find out if we’ve received your financial aid application and your GPA. If we have both, you’ve finished your Cal Grant application.","inicie una sesión en WebGrants 4 Students</a>. Allí, averiguará si hemos recibido su solicitud de ayuda financiera y su promedio de calificaciones. Si hemos recibido ambos, entonces ha completado su solicitud para la beca CalGrant.",登录WebGrants 4名</A>学生。在那里，你会发现，如果我们已经收到您的财政援助和你的GPA要求。如果你收到了两个，那么你完成你的CalGrant奖学金申请。
 /apply-for-cal-grant/step-2,,"If they haven’t, submit your own GPA form","Si no, envie su propio formulario de su Promedio de Calificaciones (GPA)",如果不是，从你的平均成绩发送自己的表单（GPA）
 /apply-for-cal-grant/step-2,,"If your school hasn’t shared your GPA with us, you have to print and","Si su escuela no ha compartido su Promedio de Calificaciones (GPA) con nosotros, usted tiene que imprimir y",如果你的学校还没有与我们分享他们的平均绩点（GPA），你必须打印和
@@ -191,13 +192,13 @@ path,token,en,es,zh
 /apply-for-cal-grant/step-2,,Went to any school that can’t convert your grades to a 4.00 scale (pass/fail only or certain schools outside of the United States),Fueron a una escuela que no pueden convertir sus grados de la escala de 4.00 (pasa / no pasa sólo ciertas escuelas o fuera de los Estados Unidos),他们去了一所学校，他们不能把4.00的规模学位（合格/不合格只有某些学校或美国以外）
 /apply-for-cal-grant/step-2,,"If you’ve been out of school for five years or longer, you can submit test scores or your GPA.","Si usted ha estado fuera de la escuela por cinco años o más, puede enviar resultados de las pruebas o su promedio de calificaciones.",如果你已经学出来了五年以上的，可以提交考试成绩或平均绩点。
 /apply-for-cal-grant/step-2,,Next step:,Próximo paso:,下一步：
-/apply-for-cal-grant/step-2,,Finish,Final,结束
+/apply-for-cal-grant/step-2,,Finish,Final,最后
 /apply-for-cal-grant/step-2,,Return to the beginning:,Para volver al principio:,要返回到开头：
 /apply-for-cal-grant/finish,,Apply for a Cal Grant: Finish,Solicitar una beca Cal Grant: Final,申请加州格兰特：决赛
 /apply-for-cal-grant/finish,,Apply for a Cal Grant: Finish - Alpha.CA.gov,Solicitar una beca Cal Grant - Alpha.CA.gov,申请加州格兰特 -  Alpha.CA.gov
 /apply-for-cal-grant/finish,,Finish applying for a Cal Grant,Finalizar la solicitud para una beca Cal Grant,完成了加州批准该申请
 /apply-for-cal-grant/finish,,You’ve applied for a Cal Grant if:,"Usted ha solicitado una beca Cal Grant, si, ",您已要求加州格兰特如果
-/apply-for-cal-grant/finish,,You’ve,Usted ha,你已经
+/apply-for-cal-grant/finish,,You’ve,Usted ha,你有
 /apply-for-cal-grant/finish,,applied for FAFSA or CADAA</a> by March 2.,aplicado al FAFSA o CADAA</a> antes del 2 de marzo.,施加到FAFSA或Cadaa 3月2日之前</a>的。
 /apply-for-cal-grant/finish,,And you or your school has,Usted o su escuela ha,你或你的学校有
 /apply-for-cal-grant/finish,,shared your GPA with us</a> by March 2.,compartido su promedio de calificaciones (GPA) con nosotros</a> antes del 2 de marzo.,3月2日之前分享他们的平均绩点（GPA）</A>我们。
@@ -223,10 +224,10 @@ path,token,en,es,zh
 /index.html,,Check lane closures for your trip,Verifique los cierre de carriles para su viaje,检查车道关闭的行程
 /news,,"Sorry, we can’t find that location. Please enter a valid location in California.","Lo sentimos, no podemos encontrar ese lugar. Por favor, introduzca una ubicación válida en California.",很抱歉，我们无法找到那个地方。请在加利福尼亚州输入有效的位置。
 /news,,"Sorry, we can only show road conditions in California. Please enter a California location.","En este momento, sólo podemos mostrar condiciones de la carretera en California. Por favor, introduzca una ubicación en California.",在这个时候，我们只能显示在加利福尼亚州的道路状况。请进入加州的位置。
-/news,,Get directions,Obtener direcciones,行车路线
+/news,,Get directions,Obtener direcciones,获取路线
 /news,,Road conditions for your trip,Condiciones de la carretera para su viaje,为你的出行道路条件
 /news,,Road condition,Condiciones del camino,道路状况
-/news,,Landmark,Punto de referencia,基准
+/news,,Landmark,Punto de referencia,参照点
 /news,,Description,Descripción,描述
 /find-minimum-wage-your-city,,Find the minimum wage in your city,Encuentre el salario mínimo en su ciudad,查找您所在城市最低工资标准
 /find-minimum-wage-your-city,,Find the minimum wage in your city - Alpha.CA.gov,Encuentre el salario mínimo en su ciudad - Alpha.CA.gov,在城市中找到的最低工资标准 -  Alpha.CA.gov
@@ -243,7 +244,7 @@ path,token,en,es,zh
 /find-minimum-wage-your-city,,Compare minimum wage across cities,Comparte el salario minimo entre ciudades,分享城市之间的最低工资标准
 /find-minimum-wage-your-city,,These California cities and counties have their own minimum wage laws.,Estas ciudades y condados de California tienen sus propias leyes de salario mínimo,这些市县在加利福尼亚州有自己的最低工资法
 /find-minimum-wage-your-city,,More about the,Más sobre el,更多关于
-/find-minimum-wage-your-city,,minimum wage,salario mínimo,最低工资标准
+/find-minimum-wage-your-city,,minimum wage,salario mínimo,最低薪资
 /find-minimum-wage-your-city,,en-US,es,ch
 /find-minimum-wage-your-city,,The minimum wage in,El salario mínimo en,最低工资标准
 /find-minimum-wage-your-city,,Minimum wage rates as of,las tasas de salario mínimo a partir de,从最低工资标准
@@ -251,15 +252,15 @@ path,token,en,es,zh
 /find-minimum-wage-your-city,,Rate,Velocidad,速度
 /find-minimum-wage-your-city,,25 or fewer,25 o menos,25以下
 /find-minimum-wage-your-city,,26 or more,26 o más,26以上
-/find-minimum-wage-your-city,,is,es,这是
-/find-minimum-wage-your-city,,hour,hora,时间
-/find-minimum-wage-your-city,,employees,empleados,员工
+/find-minimum-wage-your-city,,is,es,是
+/find-minimum-wage-your-city,,hour,hora,小时
+/find-minimum-wage-your-city,,employees,empleados,雇员
 /find-minimum-wage-your-city,,Employers with,Los empleadores con,与雇主
 /find-minimum-wage-your-city,,for employers with,para los empleadores con,雇主
 /find-food-banks-near-you,,Find food banks near you,Encuentre bancos de alimentos más cercanos,查找附近的粮食银行
 /find-food-banks-near-you,,We’ll help you find the food banks and pantries closest to you.,Nosotros le ayudaremos a encontrar los bancos de alimentos y despensas más cercanos a tu.,我们将帮助您寻找食物银行和最接近茶水间给你。
 /find-food-banks-near-you,,Please enter your city or zip code:,"Por favor, introduzca su ciudad o código postal:",请输入您的城市或邮政编码：
-/find-food-banks-near-you,,Other resources,Otros recursos,其他资源
+/find-food-banks-near-you,,Other resources,Otros recursos,另一种资源
 /find-food-banks-near-you,,Text us to find food close to you,Envíe un mensaje de texto para encontrar comida cerca de usted,发送短信去寻找食物靠近你
 /find-food-banks-near-you,,Text us anytime at,Envíenos un mensaje de texto en cualquier momento al,在任何时候发送短信
 /find-food-banks-near-you,,with your city name or zip code.,con el nombre de su ciudad o código postal.,与你的城市名称或邮政编码的名称。
@@ -281,11 +282,11 @@ path,token,en,es,zh
 /state-california-employee-holidays,,Upcoming holidays,Proxímos días festivos,即将到来的假期
 /state-california-employee-holidays,,State of California employees have paid holidays on the following dates.,Empleados estatales de California tienen los días festivos pagados en las próximas fechas.,加利福尼亚州员工在不久的将来有薪假期。
 /state-california-employee-holidays,[Date],Date,Fecha,日期
-/state-california-employee-holidays,,Day of the week,Día de la semana,天
-/state-california-employee-holidays,,Holiday,Día festivo,节日
+/state-california-employee-holidays,,Day of the week,Día de la semana,平日
+/state-california-employee-holidays,,Holiday,Día festivo,公共假期
 /state-california-employee-holidays,,Other holidays,Días festivos adicionales,其他节日
 /state-california-employee-holidays,,Most employees get,La mayoría de los empleados reciben,大多数员工接受
-/state-california-employee-holidays,,1 personal holiday,Un día libre,一天
+/state-california-employee-holidays,,1 personal holiday,Un día libre,休一天假
 /state-california-employee-holidays,,1 holiday credit (8 hours),Un crédito de vacaciones (8 horas),一个长假信贷（8小时）
 /state-california-employee-holidays,,"July 1, 2020, to June 30, 2021",Entre el 1 de julio de 2020 a 31 de junio de 2021,与2020年7月1日至31月2021
 /state-california-employee-holidays,,"July 1, 2021, to June 30, 2022",Entre el 1 de julio de 2021 a 31 de junio de 2022,与2021年7月1日至31月2022
@@ -319,7 +320,7 @@ path,token,en,es,zh
 /request-birth-certificate,,Cost: $25 (plus the price of notarization),Costo: $25 (más el precio de la notarización),费用：$ 25（加公证的价格）
 /request-birth-certificate,,Processing time: 3 to 4 weeks or more (expected to take longer in 2020 because of the demand for,Tiempo de procesamiento: 3 a 4 semanas o más (se espera que tome más tiempo en 2020 debido a la demanda de,处理时间：3〜4周或更长的时间（比预期在2020年至需要更长的时间，因为需求
 /request-birth-certificate,,Real ID,Real ID,真实身份
-/request-birth-certificate,,Apply online,Solicitar por internet,在线申请
+/request-birth-certificate,,Apply online,Solicitar por internet,线上申请
 /request-birth-certificate,,You can apply online through the private companies VitalChek and Vital Records Now.,Puede solicitar en línea a través de empresas privadas VitalChek y Vital Records Now,您可以通过私人公司和重要记录现在VitalChek网上申请
 /request-birth-certificate,,Cost: $31–$110,Costo: $31-110,费用：$ 31-110
 /request-birth-certificate,,Processing time: 2 to 3 weeks,Tiempo de procesamiento: 2-3 semanas,处理时间：2-3周
@@ -404,7 +405,7 @@ path,token,en,es,zh
 /apply-discounted-phone-service,,California LifeLine lowers the cost of your monthly bill for your cell or landline phone.,El programa California LifeLine reduce el costo de su factura mensual de su teléfono celular o fijo. Este descuento es para hogares,加州生命线程序从您的手机或座机减少你每月账单的费用。该折扣是家庭
 /apply-discounted-phone-service,,A household is a group of people who live together and share income and expenses (even if they are not related to each other).,Un hogar es un grupo de personas que viven juntas y comparten ingresos y gastos (incluso si no están relacionados uno al otro).,一个家庭是一群人谁住在一起，共享收入和支出（即使它们与一个其他）。
 /apply-discounted-phone-service,,households,hogares,户
-/apply-discounted-phone-service,,that:,que,那
+/apply-discounted-phone-service,,that:,que,比
 /apply-discounted-phone-service,,Get public assistance,Reciben asistencia pública,公共援助
 /apply-discounted-phone-service,,Or have an income below a certain amount,O tienen un ingreso por debajo de cierta cantidad,或者，他们有低于一定数额的收入
 /apply-discounted-phone-service,,This discount is for households that,Este descuento es para los hogares que,该折扣是家庭
@@ -420,7 +421,7 @@ path,token,en,es,zh
 /apply-discounted-phone-service,,"If you contacted your phone company but still haven’t gotten your application form in the mail, please","Si contactó a su compañía telefónica pero aún no recibió su formulario para solicitar por correo, por favor ",如果您联系您的电话公司，但尚未收到您的申请表邮寄，请
 /apply-discounted-phone-service,,>contact us,>contáctenos,>联系
 /apply-discounted-phone-service,,Apply online or by mail,Solicite por internet o por correo,在网上或通过邮寄申请
-/apply-discounted-phone-service,,Apply online,Solicite por internet,在线申请
+/apply-discounted-phone-service,,Apply online,Solicite por internet,线上申请
 /apply-discounted-phone-service,,Apply by mail. Simply fill out and mail back the form inside your pink letter.,Solicite por correo. Simplemente complete y envíe por correo la aplicación dentro de su carta rosa.,通过邮件索取。只需填写并邮寄其粉红色的信中的应用。
 /apply-discounted-phone-service,,Get our decision in the mail,Recibe nuestra determinación en el correo,接收我们决心在邮件
 /apply-discounted-phone-service,,"We’ll send you a letter to let you know if you’re approved. If so, you’ll start getting a monthly discount from your phone company automatically.","Le enviaremos una carta para informarle si está aprobado. Si es así, comenzará a obtener un descuento mensual de su compañía telefónica automáticamente.",如果获得批准，我们将寄给您一封信。如果是这样，你将开始自动从你的电话公司每月在减除。
@@ -436,7 +437,7 @@ path,token,en,es,zh
 /check-if-you-can-get-discounted-phone-service,,>household<,>hogar<,>首页<
 /check-if-you-can-get-discounted-phone-service,,get support from any of these programs?,recibe apoyo de alguno de estos programas?,接收从这些方案的一个支持？
 /check-if-you-can-get-discounted-phone-service,,Please check all that apply.,Por favor marque todos los que apliquen.,请检查所有适用。
-/check-if-you-can-get-discounted-phone-service,,I’m not sure,No estoy seguro,我不知道
+/check-if-you-can-get-discounted-phone-service,,I’m not sure,No estoy seguro,我不确定
 /check-if-you-can-get-discounted-phone-service,,Medicaid/Medi-Cal,Medicaid/Medi-Cal,医疗/的Medi-Cal
 /check-if-you-can-get-discounted-phone-service,,"CalFresh, Food Stamps or Supplemental Nutrition Assistance Program (SNAP)","CalFresh, Estampillas para Alimentos o Programa de Asistencia para Nutrición Suplementaria (SNAP)",CalFresh，食品券计划或营养补助（SNAP）
 /check-if-you-can-get-discounted-phone-service,,Low Income Home Energy Assistance Program (LIHEAP),Programa de Asistencia Energética para Hogares de Bajos Ingresos (LIHEAP),能源援助计划为低收入（LIHEAP）
@@ -473,7 +474,7 @@ path,token,en,es,zh
 /check-if-you-can-get-discounted-phone-service/qualified-income,,Have the document with you as you continue to step two.,Ten el documento con usted mientras continúe con el paso dos.,有文件，而你继续第二步。
 /check-if-you-can-get-discounted-phone-service/qualified-income,,Go to step 2,Regrese al paso 2,返回到第2步
 /check-if-you-can-get-discounted-phone-service/not-sure-qualified,,Contact us to find out if you can get California LifeLine,Contáctenos para averiguar si puede obtener California LifeLine,联系我们找出如果你能得到加州生命线
-/check-if-you-can-get-discounted-phone-service/not-sure-qualified,,Monday–Friday,Lunes–Viernes,MF
+/check-if-you-can-get-discounted-phone-service/not-sure-qualified,,Monday–Friday,Lunes–Viernes,周一上周五
 /check-if-you-can-get-discounted-phone-service/not-sure-qualified,,7 a.m.–7 p.m.,7 a.m.–7 p.m.,上午7点 - 下午7时。
 /check-if-you-can-get-discounted-phone-service/not-sure-qualified,,General number,Numero General,一般数
 /check-if-you-can-get-discounted-phone-service/not-sure-qualified,,English,Inglés,英语
@@ -483,13 +484,13 @@ path,token,en,es,zh
 /check-if-you-can-get-discounted-phone-service/not-sure-qualified,,Tagalog,Tagalo,他加禄语
 /check-if-you-can-get-discounted-phone-service/not-sure-qualified,,Korean,Coreano,朝鲜的
 /check-if-you-can-get-discounted-phone-service/not-sure-qualified,,Vietnamese,Vietnamita,越南
-/check-if-you-can-get-discounted-phone-service/not-sure-qualified,,Chinese,Chino,中国
+/check-if-you-can-get-discounted-phone-service/not-sure-qualified,,Chinese,Chino,中文
 /check-if-you-can-get-discounted-phone-service/not-sure-qualified,,(Mandarin/Cantonese),(Mandarín / Cantonés),（普通话/广东话）
 /check-if-you-can-get-discounted-phone-service/not-sure-qualified,,Japanese,Japonés,日本
 /check-if-you-can-get-discounted-phone-service/not-sure-qualified,,TTY Number,Número TTY ,TTY号码
 /check-if-you-can-get-discounted-phone-service/not-qualified,,"Sorry, you may not be able to get a discount.","Lo sentimos, es posible que no pueda obtener un descuento.",对不起，你可能不会得到折扣。
 /check-if-you-can-get-discounted-phone-service/not-qualified,,"To be sure, contact us about California LifeLine:","Para estar seguro, contáctenos sobre el Programa California LifeLine.",可以肯定的，请联系我们在加州生命线课程。
-/check-if-you-can-get-discounted-phone-service/not-qualified,,Monday–Friday,Lunes–Viernes,MF
+/check-if-you-can-get-discounted-phone-service/not-qualified,,Monday–Friday,Lunes–Viernes,周一上周五
 /check-if-you-can-get-discounted-phone-service/not-qualified,,7 a.m.–7 p.m.,7 a.m.–7 p.m.,上午7点 - 下午7时。
 /check-if-you-can-get-discounted-phone-service/not-qualified,,General number,Numero General,一般数
 /check-if-you-can-get-discounted-phone-service/not-qualified,,English,Inglés,英语
@@ -499,7 +500,7 @@ path,token,en,es,zh
 /check-if-you-can-get-discounted-phone-service/not-qualified,,Tagalog,Tagalo,他加禄语
 /check-if-you-can-get-discounted-phone-service/not-qualified,,Korean,Coreano,朝鲜的
 /check-if-you-can-get-discounted-phone-service/not-qualified,,Vietnamese,Vietnamita,越南
-/check-if-you-can-get-discounted-phone-service/not-qualified,,Chinese,Chino,中国
+/check-if-you-can-get-discounted-phone-service/not-qualified,,Chinese,Chino,中文
 /check-if-you-can-get-discounted-phone-service/not-qualified,,(Mandarin/Cantonese),(Mandarín / Cantonés),（普通话/广东话）
 /check-if-you-can-get-discounted-phone-service/not-qualified,,Japanese,Japonés,日本
 /check-if-you-can-get-discounted-phone-service/not-qualified,,TTY Number,Número TTY ,TTY号码
@@ -509,14 +510,14 @@ path,token,en,es,zh
 /apply-online-discounted-phone-service,,Apply or renew online for a discounted phone service,Solicite o renove por internet un servicio telefónico con descuento.,Renove请求或网上折扣电话服务。
 /apply-online-discounted-phone-service,,Applying online for California LifeLine takes around five minutes.,Solicite por internet para el programa California LifeLine toma solo cinco minutos.,在线申请加州生命线程序只需要五分钟。
 /apply-online-discounted-phone-service,,Apply or renew online,Solicite o renove por internet,Renove请求或在线
-/apply-online-discounted-phone-service,,Before you start,Antes de empezar,开始之前
+/apply-online-discounted-phone-service,,Before you start,Antes de empezar,在开始之前
 /apply-online-discounted-phone-service,,"If you don’t have an application form, please","Si no tiene su solicitud, por favor",如果没有您的要求，请
 /apply-online-discounted-phone-service,,go to the application process,visite al proceso de solicitud,访问应用程序
-/apply-online-discounted-phone-service,,contact us,contactenos,接触
+/apply-online-discounted-phone-service,,contact us,contactenos,联系我们
 /apply-online-discounted-phone-service,,"If you need a renewal form, please","Si necesita una solicitud para renovar, por favor",如果你需要一个应用程序更新，请
 /apply-online-discounted-phone-service,,What you need to apply,Que necesites para solicitar,你需要申请
 /apply-online-discounted-phone-service,,"To apply online, you’ll need two details from your application form:","Para que solicite por internet, necesitará dos detalles de su solicitud:",在网上申请，您将需要您的要求的两个细节：
-/apply-online-discounted-phone-service,,Your,Su,他的
+/apply-online-discounted-phone-service,,Your,Su,它的
 /apply-online-discounted-phone-service,,Personal Identification Number (PIN),Numero de Identificación Personal (PIN),个人识别号码（PIN）
 /apply-online-discounted-phone-service,,applicant’s phone number,número de teléfono del solicitante,申请人电话号码
 /apply-online-discounted-phone-service,,or enrollment code,o código de inscripción,或注册码
@@ -530,7 +531,7 @@ path,token,en,es,zh
 /apply-for-unemployment-insurance/index.html,,Fully or partly unemployed,Totalmente o parcialmente desempleado.,完全或部分失业。
 /apply-for-unemployment-insurance/index.html,,Unemployed not because of anything you did,Desempleado sin culpa de usted,失业过错的你
 /apply-for-unemployment-insurance/index.html,,Physically able to work,Físicamente apto para trabajar,身体健康工作
-/apply-for-unemployment-insurance/index.html,,Available and willing to work,Disponible para trabajar,可用于工作
+/apply-for-unemployment-insurance/index.html,,Available and willing to work,Disponible para trabajar,提供给工作
 /apply-for-unemployment-insurance/index.html,,Looking for work,Buscando trabajo,找工作
 /apply-for-unemployment-insurance/index.html,,You also must have made enough money in the last 18 months to get UI benefits. Find out what your UI payments would be with our calculator:,También debe haber ganado suficiente dinero en los últimos 18 meses para obtener beneficios de UI. Descubra cuáles serían sus pagos de UI usando nuestra calculadora:,还必须在过去18个月赚了足够的钱，获得失业救济金。找出你的付款将使用我们的计算器界面：
 /apply-for-unemployment-insurance/index.html,,Calculate payments,Calcule sus beneficios,计算你的好处
@@ -546,7 +547,7 @@ path,token,en,es,zh
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,The name could be a payroll agency or staffing agency,Ésta podría ser una agencia de nóminas de pago o una agencia de empleos,这可能是代发工资或职业介绍
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,Complete mailing address,Dirección postal,地址
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,Company’s phone number,El número telefónico de la compañía,该公司的电话号码
-/apply-for-unemployment-insurance/what-you-need-before-you-apply,,Supervisor’s name,Nombre del supervisor,主管的名称
+/apply-for-unemployment-insurance/what-you-need-before-you-apply,,Supervisor’s name,Nombre del supervisor,主管名称
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,Total wages for the last week you worked,Salario de la última semana que trabajó,上周的薪水是工作
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,The reason your employer reduced your hours or that you’re no longer working there,La razón por la cual su empleador redujo sus horas o porque ya no está trabajando allí,之所以你的雇主减少你的时间，或者因为它不再在那里工作
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,Employment history,Historial de empleos,工作经历
@@ -556,11 +557,11 @@ path,token,en,es,zh
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,Total wages earned,Todos los sueldos que ganó,所有挣工资
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,"How often you were paid (hourly, weekly, monthly)","Cómo se le pagaba (por hora, semanal, mensual)",如何支付（每小时，每周，每月）
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,Hours worked per week,Horas trabajadas por semana,小时每周工作
-/apply-for-unemployment-insurance/what-you-need-before-you-apply,,Your information,Su información,信息
+/apply-for-unemployment-insurance/what-you-need-before-you-apply,,Your information,Su información,你的资料
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,Social Security Number,Número de seguridad social,社会安全号码
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,Driver’s license or ID card number,Licencia de conducir o número de tarjeta de identificación,驾照或身份证号码
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,Citizenship status,Estado de ciudadanía,公民身份
-/apply-for-unemployment-insurance/what-you-need-before-you-apply,,Mailing address,Dirección de envio,邮寄地址
+/apply-for-unemployment-insurance/what-you-need-before-you-apply,,Mailing address,Dirección de envio,收件地址
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,Telephone number,Número de teléfono,电话号码
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,"Name, including names you no longer use (such as your married or maiden names)","Nombre, incluyendo nombres anteriores que haya usado (como de casado o de soltero)",名称，包括使用以前的名称（如已婚或未婚）
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,Other information,Otra información,其他信息
@@ -569,18 +570,18 @@ path,token,en,es,zh
 /apply-for-unemployment-insurance/what-you-need-before-you-apply,,"If you served in the military in the last 18 months, your DD Form 214","Si estuvo en el servicio militar en los últimos 18 meses, su Formulario DD 214",如果你是在军队服役，在过去18个月中，你的DD表格214
 /apply-for-unemployment-insurance,,How to apply,Cómo presentar una solicitud,如何申请
 /apply-for-unemployment-insurance/how-to-apply,,Instructions related to applying for unemployment insurance (UI).,Instrucciones relacionadas con la solicitud de seguro de desempleo (UI).,应用指令相关的失业保险（UI）。
-/apply-for-unemployment-insurance/how-to-apply,,Apply online,Solicite por internet,在线申请
+/apply-for-unemployment-insurance/how-to-apply,,Apply online,Solicite por internet,线上申请
 /apply-for-unemployment-insurance/how-to-apply,,Applying online is the fastest way to file for unemployment insurance. You can apply during the times below.,Solicitando por internet es la manera más rápida para presentar una solicitud del seguro de desempleo. Se puede solicitar durante los tiempos siguientes.,网上申请是申请失业保险的最快方式。您可以将下一次。
-/apply-for-unemployment-insurance/how-to-apply,,Days,Dias,迪亚斯
-/apply-for-unemployment-insurance/how-to-apply,,Sunday,Domingo,星期天
+/apply-for-unemployment-insurance/how-to-apply,,Days,Dias,天
+/apply-for-unemployment-insurance/how-to-apply,,Sunday,Domingo,星期日
 /apply-for-unemployment-insurance/how-to-apply,,Monday,Lunes,星期一
-/apply-for-unemployment-insurance/how-to-apply,,Tuesday – Friday,Martes – Viernes,周二 - 周五
+/apply-for-unemployment-insurance/how-to-apply,,Tuesday – Friday,Martes – Viernes,周二周五
 /apply-for-unemployment-insurance/how-to-apply,,Saturday,Sábado,星期六
 /apply-for-unemployment-insurance/how-to-apply,,Available times,Horarios disponibles,可用时间
-/apply-for-unemployment-insurance/how-to-apply,,5 a.m. – 8:30 p.m.,5 a.m. – 8:30 p.m.,凌晨5点 - 下午8点半
-/apply-for-unemployment-insurance/how-to-apply,,4 a.m. – 10 p.m.,4 a.m. – 10 p.m.,凌晨4时 - 晚上10点
-/apply-for-unemployment-insurance/how-to-apply,,2 a.m. – 10 p.m.,2 a.m. – 10 p.m.,凌晨2时 - 晚上10点
-/apply-for-unemployment-insurance/how-to-apply,,2 a.m. – 8 p.m.,2 a.m. – 8 p.m.,凌晨2时 - 晚上8点
+/apply-for-unemployment-insurance/how-to-apply,,5 a.m. – 8:30 p.m.,5 a.m. – 8:30 p.m.,上午05时。 - 下午8:30。
+/apply-for-unemployment-insurance/how-to-apply,,4 a.m. – 10 p.m.,4 a.m. – 10 p.m.,凌晨4时- 下午10点。
+/apply-for-unemployment-insurance/how-to-apply,,2 a.m. – 10 p.m.,2 a.m. – 10 p.m.,凌晨2点。 - 下午10点。
+/apply-for-unemployment-insurance/how-to-apply,,2 a.m. – 8 p.m.,2 a.m. – 8 p.m.,凌晨2点。 - 晚上8点
 /apply-for-unemployment-insurance/how-to-apply,,Apply by phone,Solicite por teléfono,通过电话申请
 /apply-for-unemployment-insurance/how-to-apply,,Monday – Friday (except,Lunes – Viernes (excepto,周一 - 周五（除
 /apply-for-unemployment-insurance/how-to-apply,,state holidays,días festivos estatales,国家假期
@@ -589,7 +590,7 @@ path,token,en,es,zh
 /apply-for-unemployment-insurance/how-to-apply,,English,Inglés,英语
 /apply-for-unemployment-insurance/how-to-apply,,Spanish,Español,西班牙语
 /apply-for-unemployment-insurance/how-to-apply,,Cantonese,Cantonés,广东话
-/apply-for-unemployment-insurance/how-to-apply,,Mandarin,Mandarín,官话
+/apply-for-unemployment-insurance/how-to-apply,,Mandarin,Mandarín,普通话
 /apply-for-unemployment-insurance/how-to-apply,,Vietnamese,Vietnamita,越南
 /apply-for-unemployment-insurance/how-to-apply,,TTY,TTY,TTY
 /apply-for-unemployment-insurance/how-to-apply,,Apply by mail or fax,Presente un solicitud por correo o fax,通过邮件或传真提交申请
@@ -610,7 +611,7 @@ path,token,en,es,zh
 /apply-for-unemployment-insurance/after-you-apply,,"If we have any questions about whether you can get UI, we’ll schedule a call with you.","Si tenemos alguna pregunta acerca de si se puede obtener el seguro de desempleo (UI), programaremos una llamada con usted.",如果你对你是否能得到失业保险有任何疑问（UI），我们安排与你的电话。
 /apply-for-unemployment-insurance/after-you-apply,,"If you don’t pick up, we’ll use the information from your application to make a decision. Your application might be delayed or rejected.","Si no respondes, vamos a utilizar la información de su solicitud para tomar una decisión. Su aplicación podría ser retrasada o rechazada.",如果你不回应，我们将使用你的应用程序中的信息来做出决定。您的申请可能被延迟或拒绝。
 /apply-for-unemployment-insurance/after-you-apply,,You can reschedule your call,Usted puede cambiar la cita de su llamada,您可以重新安排您的通话
-/apply-for-unemployment-insurance/after-you-apply,,online,por internet,在线
+/apply-for-unemployment-insurance/after-you-apply,,online,por internet,互联网
 /apply-for-unemployment-insurance/after-you-apply,,contact UI,comunicándose con UI,接触IU
 /apply-for-unemployment-insurance/after-you-apply,,"If so, prepare for our call","Si es así, prepararse para nuestra llamada",如果是这样，准备为我们的呼叫
 /apply-for-unemployment-insurance/after-you-apply,,"If we decide to call you, we’ll mail you a letter with the time and date of our call.","Si decidimos llamarle, le enviaremos por correo una carta con la fecha y la hora de nuestra llamada telefónica.",如果我们决定要调用它，我们会发邮件与我们通话的日期和时间的函。
@@ -635,7 +636,7 @@ path,token,en,es,zh
 /apply-for-unemployment-insurance/after-you-apply,,Get payments,Obtener pagos,获取付款
 /apply-for-unemployment-insurance/after-you-apply,,We’ll mail you a debit card for your first payment. ,Le enviaremos por correo una tarjeta de débito para su primer pago.,我们将寄给你的首付款借记卡。
 /apply-for-unemployment-insurance/after-you-apply,,"Then, you can activate it in two ways:","Después, se puede activar de dos maneras:",然后，你可以把在两个方面：
-/apply-for-unemployment-insurance/after-you-apply,,Online,Por internet,在线
+/apply-for-unemployment-insurance/after-you-apply,,Online,Por internet,互联网
 /apply-for-unemployment-insurance/after-you-apply,,Or by phone:,O por teléfono:,或致电：
 /apply-for-unemployment-insurance/after-you-apply,,Outside of the U.S.: Call collect at,Fuera de los Estados Unidos: Llama por cobrar al,美国以外的国家：从呼叫账款
 /apply-for-unemployment-insurance/after-you-apply,,You can transfer money to your other bank accounts for free.,Usted puede transferir dinero a sus otras cuentas bancarias de forma gratuita.,到其他银行账户免费，您可以汇款。
@@ -702,7 +703,7 @@ path,token,en,es,zh
 /considerations-after-wildfire/,,Contact your disaster relief service,Póngase en contacto con el servicio de alivio durante un desastre,救灾期间，联系服务
 /considerations-after-wildfire/,,"If the governor declares a state of emergency, your area should have a Local Assistance Center. The center can help you with all of the steps on this list.","Si el gobernador declara un estado de emergencia, su área debe tener un Centro de Asistencia Local. El centro le puede ayudar con todos los pasos de esta lista.",如果州长宣布进入紧急状态，该地区必须有本地支持中心。该中心可以帮助您在这个列表中的每一步。
 /considerations-after-wildfire/,,"Otherwise, you can contact","Al contrario, puede ponerse en contacto con",相反，您可以联系
-/considerations-after-wildfire/,,Red Cross,Cruz Roja,红十字会
+/considerations-after-wildfire/,,Red Cross,Cruz Roja,红十字
 /considerations-after-wildfire/,,Ask the DMV to replace lost IDs,Pedir al DMV para reemplazar tarjetas de identificación perdidas.,问DMV来补充丢失的身份证。
 /considerations-after-wildfire/,,"Go to any DMV office or your Local Assistance Center to replace your lost driver’s license or ID card. They can look up your name and picture to send you a new ID. Then, you can use your driver’s license to replace your birth certificate and other important documents.","Ve a cualquier oficina del DMV o su Centro de Asistencia Local para reemplazar la tarjeta de identificación o licencia de conducir perdida. Ellos pueden buscar su nombre y la imagen para que le envíen un nuevo ID. Luego, puede utilizar su licencia de conducir para reemplazar su certificado de nacimiento y otros documentos importantes.",去任何DMV办公室或当地服务中心更换身份证或驾照丢失。他们可以搜索自己的名字和形象向您发送一个新的ID。然后，你可以使用你的驾驶执照更换你的出生证明等重要证件。
 /considerations-after-wildfire/,,"If the governor has declared a state of emergency, your drivers license should be processed within a week.","Si el gobernador ha declarado el estado de emergencia, su licencia de conducir debe ser procesada dentro de una semana.",如果州长已经宣布进入紧急状态，你的驾驶执照必须在一周内进行处理。
@@ -719,7 +720,7 @@ path,token,en,es,zh
 /considerations-after-wildfire/,,transfer the title ,transferir el título,所有权转让
 /considerations-after-wildfire/,,to your insurance company. Then you’ll no longer own it.,a su compañía de seguros. Después usted ya no será el dueño.,您的保险公司。在此之后，你不会是主人。
 /considerations-after-wildfire/,,If you still own your vehicle and you don’t know where it is,Si todavía es dueño de su vehículo y usted no sabe dónde está,如果您仍然拥有你的车，你不知道你在哪里
-/considerations-after-wildfire/,, you might get a bill from a storage or tow company. Ask the ,Puede recibir una factura de una empresa de almacenamiento o remolque. Preguntele al ,你可以从一家存储公司或拖车的法案。问
+/considerations-after-wildfire/,, you might get a bill from a storage or tow company. Ask the ,Puede recibir una factura de una empresa de almacenamiento o remolque. Preguntele al ,你可以从一家存储公司或拖车的法案。咨询
 /considerations-after-wildfire/,,California Highway Patrol ,Patrulla de Caminos de California (CHP),加州公路巡警（CHP）
 /considerations-after-wildfire/,,to help find your vehicle.,para ayudarle a encontrar su vehículo.,为了帮助您找到您的车辆。
 /considerations-after-wildfire/,,Ask about your utilities,Pregunte acerca de sus servicios de utilidad,询问他们的事业服务
@@ -731,7 +732,7 @@ path,token,en,es,zh
 /considerations-after-wildfire/,,ask for their advice about reporting the wildfire to your insurance company. Housing advocates are there to help you get payments to replace what you’ve lost.,pideles su consejo sobre como reportar el incendio forestal a su compañía de seguros. Defensores de vivienda están ahí para ayudarle a obtener pagos para reemplazar lo que perdio.,请他们针对如何森林火灾报告给保险公司咨询。房屋主张在那里帮助您获得资金，替换你失去了什么。
 /considerations-after-wildfire/,,If you don’t have home or renters insurance,Si usted no tiene seguro de casa o inquilinos,如果你没有家庭或租房保险
 /considerations-after-wildfire/,,"you can contact your Local Assistance Center, ","puede ponerse en contacto con el Centro de Asistencia Local,",您可以联系本地支持中心，
-/considerations-after-wildfire/,,for help.,por ayuda.,寻求帮助。
+/considerations-after-wildfire/,,for help.,por ayuda.,求助。
 /considerations-after-wildfire/,,Contact your landlord or mortgage company,Póngase en contacto con su propietario o compañía de hipoteca,请联系您的房东或抵押贷款公司
 /considerations-after-wildfire/,,Contact your landlord or mortgage company to learn if they’ll let you pause on payments. They could also save you from late fees or a lower credit score.,Póngase en contacto con su propietario o compañía de hipoteca para saber si dejan hacer una pausa en sus pagos. Le pueden salvar de recargos o una menor puntuación de su crédito.,联系你的房东或按揭公司，了解，如果他们不暂停付款。您可以保存附加费或降低你的信用评分。
 /considerations-after-wildfire/,,Learn about debris removal,Aprende sobre la limpieza de los escombros,了解清理杂物
@@ -746,16 +747,16 @@ path,token,en,es,zh
 /considerations-after-wildfire/,,"Let your local police department know if you temporarily leave your home. That way, they’ll know your property should be empty, and they can help to protect it.","Informale a su departamento de policía local si deja temporalmente su casa. De esa manera, sabrán que su propiedad esta vacía, y pueden ayudar a protegerla.",Informale当地警察局，如果你暂时离开家。这样一来，你知道你的财产是空的，可以帮助保护它。
 /considerations-after-wildfire/,,Save receipts related to wildfire loss,Guarde sus recibos relacionados con la pérdida debido a los incendios forestales,由于森林火灾有关损失保存您的收据
 /considerations-after-wildfire/,,You may need your receipts later to get the payments you need from your insurance company. The receipts will also help you include your losses on your tax return.,Es posible que usted necesite sus recibos más tarde para conseguir los pagos que necesite de su compañía de seguros. Los recibos también le ayudan a incluir sus pérdidas en su declaración de impuestos.,以后您可能需要您的收据，让你从你的保险公司需要支付。收据还可以帮助你包括你的报税亏损。
-/errorpages/404.html,,Error 404,Error 404,404错误
+/errorpages/404.html,,Error 404,Error 404,错误404
 /errorpages/500.html,,Error 500,Error 500,错误500
 /office-of-digital-innovation,,California Office of Digital Innovation,Oficina de Innovación Digital de California,数字创新加州办公室
 /office-of-digital-innovation,,What we’re building,Lo que estamos construyendo,我们正在建设
 /office-of-digital-innovation,,"Too often, government services dont actually meet the needs of the people who use them. California Office of Digital Innovation (ODI) will work to change that by putting residents’ needs at the heart of state services. Whether it’s homelessness, housing, wildfires, or any one of the serious issues facing California, ODI will partner with innovators across the state to deliver radically better services.","Con mucha frecuencia, los servicios gubernamentales no satisfacen las necesidades de las personas que los utilizan. La Oficina de Innovación Digital (ODI) de California trabajará para cambiar eso poniendo las necesidades de los residentes al centro de servicios del estado. Sea la falta de hogar, la vivienda, los incendios forestales, o cualquiera de los graves problemas que enfrenta California, se asociará ODI con los innovadores a través del estado para ofrecer mejores servicios radicalmente.",很多时候，政府服务不符合谁使用它们的人的需求。加州的数字创新（ODI）的办公室将努力通过把居民的需要，以国家的服务中心，以改变这种状况。是无家可归，住房，森林火灾，或任何的加州面临的严重问题，与整个国家的创新ODI将合作从根本上提供更好的服务。
 /office-of-digital-innovation,,"Drawing on lessons learned from similar efforts across the United States and globally, we’ll partner with California state agencies to bring a human-centered, agile and product-focused mindset to technology design and procurement. ","Basándose en las experiencias de esfuerzos similares en todo Estados Unidos y globalmente, vamos a colaborar con agencias del estado de California para traer una mentalidad centrada en el ser humano, ágil y centrado en el producto al diseño de la tecnología y las adquisiciones.",基于整个美国的类似努力的经验和全球范围内，我们将与美国加利福尼亚州的机构合作，带来了心态以人为本，灵活，专注于产品的设计技术和采购之中。
-/office-of-digital-innovation,,What we’ll do,Lo que haremos,我们将做些什么
+/office-of-digital-innovation,,What we’ll do,Lo que haremos,我们要做什么
 /office-of-digital-innovation,,ODI will work collaboratively with state agencies to improve digital services for Californians. Our work will include early stage research and prototyping for new projects as well as independent counsel and advice on existing large projects.,ODI trabajará en colaboración con agencias gubernamentales para mejorar los servicios digitales para los Californianos. Nuestro trabajo incluirá descubrimientos iniciales y creación de prototipos y a la misma vez se aconsejara en proyectos digitales de gran capacidad para nuestro estado.,ODI将与政府机构合作，以改善加州的数字服务。我们的工作将包括初步调查结果和样机，并在同一时间，大容量数字项目被告知我们的状态。
 /office-of-digital-innovation,,Focus on users and services,Enfocar a los usuarios y servicios,锐化用户服务
-/office-of-digital-innovation,,Put Californians at the heart of service design. Use qualitative and quantitative user research to inform everything from discovery to delivery.,"Poner a los Californianos en el centro del diseño de servicios. Utilizando la investigación cualitativa y cuantitativa del usuario para informar a todo, desde el descubrimiento hasta la entrega.",加州把在服务设计的中心。采用定性和定量研究，以告知用户一切从发现到交货。
+/office-of-digital-innovation,,Put Californians at the heart of service design. Use qualitative and quantitative user research to inform everything from discovery to delivery.,"Poner a los Californianos en el centro del diseño de servicios. Utilizando la investigación cualitativa y cuantitativa del usuario para informar a todo, desde el descubrimiento hasta la entrega.",加州投入在服务设计的中心。采用定性和定量研究，以告知用户一切从发现到交货。
 /office-of-digital-innovation,,Create a new way of working,Crear una nueva forma de trabajar,创建一种新的工作方式
 /office-of-digital-innovation,,"Foster a culture of experimentation, creativity, and iteration. Build a team of passionate, diverse people committed to human-centered design and agile delivery practices.","Fomentar una cultura de experimentación, creatividad, y la iteración. Construir a un equipo de personas apasionadas, diversas, y comprometidas con el diseño centrado en el ser humano y prácticas de entrega ágiles.",培育实验，创造性和迭代的文化。您建立一个团队的人谁是充满激情的，多样，致力于以人为本，实用的设计是敏捷交付。
 /office-of-digital-innovation,,Build capacity in others,Desarrollar capacidad en los demás,在别人的能力建设
