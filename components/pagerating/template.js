@@ -4,10 +4,12 @@ export default function (question, yes, no, commentPrompt, thanksFeedback, thank
       <div class="row">
         <div class="col-md-5">
 
-          <div class="js-feedback-form">
+          <div class="js-feedback-form d-flex">
             <label id="feedback-rating">${question}</label>
+<div class="w-50">
             <button class="ml-4 btn btn-sm btn-outline-light underline js-feedback-yes" id="feedback-yes" aria-labelledby="feedback-rating">${yes}</button>
             <button class="ml-4 btn btn-sm btn-outline-light underline js-feedback-no" id="feedback-no" aria-labelledby="feedback-rating">${no}</button>
+</div>
           </div>
           
           <div class="js-feedback-thanks d-none" role="alert">${thanksFeedback}</div>
