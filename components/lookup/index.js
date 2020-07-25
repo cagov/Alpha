@@ -9,7 +9,15 @@ class CWDSLookup extends window.HTMLElement {
       - when it gets results it emits event
     */
    const endpoint = this.dataset.searchApi; // 'https://api.alpha.ca.gov/CaZipCityCountyTypeAhead?citymode=false&countymode=true&q=';
-   let html = lookupFrom('Please enter your county or zip code','Find health plan');
+   let formLabel = 'Please enter your county or zip code';
+   let buttonLabel = 'Find health plan';
+   if(this.dataset.buttonLabel) {
+     buttonLabel = this.dataset.buttonLabel;
+   }
+   if(this.dataset.label) {
+     formLabel = this.dataset.label;
+   }
+   let html = lookupFrom(formLabel,buttonLabel);
    this.innerHTML = html;
 
    const fieldSelector = 'input[data-multiple]';
