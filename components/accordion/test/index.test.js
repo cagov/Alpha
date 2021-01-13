@@ -22,7 +22,7 @@ function elementExists (selector) {
 
 describe('renders', function () {
   it('an element', async () => {
-    const el = await fixture(`<cwds-accordion>
+    const el = await fixture(`<cagov-accordion>
       <div class="card">
         <div class="card-header py-20" id="heading-one">
           <button class="btn btn-link" type="button" aria-expanded="false">
@@ -35,7 +35,7 @@ describe('renders', function () {
           </div>
         </div>
       </div>
-    </cwds-accordion>`);
+    </cagov-accordion>`);
     await elementExists('.card-body');
     expect(el.querySelectorAll('.card-body').length).to.be.above(0);
   });
