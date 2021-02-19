@@ -291,6 +291,12 @@ module.exports = {
       excludeChunks: allChunks,
       minify: minificationOptions
     }),
+    new HtmlWebpackPlugin({
+      filename: 'en/office-of-digital-innovation/noticesofintent/index.html',
+      template: 'src/office-of-digital-innovation/noticesofintent/index.html',
+      excludeChunks: allChunks,
+      minify: minificationOptions
+    }),
 
     //* ************** End Begin Fire Stories
 
