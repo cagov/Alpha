@@ -292,8 +292,8 @@ module.exports = {
       minify: minificationOptions
     }),
     new HtmlWebpackPlugin({
-      filename: 'en/office-of-digital-innovation/noticesofintent/index.html',
-      template: 'src/office-of-digital-innovation/noticesofintent/index.html',
+      filename: 'en/office-of-digital-innovation/notices-of-intent/index.html',
+      template: 'src/office-of-digital-innovation/notices-of-intent/index.html',
       excludeChunks: allChunks,
       minify: minificationOptions
     }),
