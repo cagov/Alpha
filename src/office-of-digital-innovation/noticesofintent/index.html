@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en" xml:lang="en">
+
+  <head>
+    <%= require('html-loader!../../partials/meta-common.html') %>
+    <%= require('html-loader!../../partials/favicons.html') %>
+    <!-- Social media post -->
+    <meta property="og:image" content="https://www.alpha.ca.gov/img/thumbnail.png">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:width" content="630">
+    <meta property="og:title" content="california office of digital innovation">
+    <meta property="og:description" content="california office of digital innovation (odi)">
+    <meta property="og:url" content="[code-url]">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="[code-url]"/>
+    <title>California Office of Digital Innovation</title>
+    <meta name="description" content="california office of digital innovation (odi)">
+  </head>
+
+  <body>
+    <header>
+      <%= require('html-loader!../../partials/official.html') %>
+      <%= require('html-loader!../../partials/experiment-banner.html') %>
+      <%= require('html-loader!../../partials/navbar.html') %>
+    </header>
+    <main>
+      <div class="container-fluid jumbotron">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-10">
+              <h1>California Office of Digital Innovation: Notices of intent</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9">
+
+            <p></p>
+
+            <h2>Notices</h2>
+            
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Service</th>
+                  <th scope="col">Organization</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2/19/2021</td>
+                  <td><a href="https://files.covid19.ca.gov/pdf/odi/harvey-nash.pdf">Recruiting Services</a></td>
+                  <td>Harvey Nash</td>
+                </tr>
+              </tbody>
+            </table>
+                          
+            <p>&nbsp;</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+    <footer>
+      <div class="footer alpha-footer mt-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <ul class="list-group list list-group-horizontal-lg flex-fill list-group-flush">
+                <li class="list-group-item alpha-footer">
+                  <a href="/en/about/">[global-lang-about]</a>
+                </li>
+                <li class="list-group-item alpha-footer">
+                  <a href="https://news.alpha.ca.gov/">[global-lang-news]</a>
+                </li>
+                <li class="list-group-item alpha-footer">
+                  <a href="/en/contact-us/">[global-lang-contact-us]</a>
+                </li>
+                <li class="list-group-item alpha-footer">
+                  <a href="[global-feedback-link]?source=[code-url]">[global-lang-feedback]</a>
+                </li>
+              </ul>
+              <p>[global-lang-state-of-ca]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script nomodule src="/js/es5.js?cache=false" ></script>
+
+      <%= require('html-loader!../../partials/alphabar.html') %>
+      <%= require('html-loader!../../partials/ga.html') %>
+    </footer>
+    <%= require('html-loader!../../js/es6/js.html') %>
+  </body>
+
+</html>
