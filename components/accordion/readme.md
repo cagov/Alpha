@@ -1,6 +1,6 @@
 # Accordion component
 
-This custom element recreates the bootstrap accordion component functionality without the jquery dependency. It is designed for use with the Alpha CA.gov <a href="https://cwds.dev">design system</a> but can be used independently if you provide your own styling
+This custom element recreates the bootstrap accordion component functionality without the jquery dependency. It is designed for use with on covid19.ca.gov
 
 <img src="https://raw.githubusercontent.com/cagov/Alpha/master/components/accordion/accordion.png" />
 
@@ -9,7 +9,7 @@ This custom element recreates the bootstrap accordion component functionality wi
 ## Sample markup
 
 ```
-<cwds-accordion>
+<cagov-accordion>
   <div class="card"><button class="card-header accordion-alpha" type="button" aria-expanded="false">
       <div class="accordion-title">Who can get a Cal Grant</div>
     </button>
@@ -19,5 +19,5 @@ This custom element recreates the bootstrap accordion component functionality wi
       </div>
     </div>
   </div>
-</cwds-accordion>
+</cagov-accordion>
 ```

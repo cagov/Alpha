@@ -1,5 +1,6 @@
-class CWDSAccordion extends window.HTMLElement {
+class CaGovAccordion extends window.HTMLElement {
   connectedCallback () {
+    this.classList.add('prog-enhanced');
     this.expandTarget = this.querySelector('.card-container');
     this.expandButton = this.querySelector('.card-header');
     this.expandButton.addEventListener('click', this.listen.bind(this));
@@ -29,4 +30,4 @@ class CWDSAccordion extends window.HTMLElement {
     }
   }
 }
-window.customElements.define('cwds-accordion', CWDSAccordion);
+window.customElements.define('cagov-accordion', CaGovAccordion);
