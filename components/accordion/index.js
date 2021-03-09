@@ -12,6 +12,7 @@ class CaGovAccordion extends window.HTMLElement {
       this.cardBodyHeight = this.querySelector('.card-body').clientHeight;
     }
     if (this.expandTarget.clientHeight > 0) {
+      this.expandTarget.setAttribute('tabindex', '-1');
       this.expandTarget.style.height = '0px';
       this.expandTarget.setAttribute('aria-hidden', 'true');
       this.querySelector('.card-header').classList.remove('accordion-alpha-open');
@@ -21,6 +22,7 @@ class CaGovAccordion extends window.HTMLElement {
         expando.style.display = 'none';
       }, 300);
     } else {
+      this.expandTarget.removeAttribute("tabindex");
       this.expandTarget.style.display = 'block';
       this.expandTarget.style.height = this.cardBodyHeight + 'px';
       this.expandTarget.setAttribute('aria-hidden', 'false');
