@@ -16,6 +16,7 @@ This is used in conjunction with scripts that listen for the event and act on th
   data-search-api="https://api.alpha.ca.gov/CaZipCityCountyTypeAhead?citymode=false&countymode=true&q=" 
   data-label="Please enter city or zip code"
   data-button-label="Find health plan"
+  data-list-label="Result list"
 >
 </cwds-lookup>
 ```
