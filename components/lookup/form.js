@@ -17,7 +17,6 @@ export default function(formLabel, buttonLabel) {
           role="combobox"
           type="text"
         />
-        <ul hidden="" role="listbox" id="awesomplete_list_1"></ul>
         <span
           class="visually-hidden"
           role="status"
@@ -26,7 +25,6 @@ export default function(formLabel, buttonLabel) {
           >Type 2 or more characters for results.</span
         >
       </div>
-      <ul hidden="" id="awesomplete-list-1" role="listbox"></ul>
       <span
         class="visually-hidden"
         aria-atomic="true"

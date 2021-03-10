@@ -11,19 +11,24 @@ class CWDSLookup extends window.HTMLElement {
    const endpoint = this.dataset.searchApi; // 'https://api.alpha.ca.gov/CaZipCityCountyTypeAhead?citymode=false&countymode=true&q=';
    let formLabel = 'Please enter your county or zip code';
    let buttonLabel = 'Find health plan';
+   let listLabel = 'Results list';
    if(this.dataset.buttonLabel) {
      buttonLabel = this.dataset.buttonLabel;
    }
    if(this.dataset.label) {
      formLabel = this.dataset.label;
    }
-   let html = lookupFrom(formLabel,buttonLabel);
+   if(this.dataset.listLabel) {
+     listLabel = this.dataset.listLabel;
+   }
+  let html = lookupFrom(formLabel,buttonLabel);
    this.innerHTML = html;
 
    const fieldSelector = 'input[data-multiple]';
    let component = this;
    const awesompleteSettings = {
      autoFirst: true,
+     listLabel: listLabel,
      filter: function (text, input) {
        return Awesomplete.FILTER_CONTAINS(text, input.match(/[^,]*$/)[0]);
      },
