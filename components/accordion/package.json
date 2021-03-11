@@ -1,6 +1,6 @@
 {
   "name": "@cagov/accordion",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "description": "This custom element recreates the bootstrap accordion component functionality without the jquery dependency",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cagov/Alpha/tree/master/src/js/components/accordion"
+    "url": "https://github.com/cagov/Alpha/tree/master/components/accordion"
   },
   "keywords": [],
   "author": "",
