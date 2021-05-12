@@ -1,6 +1,9 @@
 name: Alpha.CA.gov Automated Build
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -24,3 +27,10 @@ jobs:
         npm test
       env:
         CI: true
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        publish_dir: ./docs
+        publish_branch: gh-pages
+        commit_message: ${{ github.event.head_commit.message }}
