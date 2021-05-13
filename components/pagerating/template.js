@@ -2,7 +2,7 @@ export default function (question, yes, no, commentPrompt, thanksFeedback, thank
   return `<div class="feedback-form">
     <div class="feedback-form-grid">
 				<div class="feedback-form-grid-col">
-          <div class="js-feedback-form">
+          <div class="js-feedback-form" role="form" aria-label="Is this page useful feedback form">
             <label class="feedback-form-label" id="feedback-rating">${question}</label>
             <button class="feedback-form-button js-feedback-yes" id="feedback-yes" aria-labelledby="feedback-rating">${yes}</button>
             <button class="feedback-form-button js-feedback-no" id="feedback-no" aria-labelledby="feedback-rating">${no}</button>
