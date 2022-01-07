@@ -34,6 +34,7 @@ class CWDSHolidays extends window.HTMLElement {
 
         addrows(document.getElementById('js-tbody-template-2020-results'), 2020);
         addrows(document.getElementById('js-tbody-template-2021-results'), 2021);
+        addrows(document.getElementById('js-tbody-template-2022-results'), 2022);
 
         // Add events for the holiday credit links to expand the bottom details
         document.querySelectorAll('a[href*="#credits"]').forEach(item =>
