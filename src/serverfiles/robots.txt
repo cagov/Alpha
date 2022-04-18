@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.alpha.ca.gov/sitemap.xml
+Sitemap: https://alpha.ca.gov/sitemap.xml

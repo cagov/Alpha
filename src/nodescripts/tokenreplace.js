@@ -2,7 +2,7 @@ const fs = require('fs');
 const fse = require('fs-extra'); // https://www.npmjs.com/package/fs-extra
 const csv = require('csv-parser'); // https://www.npmjs.com/package/csv-parser
 const replace = require('replace-in-file'); // https://www.npmjs.com/package/replace-in-file
-const fulldomainurl = 'https://www.alpha.ca.gov/';
+const fulldomainurl = 'https://alpha.ca.gov/';
 
 // start by copying the existing language output to a source folder
 const sourcefolder = 'public/';
