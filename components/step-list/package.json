@@ -15,9 +15,9 @@
   "devDependencies": {
     "@open-wc/karma-esm": "^2.12.8",
     "@open-wc/testing": "^2.5.1",
-    "@open-wc/testing-karma": "^3.2.32",
+    "@open-wc/testing-karma": "^4.0.9",
     "deepmerge": "^4.2.2",
-    "karma": "^4.4.1",
+    "karma": "^6.4.1",
     "lit-html": "^1.1.2"
   }
 }
