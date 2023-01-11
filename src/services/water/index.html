@@ -41,43 +41,8 @@
       <div class="container check-water">
         <div class="row">
           <div class="col-md-8">
-            <form class="form-inline js-water-form">
-              <div class="form-group">
-                <label for="waterlocationfield">Please enter your address: </label
-                >
-                <div class="awesomplete">
-                  <input
-                    type="text"
-                    class="city-search form-control water-location-field"
-                    data-multiple=""
-                    id="waterlocationfield"
-                    data-list=""
-                    autocomplete="off"
-                    aria-expanded="false"
-                    aria-owns="awesomplete-list-1"
-                    role="combobox"
-                  />
-                  <ul hidden="" role="listbox" id="awesomplete-list-1"></ul>
-                  <span
-                    class="visually-hidden"
-                    role="status"
-                    aria-live="assertive"
-                    aria-atomic="true"
-                    >Type 2 or more characters for results.</span
-                  >
-                </div>
-                <button
-                  id="submit-form"
-                  type="submit"
-                  class="btn btn-primary js-water-lookup"
-                >
-                  Check your water
-                </button>
-                <div class="invalid-feedback">
-                  Please enter a city or zip code in California.
-                </div>
-              </div>
-            </form>
+            <p>As part of ending this pilot project, we weren’t able to keep an example of this service on this site. Instead, we made this video so you can see how it worked.</p>
+            <lite-youtube videoid="i1k8EYZg5hI" playlabel="Play: Demonstration of water quality lookup by location"></lite-youtube>
           </div>
         </div>
       </div>
@@ -102,8 +67,6 @@
       </div>
     </main>
     <footer>
-      <%= require('html-loader!../../partials/feedback.html') %> <%=
-      require('html-loader!../../partials/footer.html') %>
       <%= require('html-loader!../../partials/alphabar.html') %> <%=
       require('html-loader!../../partials/ga.html') %>
       <%= require('html-loader!../../js/es6/jswater.html') %>

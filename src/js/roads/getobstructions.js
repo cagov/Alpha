@@ -39,7 +39,7 @@ export default async function getObstructions (stepMap, coords, callback) {
   */
 
   routeArr.forEach((route, index) => {
-    const url = `https://api.alpha.ca.gov/LaneClosures/${route}?lat1=${coords.startCoords[1]}&lat2=${coords.endCoords[1]}&lon1=${coords.startCoords[0]}&lon2=${coords.endCoords[0]}&direction=${routeMap.get(routeArr[index])}`;
+    const url = `https://fa-go-alph-d-002.azurewebsites.net/LaneClosures/${route}?lat1=${coords.startCoords[1]}&lat2=${coords.endCoords[1]}&lon1=${coords.startCoords[0]}&lon2=${coords.endCoords[0]}&direction=${routeMap.get(routeArr[index])}`;
     window.fetch(url)
       .then(response => {
         return response.json();

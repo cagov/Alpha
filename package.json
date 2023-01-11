@@ -1,6 +1,6 @@
 {
   "name": "alpha.ca.gov",
-  "version": "1.1.0",
+  "version": "2.09.0",
   "description": "This will be the product/dev repo of the CA.gov Alpha.",
   "main": "public/index.html",
   "scripts": {

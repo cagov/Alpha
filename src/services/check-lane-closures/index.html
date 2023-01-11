@@ -29,7 +29,7 @@
         <div class="container-fluid jumbotron">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-8">
                         <h1>Check lane closures for your trip</h1>
                         <p class="lead">Find highway lanes that have been closed because of planned maintenance.</p>
                     </div>
@@ -39,40 +39,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
-                    <h2>Where are you going?</h2>
-                    <div id="map" class="d-none"></div>
-                    <form>
-                        <label>Please enter a destination in California:
-                            <div id="geocoder" class="geocoder"></div>
-                        </label>
-                        <div class="d-none invalid-feedback error1 alert alert-warning">Sorry, we can’t find that location. Please enter a valid location in California.</div>
-                        <button type="submit" class="d-none destination-button btn btn-primary">Check lane closures</button>
-                        <p class="d-none js-destination-address"></p>
-                        <span class="d-none start"></span>
-                        <h2>What’s your starting location?</h2>
-                        <label>Please enter a starting location in California:
-                            <div class="js-geocoder-start geocoder"></div>
-                        </label>
-                        <div class="d-none invalid-feedback error2 alert alert-warning">Sorry, we can’t find that location. Please enter a valid location in California.</div>
-                        <button type="submit" class="start-button btn btn-primary">Check lane closures</button>
-                        <p class="d-none js-starting-address"></p>
-                        <span class="d-none end"></span>
-                        <div class="d-none highways"></div>
-                        <div class="obstructions-major" aria-live="polite"></div>
-                    </form>
+<p>As part of ending this pilot project, we weren’t able to keep an example of this service on this site. Instead, we made this video so you can see how it worked.</p>
+<lite-youtube videoid="woPq3BUZvl4" playlabel="Play: Demonstration of lane closure check"></lite-youtube>
                 </div>
             </div>
         </div>
     </main>
     <footer>
-        <%= require('html-loader!../../partials/feedback.html') %>
         <%= require('html-loader!../../partials/footer.html') %>
         <%= require('html-loader!../../partials/alphabar.html') %>
     </footer>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js" defer></script>
-    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js" defer></script>
     <%= require('html-loader!../../partials/ga.html') %>
     <%= require('html-loader!../../js/es6/js.html') %>
 </body>
-
 </html>
