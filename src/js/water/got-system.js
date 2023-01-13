@@ -49,7 +49,7 @@ export default function gotSystem (systemData) {
     window.history.pushState({ systemId: systemId }, window.title, window.location.origin + window.location.pathname + '?systemId=' + systemId);
 
     window.fetch(
-      `https://api.alpha.ca.gov/WaterSystemHistory?systemId=${systemId}`
+      `https://fa-go-alph-d-002.azurewebsites.net/WaterSystemHistory?systemId=${systemId}`
     )
       .then(response => {
         return response.json();
