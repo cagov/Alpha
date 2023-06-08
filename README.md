@@ -9,7 +9,7 @@ Our first step: Make CA.gov easier for Californians to use. We're working to hel
 And we invite you to join us.
 
 ## Follow our progress
-We're sharing our work and insights on our [blog](https://medium.com/cadotgov), [Twitter](https://twitter.com/cadotgov) and [GitHub](https://github.com/cagov).
+We're sharing our work and insights on our [blog](https://medium.com/cadotgov) and [GitHub](https://github.com/cagov).
 
 ## Share your feedback
 Please take our [five-minute survey](https://www.surveymonkey.com/r/AlphaCAgov) to help improve CA.gov. Thanks in advance for sharing your thoughts.
