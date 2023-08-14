@@ -1,3 +1,25 @@
+<!-- analytics -->
+<script>
+  // GA4 Google Analytics
+  // Based on template provided here:
+  // https://webstandards.ca.gov/add-analytics-to-your-site/
+  (function () {
+    const ga = document.createElement("script");
+    ga.async = true;
+    ga.src = "https://www.googletagmanager.com/gtag/js?id=G-70MEKX9MZC";
+    const s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(ga, s);
+  })();
+  // Global site tag (gtag.js) - Google Analytics
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () {
+    dataLayer.push(arguments);
+  };
+  gtag("js", new Date());
+  gtag("config", "G-69TD0KNT0F"); // Statewide GA4 measurement ID
+  gtag("config", "G-70MEKX9MZC"); // innovation.ca.gov ID
+  </script>
+  <!-- navbar -->
 <nav class="navbar navbar-inverse">
 	<div class="container">
 		<div class="navbar-header float-left">
