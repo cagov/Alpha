@@ -1,5 +1,35 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script src="https://www.googletagmanager.com/gtag/js?id=UA-154336791-1" defer async></script>
+
+
+<script>
+  // GA4 Google Analytics
+  // Based on template provided here:
+  // https://webstandards.ca.gov/add-analytics-to-your-site/
+  (function () {
+    const ga = document.createElement("script");
+    ga.async = true;
+    ga.src = "https://www.googletagmanager.com/gtag/js?id=G-70MEKX9MZC";
+    const s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(ga, s);
+  })();
+  // Global site tag (gtag.js) - Google Analytics
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () {
+    dataLayer.push(arguments);
+  };
+  gtag("js", new Date());
+  gtag("config", "G-69TD0KNT0F"); // Statewide GA4 measurement ID
+  gtag("config", "G-70MEKX9MZC"); // innovation.ca.gov ID
+  function ga_send_event(category,action,label) {
+    var event_params = {'sent_to':'custom_events','label':label};
+    var event_name = action;
+    gtag(category,event_name,event_params);
+  }
+</script>
+
+<!--
+// prior code
+  <script src="https://www.googletagmanager.com/gtag/js?id=UA-154336791-1" defer async></script>
 <script type="text/javascript">
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -9,4 +39,6 @@ gtag('config', 'UA-154336791-1');
 function ga_send_event(category,action,label) {
   ga('gtag_UA_154336791_1.send','event',category,action,label);
 }
+-->
+
 </script>
