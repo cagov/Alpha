@@ -1,6 +1,12 @@
 # Alpha
 >This will be the product/dev repo of the CA.gov Alpha. 
 
+**Alpha.CA.gov is no longer being updated.**
+
+This was a 12-week pilot project in 2019-20 that explored new approaches for state websites.
+
+If you need the current state homepage, visit [CA.gov](https://www.ca.gov/).
+
 ## Fellow Californians,
 We're reimagining CA.gov with and for the people of California.
 
@@ -17,7 +23,6 @@ Please take our [five-minute survey](https://www.surveymonkey.com/r/AlphaCAgov) 
 We're excited to work with you.
 
 Team Alpha.CA.gov
-
 
 _Interested in how we got started?_ [Learn more.](https://medium.com/cadotgov/re-imagining-ca-gov-how-can-california-government-better-serve-its-people-c3212f843f1d)
 
