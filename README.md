@@ -1,5 +1,4 @@
 # Alpha
->This will be the product/dev repo of the CA.gov Alpha. 
 
 **Alpha.CA.gov is no longer being updated.**
 
