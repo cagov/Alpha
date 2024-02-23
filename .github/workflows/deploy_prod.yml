@@ -1,0 +1,41 @@
+name: Deploy to Production
+on:
+  push:
+    branches:
+      - main
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: n1hility/cancel-previous-runs@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v3.0.0
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+
+      - name: Build Site
+        run: |
+          npm install
+          npm run build
+
+      # Push built site files to S3 production bucket
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-1
+
+      - name: Deploy to S3
+        run: aws s3 sync --follow-symlinks --delete ./public s3://alpha.ca.gov
+
+      - name: invalidate Cloudfront
+        run: AWS_MAX_ATTEMPTS=10 aws cloudfront create-invalidation --distribution-id E2OOXB9J6Q0UC --paths "/*"
